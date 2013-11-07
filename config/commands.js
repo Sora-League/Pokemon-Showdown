@@ -815,13 +815,13 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Ryu</b><br />'+
 		          '<i>"You lose, its your fault you win, its your luck."</i> <br />'+
-			  '<b>Ace:</b> Scizor<br />'+
+			  '<b>Ace:</b> Thundurus-T<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
 		 	  '-VGC Doubles <br/>'+
 		 	  '-No Hazards <br/>'+
 		 	  '-Max 1 Pseudo-Legendary<br/>'+
 		 	  '-No Legendaries<br />'+
-		 	  '<img src="http://sprites.pokecheck.org/i/212.gif"> <img src="http://fc01.deviantart.net/fs70/f/2011/092/4/b/koga_sprite__200th_upload__by_ninjasensei88-d3d2mf8.gif">');
+		 	  '<img src="http://sprites.pokecheck.org/i/642-therian.gif"> <img src="http://fc01.deviantart.net/fs70/f/2011/092/4/b/koga_sprite__200th_upload__by_ninjasensei88-d3d2mf8.gif">');
 	},
         
         gary: function(target, room, user) {
