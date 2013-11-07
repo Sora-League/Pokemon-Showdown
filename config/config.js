@@ -137,7 +137,8 @@ exports.herokuhack = false;
 exports.customavatars = {
 	//'userid': 'customavatar.png'
 	  'blakjack': 'blakjack.png',
-	  'championonyxe': '001.png'
+	  'championonyxe': '001.png',
+	  'frontierheadbart': '002.gif'
 	  
 };
 
