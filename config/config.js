@@ -142,7 +142,8 @@ exports.customavatars = {
 	  'champinnah': '003.gif',
 	  'e4jeratt': '004.gif',
 	  'frontiervader': '005.gif',
-	  'frontierryu': '006.gif'
+	  'frontierryu': '006.gif',
+	  'gymldrleaf': '007.gif'
 	  
 };
 
