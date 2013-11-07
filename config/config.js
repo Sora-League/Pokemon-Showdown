@@ -144,7 +144,8 @@ exports.customavatars = {
 	  'frontiervader': '005.gif',
 	  'frontierryu': '006.gif',
 	  'gymldrleaf': '007.gif',
-	  'gymldrcore': '008.gif'
+	  'gymldrcore': '008.gif',
+	  'e4toast': '009.gif'
 	  
 };
 
