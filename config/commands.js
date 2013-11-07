@@ -811,6 +811,15 @@ var commands = exports.commands = {
 		 	'<img src="http://sprites.pokecheck.org/i/491.gif"> <img src="http://sprites.pokecheck.org/t/088.gif">');
         },
         
+        gary: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>Gary</b><br />'+
+			  '<i>"The Mighty Warrior of Sora."</i> <br />'+
+			  '<b>Type:</b> Dragon<br />'+
+			  '<b>Ace:</b> Latios (Arani)<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/137.gif">');
+	},
+        
         leaf: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
