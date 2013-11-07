@@ -139,7 +139,8 @@ exports.customavatars = {
 	  'blakjack': 'blakjack.png',
 	  'championonyxe': '001.png',
 	  'frontierheadbart': '002.gif',
-	  'champinnah': '003.gif'
+	  'champinnah': '003.gif',
+	  'e4jeratt': '004.gif'
 	  
 };
 
