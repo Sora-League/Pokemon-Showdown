@@ -860,6 +860,15 @@ var commands = exports.commands = {
 			  '<img src="http://i.imgur.com/zVptN2v.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/9.png">');
         },
         
+        phantoms: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>PhantomS</b><br />'+
+			 '<i>"The Deadliest Venom of Sora."</i> <br />'+
+			 '<b>Type:</b> Poison<br />'+
+			 '<b>Ace:</b> Drapion<br />'+
+			 '<img src="http://sprites.pokecheck.org/i/034.gif"> <img src="http://fc01.deviantart.net/fs70/f/2011/092/4/b/koga_sprite__200th_upload__by_ninjasensei88-d3d2mf8.gif">');
+	},
+        
         neith: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('E4 <b>Neith</b><br />'+
