@@ -147,7 +147,8 @@ exports.customavatars = {
 	  'gymldrcore': '008.gif',
 	  'e4toast': '009.gif',
 	  'gymldrbighug': '010.gif',
-	  'gymldrgary': '011.gif'
+	  'gymldrgary': '011.gif',
+	  'gymldrsjado': '012.gif'
 	  
 };
 
