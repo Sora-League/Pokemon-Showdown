@@ -750,6 +750,16 @@ var commands = exports.commands = {
 	 	      '<img src="http://media-cerulean.cursecdn.com/avatars/thumbnails/292/989/56/56/635178240045575018.png"> <img src="http://sprites.pokecheck.org/t/139.gif">');
 	},
 	
+	ninjarisu: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Overlord <b>Ninjarisu</b><br />'+
+		    '<i>"Fear my pink sparkles of awesomeness!"</i> <br />'+
+		    '<b>Ace:</b> All<br />'+
+	 	    '<b>Who am I?:</b> You get to battle me after obtaining 17 badges!<br />'+
+	 	    '<b>Note:</b> Nemesis of Guardian, him or me? Choose<br />'+
+	 	    '<img src="http://sprites.pokecheck.org/i/149.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
+        },
+	
 	lapry: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Lapry</b><br />'+
