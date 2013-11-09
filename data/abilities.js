@@ -271,7 +271,7 @@ exports.BattleAbilities = {
 		desc: "This Pokemon is protected from some Ball and Bomb moves.",
 		shortDesc: "This Pokemon is protected from ball and bomb moves.",
 		onTryHit: function(pokemon, target, move) {
-			if (move.isBallMove || move.isBombMove) {
+			if (move.isBullet) {
 				this.add('-immune', pokemon, '[msg]', '[from] Bulletproof');
 				return null;
 			}
@@ -1823,10 +1823,10 @@ exports.BattleAbilities = {
 		num: 20
 	},
 	"parentalbond": {
-		desc: "Allows the Pokemon to hit twice with the same move in one turn. Second hit has 0.5x base power. Does not affect Status, multihit, or spread moves (even in singles).",
+		desc: "Allows the Pokemon to hit twice with the same move in one turn. Second hit has 0.5x base power. Does not affect Status, multihit, or spread moves (in doubles).",
 		shortDesc: "Hits twice in one turn. Second hit has 0.5x base power.",
-		onModifyMove: function(move, pokemon) {
-			if (move.category !== 'Status' && !move.multihit && move.target in {any:1, normal:1, randomNormal:1}) {
+		onModifyMove: function(move, pokemon, target) {
+			if (move.category !== 'Status' && !move.multihit && (target.side.active.length < 2 || move.target in {any:1, normal:1, randomNormal:1})) {
 				move.multihit = 2;
 				pokemon.addVolatile('parentalbond');
 			}
