@@ -860,6 +860,15 @@ var commands = exports.commands = {
 			  '<img src="http://i.imgur.com/zVptN2v.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/9.png">');
         },
         
+        sjado: function(target, room, user) {
+		    if (!this.canBroadcast()) return;
+			this.sendReplyBox('Gym Ldr <b>Sjado</b><br />'+
+			  '<i>"No Pain, No Game."</i> <br />'+
+			  '<b>Type:</b> Dark<br />'+
+			  '<b>Ace:</b> Hydreigon<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/635.gif"> <img src="http://sprites.pokecheck.org/t/035.gif">');
+        },
+        
         phantoms: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>PhantomS</b><br />'+
