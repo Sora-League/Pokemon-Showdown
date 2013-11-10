@@ -706,7 +706,7 @@ var commands = exports.commands = {
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-Custom Doubles Format (OU clauses apply) <br/>'+
-	 	      '-Max 1 Uber (No Arceus) <br />'+
+	 	      '-Max 1 Uber (600BST Max) <br />'+
 	 	      '-No Weather <br />'+
 	 	      '<img src="http://i.imgur.com/vuDajGL.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/202.png">');
         },
