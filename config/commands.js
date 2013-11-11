@@ -706,7 +706,7 @@ var commands = exports.commands = {
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-Custom Doubles Format (OU clauses apply) <br/>'+
-	 	      '-Max 1 Uber (600BST Max) <br />'+
+	 	      '-Max 1 Uber (680BST Max) <br />'+
 	 	      '-No Weather <br />'+
 	 	      '<img src="http://i.imgur.com/vuDajGL.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/202.png">');
         },
@@ -846,7 +846,7 @@ var commands = exports.commands = {
         leaf: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
-			  '<i>"Normal might seem simple, easy to you, but we have different definitions of normal and mine is an easy victory."</i> <br />'+
+			  '<i>"It may be basic, but it doesnt mean its a walk in the park. You must use your wits to beat me."</i> <br />'+
 			  '<b>Type:</b> Normal<br />'+
 			  '<b>Ace:</b> Meloetta<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/648.gif"> <img src="http://sprites.pokecheck.org/t/122.gif">');
