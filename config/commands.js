@@ -843,9 +843,9 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/137.gif">');
 	},
         
-        leaf: function(target, room, user) {
+        matt99: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>Matt99</b><br />'+
 			  '<i>"It may be basic, but it doesnt mean its a walk in the park. You must use your wits to beat me."</i> <br />'+
 			  '<b>Type:</b> Normal<br />'+
 			  '<b>Ace:</b> Meloetta<br />'+
