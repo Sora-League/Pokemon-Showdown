@@ -833,6 +833,30 @@ var commands = exports.commands = {
 		 	  '-No Legendaries<br />'+
 		 	  '<img src="http://sprites.pokecheck.org/i/642-therian.gif"> <img src="http://sprites.pokecheck.org/t/176.gif">');
 	},
+	
+	leaf: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Frontier <b>Leaf</b><br />'+
+		          '<i>"Adaptability isn’t just Eevee’s ability it’s a way to use your true strength. In any situation learn it and you can conquer any foe."</i> <br />'+
+			  '<b>Ace:</b> ?<br />'+
+		 	  '<b>Battle Rules:</b> <br/>'+
+		 	  '-Pokebank OU Battle <br/>'+
+		 	  '-No OU <br/>'+
+		 	  '-Max 1 Limbo<br/>'+
+		 	  '-No Mega-Evolutions<br />'+
+		 	  '-1 UU,1 NU and 1 RU pokemon are required in a team <br/>');
+	},
+	
+	killer: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Frontier <b>Killer</b><br />'+
+		          '<i>"Try to keep up with my burning heat."</i> <br />'+
+			  '<b>Ace:</b> Chandelure<br />'+
+		 	  '<b>Battle Rules:</b> <br/>'+
+		 	  '-1 vs 1 <br/>'+
+		 	  '-Best of 3 Series <br/>'+
+		 	  '-Pokemon can be changed between rounds<br/>');
+	},
         
         gary: function(target, room, user) {
 		if (!this.canBroadcast()) return;
