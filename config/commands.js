@@ -890,7 +890,7 @@ var commands = exports.commands = {
         
         neith: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('E4 <b>Neith</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>Neith</b><br />'+
 		      '<i>"The Trainer whos Passion Burns Brighter with Each Passing Battle."</i> <br />'+
 		      '<b>Type:</b> Fire<br />'+
 		      '<b>Ace:</b> Arcanine<br />'+
