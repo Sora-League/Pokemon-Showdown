@@ -970,6 +970,15 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/385.gif"> <img src="http://sprites.pokecheck.org/t/139.gif">');
 	},
 	
+	peeta: function(target, room, user) {
+	        if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>Peeta</b><br />'+
+			  '<i>"Ice, Ice Baby!"</i> <br />'+
+			  '<b>Type:</b> Ice<br />'+
+			  '<b>Ace:</b> Froslass<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/478.gif"> <img src="http://play.pokemonshowdown.com/sprites/trainers/93.png">');
+	},
+	
 	site: 'site',
 		site: function(target, room, user) {
 			if (!this.canBroadcast()) return;
