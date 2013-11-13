@@ -838,7 +838,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Leaf</b><br />'+
 		          '<i>"Adaptability isn’t just Eevee’s ability it’s a way to use your true strength. In any situation learn it and you can conquer any foe."</i> <br />'+
-			  '<b>Ace:</b> ?<br />'+
+			  '<b>Ace:</b> Cincinno<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Pokebank OU Battle <br/>'+
 		 	  '-No OU <br/>'+
