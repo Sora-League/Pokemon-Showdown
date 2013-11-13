@@ -844,7 +844,8 @@ var commands = exports.commands = {
 		 	  '-No OU <br/>'+
 		 	  '-Max 1 Limbo<br/>'+
 		 	  '-No Mega-Evolutions<br />'+
-		 	  '-1 UU,1 NU and 1 RU pokemon are required in a team <br/>');
+		 	  '-1 UU,1 NU and 1 RU pokemon are required in a team <br/>'+
+		 	  '<img src="http://sprites.pokecheck.org/s/573.gif"> <img src="http://sprites.pokecheck.org/t/100.gif">');
 	},
 	
 	killer: function(target, room, user) {
