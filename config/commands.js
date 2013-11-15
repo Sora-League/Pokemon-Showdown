@@ -759,6 +759,16 @@ var commands = exports.commands = {
 	 	    '<b>Note:</b> Nemesis of Guardian, him or me? Choose<br />'+
 	 	    '<img src="http://sprites.pokecheck.org/s/417.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
         },
+        
+        darkus: function(target, room, user) {
+			if (!this.canBroadcast()) return;
+			this.sendReplyBox('Guardian <b>Darkus</b><br />'+
+			    '<i>"You Snooze, You Lose!"</i> <br />'+
+			    '<b>Ace:</b> Klinklang<br />'+
+		 	    '<b>Who am I?:</b> You get to battle me after obtaining 17 badges!<br />'+
+		 	    '<b>Note:</b> Nemesis of Overlord, him or me? Choose<br />'+
+		 	    '<img src="http://sprites.pokecheck.org/i/350.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
+        },
 	
 	lapry: function(target, room, user) {
 		if (!this.canBroadcast()) return;
