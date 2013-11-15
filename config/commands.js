@@ -767,7 +767,7 @@ var commands = exports.commands = {
 			    '<b>Ace:</b> Klinklang<br />'+
 		 	    '<b>Who am I?:</b> You get to battle me after obtaining 17 badges!<br />'+
 		 	    '<b>Note:</b> Nemesis of Overlord, him or me? Choose<br />'+
-		 	    '<img src="http://sprites.pokecheck.org/i/350.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
+		 	    '<img src="http://sprites.pokecheck.org/i/601.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
         },
 	
 	lapry: function(target, room, user) {
