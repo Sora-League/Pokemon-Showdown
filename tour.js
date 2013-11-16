@@ -438,20 +438,6 @@ function clean(string) {
  *********************************************************/
 var cmds = {
 	//edited commands
-	makechatroom: function(target, room, user) {
-		if (!this.can('makeroom')) return;
-		var id = toId(target);
-		if (Rooms.rooms[id]) {
-			return this.sendReply("The room '"+target+"' already exists.");
-		}
-		if (Rooms.global.addChatRoom(target)) {
-			tour.reset(id);
-			hangman.reset(id);
-			return this.sendReply("The room '"+target+"' was created.");
-		}
-		return this.sendReply("An error occurred while trying to create the room '"+target+"'.");
-	},
-
 	hotpatch: function(target, room, user) {
 		if (!target) return this.parse('/help hotpatch');
 		if (!user.can('hotpatch') && user.userid != 'slayer95') return false;
@@ -464,8 +450,6 @@ var cmds = {
 				CommandParser = require('./command-parser.js');
 				CommandParser.uncacheTree('./tour.js');
 				tour = require('./tour.js').tour(tour);
-				CommandParser.uncacheTree('./hangman.js');
-				hangman = require('./hangman.js').hangman(hangman);
 				return this.sendReply('Chat commands have been hot-patched.');
 			} catch (e) {
 				return this.sendReply('Something failed while trying to hotpatch chat: \n' + e.stack);
