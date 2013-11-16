@@ -862,11 +862,11 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Killer</b><br />'+
 		          '<i>"Try to keep up with my burning heat."</i> <br />'+
-			  '<b>Ace:</b> Chandelure<br />'+
+			  '<b>Ace:</b> Blaziken<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-1 vs 1 <br/>'+
-		 	  '-Best of 3 Series <br/>'+
-		 	  '-Pokemon can be changed between rounds<br/>');
+		 	  '-Pokebank Ubers Battle <br/>'+
+		 	  '-Team must have 1 OU,1 RU,1 UU,1 NU,1 Uber and a Limbo <br/>'+
+		 	  '-No Weather<br/>');
 	},
         
         gary: function(target, room, user) {
