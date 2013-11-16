@@ -142,7 +142,7 @@ exports.customavatars = {
 	  'e4jeratt': '004.gif',
 	  'frontiervader': '005.gif',
 	  'frontierryu': '006.gif',
-	  'gymldrleaf': '007.gif',
+	  'frontierleaf': '007.gif',
 	  'gymldrcore': '008.gif',
 	  'e4toast': '009.gif',
 	  'gymldrbighug': '010.gif',
@@ -151,7 +151,8 @@ exports.customavatars = {
 	  'overlordninjarisu': '013.gif',
 	  'gymldrmatt99': '014.gif',
 	  'gymtrnrsilence': '016.gif',
-	  'gymldrkrenon': '017.gif'
+	  'gymldrkrenon': '017.gif',
+	  'frontierascher': '018.gif'
 	  
 };
 
