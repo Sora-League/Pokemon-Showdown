@@ -26,7 +26,7 @@ var commands = exports.commands = {
 			if(exists){
 				return connection.sendTo(room, 'Since this file already exists, you cannot do this.');
 			} else {
-				fs.writeFile('config/money.csv', 'brittlewind,10000', function (err) {
+				fs.writeFile('config/money.csv', 'championonyxe,10000', function (err) {
 					if (err) throw err;
 					console.log('config/money.csv created.');
 					connection.sendTo(room, 'config/money.csv created.');
@@ -41,7 +41,7 @@ var commands = exports.commands = {
 			if (exists) {
 				return connection.sendTo(room, 'This file already exists so you do not need to create it again.')
 			} else {
-				fs.writeFile('config/coins.csv', 'cosy,10000', function (err) {
+				fs.writeFile('config/coins.csv', 'championonyxe,10000', function (err) {
 					if (err) throw err;
 					console.log('config/coins.csv created.');
 					connection.sendTo(room, 'config/coins.csv created,');
@@ -410,7 +410,7 @@ var commands = exports.commands = {
 				return this.sendReply('You do not have enough bucks for this. You need ' + (price - user.money) + ' more bucks to buy ' + target + '.');
 			}
 		}
-		if (target2 === 'POTD') {
+		if (target2 === 'potd') {
 			price = 15;
 			if (price <= user.money) {
 				user.money = user.money - price;
