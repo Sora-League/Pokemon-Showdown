@@ -685,7 +685,7 @@ var commands = exports.commands = {
 				return this.sendReply('They do not have a trainer card for you to remove.');
 		}
 		else if (target === 'potd') {
-			if (targetUser.canDecAdvertise) {
+			if (targetUser.canPOTD) {
 				targetUser.canPOTD = false;
 				this.sendReply(targetUser.name + ' no longer has the ability to set POTD.');
 				targetUser.send(user.name + ' has removed the the ability to set POTD from you.');
