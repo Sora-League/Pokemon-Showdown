@@ -12,7 +12,7 @@
  */
 
 var crypto = require('crypto');
-var inShop = ['symbol', 'custom', 'animated', 'room', 'trainer', 'fix'];
+var inShop = ['symbol', 'custom', 'animated', 'room', 'trainer', 'fix', 'potd'];
 var closeShop = false;
 var closedShop = 0;
 
@@ -392,7 +392,7 @@ var commands = exports.commands = {
 			price = 30;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased a trainer card. You need to message an Admin capable of adding this (Frost Deverloper or BrittleWind).');
+				this.sendReply('You have purchased a trainer card. You need to message an Admin capable of adding this (Champion OnyxE).');
 				user.canTrainerCard = true;
 				this.add(user.name + ' has purchased a trainer card!');
 			} else {
@@ -403,9 +403,20 @@ var commands = exports.commands = {
 			price = 10;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased the ability to alter your avatar or trainer card. You need to message an Admin capable of adding this (Frost Deverloper or BrittleWind).');
+				this.sendReply('You have purchased the ability to alter your avatar or trainer card. You need to message an Admin capable of adding this (Champion OnyxE).');
 				user.canFixItem = true;
 				this.add(user.name + ' has purchased the ability to set alter their card or avatar!');
+			} else {
+				return this.sendReply('You do not have enough bucks for this. You need ' + (price - user.money) + ' more bucks to buy ' + target + '.');
+			}
+		}
+		if (target2 === 'POTD') {
+			price = 15;
+			if (price <= user.money) {
+				user.money = user.money - price;
+				this.sendReply('You have purchased the ability to set POTD. You need to message an Admin capable of adding this (Champion OnyxE/Champion Noah/FrontierHead Bart).');
+				user.canPOTD = true;
+				this.add(user.name + ' has purchased the ability to set POTD!');
 			} else {
 				return this.sendReply('You do not have enough bucks for this. You need ' + (price - user.money) + ' more bucks to buy ' + target + '.');
 			}
@@ -450,6 +461,7 @@ var commands = exports.commands = {
 			'<tr><td>Room</td><td>Buys a chatroom for you to own (within reason, can be refused)</td><td>100</td></tr>' +
 			'<tr><td>Trainer</td><td>Buys a trainer card which shows information through a command such as /onyxe (note: third image costs 10 bucks extra, ask for more details)</td><td>40</td></tr>' +
 			'<tr><td>Fix</td><td>Buys the ability to alter your current custom avatar or trainer card (don\'t buy if you have neither)!</td><td>10</td></tr>' +
+			'<tr><td>POTD</td><td>Buys the ability to set the Pokemon of the Day. (Lasts for 1 day) Note: Not purchase-able if there is already a POTD for the day.</td><td>15</td></tr>' +
 			'</table><br />To buy an item from the shop, use /buy [command]. <br />Also do /moneycommands to view money based commands.</center>');
 		if (closeShop) return this.sendReply('|raw|<center><h3><b>The shop is currently closed and will open shortly.</b></h3></center>');
 	},
@@ -588,15 +600,15 @@ var commands = exports.commands = {
 					targetUser.send(user.name + ' has given you the ability to set ' + theItem + '!');
 				}
 			}
-			if (theItem === 'declare') {
-				if (targetUser.canDecAdvertise === true) {
+			if (theItem === 'potd') {
+				if (targetUser.canPOTD === true) {
 					return this.sendReply('This user has already bought that item from the shop... no need for another.');
 				}
-				if (targetUser.canDecAdvertise === false) {
+				if (targetUser.canPOTD === false) {
 					matched = true;
-					targetUser.canDecAdvertise = true;
-					Rooms.rooms.lobby.add(user.name + ' has stolen the ability to get a declare from the shop!');
-					targetUser.send(user.name + ' has given you the ability to set ' + theItem + '!');
+					targetUser.canPOTD = true;
+					Rooms.rooms.lobby.add(user.name + ' has stolen the ability to set POTD from the shop!');
+					targetUser.send(user.name + ' has given you ' + theItem + '!');
 				}
 			}
 			else
@@ -672,14 +684,14 @@ var commands = exports.commands = {
 			else
 				return this.sendReply('They do not have a trainer card for you to remove.');
 		}
-		else if (target === 'declare') {
+		else if (target === 'potd') {
 			if (targetUser.canDecAdvertise) {
-				targetUser.canDecAdvertise = false;
-				this.sendReply(targetUser.name + ' no longer has a declare ready to use.');
-				targetUser.send(user.name + ' has removed the declare from you.');
+				targetUser.canPOTD = false;
+				this.sendReply(targetUser.name + ' no longer has the ability to set POTD.');
+				targetUser.send(user.name + ' has removed the the ability to set POTD from you.');
 			}
 			else
-				return this.sendReply('They do not have a trainer card for you to remove.');
+				return this.sendReply('They do not have the ability to set POTD for you to remove.');
 		}
 		else
 			return this.sendReply('That isn\'t a real item you fool!');
