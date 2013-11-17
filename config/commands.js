@@ -1032,6 +1032,14 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/478.gif"> <img src="http://play.pokemonshowdown.com/sprites/trainers/93.png">');
 	},
 	
+	getbucks: 'getbucks',
+		site: function(target, room, user) {
+			if (!this.canBroadcast()) return;
+			this.sendReplyBox('Please check out the Shop page in the link below to see methods of earning money:<br />' +
+				'- <a href="http://soraleague.weebly.com/shop.html">Shop</a><br />' +
+				'</div>');
+	},
+	
 	site: 'site',
 		site: function(target, room, user) {
 			if (!this.canBroadcast()) return;
