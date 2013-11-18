@@ -1083,7 +1083,7 @@ var commands = exports.commands = {
 		events: function(target, room, user) {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Here is a list of events held in The Sora League:<br />' +
-				'- <a href="http://soraleague.weebly.com/events.html</a><br />' +
+				'- <a href="http://soraleague.weebly.com/events.html">Sora League Events</a><br />' +
 				'</div>');
 	},
 	
