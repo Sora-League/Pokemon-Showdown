@@ -1655,6 +1655,24 @@ var commands = exports.commands = {
 		}
 		this.logModCommand(user.name+' set modchat to '+room.modchat);
 	},
+	
+	spop: 'sendpopup',
+	sendpopup: function(target, room, user) {
+		if (!this.can('hotpatch')) return false;
+		
+		target = this.splitTarget(target);
+		var targetUser = this.targetUser;
+
+		if (!targetUser) return this.sendReply('/sendpopup [user], [message] - You missed the user');
+		if (!target) return this.sendReply('/sendpopup [user], [message] - You missed the message');
+
+		targetUser.popup(target);
+		this.sendReply(targetUser.name + ' got the message as popup: ' + target);
+		
+		targetUser.send(user.name+' sent a popup message to you.');
+		
+		this.logModCommand(user.name+' send a popup message to '+targetUser.name);
+	},
 
 	declare: function(target, room, user) {
 		if (!target) return this.parse('/help declare');
