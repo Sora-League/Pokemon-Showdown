@@ -786,7 +786,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('Overlord <b>Ninjarisu</b><br />'+
 		    '<i>"Fear my pink sparkles of awesomeness!"</i> <br />'+
 		    '<b>Ace:</b> All<br />'+
-	 	    '<b>Who am I?:</b> You get to battle me after obtaining 17 badges!<br />'+
+	 	    '<b>Who am I?:</b> You get to battle me after obtaining 10 badges!<br />'+
 	 	    '<b>Note:</b> Nemesis of Guardian, him or me? Choose<br />'+
 	 	    '<img src="http://sprites.pokecheck.org/s/417.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
         },
@@ -796,7 +796,7 @@ var commands = exports.commands = {
 			this.sendReplyBox('Guardian <b>Darkus</b><br />'+
 			    '<i>"You Snooze, You Lose!"</i> <br />'+
 			    '<b>Ace:</b> Klinklang<br />'+
-		 	    '<b>Who am I?:</b> You get to battle me after obtaining 17 badges!<br />'+
+		 	    '<b>Who am I?:</b> You get to battle me after obtaining 10 badges!<br />'+
 		 	    '<b>Note:</b> Nemesis of Overlord, him or me? Choose<br />'+
 		 	    '<img src="http://sprites.pokecheck.org/i/601.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
         },
@@ -1076,6 +1076,14 @@ var commands = exports.commands = {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Here is The Sora League Website:<br />' +
 				'- <a href="http://soraleague.weebly.com/index.html">Sora League Site</a><br />' +
+				'</div>');
+	},
+	
+	events: 'events',
+		events: function(target, room, user) {
+			if (!this.canBroadcast()) return;
+			this.sendReplyBox('Here is a list of events held in The Sora League:<br />' +
+				'- <a href="http://soraleague.weebly.com/events.html</a><br />' +
 				'</div>');
 	},
 	
