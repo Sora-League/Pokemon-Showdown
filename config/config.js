@@ -221,10 +221,8 @@ exports.groups = {
 		modchatall: true,
 		rangeban: true,
 		potd: false,
-		disableladder: true,
 		forcejoin: true,
 		permaban: true,
-		makeroom: true,
 		rank: 6
 	},
 	'#': {
@@ -248,6 +246,7 @@ exports.groups = {
 		ban: true,
 		modchat: true,
 		forcerename: true,
+		hide: false,
 		ip: true,
 		alts: '@u',
 		rank: 4
