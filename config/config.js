@@ -245,6 +245,7 @@ exports.groups = {
 		ban: true,
 		modchat: true,
 		forcerename: true,
+		hide: false,
 		ip: true,
 		alts: '@u',
 		rank: 4
