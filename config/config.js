@@ -217,7 +217,6 @@ exports.groups = {
 		promote: 'u',
 		forcewin: true,
 		declare: false,
-		hide: true,
 		modchatall: true,
 		rangeban: true,
 		potd: false,
@@ -246,7 +245,6 @@ exports.groups = {
 		ban: true,
 		modchat: true,
 		forcerename: true,
-		hide: false,
 		ip: true,
 		alts: '@u',
 		rank: 4
