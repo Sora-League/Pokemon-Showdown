@@ -1068,6 +1068,14 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/478.gif"> <img src="http://play.pokemonshowdown.com/sprites/trainers/93.png">');
 	},
 	
+	abh: function(target, room, user) {
+	        if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>ABH</b><br />'+
+			  '<i>"The finest steel has to go through the hottest fire."</i> <br />'+
+			  '<b>Type:</b> Steel<br />'+
+			  '<b>Ace:</b> Genesect<br />');
+	},
+	
 	getbucks: 'getbucks',
 		getbucks: function(target, room, user) {
 			if (!this.canBroadcast()) return;
