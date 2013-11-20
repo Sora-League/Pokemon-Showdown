@@ -862,6 +862,19 @@ var commands = exports.commands = {
 		 	'<img src="http://sprites.pokecheck.org/i/491.gif"> <img src="http://sprites.pokecheck.org/t/088.gif">');
         },
         
+        floatzel: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Frontier <b>Floatzel</b><br />'+
+	              '<i>"When it comes down to it, I am still the strongest!"</i> <br />'+
+	              '<b>Ace:</b> Haxxi (Jirachi)<br />'+
+	 	      '<b>Battle Rules:</b> <br/>'+
+	 	      '-Pokemon Dominoes (OU Pokebank tier) <br/>'+
+	 	      '-Every Pokemon\'s 2nd typing must match the next Pokemon\'s first typing <br/>'+
+	 	      '-Last Pokemon must be Single-type <br/>'+
+	 	      '-Must lead with the first pokemon in the chain and continued by the next one <br/>'+
+	 	      '-No switching (Moves that result switching) <br/>'+
+	 	      '-No Sturdy (Focus sash) <br/>');
+        
         ryu: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Ryu</b><br />'+
@@ -1043,15 +1056,6 @@ var commands = exports.commands = {
 			  '<b>Type:</b> Psychic<br />'+
 			  '<b>Ace:</b> Gardevoir<br />'+
 			  '<img src="http://sprites.pokecheck.org/s/282.gif"> <img src="http://sprites.pokecheck.org/t/108.gif">');
-	},
-	
-	floatzel: function(target, room, user) {
-	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Floatzel</b><br />'+
-			  '<i>"When it comes down to it, I am still the strongest!."</i> <br />'+
-			  '<b>Type:</b> Steel<br />'+
-			  '<b>Ace:</b> Jirachi<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/385.gif"> <img src="http://sprites.pokecheck.org/t/139.gif">');
 	},
 	
 	peeta: function(target, room, user) {
