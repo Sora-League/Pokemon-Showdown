@@ -874,6 +874,7 @@ var commands = exports.commands = {
 	 	      '-Must lead with the first pokemon in the chain and continued by the next one <br/>'+
 	 	      '-No switching (Moves that result switching) <br/>'+
 	 	      '-No Sturdy (Focus sash) <br/>');
+        },
         
         ryu: function(target, room, user) {
 		if (!this.canBroadcast()) return;
