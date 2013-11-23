@@ -937,8 +937,8 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Core</b><br />'+
 			  '<i>"Mining is a fun job. Anyone should try and get their diamonds in life."</i> <br />'+
 			  '<b>Type:</b> Rock<br />'+
-			  '<b>Ace:</b> Barbaracle<br />'+
-			  '<img src="http://www.smogon.com/forums/attachments/barbaracle-png.1919/"> <img src="http://sprites.pokecheck.org/t/129.gif">');
+			  '<b>Ace:</b> Archeops<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/567.gif"> <img src="http://sprites.pokecheck.org/t/129.gif">');
         },
         
         vanilla: function(target, room, user) {
