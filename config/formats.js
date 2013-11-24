@@ -15,15 +15,6 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew']
 	},
 	{
-		name: "Inclement Weather",
-		section: "Other Metagames",
-
-		mod: 'incweather',
-		searchShow: false,
-		ruleset: ['Pokemon', 'Team Preview'],
-		banlist: ['Uber']
-	},
-	{
 		name: "Ubers (beta)",
 		section: "XY Singles",
 
