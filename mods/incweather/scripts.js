@@ -16,7 +16,7 @@ exports.BattleScripts = {
                 this.modData('Learnsets', 'victreebell').learnset.contaminate = ['5M'];
                 this.modData('Learnsets', 'weezing').learnset.contaminate = ['5M'];
                 
-                //Weezing and Koffing has Contaminate
+                //Weezing and Koffing has Contamination
                 this.modData('Pokedex', 'koffing').abilities['1'] = 'Contamination';
                 this.modData('Pokedex', 'weezing').abilities['1'] = 'Contamination';
         }
