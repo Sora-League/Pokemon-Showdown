@@ -665,7 +665,7 @@ var commands = exports.commands = {
 	
 	server: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('This is The Server of <b>The Sora League</b>. Hosted by <b>Champion OnyxE</b><br />');
+		this.sendReplyBox('This is The Server of <b>The Sora League</b>. Hosted by <b>Champion Onyx</b><br />');
 	},
 	
 	tourhelp: function(target, room, user) {
