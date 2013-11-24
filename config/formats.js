@@ -15,6 +15,14 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew']
 	},
 	{
+		name: "Inclement Weather",
+		section: "XY Singles",
+
+		mod: 'incweather',
+		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew']
+	},
+	{
 		name: "Ubers (beta)",
 		section: "XY Singles",
 
