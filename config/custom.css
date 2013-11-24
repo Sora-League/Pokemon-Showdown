@@ -77,8 +77,8 @@ background: #ff9999;
 .acidrainweather,
 .contaminateweather
 {
-        background:  #(hexcolor) url(url of the image) no-repeat scroll left top;
-        color: #(hexcolor);
+        background:  #a64ca6 url(//http://i44.tinypic.com/2w71ziv.jpg) no-repeat scroll left top;
+        color: #400040;
         text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
 }
 .pseudoweather
