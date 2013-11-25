@@ -13,7 +13,7 @@ exports.BattleScripts = {
                 this.modData('Learnsets', 'vileplume').learnset.contaminate = ['5M'];
                 this.modData('Learnsets', 'bellsprout').learnset.contaminate = ['5M'];
                 this.modData('Learnsets', 'weepinbell').learnset.contaminate = ['5M'];
-                this.modData('Learnsets', 'victreebell').learnset.contaminate = ['5M'];
+                this.modData('Learnsets', 'victreebel').learnset.contaminate = ['5M'];
                 this.modData('Learnsets', 'weezing').learnset.contaminate = ['5M'];
                 
                 //Weezing and Koffing has Contamination
