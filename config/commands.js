@@ -748,26 +748,25 @@ var commands = exports.commands = {
 			  '<i>"A Day without SunShine is like Night Time."</i> <br />'+
 			  '<b>Type:</b> Fire<br />'+
 			  '<b>Ace:</b> Charizard<br />'+
-	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-No Hazards <br/>'+
-	 	      '-Only Sun Allowed <br/>'+
-	 	      '-Monotype <br />'+
-	 	      '-No Focus Sash <br />'+
-	 	      '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
+	 	          '<b>Battle Rules:</b> <br/>'+
+	 	          '-No Hazards <br/>'+
+	 	          '-Only Sun Allowed <br/>'+
+	 	          '-Monotype <br />'+
+	 	          '-No Focus Sash <br />'+
+	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
         berry: function(target, room, user) {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('E4 <b>Berry</b><br />'+
-			  '<i>"Dont underestimate water because I can Wash away even the Strongest teams."</i> <br />'+
-			  '<b>Type:</b> Water<br />'+
-			  '<b>Ace:</b> Keldeo<br />'+
+			  '<i>"?"</i> <br />'+
+			  '<b>Type:</b> Ghost<br />'+
+			  '<b>Ace:</b> Sableye<br />'+
 			  '<b>Battle Rules:</b> <br />'+
-			  '-No Weather Except Rain <br/>'+
-			  '-No Hidden Power <br/>'+
-			  '-No Rain Boosted Accuracy Moves <br/>'+
-			  '-No Abilities that Absorb Water <br/>'+
-			  '<img src="http://sprites.pokecheck.org/i/647.gif"> <img src="http://sprites.pokecheck.org/t/140.gif">');
+			  '-No Weather <br/>'+
+			  '-No Hazards <br/>'+
+			  '-No Sucker Punch <br/>');
+			  
         },
 	
 	lynne: function(target, room, user) {
