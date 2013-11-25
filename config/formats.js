@@ -277,7 +277,7 @@ exports.Formats = [
 	},
 	{
 		name: "Pokebank Ubers Doubles (beta)",
-		section: "XY Singles",
+		section: "XY Doubles",
 		column: 2,
 
 		gameType: 'doubles',
