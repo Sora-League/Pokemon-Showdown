@@ -736,7 +736,7 @@ var commands = exports.commands = {
 		      '<b>Ace:</b> Zygarde<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-No Hazards <br/>'+
-	 	      '-Custom Doubles Format (OU clauses apply) <br/>'+
+	 	      '-Pokebank Ubers Doubles format <br/>'+
 	 	      '-Max 1 Uber (680BST Max) <br />'+
 	 	      '-No Weather <br />'+
 	 	      '<img src="http://i.imgur.com/vuDajGL.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/202.png">');
