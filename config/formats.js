@@ -276,6 +276,14 @@ exports.Formats = [
 		]
 	},
 	{
+		name: "Pokebank Ubers Doubles (beta)",
+		section: "XY Singles",
+
+		gameType: 'doubles',
+		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
+		banlist: []
+	},
+	{
 		name: "Pokebank Smogon Doubles (beta)",
 		section: "XY Doubles",
 		column: 2,
