@@ -842,7 +842,7 @@ var commands = exports.commands = {
 			'<i>"Every member of a team plays its part. That is why its called a team."</i> <br />'+
 			'<b>Ace:</b> Metagross<br />'+
 		 	'<b>Battle Rules:</b> <br/>'+
-		 	'-OU Monotype <br/>'+
+		 	'-Pokebank OU Monotype <br/>'+
 		 	'-Challenger Choses 3 Types - 1 Not Very Effective, 1 Neutral, 1 Super Effective Against the Challengers Type <br/>'+
 		 	'-Frontier will use the types chosen by Challenger <br/>'+
 		 	'-Best of 3 Series<br />'+
