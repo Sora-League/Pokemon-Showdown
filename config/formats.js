@@ -91,6 +91,13 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew']
 	},
 	{
+		name: "Pokebank OU Monotype (beta)",
+		section: "XY Singles",
+
+		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview', 'Same Type Clause'],
+		banlist: ['Uber', 'Soul Dew']
+	},
+	{
 		name: "Pokebank Ubers (beta)",
 		section: "XY Singles",
 
