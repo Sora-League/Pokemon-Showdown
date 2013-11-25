@@ -526,6 +526,14 @@ exports.Formats = [
 		banlist: ['Uber']
 	},
 	{
+		name: "Tiershift",
+		section: "Other Metagames",
+
+		mod: 'tiershift',
+		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew']
+	},
+	{
 		name: "[Gen 5] OU Monotype",
 		section: "Other Metagames",
 
