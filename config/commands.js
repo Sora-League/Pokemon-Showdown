@@ -697,7 +697,7 @@ var commands = exports.commands = {
 	 	    '<i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i> <br />'+
 	 	    '<b>Ace:</b> Tyranitar<br />'+
 	 	    '<b>Battle Rules:</b> <br />'+
-	 	    '-Smogon Doubles Format<br />'+
+	 	    '-Pokebank OU Format<br />'+
 	 	    '-No Weather except Sandstorm<br />'+
 	 	    '-No Status (Unless Caused by Attack)<br />'+
 	 	    '<img src="http://fc08.deviantart.net/fs38/f/2008/323/e/0/Tyranitar_Animation_by_smeebob.gif"> <img src="http://sprites.pokecheck.org/t/099.gif">');
