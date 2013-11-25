@@ -278,6 +278,7 @@ exports.Formats = [
 	{
 		name: "Pokebank Ubers Doubles (beta)",
 		section: "XY Singles",
+		column: 2,
 
 		gameType: 'doubles',
 		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
