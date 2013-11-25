@@ -474,14 +474,6 @@ exports.Formats = [
 		]
 	},
 	{
-		name: "Tiershift",
-		section: "Other Metagames",
-
-		mod: 'tiershift'
-		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew']
-	},
-	{
 		name: "CAP (beta)",
 		section: "Other Metagames",
 
