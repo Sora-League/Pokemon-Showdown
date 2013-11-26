@@ -739,6 +739,7 @@ var commands = exports.commands = {
 	 	      '-Pokebank Ubers Doubles format <br/>'+
 	 	      '-Max 1 Uber (680BST Max) <br />'+
 	 	      '-No Weather <br />'+
+	 	      '-No Mega Evolutions <br />'+
 	 	      '<img src="http://i.imgur.com/vuDajGL.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/202.png">');
         },
 	
