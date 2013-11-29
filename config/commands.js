@@ -1050,13 +1050,12 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/130f.gif"> <img src="http://sprites.pokecheck.org/t/140.gif">');
 	},
 	
-	wholphy: function(target, room, user) {
+	bean877: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Wholphy</b><br />'+
-			  '<i>"?."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Bean877</b><br />'+
+			  '<i>"Control the mind of the beast to control it\'s strength."</i> <br />'+
 			  '<b>Type:</b> Psychic<br />'+
-			  '<b>Ace:</b> Gardevoir<br />'+
-			  '<img src="http://sprites.pokecheck.org/s/282.gif"> <img src="http://sprites.pokecheck.org/t/108.gif">');
+			  '<b>Ace:</b> Victini<br />');
 	},
 	
 	peeta: function(target, room, user) {
