@@ -37,7 +37,7 @@ exports.Formats = [
 		maxLevel: 5,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
 		noPokebank: true,
-		banlist: ['Sonicboom', 'Dragon Rage', 'Scyther']
+		banlist: ['Sonicboom', 'Dragon Rage', 'Scyther', 'Sneasel']
 	},
 	{
 		name: "XY Battle Spot Singles (beta)",
@@ -110,7 +110,7 @@ exports.Formats = [
 
 		maxLevel: 5,
 		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview', 'Little Cup'],
-		banlist: ['Sonicboom', 'Dragon Rage', 'Scyther']
+		banlist: ['Sonicboom', 'Dragon Rage', 'Scyther', 'Sneasel']
 	},
 	{
 		name: "Custom Game",
@@ -258,7 +258,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
 		noPokebank: true,
 		banlist: ['Dark Void', 'Soul Dew',
-			'Mewtwo',
+			'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y',
 			'Lugia',
 			'Ho-Oh',
 			'Kyogre',
@@ -292,7 +292,7 @@ exports.Formats = [
 		gameType: 'doubles',
 		ruleset: ['Pokemon', 'Standard Pokebank', 'Evasion Abilities Clause', 'Team Preview'],
 		banlist: ['Dark Void', 'Soul Dew',
-			'Mewtwo',
+			'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y',
 			'Lugia',
 			'Ho-Oh',
 			'Kyogre',
@@ -325,7 +325,7 @@ exports.Formats = [
 		maxForcedLevel: 50,
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview VGC'],
 		noPokebank: true,
-		banlist: [], // The neccessary bans are in Standard GBU
+		banlist: ['Dark Void'], // Banning Dark Void here because technically Smeargle cannot learn it yet.
 		validateTeam: function(team, format) {
 			if (team.length < 4) return ['You must bring at least 4 Pokemon.'];
 		}
