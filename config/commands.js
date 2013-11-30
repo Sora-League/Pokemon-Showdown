@@ -765,8 +765,7 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Sableye<br />'+
 			  '<b>Battle Rules:</b> <br />'+
 			  '-No Weather <br/>'+
-			  '-No Hazards <br/>'+
-			  '-No Sucker Punch <br/>');
+			  '-No Hazards <br/>');
 			  
         },
 	
