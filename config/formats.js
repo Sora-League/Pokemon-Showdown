@@ -19,7 +19,7 @@ exports.Formats = [
 		section: "XY Singles",
 
 		mod: 'incweather',
-		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
 		banlist: ['Uber', 'Soul Dew']
 	},
 	{
