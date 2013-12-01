@@ -1,6 +1,6 @@
 exports.BattleScripts = {
-        inherit: 'gen5',
-        gen: 5,
+        inherit: 'gen6',
+        gen: 6,
         init: function() {
                 //Pokemon that can learn Contaminate
                 this.modData('Learnsets', 'bulbasaur').learnset.contaminate = ['5M'];
