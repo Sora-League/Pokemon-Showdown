@@ -760,12 +760,14 @@ var commands = exports.commands = {
         berry: function(target, room, user) {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('E4 <b>Berry</b><br />'+
-			  '<i>"?"</i> <br />'+
-			  '<b>Type:</b> Ghost<br />'+
-			  '<b>Ace:</b> Sableye<br />'+
+			  '<i>"Just keep swinging."</i> <br />'+
+			  '<b>Type:</b> Fighting<br />'+
+			  '<b>Ace:</b> Infernape<br />'+
 			  '<b>Battle Rules:</b> <br />'+
 			  '-No Weather <br/>'+
-			  '-No Hazards <br/>');
+			  '-No Hazards <br/>'+
+			  '-No Prankster <br/>'+
+			  '-No Priority Abilities <br/>');
 			  
         },
 	
