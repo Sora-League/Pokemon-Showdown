@@ -153,7 +153,8 @@ exports.customavatars = {
 	  'gymtrnrsilence': '016.gif',
 	  'gymldrkrenon': '017.gif',
 	  'frontierascher': '018.gif',
-	  'kingarani': '019.png'
+	  'kingarani': '019.png',
+	  'e4lynne': '020.png'
 	  
 };
 
