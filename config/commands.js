@@ -282,6 +282,7 @@ var commands = exports.commands = {
 		var newTargets = Tools.dataSearch(target);
 		if (newTargets && newTargets.length) {
 			for (var i = 0; i < newTargets.length; i++) {
+				var template = Tools.getTemplate(newTargets[i].species);
 				if (newTargets[i].id !== targetId && !Tools.data.Aliases[targetId] && !i) {
 					data = "No Pokemon, item, move or ability named '" + target + "' was found. Showing the data of '" + newTargets[0].name + "' instead.\n";
 				}
