@@ -1,6 +1,6 @@
 exports.BattleItems = {
         "molarrock": {
-                id: "molarrock",
+                id: "Molar Rock",
 		name: "Molar Rock",
 		spritenum: 0,
 		fling: {
