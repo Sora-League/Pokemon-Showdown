@@ -2374,7 +2374,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		desc: "Lowers one adjacent target's evasion by 1 stage. Whether or not the target's evasion was affected, the effects of Reflect, Light Screen, Safeguard, Mist, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's and the target's sides. Pokemon protected by Magic Coat or the Ability Magic Bounce are unaffected and instead use this move themselves. Ignores a target's Substitute, although a Substitute will still block the evasion lowering.",
-		shortDesc: "Removes hazards from both sides, lowers target's evasion by 1.",
+		shortDesc: "Removes hazards from field. Lowers foe's evasion.",
 		id: "defog",
 		name: "Defog",
 		pp: 15,
@@ -4521,8 +4521,8 @@ exports.BattleMovedex = {
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
-		desc: "Changes the target's type to Grass.",
-		shortDesc: "Changes the target's type to Grass.",
+		desc: "Adds Grass to the target's type(s). If the target already has three types, the third is replaced.",
+		shortDesc: "Adds Grass to the target's type(s).",
 		id: "forestscurse",
 		name: "Forest's Curse",
 		pp: 20,
@@ -5489,7 +5489,11 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		desc: "Doubles the prize money received after battle.",
+<<<<<<< HEAD
 		shortDesc: "No competitive use.",
+=======
+		shortDesc: "No effect.",
+>>>>>>> upstream/master
 		id: "happyhour",
 		name: "Happy Hour",
 		pp: 30,
@@ -6952,7 +6956,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		desc: "Protects the user from attacks. Contactors get their Attack lowered by 2 stages. Priority +4",
-		shortDesc: "Protects the user from attacks. Contactors get -Atk.",
+		shortDesc: "Protects user from attacks. Contactors get -Atk.",
 		id: "kingsshield",
 		isViable: true,
 		name: "King's Shield",
@@ -7002,7 +7006,7 @@ exports.BattleMovedex = {
 		basePower: 65,
 		category: "Physical",
 		desc: "Deals damage to one adjacent target and causes it to drop its held item. Does 50% more damage if the target is holding an item. This move cannot force Pokemon with the Ability Sticky Hold to lose their held item, or force a Giratina, an Arceus, or a Genesect to lose their Griseous Orb, Plate, or Drive, respectively. It also cannot remove Mega Stones. Items lost to this move cannot be regained with Recycle. Makes contact.",
-		shortDesc: "Removes the target's held item. 1.5x damage if the target is holding an item.",
+		shortDesc: "1.5x damage if foe holds an item. Removes item.",
 		id: "knockoff",
 		isViable: true,
 		name: "Knock Off",
@@ -7660,12 +7664,13 @@ exports.BattleMovedex = {
 		pseudoWeather: 'magneticfield',
 		effect: {
 			duration: 5,
-			durationCallback: function(target, source, effect) {
-				if (source && source.ability === 'persistent') {
+			/*durationCallback: function(target, source, effect) {
+				// Persistent isn't updated for BW/XY moves
+				if (source && source.ability === 'Persistent') {
 					return 7;
 				}
 				return 5;
-			},
+			},*/
 			onBasePower: function(basePower, user, target, move) {
 				if (move.type === 'Electric') {
 					this.debug('electric move strengthened');
@@ -10135,6 +10140,9 @@ exports.BattleMovedex = {
 		volatileStatus: 'ragepowder',
 		effect: {
 			duration: 1,
+			onStart: function(pokemon) {
+				this.add('-start', pokemon, 'move: Rage Powder');
+			},
 			onFoeRedirectTarget: function(target, source, source2, move) {
 				if (!source.hasType('Grass') && this.validTarget(this.effectData.target, source, move.target)) {
 					this.debug("Rage Powder redirected target of move");
@@ -12188,7 +12196,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		desc: "In addition to protecting the user from attacks, this move also damages any attacker who makes direct contact by 1/8 of their maximum HP.",
-		shortDesc: "Protects user. Damages attackers that make contact.",
+		shortDesc: "Protects user. Damages contactors.",
 		id: "spikyshield",
 		isViable: true,
 		name: "Spiky Shield",
@@ -13906,8 +13914,8 @@ exports.BattleMovedex = {
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
-		desc: "Causes one adjacent target to become a Ghost-type. Fails if the target is an Arceus. Pokemon protected by Magic Coat or the Ability Magic Bounce are unaffected and instead use this move themselves.",
-		shortDesc: "Changes the target's type to Ghost.",
+		desc: "Adds Ghost to the target's type(s). If the target already has three types, the third is replaced.",
+		shortDesc: "Adds Ghost to the target's type(s).",
 		id: "trickortreat",
 		name: "Trick-or-Treat",
 		pp: 20,
@@ -14807,7 +14815,7 @@ exports.BattleMovedex = {
 		accuracy: 100,
 		basePower: 0,
 		category: "Status",
-		desc: "Causes one adjacent target's Ability to become Insomnia. Fails if the target's Ability is Insomnia, Multitype, or Truant. Pokemon protected by Magic Coat or the Ability Magic Bounce are unaffected and instead use this move themselves.",
+		desc: "Causes one adjacent target's Ability to become Insomnia. Fails if the target's Ability is Insomnia, Multitype, Stance Change or Truant. Pokemon protected by Magic Coat or the Ability Magic Bounce are unaffected and instead use this move themselves.",
 		shortDesc: "The target's Ability becomes Insomnia.",
 		id: "worryseed",
 		name: "Worry Seed",
@@ -14815,7 +14823,7 @@ exports.BattleMovedex = {
 		priority: 0,
 		isBounceable: true,
 		onTryHit: function(pokemon) {
-			var bannedAbilities = {insomnia:1, multitype:1, truant:1};
+			var bannedAbilities = {insomnia:1, multitype:1, stancechange:1, truant:1};
 			if (bannedAbilities[pokemon.ability]) {
 				return false;
 			}
