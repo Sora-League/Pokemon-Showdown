@@ -86,5 +86,8 @@ exports.BattleScripts = {
                 
                 //Beedrill has Acid Rush
                 this.modData('Pokedex', 'beedrill').abilities['1'] = 'Acid Rush';
+                
+                //Vileplume has Chemical Regeneration
+                this.modData('Pokedex', 'vileplume').abilities['1'] = 'Chemical Regeneration';
         }
 };
