@@ -89,5 +89,8 @@ exports.BattleScripts = {
                 
                 //Vileplume has Chemical Regeneration
                 this.modData('Pokedex', 'vileplume').abilities['1'] = 'Chemical Regeneration';
+                
+                //Dustox gets Chemical Boost
+                this.modData('Pokedex', 'dustox').abilities['1'] = 'Chemical Boost';
         }
 };
