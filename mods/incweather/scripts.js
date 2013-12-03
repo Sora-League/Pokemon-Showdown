@@ -92,5 +92,8 @@ exports.BattleScripts = {
                 
                 //Dustox gets Chemical Boost
                 this.modData('Pokedex', 'dustox').abilities['1'] = 'Chemical Boost';
+                
+                //Victreebel gets Toxic Overdrive
+                this.modData('Pokedex', 'victreebel').abilities['1'] = 'Toxic Overdrive';
         }
 };
