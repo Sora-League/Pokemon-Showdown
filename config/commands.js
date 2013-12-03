@@ -1050,7 +1050,7 @@ var commands = exports.commands = {
 			  '<i>"Water drowns plants and generate static. Fear my water."</i> <br />'+
 			  '<b>Type:</b> Water<br />'+
 			  '<b>Ace:</b> The Sea Pixie (Manaphy)<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/130f.gif"> <img src="http://sprites.pokecheck.org/t/140.gif">');
+			  '<img src="http://sprites.pokecheck.org/i/490.gif"> <img src="http://sprites.pokecheck.org/t/140.gif">');
 	},
 	
 	bean877: function(target, room, user) {
