@@ -14,4 +14,10 @@ Recent Changes
 6.Added the ability Contamination <br/>
 7.Weezing and Koffing's 2nd Ability is Contamination <br/>
 8.Added the ability Acid Rush <br/>
-9.Beedrill has Acid Rush
+9.Beedrill has Acid Rush <br/>
+10.Added the ability Chemical Regeneration <br/>
+11.Vileplume has Chemical Regeneration <br/>
+12.Added the ability Chemical Boost <br/>
+13.Dustox has Chemical Boost <br/>
+14.Added the ability Toxic Overdrive <br/>
+15.Victreebel has Toxic Overdrive
