@@ -5,7 +5,7 @@ exports.BattleAbilities = {
 		onStart: function(source) {
 			this.setWeather('acidrain');
 		},
-		id: "contamination",
+		id: "Contamination",
 		name: "Contamination",
 		rating: 4.5,
 		num: 1000
@@ -21,9 +21,22 @@ exports.BattleAbilities = {
 		onImmunity: function(type, pokemon) {
 			if (type === 'acidrain') return false;
 		},
-		id: "acidrush",
+		id: "Acid Rush",
 		name: "Acid Rush",
 		rating: 2,
 		num: 1001
+	},
+	"chemicalregeneration": {
+		desc: "If the weather is Acid Rain, this Pokemon recovers 1/16 of its max HP after each turn.",
+		shortDesc: "If the weather is Acid Rain, this Pokemon heals 1/16 of its max HP each turn.",
+		onWeather: function(target, source, effect) {
+			if (effect.id === 'acidrain') {
+				this.heal(target.maxhp/16);
+			}
+		},
+		id: "Chemical Regeneration",
+		name: "Chemical Regeneration",
+		rating: 1.5,
+		num: 1002
 	}
 };
