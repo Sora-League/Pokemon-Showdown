@@ -51,5 +51,30 @@ exports.BattleAbilities = {
 		name: "Chemical Boost",
 		rating: 3,
 		num: 1003
+	},
+	"toxicoverdrive": {
+		desc: "If the weather is Acid Rain, this Pokemon's Special Attack and Attack is 1.3x, but it loses 1/8 of its max HP at the end of every turn.",
+		shortDesc: "If Acid Rain is active, this Pokemon's Sp. Atk and Atk is 1.3x and loses 1/8 max HP per turn.",
+		onModifySpAPriority: 5,
+		onModifySpA: function(spa, pokemon) {
+			if (this.isWeather('acidrain')) {
+				return this.chainModify(1.3);
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk: function(atk, pokemon) {
+			if (this.isWeather('acidrain')) {
+				return this.chainModify(1.3);
+			}
+		},
+		onWeather: function(target, source, effect) {
+			if (effect.id === 'acidrain') {
+				this.damage(target.maxhp/8);
+			}
+		},
+		id: "Toxic Overdrive",
+		name: "Toxic Overdrive",
+		rating: 1.5,
+		num: 1004
 	}
 };
