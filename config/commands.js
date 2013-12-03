@@ -926,13 +926,12 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/137.gif">');
 	},
         
-        matt99: function(target, room, user) {
+        ericaj: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Matt99</b><br />'+
-			  '<i>"It may be basic, but it doesnt mean its a walk in the park. You must use your wits to beat me."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>EricaJ</b><br />'+
+			  '<i>"?"</i> <br />'+
 			  '<b>Type:</b> Normal<br />'+
-			  '<b>Ace:</b> Meloetta<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/648.gif"> <img src="http://sprites.pokecheck.org/t/122.gif">');
+			  '<b>Ace:</b> Porygon 2<br />');
         },
         
         core: function(target, room, user) {
