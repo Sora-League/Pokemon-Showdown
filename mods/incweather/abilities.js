@@ -43,7 +43,7 @@ exports.BattleAbilities = {
 		desc: "If Acid Rain is active, this Pokemon's attacks that receive STAB (Same Type Attack Bonus) are increased from 50% to 100%.",
 		shortDesc: "If Acid Rain is active, this Pokemon's same-type attack bonus (STAB) is increased from 1.5x to 2x.",
 		onModifyMove: function(move) {
-			if (effect.id === 'acidrain') {
+			if (this.isWeather('acidrain')) {
 			        move.stab = 2;
 			}        
 		},
