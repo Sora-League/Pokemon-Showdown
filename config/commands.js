@@ -1049,7 +1049,7 @@ var commands = exports.commands = {
 			this.sendReplyBox('Gym Ldr <b>Arthur</b><br />'+
 			  '<i>"Water drowns plants and generate static. Fear my water."</i> <br />'+
 			  '<b>Type:</b> Water<br />'+
-			  '<b>Ace:</b> Gyarados<br />'+
+			  '<b>Ace:</b> The Sea Pixie (Manaphy)<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/130f.gif"> <img src="http://sprites.pokecheck.org/t/140.gif">');
 	},
 	
