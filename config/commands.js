@@ -1061,13 +1061,12 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Victini<br />');
 	},
 	
-	peeta: function(target, room, user) {
+	stark: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Peeta</b><br />'+
-			  '<i>"Ice, Ice Baby!"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Stark</b><br />'+
+			  '<i>"?"</i> <br />'+
 			  '<b>Type:</b> Ice<br />'+
-			  '<b>Ace:</b> Froslass<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/478.gif"> <img src="http://play.pokemonshowdown.com/sprites/trainers/93.png">');
+			  '<b>Ace:</b> Lapras<br />');
 	},
 	
 	abh: function(target, room, user) {
