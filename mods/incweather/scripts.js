@@ -80,8 +80,11 @@ exports.BattleScripts = {
                 this.modData('Learnsets', 'seaking').learnset.contaminate = ['5M'];
                 this.modData('Learnsets', 'octillery').learnset.contaminate = ['5M'];
                 
-                //Weezing and Koffing has Contamination
+                //Weezing and Koffing have Contamination
                 this.modData('Pokedex', 'koffing').abilities['1'] = 'Contamination';
                 this.modData('Pokedex', 'weezing').abilities['1'] = 'Contamination';
+                
+                //Beedrill has Acid Rush
+                this.modData('Pokedex', 'beedrill').abilities['1'] = 'Acid Rush';
         }
 };
