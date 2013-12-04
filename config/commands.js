@@ -1060,12 +1060,12 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Victini<br />');
 	},
 	
-	stark: function(target, room, user) {
+	icey: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Stark</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>Icey</b><br />'+
 			  '<i>"?"</i> <br />'+
 			  '<b>Type:</b> Ice<br />'+
-			  '<b>Ace:</b> Lapras<br />');
+			  '<b>Ace:</b> Kyurem-Black<br />');
 	},
 	
 	abh: function(target, room, user) {
