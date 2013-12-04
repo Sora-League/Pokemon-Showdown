@@ -149,7 +149,6 @@ exports.customavatars = {
 	  'gymldrgary': '011.gif',
 	  'gymldrsjado': '012.gif',
 	  'overlordninjarisu': '013.gif',
-	  'gymldrmatt99': '014.gif',
 	  'gymtrnrsilence': '016.gif',
 	  'gymldrkrenon': '017.gif',
 	  'frontierascher': '018.gif',
