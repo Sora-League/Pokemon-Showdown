@@ -780,7 +780,10 @@ var commands = exports.commands = {
 		      '<b>Type:</b> Steel<br />'+
 		      '<b>Ace:</b> Klefki <br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-Standard OU <br/>'+
+	 	      '-No Stat Boosting Moves/Abilities <br/>'+
+	 	      '-No Choice Item <br/>'+
+	 	      '-No Priority <br/>'+
+	 	      '-No Taunt <br/>'+
 	 	      '<img src="http://media-cerulean.cursecdn.com/avatars/thumbnails/292/989/56/56/635178240045575018.png"> <img src="http://sprites.pokecheck.org/t/139.gif">');
 	},
 	
