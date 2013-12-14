@@ -920,13 +920,13 @@ var commands = exports.commands = {
 		 	  '-No Weather<br/>');
 	},
         
-        dragon: function(target, room, user) {
+        akash: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Gary</b><br />'+
-			  '<i>"The Mighty Warrior of Sora."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Akash</b><br />'+
+			  '<i>"The Fairy Slayer XD"</i> <br />'+
 			  '<b>Type:</b> Dragon<br />'+
-			  '<b>Ace:</b> Latios (Arani)<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/137.gif">');
+			  '<b>Ace:</b> Kyurem-B<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/646-black.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
 	},
         
         ericaj: function(target, room, user) {
