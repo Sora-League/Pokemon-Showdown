@@ -884,12 +884,14 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Ryu</b><br />'+
 		          '<i>"Skill is more important than brute strength."</i> <br />'+
-			  '<b>Ace:</b> Thundurus-T<br />'+
+			  '<b>Ace:</b> Kangaskhan<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-VGC Doubles <br/>'+
-		 	  '-No Hazards <br/>'+
-		 	  '-Max 1 Pseudo-Legendary<br/>'+
-		 	  '-No Legendaries<br />'+
+		 	  '-Pokebank OU Format <br/>'+
+		 	  '-1 Starters must be used <br/>'+
+		 	  '-1 Not Fully Evolved Pokemon must ne used<br/>'+
+		 	  '-No Item Repetition<br />'+
+		 	  '-No Healing Moves/Items<br />'+
+		 	  '-Max 1 Potential Mega Evolution<br />'+
 		 	  '<img src="http://sprites.pokecheck.org/i/642-therian.gif"> <img src="http://sprites.pokecheck.org/t/176.gif">');
 	},
 	
@@ -930,7 +932,7 @@ var commands = exports.commands = {
         ericaj: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>EricaJ</b><br />'+
-			  '<i>"?"</i> <br />'+
+			  '<i>"Simplicity is the ultimate sophistication."</i> <br />'+
 			  '<b>Type:</b> Normal<br />'+
 			  '<b>Ace:</b> Porygon 2<br />');
         },
