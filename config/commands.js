@@ -892,7 +892,7 @@ var commands = exports.commands = {
 		 	  '-No Item Repetition<br />'+
 		 	  '-No Healing Moves/Items<br />'+
 		 	  '-Max 1 Potential Mega Evolution<br />'+
-		 	  '<img src="http://sprites.pokecheck.org/i/642-therian.gif"> <img src="http://sprites.pokecheck.org/t/176.gif">');
+		 	  '<img src="http://sprites.pokecheck.org/i/115.gif"> <img src="http://sprites.pokecheck.org/t/176.gif">');
 	},
 	
 	leaf: function(target, room, user) {
