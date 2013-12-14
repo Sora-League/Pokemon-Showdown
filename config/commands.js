@@ -730,19 +730,17 @@ var commands = exports.commands = {
 	 	     '<img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://sprites.pokecheck.org/t/148.gif">');
         },
 	
-	jeratt: function(target, room, user) {
+	gary: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('E4 <b>Jeratt</b><br />'+
-		      '<i>"When our battle is done, Ill be dragon you away~"</i> <br />'+
+		this.sendReplyBox('E4 <b>Gary</b><br />'+
+		      '<i>"The Mighty warrior of Sora."</i> <br />'+
 		      '<b>Type:</b> Dragon<br />'+
-		      '<b>Ace:</b> Zygarde<br />'+
+		      '<b>Ace:</b> Latios (Arani)<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-No Hazards <br/>'+
-	 	      '-Pokebank Ubers Doubles format <br/>'+
-	 	      '-Max 1 Uber (680BST Max) <br />'+
-	 	      '-No Weather <br />'+
-	 	      '-No Mega Evolutions <br />'+
-	 	      '<img src="http://i.imgur.com/vuDajGL.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/202.png">');
+	 	      '-No Status <br/>'+
+	 	      '-Max 2 Legendaries <br />'+
+	 	      '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/137.gif">');
         },
 	
 	toast: function(target, room, user) {
@@ -920,7 +918,7 @@ var commands = exports.commands = {
 		 	  '-No Weather<br/>');
 	},
         
-        gary: function(target, room, user) {
+        dragon: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Gary</b><br />'+
 			  '<i>"The Mighty Warrior of Sora."</i> <br />'+
@@ -1019,13 +1017,13 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/560.gif"> <img src="http://sprites.pokecheck.org/t/119.gif">');
 	},
 	
-	maiya: function(target, room, user) {
+	zoro: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Maiya</b><br />'+
-			  '<i>-"Pokemon are your best friends, right Pikachu?" -"Pika!"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
+			  '<i>-"Electricity is the reason we live like this."</i> <br />'+
 			  '<b>Type:</b> Electric<br />'+
-			  '<b>Ace:</b> Pikachu<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/025.gif"> <img src="http://sprites.pokecheck.org/t/136.gif">');
+			  '<b>Ace:</b> Jolteon<br />');
+			  
 	},
 	
 	krenon: function(target, room, user) {
