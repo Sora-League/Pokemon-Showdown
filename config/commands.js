@@ -1013,7 +1013,7 @@ var commands = exports.commands = {
 			  '<i>"Justice never loses."</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
 			  '<b>Ace:</b> Scrafty<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/392.gif">');
+			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
 	zoro: function(target, room, user) {
