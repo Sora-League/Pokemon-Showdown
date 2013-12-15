@@ -459,7 +459,7 @@ var commands = exports.commands = {
 			'<tr><td>Custom</td><td>Buys a custom avatar to be applied to your name (you supply)</td><td>20</td></tr>' +
 			'<tr><td>Animated</td><td>Buys an animated avatar to be applied to your name (you supply)</td><td>35</td></tr>' +
 			'<tr><td>Room</td><td>Buys a chatroom for you to own (within reason, can be refused)</td><td>100</td></tr>' +
-			'<tr><td>Trainer</td><td>Buys a trainer card which shows information through a command such as /onyxe (note: third image costs 10 bucks extra, ask for more details)</td><td>40</td></tr>' +
+			'<tr><td>Trainer</td><td>Buys a trainer card which shows information through a command such as /onyxe (Note: 5 bucks additional fee for each sprite in the trainer card)</td><td>40</td></tr>' +
 			'<tr><td>Fix</td><td>Buys the ability to alter your current custom avatar or trainer card (don\'t buy if you have neither)!</td><td>10</td></tr>' +
 			'<tr><td>POTD</td><td>Buys the ability to set the Pokemon of the Day. (Lasts for 1 day) Note: Not purchase-able if there is already a POTD for the day.</td><td>15</td></tr>' +
 			'</table><br />To buy an item from the shop, use /buy [command]. <br />Also do /moneycommands to view money based commands.</center>');
