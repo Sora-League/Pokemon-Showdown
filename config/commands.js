@@ -1007,13 +1007,13 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/473.gif"> <img src="http://sprites.pokecheck.org/t/091.gif">');
 	},
 	
-	just: function(target, room, user) {
+	night: function(target, room, user) {
 			if (!this.canBroadcast()) return;
-			this.sendReplyBox('Gym Ldr <b>Just</b><br />'+
-			  '<i>"Fight to the Finish!"</i> <br />'+
+			this.sendReplyBox('Gym Ldr <b>Night</b><br />'+
+			  '<i>"Justice never loses."</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
 			  '<b>Ace:</b> Scrafty<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/560.gif"> <img src="http://sprites.pokecheck.org/t/119.gif">');
+			  '<img src="http://sprites.pokecheck.org/i/392.gif">');
 	},
 	
 	zoro: function(target, room, user) {
