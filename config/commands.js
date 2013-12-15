@@ -702,7 +702,7 @@ var commands = exports.commands = {
 	 	    '-Pokebank OU Format<br />'+
 	 	    '-No Weather except Sandstorm<br />'+
 	 	    '-No Status (Unless caused by attack)<br />'+
-	 	    '<img src="http://fc08.deviantart.net/fs38/f/2008/323/e/0/Tyranitar_Animation_by_smeebob.gif"> <img src="http://sprites.pokecheck.org/t/099.gif">');
+	 	    '<img src="http://sprites.pokecheck.org/i/248.gif"> <img src="http://sprites.pokecheck.org/i/639.gif"> <img src="http://sprites.pokecheck.org/i/464.gif"> <img src="http://sprites.pokecheck.org/i/346.gif"> <img src="http://sprites.pokecheck.org/i/141.gif"> <img src="http://sprites.pokecheck.org/i/567.gif">');
         },
         
         noah: function(target, room, user) {
