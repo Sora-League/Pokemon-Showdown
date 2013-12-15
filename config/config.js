@@ -139,7 +139,7 @@ exports.customavatars = {
 	  'championonyxe': '015.gif',
 	  'frontierheadbart': '002.gif',
 	  'champinnah': '003.gif',
-	  'e4jeratt': '004.gif',
+	  'artistejeratt': '004.gif',
 	  'frontiervader': '005.gif',
 	  'frontierryu': '006.gif',
 	  'frontierleaf': '007.gif',
