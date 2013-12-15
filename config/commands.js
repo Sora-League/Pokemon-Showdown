@@ -771,18 +771,17 @@ var commands = exports.commands = {
 			  
         },
 	
-	lynne: function(target, room, user) {
+	bighug: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('E4 <b>Lynne</b><br />'+
-		      '<i>"My overwhelming fortitude keeps Sora strong and mighty."</i> <br />'+
-		      '<b>Type:</b> Steel<br />'+
-		      '<b>Ace:</b> Klefki <br />'+
+		this.sendReplyBox('E4 <b>Big Hug</b><br />'+
+		      '<i>"BIG HUG, the big bug, will give your team a BIG BUG HUG!"</i> <br />'+
+		      '<b>Type:</b> Bug<br />'+
+		      '<b>Ace:</b> Galvantula <br />'+
+		      '<b>Note:</b> Hugs (not optional)<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-No Stat Boosting Moves/Abilities <br/>'+
-	 	      '-No Choice Item <br/>'+
-	 	      '-No Priority <br/>'+
-	 	      '-No Taunt <br/>'+
-	 	      '<img src="http://media-cerulean.cursecdn.com/avatars/thumbnails/292/989/56/56/635178240045575018.png"> <img src="http://sprites.pokecheck.org/t/139.gif">');
+	 	      '-No Stealth Rock <br/>'+
+	 	      '-No Spikes <br/>'+
+	 	      '-No Toxic Spikes <br/>');
 	},
 	
 	ninjarisu: function(target, room, user) {
@@ -982,14 +981,12 @@ var commands = exports.commands = {
 	 	      '<img src="http://sprites.pokecheck.org/i/059.gif"> <img src="http://sprites.pokecheck.org/t/144.gif">');
         },
         
-        bighug: function(target, room, user) {
+        lynne: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-	        this.sendReplyBox('Gym Ldr <b>BIG HUG</b><br />'+
-			  '<i>"BIG HUG, the big bug, will give your team a BIG BUG HUG!"</i> <br />'+
+	        this.sendReplyBox('Gym Ldr <b>Lynne</b><br />'+
+			  '<i>"Every little thing in the world is worth fighting for."</i> <br />'+
 			  '<b>Type:</b> Bug<br />'+
-			  '<b>Ace:</b> Yanmega<br />'+
-			  '<b>Note:</b> Hugs (not optional)<br />'+
-			  '<img src="http://sprites.pokecheck.org/s/469.gif"> <img src="http://play.pokemonshowdown.com/sprites/trainers/103.png">');
+			  '<b>Ace:</b> Volcarona<br />');
         },
         
         spelings: function(target, room, user) {
@@ -1078,6 +1075,16 @@ var commands = exports.commands = {
 			  '<b>Type:</b> Steel<br />'+
 			  '<b>Ace:</b> Genesect<br />');
 	},
+	
+	jeratt: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Artiste <b>Jeratt</b><br />'+
+			'<i>"Still dragon you away~"</i> <br />'+
+			'<b>Skilled in:</b> Dragon & Ice<br />'+
+		 	'<b>Note:</b> Close the Lobby and see what I can do. <br/>'+
+		 	'<b>History:</b> Greatest Ice E4, undefeated Dragon E4. <br/>'+
+		 	'<img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif">');
+        },
 	
 	getbucks: 'getbucks',
 		getbucks: function(target, room, user) {
