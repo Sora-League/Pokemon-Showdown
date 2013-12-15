@@ -1081,7 +1081,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('Artiste <b>Jeratt</b><br />'+
 			'<i>"Still dragon you away~"</i> <br />'+
 			'<b>Skilled in:</b> Dragon & Ice<br />'+
-		 	'<b>Note:</b> Close the Lobby and see what I can do. <br/>'+
+		 	'<b>Note:</b> Close the Lobby and see what I can really do. <br/>'+
 		 	'<b>History:</b> Greatest Ice E4, undefeated Dragon E4. <br/>'+
 		 	'<img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif">');
         },
