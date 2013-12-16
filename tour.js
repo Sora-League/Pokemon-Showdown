@@ -322,7 +322,7 @@ exports.tour = function(t) {
 				//end tour
 				Rooms.rooms[rid].addRaw('<h2><font color="green">Congratulations <font color="black">' + Users.users[w[0]].name + '</font>!  You have won the ' + Tools.data.Formats[tour[rid].tier].name + ' Tournament!<br>You have also won ' + tourMoney + ' Sora ' + p + '! ' + tooSmall + '</font></h2>' + '<br><font color="blue"><b>SECOND PLACE:</b></font> ' + Users.users[l[0]].name + '<hr />');
 				//for now, this is the only way to get points/money
-				var data = fs.readFileSync('config/bucks.csv','utf8')
+				var data = fs.readFileSync('config/cash.csv','utf8')
 				var match = false;
 				var money = 0;
 				var row = (''+data).split("\n");
@@ -345,17 +345,17 @@ exports.tour = function(t) {
 				Users.users[w[0]].money = Users.users[w[0]].money + tourMoney;
 				if (match === true) {
 					var re = new RegExp(line,"g");
-					fs.readFile('config/bucks.csv', 'utf8', function (err,data) {
+					fs.readFile('config/cash.csv', 'utf8', function (err,data) {
 					if (err) {
 						return console.log(err);
 					}
 					var result = data.replace(re, Users.users[w[0]].userid+','+Users.users[w[0]].money);
-					fs.writeFile('config/bucks.csv', result, 'utf8', function (err) {
+					fs.writeFile('config/cash.csv', result, 'utf8', function (err) {
 						if (err) return console.log(err);
 					});
 					});
 				} else {
-					var log = fs.createWriteStream('config/bucks.csv', {'flags': 'a'});
+					var log = fs.createWriteStream('config/cash.csv', {'flags': 'a'});
 					log.write("\n"+Users.users[w[0]].userid+','+Users.users[w[0]].money);
 				}
 				tour[rid].status = 0;
