@@ -22,14 +22,14 @@ var commands = exports.commands = {
 	
 	createpoints: function(target, room, user, connection) {
 		if(!user.can('hotpatch')) return this.sendReply('You do not have enough authority to do this.');
-		fs.exists('config/money.csv', function (exists) {
+		fs.exists('config/cash.csv', function (exists) {
 			if(exists){
 				return connection.sendTo(room, 'Since this file already exists, you cannot do this.');
 			} else {
-				fs.writeFile('config/money.csv', 'championonyxe,10000', function (err) {
+				fs.writeFile('config/cash.csv', 'championonyxe,10000', function (err) {
 					if (err) throw err;
-					console.log('config/money.csv created.');
-					connection.sendTo(room, 'config/money.csv created.');
+					console.log('config/cash.csv created.');
+					connection.sendTo(room, 'config/cash.csv created.');
 				});
 			}
 		});
@@ -68,7 +68,7 @@ var commands = exports.commands = {
         var coins = 0;
         var total = '';
         if (!target) {
-        var data = fs.readFileSync('config/money.csv','utf8')
+        var data = fs.readFileSync('config/cash.csv','utf8')
                 var row = (''+data).split("\n");
                 for (var i = row.length; i > -1; i--) {
                         if (!row[i]) continue;
@@ -86,9 +86,9 @@ var commands = exports.commands = {
                 if (mMatch === true) {
                         var p = 'bucks';
                         if (money < 2) p = 'buck';
-                        total += user.name + ' has ' + money + ' ' + p + '.<br />';
+                        total += user.name + ' has ' + money + ' ' + p + '.'
                 }
-                if (mMatch === false) {
+                if (mMatch === false || money == 0) {
                         total += 'You have no bucks.<br />';
                 }
                 user.money = money;
@@ -117,7 +117,7 @@ var commands = exports.commands = {
                 }
                 user.coins = coins;
         } else {
-                var data = fs.readFileSync('config/money.csv','utf8')
+                var data = fs.readFileSync('config/cash.csv','utf8')
                 target = this.splitTarget(target);
                 var targetUser = this.targetUser;
                 if (!targetUser) {
@@ -193,7 +193,7 @@ var commands = exports.commands = {
                 }
                 var cleanedUp = parts[1].trim();
                 var giveMoney = Number(cleanedUp);
-                var data = fs.readFileSync('config/money.csv','utf8')
+                var data = fs.readFileSync('config/cash.csv','utf8')
                 var match = false;
                 var money = 0;
                 var line = '';
@@ -216,17 +216,17 @@ var commands = exports.commands = {
                 targetUser.money += giveMoney;
                 if (match === true) {
                         var re = new RegExp(line,"g");
-                        fs.readFile('config/money.csv', 'utf8', function (err,data) {
+                        fs.readFile('config/cash.csv', 'utf8', function (err,data) {
                         if (err) {
                                 return console.log(err);
                         }
                         var result = data.replace(re, targetUser.userid+','+targetUser.money);
-                        fs.writeFile('config/money.csv', result, 'utf8', function (err) {
+                        fs.writeFile('config/cash.csv', result, 'utf8', function (err) {
                                 if (err) return console.log(err);
                         });
                         });
                 } else {
-                        var log = fs.createWriteStream('config/money.csv', {'flags': 'a'});
+                        var log = fs.createWriteStream('config/cash.csv', {'flags': 'a'});
                         log.write("\n"+targetUser.userid+','+targetUser.money);
                 }
                 var p = 'bucks';
@@ -254,7 +254,7 @@ var commands = exports.commands = {
 		}
 		var cleanedUp = parts[1].trim();
 		var takeMoney = Number(cleanedUp);
-		var data = fs.readFileSync('config/money.csv','utf8')
+		var data = fs.readFileSync('config/cash.csv','utf8')
 		var match = false;
 		var money = 0;
 		var line = '';
@@ -277,17 +277,17 @@ var commands = exports.commands = {
 		targetUser.money -= takeMoney;
 		if (match === true) {
 			var re = new RegExp(line,"g");
-			fs.readFile('config/money.csv', 'utf8', function (err,data) {
+			fs.readFile('config/cash.csv', 'utf8', function (err,data) {
 			if (err) {
 				return console.log(err);
 			}
 			var result = data.replace(re, targetUser.userid+','+targetUser.money);
-			fs.writeFile('config/money.csv', result, 'utf8', function (err) {
+			fs.writeFile('config/cash.csv', result, 'utf8', function (err) {
 				if (err) return console.log(err);
 			});
 			});
 		} else {
-			var log = fs.createWriteStream('config/money.csv', {'flags': 'a'});
+			var log = fs.createWriteStream('config/cash.csv', {'flags': 'a'});
 			log.write("\n"+targetUser.userid+','+targetUser.money);
 		}
 		var p = 'bucks';
@@ -305,7 +305,7 @@ var commands = exports.commands = {
 		var target2 = target;
 		target = target.split(', ');
 		var avatar = '';
-		var data = fs.readFileSync('config/money.csv','utf8')
+		var data = fs.readFileSync('config/cash.csv','utf8')
 		var match = false;
 		var money = 0;
 		var line = '';
@@ -424,12 +424,12 @@ var commands = exports.commands = {
 		}
 		if (match === true) {
 			var re = new RegExp(line,"g");
-			fs.readFile('config/money.csv', 'utf8', function (err,data) {
+			fs.readFile('config/cash.csv', 'utf8', function (err,data) {
 			if (err) {
 				return console.log(err);
 			}
 			var result = data.replace(re, user.userid+','+user.money);
-			fs.writeFile('config/money.csv', result, 'utf8', function (err) {
+			fs.writeFile('config/cash.csv', result, 'utf8', function (err) {
 				if (err) return console.log(err);
 			});
 			});
