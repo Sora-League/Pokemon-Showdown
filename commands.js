@@ -1163,7 +1163,8 @@ var commands = exports.commands = {
 					'We are a Pokemon League open for challenges!<br /><br />' +
 					'You are welcomed to challenge us, participate in our tournaments or just chat in the lobby! <br /><br />' +
 					'The most important rule here is to have fun! We hope you will have an enjoyable stay here.<br /><br />' +
-					'You may want to check out <a href="http://soraleague.weebly.com/index.html">The Sora League Website</a> for details about the rules of challenge.</div>');
+					'You may want to check out <a href="http://soraleague.weebly.com/index.html">The Sora League Website</a> for details about the rules of challenge.<br /><br />' +
+					'<b>ATTENTION:</b> Due to some errors, the money system was broken. Fortunately, it is now fixed but everyone\'s money are all lost. Don\'t worry as I kept a record of it, just PM Champion OnyxE to get your money back. Sorry for any inconvenience caused.</div>');
 		}
 	},
 
