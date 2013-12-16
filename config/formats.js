@@ -681,7 +681,6 @@ exports.Formats = [
 		banlist: ['Uber']
 	},
 	{
-<<<<<<< HEAD
 		name: "Tiershift",
 		section: "Other Metagames",
 
@@ -691,11 +690,9 @@ exports.Formats = [
 	},
 	{
 		name: "[Gen 5] OU Monotype",
-=======
-		name: "Inverse Battle",
 		section: "Other Metagames",
 
-		mod: 'inverse',
+		mod: 'gen5',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 		banlist: [
 			'Ho-Oh',
@@ -705,14 +702,6 @@ exports.Formats = [
 			'Yveltal',
 			'Xerneas'
 		]
-	},
-	{
-		name: "OU Monotype",
->>>>>>> upstream/master
-		section: "Other Metagames",
-
-		ruleset: ['Pokemon', 'Standard', 'Same Type Clause', 'Evasion Abilities Clause', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite']
 	},
 	{
 		name: "[Gen 5] Glitchmons",
