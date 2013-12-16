@@ -2033,7 +2033,7 @@ exports.BattleMovedex = {
 		shortDesc: "If the user has no item, it steals the target's.",
 		id: "covet",
 		name: "Covet",
-		pp: 40,
+		pp: 25,
 		priority: 0,
 		isContact: true,
 		onHit: function(target, source) {
@@ -3153,7 +3153,7 @@ exports.BattleMovedex = {
 		gen: 6,
 		accuracy: 100,
 		basePower: 0,
-		category: "Special",
+		category: "Status",
 		desc: "Harshly lowers the target's Special Attack stat.",
 		shortDesc: "Lowers the target's Sp. Atk by 2.",
 		id: "eerieimpulse",
@@ -3244,16 +3244,12 @@ exports.BattleMovedex = {
 		volatileStatus: 'electrify',
 		effect: {
 			duration: 1,
-			// TODO: Proper messages
-			onStart: function(pokemon) {
-				this.add('-start', pokemon, 'Electrify');
+			onStart: function(target) {
+				this.add('-singleturn',target,'move: Electrify');
 			},
 			onModifyMove: function(move) {
 				this.debug('Electrify making move type electric');
 				move.type = 'Electric';
-			},
-			onEnd: function(pokemon) {
-				this.add('-end', pokemon, 'Electrify');
 			}
 		},
 		secondary: false,
@@ -3657,7 +3653,7 @@ exports.BattleMovedex = {
 		priority: 0,
 		//todo
 		secondary: false,
-		target: "normal",
+		target: "all",
 		type: "Fairy"
 	},
 	"fairywind": {
@@ -4992,24 +4988,6 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Normal"
 	},
-	"glowpunch": {
-		num: -6,
-		gen: 6,
-		accuracy: 100,
-		basePower: 70,
-		category: "Physical",
-		desc: "Deals damage to one adjacent target. Makes contact. Damage is boosted to 1.2x by the Ability Iron Fist.",
-		shortDesc: "Deals damage to one adjacent target.",
-		id: "glowpunch",
-		name: "Glow Punch",
-		pp: 20,
-		priority: 0,
-		isContact: true,
-		isPunchAttack: true,
-		secondary: false,
-		target: "normal",
-		type: "Fire"
-	},
 	"grassknot": {
 		num: 447,
 		accuracy: 100,
@@ -5707,10 +5685,8 @@ exports.BattleMovedex = {
 		pp: 10,
 		priority: 0,
 		isBounceable: true,
-		isPulseMove: true,
 		onHit: function(pokemon) {
-			if (pokemon.ability === 'megalauncher') this.heal(this.modify(pokemon.maxhp, 0.75));
-			else this.heal(Math.ceil(pokemon.maxhp * 0.5));
+			this.heal(Math.ceil(pokemon.maxhp * 0.5));
 		},
 		secondary: false,
 		target: "normal",
@@ -6795,11 +6771,12 @@ exports.BattleMovedex = {
 		id: "iondeluge",
 		name: "Ion Deluge",
 		pp: 25,
-		priority: 0,
+		priority: 1,
 		volatileStatus: 'iondeluge',
 		effect: {
+			duration: 1,
 			onStart: function(target) {
-				this.add('-start', target, 'move: Ion Deluge');
+				this.add('-fieldactivate', target, 'move: Ion Deluge');
 			},
 			onModifyMove: function(move, pokemon) {
 				if (move.type === 'Normal') {
@@ -6809,7 +6786,7 @@ exports.BattleMovedex = {
 			}
 		},
 		secondary: false,
-		target: "normal",
+		target: "all",
 		type: "Electric"
 	},
 	"irondefense": {
@@ -7010,7 +6987,7 @@ exports.BattleMovedex = {
 		id: "knockoff",
 		isViable: true,
 		name: "Knock Off",
-		pp: 20,
+		pp: 25,
 		priority: 0,
 		isContact: true,
 		onBasePowerPriority: 4,
@@ -7649,46 +7626,6 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Steel"
 	},
-	"magneticfield": {
-		num: -6,
-		gen: 6,
-		accuracy: true,
-		basePower: 0,
-		category: "Status",
-		desc: "For 5 turns, powers up Electric attacks.",
-		shortDesc: "For 5 turns, powers up Electric attacks.",
-		id: "magneticfield",
-		name: "Magnetic Field",
-		pp: 5,
-		priority: 0,
-		pseudoWeather: 'magneticfield',
-		effect: {
-			duration: 5,
-			/*durationCallback: function(target, source, effect) {
-				// Persistent isn't updated for BW/XY moves
-				if (source && source.ability === 'Persistent') {
-					return 7;
-				}
-				return 5;
-			},*/
-			onBasePower: function(basePower, user, target, move) {
-				if (move.type === 'Electric') {
-					this.debug('electric move strengthened');
-					return this.chainModify(1.5);
-				}
-			},
-			onStart: function() {
-				this.add('-fieldstart', 'move: Magnetic Field');
-			},
-			onResidualOrder: 22,
-			onEnd: function() {
-				this.add('-fieldend', 'move: Magnetic Field');
-			}
-		},
-		secondary: false,
-		target: "all",
-		type: "Electric"
-	},
 	"magneticflux": {
 		num: -6,
 		gen: 6,
@@ -8206,10 +8143,16 @@ exports.BattleMovedex = {
 		volatileStatus: 'minimize',
 		effect: {
 			noCopy: true,
-			onSourceModifyDamage: function(damage, source, target, move) {
-				if (move.id === 'stomp' || move.id === 'steamroller') {
+			onSourceModifyDamage: function (damage, source, target, move) {
+				if (move.id in {'stomp':1, 'steamroller':1, 'bodyslam':1, 'flyingpress':1, 'dragonrush':1, 'phantomforce':1}) {
 					return this.chainModify(2);
 				}
+			},
+			onAccuracy: function (accuracy, target, source, move) {
+				if (move.id in {'stomp':1, 'steamroller':1, 'bodyslam':1, 'flyingpress':1, 'dragonrush':1, 'phantomforce':1}) {
+					return true;
+				}
+				return accuracy;
 			}
 		},
 		boosts: {
@@ -8379,7 +8322,7 @@ exports.BattleMovedex = {
 		basePower: 0,
 		category: "Status",
 		desc: "For five turns, Grounded Pokemon cannot have major status problems or confusion inflicted on them by other Pokemon. Their Dragon-type moves are weakened by 50%.",
-		shortDesc: "If on ground, prevents status + Dragon moves weaker.",
+		shortDesc: "Prevents status and weakens Dragon if grounded.",
 		id: "mistyterrain",
 		name: "Misty Terrain",
 		pp: 10,
@@ -9245,22 +9188,6 @@ exports.BattleMovedex = {
 		target: "normal",
 		type: "Bug"
 	},
-	"playaround": {
-		num: -6,
-		gen: 6,
-		accuracy: 100,
-		basePower: 70,
-		category: "Physical",
-		desc: "Deals damage to one adjacent target.",
-		shortDesc: "Deals damage to one adjacent target.",
-		id: "playaround",
-		name: "Play Around",
-		pp: 20,
-		priority: 0,
-		secondary: false,
-		target: "normal",
-		type: "Fairy"
-	},
 	"playnice": {
 		num: -6,
 		gen: 6,
@@ -9837,7 +9764,7 @@ exports.BattleMovedex = {
 	},
 	"psychoshift": {
 		num: 375,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 0,
 		category: "Status",
 		desc: "The user's major status problem is transferred to one adjacent target, and the user is cured. Fails if the target already has a major status problem.",
@@ -12545,7 +12472,7 @@ exports.BattleMovedex = {
 		effect: {
 			// this is a side condition
 			onStart: function(side) {
-				this.add('-sidestart',side,'move: Stealth Rock');
+				this.add('-sidestart', side, 'move: Stealth Rock');
 			},
 			onSwitchIn: function(pokemon) {
 				var typeMod = this.getEffectiveness('Rock', pokemon);
@@ -12605,7 +12532,8 @@ exports.BattleMovedex = {
 			},
 			onSwitchIn: function(pokemon) {
 				if (!pokemon.runImmunity('Ground')) return;
-				this.boost({spe: -1}, pokemon, pokemon, this.getMove('stickyweb'));
+				this.add('-activate', pokemon, 'move: Sticky Web');
+				this.boost({spe: -1}, pokemon, pokemon.side.foe.active[0], this.getMove('stickyweb'));
 			}
 		},
 		secondary: false,
@@ -13519,7 +13447,7 @@ exports.BattleMovedex = {
 		shortDesc: "If the user has no item, it steals the target's.",
 		id: "thief",
 		name: "Thief",
-		pp: 10,
+		pp: 25,
 		priority: 0,
 		isContact: true,
 		onHit: function(target, source) {

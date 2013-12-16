@@ -477,7 +477,7 @@ exports.Formats = [
 				move.basePower = 0;
 				delete move.heal;
 				move.accuracy = 100;
-				switch (this.random(23)) {
+				switch (this.random(19)) {
 				case 0:
 					move.onTryHit = function() {
 						this.add('-message', "The present was a bomb!");
@@ -578,35 +578,17 @@ exports.Formats = [
 					break;
 				case 16:
 					move.onTryHit = function() {
-						this.add('-message', "The present was a fire!");
-					};
-					move.secondary = {chance: 100, status: 'brn'};
-					break;
-				case 17:
-					move.onTryHit = function() {
-						this.add('-message', "The present was a poisoned apple!");
-					};
-					move.secondary = {chance: 100, status: 'tox'};
-					break;
-				case 18:
-					move.onTryHit = function() {
-						this.add('-message', "The present was an electric shock!");
-					};
-					move.secondary = {chance: 100, status: 'par'};
-					break;
-				case 19:
-					move.onTryHit = function() {
 						this.add('-message', "The present was a crafty shield!");
 					};
 					move.volatileStatus = 'craftyshield';
 					break;
-				case 21:
+				case 17:
 					move.onTryHit = function() {
 						this.add('-message', "The present was an electrification!");
 					};
 					move.volatileStatus = 'electrify';
 					break;
-				case 22:
+				case 18:
 					move.onTryHit = function() {
 						this.add('-message', "The present was an ion deluge!");
 					};
@@ -617,17 +599,34 @@ exports.Formats = [
 		}
 	},
 	{
-		name: "Inverse Battle",
+		name: "Sky Battles",
 		section: "OM of the Month",
 
-		mod: 'inverse',
-		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		validateSet: function(set) {
+			var template = this.getTemplate(set.species || set.name);
+			if (template.types.indexOf('Flying') === -1 && set.ability !== 'Levitate') {
+				return [set.species+" is not a Flying type and does not have the ability Levitate."];
+			}
+		},
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
 		banlist: [
-			'Ho-Oh',
-			'Kangaskhanite',
-			'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
-			'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y',
-			'Xerneas'
+			// Banned items
+			'Soul Dew', 'Iron Ball', 'Pinsirite', 'Gengarite',
+			// Banned moves
+			'Body Slam', 'Bulldoze', 'Dig', 'Dive', 'Earth Power', 'Earthquake', 'Electric Terrain', 'Fire Pledge', 'Fissure',
+			'Flying Press', 'Frenzy Plant', 'Geomancy', 'Grass Knot', 'Grass Pledge', 'Grassy Terrain', 'Gravity', 'Heavy Slam',
+			'Ingrain', "Land's Wrath", 'Magnitude', 'Mat Block', 'Misty Terrain', 'Mud Sport', 'Muddy Water', 'Rototiller',
+			'Seismic Toss', 'Slam', 'Smack Down', 'Spikes', 'Stomp', 'Substitute', 'Surf', 'Toxic Spikes', 'Water Pledge', 'Water Sport',
+			// Banned Pokémon
+			// Illegal Flying-types
+			'Pidgey', 'Spearow', "Farfetch'd", 'Doduo', 'Dodrio', 'Hoothoot', 'Natu', 'Murkrow', 'Delibird', 'Taillow', 'Starly', 'Chatot',
+			'Shaymin-Sky', 'Pidove', 'Archen', 'Ducklett', 'Rufflet', 'Vullaby', 'Fletchling', 'Hawlucha',
+			// Illegal Levitators
+			'Gastly', 'Gengar',
+			// Illegal Megas
+			'Pinsir-Mega', 'Gengar-Mega',
+			// Illegal Ubers
+			'Arceus-Flying', 'Giratina', 'Giratina-Origin', 'Ho-Oh', 'Lugia', 'Rayquaza', 'Yveltal'
 		]
 	},
 	{
@@ -670,7 +669,7 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		ruleset: ['Pokemon', 'OHKO Clause'],
-		banlist: ['Wonder Guard', 'Shadow Tag', 'Arena Trap', 'Pure Power', 'Huge Power']
+		banlist: ['Wonder Guard', 'Shadow Tag', 'Arena Trap', 'Pure Power', 'Huge Power', 'Parental Bond']
 	},
 	{
 		name: "Gen-NEXT OU",
@@ -682,6 +681,7 @@ exports.Formats = [
 		banlist: ['Uber']
 	},
 	{
+<<<<<<< HEAD
 		name: "Tiershift",
 		section: "Other Metagames",
 
@@ -691,11 +691,28 @@ exports.Formats = [
 	},
 	{
 		name: "[Gen 5] OU Monotype",
+=======
+		name: "Inverse Battle",
 		section: "Other Metagames",
 
-		mod: 'gen5',
+		mod: 'inverse',
+		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		banlist: [
+			'Ho-Oh',
+			'Kangaskhanite',
+			'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fairy', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
+			'Mewtwo', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y',
+			'Yveltal',
+			'Xerneas'
+		]
+	},
+	{
+		name: "OU Monotype",
+>>>>>>> upstream/master
+		section: "Other Metagames",
+
 		ruleset: ['Pokemon', 'Standard', 'Same Type Clause', 'Evasion Abilities Clause', 'Team Preview'],
-		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
+		banlist: ['Uber', 'Soul Dew', 'Gengarite']
 	},
 	{
 		name: "[Gen 5] Glitchmons",

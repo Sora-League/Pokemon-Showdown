@@ -7,6 +7,32 @@ exports.BattleMovedex = {
 		inherit: true,
 		basePower: 55
 	},
+	assist: {
+		inherit: true,
+		desc: "A random move among those known by the user's party members is selected for use. Does not select Assist, Bestow, Chatter, Circle Throw, Copycat, Counter, Covet, Destiny Bond, Detect, Dragon Tail, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Sketch, Sleep Talk, Snatch, Struggle, Switcheroo, Thief, Transform, or Trick.",
+		onHit: function(target) {
+			var moves = [];
+			for (var j=0; j<target.side.pokemon.length; j++) {
+				var pokemon = target.side.pokemon[j];
+				if (pokemon === target) continue;
+				for (var i=0; i<pokemon.moves.length; i++) {
+					var move = pokemon.moves[i];
+					var noAssist = {
+						assist:1, bestow:1, chatter:1, circlethrow:1, copycat:1, counter:1, covet:1, destinybond:1, detect:1, dragontail:1, endure:1, feint:1, focuspunch:1, followme:1, helpinghand:1, mefirst:1, metronome:1, mimic:1, mirrorcoat:1, mirrormove:1, naturepower:1, protect:1, ragepowder:1, sketch:1, sleeptalk:1, snatch:1, struggle:1, switcheroo:1, thief:1, transform:1, trick:1
+					};
+					if (move && !noAssist[move]) {
+						moves.push(move);
+					}
+				}
+			}
+			var move = '';
+			if (moves.length) move = moves[this.random(moves.length)];
+			if (!move) {
+				return false;
+			}
+			this.useMove(move, target);
+		}
+	},
 	assurance: {
 		inherit: true,
 		basePower: 50,
@@ -66,6 +92,10 @@ exports.BattleMovedex = {
 	cottonspore: {
 		inherit: true,
 		onTryHit: function() {}
+	},
+	covet: {
+		inherit: true,
+		pp: 40
 	},
 	crabhammer: {
 		inherit: true,
@@ -342,7 +372,15 @@ exports.BattleMovedex = {
 	},
 	minimize: {
 		inherit: true,
-		pp: 20
+		pp: 20,
+		effect: {
+			noCopy: true,
+			onSourceModifyDamage: function (damage, source, target, move) {
+				if (move.id in {'stomp':1, 'steamroller':1}) {
+					return this.chainModify(2);
+				}
+			}
+		}
 	},
 	moonlight: {
 		inherit: true,
@@ -380,6 +418,10 @@ exports.BattleMovedex = {
 	powergem: {
 		inherit: true,
 		basePower: 70
+	},
+	psychoshift: {
+		inherit: true,
+		accuracy: 90
 	},
 	quickguard: {
 		inherit: true,
@@ -526,7 +568,8 @@ exports.BattleMovedex = {
 	},
 	thief: {
 		inherit: true,
-		basePower: 40
+		basePower: 40,
+		pp: 10
 	},
 	thunder: {
 		inherit: true,
