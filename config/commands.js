@@ -701,7 +701,7 @@ var commands = exports.commands = {
 	 	    '<b>Battle Rules:</b> <br />'+
 	 	    '-Pokebank OU Format<br />'+
 	 	    '-No Weather except Sandstorm<br />'+
-	 	    '-No Status (Unless caused by attack)<br />'+
+	 	    '-No Status<br />'+
 	 	    '<img src="http://sprites.pokecheck.org/i/248.gif"> <img src="http://sprites.pokecheck.org/i/639.gif"> <img src="http://sprites.pokecheck.org/i/567.gif"> <img src="http://play.pokemonshowdown.com/sprites/bwani/tyrantrum.gif"> <img src="http://sprites.pokecheck.org/t/099.gif">');
         },
         
