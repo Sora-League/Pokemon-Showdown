@@ -778,10 +778,9 @@ var commands = exports.commands = {
 		      '<b>Type:</b> Bug<br />'+
 		      '<b>Ace:</b> Galvantula <br />'+
 		      '<b>Note:</b> Hugs (not optional)<br />'+
+		      '<b>Optional:</b> All Pokemon must have hug based nicknames for the duration of the challenge<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-No Stealth Rock <br/>'+
-	 	      '-No Spikes <br/>'+
-	 	      '-No Toxic Spikes <br/>');
+	 	      '-No Entry Hazards <br/>');
 	},
 	
 	ninjarisu: function(target, room, user) {
