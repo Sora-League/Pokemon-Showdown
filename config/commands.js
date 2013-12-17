@@ -739,7 +739,7 @@ var commands = exports.commands = {
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-No Status <br/>'+
-	 	      '-Max 2 Legendaries <br />'+
+	 	      '-Max 1 Ubers (680 BST Max) <br />'+
 	 	      '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/137.gif">');
         },
 	
