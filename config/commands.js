@@ -735,12 +735,12 @@ var commands = exports.commands = {
 		this.sendReplyBox('E4 <b>Gary</b><br />'+
 		      '<i>"The Mighty warrior of Sora."</i> <br />'+
 		      '<b>Type:</b> Dragon<br />'+
-		      '<b>Ace:</b> Latios (Arani)<br />'+
+		      '<b>Ace:</b> Goodra<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-No Status <br/>'+
 	 	      '-Max 1 Ubers (680 BST Max) <br />'+
-	 	      '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/137.gif">');
+	 	      '<img src="http://play.pokemonshowdown.com/sprites/bw/goodra.png"> <img src="http://sprites.pokecheck.org/t/137.gif">');
         },
 	
 	toast: function(target, room, user) {
