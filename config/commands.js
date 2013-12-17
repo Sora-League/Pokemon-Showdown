@@ -739,7 +739,6 @@ var commands = exports.commands = {
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-No Status <br/>'+
-	 	      '-No Boosting Moves <br/>'+
 	 	      '-Max 1 Ubers (680 BST Max) <br />'+
 	 	      '<img src="http://play.pokemonshowdown.com/sprites/bw/goodra.png"> <img src="http://sprites.pokecheck.org/t/137.gif">');
         },
@@ -767,7 +766,6 @@ var commands = exports.commands = {
 			  '<b>Battle Rules:</b> <br />'+
 			  '-No Weather <br/>'+
 			  '-No Hazards <br/>'+
-			  '-No Prankster <br/>'+
 			  '-No Priority Abilities <br/>');
 			  
         },
