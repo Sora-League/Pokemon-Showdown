@@ -1032,13 +1032,12 @@ var commands = exports.commands = {
 			 '<img src="http://sprites.pokecheck.org/i/609.gif"> <img src="http://sprites.pokecheck.org/t/069.gif">');
         },
 	
-	bush: function(target, room, user) {
+	tempest: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Bush</b><br />'+
-			  '<i>"I like trains."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Tempest</b><br />'+
+			  '<i>"Behold, the power of nature; serene, vast, and infinite."</i> <br />'+
 			  '<b>Type:</b> Grass<br />'+
-			  '<b>Ace:</b> Ludicolo<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/272f.gif"> <img src="http://sprites.pokecheck.org/t/154.gif">');
+			  '<b>Ace:</b> Whimsicott<br />');
 	},
 	
 	arthur: function(target, room, user) {
