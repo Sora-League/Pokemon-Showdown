@@ -1018,7 +1018,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
 			  '<i>"Electricity is the reason we live like this."</i> <br />'+
 			  '<b>Type:</b> Electric<br />'+
-			  '<b>Ace:</b> Jolteon<br />');
+			  '<b>Ace:</b> Zapdos<br />');
 			  
 	},
 	
