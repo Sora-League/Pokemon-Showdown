@@ -779,6 +779,7 @@ var commands = exports.commands = {
 		      '<b>Note:</b> Hugs (not optional)<br />'+
 		      '<b>Optional:</b> All Pokemon must have hug based nicknames for the duration of the challenge<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
+	 	      '-Max 1 Focus Sash <br/>'+
 	 	      '-No Entry Hazards <br/>');
 	},
 	
