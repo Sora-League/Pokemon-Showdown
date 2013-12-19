@@ -996,13 +996,12 @@ var commands = exports.commands = {
 			 '<img src="http://sprites.pokecheck.org/i/373.gif"> <img src="http://sprites.pokecheck.org/t/117.gif">');
         },
         
-        meme: function(target, room, user) {
+        apple: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Meme</b><br />'+
-			  '<i>"?."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Apple</b><br />'+
+			  '<i>"The floor beneath you is what\'s controlling you."</i> <br />'+
 			  '<b>Type:</b> Ground<br />'+
-			  '<b>Ace:</b> Mamoswine<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/473.gif"> <img src="http://sprites.pokecheck.org/t/091.gif">');
+			  '<b>Ace:</b> Gliscor (SnipSnip)<br />');
 	},
 	
 	night: function(target, room, user) {
