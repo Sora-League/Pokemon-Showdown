@@ -1140,6 +1140,20 @@ var commands = exports.commands = {
 			Rooms.global.writeChatRoomData();
 		}
 	},
+	
+	rk: 'roomkick',
+	rkick: 'roomkick',
+	kick: 'roomkick',
+	roomkick: function(target, room, user){
+		if(!room.auth) return this.sendReply('/rkick is designed for rooms with their own auth.');
+		if(!this.can('roommod', null, room)) return this.sendReply('/rkick - Access Denied.');
+		var targetUser = Users.get(target);
+		if(targetUser == undefined) return this.sendReply('User not found.');
+		targetUser.popup('You have been kicked from room '+ room.title +' by '+user.name+'.');
+		targetUser.leaveRoom(room);
+		room.add('|raw|'+ targetUser.name + ' has been kicked from room by '+ user.name + '.');
+		this.logRoomCommand(targetUser.name + ' has been kicked from room by '+ user.name + '.');
+	},
 
 	autojoin: function(target, room, user, connection) {
 		Rooms.global.autojoinRooms(user, connection)
