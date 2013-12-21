@@ -1010,7 +1010,7 @@ var commands = exports.commands = {
 			this.sendReplyBox('Gym Ldr <b>Night</b><br />'+
 			  '<i>"Justice never loses."</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> Scrafty<br />'+
+			  '<b>Ace:</b> Infernape<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
