@@ -2057,6 +2057,10 @@ var commands = exports.commands = {
 			return this.sendReply('Wait for /updateserver to finish before using /kill.');
 		}
 
+		for (var i in Sockets.workers) {
+			Sockets.workers[i].kill();
+		}
+
 		room.destroyLog(function() {
 			room.logEntry(user.name + ' used /kill');
 		}, function() {
@@ -2198,11 +2202,6 @@ var commands = exports.commands = {
 			var rmSize = ResourceMonitor.sizeOfObject(ResourceMonitor);
 			this.sendReply("The Resource Monitor is using " + rmSize + " bytes of memory.");
 		}
-		if (target === 'all' || target === 'apps' || target === 'app' || target === 'serverapps') {
-			this.sendReply('Calculating Server Apps size...');
-			var appSize = ResourceMonitor.sizeOfObject(App) + ResourceMonitor.sizeOfObject(AppSSL) + ResourceMonitor.sizeOfObject(Server);
-			this.sendReply("Server Apps are using " + appSize + " bytes of memory.");
-		}
 		if (target === 'all' || target === 'cmdp' || target === 'cp' || target === 'commandparser') {
 			this.sendReply('Calculating Command Parser size...');
 			var cpSize = ResourceMonitor.sizeOfObject(CommandParser);
@@ -2222,6 +2221,15 @@ var commands = exports.commands = {
 			this.sendReply('Calculating Tools size...');
 			var toolsSize = ResourceMonitor.sizeOfObject(Tools);
 			this.sendReply("Tools are using " + toolsSize + " bytes of memory.");
+		}
+		if (target === 'all' || target === 'v8') {
+			this.sendReply('Retrieving V8 memory usage...');
+			var o = process.memoryUsage();
+			this.sendReply(
+				'Resident set size: ' + o.rss + ', ' + o.heapUsed +' heap used of ' + o.heapTotal  + ' total heap. '
+				+ (o.heapTotal - o.heapUsed) + ' heap left.'
+			);
+			delete o;
 		}
 		if (target === 'all') {
 			this.sendReply('Calculating Total size...');
