@@ -836,6 +836,7 @@ var commands = exports.commands = {
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-Pokemon Chess - 1 OU, 2 UU, 1 RU, 1 NU, 1 Uber <br/>'+
 	 	      '-Ubers is King (Loss if the King Faints) <br/>'+
+	 	      '-No Mega-Evolutions <br/>'+
 	 	      '<img src="http://play.pokemonshowdown.com/sprites/trainers/54.png"> <img src="http://sprites.pokecheck.org/i/003f.gif">');
 	},
 	
@@ -1036,7 +1037,8 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Tempest</b><br />'+
 			  '<i>"Behold, the power of nature; serene, vast, and infinite."</i> <br />'+
 			  '<b>Type:</b> Grass<br />'+
-			  '<b>Ace:</b> Whimsicott<br />');
+			  '<b>Ace:</b> Whimsicott<br />'+
+			  '<img src="http://sprites.pokecheck.org/t/144.gif">');
 	},
 	
 	arthur: function(target, room, user) {
