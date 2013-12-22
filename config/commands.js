@@ -737,6 +737,7 @@ var commands = exports.commands = {
 		      '<b>Type:</b> Dragon<br />'+
 		      '<b>Ace:</b> Goodra<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
+	 	      '-Pokebank Ubers Doubles Format <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-No Status <br/>'+
 	 	      '-Max 1 Ubers (680 BST Max) <br />'+
