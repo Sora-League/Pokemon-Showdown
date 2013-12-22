@@ -80,20 +80,47 @@ exports.BattleScripts = {
                 this.modData('Learnsets', 'seaking').learnset.contaminate = ['5M'];
                 this.modData('Learnsets', 'octillery').learnset.contaminate = ['5M'];
                 
-                //Weezing and Koffing have Contamination
+                //Pokemon that have Contamination
                 this.modData('Pokedex', 'koffing').abilities['1'] = 'Contamination';
                 this.modData('Pokedex', 'weezing').abilities['1'] = 'Contamination';
                 
-                //Beedrill has Acid Rush
+                //Pokemon that have Acid Rush
+                this.modData('Pokedex', 'weedle').abilities['1'] = 'Acid Rush';
                 this.modData('Pokedex', 'beedrill').abilities['1'] = 'Acid Rush';
+                this.modData('Pokedex', 'stunky').abilities['H'] = 'Acid Rush';
+                this.modData('Pokedex', 'skuntank').abilities['H'] = 'Acid Rush';
+                this.modData('Pokedex', 'bellsprout').abilities['1'] = 'Acid Rush';
+                this.modData('Pokedex', 'weepinbell').abilities['1'] = 'Acid Rush';
+                this.modData('Pokedex', 'victreebel').abilities['1'] = 'Acid Rush';
                 
-                //Vileplume has Chemical Regeneration
+                //Pokemon that have Chemical Regeneration
+                this.modData('Pokedex', 'oddish').abilities['1'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'gloom').abilities['1'] = 'Chemical Regeneration';
                 this.modData('Pokedex', 'vileplume').abilities['1'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'grimer').abilities['0'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'muk').abilities['0'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'foongus').abilities['1'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'amoonguss').abilities['1'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'goomy').abilities['0'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'sliggoo').abilities['0'] = 'Chemical Regeneration';
+                this.modData('Pokedex', 'goodra').abilities['0'] = 'Chemical Regeneration';
                 
-                //Dustox gets High Molar
+                //Pokemon that have High Molar
+                this.modData('Pokedex', 'ekans').abilities['H'] = 'High Molar';
+                this.modData('Pokedex', 'arbok').abilities['H'] = 'High Molar';
+                this.modData('Pokedex', 'spinarak').abilities['1'] = 'High Molar';
+                this.modData('Pokedex', 'ariados').abilities['1'] = 'High Molar';
                 this.modData('Pokedex', 'dustox').abilities['1'] = 'High Molar';
+                this.modData('Pokedex', 'trubbish').abilities['H'] = 'High Molar';
+                this.modData('Pokedex', 'garbodor').abilities['H'] = 'High Molar';
                 
-                //Victreebel gets Toxic Overdrive
-                this.modData('Pokedex', 'victreebel').abilities['1'] = 'Toxic Overdrive';
+                //Pokemon that have Toxic Overdrive
+                this.modData('Pokedex', 'paras').abilities['H'] = 'Toxic Overdrive';
+                this.modData('Pokedex', 'parasect').abilities['H'] = 'Toxic Overdrive';
+                this.modData('Pokedex', 'zubat').abilities['1'] = 'Toxic Overdrive';
+                this.modData('Pokedex', 'golbat').abilities['1'] = 'Toxic Overdrive';
+                this.modData('Pokedex', 'crobat').abilities['1'] = 'Toxic Overdrive';
+                this.modData('Pokedex', 'gulpin').abilities['H'] = 'Toxic Overdrive';
+                this.modData('Pokedex', 'swalot').abilities['H'] = 'Toxic Overdrive';
         }
 };
