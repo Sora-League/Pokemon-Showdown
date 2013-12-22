@@ -78,7 +78,7 @@ exports.BattleAbilities = {
 		num: 1004
 	},
 	"forecast": {
-		desc: "This Pokemon's type changes according to the current weather conditions: it becomes Fire-type during Sunny Day, Water-type during Rain Dance, Ice-type during Hail and remains its regular type otherwise.",
+		desc: "This Pokemon's type changes according to the current weather conditions: it becomes Fire-type during Sunny Day, Water-type during Rain Dance, Ice-type during Hail, Poison-type during Acid Rain and remains its regular type otherwise.",
 		shortDesc: "Castform's type changes to the current weather condition's type, except Sandstorm.",
 		onUpdate: function(pokemon) {
 			if (pokemon.baseTemplate.species !== 'Castform' || pokemon.transformed) return;
