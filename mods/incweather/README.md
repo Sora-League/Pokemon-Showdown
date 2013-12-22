@@ -22,4 +22,6 @@ Recent Changes
 14.Added the ability Toxic Overdrive <br/>
 15.Paras, Parasect, Zubat, Golbat, Crobat, Gulpin, Swalot has Toxic Overdrive <br/>
 16.Gunk Shot's Accuracy is 100% under Acid Rain <br/>
-17.Weather Ball is Poison-type in Acid Rain
+17.Weather Ball is Poison-type in Acid Rain <br/>
+18.Immunity negates Acid Rain residual damage <br/>
+19.Poison heal also heals 1/16 max hp per turn in addition to poison/toxic 1/8 max hp heal
