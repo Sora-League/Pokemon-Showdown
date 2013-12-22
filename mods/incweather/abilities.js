@@ -85,10 +85,8 @@ exports.BattleAbilities = {
 				pokemon.cureStatus();
 			}
 		},
-		onImmunity: function(type) {
-			if (type === 'psn') return false;
-		},
 		onImmunity: function(type, pokemon) {
+			if (type === 'psn') return false;
 			if (type === 'acidrain') return false;
 		},
 		id: "immunity",
@@ -104,6 +102,9 @@ exports.BattleAbilities = {
 				this.heal(target.maxhp/8);
 				return false;
 			}
+		},
+		onImmunity: function(type, pokemon) {
+			if (type === 'acidrain') return false;
 		},
 		onWeather: function(target, source, effect) {
 			if (effect.id === 'acidrain') {
@@ -126,7 +127,7 @@ exports.BattleAbilities = {
 			if (this.isWeather('acidrain')) {
 				if ((move.type === 'poison') && move.category === 'Physical') {
 					this.debug('Toxic Boost Acid Rain boost');
-					return this.chainModify([0x14CD, 0x1000]); 
+					return this.chainModify(1.3); 
 				}
 			}
 		},
