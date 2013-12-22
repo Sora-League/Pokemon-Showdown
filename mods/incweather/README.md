@@ -21,4 +21,5 @@ Recent Changes
 13.Ekans, Arbok, Spinarak, Ariados, Dustox, Trubbish, Garbodor has High Molar <br/>
 14.Added the ability Toxic Overdrive <br/>
 15.Paras, Parasect, Zubat, Golbat, Crobat, Gulpin, Swalot has Toxic Overdrive <br/>
-16.Gunk Shot's Accuracy is 100% under Acid Rain
+16.Gunk Shot's Accuracy is 100% under Acid Rain <br/>
+17.Weather Ball is Poison-type in Acid Rain
