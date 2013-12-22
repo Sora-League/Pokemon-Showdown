@@ -1015,12 +1015,12 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
-	zoro: function(target, room, user) {
+	entalp: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
-			  '<i>"Electricity is the reason we live like this."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Entalp</b><br />'+
+			  '<i>"Winners never quit, quitters never win... It\'s your choice"</i> <br />'+
 			  '<b>Type:</b> Electric<br />'+
-			  '<b>Ace:</b> Zapdos<br />');
+			  '<b>Ace:</b> Thundurus-T<br />');
 			  
 	},
 	
