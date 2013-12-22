@@ -14,5 +14,27 @@ exports.BattleMovedex = {
 		      secondary: false,
 		      target: "all",
 		      type: "Poison"
-	      }
+	      },
+	      "gunkshot": {
+		num: 441,
+		accuracy: 80,
+		basePower: 120,
+		category: "Physical",
+		desc: "Deals damage to one adjacent target with a 30% chance to poison it.",
+		shortDesc: "30% chance to poison the target.",
+		id: "gunkshot",
+		isViable: true,
+		name: "Gunk Shot",
+		pp: 5,
+		priority: 0,
+		onModifyMove: function(move) {
+			if (this.isWeather('acidrain')) move.accuracy = true;
+		},
+		secondary: {
+			chance: 30,
+			status: 'psn'
+		},
+		target: "normal",
+		type: "Poison"
+	}
 };
