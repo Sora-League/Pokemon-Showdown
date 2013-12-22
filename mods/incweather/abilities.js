@@ -125,7 +125,7 @@ exports.BattleAbilities = {
 				return this.chainModify(1.5);
 			}
 			if (this.isWeather('acidrain')) {
-				if ((move.type === 'poison') && move.category === 'Physical') {
+				if (move.category === 'Physical') {
 					this.debug('Toxic Boost Acid Rain boost');
 					return this.chainModify(1.3); 
 				}
