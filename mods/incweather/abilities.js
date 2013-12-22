@@ -76,5 +76,63 @@ exports.BattleAbilities = {
 		name: "Toxic Overdrive",
 		rating: 1.5,
 		num: 1004
+	},
+	"immunity": {
+		desc: "This Pokemon cannot become poisoned nor Toxic poisoned.",
+		shortDesc: "This Pokemon cannot be poisoned. Gaining this Ability while poisoned cures it.",
+		onUpdate: function(pokemon) {
+			if (pokemon.status === 'psn' || pokemon.status === 'tox') {
+				pokemon.cureStatus();
+			}
+		},
+		onImmunity: function(type) {
+			if (type === 'psn') return false;
+		},
+		onImmunity: function(type, pokemon) {
+			if (type === 'acidrain') return false;
+		},
+		id: "immunity",
+		name: "Immunity",
+		rating: 1,
+		num: 17
+	},
+	"poisonheal": {
+		desc: "If this Pokemon becomes poisoned (including Toxic), it will recover 1/8 of its max HP after each turn. If Acid Rain is in effect, this Pokemon recovers 1/16 of its max HP each turn.",
+		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when poisoned; no HP loss.This Pokemon is healed by 1/16 of its max HP in Acid Rain.",
+		onDamage: function(damage, target, source, effect) {
+			if (effect.id === 'psn' || effect.id === 'tox') {
+				this.heal(target.maxhp/8);
+				return false;
+			}
+		},
+		onWeather: function(target, source, effect) {
+			if (effect.id === 'acidrain') {
+				this.heal(target.maxhp/16);
+			}
+		},
+		id: "poisonheal",
+		name: "Poison Heal",
+		rating: 4,
+		num: 90
+	},
+	"toxicboost": {
+		desc: "When this Pokemon is poisoned, its physical attacks do 1.5x damage. When Acid Rain is in effect, this Pokemon's physical attacks do 1.3x damage.",
+		shortDesc: "When this Pokemon is poisoned, its physical attacks do 1.5x damage. In Acid Rain, its physical attacks do 1.3x damage.",
+		onBasePowerPriority: 8,
+		onBasePower: function(basePower, attacker, defender, move) {
+			if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
+				return this.chainModify(1.5);
+			}
+			if (this.isWeather('acidrain')) {
+				if ((move.type === 'poison') && move.category === 'Physical') {
+					this.debug('Toxic Boost Acid Rain boost');
+					return this.chainModify([0x14CD, 0x1000]); 
+				}
+			}
+		},
+		id: "toxicboost",
+		name: "Toxic Boost",
+		rating: 3,
+		num: 137
 	}
 };
