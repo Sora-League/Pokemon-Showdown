@@ -1104,8 +1104,8 @@ var commands = exports.commands = {
 	incweather: 'incweather',
 		incweather: function(target, room, user) {
 			if (!this.canBroadcast()) return;
-			this.sendReplyBox('Here is a detailed explanation of the formnat Inclement Weather:<br />' +
-				'- <a href="http://soraleague.weebly.com/inclement-weather.html">Sora League Events</a><br />' +
+			this.sendReplyBox('Here is a detailed explanation of the format Inclement Weather:<br />' +
+				'- <a href="http://soraleague.weebly.com/inclement-weather.html">Inclement Weather</a><br />' +
 				'</div>');
 	},
 	
