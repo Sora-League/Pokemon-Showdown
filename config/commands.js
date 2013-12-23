@@ -708,7 +708,7 @@ var commands = exports.commands = {
         noah: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Champion <b>Noah</b><br />'+
-		      '<i>"Its all Gonna be kay~, kay?"</i> <br />'+
+		      '<i>"Need a Champion? I Noah guy."</i> <br />'+
 		      '<b>Ace:</b> Nidoqueen the Nidoking <br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-Monotype <br/>'+
@@ -1098,6 +1098,14 @@ var commands = exports.commands = {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Here is The Sora League Website:<br />' +
 				'- <a href="http://soraleague.weebly.com/index.html">Sora League Site</a><br />' +
+				'</div>');
+	},
+	
+	incweather: 'incweather',
+		incweather: function(target, room, user) {
+			if (!this.canBroadcast()) return;
+			this.sendReplyBox('Here is a detailed explanation of the formnat Inclement Weather:<br />' +
+				'- <a href="http://soraleague.weebly.com/inclement-weather.html">Sora League Events</a><br />' +
 				'</div>');
 	},
 	
