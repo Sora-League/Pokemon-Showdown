@@ -27,8 +27,8 @@ exports.BattleAbilities = {
 		num: 1001
 	},
 	"chemicalregeneration": {
-		desc: "If the weather is Acid Rain, this Pokemon recovers 1/16 of its max HP after each turn.",
-		shortDesc: "If the weather is Acid Rain, this Pokemon heals 1/16 of its max HP each turn.",
+		desc: "If the weather is Acid Rain, this Pokemon recovers 1/16 of its max HP after each turn. This Pokemon is also immune to residual Acid Rain damage.",
+		shortDesc: "If the weather is Acid Rain, this Pokemon heals 1/16 of its max HP each turn; Immunity to Acid Rain.",
 		onWeather: function(target, source, effect) {
 			if (effect.id === 'acidrain') {
 				this.heal(target.maxhp/16);
