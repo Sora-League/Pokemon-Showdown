@@ -34,6 +34,9 @@ exports.BattleAbilities = {
 				this.heal(target.maxhp/16);
 			}
 		},
+		onImmunity: function(type, pokemon) {
+			if (type === 'acidrain') return false;
+		},
 		id: "Chemical Regeneration",
 		name: "Chemical Regeneration",
 		rating: 1.5,
