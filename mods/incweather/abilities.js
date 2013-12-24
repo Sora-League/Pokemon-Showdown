@@ -172,5 +172,22 @@ exports.BattleAbilities = {
 		name: "Toxic Boost",
 		rating: 3,
 		num: 137
+	},
+	"overcoat": {
+		desc: "In battle, the Pokemon does not take damage from weather conditions like Sandstorm, Hail or Acid Rain. It is also immune to powder moves.",
+		shortDesc: "This Pokemon is immune to residual weather damage, and powder moves.",
+		onImmunity: function(type, pokemon) {
+			if (type === 'sandstorm' || type === 'hail' || type === 'acidrain') return false;
+		},
+		onTryHit: function(pokemon, target, move) {
+			if (move.isPowder) {
+				this.add('-immune', pokemon, '[msg]', '[from] Overcoat');
+				return null;
+			}
+		},
+		id: "overcoat",
+		name: "Overcoat",
+		rating: 2,
+		num: 142
 	}
 };
