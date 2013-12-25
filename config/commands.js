@@ -843,16 +843,10 @@ var commands = exports.commands = {
 	
 	bm: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>B/m/</b><br />'+
-			'<i>"Every member of a team plays its part. That is why its called a team."</i> <br />'+
-			'<b>Ace:</b> Metagross<br />'+
-		 	'<b>Battle Rules:</b> <br/>'+
-		 	'-Pokebank OU Monotype <br/>'+
-		 	'-Challenger Choses 3 Types - 1 Not Very Effective, 1 Neutral, 1 Super Effective Against the Challengers Type <br/>'+
-		 	'-Frontier will use the types chosen by Challenger <br/>'+
-		 	'-Best of 3 Series<br />'+
-		 	'-No Legendaries<br />'+
-		 	'<img src="http://i.imgur.com/k650Uw2.gif"> <img src="http://sprites.pokecheck.org/t/139.gif">');
+		this.sendReplyBox('Gym Ldr <b>B/m/</b><br />'+
+			'<i>"Why wield a heavy blade when the scalpel can kill just as easily?"</i> <br />'+
+			'<b>Type:</b> Dragon<br />'+
+			'<b>Ace:</b> Flygon<br />');
         },
         
         abadon: function(target, room, user) {
