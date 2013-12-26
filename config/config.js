@@ -154,7 +154,7 @@ exports.customavatars = {
 	  'frontierascher': '018.gif',
 	  'kingarani': '019.png',
 	  'e4lynne': '020.png',
-	  'trollface.jpg': '021.png'
+	  'trollfacejpg': '021.png'
 	  
 };
 
