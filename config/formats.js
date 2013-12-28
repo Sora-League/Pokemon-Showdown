@@ -114,7 +114,6 @@ exports.Formats = [
 		}
 	},
 	{
-<<<<<<< HEAD
 		name: "Pokebank OU (beta)",
 		section: "XY Singles",
 
@@ -131,10 +130,8 @@ exports.Formats = [
 	{
 		name: "Pokebank Ubers (beta)",
 		section: "XY Singles",
-=======
 		name: "VGC 2014",
 		section: "XY Doubles",
->>>>>>> upstream/master
 
 		gameType: 'doubles',
 		onBegin: function() {
@@ -297,7 +294,6 @@ exports.Formats = [
 		ruleset: ['Team Preview']
 	},
 
-<<<<<<< HEAD
 	// XY Doubles
 	///////////////////////////////////////////////////////////////////
 
@@ -424,8 +420,6 @@ exports.Formats = [
 		ruleset: ['Team Preview']
 	},
 
-=======
->>>>>>> upstream/master
 	// BW2 Doubles
 	///////////////////////////////////////////////////////////////////
 
@@ -758,8 +752,6 @@ exports.Formats = [
 		]
 	},
 	{
-<<<<<<< HEAD
-=======
 		name: "OU Monotype",
 		section: "Other Metagames",
 
@@ -767,7 +759,6 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
 	},
 	{
->>>>>>> upstream/master
 		name: "[Gen 5] Glitchmons",
 		section: "Other Metagames",
 
