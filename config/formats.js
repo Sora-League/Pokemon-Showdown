@@ -14,7 +14,6 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
 	},
 	{
-<<<<<<< HEAD
 		name: "Inclement Weather",
 		section: "XY Singles",
 
@@ -24,9 +23,7 @@ exports.Formats = [
 	},
 	{
 		name: "Ubers (beta)",
-=======
 		name: "Ubers",
->>>>>>> upstream/master
 		section: "XY Singles",
 
 		ruleset: ['Pokemon', 'Standard Ubers', 'Team Preview'],
