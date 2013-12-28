@@ -114,22 +114,6 @@ exports.Formats = [
 		}
 	},
 	{
-		name: "Pokebank OU (beta)",
-		section: "XY Singles",
-
-		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
-	},
-	{
-		name: "Pokebank OU Monotype (beta)",
-		section: "XY Singles",
-
-		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview', 'Same Type Clause'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
-	},
-	{
-		name: "Pokebank Ubers (beta)",
-		section: "XY Singles",
 		name: "VGC 2014",
 		section: "XY Doubles",
 
