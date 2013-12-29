@@ -157,7 +157,8 @@ exports.customavatars = {
 	  'trollfacejpg': '021.png',
 	  'hooh': '022.gif',
 	  'exzoro': '023.gif',
-	  'frontiernight': '024.png'
+	  'frontiernight': '024.png',
+	  'gymldrarthur': '025.png'
 	  
 };
 
