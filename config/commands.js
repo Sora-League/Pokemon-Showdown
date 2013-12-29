@@ -871,21 +871,6 @@ var commands = exports.commands = {
 	 	      '-No Sturdy (Focus sash) <br/>');
         },
         
-        ryu: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Ryu</b><br />'+
-		          '<i>"Skill is more important than brute strength."</i> <br />'+
-			  '<b>Ace:</b> Kangaskhan<br />'+
-		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-Pokebank OU Format <br/>'+
-		 	  '-1 Starters must be used <br/>'+
-		 	  '-1 Not Fully Evolved Pokemon must ne used<br/>'+
-		 	  '-No Item Repetition<br />'+
-		 	  '-No Healing Moves/Items<br />'+
-		 	  '-Max 1 Potential Mega Evolution<br />'+
-		 	  '<img src="http://sprites.pokecheck.org/i/115.gif"> <img src="http://sprites.pokecheck.org/t/176.gif">');
-	},
-	
 	leaf: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Leaf</b><br />'+
@@ -1018,8 +1003,8 @@ var commands = exports.commands = {
 	night: function(target, room, user) {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Gym Ldr <b>Night</b><br />'+
-			  '<i>"Justice never loses."</i> <br />'+
-			  '<b>Ace:</b> Infernape<br />'+
+			  '<i>"?"</i> <br />'+
+			  '<b>Ace:</b> Escavalier<br />'+
 			  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Only Pokemon with speed below 40 may be used <br/>'+
 		 	  '-No Hazards <br/>'+
