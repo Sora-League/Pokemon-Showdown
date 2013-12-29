@@ -724,9 +724,9 @@ var commands = exports.commands = {
 		     '<b>Ace:</b> Weavile<br />'+
 	 	     '<b>Battle Rules:</b> <br/>'+
 	 	     '-Ubers Battle <br/>'+
-	 	     '-At least 2 must be OU or lower) <br/>'+
-	 	     '-No pseudo-legendary <br/>'+
-	 	     '-No stats over 130<br />'+
+	 	     '-At least 2 must be OU or lower <br/>'+
+	 	     '-No Lowering opponents stats (if not caused by a damaging move is banned (Unless caused by Attack) <br/>'+
+	 	     '-No Pokemon with a base stat over 130<br />'+
 	 	     '<img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://sprites.pokecheck.org/t/148.gif">');
         },
 	
@@ -753,7 +753,7 @@ var commands = exports.commands = {
 	 	          '<b>Battle Rules:</b> <br/>'+
 	 	          '-No Hazards <br/>'+
 	 	          '-Only Sun Allowed <br/>'+
-	 	          '-Monotype <br />'+
+	 	          '-No Flinching Moves <br />'+
 	 	          '-No Focus Sash <br />'+
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
@@ -852,12 +852,9 @@ var commands = exports.commands = {
         abadon: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Abadon</b><br />'+
-			'<i>"The battle is only lost when you lose faith in your pokemon."</i> <br />'+
-			'<b>Ace:</b> Xerneas<br />'+
-		 	'<b>Battle Rules:</b> <br/>'+
-		 	'-Ubers Battle <br/>'+
-		 	'-Only 1 Legendary Allowed from each set of Leagendaries (e.g. Giratina and Dialga not allowed if you choose Palkia) <br/>'+
-		 	'<img src="http://sprites.pokecheck.org/i/491.gif"> <img src="http://sprites.pokecheck.org/t/088.gif">');
+			'<i>"?"</i> <br />'+
+			'<b>Type:</b> Bug<br />'+
+			'<b>Ace:</b> ?<br />');
         },
         
         floatzel: function(target, room, user) {
@@ -909,18 +906,36 @@ var commands = exports.commands = {
 		          '<i>"Try to keep up with my burning heat."</i> <br />'+
 			  '<b>Ace:</b> Blaziken<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-Pokebank Ubers Battle <br/>'+
+		 	  '-Monotype Pokebank Ubers Battle <br/>'+
 		 	  '-Team must have 1 OU,1 RU,1 UU,1 NU,1 Uber and a Limbo <br/>'+
+		 	  '-No Hazards<br/>'+
 		 	  '-No Weather<br/>');
 	},
         
         akash: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Akash</b><br />'+
-			  '<i>"The Fairy Slayer XD"</i> <br />'+
-			  '<b>Type:</b> Dragon<br />'+
-			  '<b>Ace:</b> Kyurem-B<br />'+
+			  '<i>"?"</i> <br />'+
+			  '<b>Ace:</b> ?<br />'+
+			  '<b>Battle Rules:</b> <br/>'+
+		 	  '-Sky Battle (Only Flying or levitating Pokemon may be used) <br/>'+
+		 	  '-Pokebank Ubers Format <br/>'+
+		 	  '-No +1 Priority moves <br/>'+
+		 	  '-No Item Repetition <br/>'+
+		 	  '-No Stealth Rocks <br/>'+
 			  '<img src="http://sprites.pokecheck.org/i/646-black.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
+	},
+	
+	corson: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Frontier <b>Corson</b><br />'+
+		          '<i>"A sacrifice is always needed, but are you ready to sacrifice two?"</i> <br />'+
+			  '<b>Ace:</b> Zangoose<br />'+
+		 	  '<b>Battle Rules:</b> <br/>'+
+		 	  '-Tier shift <br/>'+
+		 	  '-4v4 <br/>'+
+		 	  '-No Hazards<br/>'+
+		 	  '-No Speed Increasing Moves/Items<br />');
 	},
         
         ericaj: function(target, room, user) {
@@ -978,9 +993,9 @@ var commands = exports.commands = {
         lynne: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 	        this.sendReplyBox('Gym Ldr <b>Lynne</b><br />'+
-			  '<i>"Every little thing in the world is worth fighting for."</i> <br />'+
-			  '<b>Type:</b> Bug<br />'+
-			  '<b>Ace:</b> Volcarona<br />');
+			  '<i>"Fight like a man."</i> <br />'+
+			  '<b>Type:</b> Fighting<br />'+
+			  '<b>Ace:</b> Lucario<br />');
         },
         
         spelings: function(target, room, user) {
@@ -1004,8 +1019,11 @@ var commands = exports.commands = {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Gym Ldr <b>Night</b><br />'+
 			  '<i>"Justice never loses."</i> <br />'+
-			  '<b>Type:</b> Fighting<br />'+
 			  '<b>Ace:</b> Infernape<br />'+
+			  '<b>Battle Rules:</b> <br/>'+
+		 	  '-Only Pokemon with speed below 40 may be used <br/>'+
+		 	  '-No Hazards <br/>'+
+		 	  '-No Speed-boosting moves/abilities<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
@@ -1053,12 +1071,12 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Victini<br />');
 	},
 	
-	icey: function(target, room, user) {
+	graham: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Icey</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>Graham</b><br />'+
 			  '<i>"?"</i> <br />'+
 			  '<b>Type:</b> Ice<br />'+
-			  '<b>Ace:</b> Kyurem-Black<br />');
+			  '<b>Ace:</b> ?<br />');
 	},
 	
 	abh: function(target, room, user) {
