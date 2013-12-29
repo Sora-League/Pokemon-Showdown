@@ -1003,7 +1003,7 @@ var commands = exports.commands = {
 	night: function(target, room, user) {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Gym Ldr <b>Night</b><br />'+
-			  '<i>"?"</i> <br />'+
+			  '<i>"Slow and steady wins the race."</i> <br />'+
 			  '<b>Ace:</b> Escavalier<br />'+
 			  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Only Pokemon with speed below 40 may be used <br/>'+
