@@ -851,7 +851,7 @@ var commands = exports.commands = {
         
         abadon: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Abadon</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>Abadon</b><br />'+
 			'<i>"?"</i> <br />'+
 			'<b>Type:</b> Bug<br />'+
 			'<b>Ace:</b> ?<br />');
@@ -899,9 +899,9 @@ var commands = exports.commands = {
         
         akash: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Akash</b><br />'+
-			  '<i>"?"</i> <br />'+
-			  '<b>Ace:</b> ?<br />'+
+		this.sendReplyBox('Frontier <b>Akash</b><br />'+
+			  '<i>"Fly high or die."</i> <br />'+
+			  '<b>Ace:</b> Arceus<br />'+
 			  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Sky Battle (Only Flying or levitating Pokemon may be used) <br/>'+
 		 	  '-Pokebank Ubers Format <br/>'+
@@ -1002,7 +1002,7 @@ var commands = exports.commands = {
 	
 	night: function(target, room, user) {
 			if (!this.canBroadcast()) return;
-			this.sendReplyBox('Gym Ldr <b>Night</b><br />'+
+			this.sendReplyBox('Frontier <b>Night</b><br />'+
 			  '<i>"Slow and steady wins the race."</i> <br />'+
 			  '<b>Ace:</b> Escavalier<br />'+
 			  '<b>Battle Rules:</b> <br/>'+
