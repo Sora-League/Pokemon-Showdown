@@ -1059,9 +1059,9 @@ var commands = exports.commands = {
 	graham: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Graham</b><br />'+
-			  '<i>"?"</i> <br />'+
+			  '<i>"Endless cold is the bane of all living things. Even mighty titanic sunk to my frozen fists."</i> <br />'+
 			  '<b>Type:</b> Ice<br />'+
-			  '<b>Ace:</b> ?<br />');
+			  '<b>Ace:</b> Weavile<br />');
 	},
 	
 	abh: function(target, room, user) {
