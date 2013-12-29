@@ -599,7 +599,7 @@ exports.Formats = [
 
 		mod: 'tiershift',
 		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew']
+		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
 	},
 	{
 		name: "[Gen 5] OU Monotype",
