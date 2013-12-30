@@ -1021,13 +1021,12 @@ var commands = exports.commands = {
 			  
 	},
 	
-	krenon: function(target, room, user) {
+	messiah: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Krenon</b><br />'+
-			 '<i>"The Darkest Shadows Hold the Darkest Secrets."</i> <br />'+
-		     '<b>Type:</b> Ghost<br />'+
-			 '<b>Ace:</b> Chandelure<br />'+
-			 '<img src="http://sprites.pokecheck.org/i/609.gif"> <img src="http://sprites.pokecheck.org/t/069.gif">');
+		this.sendReplyBox('Gym Ldr <b>Messiah</b><br />'+
+			 '<i>"Did you know, the average ghost is mean spirited"</i> <br />'+
+		         '<b>Type:</b> Ghost<br />'+
+			 '<b>Ace:</b> Aegislash<br />');
         },
 	
 	tempest: function(target, room, user) {
