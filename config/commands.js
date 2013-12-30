@@ -844,9 +844,9 @@ var commands = exports.commands = {
 	bm: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>B/m/</b><br />'+
-			'<i>"Why wield a heavy blade when the scalpel can kill just as easily?"</i> <br />'+
-			'<b>Type:</b> Dragon<br />'+
-			'<b>Ace:</b> Flygon<br />');
+			'<i>"The scalpel is art, the match fuels the flames."</i> <br />'+
+			'<b>Type:</b> Fire<br />'+
+			'<b>Ace:</b> Darmanitan<br />');
         },
         
         abadon: function(target, room, user) {
