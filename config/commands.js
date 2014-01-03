@@ -907,8 +907,7 @@ var commands = exports.commands = {
 		 	  '-Pokebank Ubers Format <br/>'+
 		 	  '-No +1 Priority moves <br/>'+
 		 	  '-No Item Repetition <br/>'+
-		 	  '-No Stealth Rocks <br/>'+
-			  '<img src="http://sprites.pokecheck.org/i/646-black.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
+		 	  '-No Stealth Rocks <br/>');
 	},
 	
 	corson: function(target, room, user) {
