@@ -737,7 +737,7 @@ var commands = exports.commands = {
 		      '<b>Type:</b> Dragon<br />'+
 		      '<b>Ace:</b> Goodra<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-Pokebank Ubers Doubles Format <br/>'+
+	 	      '-No Focus Sash <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-No Status <br/>'+
 	 	      '-Max 1 Ubers (680 BST Max) <br />'+
@@ -885,16 +885,18 @@ var commands = exports.commands = {
 		 	  '<img src="http://sprites.pokecheck.org/s/573.gif"> <img src="http://sprites.pokecheck.org/t/100.gif">');
 	},
 	
-	killer: function(target, room, user) {
+	ryu: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Killer</b><br />'+
-		          '<i>"Try to keep up with my burning heat."</i> <br />'+
-			  '<b>Ace:</b> Blaziken<br />'+
+		this.sendReplyBox('Frontier <b>Ryu</b><br />'+
+		          '<i>"Skill is more important than brute strength."</i> <br />'+
+			  '<b>Ace:</b> Kangaskhan<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-Monotype Pokebank Ubers Battle <br/>'+
-		 	  '-Team must have 1 OU,1 RU,1 UU,1 NU,1 Uber and a Limbo <br/>'+
-		 	  '-No Hazards<br/>'+
-		 	  '-No Weather<br/>');
+		 	  '-OU Battle <br/>'+
+		 	  '-No Itam Repetition <br/>'+
+		 	  '-1 Starter Pokemon must be used<br/>'+
+		 	  '-No healing moves or items <br/>'+
+		 	  '-Max 1 potential mega Pokemon <br/>'+
+		 	  '-1 Not Fully evolved Pokemon must be used<br/>');
 	},
         
         akash: function(target, room, user) {
@@ -904,7 +906,7 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Arceus<br />'+
 			  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Sky Battle (Only Flying or levitating Pokemon may be used) <br/>'+
-		 	  '-Pokebank Ubers Format <br/>'+
+		 	  '-Ubers Format (Max 1 Uber) <br/>'+
 		 	  '-No +1 Priority moves <br/>'+
 		 	  '-No Item Repetition <br/>'+
 		 	  '-No Stealth Rocks <br/>');
@@ -956,13 +958,12 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Umbreon<br />');
         },
         
-        phantoms: function(target, room, user) {
+        srewop: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>PhantomS</b><br />'+
-			 '<i>"The Deadliest Venom of Sora."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Srewop</b><br />'+
+			 '<i>"My name backwards is what I\'m all about"</i> <br />'+
 			 '<b>Type:</b> Poison<br />'+
-			 '<b>Ace:</b> Drapion<br />'+
-			 '<img src="http://sprites.pokecheck.org/i/034.gif"> <img src="http://fc01.deviantart.net/fs70/f/2011/092/4/b/koga_sprite__200th_upload__by_ninjasensei88-d3d2mf8.gif">');
+			 '<b>Ace:</b> Venusaur<br />');
 	},
         
         neith: function(target, room, user) {
@@ -976,10 +977,14 @@ var commands = exports.commands = {
         
         lynne: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-	        this.sendReplyBox('Gym Ldr <b>Lynne</b><br />'+
+	        this.sendReplyBox('Frontier <b>Lynne</b><br />'+
 			  '<i>"Fight like a man."</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> Lucario<br />');
+			  '<b>Ace:</b> Lucario<br />'+
+			  '<b>Optional Rule:</b> Challengers have to use the avatar of the character they are cosplaying as.<br />'+
+			  '<b>Battle Rules:</b> <br />'+
+			  '-OU Battle<br />'+
+			  'PokeCosplay (Challengers must use teams of existing characters from anime or manga, you may use the pre-evolution or evolution of the pokemon.<br />');
         },
         
         spelings: function(target, room, user) {
