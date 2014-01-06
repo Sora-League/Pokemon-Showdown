@@ -867,8 +867,10 @@ var commands = exports.commands = {
 	 	      '-Every Pokemon\'s 2nd typing must match the next Pokemon\'s first typing <br/>'+
 	 	      '-Last Pokemon must be Single-type <br/>'+
 	 	      '-Must lead with the first pokemon in the chain and continued by the next one <br/>'+
+	 	      '-No flying types (there are no flying primary types) <br/>'+
 	 	      '-No switching (Moves that result switching) <br/>'+
-	 	      '-No Sturdy (Focus sash) <br/>');
+	 	      '-No Sturdy (Focus sash) <br/>'+
+	 	      '<img src="http://sprites.pokecheck.org/s/385.gif"> <img src="http://sprites.pokecheck.org/t/139.gif">');
         },
         
 	leaf: function(target, room, user) {
