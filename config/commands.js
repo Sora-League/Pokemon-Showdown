@@ -980,13 +980,10 @@ var commands = exports.commands = {
         lynne: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 	        this.sendReplyBox('Frontier <b>Lynne</b><br />'+
-			  '<i>"Fight like a man."</i> <br />'+
-			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> Lucario<br />'+
-			  '<b>Optional Rule:</b> Challengers have to use the avatar of the character they are cosplaying as.<br />'+
+			  '<i>"A wise warrior copies successful combat tactics to prevail in battle."</i> <br />'+
+			  '<b>Ace:</b> Chansey<br />'+
 			  '<b>Battle Rules:</b> <br />'+
-			  '-OU Battle<br />'+
-			  'PokeCosplay (Challengers must use teams of existing characters from anime or manga, you may use the pre-evolution or evolution of the pokemon.<br />');
+			  '-Standard Ubers<br />');
         },
         
         spelings: function(target, room, user) {
