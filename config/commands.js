@@ -758,17 +758,12 @@ var commands = exports.commands = {
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
-        berry: function(target, room, user) {
-			if (!this.canBroadcast()) return;
-			this.sendReplyBox('E4 <b>Berry</b><br />'+
-			  '<i>"Just keep swinging."</i> <br />'+
-			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> Infernape<br />'+
-			  '<b>Battle Rules:</b> <br />'+
-			  '-No Weather <br/>'+
-			  '-No Hazards <br/>'+
-			  '-No Priority Abilities <br/>');
-			  
+        iris: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>Iris</b><br />'+
+			  '<i>"?."</i> <br />'+
+			  '<b>Type:</b> Fairy<br />'+
+			  '<b>Ace:</b> Azumarill<br />');
         },
 	
 	bighug: function(target, room, user) {
