@@ -994,12 +994,12 @@ var commands = exports.commands = {
 			 '<img src="http://sprites.pokecheck.org/i/373.gif"> <img src="http://sprites.pokecheck.org/t/117.gif">');
         },
         
-        apple: function(target, room, user) {
+        leaf: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Apple</b><br />'+
-			  '<i>"The floor beneath you is what\'s controlling you."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
+			  '<i>"The barren earth is from whence you came and where I shal return you."</i> <br />'+
 			  '<b>Type:</b> Ground<br />'+
-			  '<b>Ace:</b> Gliscor (SnipSnip)<br />');
+			  '<b>Ace:</b> Mamoswine (Extinction)<br />');
 	},
 	
 	night: function(target, room, user) {
