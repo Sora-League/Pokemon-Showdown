@@ -968,13 +968,12 @@ var commands = exports.commands = {
 			 '<b>Ace:</b> Venusaur<br />');
 	},
         
-        neith: function(target, room, user) {
+        matt99: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Neith</b><br />'+
-		      '<i>"The Trainer whos Passion Burns Brighter with Each Passing Battle."</i> <br />'+
-		      '<b>Type:</b> Fire<br />'+
-		      '<b>Ace:</b> Arcanine<br />'+
-	 	      '<img src="http://sprites.pokecheck.org/i/059.gif"> <img src="http://sprites.pokecheck.org/t/144.gif">');
+		this.sendReplyBox('Gym Ldr <b>Matt99</b><br />'+
+		      '<i>"Face the power of the dragons if you dare."</i> <br />'+
+		      '<b>Type:</b> Dragon<br />'+
+		      '<b>Ace:</b> Latios<br />'+
         },
         
         lynne: function(target, room, user) {
