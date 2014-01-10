@@ -761,7 +761,7 @@ var commands = exports.commands = {
         iris: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Iris</b><br />'+
-			  '<i>"?."</i> <br />'+
+			  '<i>"I don\'t care if I am the weakest person in the world as long as i can protect my fairies."</i> <br />'+
 			  '<b>Type:</b> Fairy<br />'+
 			  '<b>Ace:</b> Azumarill<br />');
         },
@@ -1065,10 +1065,10 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Weavile<br />');
 	},
 	
-	abh: function(target, room, user) {
+	killer: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>ABH</b><br />'+
-			  '<i>"The finest steel has to go through the hottest fire."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Killer</b><br />'+
+			  '<i>"Come forth, o challenger, for after our blades and wits clash in a metal maelstrom, only one man will stand, and stand victorious he shall!"</i> <br />'+
 			  '<b>Type:</b> Steel<br />'+
 			  '<b>Ace:</b> Genesect<br />');
 	},
