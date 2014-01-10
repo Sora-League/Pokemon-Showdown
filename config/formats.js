@@ -3,17 +3,21 @@
 
 exports.Formats = [
 
-	// XY Singles
+	// Sora Exclusive
 	///////////////////////////////////////////////////////////////////
-
-	{
+        
+        {
 		name: "Inclement Weather",
-		section: "XY Singles",
+		section: "Sora Exclusive",
 
 		mod: 'incweather',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
 	},
+	
+	// XY Singles
+	///////////////////////////////////////////////////////////////////
+
 	{
 		name: "Random Battle",
 		section: "XY Singles",
