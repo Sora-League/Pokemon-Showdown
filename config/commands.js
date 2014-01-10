@@ -940,10 +940,15 @@ var commands = exports.commands = {
         
         vanilla: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-	        this.sendReplyBox('Gym Ldr <b>Vanilla</b><br />'+
-			  '<i>"The adorable fairies will bake the cake of your demise! Yayifications!"</i> <br />'+
+	        this.sendReplyBox('E4 <b>Vanilla</b><br />'+
+			  '<i>"You\'re about to get whipped, with a cherry on top~"</i> <br />'+
 			  '<b>Type:</b> Fairy<br />'+
 			  '<b>Ace:</b> Slurpuff (Drury Lane)<br />'+
+			  '<b>Battle Rules:</b><br />'+
+			  '-No Focus Sash<br />'+
+			  '-No force switching moves or items<br />'+
+			  '-No Toxic or Poison (Unless caused by a move)<br />'+
+			  '-Challengers must be awed by coot fairies<br />'+
 			  '<img src="http://i.imgur.com/zVptN2v.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/9.png">');
         },
         
