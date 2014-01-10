@@ -5485,12 +5485,9 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-<<<<<<< HEAD
 		desc: "Doubles the prize money received after battle.",
 		shortDesc: "No competitive use.",
-=======
 		desc: "No competitive effect. (Doubles the prize money received after battle.)",
->>>>>>> upstream/master
 		shortDesc: "No effect.",
 		id: "happyhour",
 		name: "Happy Hour",
