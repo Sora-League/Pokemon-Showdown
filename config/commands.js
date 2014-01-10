@@ -968,7 +968,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Matt99</b><br />'+
 		      '<i>"Face the power of the dragons if you dare."</i> <br />'+
 		      '<b>Type:</b> Dragon<br />'+
-		      '<b>Ace:</b> Latios<br />'+
+		      '<b>Ace:</b> Latios<br />');
         },
         
         lynne: function(target, room, user) {
