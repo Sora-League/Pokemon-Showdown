@@ -457,7 +457,7 @@ var commands = exports.commands = {
 						move = Tools.getMove(i);
 						if (move.id !== 'count') {
 							if (!move.exists) return this.sendReplyBox('"' + move + '" is not a known move.');
-							problem = Tools.checkLearnset(move, template, lsetData);
+							problem = TeamValidator().checkLearnset(move, template, lsetData);
 							if (problem) break;
 						}
 					}
@@ -525,7 +525,7 @@ var commands = exports.commands = {
 			if (!move.exists) {
 				return this.sendReply('Move "'+move.id+'" not found.');
 			}
-			problem = Tools.checkLearnset(move, template, lsetData);
+			problem = TeamValidator().checkLearnset(move, template, lsetData);
 			if (problem) break;
 		}
 		var buffer = ''+template.name+(problem?" <span class=\"message-learn-cannotlearn\">can't</span> learn ":" <span class=\"message-learn-canlearn\">can</span> learn ")+(targets.length>2?"these moves":move.name);
@@ -1177,7 +1177,7 @@ var commands = exports.commands = {
 	intro: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('New to competitive pokemon?<br />' +
-			'- <a href="http://www.pokemonshowdown.com/forums/viewtopic.php?f=2&t=76">Beginner\'s Guide to Pokémon Showdown</a><br />' +
+			'- <a href="http://www.smogon.com/forums/threads/3496279/">Beginner\'s Guide to Pokémon Showdown</a><br />' +
 			'- <a href="http://www.smogon.com/dp/articles/intro_comp_pokemon">An introduction to competitive Pokémon</a><br />' +
 			'- <a href="http://www.smogon.com/bw/articles/bw_tiers">What do "OU", "UU", etc mean?</a><br />' +
 			'- <a href="http://www.smogon.com/bw/banlist/">What are the rules for each format? What is "Sleep Clause"?</a>');
@@ -1733,10 +1733,6 @@ var commands = exports.commands = {
 		if (target === '%' || target === 'forcerename' || target === 'fr') {
 			matched = true;
 			this.sendReply('/forcerename OR /fr [username], [reason] - Forcibly change a user\'s name and shows them the [reason]. Requires: % @ & ~');
-		}
-		if (target === '%' || target === 'redir' || target === 'redirect') {
-			matched = true;
-			this.sendReply('/redirect OR /redir [username], [room] - Forcibly move a user from the current room to [room]. Requires: % @ & ~');
 		}
 		if (target === '@' || target === 'ban' || target === 'b') {
 			matched = true;
