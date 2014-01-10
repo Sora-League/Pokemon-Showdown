@@ -758,17 +758,12 @@ var commands = exports.commands = {
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
-        berry: function(target, room, user) {
-			if (!this.canBroadcast()) return;
-			this.sendReplyBox('E4 <b>Berry</b><br />'+
-			  '<i>"Just keep swinging."</i> <br />'+
-			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> Infernape<br />'+
-			  '<b>Battle Rules:</b> <br />'+
-			  '-No Weather <br/>'+
-			  '-No Hazards <br/>'+
-			  '-No Priority Abilities <br/>');
-			  
+        iris: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>Iris</b><br />'+
+			  '<i>"?."</i> <br />'+
+			  '<b>Type:</b> Fairy<br />'+
+			  '<b>Ace:</b> Azumarill<br />');
         },
 	
 	bighug: function(target, room, user) {
@@ -968,13 +963,12 @@ var commands = exports.commands = {
 			 '<b>Ace:</b> Venusaur<br />');
 	},
         
-        neith: function(target, room, user) {
+        matt99: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Neith</b><br />'+
-		      '<i>"The Trainer whos Passion Burns Brighter with Each Passing Battle."</i> <br />'+
-		      '<b>Type:</b> Fire<br />'+
-		      '<b>Ace:</b> Arcanine<br />'+
-	 	      '<img src="http://sprites.pokecheck.org/i/059.gif"> <img src="http://sprites.pokecheck.org/t/144.gif">');
+		this.sendReplyBox('Gym Ldr <b>Matt99</b><br />'+
+		      '<i>"Face the power of the dragons if you dare."</i> <br />'+
+		      '<b>Type:</b> Dragon<br />'+
+		      '<b>Ace:</b> Latios<br />'+
         },
         
         lynne: function(target, room, user) {
@@ -995,12 +989,12 @@ var commands = exports.commands = {
 			 '<img src="http://sprites.pokecheck.org/i/373.gif"> <img src="http://sprites.pokecheck.org/t/117.gif">');
         },
         
-        apple: function(target, room, user) {
+        leaf: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Apple</b><br />'+
-			  '<i>"The floor beneath you is what\'s controlling you."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
+			  '<i>"The barren earth is from whence you came and where I shal return you."</i> <br />'+
 			  '<b>Type:</b> Ground<br />'+
-			  '<b>Ace:</b> Gliscor (SnipSnip)<br />');
+			  '<b>Ace:</b> Mamoswine (Extinction)<br />');
 	},
 	
 	night: function(target, room, user) {
