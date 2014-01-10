@@ -660,7 +660,6 @@ exports.Formats = [
 		ruleset: ['Team Preview']
 	},
 
-<<<<<<< HEAD
 	// Other Metagames
 	///////////////////////////////////////////////////////////////////
 
@@ -1011,8 +1010,6 @@ exports.Formats = [
 		]
 	},
 
-=======
->>>>>>> upstream/master
 	// Past Generations
 	///////////////////////////////////////////////////////////////////
 
