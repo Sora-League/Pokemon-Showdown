@@ -7,6 +7,14 @@ exports.Formats = [
 	///////////////////////////////////////////////////////////////////
 
 	{
+		name: "Inclement Weather",
+		section: "XY Singles",
+
+		mod: 'incweather',
+		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
+	},
+	{
 		name: "Random Battle",
 		section: "XY Singles",
 
@@ -28,14 +36,6 @@ exports.Formats = [
 
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
-	},
-	{
-		name: "Inclement Weather",
-		section: "XY Singles",
-
-		mod: 'incweather',
-		ruleset: ['Pokemon', 'Standard Pokebank', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew']
 	},
 	{
 		name: "Ubers (beta)",
