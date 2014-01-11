@@ -1043,10 +1043,9 @@ var commands = exports.commands = {
 	arthur: function(target, room, user) {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Gym Ldr <b>Arthur</b><br />'+
-			  '<i>"Water drowns plants and generate static. Fear my water."</i> <br />'+
+			  '<i>"Only the hardiest of warriors withstand my powerful currents."</i> <br />'+
 			  '<b>Type:</b> Water<br />'+
-			  '<b>Ace:</b> The Sea Pixie (Manaphy)<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/490.gif"> <img src="http://sprites.pokecheck.org/t/140.gif">');
+			  '<b>Ace:</b> -<br />');
 	},
 	
 	bean877: function(target, room, user) {
