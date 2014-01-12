@@ -1040,9 +1040,9 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/t/144.gif">');
 	},
 	
-	arthur: function(target, room, user) {
+	h: function(target, room, user) {
 			if (!this.canBroadcast()) return;
-			this.sendReplyBox('Gym Ldr <b>Arthur</b><br />'+
+			this.sendReplyBox('Gym Ldr <b>H</b><br />'+
 			  '<i>"Only the hardiest of warriors withstand my powerful currents."</i> <br />'+
 			  '<b>Type:</b> Water<br />'+
 			  '<b>Ace:</b> -<br />');
