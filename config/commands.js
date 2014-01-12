@@ -799,19 +799,6 @@ var commands = exports.commands = {
 		 	    '<img src="http://sprites.pokecheck.org/i/601.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
         },
 	
-	lapry: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Lapry</b><br />'+
-			  '<i>"The powers of Pokemon makes the world shine ."</i> <br />'+
-			  '<b>Ace:</b> Marowak<br />'+
-			  '<b>Battle Rules:</b> <br />'+
-			  '-Pokebank OU <br />'+
-			  '-No Legendaries <br />'+
-			  '-No Mega Evolutions <br />'+
-			  '-No Hazards <br />'+
-			  '<img src="http://sprites.pokecheck.org/i/105.gif"> <img src="http://sprites.pokecheck.org/t/053.gif">');
-        },
-        
         vader: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Vader</b><br />'+
@@ -847,9 +834,9 @@ var commands = exports.commands = {
         abadon: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Abadon</b><br />'+
-			'<i>"?"</i> <br />'+
+			'<i>"The battle is only lost when one looses faith in there Pokemon."</i> <br />'+
 			'<b>Type:</b> Bug<br />'+
-			'<b>Ace:</b> ?<br />');
+			'<b>Ace:</b> Volcarona<br />');
         },
         
         floatzel: function(target, room, user) {
@@ -909,18 +896,6 @@ var commands = exports.commands = {
 		 	  '-No Stealth Rocks <br/>');
 	},
 	
-	corson: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Corson</b><br />'+
-		          '<i>"A sacrifice is always needed, but are you ready to sacrifice two?"</i> <br />'+
-			  '<b>Ace:</b> Zangoose<br />'+
-		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-Tier shift <br/>'+
-		 	  '-4v4 <br/>'+
-		 	  '-No Hazards<br/>'+
-		 	  '-No Speed Increasing Moves/Items<br />');
-	},
-        
         ericaj: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>EricaJ</b><br />'+
