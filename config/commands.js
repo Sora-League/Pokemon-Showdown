@@ -991,10 +991,11 @@ var commands = exports.commands = {
 	
 	entalp: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Entalp</b><br />'+
-			  '<i>"Winners never quit, quitters never win... It\'s your choice"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Lance</b><br />'+
+			  '<i>"I need a paralyze heal, \'Cause you\'re 2shocking4me."</i> <br />'+
 			  '<b>Type:</b> Electric<br />'+
-			  '<b>Ace:</b> Thundurus-T<br />');
+			  '<b>Ace:</b> Eelektross<br />'+
+			  '<img src="http://sprites.pokecheck.org/t/136.gif">');
 			  
 	},
 	
