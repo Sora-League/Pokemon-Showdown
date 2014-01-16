@@ -989,7 +989,7 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
-	entalp: function(target, room, user) {
+	lance: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Lance</b><br />'+
 			  '<i>"I need a paralyze heal, \'Cause you\'re 2shocking4me."</i> <br />'+
