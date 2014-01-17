@@ -740,7 +740,7 @@ var commands = exports.commands = {
 	 	      '-No Focus Sash <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-No Status <br/>'+
-	 	      '-Max 1 Ubers (680 BST Max) <br />'+
+	 	      '-OU Monotype <br />'+
 	 	      '<img src="http://play.pokemonshowdown.com/sprites/bw/goodra.png"> <img src="http://sprites.pokecheck.org/t/137.gif">');
         },
 	
