@@ -876,7 +876,7 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Kangaskhan<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
 		 	  '-OU Battle <br/>'+
-		 	  '-No Itam Repetition <br/>'+
+		 	  '-No Item Repetition <br/>'+
 		 	  '-1 Starter Pokemon must be used<br/>'+
 		 	  '-No healing moves or items <br/>'+
 		 	  '-Max 1 potential mega Pokemon <br/>'+
@@ -1054,7 +1054,7 @@ var commands = exports.commands = {
 			'<i>"Still dragon you away~"</i> <br />'+
 			'<b>Skilled in:</b> Dragon & Ice<br />'+
 		 	'<b>Note:</b> Close the Lobby and see what I can really do. <br/>'+
-		 	'<b>History:</b> Greatest Ice E4, undefeated Dragon E4. <br/>'+
+		 	'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4. <br/>'+
 		 	'<img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"> <img src="http://sprites.pokecheck.org/s/473.gif"> <img src="http://sprites.pokecheck.org/i/378.gif"> <img src="http://sprites.pokecheck.org/i/483.gif">');
         },
 	
