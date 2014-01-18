@@ -904,35 +904,33 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Porygon 2<br />');
         },
         
-        core: function(target, room, user) {
+        daredevil: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Core</b><br />'+
-			  '<i>"Mining is a fun job. Anyone should try and get their diamonds in life."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Daredevil</b><br />'+
+			  '<i>"Baby I\'ll rock your world."</i> <br />'+
 			  '<b>Type:</b> Rock<br />'+
-			  '<b>Ace:</b> Archeops<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/567.gif"> <img src="http://sprites.pokecheck.org/t/129.gif">');
+			  '<b>Ace:</b> Terrakion<br />');
         },
         
         vanilla: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 	        this.sendReplyBox('E4 <b>Vanilla</b><br />'+
-			  '<i>"You\'re about to get whipped, with a cherry on top~"</i> <br />'+
-			  '<b>Type:</b> Fairy<br />'+
-			  '<b>Ace:</b> Slurpuff (Drury Lane)<br />'+
+			  '<i>"I\'ll land the slam dunk to your heart! Nyaa~!"</i> <br />'+
+			  '<b>Type:</b> Normal<br />'+
+			  '<b>Ace:</b> Miltank (Dragonslayer)<br />'+
 			  '<b>Battle Rules:</b><br />'+
-			  '-No Focus Sash<br />'+
+			  '-No Choice Scarf<br />'+
 			  '-No force switching moves or items<br />'+
-			  '-No Toxic or Poison (Unless caused by a move)<br />'+
-			  '-Challengers must be awed by coot fairies<br />'+
+			  '-No protecting moves<br />'+
 			  '<img src="http://i.imgur.com/zVptN2v.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/9.png">');
         },
         
-        hellfire: function(target, room, user) {
+        manifest: function(target, room, user) {
 		    if (!this.canBroadcast()) return;
-			this.sendReplyBox('Gym Ldr <b>HellFire</b><br />'+
-			  '<i>"Welcome to the infinite darkness."</i> <br />'+
+			this.sendReplyBox('Gym Ldr <b>Manifest</b><br />'+
+			  '<i>"When you think you can\'t fall any further, I\'ll be there."</i> <br />'+
 			  '<b>Type:</b> Dark<br />'+
-			  '<b>Ace:</b> Umbreon<br />');
+			  '<b>Ace:</b> All<br />');
         },
         
         srewop: function(target, room, user) {
@@ -999,10 +997,10 @@ var commands = exports.commands = {
 			  
 	},
 	
-	messiah: function(target, room, user) {
+	mayhem: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Messiah</b><br />'+
-			 '<i>"Did you know, the average ghost is mean spirited"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Mayhem</b><br />'+
+			 '<i>"When the shadow strikes there is nowhere to hide."</i> <br />'+
 		         '<b>Type:</b> Ghost<br />'+
 			 '<b>Ace:</b> Aegislash<br />');
         },
