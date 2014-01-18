@@ -919,10 +919,11 @@ var commands = exports.commands = {
 			  '<b>Type:</b> Normal<br />'+
 			  '<b>Ace:</b> Miltank (Dragonslayer)<br />'+
 			  '<b>Battle Rules:</b><br />'+
+			  '-No Focus Sash<br />'+
 			  '-No Choice Scarf<br />'+
 			  '-No force switching moves or items<br />'+
 			  '-No protecting moves<br />'+
-			  '<img src="http://i.imgur.com/zVptN2v.png"> <img src="http://play.pokemonshowdown.com/sprites/trainers/9.png">');
+			  '<img src="http://sprites.pokecheck.org/i/241.gif"> <img src="http://sprites.pokecheck.org/t/111.gif">');
         },
         
         manifest: function(target, room, user) {
