@@ -1041,6 +1041,9 @@ exports.BattleScripts = {
 				case 'boltstrike':
 					if (!setupType && hasMove['fusionbolt']) rejected = true;
 					break;
+				case 'hiddenpowerice':
+					if (hasMove['icywind']) rejected = true;
+					break;
 
 				// Status:
 				case 'rest':
@@ -1086,6 +1089,9 @@ exports.BattleScripts = {
 					break;
 				case 'lavaplume':
 					if (hasMove['willowisp']) rejected = true;
+					break;
+				case 'trickroom':
+					if (hasMove['rockpolish'] || hasMove['agility']) rejected = true;
 					break;
 				}
 
@@ -1548,7 +1554,7 @@ exports.BattleScripts = {
 		var pokemonLeft = 0;
 		var pokemon = [];
 		for (var i in this.data.FormatsData) {
-			if (this.data.FormatsData[i].viableMoves && !this.getTemplate(i).evos.length) {
+			if (this.data.FormatsData[i].viableMoves && !this.data.FormatsData[i].isNonstandard && !this.getTemplate(i).evos.length) {
 				keys.push(i);
 			}
 		}
