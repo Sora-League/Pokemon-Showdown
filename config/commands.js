@@ -949,7 +949,7 @@ var commands = exports.commands = {
 		      '<i>"Face the power of the dragons if you dare."</i> <br />'+
 		      '<b>Type:</b> Dragon<br />'+
 		      '<b>Ace:</b> Latios<br />'+
-		      '<img src="http://sprites.pokecheck.org/t/138.gif">');
+		      '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
         },
         
         lynne: function(target, room, user) {
