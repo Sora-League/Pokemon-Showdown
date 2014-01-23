@@ -156,7 +156,7 @@ exports.customavatars = {
 	  'e4lynne': '020.png',
 	  'trollfacejpg': '021.png',
 	  'hooh': '022.gif',
-	  'exzoro': '023.gif',
+	  'gymldrzoro': '030.gif',
 	  'frontiernight': '024.png',
 	  'gymtrnrarthur': '025.png',
 	  'frontierakash': '027.gif',
