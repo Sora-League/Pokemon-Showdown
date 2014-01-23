@@ -715,7 +715,7 @@ var commands = exports.commands = {
 	 	      '-Monotype <br/>'+
 	 	      '-All Tiers must be Represented (Except Ubers and LC) <br/>'+
 	 	      '-Tiershift<br />'+
-	 	      '<img src="http://sprites.pokecheck.org/s/034.gif"> <img src="http://sprites.pokecheck.org/t/069.gif">');
+	 	      '<img src="http://sprites.pokecheck.org/s/034.gif"> <img src="http://sprites.pokecheck.org/t/178.gif"> <img src="http://sprites.pokecheck.org/i/089.gif">');
 	},
 	
 	bart: function(target, room, user) {
@@ -870,7 +870,7 @@ var commands = exports.commands = {
 		 	  '-PokéCosplay: You can only use a team consisting of an existing Pokémon trainer <br/>'+
 		 	  '-This includes trainers from the anime, manga, and games (except for the game\'s main character) <br/>'+
 		 	  '-Limited to OU (no Gold\'s Ho-oh, Silver\'s Lugia, etc)<br/>'+
-		 	  '<img src="http://sprites.pokecheck.org/t/144.gif">');
+		 	  '<img src="http://sprites.pokecheck.org/t/144.gif"> <img src="http://sprites.pokecheck.org/i/620.gif">');
 	},
 	
 	bm: function(target, room, user) {
@@ -1015,7 +1015,8 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
 			  '<i>"I am the definition of swag...and cookies."</i> <br />'+
 			  '<b>Type:</b> Grass<br />'+
-			  '<b>Ace:</b> Breloom<br />');
+			  '<b>Ace:</b> Breloom<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/286.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
 	},
 	
 	glh: function(target, room, user) {
@@ -1039,7 +1040,8 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Lapry</b><br />'+
 			  '<i>"Start off with an icy lead, then you will always succeed ~"</i> <br />'+
 			  '<b>Type:</b> Ice<br />'+
-			  '<b>Ace:</b> Sneasel<br />');
+			  '<b>Ace:</b> Sneasel<br />'+
+			  '<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/lapras-3.gif"> <img src="http://sprites.pokecheck.org/t/053.gif">');
 	},
 	
 	killer: function(target, room, user) {
@@ -1052,7 +1054,7 @@ var commands = exports.commands = {
 	
 	kevin: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Kevinr</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>Kevin</b><br />'+
 			  '<i>"???"</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
 			  '<b>Ace:</b> ???<br />');
