@@ -863,7 +863,7 @@ var commands = exports.commands = {
 	tempest: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Tempest</b><br />'+
-		          '<i>"Let Death herself approach. the show shall go on!"</i> <br />'+
+		          '<i>"Let Death herself approach; the show shall go on!"</i> <br />'+
 		          '<b>Symbol:</b> Roleplay<br />'+
 			  '<b>Ace:</b> Mienshao<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
