@@ -722,6 +722,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier Head <b>Bart</b><br />'+
 		     '<i>"Patience? Nah.... Speed and power is what you need!"</i> <br />'+
+		     '<b>Symbol:</b> Patience<br />'+
 		     '<b>Ace:</b> Weavile<br />'+
 	 	     '<b>Battle Rules:</b> <br/>'+
 	 	     '-Ubers Battle <br/>'+
@@ -759,12 +760,12 @@ var commands = exports.commands = {
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
-        iris: function(target, room, user) {
+        fairy: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Iris</b><br />'+
-			  '<i>"I don\'t care if I am the weakest person in the world as long as i can protect my fairies."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type:</b> Fairy<br />'+
-			  '<b>Ace:</b> Azumarill<br />');
+			  '<b>Ace:</b> ???<br />');
         },
 	
 	bighug: function(target, room, user) {
@@ -804,6 +805,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Vader</b><br />'+
 	              '<i>"Laugh my friend, and the whole world laughs with you."</i> <br />'+
+	              '<b>Symbol:</b> Trust<br />'+
 	              '<b>Ace:</b> Hitmonlee<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-UU Battle <br/>'+
@@ -816,6 +818,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Ascher</b><br />'+
 	       	      '<i>"Strategy is key."</i> <br />'+
+	       	      '<b>Symbol:</b> True Knight<br />'+
 		      '<b>Ace:</b> Clefable<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-Pokemon Chess - 1 OU, 2 UU, 1 RU, 1 NU, 1 Uber <br/>'+
@@ -824,12 +827,12 @@ var commands = exports.commands = {
 	 	      '<img src="http://play.pokemonshowdown.com/sprites/trainers/54.png"> <img src="http://sprites.pokecheck.org/i/003f.gif">');
 	},
 	
-	bm: function(target, room, user) {
+	fire: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>B/m/</b><br />'+
-			'<i>"The scalpel is art, the match fuels the flames."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type:</b> Fire<br />'+
-			'<b>Ace:</b> Darmanitan<br />');
+			'<b>Ace:</b> ???<br />');
         },
         
         abadon: function(target, room, user) {
@@ -844,6 +847,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Floatzel</b><br />'+
 	              '<i>"When it comes down to it, I am still the strongest!"</i> <br />'+
+	              '<b>Symbol:</b> Balance<br />'+
 	              '<b>Ace:</b> Haxxi (Jirachi)<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-Pokemon Dominoes (OU Pokebank tier) <br/>'+
@@ -856,38 +860,34 @@ var commands = exports.commands = {
 	 	      '<img src="http://sprites.pokecheck.org/s/385.gif"> <img src="http://sprites.pokecheck.org/t/139.gif">');
         },
         
-	leaf: function(target, room, user) {
+	tempest: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Leaf</b><br />'+
-		          '<i>"Adaptability isn’t just Eevee’s ability it’s a way to use your true strength. In any situation learn it and you can conquer any foe."</i> <br />'+
-			  '<b>Ace:</b> Cincinno<br />'+
+		this.sendReplyBox('Frontier <b>Tempest</b><br />'+
+		          '<i>"Let Death herself approach. the show shall go on!"</i> <br />'+
+		          '<b>Symbol:</b> Roleplay<br />'+
+			  '<b>Ace:</b> Mienshao<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-Pokebank OU Battle <br/>'+
-		 	  '-No OU <br/>'+
-		 	  '-Max 1 Limbo<br/>'+
-		 	  '-No Mega-Evolutions<br />'+
-		 	  '-1 UU,1 NU and 1 RU pokemon are required in a team <br/>'+
-		 	  '<img src="http://sprites.pokecheck.org/s/573.gif"> <img src="http://sprites.pokecheck.org/t/100.gif">');
+		 	  '-PokéCosplay: You can only use a team consisting of an existing Pokémon trainer <br/>'+
+		 	  '-This includes trainers from the anime, manga, and games (except for the game\'s main character) <br/>'+
+		 	  '-Limited to OU (no Gold\'s Ho-oh, Silver\'s Lugia, etc)<br/>'+
+		 	  '<img src="http://sprites.pokecheck.org/t/144.gif">');
 	},
 	
-	ryu: function(target, room, user) {
+	bm: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Ryu</b><br />'+
-		          '<i>"Skill is more important than brute strength."</i> <br />'+
-			  '<b>Ace:</b> Kangaskhan<br />'+
+		this.sendReplyBox('Frontier <b>B/m/</b><br />'+
+		          '<i>"All is fair in love and insanity, so let chaos reign!"</i> <br />'+
+		          '<b>Symbol:</b> Chaos<br />'+
+			  '<b>Ace:</b> None<br />'+
 		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-OU Battle <br/>'+
-		 	  '-No Item Repetition <br/>'+
-		 	  '-1 Starter Pokemon must be used<br/>'+
-		 	  '-No healing moves or items <br/>'+
-		 	  '-Max 1 potential mega Pokemon <br/>'+
-		 	  '-1 Not Fully evolved Pokemon must be used<br/>');
+		 	  '-Challenge Cup <br/>');
 	},
         
         akash: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Akash</b><br />'+
 			  '<i>"Fly high or die."</i> <br />'+
+			  '<b>Symbol:</b> Luck<br />'+
 			  '<b>Ace:</b> Arceus<br />'+
 			  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Sky Battle (Only Flying or levitating Pokemon may be used) <br/>'+
@@ -948,44 +948,47 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Matt99</b><br />'+
 		      '<i>"Face the power of the dragons if you dare."</i> <br />'+
 		      '<b>Type:</b> Dragon<br />'+
-		      '<b>Ace:</b> Latios<br />');
+		      '<b>Ace:</b> Latios<br />'+
+		      '<img src="http://sprites.pokecheck.org/t/138.gif">');
         },
         
         lynne: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 	        this.sendReplyBox('Frontier <b>Lynne</b><br />'+
 			  '<i>"A wise warrior copies successful combat tactics to prevail in battle."</i> <br />'+
+			  '<b>Symbol:</b> Illusion<br />'+
 			  '<b>Ace:</b> Chansey<br />'+
 			  '<b>Battle Rules:</b> <br />'+
-			  '-Standard Ubers<br />');
-        },
-        
-        spelings: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Spelings</b><br />'+
-		         '<i>"May the Lady Hax watch over you."</i> <br />'+
-	              	 '<b>Type:</b> Flying<br />'+
-			 '<b>Ace:</b> Salamence<br />'+
-			 '<img src="http://sprites.pokecheck.org/i/373.gif"> <img src="http://sprites.pokecheck.org/t/117.gif">');
+			  '-Standard Ubers<br />'+
+			  '-Best of 3 Series<br />');
         },
         
         leaf: function(target, room, user) {
-	        if (!this.canBroadcast()) return;
+		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
-			  '<i>"The barren earth is from whence you came and where I shal return you."</i> <br />'+
+		         '<i>"???"</i> <br />'+
+	              	 '<b>Type:</b> Flying<br />'+
+			 '<b>Ace:</b> ???<br />');
+        },
+        
+        okay: function(target, room, user) {
+	        if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>Okay</b><br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type:</b> Ground<br />'+
-			  '<b>Ace:</b> Mamoswine (Extinction)<br />');
+			  '<b>Ace:</b> ???<br />');
 	},
 	
 	night: function(target, room, user) {
 			if (!this.canBroadcast()) return;
 			this.sendReplyBox('Frontier <b>Night</b><br />'+
 			  '<i>"Slow and steady wins the race."</i> <br />'+
+			  '<b>Symbol:</b> Limit<br />'+
 			  '<b>Ace:</b> Escavalier<br />'+
 			  '<b>Battle Rules:</b> <br/>'+
-		 	  '-Only Pokemon with speed below 40 may be used <br/>'+
+		 	  '-Race Battle - Only Pokemon with speed below 40 may be used <br/>'+
 		 	  '-No Hazards <br/>'+
-		 	  '-No Speed-boosting moves/abilities<br />'+
+		 	  '-Speed has to be constant (it shouldn\'t be increased or decreased)<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
@@ -1007,13 +1010,12 @@ var commands = exports.commands = {
 			 '<b>Ace:</b> Aegislash<br />');
         },
 	
-	tempest: function(target, room, user) {
+	zoro: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Tempest</b><br />'+
-			  '<i>"Behold, the power of nature; serene, vast, and infinite."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
+			  '<i>"I am the definition of swag...and cookies."</i> <br />'+
 			  '<b>Type:</b> Grass<br />'+
-			  '<b>Ace:</b> Whimsicott<br />'+
-			  '<img src="http://sprites.pokecheck.org/t/144.gif">');
+			  '<b>Ace:</b> Breloom<br />');
 	},
 	
 	glh: function(target, room, user) {
@@ -1046,6 +1048,14 @@ var commands = exports.commands = {
 			  '<i>"Come forth, o challenger, for after our blades and wits clash in a metal maelstrom, only one man will stand, and stand victorious he shall!"</i> <br />'+
 			  '<b>Type:</b> Steel<br />'+
 			  '<b>Ace:</b> Genesect<br />');
+	},
+	
+	kevin: function(target, room, user) {
+	        if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>Kevinr</b><br />'+
+			  '<i>"???"</i> <br />'+
+			  '<b>Type:</b> Fighting<br />'+
+			  '<b>Ace:</b> ???<br />');
 	},
 	
 	jeratt: function(target, room, user) {
