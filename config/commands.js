@@ -1055,9 +1055,9 @@ var commands = exports.commands = {
 	kevin: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Kevin</b><br />'+
-			  '<i>"???"</i> <br />'+
+			  '<i>"True fighters don\'t give up, and my weakness can\'t even stop me."</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> ???<br />');
+			  '<b>Ace:</b> Mega Lucario<br />');
 	},
 	
 	jeratt: function(target, room, user) {
