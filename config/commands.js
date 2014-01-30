@@ -827,7 +827,7 @@ var commands = exports.commands = {
 	 	      '<img src="http://play.pokemonshowdown.com/sprites/trainers/54.png"> <img src="http://sprites.pokecheck.org/i/003f.gif">');
 	},
 	
-	Blazer: function(target, room, user) {
+	blazer: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Blazer</b><br />'+
 			'<i>"If i Blaze, you\'ll Blazer with me"</i> <br />'+
