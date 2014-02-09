@@ -754,9 +754,7 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Charizard<br />'+
 	 	          '<b>Battle Rules:</b> <br/>'+
 	 	          '-No Hazards <br/>'+
-	 	          '-Only Sun Allowed <br/>'+
-	 	          '-No Flinching Moves <br />'+
-	 	          '-No Focus Sash <br />'+
+	 	          '-No weather inducing moves <br/>'+
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
@@ -1019,12 +1017,12 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/286.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
 	},
 	
-	glh: function(target, room, user) {
+	arthurzh: function(target, room, user) {
 			if (!this.canBroadcast()) return;
-			this.sendReplyBox('Gym Ldr <b>H</b><br />'+
-			  '<i>"Only the hardiest of warriors withstand my powerful currents."</i> <br />'+
+			this.sendReplyBox('Gym Ldr <b>ArthurZH</b><br />'+
+			  '<i>"I AM THE MASTER OF THE SEVEN SEAS! FEAR ME, I SHALL DROWN ALL IN MY WAY!"</i> <br />'+
 			  '<b>Type:</b> Water<br />'+
-			  '<b>Ace:</b> -<br />');
+			  '<b>Ace:</b> Kabutops<br />');
 	},
 	
 	bean877: function(target, room, user) {
@@ -1035,13 +1033,18 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Victini<br />');
 	},
 	
-	lapry: function(target, room, user) {
-	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Lapry</b><br />'+
-			  '<i>"Start off with an icy lead, then you will always succeed ~"</i> <br />'+
-			  '<b>Type:</b> Ice<br />'+
-			  '<b>Ace:</b> Sneasel<br />'+
-			  '<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/lapras-3.gif"> <img src="http://sprites.pokecheck.org/t/053.gif">');
+	x: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Frontier <b>X</b><br />'+
+	       	      '<i>"When our battle is on the end, I\'ll be the only one who still will stand!"</i> <br />'+
+	       	      '<b>Symbol:</b> Silver<br />'+
+		      '<b>Ace:</b> Aerodactyl<br />'+
+	 	      '<b>Battle Rules:</b> <br/>'+
+	 	      '-No Hazards <br/>'+
+	 	      '-No Sturdy/Focus Sash <br/>'+
+	 	      '-No Sleep inducing moves <br/>'+
+	 	      '-Mono-Animal; team must represent an animal (Existing or non-existing) <br/>'+
+	 	      '<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/charizard.gif"> <img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/aerodactyl.gif">');
 	},
 	
 	killer: function(target, room, user) {
