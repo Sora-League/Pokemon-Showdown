@@ -1065,7 +1065,8 @@ var commands = exports.commands = {
 			this.sendReplyBox('Gym Ldr <b>ArthurZH</b><br />'+
 			  '<i>"I AM THE MASTER OF THE SEVEN SEAS! FEAR ME, I SHALL DROWN ALL IN MY WAY!"</i> <br />'+
 			  '<b>Type:</b> Water<br />'+
-			  '<b>Ace:</b> Kabutops<br />');
+			  '<b>Ace:</b> Kabutops<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/647-resolution.gif"> <img src="http://sprites.pokecheck.org/t/126.gif"> <img src="http://sprites.pokecheck.org/i/141.gif">');
 	},
 	
 	bean877: function(target, room, user) {
