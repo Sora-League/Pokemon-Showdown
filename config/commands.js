@@ -741,7 +741,7 @@ var commands = exports.commands = {
 	 	if (!this.canBroadcast()) return;
 	 	this.sendReplyBox('Champion <b>OnyxE</b><br />'+
 	 	    '<i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i> <br />'+
-	 	    '<b>Ace:</b> Tyranitar<br />'+
+	 	    '<b>Ace:</b> -<br />'+
 	 	    '<b>Battle Rules:</b> <br />'+
 	 	    '-OU Format<br />'+
 	 	    '-No Weather<br />'+
