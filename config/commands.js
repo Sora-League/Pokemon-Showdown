@@ -801,12 +801,12 @@ var commands = exports.commands = {
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
-        fairy: function(target, room, user) {
+        iris: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
-			  '<i>"???"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Iris</b><br />'+
+			  '<i>"Shake my butt and call me a potater, u gon get rekt bro swag yolo 420 blaze it."</i> <br />'+
 			  '<b>Type:</b> Fairy<br />'+
-			  '<b>Ace:</b> ???<br />');
+			  '<b>Ace:</b> Azumarill<br />');
         },
 	
 	bighug: function(target, room, user) {
@@ -1007,9 +1007,9 @@ var commands = exports.commands = {
         leaf: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
-		         '<i>"???"</i> <br />'+
+		         '<i>"To fly is to bring a new dimension to the world can you master the secret dimension of the skies and defeat me?"</i> <br />'+
 	              	 '<b>Type:</b> Flying<br />'+
-			 '<b>Ace:</b> ???<br />');
+			 '<b>Ace:</b> Aerodactyl<br />');
         },
         
         okay: function(target, room, user) {
