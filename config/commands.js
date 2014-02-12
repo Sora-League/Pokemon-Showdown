@@ -18,7 +18,6 @@
  * Commands are actually passed five parameters:
  *   function(target, room, user, connection, cmd, message)
  * Most of the time, you only need the first three, though.
- *
  * target = the part of the message after the command
  * room = the room object the message was sent to
  *   The room name is room.id
@@ -1009,7 +1008,8 @@ var commands = exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
 		         '<i>"To fly is to bring a new dimension to the world can you master the secret dimension of the skies and defeat me?"</i> <br />'+
 	              	 '<b>Type:</b> Flying<br />'+
-			 '<b>Ace:</b> Aerodactyl<br />');
+			 '<b>Ace:</b> Aerodactyl<br />'+
+			 '<img src="http://sprites.pokecheck.org/i/142.gif"> <img src="http://sprites.pokecheck.org/t/109.gif">');
         },
         
         okay: function(target, room, user) {
