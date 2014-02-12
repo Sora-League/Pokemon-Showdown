@@ -743,9 +743,9 @@ var commands = exports.commands = {
 	 	    '<i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i> <br />'+
 	 	    '<b>Ace:</b> Tyranitar<br />'+
 	 	    '<b>Battle Rules:</b> <br />'+
-	 	    '-Pokebank OU Format<br />'+
-	 	    '-No Weather except Sandstorm<br />'+
-	 	    '-No Status<br />'+
+	 	    '-OU Format<br />'+
+	 	    '-No Weather<br />'+
+	 	    '-No Entry Hazards<br />'+
 	 	    '<img src="http://sprites.pokecheck.org/i/248.gif"> <img src="http://sprites.pokecheck.org/i/639.gif"> <img src="http://sprites.pokecheck.org/i/567.gif"> <img src="http://play.pokemonshowdown.com/sprites/bwani/tyrantrum.gif"> <img src="http://sprites.pokecheck.org/t/099.gif">');
         },
         
