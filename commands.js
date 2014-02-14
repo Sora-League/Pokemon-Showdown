@@ -2764,9 +2764,9 @@ function getRandMessage(user){
 	var numMessages = 34; // numMessages will always be the highest case # + 1 //increasing this will make the default appear more often
 	var message = '~~ ';
 	switch(Math.floor(Math.random()*numMessages)){
-		case 0: message = message + user.name + ' got spanked too hard by BrittleWind!';
+		case 0: message = message + user.name + ' got spanked too hard by Champion OnyxE!';
 		break;
-		case 1: message = message + user.name + ' looked at Aura\'s face!';
+		case 1: message = message + user.name + ' looked at Ascher\'s face!';
 		break;
 		case 2: message = message + user.name + ' used Explosion!';
 		break;
@@ -2774,7 +2774,7 @@ function getRandMessage(user){
 		break;
 		case 4: message = message + user.name + ' was sold in a slave trade to a Chinese man!';
 		break;	
-		case 5: message = message + user.name + ' was eaten by Lex!';
+		case 5: message = message + user.name + ' was eaten by Vanilla!';
 		break;
 		case 6: message = message + user.name + ' was sucker punched by Absol!';
 		break;
@@ -2784,7 +2784,7 @@ function getRandMessage(user){
 		break;
 		case 9: message = message + user.name + ' left for their lover!';
 		break;
-		case 10: message = message + user.name + ' couldn\'t handle the coldness of Frost!';
+		case 10: message = message + user.name + ' couldn\'t handle the coldness of Jeratt!';
 		break;
 		case 11: message = message + user.name + ' was hit by Magikarp\'s Revenge!';
 		break;
@@ -2800,11 +2800,11 @@ function getRandMessage(user){
 		break;
 		case 17: message = message + 'A large spider descended from the sky and picked up ' + user.name + '.';
 		break;
-		case 18: message = message + user.name + ' was tricked by Fizz!';
+		case 18: message = message + user.name + ' was tricked by Bart!';
 		break;
 		case 19: message = message + user.name + ' woke up an angry Snorlax!';
 		break;
-		case 20: message = message + user.name + ' was forced to give jd an oil massage (boiling oil)!'; //huehue
+		case 20: message = message + user.name + ' was forced to give Champion Noah an oil massage (boiling oil)!'; //huehue
 		break;
 		case 21: message = message + user.name + ' was used as shark bait!';
 		break;
@@ -2824,11 +2824,11 @@ function getRandMessage(user){
 		break;
 		case 29: message = message + user.name + ' ate a bomb!';
 		break;
-		case 30: message = message + 'BrittleWind accidentally spanked ' + user.name + ' too hard!';
+		case 30: message = message + 'Toast accidentally spanked ' + user.name + ' too hard!';
 		break;
 		case 31: message = message + user.name + ' left for a timeout!';
 		break;
-		case 32: message = message + user.name + ' fell into a snake pit!'; //huehuehue how long until someone notices
+		case 32: message = message + user.name + ' fell into a snake pit!'; 
 		break;
 		case 33: message = message + user.name + ' got eaten by sharks!';
 		break;
