@@ -12,6 +12,7 @@
  */
 
 var crypto = require('crypto');
+var poofeh = true;
 var inShop = ['symbol', 'custom', 'animated', 'room', 'trainer', 'fix', 'potd'];
 var closeShop = false;
 var closedShop = 0;
@@ -837,6 +838,67 @@ var commands = exports.commands = {
 	version: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Server version: <b>'+CommandParser.package.version+'</b> <small>(<a href="http://pokemonshowdown.com/versions#' + CommandParser.serverVersion + '">' + CommandParser.serverVersion.substr(0,10) + '</a>)</small>');
+	},
+	
+	poof: 'd',
+	d: function(target, room, user){
+		if(room.id !== 'lobby') return false;
+		var btags = '<strong><font color='+hashColor(Math.random().toString())+'" >';
+		var etags = '</font></strong>'
+		var targetid = toUserid(user);
+		if(!user.muted && target){
+			var tar = toUserid(target);
+			var targetUser = Users.get(tar);
+			if(user.can('poof', targetUser)){
+				if(!targetUser){
+					user.emit('console', 'Cannot find user ' + target + '.', socket);	
+				}else{
+					if(poofeh)
+						Rooms.rooms.lobby.addRaw(btags + '~~ '+targetUser.name+' was vanished into nothingness by ' + user.name +'! ~~' + etags);
+						targetUser.disconnectAll();
+						return	this.logModCommand(targetUser.name+ ' was poofed by ' + user.name);
+					}
+				} else {
+					return this.sendReply('/poof target - Access denied.');
+				}
+			}
+		if(poofeh && !user.muted && !user.locked){
+			Rooms.rooms.lobby.addRaw(btags + getRandMessage(user)+ etags);
+			user.disconnectAll();	
+		}else{
+			return this.sendReply('poof is currently disabled.');
+		}
+	},
+
+	poofoff: 'nopoof',
+	nopoof: function(target, room, user){
+		if(!user.can('warn')) return this.sendReply('/nopoof - Access denied.');
+		if(!poofeh) return this.sendReply('poof is currently disabled.');
+		poofeh = false;
+		this.logModCommand(user.name + ' disabled poof.');
+		return this.sendReply('poof is now disabled.');
+	},
+
+	poofon: function(target, room, user){
+		if(!user.can('warn')) return this.sendReply('/poofon - Access denied.');
+		if(poofeh) return this.sendReply('poof is currently enabled.');
+		poofeh = true;
+		this.logModCommand(user.name + ' enabled poof');
+		return this.sendReply('poof is now enabled.');
+	},
+
+	cpoof: function(target, room, user){
+		if(!user.can('broadcast')) return this.sendReply('/cpoof - Access Denied');
+		if (!target) return this.sendReply('/cpoof - Please specify a custom poof message to use.');
+		if(poofeh) {
+			var btags = '<strong><font color="'+hashColor(Math.random().toString())+'" >';
+			var etags = '</font></strong>'
+			Rooms.rooms.lobby.addRaw(btags + '~~ '+user.name+' '+target+'! ~~' + etags);
+			this.logModCommand(user.name + ' used a custom poof message: \n "'+target+'"');
+			user.disconnectAll();	
+		}else{
+			return this.sendReply('Poof is currently disabled.');
+		}
 	},
 
 	me: function(target, room, user, connection) {
