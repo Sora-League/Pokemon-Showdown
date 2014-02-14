@@ -970,7 +970,7 @@ var commands = exports.commands = {
         manifest: function(target, room, user) {
 		    if (!this.canBroadcast()) return;
 			this.sendReplyBox('Gym Ldr <b>Manifest</b><br />'+
-			  '<i>"When you think you can\'t fall any further, I\'ll be there."</i> <br />'+
+			  '<i>"On a scale of one to America, how free are you tonight?"</i> <br />'+
 			  '<b>Type:</b> Dark<br />'+
 			  '<b>Ace:</b> All<br />');
         },
