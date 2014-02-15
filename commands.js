@@ -2744,7 +2744,7 @@ function getRandMessage(user){
 	switch(Math.floor(Math.random()*numMessages)){
 		case 0: message = message + user.name + ' got spanked too hard by Champion OnyxE!';
 		break;
-		case 1: message = message + user.name + ' looked at Ascher\'s face!';
+		case 1: message = message + user.name + ' fed the wild Ascher and is now paying the price!';
 		break;
 		case 2: message = message + user.name + ' used Explosion!';
 		break;
@@ -2772,7 +2772,7 @@ function getRandMessage(user){
 		break;
 		case 14: message = message + user.name + ' went into a cave without a repel!';
 		break;
-		case 15: message = message + user.name + ' got eaten by a bunch of piranhas!';
+		case 15: message = message + user.name + ' got eaten by a bunch of Carvanhas!';
 		break;
 		case 16: message = message + user.name + ' ventured too deep into the forest without an escape rope';
 		break;
@@ -2808,7 +2808,7 @@ function getRandMessage(user){
 		break;
 		case 32: message = message + user.name + ' fell into a snake pit!'; 
 		break;
-		case 33: message = message + user.name + ' got eaten by sharks!';
+		case 33: message = message + user.name + ' got eaten by Sharpedos!';
 		break;
 		default: message = message + user.name + ' bought a poisoned Coke!';
 	};
