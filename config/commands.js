@@ -699,7 +699,6 @@ var commands = exports.commands = {
 
 	groups: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-<<<<<<< HEAD
 		this.sendReplyBox('+ <b>Voice</b> - League friends and respected users. They can use ! commands.<br />' +
 		        '$ <b>Operator</b> - Loyal Gym Trainers in training. They can warn users.<br />'+
 			'% <b>Driver</b> - Gym Leaders, expert in their respective types. They can mute users and check alts.<br />' +
@@ -1195,14 +1194,6 @@ var commands = exports.commands = {
 					this.sendReplyBox('Here is a list of Sora League Side Missions:<br />' +
 						'- <a href="http://soraleague.weebly.com/side-missions.html">Sora League Side Missions</a><br />' +
 						'</div>');
-=======
-		this.sendReplyBox('+ <b>Voice</b> - They can use ! commands like !groups, and talk during moderated chat<br />' +
-			'% <b>Driver</b> - The above, and they can mute. Global % can also lock users and check for alts<br />' +
-			'@ <b>Moderator</b> - The above, and they can ban users<br />' +
-			'&amp; <b>Leader</b> - The above, and they can promote moderators and force ties<br />' +
-			'~ <b>Administrator</b> - They can do anything, like change what this message says<br />' +
-			'# <b>Room Owner</b> - They are administrators of the room and can almost totally control it');
->>>>>>> upstream/master
 	},
 
         opensource: function(target, room, user) {
@@ -1926,16 +1917,10 @@ var commands = exports.commands = {
 			this.sendReply('For details on all room commands, use /roomhelp');
 			this.sendReply('For details on all commands, use /help all');
 			if (user.group !== config.groupsranking[0]) {
-<<<<<<< HEAD
 				this.sendReply('OPERATOR COMMANDS: /warn')
 				this.sendReply('DRIVER COMMANDS: /mute, /unmute, /forcerename, /alts');
 				this.sendReply('MODERATOR COMMANDS: /announce, /ban, /unban, /unbanall, /ip, /modlog, /redirect, /kick');
 				this.sendReply('LEADER COMMANDS: /promote, /demote, /forcewin, /forcetie');
-=======
-				this.sendReply('DRIVER COMMANDS: /mute, /unmute, /announce, /modlog, /forcerename, /alts');
-				this.sendReply('MODERATOR COMMANDS: /ban, /unban, /unbanall, /ip, /redirect, /kick');
-				this.sendReply('LEADER COMMANDS: /promote, /demote, /forcewin, /forcetie, /declare');
->>>>>>> upstream/master
 				this.sendReply('For details on all moderator commands, use /help @');
 			}
 			this.sendReply('For details of a specific command, use something like: /help data');
