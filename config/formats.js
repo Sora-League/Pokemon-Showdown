@@ -42,9 +42,6 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
 	},
 	{
-<<<<<<< HEAD
-		name: "Ubers (beta)",
-=======
 		name: "OU (suspect test)",
 		section: "XY Singles",
 
@@ -52,7 +49,6 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Genesect', 'Deoxys-Speed']
 	},
 	{
->>>>>>> upstream/master
 		name: "Ubers",
 		section: "XY Singles",
 
