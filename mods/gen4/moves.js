@@ -425,7 +425,7 @@ exports.BattleMovedex = {
 		inherit: true,
 		desc: "Raises the user's Special Attack by 1 stage.",
 		shortDesc: "Boosts the user's Sp. Atk by 1.",
-		onModifyMove: null,
+		onModifyMove: function() { },
 		boosts: {
 			spa: 1
 		}
@@ -614,6 +614,27 @@ exports.BattleMovedex = {
 			}
 		}
 	},
+	metronome: {
+		inherit: true,
+		onHit: function(target) {
+			var moves = [];
+			for (var i in exports.BattleMovedex) {
+				var move = exports.BattleMovedex[i];
+				if (i !== move.id) continue;
+				if (move.isNonstandard) continue;
+				var noMetronome = {
+					assist:1, chatter:1, copycat:1, counter:1, covet:1, destinybond:1, detect:1, endure:1, feint:1, focuspunch:1, followme:1, helpinghand:1, mefirst:1, metronome:1, mimic:1, mirrorcoat:1, mirrormove:1, protect:1, sketch:1, sleeptalk:1, snatch:1, struggle:1, switcheroo:1, thief:1, trick:1
+				};
+				if (!noMetronome[move.id] && move.num < 468) {
+					moves.push(move.id);
+				}
+			}
+			var move = '';
+			if (moves.length) move = moves[this.random(moves.length)];
+			if (!move) return false;
+			this.useMove(move, target);
+		}
+	},
 	mimic: {
 		inherit: true,
 		//desc: "",
@@ -720,42 +741,6 @@ exports.BattleMovedex = {
 	rockblast: {
 		inherit: true,
 		accuracy: 80
-	},
-	roost: {
-		inherit: true,
-		effect: {
-			duration: 1,
-			onStart: function(pokemon) {
-				// This is not how Roost "should" be implemented, but is rather
-				// a simplification.
-
-				// This implementation has the advantage of not requiring a separate
-				// event just for Roost, and the only difference would come up in
-				// Doubles Hackmons. If we ever introduce Doubles Hackmons and
-				// Color Change Roost becomes popular; I might need to revisit this
-				// implementation. :P
-
-				if (pokemon.hasType('Flying')) {
-					// don't just delete the type; since
-					// the types array may be a pointer to the
-					// types array in the Pokedex.
-					this.effectData.oldTypes = pokemon.types;
-					if (pokemon.types[0] === 'Flying') {
-						// Pure Flying-types become ???-type
-						pokemon.types = [pokemon.types[1]];
-					} else {
-						pokemon.types = [pokemon.types[0]];
-					}
-					this.effectData.roostTypeString = pokemon.types.join(',');
-				}
-				//pokemon.negateImmunity['Ground'] = 1;
-			},
-			onEnd: function(pokemon) {
-				if (this.effectData.roostTypeString === pokemon.types.join(',')) {
-					pokemon.types = this.effectData.oldTypes;
-				}
-			}
-		}
 	},
 	sandtomb: {
 		inherit: true,

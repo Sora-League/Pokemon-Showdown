@@ -1578,6 +1578,7 @@ exports.BattleItems = {
 			if ((source && source.baseTemplate.num === 487) || pokemon.baseTemplate.num === 487) {
 				return false;
 			}
+			return true;
 		},
 		num: 112,
 		gen: 4,
@@ -1835,7 +1836,7 @@ exports.BattleItems = {
 			pokemon.negateImmunity['Ground'] = true;
 		},
 		onModifySpe: function(speMod) {
-			return this.chain(speMod, .5);
+			return this.chain(speMod, 0.5);
 		},
 		num: 278,
 		gen: 4,
@@ -1929,6 +1930,10 @@ exports.BattleItems = {
 		name: "Kee Berry",
 		spritenum: 0,
 		isBerry: true,
+		naturalGift: {
+			basePower: 100,
+			type: "Fairy"
+		},
 		onAfterDamage: function(damage, target, source, move) {
 			if (move.category === 'Physical') {
 				target.eatItem();
@@ -2396,9 +2401,13 @@ exports.BattleItems = {
 		name: "Maranga Berry",
 		spritenum: 0,
 		isBerry: true,
+		naturalGift: {
+			basePower: 100,
+			type: "Dark"
+		},
 		onAfterDamage: function(damage, target, source, move) {
 			if (move.category === 'Special') {
-				target.eatItem()
+				target.eatItem();
 			}
 		},
 		onEat: function(pokemon) {
@@ -4205,7 +4214,7 @@ exports.BattleItems = {
 		name: "Weakness Policy",
 		spritenum: 0,
 		onHit: function(target, source, move) {
-			if (target.hp && move.category !== 'Status' && this.getEffectiveness(move, target) > 0 && target.useItem()) {
+			if (target.hp && move.category !== 'Status' && !move.damage && !move.damageCallback && this.getEffectiveness(move, target) > 0 && target.useItem()) {
 				this.boost({atk: 2, spa: 2});
 			}
 		},

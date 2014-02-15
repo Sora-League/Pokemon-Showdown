@@ -288,7 +288,7 @@ var User = (function () {
 
 		if (connection.user) connection.user = this;
 		this.connections = [connection];
-		this.ips = {}
+		this.ips = {};
 		this.ips[connection.ip] = 1;
 		// Note: Using the user's latest IP for anything will usually be
 		//       wrong. Most code should use all of the IPs contained in
@@ -733,9 +733,9 @@ var User = (function () {
 
 				if (body === '3') {
 					isSysop = true;
-					this.autoconfirmed = true;
+					this.autoconfirmed = userid;
 				} else if (body === '4') {
-					this.autoconfirmed = true;
+					this.autoconfirmed = userid;
 				}
 			}
 			if (users[userid] && users[userid] !== this) {
@@ -941,29 +941,32 @@ var User = (function () {
 		}
 		return alts;
 	};
-	User.prototype.doWithMMR = function(formatid, callback, that) {
+	User.prototype.doWithMMR = function(formatid, callback) {
 		var self = this;
-		if (that === undefined) that = this;
 		formatid = toId(formatid);
 
 		// this should relieve login server strain
 		// this.mmrCache[formatid] = 1000;
 
 		if (this.mmrCache[formatid]) {
-			callback.call(that, this.mmrCache[formatid]);
+			callback(this.mmrCache[formatid]);
 			return;
 		}
 		LoginServer.request('mmr', {
 			format: formatid,
 			user: this.userid
 		}, function(data) {
-			var mmr = 1000;
+			var mmr = 1000, error = true;
 			if (data) {
 				mmr = parseInt(data,10);
-				if (isNaN(mmr)) mmr = 1000;
+				if (!isNaN(mmr)) {
+					error = false;
+					self.mmrCache[formatid] = mmr;
+				} else {
+					mmr = 1000;
+				}
 			}
-			self.mmrCache[formatid] = mmr;
-			callback.call(that, mmr);
+			callback(mmr, error);
 		});
 	};
 	User.prototype.cacheMMR = function(formatid, mmr) {
@@ -1128,12 +1131,12 @@ var User = (function () {
 		}
 		TeamValidator.validateTeam(formatid, this.team, this.finishPrepBattle.bind(this, connection, callback));
 	};
-	User.prototype.finishPrepBattle = function(connection, callback, problems, team) {
-		if (problems) {
-			connection.popup("Your team was rejected for the following reasons:\n\n- "+problems.join("\n- "));
+	User.prototype.finishPrepBattle = function(connection, callback, success, details) {
+		if (!success) {
+			connection.popup("Your team was rejected for the following reasons:\n\n- "+details.replace(/\n/g, '\n- '));
 			callback(false);
 		} else {
-			this.team = team;
+			this.team = details;
 			callback(true);
 		}
 	};
