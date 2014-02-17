@@ -489,6 +489,14 @@ exports.Formats = [
 		ruleset: ['OU', 'Same Type Clause']
 	},
 	{
+		name: "Tier Shift",
+		section: 'Other Metagames',
+
+		mod: 'tiershift',
+		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite']
+	},
+	{
 		name: "STABmons",
 		section: "Other Metagames",
 
