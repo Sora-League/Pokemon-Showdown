@@ -12,7 +12,7 @@ exports.Formats = [
 
 		mod: 'incweather',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite']
 	},
 	
 	// XY Singles
