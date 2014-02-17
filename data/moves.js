@@ -907,7 +907,7 @@ exports.BattleMovedex = {
 		priority: 1,
 		isContact: true,
 		volatileStatus: 'bide',
-		affectedByImmunities: false,
+		affectedByImmunities: true,
 		effect: {
 			duration: 3,
 			onLockMove: 'bide',
@@ -3212,7 +3212,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		desc: "For five turns, Pokemon on the ground cannot fall asleep, and will be woken up if already sleeping. Their Electric-type moves are powered up by 50%.",
+		desc: "For five turns, Pokemon on the ground cannot fall asleep. Their Electric-type moves are powered up by 50%.",
 		shortDesc: "If on ground, can't sleep + Electric moves stronger.",
 		id: "electricterrain",
 		name: "Electric Terrain",
@@ -3222,19 +3222,13 @@ exports.BattleMovedex = {
 		effect: {
 			duration: 5,
 			onSetStatus: function(status, target, source, effect) {
-				if (status.id === 'slp' && !target.runImmunity('Ground')) {
+				if (status.id === 'slp' && target.runImmunity('Ground')) {
 					this.debug('Interrupting sleep from Electric Terrain');
 					return false;
 				}
 			},
-			onUpdate: function(pokemon) {
-				if (pokemon.status === 'slp') {
-					this.debug('Waking up from Electric Terrain');
-					pokemon.cureStatus();
-				}
-			},
 			onBasePower: function(basePower, attacker, defender, move) {
-				if (move.type === 'Electric' && !attacker.runImmunity('Ground')) {
+				if (move.type === 'Electric' && attacker.runImmunity('Ground')) {
 					this.debug('electric terrain boost');
 					return this.chainModify(1.5);
 				}
@@ -5176,7 +5170,7 @@ exports.BattleMovedex = {
 		effect: {
 			duration: 5,
 			onBasePower: function(basePower, attacker, defender, move) {
-				if (move.type === 'Grass' && !attacker.runImmunity('Ground')) {
+				if (move.type === 'Grass' && attacker.runImmunity('Ground')) {
 					this.debug('grassy terrain boost');
 					return this.chainModify(1.5);
 				}
@@ -7030,7 +7024,7 @@ exports.BattleMovedex = {
 					target.removeVolatile('kingsshield');
 					return;
 				}
-				if (move && (move.category === 'Status' || move.isNotProtectable || move.id === 'suckerpunch')) return;
+				if (move && (move.category === 'Status' || move.isNotProtectable)) return;
 				this.add('-activate', target, 'Protect');
 				var lockedmove = source.getVolatile('lockedmove');
 				if (lockedmove) {
@@ -8398,7 +8392,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
-		desc: "For five turns, Grounded Pokemon cannot have major status problems or confusion inflicted on them by other Pokemon. Their Dragon-type moves are weakened by 50%.",
+		desc: "For five turns, Grounded Pokemon cannot have major status problem inflicted on them by other Pokemon. Dragon-type moves used against them are weakened by 50%.",
 		shortDesc: "Prevents status and weakens Dragon if grounded.",
 		id: "mistyterrain",
 		name: "Misty Terrain",
@@ -8414,13 +8408,6 @@ exports.BattleMovedex = {
 					return false;
 				}
 			},
-			onTryConfusion: function(target, source, effect) {
-				if (!target.runImmunity('Ground')) return;
-				if (source && source !== target) {
-					this.debug('misty terrain preventing confusion');
-					return false;
-				}
-			},
 			onTryHit: function(target, source, move) {
 				if (!target.runImmunity('Ground')) return;
 				if (move && move.id === 'yawn') {
@@ -8429,7 +8416,7 @@ exports.BattleMovedex = {
 				}
 			},
 			onBasePower: function(basePower, attacker, defender, move) {
-				if (move.type === 'Dragon' && !attacker.runImmunity('Ground')) {
+				if (move.type === 'Dragon' && defender.runImmunity('Ground')) {
 					this.debug('misty terrain weaken');
 					return this.chainModify(0.5);
 				}
@@ -12224,7 +12211,7 @@ exports.BattleMovedex = {
 					target.removeVolatile('spikyshield');
 					return;
 				}
-				if (move && move.target === 'self') return;
+				if (move && (move.target === 'self' || move.id === 'suckerpunch')) return;
 				this.add('-activate', target, 'move: Protect');
 				if (move.isContact) {
 					this.damage(source.maxhp/8, source, target);
@@ -12965,6 +12952,7 @@ exports.BattleMovedex = {
 		name: "Sucker Punch",
 		pp: 5,
 		priority: 1,
+		isNotProtectable: true,
 		isContact: true,
 		onTryHit: function(target) {
 			var decision = this.willMove(target);
