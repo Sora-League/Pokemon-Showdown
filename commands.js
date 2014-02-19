@@ -1807,23 +1807,49 @@ var commands = exports.commands = {
 		this.logModCommand(user.name+' send a popup message to '+targetUser.name);
 	},
 
-	declare: function(target, room, user) {
+	declarered: 'declare',
+	declaregreen: 'declare',
+	declare: function(target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
 
-		if (!this.canTalk()) return;
-
-		this.add('|raw|<div class="broadcast-blue"><b>'+target+'</b></div>');
+		if (cmd === 'declare'){
+			this.add('|raw|<div class="broadcast-blue"><b>'+target+'</b></div>');
+		}
+		if (cmd === 'declarered'){
+			this.add('|raw|<div class="broadcast-red"><b>'+target+'</b></div>');
+		}
+		if (cmd === 'declaregreen'){
+			this.add('|raw|<div class="broadcast-green"><b>'+target+'</b></div>');
+		}
 		this.logModCommand(user.name+' declared '+target);
 	},
 
-	gdeclare: 'globaldeclare',
-	globaldeclare: function(target, room, user) {
-		if (!target) return this.parse('/help globaldeclare');
+	gdeclarered: 'gdeclare',
+	gdeclaregreen: 'gdeclare',
+	gdeclare: function(target, room, user, connection, cmd) {
+		if (!target) return this.parse('/help '+cmd);
 		if (!this.can('gdeclare')) return false;
+		var staff = '';
+		staff = 'a ' + config.groups[user.group].name;
+		if (user.group == '~') staff = 'an Administrator';
 
-		for (var id in Rooms.rooms) {
-			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b>'+target+'</b></div>');
+		//var roomName = (room.isPrivate)? 'a private room' : room.id;
+
+		if (cmd === 'gdeclare'){
+			for (var id in Rooms.rooms) {
+				if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b><font size=1><i>Global declare by '+staff+'<br /></i></font size>'+target+'</b></div>');
+			}
+		}
+		if (cmd === 'gdeclarered'){
+			for (var id in Rooms.rooms) {
+				if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-red"><b><font size=1><i>Global declare by '+staff+'<br /></i></font size>'+target+'</b></div>');
+			}
+		}
+		else if (cmd === 'gdeclaregreen'){
+			for (var id in Rooms.rooms) {
+				if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-green"><b><font size=1><i>Global declare by '+staff+'<br /></i></font size>'+target+'</b></div>');
+			}
 		}
 		this.logModCommand(user.name+' globally declared '+target);
 	},
@@ -1850,6 +1876,19 @@ var commands = exports.commands = {
 
 		return '/announce '+target;
 	},
+	
+	masspm: 'pmall',
+        pmall: function(target, room, user) {
+                if (!target) return this.parse('/pmall [message] - Sends a PM to every user in a room.');
+                if (!this.can('pmall', null, room)) return false;
+
+                var pmName = '~The Sora League PM [Do not reply]';
+
+                for (var i in Users.users) {
+                        var message = '|pm|'+pmName+'|'+Users.users[i].getIdentity()+'|'+target;
+                        Users.users[i].send(message);
+                }
+        },
 
 	fr: 'forcerename',
 	forcerename: function(target, room, user) {
@@ -1867,6 +1906,28 @@ var commands = exports.commands = {
 			Rooms.global.cancelSearch(targetUser);
 			targetUser.resetName();
 			targetUser.send('|nametaken||'+user.name+" has forced you to change your name. "+target);
+		} else {
+			this.sendReply("User "+targetUser.name+" is no longer using that name.");
+		}
+	},
+	
+	frt: 'forcerenameto',
+	forcerenameto: function(target, room, user) {
+		if (!target) return this.parse('/help forcerenameto');
+		target = this.splitTarget(target);
+		var targetUser = this.targetUser;
+		if (!targetUser) {
+			return this.sendReply('User '+this.targetUsername+' not found.');
+		}
+		if (!target) {
+			return this.sendReply('No new name was specified.');
+		}
+		if (!this.can('forcerenameto', targetUser)) return false;
+
+		if (targetUser.userid === toUserid(this.targetUser)) {
+			var entry = ''+targetUser.name+' was forcibly renamed to '+target+' by '+user.name+'.';
+			this.privateModCommand('(' + entry + ')');
+			targetUser.forceRename(target, undefined, true);
 		} else {
 			this.sendReply("User "+targetUser.name+" is no longer using that name.");
 		}
