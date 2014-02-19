@@ -1,18 +1,8 @@
 #header{background:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQqiBF52PR_510XcehCBYtd6MZdilSJRcGIkdH6ZCFslwPhd7hLOg")}
 
-.mainmenuwrapper{
-    color:#711b79;
-    font-size:11pt;
-    font-family:Verdana,Helvetica,Arial,sans-serif;
-    background: url("http://i40.tinypic.com/11i205i.jpg") no-repeat scroll left top (63, 38, 70);
-}
+body{background-image:url("http://i40.tinypic.com/11i205i.jpg");background-repeat:no-repeat;background-position:center}
 
-.chat-log{
-font-size:10pt;
-background: #ffffff url("http://i43.tinypic.com/2dtsmd1.jpg") no-repeat scroll center;
-color:#000;
-overflow:auto;
-}
+.chat-log{font-size:10pt;background: url("http://i43.tinypic.com/2dtsmd1.jpg") no-repeat scroll right bottom;background:#a5ffa5;color:#000;overflow:auto;}
 
 .userlist {
 border-left: 1px solid #c8e3e0;
