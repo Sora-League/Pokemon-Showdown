@@ -1110,10 +1110,11 @@ var commands = exports.commands = {
 	jeratt: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Artiste <b>Jeratt</b><br />'+
-			'<i>"Still dragon you away~"</i> <br />'+
+			'<i>"Let the storm rage on. The cold never bothered me anyways."</i> <br />'+
 			'<b>Skilled in:</b> Dragon & Ice<br />'+
 		 	'<b>Note:</b> Close the Lobby and see what I can really do. <br/>'+
 		 	'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4. <br/>'+
+		 	'P.S. I\'m still Dragon you away with my coldness'
 		 	'<img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"> <img src="http://sprites.pokecheck.org/s/473.gif"> <img src="http://sprites.pokecheck.org/i/378.gif"> <img src="http://sprites.pokecheck.org/i/483.gif">');
         },
 	
