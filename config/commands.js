@@ -5,7 +5,7 @@
  * These are commands. For instance, you can define the command 'whois'
  * here, then use it by typing /whois into Pokemon Showdown.
  *
- * A command can be in the form:
+ * A command can be in the form:b
  *   ip: 'whois',
  * This is called an alias: it makes it so /ip does the same thing as
  * /whois.
@@ -771,7 +771,7 @@ var commands = exports.commands = {
 	 	     '-At least 2 must be OU or lower <br/>'+
 	 	     '-No Lowering opponents stats (if not caused by a damaging move is banned (Unless caused by Attack) <br/>'+
 	 	     '-No Pokemon with a base stat over 130<br />'+
-	 	     '<img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://sprites.pokecheck.org/t/148.gif">');
+	 	     '<img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Misc%20sprites/Bart_zps03ad3a7d.png">');
         },
 	
 	gary: function(target, room, user) {
