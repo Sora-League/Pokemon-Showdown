@@ -1058,7 +1058,7 @@ var commands = exports.commands = {
 			  '<i>"When an earthquake happens, call me senpai cuz I\'m ganna Yolo that shit."</i> <br />'+
 			  '<b>Type:</b> Ground<br />'+
 			  '<b>Ace:</b> Landorus<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/286.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
+			  '<img src="http://sprites.pokecheck.org/i/645.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
 	},
 	
 	arthurzh: function(target, room, user) {
