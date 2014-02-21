@@ -1013,11 +1013,11 @@ var commands = exports.commands = {
 			 '<img src="http://sprites.pokecheck.org/i/142.gif"> <img src="http://sprites.pokecheck.org/t/109.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Leaf_zps542b4e92.png">');
         },
         
-        okay: function(target, room, user) {
+        grass: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Okay</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
 			  '<i>"???"</i> <br />'+
-			  '<b>Type:</b> Ground<br />'+
+			  '<b>Type:</b> Grass<br />'+
 			  '<b>Ace:</b> ???<br />');
 	},
 	
@@ -1055,9 +1055,9 @@ var commands = exports.commands = {
 	zoro: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
-			  '<i>"I am the definition of swag...and cookies."</i> <br />'+
-			  '<b>Type:</b> Grass<br />'+
-			  '<b>Ace:</b> Breloom<br />'+
+			  '<i>"When an earthquake happens, call me senpai cuz I\'m ganna Yolo that shit."</i> <br />'+
+			  '<b>Type:</b> Ground<br />'+
+			  '<b>Ace:</b> Landorus<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/286.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
 	},
 	
