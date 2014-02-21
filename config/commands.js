@@ -937,12 +937,13 @@ var commands = exports.commands = {
 		 	  '-No Stealth Rocks <br/>');
 	},
 	
-        ericaj: function(target, room, user) {
+        artist: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>EricaJ</b><br />'+
-			  '<i>"Simplicity is the ultimate sophistication."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Artist</b><br />'+
+			  '<i>"Warning: Some serious hax may occur, challenge with caution."</i> <br />'+
 			  '<b>Type:</b> Normal<br />'+
-			  '<b>Ace:</b> Porygon 2<br />');
+			  '<b>Ace:</b> Smeargle<br />'+
+			  '<img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Zeronew_zpsa8ff05c5.png">');
         },
         
         daredevil: function(target, room, user) {
