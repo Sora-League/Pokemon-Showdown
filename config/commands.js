@@ -1009,7 +1009,7 @@ var commands = exports.commands = {
 		         '<i>"To fly is to bring a new dimension to the world can you master the secret dimension of the skies and defeat me?"</i> <br />'+
 	              	 '<b>Type:</b> Flying<br />'+
 			 '<b>Ace:</b> Aerodactyl<br />'+
-			 '<img src="http://sprites.pokecheck.org/i/142.gif"> <img src="http://sprites.pokecheck.org/t/109.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Leaf_zps075ece3a.png">');
+			 '<img src="http://sprites.pokecheck.org/i/142.gif"> <img src="http://sprites.pokecheck.org/t/109.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Leaf_zps542b4e92.png">');
         },
         
         okay: function(target, room, user) {
