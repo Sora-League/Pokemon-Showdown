@@ -1580,7 +1580,7 @@ exports.BattleFormatsData = {
 		eventPokemon: [
 			{"generation":4,"level":30,"gender":"M","nature":"Jolly","moves":["fakeout","iceshard","nightslash","brickbreak"],"pokeball":"cherishball"}
 		],
-		tier: "Limbo B"
+		tier: "BL"
 	},
 	teddiursa: {
 		viableMoves: {"swordsdance":1,"protect":1,"facade":1,"closecombat":1,"firepunch":1,"crunch":1,"playrough":1,"gunkshot":1},
@@ -2631,6 +2631,10 @@ exports.BattleFormatsData = {
 		],
 		tier: "Limbo A"
 	},
+	latiasmega: {
+		requiredItem: "Latiasite",
+		tier: "Unreleased"
+	},
 	latios: {
 		viableMoves: {"dracometeor":1,"dragonpulse":1,"surf":1,"thunderbolt":1,"psyshock":1,"roost":1,"trick":1},
 		eventPokemon: [
@@ -2639,6 +2643,10 @@ exports.BattleFormatsData = {
 			{"generation":4,"level":40,"gender":"M","moves":["protect","refresh","lusterpurge","zenheadbutt"]}
 		],
 		tier: "OU"
+	},
+	latiosmega: {
+		requiredItem: "Latiosite",
+		tier: "Unreleased"
 	},
 	kyogre: {
 		viableMoves: {"waterspout":1,"surf":1,"thunder":1,"icebeam":1,"calmmind":1,"rest":1,"sleeptalk":1},
@@ -3731,7 +3739,7 @@ exports.BattleFormatsData = {
 	},
 	gothitelle: {
 		viableMoves: {"psychic":1,"thunderbolt":1,"hiddenpowerfighting":1,"shadowball":1,"substitute":1,"calmmind":1,"reflect":1,"lightscreen":1,"trick":1,"psyshock":1,"grassknot":1,"signalbeam":1},
-		tier: "Limbo"
+		tier: "BL"
 	},
 	solosis: {
 		viableMoves: {"calmmind":1,"recover":1,"psychic":1,"hiddenpowerfighting":1,"shadowball":1,"trickroom":1,"psyshock":1},
@@ -4194,7 +4202,7 @@ exports.BattleFormatsData = {
 	},
 	diggersby: {
 		viableMoves: {"earthquake":1,"uturn":1,"return":1,"wildcharge":1,"swordsdance":1,"quickattack":1,"agility":1},
-		tier: "Limbo A"
+		tier: "BL"
 	},
 	fletchling: {
 		viableMoves: {"roost":1,"swordsdance":1,"uturn":1,"return":1,"overheat":1,"flamecharge":1,"tailwind":1},
@@ -4469,6 +4477,15 @@ exports.BattleFormatsData = {
 	zygarde: {
 		viableMoves: {"dragondance":1,"earthquake":1,"extremespeed":1,"outrage":1,"coil":1,"stoneedge":1},
 		tier: "Limbo C"
+	},
+	diancie: {
+		tier: "Unreleased"
+	},
+	hoopa: {
+		tier: "Unreleased"
+	},
+	volcanion: {
+		tier: "Unreleased"
 	},
 	missingno: {
 		isNonstandard: true,
