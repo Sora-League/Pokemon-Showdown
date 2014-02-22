@@ -1041,7 +1041,7 @@ var commands = exports.commands = {
 			  '<i>"I need a paralyze heal, \'Cause you\'re 2shocking4me."</i> <br />'+
 			  '<b>Type:</b> Electric<br />'+
 			  '<b>Ace:</b> Eelektross<br />'+
-			  '<img src="http://sprites.pokecheck.org/t/136.gif">');
+			  '<img src="http://play.pokemonshowdown.com/sprites/xyani/ampharos-mega.gif"> <img src="http://sprites.pokecheck.org/t/136.gif">');
 			  
 	},
 	
