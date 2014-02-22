@@ -1101,12 +1101,12 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Genesect<br />');
 	},
 	
-	kevin: function(target, room, user) {
+	fighting: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Kevin</b><br />'+
-			  '<i>"True fighters don\'t give up, and my weakness can\'t even stop me."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			  '<i>"???."</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> Mega Lucario<br />');
+			  '<b>Ace:</b> ???<br />');
 	},
 	
 	jeratt: function(target, room, user) {
