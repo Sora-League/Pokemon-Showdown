@@ -929,7 +929,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('Frontier <b>Akash</b><br />'+
 			  '<i>"Fly high or die."</i> <br />'+
 			  '<b>Symbol:</b> Luck<br />'+
-			  '<b>Ace:</b> Arceus<br />'+
+			  '<b>Ace:</b> Charizard <br />'+
 			  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Sky Battle (Only Flying or levitating Pokemon may be used) <br/>'+
 		 	  '-Ubers Format (Max 1 Uber) <br/>'+
