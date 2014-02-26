@@ -818,7 +818,6 @@ var commands = exports.commands = {
 		      '<b>Note:</b> Hugs (not optional)<br />'+
 		      '<b>Optional Rule:</b> All Pokemon must have hug based nicknames for the duration of the challenge<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-Max 1 Focus Sash <br/>'+
 	 	      '-No Entry Hazards <br/>');
 	},
 	
@@ -891,7 +890,7 @@ var commands = exports.commands = {
 	              '<b>Symbol:</b> Balance<br />'+
 	              '<b>Ace:</b> Haxxi (Jirachi)<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-Pokemon Dominoes (OU Pokebank tier) <br/>'+
+	 	      '-Pokemon Dominoes (OU tier) <br/>'+
 	 	      '-Every Pokemon\'s 2nd typing must match the next Pokemon\'s first typing <br/>'+
 	 	      '-Last Pokemon must be Single-type <br/>'+
 	 	      '-Must lead with the first pokemon in the chain and continued by the next one <br/>'+
