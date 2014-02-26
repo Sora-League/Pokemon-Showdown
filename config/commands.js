@@ -963,8 +963,6 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Miltank (Dragonslayer)<br />'+
 			  '<b>Battle Rules:</b><br />'+
 			  '-No Focus Sash<br />'+
-			  '-No Choice Scarf<br />'+
-			  '-No force switching moves or items<br />'+
 			  '-No protecting moves<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/241.gif"> <img src="http://sprites.pokecheck.org/t/111.gif">');
         },
