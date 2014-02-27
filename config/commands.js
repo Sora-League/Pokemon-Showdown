@@ -770,7 +770,7 @@ var commands = exports.commands = {
 	 	     '<b>Battle Rules:</b> <br/>'+
 	 	     '-Ubers Battle <br/>'+
 	 	     '-At least 2 must be OU or lower <br/>'+
-	 	     '-No Lowering opponents stats (if not caused by a damaging move is banned (Unless caused by Attack) <br/>'+
+	 	     '-No Lowering opponents stats (Unless caused by attack) <br/>'+
 	 	     '-No Pokemon with a base stat over 130<br />'+
 	 	     '<img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Misc%20sprites/Bart_zps03ad3a7d.png">');
         },
@@ -818,6 +818,7 @@ var commands = exports.commands = {
 		      '<b>Note:</b> Hugs (not optional)<br />'+
 		      '<b>Optional Rule:</b> All Pokemon must have hug based nicknames for the duration of the challenge<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
+	 	      '-No Item Repetition <br/>'+
 	 	      '-No Entry Hazards <br/>');
 	},
 	
@@ -849,8 +850,7 @@ var commands = exports.commands = {
 	              '<b>Ace:</b> Hitmonlee<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
 	 	      '-UU Battle <br/>'+
-	 	      '-No Healing/Status Healing Moves and Abilities <br/>'+
-	 	      '-No Status (Unless Caused by Attack) <br/>'+
+	 	      '-Under Construction <br/>'+
 	 	      '<img src="http://sprites.pokecheck.org/s/006.gif"> <img src="http://sprites.pokecheck.org/t/040.gif">');
 	},
 	
@@ -932,9 +932,8 @@ var commands = exports.commands = {
 			  '<b>Battle Rules:</b> <br/>'+
 		 	  '-Sky Battle (Only Flying or levitating Pokemon may be used) <br/>'+
 		 	  '-Ubers Format (Max 1 Uber) <br/>'+
-		 	  '-No +1 Priority moves <br/>'+
 		 	  '-No Item Repetition <br/>'+
-		 	  '-No Stealth Rocks <br/>');
+		 	  '-No Entry Hazards <br/>');
 	},
 	
         artist: function(target, room, user) {
@@ -1083,10 +1082,8 @@ var commands = exports.commands = {
 	       	      '<b>Symbol:</b> Silver<br />'+
 		      '<b>Ace:</b> Aerodactyl<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-No Hazards <br/>'+
-	 	      '-No Sturdy/Focus Sash <br/>'+
-	 	      '-No Sleep inducing moves <br/>'+
 	 	      '-Mono-Animal; team must represent an animal (Existing or non-existing) <br/>'+
+	 	      '-Under construction <br/>'+
 	 	      '<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/charizard.gif"> <img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/aerodactyl.gif">');
 	},
 	
