@@ -1029,9 +1029,8 @@ var BattlePokemon = (function() {
 		if (noForce && this.ability === ability.id) {
 			return false;
 		}
-		if (ability.id === 'multitype' || ability.id === 'illusion' || ability.id === 'stancechange' || this.ability === 'multitype') {
-			return false;
-		}
+		if (ability.id in {illusion:1, multitype:1, stancechange:1}) return false;
+		if (this.ability in {multitype:1, stancechange:1}) return false;
 		this.ability = ability.id;
 		this.abilityData = {id: ability.id, target: this};
 		if (ability.id) {
@@ -1413,7 +1412,7 @@ var Battle = (function() {
 		this.messageLog = [];
 
 		// use a random initial seed (64-bit, [high -> low])
-		this.seed = [Math.floor(Math.random() * 0x10000),
+		this.startingSeed = this.seed = [Math.floor(Math.random() * 0x10000),
 			Math.floor(Math.random() * 0x10000),
 			Math.floor(Math.random() * 0x10000),
 			Math.floor(Math.random() * 0x10000)];
@@ -2923,7 +2922,11 @@ var Battle = (function() {
 			baseDamage = this.modify(baseDamage, move.stab || 1.5);
 		}
 		// types
-		var totalTypeMod = this.getEffectiveness(move, target, pokemon);
+		var totalTypeMod = 0;
+
+		if (target.negateImmunity[move.type] !== 'IgnoreEffectiveness' || this.getImmunity(move.type, target)) {
+			totalTypeMod = this.getEffectiveness(move, target, pokemon);
+		}
 
 		totalTypeMod = clampIntRange(totalTypeMod, -3, 3);
 		if (totalTypeMod > 0) {
