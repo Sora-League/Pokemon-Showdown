@@ -1088,7 +1088,7 @@ var commands = exports.commands = {
 	zoro: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
-			  '<i>"Your chances of winning is as rare as find a blue mew....well, unless you hack in a shiny mew..."</i> <br />'+
+			  '<i>"Your chances of winning is as rare as finding a blue mew....well, unless you hack in a shiny mew..."</i> <br />'+
 			  '<b>Type:</b> Steel<br />'+
 			  '<b>Ace:</b> Scizor (Quagsire)<br />'+
 			  '<img src="http://sprites.pokecheck.org/i/645.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
