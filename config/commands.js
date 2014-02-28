@@ -944,12 +944,12 @@ var commands = exports.commands = {
 			  '<img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Zeronew_zpsa8ff05c5.png">');
         },
         
-        daredevil: function(target, room, user) {
+        rockwolf: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Daredevil</b><br />'+
-			  '<i>"Baby I\'ll rock your world."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>RockWolf</b><br />'+
+			  '<i>" When it comes to willpower, my willpower is rock solid!"</i> <br />'+
 			  '<b>Type:</b> Rock<br />'+
-			  '<b>Ace:</b> Terrakion<br />');
+			  '<b>Ace:</b> Omastar<br />');
         },
         
         vanilla: function(target, room, user) {
