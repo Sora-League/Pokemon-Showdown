@@ -800,12 +800,12 @@ var commands = exports.commands = {
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
-        iris: function(target, room, user) {
+        fairy: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Iris</b><br />'+
-			  '<i>"Shake my butt and call me a potater, u gon get rekt bro swag yolo 420 blaze it."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			  '<i>"?"</i> <br />'+
 			  '<b>Type:</b> Fairy<br />'+
-			  '<b>Ace:</b> Azumarill<br />');
+			  '<b>Ace:</b> ?<br />');
         },
 	
 	bighug: function(target, room, user) {
