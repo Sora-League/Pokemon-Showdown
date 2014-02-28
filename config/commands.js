@@ -1048,13 +1048,12 @@ var commands = exports.commands = {
 			 '<b>Ace:</b> Aegislash<br />');
         },
 	
-	zoro: function(target, room, user) {
+	apple: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
-			  '<i>"When an earthquake happens, call me senpai cuz I\'m ganna Yolo that shit."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Apple</b><br />'+
+			  '<i>"You\'re grounded, mama."</i> <br />'+
 			  '<b>Type:</b> Ground<br />'+
-			  '<b>Ace:</b> Landorus<br />'+
-			  '<img src="http://sprites.pokecheck.org/i/645.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
+			  '<b>Ace:</b> Gliscor (Sharpie)<br />');
 	},
 	
 	arthurzh: function(target, room, user) {
@@ -1086,12 +1085,13 @@ var commands = exports.commands = {
 	 	      '<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/charizard.gif"> <img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/aerodactyl.gif">');
 	},
 	
-	killer: function(target, room, user) {
+	zoro: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Killer</b><br />'+
-			  '<i>"Come forth, o challenger, for after our blades and wits clash in a metal maelstrom, only one man will stand, and stand victorious he shall!"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Zoro</b><br />'+
+			  '<i>"?"</i> <br />'+
 			  '<b>Type:</b> Steel<br />'+
-			  '<b>Ace:</b> Genesect<br />');
+			  '<b>Ace:</b> ?<br />'+
+			  '<img src="http://sprites.pokecheck.org/i/645.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
 	},
 	
 	fighting: function(target, room, user) {
