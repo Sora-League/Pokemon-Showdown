@@ -826,9 +826,18 @@ var commands = exports.commands = {
 		this.sendReplyBox('Overlord <b>Ninjarisu</b><br />'+
 		    '<i>"Fear my pink sparkles of awesomeness!"</i> <br />'+
 		    '<b>Ace:</b> All<br />'+
-	 	    '<b>Who am I?:</b> You get to battle me after obtaining 10 badges!<br />'+
 	 	    '<b>Note:</b> Nemesis of Guardian, him or me? Choose<br />'+
+	 	    '<b>Requirements:</b> 10 Gym Badges<br />'+
 	 	    '<img src="http://sprites.pokecheck.org/s/417.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
+        },
+        
+        silth: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Centurion <b>Silth</b><br />'+
+		    '<i>"???"</i> <br />'+
+		    '<b>Ace:</b> ???<br />'+
+		    '<b>Tiers:</b> OU, OU Monotype or Doubles<br />'+
+	 	    '<b>Requirements:</b> 5 Frontier Symbols<br />');
         },
         
         darkus: function(target, room, user) {
@@ -836,8 +845,8 @@ var commands = exports.commands = {
 			this.sendReplyBox('Guardian <b>Darkus</b><br />'+
 			    '<i>"You Snooze, You Lose!"</i> <br />'+
 			    '<b>Ace:</b> Klinklang<br />'+
-		 	    '<b>Who am I?:</b> You get to battle me after obtaining 10 badges!<br />'+
 		 	    '<b>Note:</b> Nemesis of Overlord, him or me? Choose<br />'+
+		 	    '<b>Requirements:</b> 10 Gym Badges<br />'+
 		 	    '<img src="http://sprites.pokecheck.org/i/601.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
         },
 	
@@ -1094,12 +1103,12 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/645.gif"> <img src="http://sprites.pokecheck.org/t/187.gif">');
 	},
 	
-	fighting: function(target, room, user) {
+	ncrypt: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
-			  '<i>"???."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>nCrypt</b><br />'+
+			  '<i>"Fighting is my passion and the only thing I trust is strength!"</i> <br />'+
 			  '<b>Type:</b> Fighting<br />'+
-			  '<b>Ace:</b> ???<br />');
+			  '<b>Ace:</b> Terrakion<br />');
 	},
 	
 	jeratt: function(target, room, user) {
