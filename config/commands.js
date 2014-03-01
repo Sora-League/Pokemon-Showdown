@@ -1060,9 +1060,9 @@ var commands = exports.commands = {
 	apple: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Apple</b><br />'+
-			  '<i>"You\'re grounded, mama."</i> <br />'+
+			  '<i>"Yo mama so fat, when she enters the field Gravity comes to play."</i> <br />'+
 			  '<b>Type:</b> Ground<br />'+
-			  '<b>Ace:</b> Gliscor (Sharpie)<br />');
+			  '<b>Ace:</b> Gliscor (SnipSnip)<br />');
 	},
 	
 	arthurzh: function(target, room, user) {
