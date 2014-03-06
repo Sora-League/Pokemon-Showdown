@@ -512,14 +512,14 @@ exports.Formats = [
 		ruleset: ['OU', 'Same Type Clause']
 	},
 	{
-<<<<<<< HEAD
 		name: "Tier Shift",
 		section: 'Other Metagames',
 
 		mod: 'tiershift',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite']
-=======
+	},
+	{
 		name: "Middle Cup",
 		section: "Other Metagames",
 
@@ -533,7 +533,6 @@ exports.Formats = [
 				return [set.species + " is not the middle Pokémon in an evolution chain."];
 			}
 		}
->>>>>>> upstream/master
 	},
 	{
 		name: "STABmons",
