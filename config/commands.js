@@ -781,10 +781,8 @@ var commands = exports.commands = {
 		      '<b>Type:</b> Dragon<br />'+
 		      '<b>Ace:</b> Goodra<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-No Focus Sash <br/>'+
 	 	      '-No Hazards <br/>'+
 	 	      '-No Status <br/>'+
-	 	      '-OU Monotype <br />'+
 	 	      '<img src="http://play.pokemonshowdown.com/sprites/bw/goodra.png"> <img src="http://sprites.pokecheck.org/t/137.gif">');
         },
 	
