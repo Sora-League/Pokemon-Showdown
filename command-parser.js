@@ -333,6 +333,13 @@ function canTalk(user, room, connection, message) {
 				}
 			}
 		}
+		if (message.toLowerCase().indexOf('.psim.us') > -1) {
+	if (message.toLowerCase().indexOf('thesoraleague.psim.us') > -1) {
+	return message;
+	}
+	connection.sendTo(room, '|html| <b><font color= "red">Advertising other servers is not allowed. Your post has not been sent.</b></font>');
+	return false;
+	}
 
 		if (config.chatfilter) {
 			return config.chatfilter(user, room, connection, message);
