@@ -1110,7 +1110,7 @@ var commands = exports.commands = {
 	meows: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Meows</b><br />'+
-			'<i>"I\'m too cool for you~"</i> <br />'+
+			'<i>"Ice will give you the cold shoulder and watch your blood chill as the temperature lowers so do your chances of survival."</i> <br />'+
 			'<b>Type:</b> Ice<br />'+
 			'<b>Ace:</b> Kyurem-Black<br />');
         },
