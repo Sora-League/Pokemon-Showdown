@@ -1009,7 +1009,7 @@ var commands = exports.commands = {
         leaf: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Leaf</b><br />'+
-		         '<i>"To fly is to bring a new dimension to the world can you master the secret dimension of the skies and defeat me?"</i> <br />'+
+		         '<i>"Altitude beats magnitude, you cant fight against mach 6 flight."</i> <br />'+
 	              	 '<b>Type:</b> Flying<br />'+
 			 '<b>Ace:</b> Aerodactyl<br />'+
 			 '<img src="http://sprites.pokecheck.org/i/142.gif"> <img src="http://sprites.pokecheck.org/t/109.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Leaf_zps542b4e92.png">');
