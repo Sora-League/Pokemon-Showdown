@@ -299,6 +299,18 @@ function canTalk(user, room, connection, message) {
 		connection.popup("You can't send a message to this room without being in it.");
 		return false;
 	}
+	if (room && user.mutedRooms[room.id]) {
+		connection.sendTo(room, 'You are muted and cannot talk in this room.');
+		return false;
+	}
+	var BadWords = ['cunt','faggot', 'penis', 'vag', 'pen15', 'pen1s', 'cum', 'nigger', 'nigga', 'n1gger', 'n1gga', 'cock', 'dick', 'puta', 'clit', 'fucker', 'asshole', 'pussies', 'pussy', 'porn', 'p0rn', 'pimp', 'd!ck', 'slut', 'whore', 'wh0re', 'piss', 'vulva', 'peehole', 'boob', 'tit', 'b00b', 't1t', 'semen', 'sperm'];
+	for (var i = 0; i < BadWords.length; i++) {
+	if (message.toLowerCase().indexOf(BadWords[i]) >= 0) {
+	connection.sendTo(room, 'Your message was not sent, as it contains profane language.');
+	return false;
+	}
+	}
+	
 
 	if (typeof message === 'string') {
 		if (!message) {
