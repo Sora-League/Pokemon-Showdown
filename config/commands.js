@@ -798,12 +798,13 @@ var commands = exports.commands = {
 	 	          '<img src="http://sprites.pokecheck.org/s/250.gif"> <img src="http://sprites.pokecheck.org/t/025.gif">');
         },
         
-        fairy: function(target, room, user) {
+        lance: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>Lance</b><br />'+
 			  '<i>"?"</i> <br />'+
 			  '<b>Type:</b> Fairy<br />'+
-			  '<b>Ace:</b> ?<br />');
+			  '<b>Ace:</b> ?<br />'+
+			  '<img src="http://play.pokemonshowdown.com/sprites/xyani/ampharos-mega.gif"> <img src="http://sprites.pokecheck.org/t/136.gif">');
         },
 	
 	bighug: function(target, room, user) {
@@ -1035,13 +1036,12 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
-	lance: function(target, room, user) {
+	electric: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Lance</b><br />'+
-			  '<i>"I need a paralyze heal, \'Cause you\'re 2shocking4me."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type:</b> Electric<br />'+
-			  '<b>Ace:</b> Eelektross<br />'+
-			  '<img src="http://play.pokemonshowdown.com/sprites/xyani/ampharos-mega.gif"> <img src="http://sprites.pokecheck.org/t/136.gif">');
+			  '<b>Ace:</b> Eelektross<br />');
 			  
 	},
 	
@@ -1106,6 +1106,14 @@ var commands = exports.commands = {
 			  '<b>Type:</b> Fighting<br />'+
 			  '<b>Ace:</b> Terrakion<br />');
 	},
+	
+	meows: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Gym Ldr <b>Meows</b><br />'+
+			'<i>"I\'m too cool for you~"</i> <br />'+
+			'<b>Type:</b> Ice<br />'+
+			'<b>Ace:</b> Kyurem-Black<br />');
+        },
 	
 	jeratt: function(target, room, user) {
 		if (!this.canBroadcast()) return;
