@@ -1002,7 +1002,7 @@ var commands = exports.commands = {
 			  '<b>Symbol:</b> Illusion<br />'+
 			  '<b>Ace:</b> Chansey<br />'+
 			  '<b>Battle Rules:</b> <br />'+
-			  '-Standard Ubers<br />'+
+			  '-VGC Doubles<br />'+
 			  '-Best of 3 Series<br />');
         },
         
