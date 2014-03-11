@@ -918,16 +918,6 @@ var commands = exports.commands = {
 		 	  '<img src="http://sprites.pokecheck.org/t/144.gif"> <img src="http://sprites.pokecheck.org/i/620.gif">');
 	},
 	
-	bm: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>B/m/</b><br />'+
-		          '<i>"All is fair in love and insanity, so let chaos reign!"</i> <br />'+
-		          '<b>Symbol:</b> Chaos<br />'+
-			  '<b>Ace:</b> None<br />'+
-		 	  '<b>Battle Rules:</b> <br/>'+
-		 	  '-Challenge Cup <br/>');
-	},
-        
         akash: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Frontier <b>Akash</b><br />'+
@@ -1015,12 +1005,12 @@ var commands = exports.commands = {
 			 '<img src="http://sprites.pokecheck.org/i/142.gif"> <img src="http://sprites.pokecheck.org/t/109.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Leaf_zps542b4e92.png">');
         },
         
-        grass: function(target, room, user) {
+        bm: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
-			  '<i>"???"</i> <br />'+
+			  '<i>"A gentle breeze is always the calm before a true storm."</i> <br />'+
 			  '<b>Type:</b> Grass<br />'+
-			  '<b>Ace:</b> ???<br />');
+			  '<b>Ace:</b> Trevenant<br />');
 	},
 	
 	night: function(target, room, user) {
