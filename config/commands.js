@@ -801,9 +801,9 @@ var commands = exports.commands = {
         lance: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Lance</b><br />'+
-			  '<i>"?"</i> <br />'+
+			  '<i>"YOU WILL BE BLINDED FROM THE KAWAII-NESS OF THESE FAIRIES!"</i> <br />'+
 			  '<b>Type:</b> Fairy<br />'+
-			  '<b>Ace:</b> ?<br />'+
+			  '<b>Ace:</b> Mega Mawile (Zoro\'s Boss)<br />'+
 			  '<img src="http://play.pokemonshowdown.com/sprites/xyani/ampharos-mega.gif"> <img src="http://sprites.pokecheck.org/t/136.gif">');
         },
 	
@@ -1068,16 +1068,15 @@ var commands = exports.commands = {
 			  '<b>Ace:</b> Victini<br />');
 	},
 	
-	x: function(target, room, user) {
+	frontiervacant: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>X</b><br />'+
-	       	      '<i>"When our battle is on the end, I\'ll be the only one who still will stand!"</i> <br />'+
-	       	      '<b>Symbol:</b> Silver<br />'+
-		      '<b>Ace:</b> Aerodactyl<br />'+
+		this.sendReplyBox('Frontier <b>?</b><br />'+
+	       	      '<i>"?"</i> <br />'+
+	       	      '<b>Symbol:</b> ?<br />'+
+		      '<b>Ace:</b> ?<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-Mono-Animal; team must represent an animal (Existing or non-existing) <br/>'+
-	 	      '-Under construction <br/>'+
-	 	      '<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/charizard.gif"> <img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/aerodactyl.gif">');
+	 	      '-? <br/>'+
+	 	      '-? <br/>');
 	},
 	
 	zoro: function(target, room, user) {
