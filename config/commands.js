@@ -1026,10 +1026,10 @@ var commands = exports.commands = {
 			  '<img src="http://sprites.pokecheck.org/i/123.gif">');
 	},
 	
-	electric: function(target, room, user) {
+	zyphear: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
-			  '<i>"???"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Zyphear</b><br />'+
+			  '<i>"Storm\'s coming."</i> <br />'+
 			  '<b>Type:</b> Electric<br />'+
 			  '<b>Ace:</b> Eelektross<br />');
 			  
