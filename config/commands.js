@@ -1007,7 +1007,7 @@ var commands = exports.commands = {
         
         bm: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+		this.sendReplyBox('Gym Ldr <b>B/m/</b><br />'+
 			  '<i>"A gentle breeze is always the calm before a true storm."</i> <br />'+
 			  '<b>Type:</b> Grass<br />'+
 			  '<b>Ace:</b> Trevenant<br />');
