@@ -816,8 +816,7 @@ var commands = exports.commands = {
 		      '<b>Note:</b> Hugs (not optional)<br />'+
 		      '<b>Optional Rule:</b> All Pokemon must have hug based nicknames for the duration of the challenge<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-No Item Repetition <br/>'+
-	 	      '-No Entry Hazards <br/>');
+	 	      '-No Item Repetition <br/>');
 	},
 	
 	ninjarisu: function(target, room, user) {
@@ -897,11 +896,10 @@ var commands = exports.commands = {
 	              '<b>Symbol:</b> Balance<br />'+
 	              '<b>Ace:</b> Haxxi (Jirachi)<br />'+
 	 	      '<b>Battle Rules:</b> <br/>'+
-	 	      '-Pokemon Dominoes (OU tier) <br/>'+
-	 	      '-Every Pokemon\'s 2nd typing must match the next Pokemon\'s first typing <br/>'+
-	 	      '-Must lead with the first pokemon in the chain and continued by the next one <br/>'+
-	 	      '-No switching (Moves that result switching) <br/>'+
-	 	      '-No Sturdy (Focus sash) <br/>'+
+	 	      '-Pokemon Alphabetlocke (OU tier) <br/>'+
+	 	      '-Challenger Picks 6 letters in the alphabet that must be in order, forward or backward. <br/>'+
+	 	      '-The team: The Pokemon\'s names\' first letters must be corresponding to the one\'s challenger chose earlier. <br/>'+
+	 	      '-Prankster is banned. <br/>'+
 	 	      '<img src="http://sprites.pokecheck.org/s/385.gif"> <img src="http://sprites.pokecheck.org/t/139.gif">');
         },
         
