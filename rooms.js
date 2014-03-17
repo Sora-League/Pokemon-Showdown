@@ -544,6 +544,8 @@ var BattleRoom = (function() {
 		this.disconnectTickDiff = [0, 0];
 
 		this.log = [];
+
+		if (config.forcetimer) this.requestKickInactive(false);
 	}
 	BattleRoom.prototype.type = 'battle';
 
@@ -859,13 +861,16 @@ var BattleRoom = (function() {
 	};
 	BattleRoom.prototype.requestKickInactive = function(user, force) {
 		if (this.resetTimer) {
-			this.send('|inactive|The inactivity timer is already counting down.', user);
+			if (user) this.send('|inactive|The inactivity timer is already counting down.', user);
 			return false;
 		}
 		if (user) {
 			if (!force && this.battle.getSlot(user) < 0) return false;
 			this.resetUser = user.userid;
 			this.send('|inactive|Battle timer is now ON: inactive players will automatically lose when time\'s up. (requested by '+user.name+')');
+		} else if (user === false) {
+			this.resetUser = '~';
+			this.add('|inactive|Battle timer is ON: inactive players will automatically lose when time\'s up.');
 		}
 
 		// a tick is 10 seconds
@@ -1463,7 +1468,7 @@ var ChatRoom = (function() {
 	ChatRoom.prototype.onLeave = function(user) {
 		if (!user) return; // ...
 		delete this.users[user.userid];
-		if (config.reportjoins) {
+		if (user.named && config.reportjoins) {
 			this.add('|l|'+user.getIdentity(this.id));
 		} else if (user.named) {
 			var entry = '|L|' + user.getIdentity(this.id);
