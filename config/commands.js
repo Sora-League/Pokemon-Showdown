@@ -981,9 +981,9 @@ var commands = exports.commands = {
 		      '<img src="http://sprites.pokecheck.org/i/381.gif"> <img src="http://sprites.pokecheck.org/t/138.gif">');
         },
         
-        lynne: function(target, room, user) {
+        lou: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-	        this.sendReplyBox('Frontier <b>Lynne</b><br />'+
+	        this.sendReplyBox('Frontier <b>Lou</b><br />'+
 			  '<i>"A wise warrior copies successful combat tactics to prevail in battle."</i> <br />'+
 			  '<b>Symbol:</b> Illusion<br />'+
 			  '<b>Ace:</b> Chansey<br />'+
