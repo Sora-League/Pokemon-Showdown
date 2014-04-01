@@ -138,7 +138,7 @@ exports.customavatars = {
 	//'userid': 'customavatar.png'
 	  'champinnyxe': '034.png',
 	  'frontierheadbart': '035.png',
-	  'champinnah': '003.gif',
+	  'champinnah': '037.png',
 	  'artistejeratt': '031.gif',
 	  'frontiervader': '005.gif',
 	  'frontierryu': '006.gif',
