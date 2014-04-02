@@ -161,7 +161,8 @@ exports.customavatars = {
 	  'gymldrarthurzh': '025.png',
 	  'frontierakash': '027.gif',
 	  'gymldriris': '028.png',
-	  'enzarif': '029.gif'
+	  'enzarif': '029.gif',
+	  'frontiertempest': '038.png'
 	  
 };
 
