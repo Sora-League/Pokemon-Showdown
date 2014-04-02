@@ -756,7 +756,7 @@ var commands = exports.commands = {
 	 	      '-Monotype <br/>'+
 	 	      '-All Tiers must be Represented (Except Ubers and LC) <br/>'+
 	 	      '-Tiershift<br />'+
-	 	      '<img src="http://sprites.pokecheck.org/s/034.gif"> <img src="http://sprites.pokecheck.org/t/178.gif"> <img src="http://sprites.pokecheck.org/i/089.gif">');
+	 	      '<img src="http://sprites.pokecheck.org/s/034.gif"> <img src="http://www.pokemonreborn.com/custom/47366.png"> <img src="http://sprites.pokecheck.org/i/089.gif">');
 	},
 	
 	bart: function(target, room, user) {
