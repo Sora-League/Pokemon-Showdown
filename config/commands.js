@@ -948,7 +948,7 @@ var commands = exports.commands = {
         vanilla: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 	        this.sendReplyBox('E4 <b>Vanilla</b><br />'+
-			  '<i>"I\'ll land the slam dunk to your heart! Nyaa~!"</i> <br />'+
+			  '<i>"Prepare to be pummeled cheerfully, jauntily, and utterly one-sidedly!"</i> <br />'+
 			  '<b>Type:</b> Normal<br />'+
 			  '<b>Ace:</b> Miltank (Dragonslayer)<br />'+
 			  '<b>Battle Rules:</b><br />'+
