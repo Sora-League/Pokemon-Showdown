@@ -1118,6 +1118,16 @@ var commands = exports.commands = {
 		 	'P.S. I\'m still Dragon you away with my coldness. <br/>'+
 		 	'<img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"> <img src="http://sprites.pokecheck.org/s/473.gif"> <img src="http://sprites.pokecheck.org/i/378.gif"> <img src="http://sprites.pokecheck.org/i/483.gif">');
         },
+        
+        gasp: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('Trainer <b>gasp</b><br />'+
+			'<i>"Lights out."</i> <br />'+
+			'<b>Ace:</b> Sableye<br />'+
+			'<b>Honours:</b> Sora\'s first challenger to reach Hall of Fame.<br />'+
+		 	'<b>History:</b> Sora\'s first successful challenger, Stall King. <br/>'+
+		 	'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif">');
+        },
 	
 	getbucks: 'getbucks',
 		getbucks: function(target, room, user) {
