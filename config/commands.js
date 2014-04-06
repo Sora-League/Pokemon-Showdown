@@ -887,12 +887,12 @@ var commands = exports.commands = {
 			'<b>Ace:</b> Victini<br />');
         },
         
-        abadon: function(target, room, user) {
+        bm: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Abadon</b><br />'+
-			'<i>"The battle is only lost when one looses faith in there Pokemon."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>B/m/</b><br />'+
+			'<i>"Even the smallest of us can hurt if aimed at the right spot."</i> <br />'+
 			'<b>Type:</b> Bug<br />'+
-			'<b>Ace:</b> Volcarona<br />');
+			'<b>Ace:</b> All<br />');
         },
         
         floatzel: function(target, room, user) {
@@ -1009,12 +1009,12 @@ var commands = exports.commands = {
 			 '<img src="http://sprites.pokecheck.org/i/142.gif"> <img src="http://sprites.pokecheck.org/t/109.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Leaf_zps542b4e92.png">');
         },
         
-        bm: function(target, room, user) {
+        grass: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>B/m/</b><br />'+
-			  '<i>"A gentle breeze is always the calm before a true storm."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type:</b> Grass<br />'+
-			  '<b>Ace:</b> Trevenant<br />');
+			  '<b>Ace:</b> ???<br />');
 	},
 	
 	night: function(target, room, user) {
