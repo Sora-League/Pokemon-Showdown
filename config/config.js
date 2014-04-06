@@ -158,7 +158,7 @@ exports.customavatars = {
 	  'hooh': '022.gif',
 	  'gymldrzoro': '036.gif',
 	  'frntiernight': '024.png',
-	  'gymldrarthurzh': '025.png',
+	  'gymldrarthurzh': '039.gif',
 	  'frontierakash': '027.gif',
 	  'gymldriris': '028.png',
 	  'enzarif': '029.gif',
