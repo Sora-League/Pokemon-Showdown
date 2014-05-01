@@ -55,6 +55,14 @@ exports.BattleFormats = {
 			'Zygarde'
 		]
 	},
+	contraryzoneclause: {
+	effecttype: 'Rule',
+	onStart: function(target, source) {
+	this.add('rule', 'Contrary Zone: All stat changes are reversed.');
+	this.add('-fieldstart', 'Contrary Zone');
+	this.add('-message', 'The dimensions were contrarized!');
+	}
+		},
 	standarddoubles: {
 		effectType: 'Banlist',
 		ruleset: ['Species Clause', 'OHKO Clause', 'Moody Clause', 'Evasion Abilities Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'HP Percentage Mod'],
