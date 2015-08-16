@@ -73,6 +73,18 @@ function getTournament(name, output) {
 	}
 }
 
+function setScore (winner, loser) {
+	var winScore = Core.read('tourScores', winner, 'elo') || 1000;
+	var losScore = Core.read('tourScores', loser, 'elo') || 1000;
+	var scoreDiff = winScore - losScore;
+	var expectedScore = 1 / (1 + Math.pow(10, scoreDiff/400));
+	winScore += Math.round(32 * (1 - expectedScore));
+	if (losScore !== 1000) losScore -= 32 * expectedScore;
+	Core.write('tourScores', winner, winScore, false, 'elo');
+	Core.write('tourScores', winner, 1, '+', 'wins');
+	Core.write('tourScores', loser, losScore, false, 'elo');
+}
+
 Tournament = (function () {
 	function Tournament(room, format, generator, playerCap, isRated) {
 		this.room = room;
@@ -674,12 +686,15 @@ Tournament = (function () {
 	Tournament.prototype.onBattleWin = function (room, winner) {
 		var from = Users.get(room.p1);
 		var to = Users.get(room.p2);
+		var tourSize = this.generator.getUsers().length;
 
 		var result = 'draw';
 		if (from === winner) {
 			result = 'win';
+			if (this.room.isOfficial && tourSize >= 4) setScore(from.userid, to.userid);
 		} else if (to === winner) {
 			result = 'loss';
+			if (this.room.isOfficial && tourSize >= 4) setScore(to.userid, from.userid);
 		}
 
 		if (result === 'draw' && !this.generator.isDrawingSupported) {
@@ -727,6 +742,27 @@ Tournament = (function () {
 			generator: this.generator.name,
 			bracketData: this.getBracketData()
 		}));
+		var tourSize = this.generator.getUsers().length;
+		if (this.room.isOfficial && tourSize >= 4) {
+			var results = this.generator.getResults().map(usersToNames).toString();
+			console.log(this.generator.getResults().map(usersToNames));
+			var winner, runnerUp;
+			if (results.indexOf(',') > -1) {
+				results = results.split(',');
+				winner = results[0];
+				runnerUp = results[1];
+			} else winner = results;
+			var winMoney = Math.floor(tourSize/4);
+			var bucks1 = (winMoney === 1 ? 'buck' : 'bucks');
+			var runnerMoney = Math.floor(winMoney/2);
+			var bucks2 = (runnerMoney === 1 ? 'buck' : 'bucks');
+			this.room.add('|raw|<strong>' + Tools.escapeHTML(winner) + ' has also won ' + winMoney + ' ' + bucks1 + ' for winning the tournament!</strong>');
+			Core.write('money', toId(winner), winMoney, '+');
+			if (runnerUp && runnerMoney) {
+				this.room.add('|raw|<strong>' + Tools.escapeHTML(runnerUp) + ' has won ' + runnerMoney + ' ' + bucks2 + ' as a runner-up prize!</strong>');
+				Core.write('money', toId(runnerUp), runnerMoney, '+');
+			}
+		}
 		this.isEnded = true;
 		delete exports.tournaments[toId(this.room.id)];
 	};

@@ -66,7 +66,7 @@ exports.loginserverpublickey = "-----BEGIN RSA PUBLIC KEY-----\n" +
 //   /hidejoins configuration for users.
 //   This feature can lag larger servers - turn this off if your server is
 //   getting more than 80 or so users.
-exports.reportjoins = true;
+exports.reportjoins = false;
 
 // report joins and leaves periodically - sends silent join and leave messages in batches
 //   This setting will only be effective if `reportjoins` is set to false, and users will
@@ -77,7 +77,7 @@ exports.reportjoinsperiod = 0;
 // report battles - shows messages like "OU battle started" in the lobby
 //   This feature can lag larger servers - turn this off if your server is
 //   getting more than 160 or so users.
-exports.reportbattles = true;
+exports.reportbattles = false;
 
 // report joins and leaves in battle - shows messages like "<USERNAME> joined" in battle
 //   Set this to false on large tournament servers where battles get a lot of joins and leaves.
@@ -154,7 +154,72 @@ exports.inactiveuserthreshold = 1000 * 60 * 60;
 // Your server *must* be registered in order for your custom avatars to be
 // displayed in the client.
 exports.customavatars = {
-	//'userid': 'customavatar.png'
+    'onyxeagle': 'onyxeagle.gif',
+    'chmpionbart': 'chmpionbart.gif',
+    'champinnah': 'champinnah.png',
+    'artistejeratt': 'artistejeratt.jpg',
+    'frontiervader': 'frontiervader.gif',
+    'frontierryu': 'frontierryu.gif',
+    'gymldrleaf': 'gymldrleaf.gif',
+    'gymldrcore': 'gymldrcore.png',
+    'e4toast': 'e4toast.gif',
+    'e4bighug': 'e4bighug.gif',
+    'gymtrnrgary': 'gymtrnrgary.gif',
+    'frontierheadrisu': 'frontierheadrisu.gif',
+    'gymldrsnowking': 'gymldrsnowking.gif',
+    'gymldrkrenon': 'gymldrkrenon.gif',
+    'frontierasch': 'frontierasch.gif',
+    'gymldrlynne': 'gymldrlynne.png',
+    'trollfacejpg': 'trollfacejpg.png',
+    'hooh': 'hooh.gif',
+    'gymldrzoro': 'gymldrzoro.gif',
+    'nightanglet': 'nightanglet.png',
+    'frontierzachary': 'frontierzachary.png',
+    'akashpaul': 'akashpaul.gif',
+    'gymldriris': 'gymldriris.png',
+    'frontiertempest': 'frontiertempest.png',
+    'gymldrbm': 'gymldrbm.png',
+    'acetrainerstark': 'acetrainerstark.png',
+    'frontierlou': 'frontierlou.gif',
+    'appletree64': 'appletree64.gif',
+    'chamintst': 'chamintst.jpg',
+    'subfrontierwong': 'subfrontierwong.jpg',
+    'theone2500': 'theone2500.gif',
+    'gymtrnrsteve': 'gymtrnrsteve.gif',
+    'reirdkrmory': 'reirdkrmory.gif',
+    'prophetabraham': 'prophetabraham.gif',
+    'gymldranna': 'gymldranna.png',
+    'frntierblade': 'frntierblade.gif',
+    'siiilver': 'siiilver.png',
+    'gymtrnrwaffles': 'gymtrnrwaffles.gif',
+    'e4zoro': 'e4zoro.gif',
+    'gymldreska': 'gymldreska.png',
+    'pkkaiser': 'pkkaiser.gif',
+    'gymldrgallade': 'gymldrgallade.gif',
+    'stephan4ubers': 'stephan4ubers.gif',
+    'datslapzme': 'datslapzme.gif',
+    'amtesla': 'amtesla.gif',
+    'frntierterror': 'frntierterror.gif',
+    'gymldrtsuna': 'gymldrtsuna.gif',
+    'frontiermeows': 'frontiermeows.gif',
+    'gasp': 'gasp.jpg',
+    'typhozzz': 'typhozzz.png',
+    'rubiks456': 'rubiks456.png',
+    'gymldrarshrs': 'gymldrarshrs.png',
+    'bamdee': 'bamdee.gif',
+    'gymldrarjunb': 'gymldrarjunb.png',
+    'arifeen': 'arifeen.gif',
+    'e4ignitor': 'e4ignitor.png',
+    'gymldrfloatzel': 'gymldrfloatzel.gif',
+    'e4abadon': 'e4abadon.jpg',
+    'arjunb': 'arjunb.png',
+    'gymldrmatt99': 'gymldrmatt99.jpg',
+    'akkie': 'akkie.png',
+    'gymldrh': 'gymldrh.gif',
+    'gymldrmark': 'gymldrmark.png',
+    'gymldrleo': 'gymldrleo.gif',
+    'gymldrterror': 'gymldrterror.gif',
+    'drianmalcolm': 'drianmalcolm.jpg'
 };
 
 // Tournament announcements
@@ -237,7 +302,6 @@ exports.grouplist = [
 		jurisdiction: '@u',
 		promote: 'u',
 		forcewin: true,
-		declare: true,
 		modchatall: true,
 		rangeban: true,
 		potd: true,
@@ -278,19 +342,17 @@ exports.grouplist = [
 		ban: true,
 		modchat: true,
 		roomvoice: true,
-		forcerename: true,
+		redirect: true,
 		ip: true,
 		alts: '@u',
-		tournaments: true
 	},
 	{
 		symbol: '%',
 		id: "driver",
 		name: "Driver",
-		inherit: '+',
+		inherit: '$',
 		jurisdiction: 'u',
 		announce: true,
-		warn: true,
 		kick: true,
 		mute: true,
 		lock: true,
@@ -300,16 +362,25 @@ exports.grouplist = [
 		alts: '%u',
 		bypassblocks: 'u%@&~',
 		receiveauthmessages: true,
+		tournaments: true,
 		tournamentsmoderation: true,
 		jeopardy: true,
 		joinbattle: true
+	},
+	{
+		symbol: '$',
+		id: "operator",
+		name: "Operator",
+		inherit: '+',
+		warn: true
 	},
 	{
 		symbol: '+',
 		id: "voice",
 		name: "Voice",
 		inherit: ' ',
-		broadcast: true
+		broadcast: true,
+		tournaments: true
 	},
 	{
 		symbol: ' ',

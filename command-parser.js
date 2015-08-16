@@ -54,6 +54,14 @@ fs.readdirSync(path.resolve(__dirname, 'chat-plugins')).forEach(function (file) 
 	Object.merge(commands, require('./chat-plugins/' + file).commands);
 });
 
+fs.readdirSync(path.resolve(__dirname, 'custom')).forEach(function (file) {
+	if (file.substr(-3) === '.js') Object.merge(commands, require('./custom/' + file).commands);
+});
+
+fs.readdirSync(path.resolve(__dirname, 'custom/Games')).forEach(function (file) {
+	if (file.substr(-3) === '.js') Object.merge(commands, require('./custom/Games/' + file).commands);
+});
+
 /*********************************************************
  * Modlog
  *********************************************************/
@@ -176,7 +184,7 @@ var Context = exports.Context = (function () {
 	}
 
 	Context.prototype.sendReply = function (data) {
-		if (this.broadcasting) {
+		if (this.broadcasting && !this.user.isSpamroomed()) {
 			this.room.add(data);
 		} else {
 			this.connection.sendTo(this.room, data);
@@ -265,7 +273,12 @@ var Context = exports.Context = (function () {
 				this.errorReply("You can't broadcast this because it was just broadcast.");
 				return false;
 			}
-			this.add('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
+			if (this.user.isSpamroomed()) {
+				this.sendReply('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
+				Rooms.rooms.spamroom.add('|c|' + this.user.getIdentity(this.room.id) + '| __(to room ' + this.room.title + ')__ ' + (suppressMessage || message));
+				Rooms.rooms.spamroom.update();
+			} else 
+				this.room.add('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
 			this.room.lastBroadcast = normalized;
 			this.room.lastBroadcastTime = Date.now();
 

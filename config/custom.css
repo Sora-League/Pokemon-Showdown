@@ -1,0 +1,43 @@
+/*Light blue- #b2e1ff,#97d5fc Normal blue- #007fff Dark Blue:#003972*/
+.header {
+	background-image:url("http://i59.tinypic.com/w19xfk.jpg");
+	background-repeat:no-repeat
+}
+body {
+	background-image:url("http://i.imgur.com/rlbo1UK.png");
+	background-repeat:no-repeat;
+	background-position:center
+}
+.header .logo {
+	opacity: 0;
+}
+/*li[id *= "champinnah"] button.userbutton.username:hover, li[id *= "frntierblade"] button.userbutton.username:hover, li[id *= "chmpionbart"] button.userbutton.username:hover, li[id *= "femalegallade"] button.userbutton.username:hover, li[id *= "onyxeagle"] button.userbutton.username:hover, li[id *= "artistejeratt"] button.userbutton.username:hover, li[id *= "coachabadon"] button.userbutton.username:hover, li[id *= "coachbloodfist"] button.userbutton.username:hover, li[id *= "neithcass"] button.userbutton.username:hover, li[id *= "bamdee"] button.userbutton.username:hover {
+    background: rgb(252,183,63);
+}*/
+
+li#lobby-userlist-user-champinnah, li#lobby-userlist-user-frntierblade, li#lobby-userlist-user-chmpionbart, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-artistejeratt, li#lobby-userlist-user-coachabadon, li#lobby-userlist-user-coachbloodfist, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-bamdee, li#lobby-userlist-user-frontierheadrisu {
+    background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
+}
+
+.chat-log {
+	background:url("http://i.imgur.com/Em3gWkS.png") no-repeat scroll center;
+}
+ul.userlist {
+    background: url("http://i1171.photobucket.com/albums/r545/Brahak/userlistsky_zpsd9aqoolr.png");
+}
+
+a.button.cur, a.button.cur:hover {
+    background: url("http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353");
+}
+.maintabbarbottom, a.button {
+    background: #dde7ff;
+}
+a.button:hover {
+    background: #c7d7fc;
+}
+a.button i, a.button span {
+    color: black;
+}
+.chat-log .notice, .chat-log b, .chat-log small, .chat-log strong, .chat-log em, .chat-log span, .chat-log small {
+    font-size: 8pt;
+}
