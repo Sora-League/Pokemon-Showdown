@@ -347,8 +347,9 @@ exports.commands = {
 		this.sendReplyBox('Gym Ldr <b>Floatzel</b><br />' +
 			'<i>"flap... flap... flap... bird type...?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+			'<b>Ace:</b> Gliscor<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif">' +
-			'<b>Ace:</b> Gliscor<br />' + seen('gymldrfloatzel') + getBadges('gymldrfloatzel'));
+			 seen('gymldrfloatzel') + getBadges('gymldrfloatzel'));
 	},
 
 	ghost: 'connor',
