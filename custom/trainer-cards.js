@@ -272,13 +272,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	bug: 'dexter',
-	dexter: function(target, room, user) {
+	
+	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Dexter</b><br />'+
-			  '<i>"One can conquer impossible odds with determination and zeal."</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Yanmega <br />' + seen('gymldrdexter') + getBadges('gymldrdexter'));
+			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
 	dark: 'darkus',
@@ -363,13 +363,13 @@ exports.commands = {
 	},
 
 
-	grass: 'dranzar',
-    dranzar: function(target, room, user) {
+	
+    grass: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('Gym Ldr <b>Dranzar</b><br />'+
-			'<i>"The grass is always greener on my side."</i> <br />'+
+	this.sendReplyBox('Gym Ldr <b>???</b><br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
-			'<b>Ace:</b> Mega Venusaur <br />' + seen('gymldrdranzar') + getBadges('gymldrdranzar'));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
 
@@ -401,14 +401,13 @@ exports.commands = {
 		'<a><img src="http://play.pokemonshowdown.com/sprites/xyani/lopunny-mega.gif"></a>' + getBadges('gymldrtaco'));
     },
 
-	poison: 'poppy',
-	poppy: function (target, room, user) {
+	
+	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Poppy</b><br />' +
-			'Leader Ranking: <font color = 00ff87><b>6th</font></b> <br />' +
-			'<i>"It\'s you and me against the world, you\'ll see!" - Xeniathan! Destroyer of Worlds</i><br />' +
+		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
+			'<i>???</i><br />' +
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Box Ghost (Gengar)<br />' + seen('gymldrpoppy') + getBadges('gymldrpoppy'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 	
 	psychic: function (target, room, user) {
