@@ -38,7 +38,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Floatzel∆', '∆Gym Ldr Poppy∆',
+		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', '∆Gym Ldr Poppy∆',
 			'∆Gym Ldr Mark∆', '∆Gym Ldr Dårküs∆', '∆Gym Ldr Core∆', '∆Gym Ldr Dranzar∆', '∆Gym Ldr Indeter∆', '∆Gym Ldr Banshee∆', '∆Gym Ldr Dexter∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆'
 		];
 		for (var i = 0; i < list.length; i++) {
@@ -341,15 +341,15 @@ exports.commands = {
 	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + getBadges('gymldrwaffles'));
 	},
 
-	flying: 'floatzel',
-	floatzel: function (target, room, user) {
+	flying: 'float',
+	float: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Floatzel</b><br />' +
+		this.sendReplyBox('Gym Ldr <b>Float</b><br />' +
 			'<i>"flap... flap... flap... bird type...?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Gliscor<br />' +
+			'<b>Ace:</b> Hawlucha (John Cena)<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><br />' +
-			 seen('gymldrfloatzel') + getBadges('gymldrfloatzel'));
+			 seen('gymldrfloatzel') + getBadges('gymldrfloat'));
 	},
 
 	ghost: 'connor',
