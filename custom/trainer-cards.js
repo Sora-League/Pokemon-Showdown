@@ -341,13 +341,14 @@ exports.commands = {
 	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + getBadges('gymldrwaffles'));
 	},
 
-	flying: 'indeter',
-	indeter: function (target, room, user) {
+	flying: 'floatzel',
+	floatzel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Indeter</b><br />' +
-			'<i>"And - I\'m off."</i> <br />' +
+		this.sendReplyBox('Gym Ldr <b>Floatzel</b><br />' +
+			'<i>"flap... flap... flap... bird type...?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Gliscor<br />' + seen('gymldrindeter') + getBadges('gymldrindeter'));
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif">' +
+			'<b>Ace:</b> Gliscor<br />' + seen('gymldrfloatzel') + getBadges('gymldrfloatzel'));
 	},
 
 	ghost: 'connor',
@@ -427,16 +428,15 @@ exports.commands = {
 			'<b>Ace:</b> Archeops<br />' + seen('gymldrcore') + getBadges('gymldrcore'));
 	},
 
-	steel: 'floatzel',
-	floatzel: function (target, room, user) {
+
+	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Floatzel</b><br />' +
-			'<i>"Jet fuel can\'t melt me"</i> <br />' +
+		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Jirachi <br />' +
-			seen('gymldrfloatzel') + '<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif">' +
-			getBadges('gymldrfloatzel'));
+			'<b>Ace:</b> ??? <br />' +
+			seen('') + '<br />' +
+			getBadges(''));
 
 	},
 
