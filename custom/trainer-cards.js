@@ -441,9 +441,10 @@ exports.commands = {
 
 	},
 
-	water: function (target, room, user) {
+        water: 'tt999',
+	tt999: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b> <br />' +
+		this.sendReplyBox('Gym Ldr <b>tt999</b> <br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
 			'<b>Ace:</b> ???');
