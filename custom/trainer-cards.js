@@ -39,7 +39,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
-			'∆Gym Ldr Mark∆', '∆Gym Ldr Dårküs∆', '∆Gym Ldr Core∆',  '∆Gym Ldr Banshee∆',  '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆', '∆Gym Ldr Crash∆'
+			'∆Gym Ldr Mark∆', '∆Gym Ldr Dårküs∆', '∆Gym Ldr Core∆',  '∆Gym Ldr Banshee∆',  '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆', '∆Gym Ldr Crash∆',
 			'∆Gym Ldr tt999∆', '∆Gym Ldr SolarWolf∆'
 		];
 		for (var i = 0; i < list.length; i++) {
