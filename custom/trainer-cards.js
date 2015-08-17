@@ -40,6 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
 			'∆Gym Ldr Mark∆', '∆Gym Ldr Dårküs∆', '∆Gym Ldr Core∆',  '∆Gym Ldr Banshee∆',  '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆', '∆Gym Ldr Crash∆'
+			'∆Gym Ldr tt999∆', '∆Gym Ldr SolarWolf∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -433,11 +434,10 @@ exports.commands = {
 	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"The best steel doesn\'t always shine the brightest, but it will smash your face in."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' +
-			seen('') + '<br />' +
-			getBadges(''));
+			'<b>Ace:</b> Bisharp <br />' +
+			seen('gymldrsolarwolf') + getBadges('gymldrsolarwolf'));
 
 	},
 
@@ -445,9 +445,10 @@ exports.commands = {
 	tt999: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>tt999</b> <br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"Watch my beautiful waters submerge you deep."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ???');
+			'<b>Ace:</b> Quagsire <br/>' +
+			seen('gymldrtt999') + getBadges('gymldrtt999'));
 	},
 
 	/////////////
