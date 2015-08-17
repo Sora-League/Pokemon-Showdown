@@ -430,10 +430,11 @@ exports.commands = {
 			'<b>Ace:</b> Archeops<br />' + seen('gymldrcore') + getBadges('gymldrcore'));
 	},
 
-
+	
+	solarwolf: 'steel',
 	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
+		this.sendReplyBox('Gym Ldr <b>SolarWolf</b><br />' +
 			'<i>"The best steel doesn\'t always shine the brightest, but it will smash your face in."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> Bisharp <br />' +
