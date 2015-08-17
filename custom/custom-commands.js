@@ -300,7 +300,7 @@ exports.commands = {
 		];
 		var randomColor = colors[Math.floor(Math.random() * colors.length)];
 		var poof = JSON.parse(fs.readFileSync('storage-files/poof.json'));
-		var message = toId(target) ? target : poof[Math.floor(Math.random() * poof.length)];
+		var message = poof[Math.floor(Math.random() * poof.length)];
 		if (message.indexOf('(user)') > -1) message = message.replace(/\(user\)/ig, user.name);
 		else message = user.name + ' ' + message;
 		this.add('|html|<center><b><font color = "' + randomColor + '">~~ ' + message + ' ~~');
