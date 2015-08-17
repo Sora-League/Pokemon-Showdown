@@ -39,7 +39,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
-			'∆Gym Ldr Mark∆', '∆Gym Ldr Dårküs∆', '∆Gym Ldr Core∆',  '∆Gym Ldr Banshee∆',  '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆'
+			'∆Gym Ldr Mark∆', '∆Gym Ldr Dårküs∆', '∆Gym Ldr Core∆',  '∆Gym Ldr Banshee∆',  '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆', '∆Gym Ldr Crash∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -401,13 +401,13 @@ exports.commands = {
 		'<a><img src="http://play.pokemonshowdown.com/sprites/xyani/lopunny-mega.gif"></a>' + getBadges('gymldrtaco'));
     },
 
-	
-	poison: function (target, room, user) {
+	     poison: 'crash',
+	crash: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
-			'<i>???</i><br />' +
+		this.sendReplyBox('Gym Ldr <b>Crash</b><br />' +
+			'<i>"Poison is in everything, and nothing is without poison. The dosage makes it either a poison or a remedy."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Weezing<br />' + seen('gymldrcrash') + getBadges('gymldrcrash'));
 	},
 	
 	psychic: function (target, room, user) {
