@@ -335,6 +335,7 @@ exports.commands = {
         waffles: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Waffles</b><br />'+
+		      'Leader Ranking: <font color = 9dff00><b>3rd</font></b> <br />' + 
 	              '<i>"Don\'t waffle out of the situation"</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
 	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + getBadges('gymldrwaffles'));
@@ -348,7 +349,7 @@ exports.commands = {
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Hawlucha (John Cena)<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><br />' +
-			 seen('gymldrfloatzel') + getBadges('gymldrfloat'));
+			 seen('gymldrfloat') + getBadges('gymldrfloat'));
 	},
 
 
@@ -415,14 +416,14 @@ exports.commands = {
 		        'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
 			'<i>"Psychic power isn\'t something that only a few people have. Everyone has psychic power. People just don\'t realize it."</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace: Gardevoir</b> <br />' + seen('gymldrconnor') + getBadges ('gymldrconnor'));
+			'<b>Ace:</b> Gardevoir <br />' + seen('gymldrconnor') + getBadges ('gymldrconnor'));
 	},
 
 	rock: 'core',
 	core: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Core</b><br />' +
-			'Leader Ranking: <font color = 9dff00><b>3rd</font></b> <br />' +
+			'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
 			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Archeops<br />' + seen('gymldrcore') + getBadges('gymldrcore'));
@@ -716,13 +717,10 @@ exports.commands = {
 	leaderranks: 'ranks',
 	ranks: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Listed here are the Top 6 Leaders in The Sora League based on performance in our Monthly Promotional Tournament! Please keep in mind, the number of ranked Leaders may change month to month and the ranking methodology may be changed in the future.<br />' +
-			'-<b>1st <font color= ff00b6>Leaf</font></b> (Psychic)<br />' +
-			'-<b>2nd <font color= 15012b>Darkus</font></b></b> (Dark)<br />' +
-			'-<b>3rd <font color= 472e10>Core</font></b> (Rock)<br />' +
-			'-<b>4th <font color= 7814e2>Connor</font></b> (Ghost)<br />' +
-			'-<b>5th <font color= 0745ff>Terror</font></b> (Water)<br />' +
-			'-<b>6th <font color= aa00ff>Poppy</font></b> (Poison)<br />' +
+		this.sendReplyBox('Listed here are the Top 3 Leaders in The Sora League based on performance in our Monthly Promotional Tournament! Please keep in mind, the number of ranked Leaders may change month to month and the ranking methodology may be changed in the future.<br />' +
+			'-<b>1st <font color= 472e10>Core</font></b> (Rock)<br />' +
+			'-<b>2nd <font color= ff00b6>Connor</font></b></b> (Psychic)<br />' +
+			'-<b>3rd <font color= FF0000>Waffles</font></b> (Fire)<br />' +
 			'</div>');
 	},
 
