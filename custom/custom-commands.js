@@ -612,21 +612,21 @@ exports.commands = {
 	rules: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Please follow the rules:<br />' +
-			'- <a href="http://soraleague.weebly.com/rules.html">Sora League rules</a><br />' +
+			'- <a href="http://sora.cu.cc/rules.html">Sora League rules</a><br />' +
 			'</div>');
 	},
 
 	site: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is The Sora League Website:<br />' +
-			'- <a href="http://soraleague.weebly.com/index.html">Sora League Site</a><br />' +
+			'- <a href="http://sora.cu.cc/index.html">Sora League Site</a><br />' +
 			'</div>');
 	},
 
 	incweather: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Inclement Weather:<br />' +
-			'- <a href="http://soraleague.weebly.com/inclement-weather.html">Inclement Weather</a><br />' +
+			'- <a href="http://sora.cu.cc/format.html">Inclement Weather</a><br />' +
 			'</div>');
 	},
 
@@ -634,21 +634,21 @@ exports.commands = {
 	priomons: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Priomons:<br />' +
-			'- <a href="http://soraleague.weebly.com/priomons.html">Priomons</a><br />' +
+			'- <a href="http://sora.cu.cc/format.html">Priomons</a><br />' +
 			'</div>');
 	},
 
 	pokemonsandbox: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Pokemon Sandbox:<br />' +
-			'- <a href=http://soraleague.weebly.com/pokemon-sandbox.html">Pokemon Sandbox</a><br />' +
+			'- <a href=http://sora.cu.cc/format.html">Pokemon Sandbox</a><br />' +
 			'</div>');
 	},
 
 	championschallenge: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Champion\'s Challenge:<br />' +
-			'- <a href="http://soraleague.weebly.com/champions-challenge.html">Champion\'s Challenge</a><br />' +
+			'- <a href="http://sora.cu.cc/format.html">Champion\'s Challenge</a><br />' +
 			'</div>');
 	},
 
@@ -659,25 +659,12 @@ exports.commands = {
 			'</div>');
 	},
 
-	events: 'events',
-	events: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Here is a list of events held in The Sora League:<br />' +
-			'- <a href="http://soraleague.weebly.com/events.html">Sora League Events</a><br />' +
-			'</div>');
-	},
 
-	gymtrainers: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Here is a list of Sora League Gym Trainers:<br />' +
-			'- <a href="http://soraleague.weebly.com/gym-trainers.html">Sora League Gym Trainers</a><br />' +
-			'</div>');
-	},
 
 	gymleaders: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Gym Leaders:<br />' +
-			'- <a href="http://soraleague.weebly.com/gym-leaders.html">Sora League Gym Leaders</a><br />' +
+			'- <a href="http://sora.cu.cc/leaders.html">Sora League Gym Leaders</a><br />' +
 			'</div>');
 	},
 
@@ -693,7 +680,6 @@ exports.commands = {
 			'- If a challenger loses to an Elite Frontier or the Frontier Head, they will randomly lose one Elite symbol and one normal symbol.<br />' +
 			'<blink><b>Notes:</b></blink><br />' +
 			'- The same frontier may be challenged once every 24 hours.<br />' +
-			'- You cannot use a super-effective team when challenging a Monotype Tier Frontier<br />' +
 			'- <a href="http://soraleague.weebly.com/rules.html">Challenging Rules</a><br />' +
 			'- <a href="http://soraleague.weebly.com/frontier.html">Battle Frontier Members</a><br />');
 	},
@@ -701,7 +687,7 @@ exports.commands = {
 	frontiers: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Frontier Brains:<br />' +
-			'- <a href="http://soraleague.weebly.com/frontier.html">Sora League Frontier Brains</a><br />' +
+			'- <a href="http://sora.cu.cc/frontier.html">Sora League Frontier Brains</a><br />' +
 			'</div>');
 	},
 
@@ -709,7 +695,7 @@ exports.commands = {
 	e4: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Elite Four:<br />' +
-			'- <a href="http://soraleague.weebly.com/elite-four.html">Sora League Elite Four</a><br />' +
+			'- <a href="http://sora.cu.cc/elite.html">Sora League Elite Four</a><br />' +
 			'</div>');
 	},
 
@@ -717,7 +703,7 @@ exports.commands = {
 	champions: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Champions:<br />' +
-			'- <a href="http://soraleague.weebly.com/champions.html">Sora League Champions</a><br />' +
+			'- <a href="http://sora.cu.cc/champion.html">Sora League Champions</a><br />' +
 			'</div>');
 	},
 
