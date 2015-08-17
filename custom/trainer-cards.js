@@ -285,7 +285,6 @@ exports.commands = {
 	darkus: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Gym Ldr <b>Darkus</b><br />' +
-			'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
 			'<i>"But I don\'t like Bakugan."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
 			'<b>Ace:</b> Bisharp<br />' +
@@ -352,14 +351,13 @@ exports.commands = {
 			 seen('gymldrfloatzel') + getBadges('gymldrfloat'));
 	},
 
-	ghost: 'connor',
-	connor: function (target, room, user) {
+
+	ghost: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Connor</b><br />' +
-			'Leader Ranking: <font color = 5dff00><b>4th</font></b> <br />' +
-			'<i>"The Further is a dark realm, filled with the tortured souls of the dead. It is a place not meant for the living."</i> <br />' +
+		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />' + seen('gymldrconnor') + getBadges('gymldrconnor'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
 
@@ -410,12 +408,14 @@ exports.commands = {
 			'<b>Ace:</b> Weezing<br />' + seen('gymldrcrash') + getBadges('gymldrcrash'));
 	},
 	
-	psychic: function (target, room, user) {
+	psychic: 'connor',
+	connor: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('Gym Ldr <b>Connor</b><br />' +
+		        'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
+			'<i>"Psychic power isn\'t something that only a few people have. Everyone has psychic power. People just don\'t realize it."</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> <br />' + seen(''));
+			'<b>Ace: Gardevoir</b> <br />' + seen('gymldrconnor') + getBadges ('gymldrconnor'));
 	},
 
 	rock: 'core',
