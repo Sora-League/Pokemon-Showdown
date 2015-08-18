@@ -807,6 +807,9 @@ var GlobalRoom = (function () {
 		if (Config.reportbattles && rooms.lobby) {
 			rooms.lobby.add('|b|' + newRoom.id + '|' + p1.getIdentity() + '|' + p2.getIdentity());
 		}
+		if (format === 'leaguebattle' && rooms.lobby) {
+			rooms.lobby.add('|html|<a href="/' + newRoom.id + '" class="ilink">League battle between ' + p1.getIdentity() + ' and ' + p2.getIdentity() + ' started.</a>');
+		}
 		if (Config.logladderip && options.rated) {
 			if (!this.ladderIpLog) {
 				this.ladderIpLog = fs.createWriteStream('logs/ladderip/ladderip.txt', {flags: 'a'});
