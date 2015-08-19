@@ -353,13 +353,13 @@ exports.commands = {
 			 seen('gymldrfloat') + getBadges('gymldrfloat'));
 	},
 
-
-	ghost: function (target, room, user) {
+        ghost: 'tswiv', 
+	tswiv: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('Gym Ldr <b>Tswiv</b><br />' +
+			'<i>"Let the séance begin.......MWAHAHAHA"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Sableye<br />' + seen('gymldrtswiv') + getBadges('gymldrtswiv'));
 	},
 
 
