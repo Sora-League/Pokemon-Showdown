@@ -76,24 +76,21 @@ exports.commands = {
             '</table><br />' + status + '</center>');
 	},
 
-	closeshop: function(target, room, user) {
+        adjustshop: function(target, room, user) {
+        if (!this.can('hotpatch')) return false;
+        global.shopclosed = !global.shopclosed;
+                addLog(user.name + ' adjusted the shop.');
+        this.sendReply('The shop is now '+(global.shopclosed ? "open" : "closed")+".");
+        },
+
+
+	/** closeshop: function(target, room, user) {
         if (!this.can('hotpatch')) return false;
         if (global.shopclosed) return this.sendReply('The shop is already closed.');
         global.shopclosed = true;
 		addLog(user.name + ' closed the shop.');
         this.sendReply('The shop is now closed.');
     },
-    
-    /*
-    adjustshop: function(target, room, user) {
-    if (!this.can('hotpatch')) {
-    this.sendReply("You don't have permission to do this.");
-    return false;
-    }
-    global.shopclosed = !global.shopclosed;
-    this.sendReply('The shop is now '+(global.shopclosed ? "open" : "closed")+".");
-    },
-    */
 
     openshop: function(target, room, user) {
         if (!this.can('hotpatch')) return false;
@@ -101,7 +98,7 @@ exports.commands = {
         global.shopclosed = false;
 		addLog(user.name + ' opened the shop.');
         this.sendReply('The shop is now open.');
-    },
+    },**/
     
     give: 'award',
     givebucks: 'award',
