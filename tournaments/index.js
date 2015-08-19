@@ -252,14 +252,14 @@ Tournament = (function () {
 			return;
 		}
 
-		/*if (!isAllowAlts) {
+		if (!isAllowAlts) {
 			for (var i = 0; i < users.length; i++) {
 				if (users[i].latestIp === user.latestIp) {
 					output.sendReply('|tournament|error|AltUserAlreadyAdded');
 					return;
 				}
 			}
-		}*/
+		}
 
 		var error = this.generator.addUser(user);
 		if (typeof error === 'string') {
@@ -679,10 +679,10 @@ Tournament = (function () {
 		var result = 'draw';
 		if (from === winner) {
 			result = 'win';
-			if (this.room.isOfficial && tourSize >= 4) Ladders('tournaments').updateRating(from, to, 1, room);
+			if (this.room.isOfficial && tourSize >= 4) Ladders('tournaments').updateRating(from.userid, to.userid, 1, room);
 		} else if (to === winner) {
 			result = 'loss';
-			if (this.room.isOfficial && tourSize >= 4 && this.room.battle.endType !== 'forced') Ladders('tournaments').updateRating(from, to, 0, room);
+			if (this.room.isOfficial && tourSize >= 4 && this.room.battle.endType !== 'forced') Ladders('tournaments').updateRating(from.userid, to.userid, 0, room);
 		}
 
 		if (result === 'draw' && !this.generator.isDrawingSupported) {
