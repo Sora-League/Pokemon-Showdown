@@ -68,7 +68,6 @@ exports.commands = {
         if (this.broadcasting) return this.sendReplyBox('<center><b>Click <button name = "send" value = "/shop">here</button> to enter our shop!');
         var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
         this.sendReplyBox('<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>' +
-            '<tr><td>Symbol</td><td>Buys a symbol to be placed in front of your username.</td><td>5</td><td><button name = "send", value = "/buy symbol"><b>Buy!</b></button></td></tr>' +
             '<tr><td>Avatar</td><td>Buys a custom avatar.</td><td>25</td><td><button name = "send", value = "/buy avatar"><b>Buy!</b></button></td></tr>' +
             '<tr><td>Card</td><td>Buys a trainer card.</td><td>40</td><td><button name = "send", value = "/buy card"><b>Buy!</b></button></td></tr>' +
             '<tr><td>Fix</td><td>Buys the ability to edit your custom avatar or trainer card</td><td>10</td><td><button name = "send", value = "/buy fix"><b>Buy!</b></button></td></tr>' +
@@ -84,6 +83,17 @@ exports.commands = {
 		addLog(user.name + ' closed the shop.');
         this.sendReply('The shop is now closed.');
     },
+    
+    /*
+    adjustshop: function(target, room, user) {
+    if (!this.can('hotpatch')) {
+    this.sendReply("You don't have permission to do this.");
+    return false;
+    }
+    global.shopclosed = !global.shopclosed;
+    this.sendReply('The shop is now '+(global.shopclosed ? "open" : "closed")+".");
+    },
+    */
 
     openshop: function(target, room, user) {
         if (!this.can('hotpatch')) return false;
@@ -166,7 +176,12 @@ exports.commands = {
             if (user.locked) return this.sendReply("You cannot buy this while you're locked.");
             var price = 5;
             if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to buy a symbol.");
-
+/*
+player.getPackets().sendGameMessage("You have "+player.money+" buck"+(player.money > 0 ? "s" : "")+".");
+this.sendReply("You "+((Core.read('money',user.userid) >= price ? "have more than enough money to buy a symbol." : "don't have enough money to buy a symbol."
+);
+if (global.shopclosed === true) -> if (!global.shopclosed)
+*/
             room.add(user.name + ' bought a custom symbol!');
             this.sendReply("You have bought a custom symbol. The symbol will wear off once you remain offline for more than an hour, or once the server restarts.");
             this.sendReply("Type /customsymbol [symbol] into the chat to add a symbol next to your name!");
