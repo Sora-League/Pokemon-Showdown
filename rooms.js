@@ -809,6 +809,7 @@ var GlobalRoom = (function () {
 		}
 		if (format === 'leaguebattle' && rooms.lobby) {
 			rooms.lobby.add('|html|<a href="/' + newRoom.id + '" class="ilink">League battle between ' + p1.getIdentity() + ' and ' + p2.getIdentity() + ' started.</a>');
+			rooms.lobby.update();
 		}
 		if (Config.logladderip && options.rated) {
 			if (!this.ladderIpLog) {
