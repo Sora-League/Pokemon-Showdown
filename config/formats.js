@@ -304,21 +304,11 @@ exports.Formats = [
 		section: "ORAS Doubles",
 
 		gameType: 'doubles',
-		searchShow: false,
 		ruleset: ['Pokemon', 'Standard Doubles', 'Team Preview'],
 		banlist: ['Arceus', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo',
 			'Palkia', 'Rayquaza', 'Reshiram', 'Xerneas', 'Yveltal', 'Zekrom', 'Salamencite', 'Soul Dew', 'Dark Void',
 			'Gravity ++ Grass Whistle', 'Gravity ++ Hypnosis', 'Gravity ++ Lovely Kiss', 'Gravity ++ Sing', 'Gravity ++ Sleep Powder', 'Gravity ++ Spore'
 		]
-	},
-	{
-		name: "Doubles OU (suspect test)",
-		section: "ORAS Doubles",
-
-		gameType: 'doubles',
-		challengeShow: false,
-		ruleset: ['Doubles OU'],
-		banlist: []
 	},
 	{
 		name: "Doubles Ubers",
@@ -991,7 +981,7 @@ exports.Formats = [
 		name: "STABmons",
 		desc: [
 			"Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3493081/\">STABmons</a>",
+			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3547279/\">STABmons</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3512215/\">STABmons Viability Ranking</a>"
 		],
 		section: "Other Metagames",
