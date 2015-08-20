@@ -74,8 +74,7 @@ exports.commands = {
         	['Room','Buys a chatroom for you to own (within reason).',100],
         	['POTD','Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD for the day.',5]
         ];
-        var text = '';
-        text +='<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
+        var text = '<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
         for (var i = 0; i < table.length; i++) {
         	text+='<tr><td>'+(table[i][0]+)'</td><td>'+(table[i][1])+'</td><td>'+(table[i][2])+'</td><button name = "send", value="/buy '+(table[i][0])+'"><b>Buy!</b></button></td></tr>';
         }
