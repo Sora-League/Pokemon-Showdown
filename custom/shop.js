@@ -67,13 +67,29 @@ exports.commands = {
         if (!this.canBroadcast()) return;
         if (this.broadcasting) return this.sendReplyBox('<center><b>Click <button name = "send" value = "/shop">here</button> to enter our shop!');
         var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
-        this.sendReplyBox('<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>' +
+        var table = [
+        	['Avatar','Buys a custom avatar.',25],
+        	['Card','Buys a trainer card.',40],
+        	['Fix','Buys the ability to edit your custom avatar or trainer card.',10],
+        	['Room','Buys a chatroom for you to own (within reason).',100],
+        	['POTD','Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD for the day.',5]
+        ];
+        var text = '';
+        text +='<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
+        for (int i = 0; i < table.length; i++) {
+        	text+='<tr><td>'+(table[i][0]+)'</td><td>'+(table[i][1])+'</td><td>'+(table[i][2])+'</td><button name = "send", value="/buy '+(table[i][0])+'"><b>Buy!</b></button></td></tr>';
+        }
+        text+='</table><br />' + status + '</center>';
+        this.sendReplyBox(text);
+        //this.sendReplyBox('<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>' +
+        //'</table><br />' + status + '</center>');
+        /*this.sendReplyBox('<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>' +
             '<tr><td>Avatar</td><td>Buys a custom avatar.</td><td>25</td><td><button name = "send", value = "/buy avatar"><b>Buy!</b></button></td></tr>' +
             '<tr><td>Card</td><td>Buys a trainer card.</td><td>40</td><td><button name = "send", value = "/buy card"><b>Buy!</b></button></td></tr>' +
             '<tr><td>Fix</td><td>Buys the ability to edit your custom avatar or trainer card</td><td>10</td><td><button name = "send", value = "/buy fix"><b>Buy!</b></button></td></tr>' +
             '<tr><td>Room</td><td>Buys a chatroom for you to own (with reason).</td><td>100</td><td><button name = "send", value = "/buy room"><b>Buy!</b></button></td></tr>' +
             '<tr><td>POTD</td><td>Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD for the day.</td><td>5</td><td><button name = "send", value = "/buy potd"><b>Buy!</b></button></td></tr>' +
-            '</table><br />' + status + '</center>');
+            '</table><br />' + status + '</center>');*/
 	},
 
         adjustshop: function(target, room, user) {
