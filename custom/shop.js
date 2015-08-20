@@ -68,11 +68,15 @@ exports.commands = {
         if (this.broadcasting) return this.sendReplyBox('<center><b>Click <button name = "send" value = "/shop">here</button> to enter our shop!');
         var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
         var table = [
-        	['Avatar','Buys a custom avatar.',25],
-        	['Card','Buys a trainer card.',40],
-        	['Fix','Buys the ability to edit your custom avatar or trainer card.',10],
-        	['Room','Buys a chatroom for you to own (within reason).',100],
-        	['POTD','Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD for the day.',5]
+        	['POTD','Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD for the day.', 2],
+        	['Poof', 'Buy a poof message to be added into the pool of possible poofs.', 10],
+        	['Avatar','Set your own custom avatar (80x80 jpeg, png, gif are all accepted).', 35],
+        	['Card','Buys a trainer card which can show information through a command.', 50],
+        	['Song', 'Buys a song that can be played on a declarable card. (You must supply the song as a RAW MP3/OGG URL) <button name="send", value="/feelingit"><b>Example</b></button>', 25],
+        	['Customise', 'This allows you to stylise your Trainer Card with HTML5 Elements such as Audio/Mouse Cursor/Background Image/etc.', 15],
+        	['Fix','Buys the ability to edit your custom avatar or trainer card.', 10],
+        	['Room','Buys a chatroom for you to own (within reasons, can be refused).', 100],
+        	['RNG', 'Buys Floatzel\'s and Tempest\'s RNG/Cloning <a href="http://pastebin.com/eL8CjvS1">Services</a> for Pokemon X&Y/ORAS. <button name ="send", value="/Powersaves"><b>More Info</b></button>', 2]
         ];
         var text = '<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th>Buy</th></tr>';
         for (var i = 0; i < table.length; i++) {
@@ -154,27 +158,10 @@ exports.commands = {
     },
     
     buy: function(target, room, user) {
-        if (global.shopclosed === true) return this.sendReply("The shop is closed for now. Wait until it re-opens shortly.");
+        if (global.shopclosed) return this.sendReply("The shop is closed for now. Wait until it re-opens shortly.");
         target = toId(target);
 
-        if (target === 'symbol') {
-            if (user.hassymbol || user.needssymbol) return this.sendReply("You've already bought a custom symbol!");
-            if (user.locked) return this.sendReply("You cannot buy this while you're locked.");
-            var price = 5;
-            if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to buy a symbol.");
-/*
-player.getPackets().sendGameMessage("You have "+player.money+" buck"+(player.money > 0 ? "s" : "")+".");
-this.sendReply("You "+((Core.read('money',user.userid) >= price ? "have more than enough money to buy a symbol." : "don't have enough money to buy a symbol."
-);
-if (global.shopclosed === true) -> if (!global.shopclosed)
-*/
-            room.add(user.name + ' bought a custom symbol!');
-            this.sendReply("You have bought a custom symbol. The symbol will wear off once you remain offline for more than an hour, or once the server restarts.");
-            this.sendReply("Type /customsymbol [symbol] into the chat to add a symbol next to your name!");
-            this.sendReply("If you get bored of your symbol or something, you can use /removesymbol to remove it.");
-            user.needssymbol = true;
-
-        } else if (target === 'avatar') {
+        if (target === 'avatar') {
             if (user.hasavatar === true) return this.sendReply("You have already bought a custom avatar. Use /customavatar [URL] to set it.");
 	    	if (!Number(user.avatar)) return this.sendReply('You already have a custom avatar!');
             var price = 25;
@@ -242,51 +229,7 @@ if (global.shopclosed === true) -> if (!global.shopclosed)
         user.alreadysetpotd = true;
     },
     
-    customsymbol: 'cs',
-    cs: function(target, room, user) {
-        if (user.hassymbol && !this.can('hotpatch')) return this.sendReply("You've already added a symbol to your name!");
-        if (!user.needssymbol && !this.can('hotpatch')) return this.sendReply('You need to buy a custom symbol from the shop first!');
-        target = target.trim();
-        if (!target) return this.sendReply('You need to specify a symbol!');
-        if (target.length > 1) return this.sendReply('The symbol can only be one character long.');
-        var notallowed = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '~', '#', '+', '%', '@', '&', '★'];
-        for (var i = 0; i < notallowed.length; i++) {
-            if (target.indexOf(notallowed[i]) !== -1) return this.sendReply('For reasons, ' + target + ' cannot be used as a custom symbol.');
-        }
-        user.getIdentity = function (roomid) {
-            if (this.locked) {
-				return '‽' + this.name;
-			}
-			if (roomid) {
-				var room = Rooms.rooms[roomid];
-				if (room.isMuted(this)) {
-					return '!' + this.name;
-				}
-				if (room && room.auth) {
-					if (room.auth[this.userid]) {
-						return room.auth[this.userid] + this.name;
-					}
-					if (room.isPrivate === true) return ' ' + this.name;
-				}
-			}
-			return target + this.name;
-        };
-        user.updateIdentity();
-        this.sendReply('You have successfuly changed your symbol to ' + target + '!');
-        user.hassymbol = true;
-        user.needssymbol = false;
-    },
-	
-	resetsymbol: 'removesymbol',
-	deletesymbol: 'removesymbol',
-	removesymbol: function (target, room, user) {
-		if (user.getIdentity()[0] in Config.groups) return this.sendReply('You don\'t have a custom symbol!');
-		user.getIdentity = Users.User.prototype.getIdentity;
-		user.updateIdentity();
-		this.sendReply('Your custom symbol has been removed.');
-	},
-	
-	customavatar: 'setavatar',
+    	customavatar: 'setavatar',
 	setavatar: function (target, room, user, connection, cmd) {
 		if (!toId(target)) return this.sendReply('/setavatar URL - Sets a custom avatar.');
 		if (!user.boughtAvatar && !this.can('hotpatch')) return false;
