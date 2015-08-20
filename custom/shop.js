@@ -76,7 +76,7 @@ exports.commands = {
         ];
         var text = '<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th>Buy</th></tr>';
         for (var i = 0; i < table.length; i++) {
-        	text = text + '<tr><td>'+table[i][0]+'</td><td>'+table[i][1]+'</td><td>'+table[i][2]+'</td><button name = "send", value="/buy '+table[i][0]+'"><b>Buy!</b></button></td></tr>';
+        	text = text + '<tr><td>'+table[i][0]+'</td><td>'+table[i][1]+'</td><td>'+table[i][2]+'</td><td><button name = "send", value="/buy '+table[i][0]+'"><b>Buy!</b></button></td></tr>';
         }
         text = text + '</table><br />' + status + '</center>';
         this.sendReplyBox(text);
