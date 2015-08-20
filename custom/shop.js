@@ -79,7 +79,7 @@ exports.commands = {
         adjustshop: function(target, room, user) {
         if (!this.can('hotpatch')) return false;
         global.shopclosed = !global.shopclosed;
-                addLog(user.name + ' adjusted the shop.');
+                addLog(user.name + ' has '+(global.shopclosed ? 'closed' : 'opened')+' the shop.');
         this.sendReply('The shop is now '+(global.shopclosed ? 'closed' : 'open')+'.');
         },
 
