@@ -78,7 +78,7 @@ exports.commands = {
         	['Room','Buys a chatroom for you to own (within reasons, can be refused).', 100],
         	['RNG', 'Buys Floatzel\'s and Tempest\'s RNG/Cloning <a href="http://pastebin.com/eL8CjvS1">Services</a> for Pokemon X&Y/ORAS. <button name ="send", value="/Powersaves"><b>More Info</b></button>', 2]
         ];
-        var text = '<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th>Buy</th></tr>';
+        var text = '<center><h3><b><u>Sora\'s Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
         for (var i = 0; i < table.length; i++) {
         	text = text + '<tr><td>'+table[i][0]+'</td><td>'+table[i][1]+'</td><td>'+table[i][2]+'</td><td><button name = "send", value="/buy '+table[i][0]+'"><b>Buy!</b></button></td></tr>';
         }
