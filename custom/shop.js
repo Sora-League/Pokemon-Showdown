@@ -3,7 +3,21 @@ var fs = require('fs');
 var request = require('request');
 var path = require('path');
 
-function addLog (message) {
+var shopList = {
+	//Adding true as the last element of an array over here notifies admins when that item has been bought. This is useful for items like trainer cards that
+	//require an admin's assistance
+	potd: ['POTD', 'Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD.', 2],
+	poof: ['Poof', 'Buy a poof message to be added into the pool of possible poofs.', 10, true],
+	avatar: ['Avatar', 'Set your own custom avatar.', 35],
+	card: ['Card', 'Buys a trainer card which can show information through a command.', 50, true],
+	song: ['Song', 'Buys a song that can be played on a declarable card. (You must supply the song as a RAW MP3/OGG URL) <button name="send", value="/feelingit"><b>Example</b></button>', 25, true],
+	customize: ['Customise', 'This allows you to stylise your Trainer Card with HTML5 Elements such as Audio/Mouse Cursor/Background Image/etc.', 15, true],
+	fix: ['Fix', 'Buys the ability to edit your custom avatar or trainer card.', 10, true],
+	room: ['Room', 'Buys a chatroom for you to own (within reasons, can be refused).', 100, true],
+	rng: ['RNG', 'Buys Floatzel\'s and Tempest\'s RNG/Cloning <a href="http://pastebin.com/eL8CjvS1">Services</a> for Pokemon X&Y/ORAS. <button name ="send", value="/Powersaves"><b>More Info</b></button>', 2]
+};
+
+function addLog(message) {
 	if (!global.moneyLog) global.moneyLog = '';
 	var d = new Date();
 	global.moneyLog += '<small>[' + d.format('{yyyy}-{MM}-{dd} {hh}:{mm}:{ss} {tt}') + ']</small> ';
@@ -11,7 +25,7 @@ function addLog (message) {
 }
 
 //Avatar reloading
-function loadAvatars () {
+function loadAvatars() {
 	var formatList = ['.png', '.gif', '.bmp', '.jpeg', '.jpg'];
 	var avatarList = fs.readdirSync('config/avatars');
 	for (var i = 0; i < avatarList.length; i++) {
@@ -23,7 +37,7 @@ function loadAvatars () {
 loadAvatars();
 
 if (Config.watchconfig) {
-	fs.watchFile(path.resolve(__dirname, 'config/config.js'), function (curr, prev) {
+	fs.watchFile(path.resolve(__dirname, 'config/config.js'), function(curr, prev) {
 		if (curr.mtime <= prev.mtime) return;
 		try {
 			delete require.cache[require.resolve('./config/config.js')];
@@ -36,25 +50,25 @@ if (Config.watchconfig) {
 }
 
 exports.commands = {
-	
-	getbucks: function (target, room, user) {
+
+	getbucks: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Please check out the Shop page in the link below to see methods of earning money:<br />' +
 			'- <a href="http://soraleague.weebly.com/shop.html">Shop</a><br /></div>');
 	},
-	
+
 	buckslog: 'moneylog',
-	moneylog: function (target, room, user) {
+	moneylog: function(target, room, user) {
 		if (!this.can('lock')) return false;
 		this.popupReply('|html|<center><u>Transaction Log (Time Zone:)</u></center><br/>' + global.moneyLog);
 	},
-	
+
 	atm: 'wallet',
-	money: 'wallet', 
-	cash: 'wallet', 
+	money: 'wallet',
+	cash: 'wallet',
 	bucks: 'wallet',
-	purse: 'wallet', 
-	wallet: function (target, room, user) {
+	purse: 'wallet',
+	wallet: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		var User;
 		if (!toId(target)) User = user.name;
@@ -64,173 +78,139 @@ exports.commands = {
 	},
 
 	shop: function(target, room, user) {
-        if (!this.canBroadcast()) return;
-        if (this.broadcasting) return this.sendReplyBox('<center><b>Click <button name = "send" value = "/shop">here</button> to enter our shop!');
-        var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
-        var table = [
-        	['POTD','Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD for the day.', 2],
-        	['Poof', 'Buy a poof message to be added into the pool of possible poofs.', 10],
-        	['Avatar','Set your own custom avatar (80x80 jpeg, png, gif are all accepted).', 35],
-        	['Card','Buys a trainer card which can show information through a command.', 50],
-        	['Song', 'Buys a song that can be played on a declarable card. (You must supply the song as a RAW MP3/OGG URL) <button name="send", value="/feelingit"><b>Example</b></button>', 25],
-        	['Customise', 'This allows you to stylise your Trainer Card with HTML5 Elements such as Audio/Mouse Cursor/Background Image/etc.', 15],
-        	['Fix','Buys the ability to edit your custom avatar or trainer card.', 10],
-        	['Room','Buys a chatroom for you to own (within reasons, can be refused).', 100],
-        	['RNG', 'Buys Floatzel\'s and Tempest\'s RNG/Cloning <a href="http://pastebin.com/eL8CjvS1">Services</a> for Pokemon X&Y/ORAS. <button name ="send", value="/Powersaves"><b>More Info</b></button>', 2]
-        ];
-        var text = '<center><h3><b><u>Sora\'s Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
-        for (var i = 0; i < table.length; i++) {
-        	text = text + '<tr><td>'+table[i][0]+'</td><td>'+table[i][1]+'</td><td>'+table[i][2]+'</td><td><button name = "send", value="/buy '+table[i][0]+'"><b>Buy!</b></button></td></tr>';
-        }
-        text = text + '</table><br />' + status + '</center>';
-        this.sendReplyBox(text);
+		if (!this.canBroadcast()) return;
+		if (this.broadcasting) return this.sendReplyBox('<center><b>Click <button name = "send" value = "/shop">here</button> to enter our shop!');
+		var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
+		var text = '<center><h3><b><u>Sora\'s Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
+
+		for (var i in shopList) {
+			text = text + '<tr><td>' + shopList[i][0] + '</td><td>' + shopList[i][1] + '</td><td>' + shopList[i][2] + '</td><td><button name = "send", value="/buy ' + i + '"><b>Buy!</b></button></td></tr>';
+		}
+		text = text + '</table><br />' + status + '</center>';
+		this.sendReplyBox(text);
 	},
 
-        adjustshop: function(target, room, user) {
-        if (!this.can('hotpatch')) return false;
-        global.shopclosed = !global.shopclosed;
-                addLog(user.name + ' has '+(global.shopclosed ? 'closed' : 'opened')+' the shop.');
-        this.sendReply('The shop is now '+(global.shopclosed ? 'closed' : 'open')+'.');
-        },
+	toggleshop: 'adjustshop',
+	adjustshop: function(target, room, user) {
+		if (!this.can('hotpatch')) return false;
+		global.shopclosed = !global.shopclosed;
+		addLog(user.name + ' ' + (global.shopclosed ? 'closed' : 'opened') + ' the shop.');
+		this.sendReply('The shop is now ' + (global.shopclosed ? 'closed' : 'open') + '.');
+	},
 
-    give: 'award',
-    givebucks: 'award',
-    givebucks: 'award',
-    gb: 'award',
-    award: function(target, room, user, connection, cmd) {
-        if (!this.can('hotpatch')) return false;
-        if (!target) return this.sendReply('The correct syntax is /' + cmd + ' [user], [amount]');
-        target = this.splitTarget(target);
-        var targetUser = this.targetUser;
-        if (!targetUser) return this.sendReply('User \'' + this.targetUsername + '\' not found.');
-        if (!target) return this.sendReply('You need to mention the number of bucks you want to give ' + targetUser.name);
-        if (isNaN(target)) return this.sendReply(target + " is not a valid number.");
-        if (target < 1) return this.sendReply('You cannot give ' + targetUser.name + ' anything less than 1 buck!');
-        Core.write('money', targetUser.userid, Number(target), '+');
-        var amt = (Number(target) == 1) ? 'buck' : 'bucks';
-        var bucks = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
-        targetUser.send('|popup|' + user.name + ' has given you ' + target + ' ' + bucks + '. You now have ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-        addLog(user.name + ' has given ' + targetUser.name + ' ' + target + ' ' + bucks + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+	give: 'award',
+	givebucks: 'award',
+	givebucks: 'award',
+	gb: 'award',
+	award: function(target, room, user, connection, cmd) {
+		if (!this.can('hotpatch')) return false;
+		if (!target) return this.sendReply('The correct syntax is /' + cmd + ' [user], [amount]');
+		target = this.splitTarget(target);
+		var targetUser = this.targetUser;
+		if (!targetUser) return this.sendReply('User \'' + this.targetUsername + '\' not found.');
+		if (!target) return this.sendReply('You need to mention the number of bucks you want to give ' + targetUser.name);
+		if (isNaN(target)) return this.sendReply(target + " is not a valid number.");
+		if (target < 1) return this.sendReply('You cannot give ' + targetUser.name + ' anything less than 1 buck!');
+		Core.write('money', targetUser.userid, Number(target), '+');
+		var amt = (Number(target) == 1) ? 'buck' : 'bucks';
+		var bucks = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
+		targetUser.send('|popup|' + user.name + ' has given you ' + target + ' ' + bucks + '. You now have ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+		addLog(user.name + ' has given ' + targetUser.name + ' ' + target + ' ' + bucks + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
 		return this.sendReply(targetUser.name + ' was given ' + Number(target) + ' ' + bucks + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-    },
-    
-    removebucks: 'remove',
-    rb: 'remove',
-    tb: 'remove',
-    takebucks: 'remove',
-    take: 'remove',
-    remove: function(target, room, user, connection, cmd) {
-        if (!this.can('hotpatch')) return false;
-        if (!target) return this.sendReply('/'+ cmd + ' [user], [amount] - Gives the specified user the specified number of bucks.');
-        target = this.splitTarget(target);
-        var targetUser = this.targetUser;
+	},
+
+	removebucks: 'remove',
+	rb: 'remove',
+	tb: 'remove',
+	takebucks: 'remove',
+	take: 'remove',
+	remove: function(target, room, user, connection, cmd) {
+		if (!this.can('hotpatch')) return false;
+		if (!target) return this.sendReply('/' + cmd + ' [user], [amount] - Gives the specified user the specified number of bucks.');
+		target = this.splitTarget(target);
+		var targetUser = this.targetUser;
 		if (!targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
 		if (!toId(target)) return this.sendReply('You need to specify the number of bucks you want to remove from ' + targetUser.name);
 		if (isNaN(target)) return this.sendReply(target + " isn't a valid number.");
 		if (Core.read('money', targetUser.userid) < target) return this.sendReply('You can\'t take away more than what ' + targetUser.name + ' already has!');
-        Core.write('money', targetUser.userid, Number(target), '-');
-        var amt = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
+		Core.write('money', targetUser.userid, Number(target), '-');
+		var amt = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
 		var bucks = (target == 1) ? 'buck' : 'bucks';
-        targetUser.send('|popup|'+ user.name + ' has taken away ' + target + ' ' + bucks +' from you. You now have ' + Core.read('money', targetUser.userid) + ' '+amt+'.');
-        addLog(user.name + ' has taken away ' + target + ' ' + bucks + ' from '+targetUser.name+'. This user now has ' + Core.read('money', targetUser.userid) + ' '+amt+'.');
-		return this.sendReply('You have taken away '+ target + ' ' + bucks + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-    },
-	
+		targetUser.send('|popup|' + user.name + ' has taken away ' + target + ' ' + bucks + ' from you. You now have ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+		addLog(user.name + ' has taken away ' + target + ' ' + bucks + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+		return this.sendReply('You have taken away ' + target + ' ' + bucks + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+	},
+
 	transfermoney: 'transferbucks',
-	transferbucks: function (target, room, user, connection, cmd) {
+	transferbucks: function(target, room, user, connection, cmd) {
 		if (!this.can('hotpatch')) return false;
-        if (!target) return this.sendReply('/'+ cmd + ' [user], [amount] - Transfers the specified number of bucks to the specified user.');
-        target = this.splitTarget(target);
-        var targetUser = this.targetUser;
+		if (!target) return this.sendReply('/' + cmd + ' [user], [amount] - Transfers the specified number of bucks to the specified user.');
+		target = this.splitTarget(target);
+		var targetUser = this.targetUser;
 		if (!targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
 		if (targetUser.userid === user.userid) return this.sendReply('You can\'t transfer bucks to yourself!');
 		if (!toId(target)) return this.sendReply('You need to specify the number of bucks you want to transfer to ' + targetUser.name);
 		if (isNaN(target)) return this.sendReply(target + " isn't a valid number.");
 		if (Core.read('money', user.userid) < target) return this.sendReply('You can\'t give ' + targetUser.name + ' more than what you have!');
-        Core.write('money', targetUser.userid, Number(target), '+');
-        Core.write('money', user.userid, Number(target), '-');
-        var amt = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
-        var userAmt = (Core.read('money', user.userid) == 1) ? 'buck' : 'bucks';
+		Core.write('money', targetUser.userid, Number(target), '+');
+		Core.write('money', user.userid, Number(target), '-');
+		var amt = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
+		var userAmt = (Core.read('money', user.userid) == 1) ? 'buck' : 'bucks';
 		var bucks = (target == 1) ? 'buck' : 'bucks';
-        targetUser.send('|popup|' + user.name + ' has transferred ' + target + ' ' + bucks +' to you. You now have ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-        addLog(user.name + ' has transferred ' + target + ' ' + bucks + ' to '+ targetUser.name +'. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '. ' + user.name + ' has ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
-		return this.sendReply('You have transferred '+ target + ' ' + bucks + ' to ' + targetUser.name + '. You have ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
-    },
-    
-    buy: function(target, room, user) {
-        if (global.shopclosed) return this.sendReply("The shop is closed for now. Wait until it re-opens shortly.");
-        target = toId(target);
+		targetUser.send('|popup|' + user.name + ' has transferred ' + target + ' ' + bucks + ' to you. You now have ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+		addLog(user.name + ' has transferred ' + target + ' ' + bucks + ' to ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '. ' + user.name + ' has ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
+		return this.sendReply('You have transferred ' + target + ' ' + bucks + ' to ' + targetUser.name + '. You have ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
+	},
 
-        if (target === 'avatar') {
-            if (user.hasavatar === true) return this.sendReply("You have already bought a custom avatar. Use /customavatar [URL] to set it.");
-	    	if (!Number(user.avatar)) return this.sendReply('You already have a custom avatar!');
-            var price = 25;
-            if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to buy a custom avatar.");
+	buy: function(target, room, user) {
+		if (global.shopclosed) return this.sendReply("The shop is closed for now. Wait until it re-opens shortly.");
+		target = toId(target);
+		if (!shopList[target]) return this.sendReply('That item isn\'t in the shop.');
+		var price = shopList[target][2];
+		if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to buy a " + shopList[target][0].toLowerCase() + ".");
 
-            room.add(user.name + ' bought a custom avatar!');
-            this.sendReply("You have bought a custom avatar. Use /customavatar [url] to set it.");
-            this.sendReply("It is recommended that you use an image with dimensions 80 x 80, or your avatar may not show up properly.");
-            user.boughtAvatar = true;
+		//these items have their own specifics
+		if (target === 'avatar') {
+			if (user.hasavatar) return this.sendReply("You have already bought a custom avatar. Use /customavatar [URL] to set it.");
+			if (!Number(user.avatar)) return this.sendReply('You already have a custom avatar!');
 
-        } else if (target === 'room') {
-            var price = 80;
-            if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to buy a symbol.");
+			this.sendReply("You have bought a custom avatar. Use /customavatar [url] to set it.");
+			this.sendReply("It is recommended that you use an image with dimensions 80 x 80, or your avatar may not show up properly.");
+			user.boughtAvatar = true;
 
-            room.add(user.name + ' bought a chatroom!');
-            this.sendReply("You have bought a chatroom for you to own.");
-            this.sendReply("PM an admin to create your room and make you the roomowner.");
-            for (var i in Users.users) {
-            	if (Users.users[i].can('hotpatch')) Users.users[i].send('|pm|~Server-Kun [Do Not Reply]|' + Users.users[i].userid + '|' + user.name + ' has bought a chatroom.')
-            }
+		} else if (target === 'potd') {
+			if (Config.potd) return this.sendReply('The Pokémon of the Day has already been set.');
+			this.sendReply("Use /setpotd [pokémon] to set the Pokémon of the day.");
+			user.setpotd = true;
+		}
 
-        } else if (target === 'card') {
-            var price = 40;
-            if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to buy a Trainer Card.");
+		if (shopList[target][3]) {
+			for (var i in Users.users) {
+				if (Users.users[i].can('hotpatch')) Users.users[i].send('|pm|~Server-Kun [Do Not Reply]|' + Users.users[i].userid + '|' + user.name + ' has bought a chatroom.')
+			}
+			this.sendReply('PM the details of your ' + shopList[target][0].toLowerCase() + ' to an Admin.');
+		}
 
-            room.add(user.name + ' bought a trainer card!');
-            this.sendReply("You have bought a trainer card. PM an admin to add it.");
-            for (var i in Users.users) {
-            	if (Users.users[i].can('hotpatch')) Users.users[i].send('|pm|~Server-Kun [Do Not Reply]|' + Users.users[i].userid + '|'+user.name+' has bought a trainer card.')
-            }
-
-        } else if (target === 'fix') {
-            var price = 10;
-            if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to buy a fix.");
-            room.add(user.name + ' bought a trainer card/avatar fix!');
-            this.sendReply("You have bought a fix for your trainer card or avatar.");
-            this.sendReply("PM the changes to an admin. You may only fix either your TC or avatar at a time.");
-
-        } else if (target === 'potd') {
-            if (Config.potd) return this.sendReply('The Pokémon of the Day has already been set.');
-            var price = 5;
-            if (Core.read('money', user.userid) < price) return this.sendReply("You don't have enough money to set the POTD.");
-
-            room.add(user.name + ' bought the ability to set the POTD!');
-            this.sendReply("You have bought the ability to set the POTD of the day.");
-            this.sendReply("Use /setpotd [pokémon] to set the Pokémon of the day.");
-            user.setpotd = true;
-        } else {
-            return this.sendReply("That item isn't in the shop.");
-        }
-        Core.write("money", user.userid, price, '-');
+		room.add(user.name + ' bought a ' + target + '!');
+		Core.write("money", user.userid, price, '-');
 		addLog(user.name + ' bought a ' + target + ' from the shop.');
-    },
-    
-    setpotd: function(target, room, user) {
-        if (!user.setpotd) return this.sendReply("You need to buy the ability to set the Pokemon of the Day!");
-        if (user.alreadysetpotd) return this.sendReply("You've already set the POTD!");
+	},
 
-        Config.potd = target;
-        Simulator.SimulatorProcess.eval('Config.potd = \'' + toId(target) + '\'');
-        if (!target) return this.sendRepply("You need to choose a Pokémon to set as the POTD.");
-        if (Rooms.lobby) Rooms.lobby.addRaw('<div class="broadcast-blue"><b>The Pokémon of the Day is now ' + target + '!</b><br />This Pokemon will be guaranteed to show up in random battles.</div>');
-        this.logModCommand('The Pokemon of the Day was changed to ' + target + ' by ' + user.name + '.');
-        user.setpotd = false;
-        user.alreadysetpotd = true;
-    },
-    
-    	customavatar: 'setavatar',
-	setavatar: function (target, room, user, connection, cmd) {
+	setpotd: function(target, room, user) {
+		if (!user.setpotd) return this.sendReply("You need to buy the ability to set the Pokemon of the Day!");
+		if (user.alreadysetpotd) return this.sendReply("You've already set the POTD!");
+
+		Config.potd = target;
+		Simulator.SimulatorProcess.eval('Config.potd = \'' + toId(target) + '\'');
+		if (!target) return this.sendRepply("You need to choose a Pokémon to set as the POTD.");
+		if (Rooms.lobby) Rooms.lobby.addRaw('<div class="broadcast-blue"><b>The Pokémon of the Day is now ' + target + '!</b><br />This Pokemon will be guaranteed to show up in random battles.</div>');
+		this.logModCommand('The Pokemon of the Day was changed to ' + target + ' by ' + user.name + '.');
+		user.setpotd = false;
+		user.alreadysetpotd = true;
+	},
+
+	customavatar: 'setavatar',
+	setavatar: function(target, room, user, connection, cmd) {
 		if (!toId(target)) return this.sendReply('/setavatar URL - Sets a custom avatar.');
 		if (!user.boughtAvatar && !this.can('hotpatch')) return false;
 		if (typeof user.avatar === 'string') fs.unlink('config/avatars/' + user.avatar);
@@ -242,9 +222,9 @@ exports.commands = {
 		else if (target.indexOf('http://') !== 0) target = 'http://' + target;
 
 		var self = this;
-		request.get(target).on('error', function () {
+		request.get(target).on('error', function() {
 			return self.sendReply("The avatar you picked doesn\'t exist. Try picking a new avatar.");
-		}).on('response', function (response) {
+		}).on('response', function(response) {
 			if (response.statusCode == 404) return self.sendReply("The avatar you picked is unavailable. Try picking a new avatar.");
 			user.avatar = user.userid + format;
 			Config.customavatars[user.userid] = user.avatar;
@@ -254,7 +234,7 @@ exports.commands = {
 		user.boughtAvatar = false;
 	},
 
-	removeavatar: function (target, room, user, connection, cmd) {
+	removeavatar: function(target, room, user, connection, cmd) {
 		if (typeof user.avatar === 'Number') return this.sendReply('You do not own a custom avatar.');
 		if (toId(target) !== 'confirm')
 			this.sendReply('WARNING: If you choose to delete your avatar now, it cannot be recovered later. If you\'re sure you want to do this, use \'/removeavatar confirm.\'');
