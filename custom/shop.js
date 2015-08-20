@@ -80,15 +80,6 @@ exports.commands = {
         }
         text = text + '</table><br />' + status + '</center>';
         this.sendReplyBox(text);
-        //this.sendReplyBox('<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>' +
-        //'</table><br />' + status + '</center>');
-        /*this.sendReplyBox('<center><h3><b><u>Sora Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>' +
-            '<tr><td>Avatar</td><td>Buys a custom avatar.</td><td>25</td><td><button name = "send", value = "/buy avatar"><b>Buy!</b></button></td></tr>' +
-            '<tr><td>Card</td><td>Buys a trainer card.</td><td>40</td><td><button name = "send", value = "/buy card"><b>Buy!</b></button></td></tr>' +
-            '<tr><td>Fix</td><td>Buys the ability to edit your custom avatar or trainer card</td><td>10</td><td><button name = "send", value = "/buy fix"><b>Buy!</b></button></td></tr>' +
-            '<tr><td>Room</td><td>Buys a chatroom for you to own (with reason).</td><td>100</td><td><button name = "send", value = "/buy room"><b>Buy!</b></button></td></tr>' +
-            '<tr><td>POTD</td><td>Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD for the day.</td><td>5</td><td><button name = "send", value = "/buy potd"><b>Buy!</b></button></td></tr>' +
-            '</table><br />' + status + '</center>');*/
 	},
 
         adjustshop: function(target, room, user) {
@@ -98,23 +89,6 @@ exports.commands = {
         this.sendReply('The shop is now '+(global.shopclosed ? 'closed' : 'open')+'.');
         },
 
-
-	/** closeshop: function(target, room, user) {
-        if (!this.can('hotpatch')) return false;
-        if (global.shopclosed) return this.sendReply('The shop is already closed.');
-        global.shopclosed = true;
-		addLog(user.name + ' closed the shop.');
-        this.sendReply('The shop is now closed.');
-    },
-
-    openshop: function(target, room, user) {
-        if (!this.can('hotpatch')) return false;
-        if (!global.shopclosed) return this.sendReply('The shop is already open.');
-        global.shopclosed = false;
-		addLog(user.name + ' opened the shop.');
-        this.sendReply('The shop is now open.');
-    },**/
-    
     give: 'award',
     givebucks: 'award',
     givebucks: 'award',
