@@ -273,13 +273,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	
-	bug: function(target, room, user) {
+	bug: 'flamespell',
+	flamespell: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />'+
-			  '<i>"???"</i> <br />'+
+		this.sendReplyBox('Gym Ldr <b>Flamespell</b><br />'+
+			  '<i>"Fear is the ultimate weapon, Fear my swarm."</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			  '<b>Ace:</b> Mega Pinsir <br />' + seen('gymldrflamespell') + getBadges('gymldrflamespell'));
 	},
 
 	dark: 'darkus',
