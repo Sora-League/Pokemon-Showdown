@@ -692,54 +692,6 @@ exports.BattleFormats = {
 			}
 		}
 	},
-	monotypeexceptionclause: {
-        effectType: 'Rule',
-        onStart: function() {
-            this.add('rule', 'Monotype Exception Clause: Monotype teams follow their own set of rules, ignoring normal OU rules.');
-        },
-		
-        validateTeam: function(team, format, teamHas) {
-            if (!team[0]) return;
-            var isMono = true;
-            var template = this.getTemplate(team[0].species);
-            var typeTable = template.types;
-            if (!typeTable) isMono = false;
-            for (var i = 1; i < team.length; i++) {
-                template = this.getTemplate(team[i].species);
-                if (!template.types) isMono = false;
-
-                typeTable = typeTable.intersect(template.types);
-                if (!typeTable.length) isMono = false;
-            }
-
-            if (!isMono) {
-                var oubans = ['aegislash', 'landorus', 'genesect', 'genesectdouse', 'genesectshock', 'genesectburn', 'genesectchill'];
-                for (var x = 0; x < oubans.length; x++) {
-                    var bannedName = this.data.Pokedex[oubans[x]] || this.getItem(oubans[x]);
-                    if (teamHas[oubans[x]]) return [bannedName.name + " is banned from OU teams."];
-                }
-            } else {
-                if (typeTable.length > 1) return;
-                if (teamHas['talonflame']) return ["Talonflame is banned from Monotype teams."];
-                if (teamHas['slowbronite']) return ["Slowbronite is banned from Monotype teams."];
-                if (teamHas['metagrossite']) return ["Metagrossite is banned from Monotype teams."];
-                switch (typeTable[0]) {
-                    case 'Flying':
-                        if (teamHas['zapdos']) return ["Zapdos is banned from Flying monotype teams."];
-                        break;
-                    case 'Steel':
-                        if (teamHas['aegislash']) return ["Aegislash is banned from Steel monotype teams."];
-                        if (teamHas['genesect'] || teamHas['genesectdouse'] || teamHas['genesectshock'] || teamHas['genesectburn'] || teamHas['genesectchill']) return ["Genesect is banned from Steel monotype teams."];
-                        break;
-                    case 'Water':
-                        if (teamHas['damprock']) return ["Damp Rock is banned from Water monotype teams."];
-						break;
-					case 'Psychic':
-						if (teamHas['galladite']) return ["Galladite is banned from Psychic monotype teams."];
-                }
-            }
-        }
-    },
 	megarayquazaclause: {
 		effectType: 'Rule',
 		onStart: function () {

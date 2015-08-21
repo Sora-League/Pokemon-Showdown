@@ -12,11 +12,52 @@ exports.Formats = [
 		column: 1,
 
 		searchShow: false,
-		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Monotype Exception Clause', 'Team Preview'],
+		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh',
 			'Kyogre', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Xerneas', 'Yveltal', 'Zekrom',
-			'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Soul dew', 'Greninja'
-		]
+			'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Soul Dew', 'Greninja', 'Genesect'
+		],
+		onStart: function () {
+            this.add('rule', 'Monotype Exception Clause: Monotype teams follow their own set of rules, ignoring normal OU rules.');
+        },
+		onValidateTeam: function (team, format, teamHas) {
+			var template = this.getTemplate(team[0].species);
+			if (team.length === 1) {
+				if (template.tier === 'Uber') return [template.name + ' is in Ubers, which is banned on OU teams'];
+			}
+			var isMono = true;
+            var typeTable = template.types;
+            if (!typeTable) isMono = false;
+            for (var i = 1; i < team.length; i++) {
+                template = this.getTemplate(team[i].species);
+                if (!template.types) {
+					isMono = false;
+					break;
+				}
+
+                typeTable = typeTable.intersect(template.types);
+                if (!typeTable.length) {
+					isMono = false;
+					break;
+				}
+            }
+
+			var problems = [];
+			if (isMono) {
+				var monoBans = this.data.Formats.monotype.banlist.map(toId);
+				for (i = 0; i < monoBans.length; i++) {
+					if (teamHas[monoBans[i]]) problems.push(monoBans[i] + ' is banned on Monotype teams.');;
+				}
+				if (teamHas['aegislash'] && typeTable[0] === 'Steel') problems.push('Aegislash is banned on Steel Monotype teams.');
+				
+			} else {
+				for (i = 0; i < team.length; i++) {
+					var template = this.getTemplate(team[i].species)
+					if (template.tier === 'Uber') problems.push(template.species + ' is in Uber, which is banned on OU teams.');
+				}
+			}
+			return problems;
+		}	
 	},
 	{
 		name: "League Battle Doubles",
