@@ -363,13 +363,13 @@ exports.commands = {
 	},
 
 
-	
+    mitsuka: 'grass',	
     grass: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('Gym Ldr <b>???</b><br />'+
-			'<i>"???"</i> <br />'+
+	this.sendReplyBox('Gym Ldr <b>Mitsuka</b><br />'+
+			'<i>"Storm of leaf and Draining root!"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Bellossom <br />' + seen('mitsuka') + getBadges('mitsuka'));
 	},
 
 
@@ -532,9 +532,7 @@ exports.commands = {
 			'<b>Ace:</b> Mega Gengar<br />' +
 			'<b>Honours:</b> Sora\'s first challenger to reach Hall of Fame.<br />' +
 			'<b>Prefered Tier:</b> Balanced Hackmons' +
-			'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif"><br />' +
-			'<b>Badges:</b><br />' +
-			'<a href="http://oi60.tinypic.com/2itps9k.jpg"><img src="http://oi62.tinypic.com/xgmjhc.jpg" title="Golduck the Meta Breaker: Defeated the League"></a><br />');
+			'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif"><br />' +getBadges('gasp'));
 	},
 
 	meowsofsora: function(target, room, user) {
