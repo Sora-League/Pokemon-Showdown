@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
 			'∆Gym Ldr Mark∆', '∆Gym Ldr Dårküs∆', '∆Gym Ldr Core∆',  '∆Gym Ldr Banshee∆',  '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆', '∆Gym Ldr Crash∆',
-			'∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆'
+			'∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -113,7 +113,7 @@ exports.commands = {
 
 	h: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('E4 <b>H</b><br />' +
+		this.sendReplyBox('∆E4 <b>H</b>∆<br />' +
 			'<i>"H4Hentai, H4Harem, H4Harassment, H4Hugs. Done checking out those sexy curves? Now it\'s time to check out my bugs. :3"</i> <br />' +
 			'<b>Type: <font color =d83c08>Bug</font></b><br />' +
 			'<b>Ace:</b> None <br />' +
@@ -125,7 +125,7 @@ exports.commands = {
 
 	edge: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('E4 <b>Edge</b><br />' +
+		this.sendReplyBox('∆E4 <b>Edge</b>∆<br />' +
 			'<i>"How can you face your problem when your problem is your face?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Mega Charizard-X<br />' +
@@ -137,7 +137,7 @@ exports.commands = {
 
 	leaf: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('E4 <b>Leaf</b><br />' +
+		this.sendReplyBox('∆E4 <b>Leaf</b>∆<br />' +
 			'<i>"The pattern repeats, will your flaws too?"</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
 			'<b>Ace:</b> Medicham<br />' +
@@ -150,7 +150,7 @@ exports.commands = {
 	
 	terror: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('E4 <b>Terror</b><br />' +
+		this.sendReplyBox('∆E4 <b>Terror</b>∆<br />' +
 			'<i>"Better get out of the water because the waves are coming for you."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
 			'<b>Ace:</b> No idea<br />' +
@@ -175,7 +175,7 @@ exports.commands = {
 
 	asch: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Elite Frontier <b>Asch</b><br />' +
+		this.sendReplyBox('∆Elite Frontier <b>Asch</b>∆<br />' +
 			'<i>"Chief Akkie, head of the meme police, serving for 38 years; no meme slips through her cracks."</i> <br />' +
 			'<b>Symbol:</b> White Knight Symbol<br />' +
 			'<b>Ace:</b> Crawdaunt <br />' +
@@ -188,7 +188,7 @@ exports.commands = {
 
 	blade: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><font size= 4><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
+		this.sendReplyBox('<a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
 			'<center><i>"Be Stronger Than Your Strongest Excuse"</i></center> <br />' +
 			'<b>Symbol:</b> Yin and Yang <br />' +
 			'<b>Ace:</b> Mybro (Slowbro) <br />' +
@@ -210,7 +210,7 @@ exports.commands = {
 
 	meows: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Meows</b><br />' +
+		this.sendReplyBox('∆Frontier <b>Meows</b>∆<br />' +
 			'<i>"Abs=Win"</i> <br />' +
 			'<b>Symbol: </b>Patience <br />' +
 			'<b>Ace:</b> Quagsire<br />' +
@@ -221,7 +221,7 @@ exports.commands = {
 
 	srewop: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Elite Frontier <b>Srewop</b><br />' +
+		this.sendReplyBox('∆Elite Frontier <b>Srewop</b>∆<br />' +
 			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
 			'<b>Symbol:</b> SumTingWong<br />' +
 			'<b>Ace:</b> Golbat <br />' +
@@ -235,7 +235,7 @@ exports.commands = {
 
 	tempest: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Tempest</b><br />' +
+		this.sendReplyBox('∆Frontier <b>Tempest</b>∆<br />' +
 			'<i>"Winning comes first. Caring about other people\'s opinions of your strategies comes never." ~ Amarillo</i> <br />' +
 			'<b>Symbol:</b> World <br />' +
 			'<b>Ace:</b> Pikachu<br />' +
@@ -248,7 +248,7 @@ exports.commands = {
 
 	zachary: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Frontier <b>Zachary</b><br/>' +
+		this.sendReplyBox('∆Frontier <b>Zachary</b>∆<br/>' +
 			'<i>"Can you do a few things at the same time?"</i><br/>' +
 			'<b>Symbol:</b> Multitasking<br/>' +
 			'<b>Ace:</b> All<br/>' +
@@ -276,7 +276,7 @@ exports.commands = {
 	bug: 'flamespell',
 	flamespell: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Flamespell</b><br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Flamespell</b>∆<br />'+
 			  '<i>"Fear is the ultimate weapon, Fear my swarm."</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
 			  '<b>Ace:</b> Mega Pinsir <br />' + seen('gymldrflamespell') + getBadges('gymldrflamespell'));
@@ -285,7 +285,7 @@ exports.commands = {
 	dark: 'darkus',
 	darkus: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Darkus</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
 			'<i>"But I don\'t like Bakugan."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
 			'<b>Ace:</b> Bisharp<br />' +
@@ -298,7 +298,7 @@ exports.commands = {
 	dragon: 'lou',
 	lou: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Lou</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Lou</b>∆<br />' +
 			'<i>"Dragon mono + Outrage = win"</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
 			'<b>Ace:</b> Latias<br />' + seen('gymldrlou') + getBadges('gymldrlou'));
@@ -307,7 +307,7 @@ exports.commands = {
 
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> ???<br />' + seen('') + '<br />');
@@ -316,7 +316,7 @@ exports.commands = {
 
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>???<br />');
@@ -325,7 +325,7 @@ exports.commands = {
 	fighting: 'banshee',
     banshee: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Banshee</b><br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Banshee</b>∆<br />'+
 			'<i>"Fight with fists of steel for your goals."</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
 			'<b>Ace:</b> Lucario <br />' + seen('gymldrbanshee') + getBadges('gymldrbanshee'));
@@ -335,7 +335,7 @@ exports.commands = {
 	fire: 'waffles',
         waffles: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Waffles</b><br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
 		      'Leader Ranking: <font color = 9dff00><b>3rd</font></b> <br />' + 
 	              '<i>"Don\'t waffle out of the situation"</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
@@ -345,7 +345,7 @@ exports.commands = {
 	flying: 'float',
 	float: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Float</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
 			'<i>"flap... flap... flap... bird type...?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Hawlucha (John Cena)<br />' +
@@ -356,7 +356,7 @@ exports.commands = {
         ghost: 'tswiv', 
 	tswiv: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>TSwiv</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>TSwiv</b>∆<br />' +
 			'<i>"Let the séance begin.......MWAHAHAHA"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> Sableye<br />' + seen('gymldrtswiv') + getBadges('gymldrtswiv'));
@@ -366,7 +366,7 @@ exports.commands = {
     mitsuka: 'grass',	
     grass: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('Gym Ldr <b>Mitsuka</b><br />'+
+	this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />'+
 			'<i>"Storm of leaf and Draining root!"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
 			'<b>Ace:</b> Bellossom <br />' + seen('gymldrmitsuka') + getBadges('gymldrmitsuka'));
@@ -375,7 +375,7 @@ exports.commands = {
 
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>???</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5b3a00>Ground</font></b><br />' +
 			'<b>Ace:</b> <br />' + seen(''));
@@ -384,7 +384,7 @@ exports.commands = {
 	ice: 'mark',
 	mark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Mark</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br />' +
 			'<i>"Hard work pays off in the end."</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
 			'<b>Ace:</b> Don\'t Do Drugs (Mega Glalie)<br />' +
@@ -394,7 +394,7 @@ exports.commands = {
 	normal: 'taco',
     taco: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('Gym Ldr <b>Taco</b><br />'+
+	this.sendReplyBox('∆Gym Ldr <b>Taco</b>∆<br />'+
 		'<i>"Dont underestimate normals"</i> <br />'+
 	    '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
 		'<b>Ace:</b> Lopunny<br />' + seen('gymldrtaco') + '<br />'+
@@ -404,7 +404,7 @@ exports.commands = {
 	     poison: 'crash',
 	crash: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Crash</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Crash</b>∆<br />' +
 			'<i>"Poison is in everything, and nothing is without poison. The dosage makes it either a poison or a remedy."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
 			'<b>Ace:</b> Weezing<br />' + seen('gymldrcrash') + getBadges('gymldrcrash'));
@@ -413,7 +413,7 @@ exports.commands = {
 	psychic: 'connor',
 	connor: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Connor</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Connor</b>∆<br />' +
 		        'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
 			'<i>"Psychic power isn\'t something that only a few people have. Everyone has psychic power. People just don\'t realize it."</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
@@ -423,7 +423,7 @@ exports.commands = {
 	rock: 'core',
 	core: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Core</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Core</b>∆<br />' +
 			'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
 			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
@@ -434,7 +434,7 @@ exports.commands = {
 	solarwolf: 'steel',
 	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>SolarWolf</b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>SolarWolf</b>∆<br />' +
 			'<i>"The best steel doesn\'t always shine the brightest, but it will smash your face in."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> Bisharp <br />' +
@@ -445,7 +445,7 @@ exports.commands = {
         water: 'angel9',
 	angel9: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Gym Ldr <b>Angel9</b> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Angel9</b>∆<br />' +
 			'<i>"Watch my beautiful waters submerge you deep."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
 			'<b>Ace:</b> Quagsire <br/>' +
@@ -598,7 +598,7 @@ exports.commands = {
 	feelingit: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<div class="infobox" style="cursor: url(&quot;http://i.imgur.com/c4qM0iM.gif&quot;) , auto; border: 0px ; background-image: url(&quot;http://files.gamebanana.com/img/ss/wips/4ffc9f6bed5e2.jpg&quot;) ; background-size: cover"><br \>' +
-			'<br \><center><font size=3 color=#FF9900><b>You Will Know Our Names</b> - <i>Xenoblade Chronicles</i></font><br \>' +
+			'<br \><center><b><font color=#FF9900 size=2>You Will Know Our Names</b></font><font color=#FF9900 size=2> \- <i>Xenoblade Chronicles</i></font><br \>' +
 			'<audio src="http://www.ssbwiki.com/images/f/f5/Victory%21_%28Shulk%29.ogg" controls="" style="width: 100% ; border: 2px solid #00CC00 ; background-color: #00000a" target="_blank"></audio></center><br \><br \>');
 	},
 
@@ -628,7 +628,7 @@ exports.commands = {
         	if (!this.canBroadcast()) return;
         	this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://img2.wikia.nocookie.net/__cb20101231031301/angelbeats/images/f/f5/EP10-Yui-and-Hinata-500x281.png&quot;) ; background-size: cover" target="_blank">'+
         	                  '<center><font size=2 color=#0066FF><b>Original Version</b> - <i>Karuta</i></font><br \><audio src="https://dl.pushbulletusercontent.com/NBtI15PWK0EQDXkB8YNqKe6YZYWpLHaO/19%20-%20Ichiban%20no%20Takaramono%20%28Original%20Version%29.mp3" controls="" target="_blank"></audio><br /><br /><br /><br /><br /><br /><br /><br />'+
-        	                  '<br \></center><font size=3 color=#FF0000><b>  一番の宝物</b> - <i>Angel Beats</i></font><br /><font size=1>Ichiban no Takaramono</font><center><br \><br \><br \><br \><br \><br \><font size=2 color=#0099FF><b>Yui\'s Version</b> - <i>Girls Dead Monster, feat. LiSA.</i></font><audio src="https://dl.pushbulletusercontent.com/5CLffau3dUgPCVIPwKyIQUjblB4NgQ5G/09%20-%20Ichiban%20no%20Takaramono%20%20%28Yui%20ver.%29.mp3" controls="" target="_blank"></audio></center>');
+        	                  '<br \></center><b><font size=2 color=#FF0000>  一番の宝物</b></font><font size=2 color=#FF0000> \- <i>Angel Beats</i></font><br /><font size=1>Ichiban no Takaramono</font><center><br \><br \><br \><br \><br \><br \><font size=2 color=#0099FF><b>Yui\'s Version</b> - <i>Girls Dead Monster, feat. LiSA.</i></font><audio src="https://dl.pushbulletusercontent.com/5CLffau3dUgPCVIPwKyIQUjblB4NgQ5G/09%20-%20Ichiban%20no%20Takaramono%20%20%28Yui%20ver.%29.mp3" controls="" target="_blank"></audio></center>');
 	},
 	
 	//////////
@@ -736,14 +736,15 @@ exports.commands = {
 	ateam: 'adminteam',
 	adminteam: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><font size= 4><center><b><font color = 075ff7>The Admin Team</font></b></center></a><br />' +
+		this.sendReplyBox('<a><center><b><font color = 075ff7 size=3>The Admin Team</font></b></center></a><br />' +
 			'FAQ <br />' +
 			'<b>Who are we?</b> The Admin team are a group of senior members who make most of the major league decisions and organize most major league events. <br />' +
-			'<b>Who\'s in the Admin Team?</b> The Admin Team\'s active members consist of: <mark>Champion Noah, Champion Bart, OnyxEagle, Artiste Jeratt, FrontierHead Risu, Neith, Coach Bloodfist, Coach Abadon, Bamdee and Frontier Blade.</mark> <br />' +
+			'<b>Who\'s in the Admin Team?</b> <a href="http://sora.cu.cc/ateam.html"><button style="background: #FF4747 ; border: 1px solid #FF0000">Current active members</button></a><br />' +
 			'<b>What exactly do you guys do?</b> The Admin Team handle or oversee all matters from disputes in the League, to League Challenge Registration <br />' +
 			'<b>How does one join the Admin team?</b> The Admin Team usually invites a select few senior members who\'ve shown to be mature and capable of handling responsibility. <br />' +
-			' <br />' +
-			'<center> All Admin team Members can be identified by their userlist highlight and by having this symbol on their badges:<center> <br />' +
+			' <br /><br />' +
+			'<center><img src="http://sora.cu.cc/img/namelist.png"><br />'+
+			'All Admin team Members can be identified by their userlist highlight and by having this symbol on their badges:</center> <br />' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	}
 };

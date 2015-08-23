@@ -186,7 +186,7 @@ exports.commands = {
 
 		if (shopList[target][3]) {
 			for (var i in Users.users) {
-				if (Users.users[i].can('hotpatch')) Users.users[i].send('|pm|~Server-Kun [Do Not Reply]|' + Users.users[i].userid + '|' + user.name + ' has bought a chatroom.')
+				if (Users.users[i].can('hotpatch')) Users.users[i].send('|pm|~Server-Kun [Do Not Reply]|' + Users.users[i].userid + '|' + user.name + ' has bought a ' + target + ".")
 			}
 			this.sendReply('PM the details of your ' + shopList[target][0].toLowerCase() + ' to an Admin.');
 		}
