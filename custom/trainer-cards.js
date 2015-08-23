@@ -598,21 +598,21 @@ exports.commands = {
 	feelingit: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<div class="infobox" style="cursor: url(&quot;http://i.imgur.com/c4qM0iM.gif&quot;) , auto; border: 0px ; background-image: url(&quot;http://files.gamebanana.com/img/ss/wips/4ffc9f6bed5e2.jpg&quot;) ; background-size: cover"><br \>' +
-			'<br \><center><font color=#FF9900 size=3><b>You Will Know Our Names</b> \- <i>Xenoblade Chronicles</i></font><br \>' +
+			'<br \><center><b><font color=#FF9900 size=3>You Will Know Our Names</b></font><font color=#FF9900 size=3> \- <i>Xenoblade Chronicles</i></font><br \>' +
 			'<audio src="http://www.ssbwiki.com/images/f/f5/Victory%21_%28Shulk%29.ogg" controls="" style="width: 100% ; border: 2px solid #00CC00 ; background-color: #00000a" target="_blank"></audio></center><br \><br \>');
 	},
 
 	easymoney: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://i.imgur.com/orlVvMg.jpg&quot;) ; background-size: cover" target="_blank"><br \>' +
-			'<br \><center><font size=3 color=#FF9900><b>Easy Money</b> \- <i>Bizzaro Flame</i></font><br \>' +
+			'<br \><center><b><font size=3 color=#FF9900>Easy Money</b></font><font size=3 color=#FF9900> \- <i>Bizzaro Flame</i></font><br \>' +
 			'<audio src="https://dl.pushbulletusercontent.com/qrAveUFTyNQlmvq3HEtlqSmBiuQeUaaQ/Easy%20Money.mp3" controls="" loop style="width: 100% ; border: 2px solid #00CC00 ; background-color: #00000a" target="_blank"></audio></center><br \><br \><br /><br /><br /><br /><br /><br /><br /><br />');
 	},
 
 	afraud: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://i.imgur.com/jBfZq5A.jpg&quot;) ; background-size: cover" target="_blank"><br \><br /><br /><br /><br /><br /><br /><br /><br />' +
-			'<br \><center><font size=3 color=#00FF40><b>A Fraud</b> \- <i>Izzaro Flame</i></font><br \>' +
+			'<br \><center><b><font size=3 color=#00FF40>A Fraud</b></font><font size=3 color=#00FF40> \- <i>Izzaro Flame</i></font><br \>' +
 			'<audio src="https://dl.pushbulletusercontent.com/Pl3dDtxvFMbdAn6IZQHAF6gxFluLoAhA/A%20Fraud%20-%20%20A%20Big%20Fraud.mp3" controls="" loop style="width: 100% ; border: 2px solid #58FAF4 ; background-color: #00000a" target="_blank"></audio></center><br \><br \>');
 	},
 	
