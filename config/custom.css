@@ -41,3 +41,12 @@ a.button i, a.button span {
 .chat-log .notice, .chat-log b, .chat-log small, .chat-log strong, .chat-log em, .chat-log span, .chat-log small {
     font-size: 8pt;
 }
+
+/*Waffles's chat color*/
+.chat.chatmessage-gymldrwaffles strong {
+    color: #28d6c7 !important
+}
+
+li#lobby-userlist-user-gymldrwaffles strong, li#gamecorner-userlist-user-gymldrwaffles strong, li#staff-userlist-user-gymldrwaffles strong {
+    color: #28d6c7 !important
+}
