@@ -608,6 +608,7 @@ exports.commands = {
 			if (result) user.makeChallenge(targetUser, target);
 		});
 	},
+	
 	donate: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
