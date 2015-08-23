@@ -369,7 +369,7 @@ exports.commands = {
 	this.sendReplyBox('Gym Ldr <b>Mitsuka</b><br />'+
 			'<i>"Storm of leaf and Draining root!"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
-			'<b>Ace:</b> Bellossom <br />' + seen('mitsuka') + getBadges('mitsuka'));
+			'<b>Ace:</b> Bellossom <br />' + seen('gymldrmitsuka') + getBadges('gymldrmitsuka'));
 	},
 
 
@@ -604,16 +604,24 @@ exports.commands = {
 
 	easymoney: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://i.imgur.com/orlVvMg.jpg&quot;) ; background-size: cover" target="_blank"><br \>' +
+		this.sendReplyBox('<div style="background-image: url(&quot;http://i.imgur.com/orlVvMg.jpg&quot;) ; background-size: cover" target="_blank"><br \>' +
 			'<br \><center><font size=3 color=#FF9900><b>Easy Money</b> - <i>Bizzaro Flame</i></font><br \>' +
 			'<audio src="https://dl.pushbulletusercontent.com/qrAveUFTyNQlmvq3HEtlqSmBiuQeUaaQ/Easy%20Money.mp3" controls="" loop style="width: 100% ; border: 2px solid #00CC00 ; background-color: #00000a" target="_blank"></audio></center><br \><br \><br /><br /><br /><br /><br /><br /><br /><br />');
 	},
 
 	afraud: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://i.imgur.com/jBfZq5A.jpg&quot;) ; background-size: cover" target="_blank"><br \><br /><br /><br /><br /><br /><br /><br /><br />' +
+		this.sendReplyBox('<div style="background-image: url(&quot;http://i.imgur.com/jBfZq5A.jpg&quot;) ; background-size: cover" target="_blank"><br \><br /><br /><br /><br /><br /><br /><br /><br />' +
 			'<br \><center><font size=3 color=#00FF40><b>A Fraud</b> - <i>Izzaro Flame</i></font><br \>' +
 			'<audio src="https://dl.pushbulletusercontent.com/Pl3dDtxvFMbdAn6IZQHAF6gxFluLoAhA/A%20Fraud%20-%20%20A%20Big%20Fraud.mp3" controls="" loop style="width: 100% ; border: 2px solid #58FAF4 ; background-color: #00000a" target="_blank"></audio></center><br \><br \>');
+	},
+	
+	getrekt: 'rekt',
+	rekt: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><img src = "https://lh3.googleusercontent.com/-6BDWwnjS9Cs/VajnpfmQumI/AAAAAAAAD7s/u1hZqlM09s0/w500-h200/img-3516109-1-Mc5cCal.gif">' +
+			'<audio autoplay controls style = "border: 2px solid red; background: black; width: 100%" src = "http://www.myinstants.com/media/sounds/wombo-combo_2.mp3">' +
+			'</audio></center>');
 	},
 	
 	ichibannotakaramono: function (target, room, user) {

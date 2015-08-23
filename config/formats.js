@@ -34,7 +34,6 @@ exports.Formats = [
 					isMono = false;
 					break;
 				}
-
                 typeTable = typeTable.intersect(template.types);
                 if (!typeTable.length) {
 					isMono = false;
