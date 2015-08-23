@@ -732,9 +732,8 @@ exports.commands = {
 			'-<b>3rd <font color= FF0000>Waffles</font></b> (Fire)<br />' +
 			'</div>');
 	},
-	
-	donate: 'donation',
-	donation: function (target, room, user) {
+
+	totesnoteasymoney: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
 			'<a href = "https://www.paypal.com/au/cgi-bin/webscr?cmd=_flow&SESSION=txF-f1lkPkrs1RLQ2TfUzeIXDI176kExf_PLDSQyoUynCjAHc5EIdQTJgPO&dispatch=5885d80a13c0db1f8e263663d3faee8d5c97cbf3d75cb63effe5661cdf3adb6d"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
