@@ -35,7 +35,7 @@ var Dice = (function () {
 			if (p1.getAlts().indexOf(user.userid) > -1) return self.sendReply('Your alt \'' + p1.name + '\' has already joined this game of dice.');
 			
 			for (i in user.prevNames) {
-				if (pl.userid === i && i !== user.userid) return self.sendReply('Your have already joined this game of dice.');
+				if (p1.userid === i && i !== user.userid) return self.sendReply('Your have already joined this game of dice.');
 			}
 		}
 		this.players.push(user);

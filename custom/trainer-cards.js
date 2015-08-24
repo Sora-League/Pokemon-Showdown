@@ -59,7 +59,7 @@ exports.commands = {
 	bart: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b><font color = 07e1ed>∆Champion Bart∆</font></b></center></a><br />' +
-			'<center><i>"My pawn. My bishop. My rook. My knight. And worst of all, I\'ve lost my queen. But I’m still not in checkmate. Not yet anyway."</i></center> <br />' +
+			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\' "</i></center> <br />' +
 			'<b>Ace:</b> Weavile<br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'-Ubers Battle <br/>' +
@@ -754,6 +754,20 @@ exports.commands = {
 			'-<b>2nd <font color= ff00b6>Connor</font></b></b> (Psychic)<br />' +
 			'-<b>3rd <font color= FF0000>Waffles</font></b> (Fire)<br />' +
 			'</div>');
+	},
+
+	totesnoteasymoney: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
+			'<a href = "https://www.paypal.com/au/cgi-bin/webscr?cmd=_flow&SESSION=txF-f1lkPkrs1RLQ2TfUzeIXDI176kExf_PLDSQyoUynCjAHc5EIdQTJgPO&dispatch=5885d80a13c0db1f8e263663d3faee8d5c97cbf3d75cb63effe5661cdf3adb6d"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
+			'Remember to mention your username when you leave a note with your donation, or we won\'t know who donated. To all of those who\'ve donated or plan on donating, thank you! We really appreciate it!</center></font><br><br>' +
+			'<b>Donation benefits:</b><br>' +
+			'<strong>$1 or more:</strong>' +
+			'<li>Earns you the Server Donator badge, which will be displayed on your trainer card.' +
+			'<li>Allows you to set a custom username colour visible in chats, but not the userlist.<br><br>' +
+			'<strong>$5 or more:</strong>' +
+			'<li>All of the above^' +
+			'<li>A red <span style = "background: rgba(255, 26, 26, 0.5);">userlist highlight color</span>, visible on the Lobby\'s userlist');
 	},
 
 	ateam: 'adminteam',
