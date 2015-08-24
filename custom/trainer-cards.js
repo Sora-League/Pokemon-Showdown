@@ -582,14 +582,16 @@ exports.commands = {
 
 	terror2: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center><b><font size="4" color="82127a">Terror</font></b></center><br>' +
+		this.sendReply('|html|<div style = "padding: 7px; border: 2px solid black; color: white; background: radial-gradient(circle, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed);"><center><b><font size="4" color="82127a">Terror</font></b></center><br>' +
 			'<center><i>"Looking for dank memes"</i> </center><br /><br />' +
 			'<b>Ace: </b>Mega Sharpedo/Garchomp<br />' +
 			'<b>Skilled at: </b>Being incredibly annoying, Balanced Hackmons, Certain Monotypes.<br />' +
 			'<b>Achievements: </b><br />' +
-			'- Best Ex-Electric & Ground Leader of Sora<br />' +
-			'- Current Water Leader of Sora<br />' +
-			'- Ex-Balanced Hackmons Frontier of Yagagadrazeel<br />' +
+			'<li>Best Ex-Electric & Ground Leader of Sora<br />' +
+			'<li>Current Water Leader of Sora<br />' +
+			'<li>Ex-Balanced Hackmons Frontier of Yagagadrazeel<br />' +
+			'<li>Achieved Top 10 in the Balanced Hackmons ladder<br />' +
+			'<li>Achieved Top 25 in the Ubers ladder<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">');
 	},
 
