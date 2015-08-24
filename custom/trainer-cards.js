@@ -222,7 +222,7 @@ exports.commands = {
 	srewop: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Elite Frontier <b>Srewop</b>∆<br />' +
-			'<i>"I think you\'re in Gotham, \'cause the bat is coming for you..."</i> <br />' +
+			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
 			'<b>Symbol:</b> SumTingWong<br />' +
 			'<b>Ace:</b> Golbat <br />' +
 			'<b>Battle Rules:</b> <br/>' +
@@ -233,17 +233,17 @@ exports.commands = {
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
 
-	tempest: function (target, room, user) {
+	jerattata: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Tempest</b>∆<br />' +
-			'<i>"Winning comes first. Caring about other people\'s opinions of your strategies comes never." ~ Amarillo</i> <br />' +
-			'<b>Symbol:</b> World <br />' +
-			'<b>Ace:</b> Pikachu<br />' +
+		this.sendReplyBox('∆Frontier <b>Jerattata</b>∆<br />' +
+			'<i>"Decide which of the two options is harder, and do the other. You might enjoy the battle."</i> <br />' +
+			'<b>Symbol:</b> Foresight <br />' +
+			'<b>Ace:</b> All<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-Cosplay VGC \'15 <br />' +
-			'-Teams must have the same species and forms as a fictional character in the Pokemon games, anime, or manga e.g. a team based on Red\'s with Pikachu, Lapras, Snorlax, Venusaur, Charizard, and Blastoise <br />' +
-			'-EV spreads, movesets, gender, and items (including Mega Stones) can be changed <br />' +
-			'-Ash teams are not allowed <br />' + seen('frontiertempest'));
+			'-Challenger picks either a Tier/Meta <b>or</b> Battle Rule (within reason) <br />' +
+			'-Jeratt picks either a Tier/Meta or Battle Rule depending on which the challenger picks. <br />'+
+			'-Both the Tier/Meta and Battle rule that are decided upon are combined and are used for the battle.<br />'+
+			'-Monotype battles are banned. <br />' + seen('frontierjerattata'));
 	},
 
 	zachary: function (target, room, user) {
@@ -592,7 +592,7 @@ exports.commands = {
 			'- Ex-Balanced Hackmons Frontier of Yagagadrazeel<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">');
 	},
-	
+
 	swearwip: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReply('|html|<table style = "color: white; width: 100%; padding: 0px 10px 10px 10px; background: linear-gradient(45deg, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654);">' +
@@ -615,6 +615,7 @@ exports.commands = {
 			'style = "width: 100%; background: linear-gradient(135deg, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff); box-shadow: 0px 0px 15px #d170ff;"></td></tr>' +
 			'</div>');
 	},
+
 	////////////
 	//Music Cards
 	//////////////
