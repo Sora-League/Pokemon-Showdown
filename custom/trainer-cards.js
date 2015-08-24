@@ -240,7 +240,7 @@ exports.commands = {
 			'<b>Symbol:</b> Foresight <br />' +
 			'<b>Ace:</b> All<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-Challenger picks either a Tier/Meta or Battle Rule (within reason) <br />' +
+			'-Challenger picks either a Tier/Meta <b>or</b> Battle Rule (within reason) <br />' +
 			'-Jeratt picks either a Tier/Meta or Battle Rule depending on which the challenger picks. <br />'+
 			'-Both the Tier/Meta and Battle rule that are decided upon are combined and are used for the battle.<br />'+
 			'-Monotype battles are banned. <br />' + seen('frontierjerattata'));
