@@ -601,7 +601,7 @@ exports.commands = {
 			'<tr><td><center style = "text-shadow: 3px 3px 10px #000;"><b>Symbol:</b> SumTingWong<br><b>Battle Format:</b> RU Monotype<br>' +
 			'<b>Restrictions:</b><br><li>No Hazards<li>No Knock Off<br>' +
 			'<b>Ace:</b> Golbat<br>' +
-			'<img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/golbat-2.gif"></center></td>' +
+			'<img style = "margin: -5px" src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/golbat-2.gif"></center></td>' +
 			'<td style = "text-shadow: 0px 0px 8px #d87fff; box-shadow: 0px 0px 40px #000; background: rgba(0, 0, 0, 0.7); width: 200px; color: #e6b2ff; text-align: center;">' +
 			'<u><b><font size = 2>Achievements</font></b></u>' +
 			'<li style = "padding: 5px;">Elite Frontier of Sora' +
@@ -611,8 +611,8 @@ exports.commands = {
 			'<li style = "padding: 5px;">Sub/DD Lapras' + 
 			'<li style = "padding: 5px;">Doctor of Sora' +
 			'<li style = "padding: 5px;">GOLBAT MOTHER FUCKER</tr></center>' + 
-			'<tr><td colspan = 2><center><audio controls src = "https://dl.pushbulletusercontent.com/U6jcDqHbeUTxoZz8LKB3IgwK8u3970rA/Atmosphere-%20Findmuck.mp3" ' +
-			'style = "width: 100%; background: linear-gradient(135deg, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff); margin-top: 10px; box-shadow: 0px 0px 15px #d170ff;"></td></tr>' +
+			'<tr><td colspan = 2><center><font size = 2 style = "text-shadow: 0px 0px 15px #d170ff;"><i style = "color: rgba(0, 0, 0, 0.8);"><b><font size = 2>Pokémon Reborn:</font></b> Byxbysion Wasteland theme</i></font><audio controls src = "https://dl.pushbulletusercontent.com/U6jcDqHbeUTxoZz8LKB3IgwK8u3970rA/Atmosphere-%20Findmuck.mp3" ' +
+			'style = "width: 100%; background: linear-gradient(135deg, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff); box-shadow: 0px 0px 15px #d170ff;"></td></tr>' +
 			'</div>');
 	},
 	////////////
