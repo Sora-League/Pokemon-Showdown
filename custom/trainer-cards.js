@@ -222,7 +222,7 @@ exports.commands = {
 	srewop: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Elite Frontier <b>Srewop</b>∆<br />' +
-			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
+			'<i>"I think you\'re in Gotham, \'cause the bat is coming for you..."</i> <br />' +
 			'<b>Symbol:</b> SumTingWong<br />' +
 			'<b>Ace:</b> Golbat <br />' +
 			'<b>Battle Rules:</b> <br/>' +
@@ -591,6 +591,29 @@ exports.commands = {
 			'- Current Water Leader of Sora<br />' +
 			'- Ex-Balanced Hackmons Frontier of Yagagadrazeel<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">');
+	},
+	
+	swearwip: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReply('|html|<table style = "color: white; width: 100%; padding: 0px 10px 10px 10px; background: linear-gradient(45deg, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654);">' +
+			'<tr><td colspan = "2"><center><br><font size = 3 style = "margin-top: 10px; font-weight: bold; text-shadow: 3px 3px 10px black;">∆Srewop∆</font><br>' +
+			'<i style = "text-shadow: 3px 3px 10px black;">"I think you\'re in Gotham, \'cause the bat is coming for you..."</i><br><br></td></tr>' + 
+			'<tr><td><center style = "text-shadow: 3px 3px 10px #000;"><b>Symbol:</b> SumTingWong<br><b>Battle Format:</b> RU Monotype<br>' +
+			'<b>Restrictions:</b><br><li>No Hazards<li>No Knock Off<br>' +
+			'<b>Ace:</b> Golbat<br>' +
+			'<img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/golbat-2.gif"></center></td>' +
+			'<td style = "text-shadow: 0px 0px 8px #d87fff; box-shadow: 0px 0px 40px #000; background: rgba(0, 0, 0, 0.7); width: 200px; color: #e6b2ff; text-align: center;">' +
+			'<u><b><font size = 2>Achievements</font></b></u>' +
+			'<li style = "padding: 5px;">Elite Frontier of Sora' +
+			'<li style = "padding: 5px;">Ranked Top 20 on the PU ladder' +
+			'<li style = "padding: 5px;">Ranked Top 400 on the RU ladder<br><br>' +
+			'<u><b><font size = 2>Known for</font></b></u>' +
+			'<li style = "padding: 5px;">Sub/DD Lapras' + 
+			'<li style = "padding: 5px;">Doctor of Sora' +
+			'<li style = "padding: 5px;">GOLBAT MOTHER FUCKER</tr></center>' + 
+			'<tr><td colspan = 2><center><audio controls src = "https://dl.pushbulletusercontent.com/U6jcDqHbeUTxoZz8LKB3IgwK8u3970rA/Atmosphere-%20Findmuck.mp3" ' +
+			'style = "width: 100%; background: linear-gradient(135deg, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff); margin-top: 10px; box-shadow: 0px 0px 15px #d170ff;"></td></tr>' +
+			'</div>');
 	},
 	////////////
 	//Music Cards

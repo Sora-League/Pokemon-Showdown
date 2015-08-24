@@ -374,9 +374,11 @@ exports.commands = {
 		var self = this;
 		require('request').get(url + sprite + alt + '.gif').on('error', function () {
 			self.sendReply('The sprite for ' + sprite + alt + ' is unavailable.');
+			room.update();
 		}).on('response', function (response) {
 			if (response.statusCode == 404) return self.sendReply('The sprite for ' + sprite + alt + ' is currently unavailable.');
 			self.sendReply('|html|<img src = "' + url + sprite + alt + '.gif">');
+			room.update();
 		});
 	},
 	
@@ -608,7 +610,7 @@ exports.commands = {
 			if (result) user.makeChallenge(targetUser, target);
 		});
 	},
-	
+
 	donate: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
