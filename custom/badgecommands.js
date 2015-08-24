@@ -1,37 +1,32 @@
-var badgeList = {parasect:'Parasect', aegislash:'Aegislash', meowth:'Meowth', golduck:'Golduck', starly:'Starly', 
-            staravia:'Staravia', staraptor:'Staraptor', flannery:'Flannery', skyla:'Skyla', volkner:'Volkner', brock:'Brock', 
-            bertha:'Bertha', koga:'Koga', caitlin:'Caitlin', brandon:'Brandon', lucy:'Lucy', noland:'Noland', smeargle:'Smeargle', 
-            porygonz:'Porygon-Z', egg:'Egg', meme:'ℳℯღℯ', gym:"Gym Badge Collector", e4:"Elite Four Conqueror", frontier:"Frontier Symbol Obtainer",
-			gymrank:"Gym Leader Rank", e4rank:"Elite Four Rank", frontierrank:"Frontier Rank", efrontierrank:"Elite Frontier Rank"};
-var badgeDetails = {
-	parasect: '<img src="http://i.imgur.com/aJY3eKg.png" title="Parasect: Founder of Sora">',
-	aegislash: '<img src="http://i.imgur.com/aJY3eKg.png" title="Aegislash: Winner of a major Sora tournament">',
-	meowth: '<img src="http://i.imgur.com/WmfgOXf.png" title="Meowth: Server Donator">',
-	golduck: '<img src="http://i.imgur.com/tMLknqb.png" title="Golduck the Meta Breaker: Reached the Hall of Fame">',
-	starly: '<img src="http://i.imgur.com/zaLhq1k.png" title="Starly: One Year on Sora">',
-	staravia: '<img src="http://i.imgur.com/2UmjiLt.png" title="Staravia Badge: Two Years on Sora">',
-	staraptor: '<img src="http://i.imgur.com/5g3lvwi.png" title="Staraptor Badge: Three Years on Sora">',
-	gym: '<img src="http://i.imgur.com/tnkW9J9.png" title="Gym Badge Collector: Obtained all 18 Gym Badges">',
-	e4: '<img src="http://i.imgur.com/y21ENWF.png" title="Elite Four Conqueror: Cleared the Elite Four">',
-	frontier: '<img src="http://i.imgur.com/RFkf6oV.png" title="Obtained all Frontier Symbols">',
-	bertha: '<img src="http://i.imgur.com/MDcdCka.png" title="Bertha: 5 E4 Defends">',
-	koga: '<img src="http://i.imgur.com/2eC21HT.png" title="Koga: 10 E4 Defends">',
-	caitlin: '<img src="http://i.imgur.com/fbbyoaR.png" title="Caitlin Badge: 20  E4 Defends">',
-	flannery: '<img src="http://i.imgur.com/0ScjBhf.png" title="Flannery Badge: 10 Badge Defends">',
-	skyla: '<img src="http://i.imgur.com/HMGmJ2d.png" title="Skyla Badge: 20 Badge Defends">',
-	volkner: '<img src="http://i.imgur.com/Vobc91V.png" title="Volkner Badge: 35 Badge Defends">',
-	brock: '<img src="http://i.imgur.com/fsyWAdn.gif" title="Brock Badge: 50 Badge Defends">',
-	gymrank: '<img src="http://i.imgur.com/ELFPzW8.png" title = "Achieved Gym Leader Status">',
-	e4rank: '<img src="http://i.imgur.com/QtECCD9.png" title = "Achieved Elite 4 Status">',
-	frontierrank: '<img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status">',
-	efrontierrank: '<img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status">',
-	brandon: '<img src="http://i.imgur.com/875rXde.png" title="Brandon Badge: 7 Symbol Defends">',
-	lucy: '<img src="http://i.imgur.com/djszmLN.png" title="Lucy Badge: 15 Symbol Defends">',
-	noland: '<img src="http://i.imgur.com/tNKAuzy.png" title="Noland Badge: 30 Symbol Defends">',
-	meme: '<img src="http://i.imgur.com/XWAudeE.gif" title="I\'m a dank memer">',
-	egg: '<img src="http://i.imgur.com/dLyGYK5.png" title="This user is an egg without trying">',
-	porygonz: '<img src="http://i.imgur.com/bJrRxB8.png" title="Porygon-Z: Broke the server while trying to repair it, good job mate">',
-	smeargle: '<img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Created a work of art for Sora">'
+var badgeList = {
+	parasect: ['Parasect', '<img src="http://i.imgur.com/aJY3eKg.png" title="Parasect: Founder of Sora"'],
+	aegislash: ['Aegislash', '<img src="http://i.imgur.com/tXkJKKU.png" title="Aegislash: Winner of a major Sora tournament"'],
+	meowth: ['Meowth', '<img src="http://i.imgur.com/a2X7EY3.png" title="Meowth: Server Donator"'],
+	golduck: ['Golduck', '<img src="http://i.imgur.com/QRSsHWD.png" title="Golduck the Meta Breaker: Reached the Hall of Fame"'],
+	starly: ['Starly', '<img src="http://i.imgur.com/LiH48HR.png" title="Starly: One Year on Sora"'],
+	staravia: ['Staravia', '<img src="http://i.imgur.com/keVLipY.png" title="Staravia Badge: Two Years on Sora"'],
+	staraptor: ['Staraptor', '<img src="http://i.imgur.com/JeamPIZ.png" title="Staraptor Badge: Three Years on Sora"'],
+	gym: ['Gym Badge Collector', '<img src="http://i.imgur.com/LlbC6np.png" title="Gym Badge Collector: Obtained all 18 Gym Badges"'],
+	e4: ['Elite Four Conqueror', '<img src="http://i.imgur.com/u0vyZtn.png" title="Elite Four Conqueror: Cleared the Elite Four"'],
+	frontier: ['Frontier Symbol Obtainer', '<img src="http://i.imgur.com/ZMfqdIl.png" title="Frontier Symbol Obtainer: Obtained all Frontier Symbols"'],
+	bertha: ['Bertha', '<img src="http://i.imgur.com/VjFdlzz.png" title="Bertha Badge: 5 E4 Defends"'],
+	koga: ['Koga', '<img src="http://i.imgur.com/DeMzNfU.png" title="Koga Badge: 10 E4 Defends"'],
+	caitlin: ['Caitlin', '<img src="http://i.imgur.com/Svyy5rD.png" title="Caitlin Badge: 20 E4 Defends"'],
+	flannery: ['Flannery', '<img src="http://i.imgur.com/rfGR9uC.png" title="Flannery Badge: 10 Badge Defends"'],
+	skyla: ['Skyla', '<img src="http://i.imgur.com/pWm24fS.png" title="Skyla Badge: 20 Badge Defends"'],
+	volkner: ['Volkner', '<img src="http://i.imgur.com/8AQYYZ7.png" title="Volkner Badge: 35 Badge Defends"'],
+	brock: ['Brock', '<img src="http://i.imgur.com/hMg0cgf.gif" title="Brock Badge: 50 Badge Defends"'],
+	gymrank: ['Gym Leader Rank', '<img src="http://i.imgur.com/CqLjnZB.png" title = "Achieved Gym Leader Status"'],
+	e4rank: ['Elite Four Rank', '<img src="http://i.imgur.com/vBBcMc4.png" title = "Achieved Elite 4 Status"'],
+	frontierrank: ['Frontier Rank', '<img src="http://i.imgur.com/x9xJbkQ.png" title="Achieved Frontier Status"'],
+	efrontierrank: ['Elite Frontier Rank', '<img src="http://i.imgur.com/x2xEGgc.png" title="Achieved Elite Frontier Status"'],
+	brandon: ['Brandon', '<img src="http://i.imgur.com/AMlbLMU.png" title="Brandon Badge: 7 Symbol Defends"'],
+	lucy: ['Lucy', '<img src="http://i.imgur.com/vc0HjNg.png" title="Lucy Badge: 15 Symbol Defends"'],
+	noland: ['Noland', '<img src="http://i.imgur.com/nSP68YI.png" title="Noland Badge: 30 Symbol Defends"'],
+	meme: ['ℳℯღℯ', '<img src="http://i.imgur.com/VG0RWYS.gif" title="I\'m a dank memer"'],
+	egg: ['Egg', '<img src="http://i.imgur.com/8vrprMK.png" title="This user is an egg without trying"'],
+	porygonz: ['Porygon-Z', '<img src="http://i.imgur.com/3iPLvlj.png" title="Porygon-Z: Broke the server while trying to repair it. Good job mate"'],
+	smeargle: ['Smeargle', '<img src="http://i.imgur.com/1JYlYS0.png" title="Smeargle the Creator: Created a work of art for Sora"']
 };
 
 var comm = {
@@ -71,15 +66,20 @@ var comm = {
 		var targetUser = target[0].trim();
         var badge = toId(target[1]);
         if (!badge || !toId(targetUser)) return this.sendReply('|raw|/badge ' + cmd + ' <i>User</i>, <i>Badge Name</i> - Gives a specified user the specified badge.');
-        if (!Users.get(targetUser) && cmd !== 'forcegive') return this.sendReply('The user \'' + targetUser + '\' was not found. If you would still like to give this user a badge, use /forcegivebadge or /badge forcegive instead.');
+        if ((!Users.get(targetUser) || !Users.get(targetUser).connected) && cmd !== 'forcegive') return this.sendReply('The user \'' + targetUser + '\' was not found. If you would still like to give this user a badge, use /forcegivebadge or /badge forcegive instead.');
         badge.replace(/badge/g, '');
         
+		var name = (Users.getExact(targetUser) ? Users.getExact(targetUser).name : targetUser);
         if (!(badge in badgeList)) return this.sendReply('That is not a valid badge.');
-        Core.write('badges', toId(targetUser), badgeDetails[badge], undefined, badge);
+		if (Core.read('badges', toId(targetUser), badge)) return this.sendReply(name + ' already has the ' + badgeList[badge][0] + ' badge!');
+        Core.write('badges', toId(targetUser), badgeList[badge][1] + ' width="80" height="80">', null, badge);
         if (Users.get(targetUser) && Users.get(targetUser).connected && cmd !== 'forcegive') {
-            Users.get(targetUser).send('Congratulations! You have been awarded the ' + badgeList[badge] + ' Badge!');
+			//I didn't feel very creative while making this. Not that I do even otherwise though
+            Users.get(targetUser).popup('|html|<center><h3>Congratulations! You have earned the ' + badgeList[badge][0] + ' Badge!</h3><br>' +
+				badgeList[badge][1] + ' width="200" height="200"><br>' + 
+				'<audio controls autoplay src = "https://dl.pushbulletusercontent.com/bzHXO5J6rNUigY3uwx1bNx4jzE7kXHfJ/megastone.mp3"><br>');
         }
-        this.sendReply('You have successfully given ' + (Users.get(targetUser) ? Users.get(targetUser).name : targetUser) + ' the ' + badgeList[badge] + ' Badge.');
+        this.sendReply('You have successfully given ' + name + ' the ' + badgeList[badge][0] + ' Badge.');
     },
 	
 	remove: 'take',
@@ -92,13 +92,13 @@ var comm = {
         badge.replace(/badge/g, '');
 		
 		if (!(badge in badgeList)) return this.sendReply('That is not a valid badge.');
-		var name = Users.get(targetUser) ? Users.get(targetUser).name : targetUser;
+		var name = Users.getExact(targetUser) ? Users.getExact(targetUser).name : targetUser;
 		if (!Core.read('badges', toId(targetUser))) return this.sendReply("User " + name + " doesn't have any badges.");
-		if (!Core.read('badges', toId(targetUser), badge)) return this.sendReply(name + " doesn't have the " + badgeList[badge] + " badge.");
+		if (!Core.read('badges', toId(targetUser), badge)) return this.sendReply(name + " doesn't have the " + badgeList[badge][0] + " badge.");
 		
 		Core.Delete('badges', toId(targetUser), badge);
-		if (Users.get(name)&& Users.get(name).connected) Users.get(name).send('The ' + badgeList[badge] + ' has been removed from you.');
-		this.sendReply('You have successfully removed the ' + badgeList[badge] + ' badge from ' + name + '.');
+		if (Users.get(name) && Users.get(name).connected) Users.get(name).send('The ' + badgeList[badge][0] + ' badge has been removed from you.');
+		this.sendReply('You have successfully removed the ' + badgeList[badge][0] + ' badge from ' + name + '.');
 	},
 	
 	removeall: 'takeall',
