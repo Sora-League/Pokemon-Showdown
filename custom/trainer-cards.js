@@ -592,8 +592,9 @@ exports.commands = {
 			'<li>Ex-Balanced Hackmons Frontier of Yagagadrazeel<br />' +
 			'<li>Achieved Top 10 in the Balanced Hackmons ladder<br />' +
 			'<li>Achieved Top 25 in the Ubers ladder<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">');
-	},
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">'+
+			getBadges('e4terror'));
+			},
 
 	swearwip: function (target, room, user) {
 		if (!this.canBroadcast()) return;
