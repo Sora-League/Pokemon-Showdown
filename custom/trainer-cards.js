@@ -153,9 +153,9 @@ exports.commands = {
 		this.sendReplyBox('∆E4 <b>Terror</b>∆<br />' +
 			'<i>"Better get out of the water because the waves are coming for you."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> No idea<br />' +
+			'<b>Ace:</b> Mega Sharpedo<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + 
+			'-No Hazard<br />' + 
 			seen('e4terror') +
 			getBadges('e4terror'));
 	},
