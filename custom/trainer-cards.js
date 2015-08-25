@@ -762,7 +762,7 @@ exports.commands = {
 	donate: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
-			'<a href = "https://www.paypal.com/au/cgi-bin/webscr?cmd=_flow&SESSION=txF-f1lkPkrs1RLQ2TfUzeIXDI176kExf_PLDSQyoUynCjAHc5EIdQTJgPO&dispatch=5885d80a13c0db1f8e263663d3faee8d5c97cbf3d75cb63effe5661cdf3adb6d"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
+			'<a href = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q3B5Z6STF3EA4&lc=AU&item_name=Sora&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
 			'Remember to mention your username when you leave a note with your donation, or we won\'t know who donated. To all of those who\'ve donated or plan on donating, thank you! We really appreciate it!</center></font><br><br>' +
 			'<b>Donation benefits:</b><br>' +
 			'<strong>$1 or more:</strong>' +
