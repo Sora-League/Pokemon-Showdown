@@ -1,5 +1,4 @@
 var badgeList = {
-<<<<<<< HEAD
 	parasect: ['Parasect', '<img src="http://oi61.tinypic.com/2nkoyyu.jpg" title="Parasect: Founder of Sora">', '<img src = "http://oi61.tinypic.com/2nkoyyu.jpg"'],
 	aegislash: ['Aegislash', '<img src="http://i.imgur.com/aJY3eKg.png" title="Aegislash: Winner of a major Sora tournament">', '<img src = "http://i.imgur.com/tXkJKKU.png"'],
 	meowth: ['Meowth', '<img src="http://i.imgur.com/WmfgOXf.png" title="Meowth: Server Donator">', '<img src = "http://i.imgur.com/a2X7EY3.png"'],
