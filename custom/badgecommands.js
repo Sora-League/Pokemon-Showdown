@@ -33,7 +33,7 @@ var comm = {
 	'': 'info',
 	info: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><b><font size= 4>Badges</b></font></a><br />' +
+		this.sendReplyBox('<a><center><b><font size= 4>Badges</b></font></center></a><br />' +
 			'<b>What are Badges:</b><br />' +
 			'Badges are prestigious achievements awarded on the user\'s badge case and might come with a buck reward.<br />' +
 			'They are currently awarded for league and community activity and vary in difficulty to achieve.<br />' +
@@ -43,7 +43,7 @@ var comm = {
 			'<br />' +
 			'<blink><font color=#FF0000><b>Notes:</b></font></blink><br />' +
 			'- Your badges are shown by the command /badgecase<br />' +
-			'- You may request for your badges to be shown on your Trainer Card'+
+			'- You may request for your badges to be shown on your Trainer Card<br />'+
 			'<font color=#006600>- <b>Hover over a badge for details<br />' +
 			'- Click on a badge for an enlarged image and further information</b></font><br />' +
 			'- Test your skills above');
