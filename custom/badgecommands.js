@@ -33,17 +33,18 @@ var comm = {
 	'': 'info',
 	info: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><font size= 4><marquee><b>Badges</b></marquee></font></a><br />' +
+		this.sendReplyBox('<a><b><font size= 4>Badges</b></font></a><br />' +
 			'<b>What are Badges:</b><br />' +
-			'Badges are prestigious achievements awarded on the user\'s trainer card and usually come with varying bucks award.<br />' +
-			'They are awarded for league activity and vary in difficulty.<br />' +
-			'A full list of badges can be found <a href="http://soraleague.weebly.com/badges">HERE</a> <br />' +
+			'Badges are prestigious achievements awarded on the user\'s badge case and might come with a buck reward.<br />' +
+			'They are currently awarded for league and community activity and vary in difficulty to achieve.<br />' +
+			'A full list of badges can be found <a href="http://sora.cu.cc/badges.html">HERE</a> <br />' +
 			'<br />' +
-			'<details><summary><center><b>Test your skills here</b></center></summary><center><a href="http://soraleague.weebly.com/badges.html#parasect"><img src="http://oi61.tinypic.com/2nkoyyu.jpg" title="Parasect the God Above All"></a><br /></center></details>' +
+			'<details><summary><b>User\'s Badges</b></center></summary><center><a href="http://soraleague.weebly.com/badges.html#parasect"><img src="http://oi61.tinypic.com/2nkoyyu.jpg" title="Parasect the God Above All"></a><br /></details>' +
 			'<br />' +
 			'<blink><font color=#FF0000><b>Notes:</b></font></blink><br />' +
-			'- You MUST have a trainer card<br />' +
-			'<font color=#006600>- <b>Hover over a badge for details<br />' +
+			'- Your badges are shown by the command /badgecase<br />' +
+			'- You may request for your badges to be shown on your Trainer Card'
+			'<font color=#006600>- <b>Hover over a badge for details</b><br />' +
 			'- Click on a badge for an enlarged image and further information</b></font><br />' +
 			'- Test your skills above');
 	},
