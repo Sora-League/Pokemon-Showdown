@@ -44,7 +44,7 @@ var comm = {
 			'<blink><font color=#FF0000><b>Notes:</b></font></blink><br />' +
 			'- Your badges are shown by the command /badgecase<br />' +
 			'- You may request for your badges to be shown on your Trainer Card'
-			'<font color=#006600>- <b>Hover over a badge for details</b><br />' +
+			'<font color=#006600>- <b>Hover over a badge for details<br />' +
 			'- Click on a badge for an enlarged image and further information</b></font><br />' +
 			'- Test your skills above');
 	},
