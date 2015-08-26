@@ -459,15 +459,28 @@ exports.commands = {
 	abtth: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><b><font size="4" color="03b206">ABootToTheHead</font></b></center><br>' +
-			'<center><i>"Stardust-weaved ARiA, please deliver this melody for me."</i> </center><br /><br />' +
+			'<center><i>"Stardust-weaved ARiA, please keep this melody going."</i></center><br /><br />' +
 			'<b>Ace: </b>Scizor and Whimsicott<br />' +
 			'<b>Favorite Pokemon: </b>Typhlosion and Scizor<br />' +
 			'<b>Preferred tiers: </b>VGC, Ubers, OU <br />' +
 			'<b>Known for: </b>VoltTurn and Whimsistall shenanigans<br />' +
-			'<b>Achievements: </b>Ex-Elite Frontier, ex-Elite Four<br /><br />' +
-			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center> <br />' +getBadges('aboottothehead'));
+			'<b>Achievements: </b>Ex-Elite Frontier, ex-Elite Four<br>' +
+			'<b>Affiliation:</b> Cheeky Nandos Squad<br><br>' +
+			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center> <br />' 
+			+ getBadges('aboottothehead') + '<br>' + 
+			'<center><img src = "http://i.imgur.com/ty6OYpg.png" width = "100" height = "100"> <img src = "http://i.imgur.com/YoDeO4O.png" width = "100" height = "100"></center>');
 	},
-
+	
+	arani: function (target, room, user) {
+		this.sendReplyBox('<center><b><font color = "#331D81" size = 3>∆Arani∆</font></b><br>' + 
+			'<i>"Rain teams are old school? Well... screw you."</i><br><br>' +
+			'<b>Skilled in:</b> Gen 5 OU - was consistently in the Top 10 on the global OU ladder.<br>' +
+			'<b>History:</b> First new Champ of Sora - ressurrected it along with Onyx.<br>' +
+			'<b>Present:</b> Serving in the defense force - Occasionally comes online.<br>' +
+			seen('sorarani') + '<br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/keldeo-resolute.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/thundurus-therian.gif">');
+	},
+	
 	arjunb: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><input type="image" src="http://i.imgur.com/bnCFCm5.png"><div align="center"><br />' +
@@ -545,11 +558,10 @@ exports.commands = {
 		'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#efrontier"><img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a></details> <br />');
 	},
 
-	jaddu: function (target, room, user) {
+	nightanglet: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center><img src="http://i.imgur.com/GHnqgjH.png"></center><br />' +
-			'<i><font color="blue"><b>Quote:Who am I? Well,I am your Worst Nightmare<br>' +
-			'Ace=Infernape(CR Ace:Rhydon)<br />' +
+		this.sendReplyBox('<center><i><font color="blue"><h1>Nightanglet</h1></font></center><br>' +
+			'<font color = "blue"><b>Ace: Infernape(CR Ace:Rhydon)<br />' +
 			'Custom Rules:<br />' +
 			'- No poke above the base speed of 40<br />' +
 			'- No Hazards<br />' +
@@ -573,23 +585,7 @@ exports.commands = {
 			'<a href="http://soraleague.weebly.com/badges.html#smeargle"><img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Resident Artist of Sora, Metagame Creator: CC, Priomons, Incl Weather, PokeSandbox"></a><a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#badges"><img src="http://i.imgur.com/tnkW9J9.png" title="Badge Collector: Defeat all 18 Gym Leaders"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#porygon"><img src="http://i.imgur.com/bJrRxB8.png" title="Broke the server while trying to repair it, good job mate"></a> </details><br />' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
-
-	terror2: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReply('|html|<div style = "padding: 7px; border: 2px solid black; color: white; background: radial-gradient(circle, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed);"><center><b><font size="4" color="82127a">Terror</font></b></center><br>' +
-			'<center><i>"Looking for dank memes"</i> </center><br /><br />' +
-			'<b>Ace: </b>Mega Sharpedo/Garchomp<br />' +
-			'<b>Skilled at: </b>Being incredibly annoying, Balanced Hackmons, Certain Monotypes.<br />' +
-			'<b>Achievements: </b><br />' +
-			'<li>Best Ex-Electric & Ground Leader of Sora<br />' +
-			'<li>Current Water Leader of Sora<br />' +
-			'<li>Ex-Balanced Hackmons Frontier of Yagagadrazeel<br />' +
-			'<li>Achieved Top 10 in the Balanced Hackmons ladder<br />' +
-			'<li>Achieved Top 25 in the Ubers ladder<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">'+
-			getBadges('e4terror'));
-			},
-
+	
 	swearwip: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReply('|html|<table style = "color: white; width: 100%; padding: 0px 10px 10px 10px; background: linear-gradient(45deg, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654);">' +
@@ -611,6 +607,22 @@ exports.commands = {
 			'<tr><td colspan = 2><center><font size = 2 style = "text-shadow: 0px 0px 15px #d170ff;"><i style = "color: rgba(0, 0, 0, 0.8);"><b><font size = 2>Pokémon Reborn:</font></b> Byxbysion Wasteland theme</i></font><audio controls src = "https://dl.pushbulletusercontent.com/U6jcDqHbeUTxoZz8LKB3IgwK8u3970rA/Atmosphere-%20Findmuck.mp3" ' +
 			'style = "width: 100%; background: linear-gradient(135deg, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff); box-shadow: 0px 0px 15px #d170ff;"></td></tr>' +
 			'</div>');
+	},
+
+	terror2: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReply('|html|<div style = "padding: 7px; border: 2px solid black; color: white; background: radial-gradient(circle, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed);"><center><b><font size="4" color="82127a">Terror</font></b></center><br>' +
+			'<center><i>"Looking for dank memes"</i> </center><br /><br />' +
+			'<b>Ace: </b>Mega Sharpedo/Garchomp<br />' +
+			'<b>Skilled at: </b>Being incredibly annoying, Balanced Hackmons, Certain Monotypes.<br />' +
+			'<b>Achievements: </b><br />' +
+			'<li>Best Ex-Electric & Ground Leader of Sora<br />' +
+			'<li>Current Water Leader of Sora<br />' +
+			'<li>Ex-Balanced Hackmons Frontier of Yagagadrazeel<br />' +
+			'<li>Achieved Top 10 in the Balanced Hackmons ladder<br />' +
+			'<li>Achieved Top 25 in the Ubers ladder<br />' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">'+
+			getBadges('e4terror'));
 	},
 
 	////////////
