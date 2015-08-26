@@ -17,7 +17,7 @@ var badgeList = {
 	volkner: ['Volkner', '<img src="http://i.imgur.com/8AQYYZ7.png" title="Volkner Badge: 35 Badge Defends">', '<img src = "http://i.imgur.com/Vobc91V.png"'],
 	brock: ['Brock', '<img src="http://i.imgur.com/hMg0cgf.gif" title="Brock Badge: 50 Badge Defends">', '<img src = "http://i.imgur.com/fsyWAdn.gif"'],
 	gymrank: ['Gym Leader Rank', '<img src="http://i.imgur.com/ELFPzW8.png" title = "Achieved Gym Leader Status">', '<img src = "http://i.imgur.com/CqLjnZB.png"'],
-	e4rank: ['Elite Four Rank', '<img src="http://i.imgur.com/QtECCD9.png" title = "Achieved Elite 4 Status">', '<img src = "http://i.imgur.com/vBBcMc4.png">'],
+	e4rank: ['Elite Four Rank', '<img src="http://i.imgur.com/QtECCD9.png" title = "Achieved Elite 4 Status">', '<img src = "http://i.imgur.com/vBBcMc4.png"'],
 	frontierrank: ['Frontier Rank', '<img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status">', '<img src = "http://i.imgur.com/x9xJbkQ.png">'],
 	efrontierrank: ['Elite Frontier Rank', '<img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status"', '<img src = "http://i.imgur.com/x2xEGgc.png"'],
 	brandon: ['Brandon', '<img src="http://i.imgur.com/875rXde.png" title="Brandon Badge: 7 Symbol Defends">', '<img src = "http://i.imgur.com/AMlbLMU.png"'],
@@ -26,7 +26,7 @@ var badgeList = {
 	meme: ['ℳℯღℯ', '<img src="http://i.imgur.com/XWAudeE.gif" title="I\'m a dank memer">', '<img src = "http://i.imgur.com/VG0RWYS.gif"'],
 	egg: ['Egg', '<img src="http://i.imgur.com/dLyGYK5.png" title="This user is an egg without trying">', '<img src = "http://i.imgur.com/8vrprMK.png"'],
 	porygonz: ['Porygon-Z', '<img src="http://i.imgur.com/bJrRxB8.png" title="Porygon-Z: Broke the server while trying to repair it. Good job mate"', '<img src = "http://i.imgur.com/3iPLvlj.png"'],
-	smeargle: ['Smeargle', '<img src="http://i.imgur.com/1JYlYS0.png" title="Smeargle the Creator: Created a work of art for Sora"', '<img src = "http://i.imgur.com/A8h3FJN.png"']
+	smeargle: ['Smeargle', '<img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Created a work of art for Sora"', '<img src = "http://i.imgur.com/1JYlYS0.png"']
 };
 
 var comm = {
