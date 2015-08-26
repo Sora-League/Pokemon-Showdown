@@ -18,8 +18,8 @@ var badgeList = {
 	brock: ['Brock', '<img src="http://i.imgur.com/hMg0cgf.gif" title="Brock Badge: 50 Badge Defends">', '<img src = "http://i.imgur.com/fsyWAdn.gif"'],
 	gymrank: ['Gym Leader Rank', '<img src="http://i.imgur.com/ELFPzW8.png" title = "Achieved Gym Leader Status">', '<img src = "http://i.imgur.com/CqLjnZB.png"'],
 	e4rank: ['Elite Four Rank', '<img src="http://i.imgur.com/QtECCD9.png" title = "Achieved Elite 4 Status">', '<img src = "http://i.imgur.com/vBBcMc4.png"'],
-	frontierrank: ['Frontier Rank', '<img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status">', '<img src = "http://i.imgur.com/x9xJbkQ.png">'],
-	efrontierrank: ['Elite Frontier Rank', '<img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status"', '<img src = "http://i.imgur.com/x2xEGgc.png"'],
+	frontierrank: ['Frontier Rank', '<img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status">', '<img src = "http://i.imgur.com/x9xJbkQ.png"'],
+	efrontierrank: ['Elite Frontier Rank', '<img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status">', '<img src = "http://i.imgur.com/x2xEGgc.png"'],
 	brandon: ['Brandon', '<img src="http://i.imgur.com/875rXde.png" title="Brandon Badge: 7 Symbol Defends">', '<img src = "http://i.imgur.com/AMlbLMU.png"'],
 	lucy: ['Lucy', '<img src="http://i.imgur.com/djszmLN.png" title="Lucy Badge: 15 Symbol Defends">', '<img src = "http://i.imgur.com/vc0HjNg.png"'],
 	noland: ['Noland', '<img src="http://i.imgur.com/tNKAuzy.png" title="Noland Badge: 30 Symbol Defends">', '<img src = "http://i.imgur.com/nSP68YI.png"'],
@@ -44,7 +44,7 @@ var comm = {
 			'<blink><font color=#FF0000><b>Notes:</b></font></blink><br />' +
 			'- Your badges are shown by the command /badgecase<br />' +
 			'- You may request for your badges to be shown on your Trainer Card<br />'+
-			'<font color=#006600>- <b>Hover over a badge for details<br />' +
+			'<font color=#006600>- <b>Hover over a badge for details <br />' +
 			'- Click on a badge for an enlarged image and further information</b></font><br />' +
 			'- Test your skills above');
 	},
