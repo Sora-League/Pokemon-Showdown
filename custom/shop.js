@@ -143,7 +143,7 @@ exports.commands = {
 
 	transfermoney: 'transferbucks',
 	transferbucks: function(target, room, user, connection, cmd) {
-		if (!this.can('hotpatch')) return false;
+		if (!this.canBroadcast()) return false;
 		if (!target) return this.sendReply('/' + cmd + ' [user], [amount] - Transfers the specified number of bucks to the specified user.');
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
