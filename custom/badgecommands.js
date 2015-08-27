@@ -25,8 +25,8 @@ var badgeList = {
 	noland: ['Noland', '<img src="http://i.imgur.com/tNKAuzy.png" title="Noland Badge: 30 Symbol Defends">', '<img src = "http://i.imgur.com/nSP68YI.png"'],
 	meme: ['ℳℯღℯ', '<img src="http://i.imgur.com/XWAudeE.gif" title="I\'m a dank memer">', '<img src = "http://i.imgur.com/VG0RWYS.gif"'],
 	egg: ['Egg', '<img src="http://i.imgur.com/dLyGYK5.png" title="This user is an egg without trying">', '<img src = "http://i.imgur.com/8vrprMK.png"'],
-	porygonz: ['Porygon-Z', '<img src="http://i.imgur.com/bJrRxB8.png" title="Porygon-Z: Broke the server while trying to repair it. Good job mate"', '<img src = "http://i.imgur.com/3iPLvlj.png"'],
-	smeargle: ['Smeargle', '<img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Created a work of art for Sora"', '<img src = "http://i.imgur.com/1JYlYS0.png"']
+	porygonz: ['Porygon-Z', '<img src="http://i.imgur.com/bJrRxB8.png" title="Porygon-Z: Broke the server while trying to repair it. Good job mate">', '<img src = "http://i.imgur.com/3iPLvlj.png"'],
+	smeargle: ['Smeargle', '<img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Created a work of art for Sora">', '<img src = "http://i.imgur.com/1JYlYS0.png"']
 };
 
 var comm = {
@@ -171,7 +171,7 @@ exports.commands = {
 	badges: comm,
 	givebadge: comm.give,
 	forcegivebadge: function (target, room, user) {
-		this.parse('/badge forcegive');
+		this.parse('/badge forcegive ' + target);
 	},
 	takebadge: comm.take,
 	removebadge: comm.take,

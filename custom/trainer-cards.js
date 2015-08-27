@@ -1,10 +1,10 @@
-var badgeList = JSON.parse(require('fs').readFileSync('storage-files/badges.json'));
 function seen (user) {
 	user = toId(user);
 	if (Users.get(user) && Users.get(user).connected) return '';
 	return '<b>Last Seen:</b> ' + Core.getLastSeen(user).split(', ')[0] + ' ago';
 }
 function getBadges (user) {
+	var badgeList = JSON.parse(require('fs').readFileSync('storage-files/badges.json'));
 	user = toId(user);
 	if (!badgeList[user] || Object.keys(badgeList[user]).length < 3) return '';
 	var total = '<details><summary><b>Badges:</b> (Click here to open)</summary>';
@@ -470,8 +470,10 @@ exports.commands = {
 			+ getBadges('aboottothehead') + '<br>' + 
 			'<center><img src = "http://i.imgur.com/ty6OYpg.png" width = "100" height = "100"> <img src = "http://i.imgur.com/YoDeO4O.png" width = "100" height = "100"></center>');
 	},
-	
+
+	sorarani: 'arani',
 	arani: function (target, room, user) {
+		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><b><font color = "#331D81" size = 3>∆Arani∆</font></b><br>' + 
 			'<i>"Rain teams are old school? Well... screw you."</i><br><br>' +
 			'<b>Skilled in:</b> Gen 5 OU - was consistently in the Top 10 on the global OU ladder.<br>' +
@@ -541,7 +543,12 @@ exports.commands = {
 			'<b>Prefered Tier:</b> Balanced Hackmons' +
 			'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif"><br />' +getBadges('gasp'));
 	},
-
+	leafy: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReply('|html|<div style = "width: 100px; height: 200px; float: right; background: rgba(0, 0, 0, 0.7)">lol</div>' +
+			'<div style = "height: 200px; text-align: center; background-image: url(http://i1171.photobucket.com/albums/r545/Brahak/maple_zpsg5sgjduk.jpg); background-size: cover;">' +
+			'<marquee width = "43" height = "24" direction = "down" behavior = "alternate"><marquee scrollamount = "10" behavior = "alternate"><font size = 3><b>Leaf</b></font></marquee></marquee>');
+},
 	meowsofsora: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<b><font color = 55dbe8><a><font size= 4><center>MeowsofSora</font></center></b><br />'+
@@ -556,17 +563,6 @@ exports.commands = {
 		'<center><font size=2 color=#0000FF><b>Girl\'s Day</b> - <i>Ring My Bell (for hookups and battles)</i></font><br \><audio src="https://dl.pushbulletusercontent.com/GZk1vZlsoisCqMSCSnSOWV7bZlsjTroX/02%20%EB%A7%81%EB%A7%88%EB%B2%A8%20%28Ring%20My%20Bell%29.mp3" controls="" style="width: 100%" target="_blank"></audio></center><br \><br \>'+
 		'<details><summary><b>Badges: (Click here to open)</b></summary><br />'+
 		'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#efrontier"><img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a></details> <br />');
-	},
-
-	nightanglet: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center><i><font color="blue"><h1>Nightanglet</h1></font></center><br>' +
-			'<font color = "blue"><b>Ace: Infernape(CR Ace:Rhydon)<br />' +
-			'Custom Rules:<br />' +
-			'- No poke above the base speed of 40<br />' +
-			'- No Hazards<br />' +
-			'-Speed should not be increased or decreased<br />' +
-			'</b></i><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/infernape.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/rhydon.gif">');
 	},
 
 	jeratt: function (target, room, user) {
@@ -584,6 +580,17 @@ exports.commands = {
 			'<details><summary><b>Badges:</b></summary><br />' +
 			'<a href="http://soraleague.weebly.com/badges.html#smeargle"><img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Resident Artist of Sora, Metagame Creator: CC, Priomons, Incl Weather, PokeSandbox"></a><a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#badges"><img src="http://i.imgur.com/tnkW9J9.png" title="Badge Collector: Defeat all 18 Gym Leaders"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#porygon"><img src="http://i.imgur.com/bJrRxB8.png" title="Broke the server while trying to repair it, good job mate"></a> </details><br />' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+	},
+	
+	nightanglet: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><i><font color="blue"><h1>Nightanglet</h1></font></center><br>' +
+			'<font color = "blue"><b>Ace: Infernape(CR Ace:Rhydon)<br />' +
+			'Custom Rules:<br />' +
+			'- No poke above the base speed of 40<br />' +
+			'- No Hazards<br />' +
+			'-Speed should not be increased or decreased<br />' +
+			'</b></i><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/infernape.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/rhydon.gif">');
 	},
 	
 	swearwip: function (target, room, user) {
@@ -606,7 +613,7 @@ exports.commands = {
 			'<li style = "padding: 5px;">GOLBAT MOTHER FUCKER</tr></center>' + 
 			'<tr><td colspan = 2><center><font size = 2 style = "text-shadow: 0px 0px 15px #d170ff;"><i style = "color: rgba(0, 0, 0, 0.8);"><b><font size = 2>Pokémon Reborn:</font></b> Byxbysion Wasteland theme</i></font><audio controls src = "https://dl.pushbulletusercontent.com/U6jcDqHbeUTxoZz8LKB3IgwK8u3970rA/Atmosphere-%20Findmuck.mp3" ' +
 			'style = "width: 100%; background: linear-gradient(135deg, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff, black, #b516ff); box-shadow: 0px 0px 15px #d170ff;"></td></tr>' +
-			'</div>');
+			'<tr><td colspan = 2 style = "text-shadow: 0px 0px 8px #d170ff; color: rgba(0, 0, 0, 0.8);"><center>' + getBadges('frontiersrewop') + '</center></td></tr></table></div>');
 	},
 
 	terror2: function (target, room, user) {
