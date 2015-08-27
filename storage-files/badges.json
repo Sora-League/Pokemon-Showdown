@@ -1,1 +1,84 @@
-{}
+{
+ "champinnah": {
+  "egg": "<img src=\"http://i.imgur.com/dLyGYK5.png\" title=\"This user is an egg without trying\">"
+ },
+ "gasp": {
+  "gym": "<img src=\"http://i.imgur.com/tnkW9J9.png\" title=\"Gym Badge Collector: Obtained all 18 Gym Badges\">",
+  "e4": "<img src=\"http://i.imgur.com/y21ENWF.png\" title=\"Elite Four Conqueror: Cleared the Elite Four\">",
+  "frontier": "<img src=\"http://i.imgur.com/RFkf6oV.png\" title=\"Obtained all Frontier Symbols\">",
+  "golduck": "<img src=\"http://i.imgur.com/tMLknqb.png\" title=\"Golduck the Meta Breaker: Reached the Hall of Fame\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "efrontierrank": "<img src=\"http://i.imgur.com/2iZp7Mi.png\" title=\"Achieved Elite Frontier Status\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "staravia": "<img src=\"http://i.imgur.com/2UmjiLt.png\" title=\"Staravia Badge: Two Years on Sora\">",
+  "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 7 Symbol Defends\">",
+  "lucy": "<img src=\"http://i.imgur.com/djszmLN.png\" title=\"Lucy Badge: 15 Symbol Defends\">"
+ },
+ "frontierheadrisu": {
+  "meme": "<img src=\"http://i.imgur.com/XWAudeE.gif\" title=\"I'm a dank memer\">",
+  "aegislash": "<img src=\"http://i.imgur.com/aJY3eKg.png\" title=\"Aegislash: Winner of a major Sora tournament\">",
+  "porygonz": "<img src=\"http://i.imgur.com/bJrRxB8.png\" title=\"Porygon-Z: Broke the server while trying to repair it, good job mate\">",
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "staravia": "<img src=\"http://i.imgur.com/2UmjiLt.png\" title=\"Staravia Badge: Two Years on Sora\">"
+ },
+ "frontierzachary": {
+  "egg": "<img src=\"http://i.imgur.com/dLyGYK5.png\" title=\"This user is an egg without trying\">",
+  "gymrank": "<img src=\"http://i.imgur.com/CqLjnZB.png\" title = \"Achieved Gym Leader Status\" width=\"80\" height=\"80\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/x9xJbkQ.png\" title=\"Achieved Frontier Status\" width=\"80\" height=\"80\">",
+  "starly": "<img src=\"http://i.imgur.com/LiH48HR.png\" title=\"Starly: One Year on Sora\" width=\"80\" height=\"80\">",
+  "smeargle": "<img src=\"http://i.imgur.com/1JYlYS0.png\" title=\"Smeargle the Creator: Created a work of art for Sora\" width=\"80\" height=\"80\">",
+  "brandon": "<img src=\"http://i.imgur.com/AMlbLMU.png\" title=\"Brandon Badge: 5 Symbol Defends\" width=\"80\" height=\"80\">"
+ },
+ "e4terror": {
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "gymrank": "<img src=\"http://i.imgur.com/CqLjnZB.png\" title = \"Achieved Gym Leader Status\" width=\"80\" height=\"80\">",
+  "e4rank": "<img src=\"http://i.imgur.com/vBBcMc4.png\" title = \"Achieved Elite 4 Status\" width=\"80\" height=\"80\">",
+  "e4": "<img src=\"http://i.imgur.com/u0vyZtn.png\" title=\"Elite Four Conqueror: Cleared the Elite Four\" width=\"80\" height=\"80\">"
+ },
+ "e4leaf": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">",
+  "skyla": "<img src=\"http://i.imgur.com/HMGmJ2d.png\" title=\"Skyla Badge: 20 Badge Defends\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">"
+ },
+ "frontiersrewop": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 7 Symbol Defends\">",
+  "lucy": "<img src=\"http://i.imgur.com/djszmLN.png\" title=\"Lucy Badge: 15 Symbol Defends\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "efrontierrank": "<img src=\"http://i.imgur.com/2iZp7Mi.png\" title=\"Achieved Elite Frontier Status\">"
+ },
+ "gymldrmark": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">"
+ },
+ "frntierblade": {
+  "porygonz": "<img src=\"http://i.imgur.com/bJrRxB8.png\" title=\"Porygon-Z: Broke the server while trying to repair it. Good job mate\""
+ },
+ "frontierasch": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "efrontierrank": "<img src=\"http://i.imgur.com/2iZp7Mi.png\" title=\"Achieved Elite Frontier Status\"",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "staravia": "<img src=\"http://i.imgur.com/2UmjiLt.png\" title=\"Staravia Badge: Two Years on Sora\">",
+  "meme": "<img src=\"http://i.imgur.com/XWAudeE.gif\" title=\"I'm a dank memer\">",
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">"
+ },
+ "aboottothehead": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "efrontierrank": "<img src=\"http://i.imgur.com/2iZp7Mi.png\" title=\"Achieved Elite Frontier Status\">",
+  "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "smeargle": "<img src=\"http://i.imgur.com/A8h3FJN.png\" title=\"Smeargle the Creator: Created a work of art for Sora\"",
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">",
+  "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 7 Symbol Defends\">",
+  "lucy": "<img src=\"http://i.imgur.com/djszmLN.png\" title=\"Lucy Badge: 15 Symbol Defends\">",
+  "bertha": "<img src=\"http://i.imgur.com/MDcdCka.png\" title=\"Bertha Badge: 5 E4 Defends\">"
+ }
+}

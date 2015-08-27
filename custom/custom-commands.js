@@ -65,27 +65,31 @@ exports.commands = {
 	declareyellow: 'declare',
 	purpledeclare: 'declare',
 	declarepurple: 'declare',
+	blackdeclare: 'declare',
+	declareblack: 'declare',
 	declare: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
 
 		if (!this.canTalk()) return;
-		
-		var message = '<b>' + Tools.escapeHTML(target) + '</b>';
+
 		switch (cmd) {
 			case 'reddeclare': case 'declarered':
-				this.add('|raw|<div class="broadcast-red">' + message);
+				this.add('|raw|<div class="broadcast-red"><b>' + target + '</b></div>');
 				break;
 			case 'declaregreen': case 'greendeclare':
-				this.add('|raw|<div class="broadcast-green">' + message);
+				this.add('|raw|<div class="broadcast-green"><b>' + target + '</b></div>');
 				break;
 			case 'declareyellow': case 'yellowdeclare':
-				this.add('|raw|<div style = "background: #ffe100; color: black; padding: 2px 4px;">' + message);
+				this.add('|raw|<div style = "background: #ffe100; color: black; padding: 2px 4px;"><b>' + target + '</b></div>');
 				break;
 			case 'declarepurple': case 'purpledeclare':
-				this.add('|raw|<div style = "background: #993399; color: white; padding: 2px 4px;">' + message);
+				this.add('|raw|<div style = "background: #993399; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
 				break;
-			default: this.add('|raw|<div class="broadcast-blue">' + message);
+			case 'declareblack': case 'blackdeclare':
+				this.add('|raw|<div style = "background: #191919; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
+				break;
+			default: this.add('|raw|<div class="broadcast-blue"><b>' + target + '</b></div>');
 		}
 		this.logModCommand(user.name + " declared " + target);
 	},

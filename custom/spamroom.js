@@ -21,7 +21,7 @@ Users.User.prototype.isSpamroomed = function () {
 		if (exceptions[i]) return false;
 	if (userlist[i]) return true;
 	for (var i = 0; i < this.getAlts().length; i++)
-		if (userlist[this.getAlts()[i]]) return true;
+		if (this.getAlts()[i] in userlist) return true;
 	return false;
 }
 
@@ -229,7 +229,7 @@ exports.commands = {
 		user.send(message);
 		if (targetUser !== user && !user.isSpamroomed()) targetUser.send(message);
 		if (user.isSpamroomed()) {
-			spamroom.add('|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '| __(Private to ' + targetUser.getIdentity() + ')__' + target);
+			spamroom.add('|c|' + user.getIdentity() + '| __(Private to ' + targetUser.getIdentity() + ')__' + target);
 		} else targetUser.lastPM = user.userid;
 		user.lastPM = targetUser.userid;
 	},
