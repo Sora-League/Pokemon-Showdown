@@ -74,7 +74,7 @@ exports.commands = {
 		var message = '<b>' + Tools.escapeHTML(target) + '</b>';
 		switch (cmd) {
 			case 'reddeclare': case 'declarered':
-				this.add('|raw|<div class="broadcast-red">' + message);
+				this.add('|raw|<div class="broadcast-red">b>' + target + '</b></div>');
 				break;
 			case 'declaregreen': case 'greendeclare':
 				this.add('|raw|<div class="broadcast-green">' + message);
