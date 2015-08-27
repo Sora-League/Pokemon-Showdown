@@ -87,7 +87,7 @@ exports.commands = {
 				this.add('|raw|<div style = "background: #993399; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
 				break;
 			case 'declareblack': case 'blackdeclare':
-				this.add('|raw|<div style = "background: #191919 color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
+				this.add('|raw|<div style = "background: #191919; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
 				break;
 			default: this.add('|raw|<div class="broadcast-blue"><b>' + target + '</b></div>');
 		}
