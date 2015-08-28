@@ -104,7 +104,7 @@ exports.commands = {
 			'<details><summary><b>Badges: (Click here to open)</b></summary><br />' +
 			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#staravia"><img src="http://i.imgur.com/2UmjiLt.png" title="Staravia Badge: Two Years on Sora"></a><a href="http://soraleague.weebly.com/badges.html#smeargle"><img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Helped develop Champion\'s Challenge and Inclement Weather Metagames"></a></details><br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/pachirisu.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-romeo.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-india.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-sierra.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-uniform.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/pachirisu.gif">' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center><br />');
 	},
 
 	//////////////
@@ -114,11 +114,11 @@ exports.commands = {
 	h: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>H</b>∆<br />' +
-			'<i>"H4Hentai, H4Harem, H4Harassment, H4Hugs. Done checking out those sexy curves? Now it\'s time to check out my bugs. :3"</i> <br />' +
-			'<b>Type: <font color =d83c08>Bug</font></b><br />' +
+			'<i>"H4Hentai, H4Harem, H4Harassment, H4High. Yes, I\'m steel usin\' this sexy quote. Now let\'s give this battle a try. :3"</i> <br />' +
+			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
 			'<b>Ace:</b> None <br />' +
 			'<b>Battle Rules:</b> <br/>' +
-			'-No Hazards<br />' +
+			'- None<br />' +
 			seen('e4h') + 
 			getBadges('e4h'));
 	},
@@ -172,6 +172,20 @@ exports.commands = {
 	/////////////
 	//Frontiers
 	/////////////
+	
+	abadon: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><font size = 3><b>∆Coach Abadon∆<b></font><br>' +
+			'<i>"SWIGGITY SWOOTY I\'M COMING FOR THAT BOOTY"</i><br><br>' +
+			'<b>Achievements:</b>' +
+			'<li>Sora\'s best ground E4' + 
+			'<li>Sora\'s coach' + 
+			'<li>All round top bloke<br>' +
+			'<img style = "margin: 5px" src = "http://128.199.160.98:8000/avatars/' + Config.customavatars.coachabadon + '">' +
+			'<div style = "display: inline-block; width: 100px; height: 100px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/gengar-3.gif) no-repeat -50px -70px"></div><br>'
+			+ getBadges('coachabadon'));
+	
+	},
 
 	asch: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -257,7 +271,7 @@ exports.commands = {
 			'-No hazards<br />' +
 			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
 			'-Pikachu Tournamentchu <br />' +
-			'-No CAP Pokemon</details> <br />' + seen('frontierzachary') +getBadges('frontierzachary'));
+			'-No CAP Pokemon</details> <br />' + seen('frontierzachary') + getBadges('frontierzachary'));
 	},
 
 	/*subfrontier: function(target, room, user) {

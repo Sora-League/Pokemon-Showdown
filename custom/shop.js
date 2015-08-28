@@ -74,7 +74,7 @@ exports.commands = {
 		if (!toId(target)) User = user.name;
 		else User = Users.get(target) ? Users.get(target).name : target;
 		var money = Number(Core.read('money', toId(User))) || 'no';
-		this.sendReplyBox(User + ' has ' + money + ' bucks.');
+		this.sendReplyBox(User + ' has ' + money + ' buck ' + (money === 1 ? '' : 's') + '.');
 	},
 
 	shop: function(target, room, user) {
@@ -111,12 +111,13 @@ exports.commands = {
 		if (!target) return this.sendReply('You need to mention the number of bucks you want to give ' + targetUser.name);
 		if (isNaN(target)) return this.sendReply(target + " is not a valid number.");
 		if (target < 1) return this.sendReply('You cannot give ' + targetUser.name + ' anything less than 1 buck!');
+
 		Core.write('money', targetUser.userid, Number(target), '+');
 		var amt = (Number(target) == 1) ? 'buck' : 'bucks';
 		var bucks = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
-		targetUser.send('|popup|' + user.name + ' has given you ' + target + ' ' + bucks + '. You now have ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-		addLog(user.name + ' has given ' + targetUser.name + ' ' + target + ' ' + bucks + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-		return this.sendReply(targetUser.name + ' was given ' + Number(target) + ' ' + bucks + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+		targetUser.send('|popup|' + user.name + ' has given you ' + target + ' ' + amt + '. You now have ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
+		addLog(user.name + ' has given ' + targetUser.name + ' ' + target + ' ' + amt + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
+		return this.sendReply(targetUser.name + ' was given ' + Number(target) + ' ' + amt + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
 	},
 
 	removebucks: 'remove',
@@ -133,12 +134,13 @@ exports.commands = {
 		if (!toId(target)) return this.sendReply('You need to specify the number of bucks you want to remove from ' + targetUser.name);
 		if (isNaN(target)) return this.sendReply(target + " isn't a valid number.");
 		if (Core.read('money', targetUser.userid) < target) return this.sendReply('You can\'t take away more than what ' + targetUser.name + ' already has!');
+
 		Core.write('money', targetUser.userid, Number(target), '-');
-		var amt = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
-		var bucks = (target == 1) ? 'buck' : 'bucks';
-		targetUser.send('|popup|' + user.name + ' has taken away ' + target + ' ' + bucks + ' from you. You now have ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-		addLog(user.name + ' has taken away ' + target + ' ' + bucks + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
-		return this.sendReply('You have taken away ' + target + ' ' + bucks + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + amt + '.');
+		var bucks = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
+		var amt = (target == 1) ? 'buck' : 'bucks';
+		targetUser.send('|popup|' + user.name + ' has taken away ' + target + ' ' + amt + ' from you. You now have ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
+		addLog(user.name + ' has taken away ' + target + ' ' + amt + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
+		return this.sendReply('You have taken away ' + target + ' ' + amt + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
 	},
 
 	transfermoney: 'transferbucks',
@@ -152,6 +154,7 @@ exports.commands = {
 		if (!toId(target)) return this.sendReply('You need to specify the number of bucks you want to transfer to ' + targetUser.name);
 		if (isNaN(target)) return this.sendReply(target + " isn't a valid number.");
 		if (Core.read('money', user.userid) < target) return this.sendReply('You can\'t give ' + targetUser.name + ' more than what you have!');
+
 		Core.write('money', targetUser.userid, Number(target), '+');
 		Core.write('money', user.userid, Number(target), '-');
 		var amt = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
@@ -174,13 +177,13 @@ exports.commands = {
 			if (user.hasavatar) return this.sendReply("You have already bought a custom avatar. Use /customavatar [URL] to set it.");
 			if (!Number(user.avatar)) return this.sendReply('You already have a custom avatar!');
 
-			this.sendReply("You have bought a custom avatar. Use /customavatar [url] to set it.");
-			this.sendReply("It is recommended that you use an image with dimensions 80 x 80, or your avatar may not show up properly.");
+			this.sendReply("|html|You have bought a custom avatar. Use /customavatar <i>URL</i> to set it.");
+			this.sendReply("It is recommended that you use an image with dimensions 80 x 80, or your avatar may not show up correctly.");
 			user.boughtAvatar = true;
 
 		} else if (target === 'potd') {
 			if (Config.potd) return this.sendReply('The Pokémon of the Day has already been set.');
-			this.sendReply("Use /setpotd [pokémon] to set the Pokémon of the day.");
+			this.sendReply("|html|Use /setpotd <i>Pokémon</i> to set the Pokémon of the day.");
 			user.setpotd = true;
 		}
 
@@ -191,7 +194,7 @@ exports.commands = {
 			this.sendReply('PM the details of your ' + shopList[target][0].toLowerCase() + ' to an Admin.');
 		}
 
-		room.add(user.name + ' bought a ' + target + '!');
+		room.add('|html|' + user.name + ' bought a <b>' + target + '</b>!');
 		Core.write("money", user.userid, price, '-');
 		addLog(user.name + ' bought a ' + target + ' from the shop.');
 	},
