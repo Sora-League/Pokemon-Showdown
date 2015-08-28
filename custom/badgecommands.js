@@ -7,7 +7,7 @@ var badgeList = {
 	staravia: ['Staravia', '<img src="http://i.imgur.com/2UmjiLt.png" title="Staravia Badge: Two Years on Sora">', '<img src = "http://i.imgur.com/keVLipY.png"'],
 	staraptor: ['Staraptor', '<img src="http://i.imgur.com/5g3lvwi.png" title="Staraptor Badge: Three Years on Sora">', '<img src = "http://i.imgur.com/JeamPIZ.png"'],
 	gym: ['Gym Badge Collector', '<img src="http://i.imgur.com/tnkW9J9.png" title="Gym Badge Collector: Obtained all 18 Gym Badges">', '<img src = "http://i.imgur.com/LlbC6np.png"'],
-	e4: ['Elite Four Conqueror', '<img src="http://i.imgur.com/QtECCD9.png" title="Elite Four Conqueror: Cleared the Elite Four">', '<img src = "http://i.imgur.com/u0vyZtn.png"'],
+	e4: ['Elite Four Conqueror', '<img src="http://i.imgur.com/y21ENWF.png" title="Elite Four Conqueror: Cleared the Elite Four">', '<img src = "http://i.imgur.com/u0vyZtn.png"'],
 	frontier: ['Frontier Symbol Obtainer', '<img src="http://i.imgur.com/RFkf6oV.png" title="Frontier Symbol Obtainer: Obtained all Frontier Symbols">', '<img src = "http://i.imgur.com/ZMfqdIl.png"'],
 	bertha: ['Bertha', '<img src="http://i.imgur.com/MDcdCka.png" title="Bertha Badge: 5 E4 Defends">', '<img src = "http://i.imgur.com/VjFdlzz.png"'],
 	koga: ['Koga', '<img src="http://i.imgur.com/2eC21HT.png" title="Koga Badge: 10 E4 Defends">', '<img src = "http://i.imgur.com/DeMzNfU.png"'],
