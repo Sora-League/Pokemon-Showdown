@@ -183,7 +183,7 @@ exports.commands = {
 			'<li>All round top bloke<br>' +
 			'<img style = "margin: 5px" src = "http://128.199.160.98:8000/avatars/' + Config.customavatars.coachabadon + '">' +
 			'<div style = "display: inline-block; width: 100px; height: 100px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/gengar-3.gif) no-repeat -50px -70px"></div><br>'
-			+ getBadges('coachabadon'));
+			+ getBadges('coachabadon') +'<br><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center>');
 	
 	},
 
@@ -241,8 +241,9 @@ exports.commands = {
 			'<b>Ace:</b> Golbat <br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'-RU Monotype <br/>' +
-			'-No Stealth Rock <br/>' +
+			'-No Hazards <br/>' +
 			'-No Knock off<br />' +
+			'-No Megas<br />' +
 			seen('frontiersrewop') + '<br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
@@ -296,17 +297,14 @@ exports.commands = {
 			  '<b>Ace:</b> Mega Pinsir <br />' + seen('gymldrflamespell') + getBadges('gymldrflamespell'));
 	},
 
-	dark: 'darkus',
-	darkus: function (target, room, user) {
+	
+	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
-			'<i>"But I don\'t like Bakugan."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Bisharp<br />' +
-			seen('gymldrdrks') + '<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/victini.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/bisharp.gif"><br />' +
-			'<details><summary><b>Badges: (Click here to open)</b></summary><br />' +
-			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#staravia"><img src="http://i.imgur.com/2UmjiLt.png" title="Staravia Badge: Two Years on Sora"></a><a href="http://soraleague.weebly.com/badges.html#bertha"><img src="http://i.imgur.com/MDcdCka.png" title="Bertha Badge: 5 E4 Defends"></a></details> <br />');
+			'<b>Ace:</b> ???<br />' +
+			seen('') + '<br />'); 
 	},
 
 	dragon: 'lou',
@@ -336,13 +334,13 @@ exports.commands = {
 			'<b>Ace: </b>???<br />');
 	},
 
-	fighting: 'banshee',
-    banshee: function(target, room, user) {
+
+    fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Banshee</b>∆<br />'+
-			'<i>"Fight with fists of steel for your goals."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Lucario <br />' + seen('gymldrbanshee') + getBadges('gymldrbanshee'));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
         },
 
 
