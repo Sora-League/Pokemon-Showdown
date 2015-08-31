@@ -318,13 +318,13 @@ exports.commands = {
 			'<b>Ace:</b> Latias<br />' + seen('gymldrlou') + getBadges('gymldrlou'));
 	},
 
-
-	electric: function (target, room, user) {
+	electric: 'auburn',
+	auburn: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"The challenge to be the best may be hard, but it\'s never fun when it\'s easy."</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + '<br />');
+			'<b>Ace:</b> Thundurus - Therian<br />' + seen('gymldrauburn') + getBadges('gymldrauburn'));
 	},
 
 
