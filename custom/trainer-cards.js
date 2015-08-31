@@ -319,12 +319,11 @@ exports.commands = {
 	electric: 'auburn',
 	auburn: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Auburn</b>∆<br />' +
 			'<i>"The challenge to be the best may be hard, but it\'s never fun when it\'s easy."</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> Thundurus - Therian<br />' + seen('gymldrauburn') + getBadges('gymldrauburn'));
 	},
-
 
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -333,7 +332,6 @@ exports.commands = {
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>???<br />');
 	},
-
 
     fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -345,7 +343,7 @@ exports.commands = {
 
 
 	fire: 'waffles',
-        waffles: function(target, room, user) {
+    waffles: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
 		      'Leader Ranking: <font color = 9dff00><b>3rd</font></b> <br />' + 
