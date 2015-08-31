@@ -183,7 +183,7 @@ exports.commands = {
 			'<li>All round top bloke<br>' +
 			'<img style = "margin: 5px" src = "http://128.199.160.98:8000/avatars/' + Config.customavatars.coachabadon + '">' +
 			'<div style = "display: inline-block; width: 100px; height: 100px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/gengar-3.gif) no-repeat -50px -70px"></div><br>'
-			+ getBadges('coachabadon'));
+			+ getBadges('coachabadon') +'<br><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center>');
 	
 	},
 
