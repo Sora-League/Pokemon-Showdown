@@ -297,14 +297,14 @@ exports.commands = {
 			  '<b>Ace:</b> Mega Pinsir <br />' + seen('gymldrflamespell') + getBadges('gymldrflamespell'));
 	},
 
-	
-	dark: function (target, room, user) {
+	dark: 'bk',
+	bk: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>BK</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
 			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br />'); 
+			seen('gymldrBK') + '<br />'); 
 	},
 
 	dragon: 'lou',
