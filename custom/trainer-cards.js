@@ -301,9 +301,9 @@ exports.commands = {
 	bk: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>BK</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"There is always a light even at the darkest of times."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
+			'<b>Ace:</b> Bisharp<br />' +
 			seen('gymldrBK') + '<br />'); 
 	},
 
