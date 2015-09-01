@@ -74,7 +74,7 @@ exports.commands = {
 		if (!toId(target)) User = user.name;
 		else User = Users.get(target) ? Users.get(target).name : target;
 		var money = Number(Core.read('money', toId(User))) || 'no';
-		this.sendReplyBox(User + ' has ' + money + ' buck ' + (money === 1 ? '' : 's') + '.');
+		this.sendReplyBox(User + ' has ' + money + ' buck' + (money === 1 ? '' : 's') + '.');
 	},
 
 	shop: function(target, room, user) {
