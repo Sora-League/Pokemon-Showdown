@@ -513,7 +513,8 @@ exports.commands = {
 
 	azh: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<div class="infobox" style="border: 0px ; color: white; background-image: url(&quot;http://i.imgur.com/cgBvtcV.jpg&quot;) ; background-size: cover" target="_blank"><a><center><b><font size= 5>∆ArthurZH∆</font></b></center></a><br />'+
+		this.sendReplyBox('<div style = "padding: 8px; color: white; background: #000 url(http://www.pageresource.com/wallpapers/wallpaper/pokemon_67267.jpg) no-repeat scroll bottom; background-size: 100%;">' +
+			'<center><b><font size= 5>∆ArthurZH∆</font></b></center><br />'+
 			 '<center><i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i></center> <br />'+
 			 '<center><b>Favoured Type:</b> Water<br />'+
 			 '<b>Favoured Metagame:</b> Smogon Doubles <br />'+
@@ -521,7 +522,7 @@ exports.commands = {
 			 '<b>Achievements:</b> Ex Water Leader of Sora, Ex Roulette/Champion\'s Challenge/Monotype Frontier of Sora<br />'+
 			 '<b>Current Position:</b> Smogon Doubles OU Frontier<br />'+
 			 '<center><img src="http://fc00.deviantart.net/fs71/f/2014/082/f/8/manaphy_gif_by_gloomymyth-d7bakkc.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/keldeo-resolute.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/tentacruel.gif"><img src="http://www.pokemonreborn.com/custom/44203.png?530"> <img src="http://play.pokemonshowdown.com/sprites/xyani/kabutops.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/swampert.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gyarados.gif"></center>'+
-			 '<center><font size=2 color=#0000FF><b>Battle Theme</b> - <i>Hoenn Oceanic Museum Remix [Credits: GlitchXCity]</i></font><br \><audio src="https://dl.pushbulletusercontent.com/rd0Qhn6drs85cyLNk7XIxGmwLQHQl4q1/Atmosphere-%20Bright.mp3" controls="" style="width: 100% ; border: 2px solid #0000FF ; background-color: #3399FF" target="_blank"></audio></center><br \><br \>' +getBadges('frontierzachary'));
+			 '<center><font size=2 color=#0000FF><b>Battle Theme</b> - <i>Hoenn Oceanic Museum Remix [Credits: GlitchXCity]</i></font><br \><audio src="https://dl.pushbulletusercontent.com/rd0Qhn6drs85cyLNk7XIxGmwLQHQl4q1/Atmosphere-%20Bright.mp3" controls="" style="width: 100% ; border: 2px solid #0000FF ; background-color: #3399FF" target="_blank"></audio></center><br \>' +getBadges('frontierzachary'));
 	},
 
 	bamdee: function (target, room, user) {
