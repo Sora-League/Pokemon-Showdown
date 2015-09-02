@@ -502,7 +502,7 @@ exports.commands = {
 			'<b> Achievements:</b> Former Elite, got the elite position in his first promo tournaments.<br />' +
 			'<b>Favorite Pokemon:</b><br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/terrakion.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/weavile.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/medicham-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/crobat.gif"><div align="center"><br />' +
-			'Remember, victory or defeat always depends on how you play. But,  It doesnt if you\'re up against me. <br />' +getBadges('e4h'));
+			'Remember, victory or defeat always depends on how you play. But,  It doesnt if you\'re up against me. <br />' +getBadges('arjunb'));
 	},
 
 	ascher: function (target, room, user) {
