@@ -515,7 +515,7 @@ exports.commands = {
 
 	azh: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<div class="infobox" style="border: 0px ; color: white; background-image: url(&quot;http://www.pageresource.com/wallpapers/wallpaper/pokemon_67267.jpg&quot;) ; background-size: contain" target="_blank"><a><center><b><font size= 5>∆ArthurZH∆</font></b></center></a><br />'+
+		this.sendReplyBox('<div class="infobox" style="border: 0px ; color: white; background-image: url(&quot;http://www.pageresource.com/wallpapers/wallpaper/pokemon_67267.jpg&quot;) ; background-size: 100% 100%" target="_blank"><a><center><b><font size= 5>∆ArthurZH∆</font></b></center></a><br />'+
 			 '<center><i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i></center> <br />'+
 			 '<center><b>Favoured Type:</b> Water<br />'+
 			 '<b>Favoured Metagame:</b> Smogon Doubles <br />'+
