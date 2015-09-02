@@ -1200,7 +1200,7 @@ exports.Formats = [
 		name: "Hackmons Cup",
 		section: "Other Metagames",
 
-		searchShow: false;
+		searchShow: false,
 		team: 'randomHC',
 		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
 	},
