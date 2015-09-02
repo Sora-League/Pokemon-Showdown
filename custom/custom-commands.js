@@ -63,8 +63,6 @@ exports.commands = {
 	greendeclare: 'declare',
 	yellowdeclare: 'declare',
 	declareyellow: 'declare',
-	purpledeclare: 'declare',
-	declarepurple: 'declare',
 	blackdeclare: 'declare',
 	declareblack: 'declare',
 	declare: function (target, room, user, connection, cmd) {
@@ -82,9 +80,6 @@ exports.commands = {
 				break;
 			case 'declareyellow': case 'yellowdeclare':
 				this.add('|raw|<div style = "background: #ffe100; color: black; padding: 2px 4px;"><b>' + target + '</b></div>');
-				break;
-			case 'declarepurple': case 'purpledeclare':
-				this.add('|raw|<div style = "background: #993399; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
 				break;
 			case 'declareblack': case 'blackdeclare':
 				this.add('|raw|<div style = "background: #191919; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
@@ -185,7 +180,28 @@ exports.commands = {
 
 		targetUser.resetName();
 	},
+	
+	tell: function (target, room, user, connection, cmd) {
+		if (!target) return this.sendReply('|raw|/tell <i>User</i>, <i>Message</i> - Leaves a message for a user who is offline.');
+		target = this.splitTarget(target);
+		var targetUser = this.targetUsername;
+		if (toId(targetUser) === user.userid) return this.sendReply('You can\'t send a message to yourself!');
+		if (Users.get(targetUser) && Users.get(targetUser).connected) return this.sendReply('You don\'t need to leave a message for an online user. PM them instead.');
+		if (!toId(targetUser) || !target) return this.sendReply('|raw|/tell <i>User</i>, <i>Message</i> - Leaves a message for a user who is offline.');
+		if (Core.getLastSeen(targetUser) === 'never') return this.sendReply('User ' + targetUser + ' has never been seen online before. You can\'t leave a message for someone who\'s never visited the server.');
+		var tells = Core.read('tells', toId(targetUser));
+		if (tells && tells.length >= 3) return this.sendReply('You may only leave 3 messages for a user at a time. Please wait until ' + targetUser + ' comes online and views them before sending more.');
 
+		var date = '<font color = "gray"><i>(Sent by ' + user.name + ' on ' + (new Date()).toUTCString() + ')</i></font><br>';
+		if (tells) tells.push(date + '<b><font color = "' + Core.color(user.userid) + '">' + user.name + ':</color></b> ' + target.escapeHTML());
+		else {
+			tells = [];
+			tells.push(date + '<b><font color = "' + Core.color(user.userid) + '">' + user.name + ':</color></b> ' + target.escapeHTML());
+		}
+		Core.write('tells', toId(targetUser), tells);
+		this.sendReply('Your message "' + target + '" has successfully been sent to ' + this.targetUsername + '.');
+	},
+	
 	seen: 'lastseen',
 	lastseen: function (target, room, user, connection, cmd) {
 		if (!this.canBroadcast()) return;

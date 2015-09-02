@@ -159,9 +159,10 @@ exports.commands = {
 		this.pmTarget = (targetUser || this.targetUsername);
 		if (!targetUser || !targetUser.connected) {
 			if (targetUser && !targetUser.connected) {
-				this.errorReply("User " + this.targetUsername + " is offline.");
+				this.errorReply("User " + this.targetUsername + " is offline. You can send them an offline message using /tell.");
 				return;
 			} else {
+				if (toId(this.targetUsername) === 'tells') return this.errorReply("You cannot reply to these messages.");
 				this.errorReply("User " + this.targetUsername + " not found. Did you misspell their name?");
 				return this.parse('/help msg');
 			}
