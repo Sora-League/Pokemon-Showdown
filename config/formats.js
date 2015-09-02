@@ -79,7 +79,7 @@ exports.Formats = [
 		section: "Sora Exclusive",
 
 		ruleset: ['Pokemon', 'Team Preview', 'Champion Challenge', 'HP Percentage Mod'],
-		banlist: ['Articuno', 'Zapdos', 'Moltres', 'Mewtwo', 'Mega Mewtwo Y', 'Mega Mewtwo X', 'Mew', 'Raikou', 'Entei', 'Suicune', 'Lugia', 'Ho-oh', 'Celebi', 'Regirock', 'Registeel', 'Regice', 'Latias', 'Mega Latias', 'Latios', 'Mega Latios', 'Kyogre', 'Primal Kyogre', 'Groudon', 'Primal Groudon', 'Rayquaza', 'Mega Rayquaza', 'Deoxys', 'Deoxys-Defense', 'Deoxys-Speed', 'Deoxys-Attack', 'Jirachi', 'Uxie', 'Mesprit', 'Azelf', 'Dialga', 'Palkia', 'Giratina', 'Giratina-Origin', 'Heatran', 'Regigigas', 'Cresselia', 'Manaphy', 'Phione', 'Darkrai', 'Shaymin', 'Shaymin-Sky', 'Arceus', 'Victini', 'Cobalion', 'Terrakion', 'Virizion', 'Tornadus', 'Thundurus', 'Landorus', 'Tornadus-Therian', 'Thundurus-Therian', 'Landorus-Therian', 'Reshiram', 'Zekrom', 'Kyurem', 'Kyurem-White', 'Kyurem-Black', 'Keldeo', 'Keldeo-Resolute', 'Meloetta', 'Genesect', 'Genesect-Burn', 'Genesect-Chill', 'Genesect-Douse', 'Genesect-Shock', 'Xerneas', 'Yveltal', 'Zygarde', 'Diancie', 'Mega Diancie', 'Hoopa', 'Hoopa Unbound', 'Volcanion', 'Kangaskhanite', 'Swagger', 'Allow CAP']
+		banlist: ['Illegal', 'Articuno', 'Zapdos', 'Moltres', 'Mewtwo', 'Mega Mewtwo Y', 'Mega Mewtwo X', 'Mew', 'Raikou', 'Entei', 'Suicune', 'Lugia', 'Ho-oh', 'Celebi', 'Regirock', 'Registeel', 'Regice', 'Latias', 'Mega Latias', 'Latios', 'Mega Latios', 'Kyogre', 'Primal Kyogre', 'Groudon', 'Primal Groudon', 'Rayquaza', 'Mega Rayquaza', 'Deoxys', 'Deoxys-Defense', 'Deoxys-Speed', 'Deoxys-Attack', 'Jirachi', 'Uxie', 'Mesprit', 'Azelf', 'Dialga', 'Palkia', 'Giratina', 'Giratina-Origin', 'Heatran', 'Regigigas', 'Cresselia', 'Manaphy', 'Phione', 'Darkrai', 'Shaymin', 'Shaymin-Sky', 'Arceus', 'Victini', 'Cobalion', 'Terrakion', 'Virizion', 'Tornadus', 'Thundurus', 'Landorus', 'Tornadus-Therian', 'Thundurus-Therian', 'Landorus-Therian', 'Reshiram', 'Zekrom', 'Kyurem', 'Kyurem-White', 'Kyurem-Black', 'Keldeo', 'Keldeo-Resolute', 'Meloetta', 'Genesect', 'Genesect-Burn', 'Genesect-Chill', 'Genesect-Douse', 'Genesect-Shock', 'Xerneas', 'Yveltal', 'Zygarde', 'Diancie', 'Mega Diancie', 'Hoopa', 'Hoopa Unbound', 'Volcanion', 'Kangaskhanite', 'Swagger', 'Salamencite', 'Allow CAP']
 	},
 	{
 		name: "Champion's Challenge BH",
@@ -285,19 +285,6 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
 		banlist: ['Unreleased', 'Illegal']
 	},
-	/*{
-		name: "CAP Naviathan Playtest",
-		section: "ORAS Singles",
-
-		ruleset: ['Pokemon', 'Standard', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
-		banlist: ['Allow CAP', 'Syclant', 'Revenankh', 'Pyroak', 'Fidgit', 'Stratagem', 'Arghonaut', 'Kitsunoh', 'Cyclohm', 'Colossoil', 'Krilowatt', 'Voodoom',
-			'Tomohawk', 'Necturna', 'Mollux', 'Aurumoth', 'Malaconda', 'Cawmodore', 'Volkraken', 'Plasmanta',
-			'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Genesect',
-			'Giratina', 'Giratina-Origin', 'Greninja', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Mewtwo', 'Palkia',
-			'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Xerneas', 'Yveltal', 'Zekrom',
-			'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Soul Dew'
-		]
-	},*/
 	{
 		name: "Battle Spot Singles",
 		section: "ORAS Singles",
