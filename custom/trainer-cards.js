@@ -502,9 +502,7 @@ exports.commands = {
 			'<b> Achievements:</b> Former Elite, got the elite position in his first promo tournaments.<br />' +
 			'<b>Favorite Pokemon:</b><br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/terrakion.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/weavile.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/medicham-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/crobat.gif"><div align="center"><br />' +
-			'Remember, victory or defeat always depends on how you play. But,  It doesnt if you\'re up against me. <br />' +
-			'<details><summary><b>Badges: (Click here to open)</b></summary><br />' +
-			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#efrontier"><img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status"></a></details> <br />');
+			'Remember, victory or defeat always depends on how you play. But,  It doesnt if you\'re up against me. <br />' +getBadges('e4h'));
 	},
 
 	ascher: function (target, room, user) {
