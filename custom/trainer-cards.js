@@ -230,7 +230,7 @@ exports.commands = {
 			'<b>Ace:</b> Quagsire<br />' +
 			'<b>Battle rules:</b> <br />' +
 			'-OU<br />' +
-			'-No Trick/Switcheroo <br />' + seen('frontiermeows'));
+			'-No Trick/Switcheroo <br />' + seen('frontiermeows') + getBadges('frontiermeows'));
 	},
 
 	srewop: function (target, room, user) {
@@ -569,9 +569,7 @@ exports.commands = {
 		'<b>Achievements:</b> Peaked top 20 for OU/OU (No Mega), top 500 for Monotype <br />'+
 		'<b>Current Position:</b> OU Frontier of Sora <br />'+
 		'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/latios.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"></center><br />'+
-		'<center><font size=2 color=#0000FF><b>Girl\'s Day</b> - <i>Ring My Bell (for hookups and battles)</i></font><br \><audio src="https://dl.pushbulletusercontent.com/GZk1vZlsoisCqMSCSnSOWV7bZlsjTroX/02%20%EB%A7%81%EB%A7%88%EB%B2%A8%20%28Ring%20My%20Bell%29.mp3" controls="" style="width: 100%" target="_blank"></audio></center><br \><br \>'+
-		'<details><summary><b>Badges: (Click here to open)</b></summary><br />'+
-		'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#efrontier"><img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a></details> <br />');
+		'<center><font size=2 color=#0000FF><b>Girl\'s Day</b> - <i>Ring My Bell (for hookups and battles)</i></font><br \><audio src="https://dl.pushbulletusercontent.com/GZk1vZlsoisCqMSCSnSOWV7bZlsjTroX/02%20%EB%A7%81%EB%A7%88%EB%B2%A8%20%28Ring%20My%20Bell%29.mp3" controls="" style="width: 100%" target="_blank"></audio></center><br \><br \>'+ getBadges('frontiermeows'));
 	},
 
 	jeratt: function (target, room, user) {
