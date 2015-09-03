@@ -433,7 +433,9 @@ exports.commands = {
 			if (uptimeHours) uptimeText += ", " + uptimeHours + " " + (uptimeHours === 1 ? "hour" : "hours");
 			return uptimeText;
 		}
-		var maxUptime = parseFloat(fs.readFileSync('storage-files/maxuptime.txt')) || uptime;
+		var maxUptime = 'storage-files/maxuptime.txt';
+		if (!fs.existsSync(maxUptime)) fs.writeFileSync(maxuptime, process.uptime());
+		maxUptime = parseFloat(fs.readFileSync(maxUptime));
 
 		this.sendReplyBox("Uptime: <b>" + getUptime(uptime) + "</b><br>" + 
 			'<font color = "green">Record Uptime: <b>' + getUptime(maxUptime));
