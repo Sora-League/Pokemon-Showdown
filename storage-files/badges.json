@@ -30,9 +30,6 @@
  "gymldrmark": {
   "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">"
  },
- "frntierblade": {
-  "porygonz": "<img src=\"http://i.imgur.com/bJrRxB8.png\" title=\"Porygon-Z: Broke the server while trying to repair it. Good job mate\""
- },
  "frontierasch": {
   "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
   "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
@@ -79,7 +76,8 @@
   "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
   "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">",
   "e4": "<img src=\"http://i.imgur.com/y21ENWF.png\" title=\"Elite Four Conqueror: Cleared the Elite Four\">",
-  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">"
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "bertha": "<img src=\"http://i.imgur.com/MDcdCka.png\" title=\"Bertha Badge: 5 E4 Defends\">"
  },
  "frontierzachary": {
   "egg": "<img src=\"http://i.imgur.com/dLyGYK5.png\" title=\"This user is an egg without trying\">",
@@ -109,5 +107,17 @@
   "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">",
   "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
   "bertha": "<img src=\"http://i.imgur.com/MDcdCka.png\" title=\"Bertha Badge: 5 E4 Defends\">"
+ },
+ "arjunb": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">"
+ },
+ "gymldrconnor": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">"
+ },
+ "frntierblade": {
+  "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 7 Symbol Defends\">"
  }
 }
