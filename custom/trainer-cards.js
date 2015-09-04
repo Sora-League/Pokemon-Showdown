@@ -128,7 +128,7 @@ exports.commands = {
 		this.sendReplyBox('∆E4 <b>Edge</b>∆<br />' +
 			'<i>"How can you face your problem when your problem is your face?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Mega Charizard-X<br />' +
+			'<b>Ace:</b> Landorus<br />' +
 			'<b>Battle Rules:</b><br />' +
 			'-No Hazards<br />' + 
 			seen('e4edge') +
