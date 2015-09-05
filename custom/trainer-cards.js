@@ -316,13 +316,13 @@ exports.commands = {
 			'<b>Ace:</b> Latias<br />' + seen('gymldrlou') + getBadges('gymldrlou'));
 	},
 
-	electric: 'auburn',
-	auburn: function (target, room, user) {
+	
+	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Auburn</b>∆<br />' +
-			'<i>"The challenge to be the best may be hard, but it\'s never fun when it\'s easy."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> Thundurus - Therian<br />' + seen('gymldrauburn') + getBadges('gymldrauburn'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
 	fairy: function (target, room, user) {
