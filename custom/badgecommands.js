@@ -125,8 +125,9 @@ var comm = {
 		if (user.userid !== 'frntierblade' && !this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
         if (!toId(target)) return this.sendReply('|raw|/badge ' + cmd + ' <i>User 1</i>, <i>User 2</i> - Moves all of user 1\'s badges to user 2. If user 2 already has badges, this command transfers all badges user 2 does not have.');
 		target = target.split(',');
-		var user1 = (Users.get(target[0]) ? Users.get(target[0]).name : target[0].trim());
-        var user2 = (Users.get(target[1]) ? Users.get(target[1]).name : target[1].trim());
+		var user1 = (Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0].trim());
+        var user2 = (Users.getExact(target[1]) ? Users.getExact(target[1]).name : target[1].trim());
+        if (user1 === user2) return this.sendReply("You can't transfer badges between the same user.");
 		
 		var user1Badges = Core.read('badges', toId(user1));
 		var user2Badges = Core.read('badges', toId(user2));
@@ -136,10 +137,9 @@ var comm = {
 			Core.write('badges', toId(user2), list);
 			Core.Delete('badges', toId(user1));
 		} else {
-			var list = Core.read('badges', toId(user1));
-			for (var i in list) {
+			for (var i in user1Badges) {
 				if (user2Badges[i]) continue;
-				user2Badges[i] = list[i];
+				user2Badges[i] = user1Badges[i];
 			}
 			Core.write('badges', toId(user2), user2Badges);
 			Core.Delete('badges', toId(user1));
