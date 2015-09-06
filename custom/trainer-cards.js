@@ -343,13 +343,15 @@ exports.commands = {
 
 
 	fire: 'waffles',
-    waffles: function(target, room, user) {
+    	waffles: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
 		      'Leader Ranking: <font color = 9dff00><b>3rd</font></b> <br />' + 
-	              '<i>"Don\'t waffle out of the situation"</i> <br />'+
+	              '<i>"Don\'t waffle out of the situation."</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + getBadges('gymldrwaffles'));
+	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + '<br>' +
+	              '<img src = "http://sprites.pokecheck.org/t/010.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/heatran.gif"><br>' +
+	              + getBadges('gymldrwaffles'));
 	},
 
 	flying: 'float',
