@@ -62,7 +62,7 @@ var comm = {
 	forcegive: 'give',
 	award: 'give',
     give: function (target, room, user, connection, cmd) {
-        if (user.userid !== 'frntierblade' && !this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can give badges.');
+        if (!this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can give badges.');
         target = target.split(",");
 		var targetUser = target[0].trim();
         var badge = toId(target[1]);
@@ -85,7 +85,7 @@ var comm = {
 	
 	remove: 'take',
 	take: function (target, room, user, connection, cmd) {
-		if (user.userid !== 'frntierblade' && !this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
+		if (!this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
         target = target.split(",");
 		var targetUser = target[0].trim();
         var badge = toId(target[1]);
@@ -105,7 +105,7 @@ var comm = {
 	removeall: 'takeall',
 	'delete': 'takeall',
 	takeall: function (target, room, user, connection, cmd) {
-		if (user.userid !== 'frntierblade' && !this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
+		if (!this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
         if (!toId(target)) return this.sendReply('|raw|/badge ' + cmd + ' <i>User</i> - Removes all badges from the specified user.');
 		var name = Users.get(target) ? Users.get(target).name : target.trim();
 		if (!Core.read('badges', toId(target))) return this.sendReply("User " + name + " doesn't have any badges.");
@@ -122,7 +122,7 @@ var comm = {
 	
 	move: 'transfer',
 	transfer: function (target, room, user, connection, cmd) {
-		if (user.userid !== 'frntierblade' && !this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
+		if (!this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
         if (!toId(target)) return this.sendReply('|raw|/badge ' + cmd + ' <i>User 1</i>, <i>User 2</i> - Moves all of user 1\'s badges to user 2. If user 2 already has badges, this command transfers all badges user 2 does not have.');
 		target = target.split(',');
 		var user1 = (Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0].trim());
@@ -153,7 +153,7 @@ var comm = {
 		if (!this.canBroadcast()) return;
 		if (!toId(target)) target = user.userid;
 		var file = Core.read('badges', toId(target));
-		target = Users.get(target) ? Users.get(target).name : target;
+		target = Users.getExact(target) ? Users.getExact(target).name : target;
 		if (!file) return this.sendReplyBox(target + " doesn't have any badges...");
 		var list = target + '\'s Badges:';
 		if (this.broadcasting) list = '<summary>' + list + '</summary>';
@@ -173,7 +173,7 @@ exports.commands = {
 	forcegivebadge: function (target, room, user) {
 		this.parse('/badge forcegive ' + target);
 	},
-	takebadge: comm.take,
+	takebadge: 'removebadge',
 	removebadge: comm.take,
 	removeallbadges: comm.takeall,
 	transferbadges: 'movebadges',
