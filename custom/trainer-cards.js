@@ -360,7 +360,7 @@ exports.commands = {
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Hawlucha (John Cena)<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><br />' +
-			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"><br>' +
+			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio><br>' +
 			seen('gymldrfloat') + getBadges('gymldrfloat'));
 	},
 
@@ -478,9 +478,9 @@ exports.commands = {
 			'<b>Known for: </b>VoltTurn and Whimsistall shenanigans<br />' +
 			'<b>Achievements: </b>Ex-Elite Frontier, ex-Elite Four<br>' +
 			'<b>Affiliation:</b> Cheeky Nandos Squad<br><br>' +
-			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center> <br />' +
+			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center><br />' +
 			'<center><img src = "http://i.imgur.com/AaO6Xze.png" width = "120" height = "120"><img src = "http://i.imgur.com/JSRaFVC.png" width = "120" height = "120"><img src = "http://i.imgur.com/I0NbMSO.png" width = "120" height = "120"></center><br>' +
-			+ getBadges('aboottothehead') + '<br>' + 
+			getBadges('aboottothehead') + '<br>' +
 			'<center><img src = "http://i.imgur.com/ty6OYpg.png" width = "100" height = "100"> <img src = "http://i.imgur.com/YoDeO4O.png" width = "100" height = "100"></center>');
 	},
 
