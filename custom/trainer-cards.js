@@ -350,7 +350,7 @@ exports.commands = {
 	              '<i>"Don\'t waffle out of the situation."</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
 	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + '<br>' +
-	              '<img src = "http://sprites.pokecheck.org/t/010.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/heatran.gif"><br>' +
+	              '<img src = "http://sprites.pokecheck.org/t/010.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/heatran.gif">' +
 	              + getBadges('gymldrwaffles'));
 	},
 
