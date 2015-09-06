@@ -351,7 +351,7 @@ exports.commands = {
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
 	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + '<br>' +
 	              '<img src = "http://sprites.pokecheck.org/t/010.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/heatran.gif">' +
-	              + getBadges('gymldrwaffles'));
+	              + '<br>' + getBadges('gymldrwaffles'));
 	},
 
 	flying: 'float',
