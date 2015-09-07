@@ -379,7 +379,7 @@ exports.commands = {
     mitsuka: 'grass',	
     grass: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />'+'
+	this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />'+
 	                'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
 			'<i>"Storm of leaf and Draining root!"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
