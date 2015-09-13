@@ -481,7 +481,7 @@ exports.commands = {
 			process.exit();
 		}, 10000);
 	},
-	
+
 	ip: 'whois',
 	rooms: 'whois',
 	alt: 'whois',
@@ -586,6 +586,69 @@ exports.commands = {
 		});
 	},
 
+	uptime: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		var uptime = process.uptime();
+		var uptimeText;
+		var getUptime = function (uptime) {
+			if (uptime < 24 * 60 * 60) return uptime.seconds().duration();
+			var uptimeDays = Math.floor(uptime / (24 * 60 * 60));
+			var uptimeText = uptimeDays + " " + (uptimeDays === 1 ? "day" : "days");
+			var uptimeHours = Math.floor(uptime / (60 * 60)) - uptimeDays * 24;
+			if (uptimeHours) uptimeText += ", " + uptimeHours + " " + (uptimeHours === 1 ? "hour" : "hours");
+			return uptimeText;
+		}
+		var maxUptime = 'storage-files/maxuptime.txt';
+		if (!fs.existsSync(maxUptime)) fs.writeFileSync(maxUptime, process.uptime());
+		maxUptime = parseFloat(fs.readFileSync(maxUptime));
+
+		this.sendReplyBox("Uptime: <b>" + getUptime(uptime) + "</b><br>" + 
+			'<font color = "green">Record Uptime: <b>' + getUptime(maxUptime));
+	},
+
+	kill: function (target, room, user) {
+		if (!this.can('lockdown')) return false;
+
+		if (Rooms.global.lockdown !== true) {
+			return this.sendReply("For safety reasons, /kill can only be used during lockdown.");
+		}
+
+		if (CommandParser.updateServerLock) {
+			return this.sendReply("Wait for /updateserver to finish before using /kill.");
+		}
+
+		for (var i in Users.users) {
+			var shutdownTime = Date.now();
+			Core.write('lastseen', Users.users[i].userid, shutdownTime);
+		}
+		
+		if (!fs.existsSync('storage-files/maxuptime.txt')) fs.writeFileSync('storage-files/maxuptime.txt', process.uptime());
+		else if (parseFloat(fs.readFileSync('storage-files/maxuptime.txt')) < process.uptime()) {
+			fs.writeFileSync('storage-files/maxuptime.txt', process.uptime());
+		}
+
+		for (var i in Sockets.workers) {
+			Sockets.workers[i].kill();
+		}
+
+		if (!room.destroyLog) {
+			process.exit();
+			return;
+		}
+		room.destroyLog(function () {
+			room.logEntry(user.name + " used /kill");
+		}, function () {
+			process.exit();
+		});
+
+		// Just in the case the above never terminates, kill the process
+		// after 10 seconds.
+		setTimeout(function () {
+			process.exit();
+		}, 10000);
+	},
+	
+>>>>>>> 5bf70cc4db1d8f0ba7a9a66b6a26eab73b0da7b4
 	//Panagram
 	panagramhelp: 'panagramrules',
     panagramrules: function(target, room, user) {

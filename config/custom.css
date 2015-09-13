@@ -15,7 +15,7 @@ body {
     background: rgb(252,183,63);
 }*/
 
-li#lobby-userlist-user-champinnah, li#lobby-userlist-user-frntierblade, li#lobby-userlist-user-chmpionbart, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-frontierjerattata, li#lobby-userlist-user-coachabadon, li#lobby-userlist-user-coachbloodfist, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-bamdee, li#lobby-userlist-user-frontierheadrisu {
+li#lobby-userlist-user-champinnah, li#lobby-userlist-user-frntierblade, li#lobby-userlist-user-chmpionbart, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-frontierjerattata, li#lobby-userlist-user-coachabadon, li#lobby-userlist-user-coachbloodfist, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-bamdee, li#lobby-userlist-user-frontierheadrisu, li#lobby-userlist-user-frontierneith {
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
 }
 
@@ -45,9 +45,9 @@ a.button i, a.button span {
 
 /*Waffles's chat color*/
 .chat.chatmessage-gymldrwaffles strong {
-    color: #6d0505 !important
+    color: #7F21A1 !important
 }
 
 li#lobby-userlist-user-gymldrwaffles strong, li#gamecorner-userlist-user-gymldrwaffles strong, li#staff-userlist-user-gymldrwaffles strong {
-    color: #6d0505 !important
+    color: #7F21A1 !important
 }
