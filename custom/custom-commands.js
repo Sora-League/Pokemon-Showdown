@@ -530,8 +530,14 @@ exports.commands = {
 		}
 		buf += '<br />Rooms: ' + (publicrooms || '<em>(no public rooms)</em>');
 
+		var self = this;
 		if (!showAll) {
-			return this.sendReplyBox(buf);
+			require('satelize').satelize({ip: targetUser.latestIp}, function (err, data) {
+				data = JSON.parse(data);
+				var flag = '';
+				if (!err && data.country) flag = '<img src = "http://128.199.160.98:8000/flags/' + toId(data.country_code) + '.png" title = ' + data.country + '>';
+				self.sendReplyBox(name + flag + buf);
+			});
 		}
 		buf += '<br />';
 		if (user.can('alts', targetUser) || user.can('alts') && user === targetUser) {
@@ -577,11 +583,10 @@ exports.commands = {
 		if ((user === targetUser || user.hasConsoleAccess(connection)) && privaterooms) {
 			buf += '<br />Private rooms: ' + privaterooms;
 		}
-		var self = this;
 		require('satelize').satelize({ip: targetUser.latestIp}, function (err, data) {
 			data = JSON.parse(data);
 			var flag = '';
-			if (!err && data.country) flag = '<img src = "http://128.199.160.98:8000/custom/flags/' + toId(data.country_code) + '.png" title = ' + data.country + '>';
+			if (!err && data.country) flag = '<img src = "http://128.199.160.98:8000/flags/' + toId(data.country_code) + '.png" title = ' + data.country + '>';
 			self.sendReplyBox(name + flag + buf);
 		});
 	},
