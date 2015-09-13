@@ -107,7 +107,7 @@ var comm = {
 	takeall: function (target, room, user, connection, cmd) {
 		if (!this.can('hotpatch')) return this.sendReply('Only Frontier Blade and Admins can remove badges.');
         if (!toId(target)) return this.sendReply('|raw|/badge ' + cmd + ' <i>User</i> - Removes all badges from the specified user.');
-		var name = Users.get(target) ? Users.get(target).name : target.trim();
+		var name = Users.getExact(target) ? Users.getExact(target).name : target.trim();
 		if (!Core.read('badges', toId(target))) return this.sendReply("User " + name + " doesn't have any badges.");
 		if (!user.confirm) {
 			user.confirm = true;
@@ -115,7 +115,7 @@ var comm = {
 		} else {
 			Core.Delete('badges', toId(target));
 			this.sendReply('You have successfully removed all badges from ' + name + '.');
-			if (Users.get(name)&& Users.get(name).connected) Users.get(name).send('All of your badges have been removed.');
+			if (Users.getExact(name) && Users.getExact(name).connected) Users.get(name).send('All of your badges have been removed.');
 			user.confirm = false;
 		}
 	},
@@ -128,11 +128,12 @@ var comm = {
 		var user1 = (Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0].trim());
         var user2 = (Users.getExact(target[1]) ? Users.getExact(target[1]).name : target[1].trim());
         if (user1 === user2) return this.sendReply("You can't transfer badges between the same user.");
-		
+
 		var user1Badges = Core.read('badges', toId(user1));
 		var user2Badges = Core.read('badges', toId(user2)) || {};
 		if (Object.keys(user1Badges).length < 1) return this.sendReply("User " + user1 + " doesn't have any badges to transfer.");
 		Core.write('badges', user2, Object.merge(user1Badges, user2Badges));
+		Core.Delete('badges', user1);
 		return this.sendReply(user1 + '\'s badges have successfully been transferred to ' + user2);
 	},
 	
