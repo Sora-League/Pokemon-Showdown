@@ -366,7 +366,7 @@ exports.commands = {
 			seen('gymldrfloat') + getBadges('gymldrfloat'));
 	},
 
-        ghost: 'tswiv', 
+    ghost: 'tswiv', 
 	tswiv: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>TSwiv</b>∆<br />' +
