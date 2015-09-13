@@ -130,20 +130,9 @@ var comm = {
         if (user1 === user2) return this.sendReply("You can't transfer badges between the same user.");
 		
 		var user1Badges = Core.read('badges', toId(user1));
-		var user2Badges = Core.read('badges', toId(user2));
+		var user2Badges = Core.read('badges', toId(user2)) || {};
 		if (Object.keys(user1Badges).length < 1) return this.sendReply("User " + user1 + " doesn't have any badges to transfer.");
-		if (!user2Badges || !Object.keys(user2Badges).length) {
-			var list = Core.read('badges', toId(user1));
-			Core.write('badges', toId(user2), list);
-			Core.Delete('badges', toId(user1));
-		} else {
-			for (var i in user1Badges) {
-				if (user2Badges[i]) continue;
-				user2Badges[i] = user1Badges[i];
-			}
-			Core.write('badges', toId(user2), user2Badges);
-			Core.Delete('badges', toId(user1));
-		}
+		Core.write('badges', user2, Object.merge(user1Badges, user2Badges));
 		return this.sendReply(user1 + '\'s badges have successfully been transferred to ' + user2);
 	},
 	
