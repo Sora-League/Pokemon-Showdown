@@ -557,12 +557,25 @@ exports.commands = {
 			'<b>Prefered Tier:</b> Balanced Hackmons' +
 			'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif"><br />' +getBadges('gasp'));
 	},
-	/*leafy: function (target, room, user) {
+	leafy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReply('|html|<div style = "width: 100px; height: 200px; float: right; background: rgba(0, 0, 0, 0.7)">lol</div>' +
-			'<div style = "height: 200px; text-align: center; background-image: url(http://i1171.photobucket.com/albums/r545/Brahak/maple_zpsg5sgjduk.jpg); background-size: cover;">' +
-			'<marquee width = "43" height = "24" direction = "down" behavior = "alternate"><marquee scrollamount = "10" behavior = "alternate"><font size = 3><b>Leaf</b></font></marquee></marquee>');
-},*/
+		this.sendReply('|html|<div style = "padding: 5px; text-align: center; background-image: url(http://i1171.photobucket.com/albums/r545/Brahak/maple_zpsg5sgjduk.jpg) no-repeat scroll bottom; background-size: cover;">' +
+			'<font size = 4 color = "white"><b>∆Leaf∆</b></font><br><br>' + 
+			'<table align = "center" border = "0px" style = "color: #707c71">' + 
+			'<tr><td style = "background: rgba(0, 0, 0, 0.9); width: 200px; height: 120px"><b><u><span style = "font-size: 10pt">Achievements</span></u></b><br>' +
+			'<li style = "padding: 3px">Successfully ran two leagues.' +
+			'<li style = "padding: 3px">Been a Gym Leader, Elite Four, and Frontier in Sora.</td>' +
+			'<td style = "padding: 0px 8px 0px 8px;"><img src = "http://play.pokemonshowdown.com/sprites/xyani/grovyle.gif"></td>' +
+			'<td style = "background: rgba(0, 0, 0, 0.9); width: 200px;"><b><u><span style = "font-size: 10pt">Known for</span></u></b><br>' +
+			'<li style = "padding: 3px">Scarf Kyurem set.' +
+			'<li style = "padding: 3px">Mega Blastoise and Cinccino favourites.' +
+			'<li style = "padding: 3px">Resident drunk of Sora.</td></tr></table><br>' +
+			'<table align = "center"><tr><td><div style = "display: inline-block; width: 120px; height: 101px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/leafeon-2.gif) no-repeat 0px -70px"></div></td>' +
+			'<td><div style = "transform: rotateY(180deg); display: inline-block; width: 120px; height: 101px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/leafeon-2.gif) no-repeat 0px -70px"></div></td></tr></table>' +
+			'<center><audio controls src = "https://dl.pushbulletusercontent.com/91078HKzh36ORZdMm7EaE2suEdL7iwr1/Devil%20Survivor%202%20-%20Septentrion%20%5Bwww.songmirror.org%5D.mp3" style = "width: 100%; border-radius: 0px; background: linear-gradient(45deg, #011100, #00ad17, #011100, #00ad17, #011100, #00ad17, #011100, #00ad17);"></audio><br>' +
+			getBadges('e4alcor') + 
+			'</div>');
+	},
 	meowsofsora: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<b><font color = 55dbe8><a><font size= 4><center>MeowsofSora</font></center></b><br />'+
