@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Leaf∆', '∆E4 H∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Fröntier∆Blade☯', '∆Frontier Zachary∆', '∆Frontier Meows∆'];
+		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Alcor∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Fröntier∆Blade☯', '∆Frontier Zachary∆', '∆Frontier Meows∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -111,16 +111,16 @@ exports.commands = {
 	//Elite Four
 	//////////////
 
-	h: function (target, room, user) {
+	silvy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>H</b>∆<br />' +
-			'<i>"H4Hentai, H4Harem, H4Harassment, H4High. Yes, I\'m steel usin\' this sexy quote. Now let\'s give this battle a try. :3"</i> <br />' +
+			'<i>"Silvy-Chan at your service, here to steel the kill. My body is regi. So come at me, if you will~ ;)"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
 			'<b>Ace:</b> None <br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'- None<br />' +
-			seen('e4h') + 
-			getBadges('e4h'));
+			seen('e4silvy') + 
+			getBadges('e4silvy'));
 	},
 
 	edge: function (target, room, user) {
@@ -135,17 +135,17 @@ exports.commands = {
 			getBadges('e4edge'));
 	},
 
-	leaf: function (target, room, user) {
+	alcor: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Leaf</b>∆<br />' +
+		this.sendReplyBox('∆E4 <b>Alcor</b>∆<br />' +
 			'<i>"The pattern repeats, will your flaws too?"</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
 			'<b>Ace:</b> Medicham<br />' +
 			'<b>Battle Rules:</b><br />' +
 			'-None<br />' + 
-			seen('e4leaf') +
+			seen('e4alcor') +
 			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
-			getBadges('e4leaf'));
+			getBadges('e4alcor'));
 	},
 	
 	terror: function (target, room, user) {
@@ -557,12 +557,12 @@ exports.commands = {
 			'<b>Prefered Tier:</b> Balanced Hackmons' +
 			'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif"><br />' +getBadges('gasp'));
 	},
-	leafy: function (target, room, user) {
+	/*leafy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReply('|html|<div style = "width: 100px; height: 200px; float: right; background: rgba(0, 0, 0, 0.7)">lol</div>' +
 			'<div style = "height: 200px; text-align: center; background-image: url(http://i1171.photobucket.com/albums/r545/Brahak/maple_zpsg5sgjduk.jpg); background-size: cover;">' +
 			'<marquee width = "43" height = "24" direction = "down" behavior = "alternate"><marquee scrollamount = "10" behavior = "alternate"><font size = 3><b>Leaf</b></font></marquee></marquee>');
-},
+	},*/
 	meowsofsora: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<b><font color = 55dbe8><a><font size= 4><center>MeowsofSora</font></center></b><br />'+
