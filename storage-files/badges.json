@@ -37,7 +37,8 @@
   "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
   "staravia": "<img src=\"http://i.imgur.com/2UmjiLt.png\" title=\"Staravia Badge: Two Years on Sora\">",
   "meme": "<img src=\"http://i.imgur.com/XWAudeE.gif\" title=\"I'm a dank memer\">",
-  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">"
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">",
+  "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 5 Symbol Defends\">"
  },
  "aboottothehead": {
   "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
@@ -61,7 +62,8 @@
   "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
   "e4": "<img src=\"http://i.imgur.com/y21ENWF.png\" title=\"Elite Four Conqueror: Cleared the Elite Four\">",
   "gym": "<img src=\"http://i.imgur.com/tnkW9J9.png\" title=\"Gym Badge Collector: Obtained all 18 Gym Badges\">",
-  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">"
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "egg": "<img src=\"http://i.imgur.com/dLyGYK5.png\" title=\"This user is an egg without trying\">"
  },
  "e4leaf": {
   "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
@@ -96,10 +98,11 @@
   "lucy": "<img src=\"http://i.imgur.com/djszmLN.png\" title=\"Lucy Badge: 10 Symbol Defends\">"
  },
  "frontiermeows": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "efrontierrank": "<img src=\"http://i.imgur.com/2iZp7Mi.png\" title=\"Achieved Elite Frontier Status\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
   "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 5 Symbol Defends\">"
- },
- "e4h": {
-  "egg": "<img src=\"http://i.imgur.com/dLyGYK5.png\" title=\"This user is an egg without trying\">"
  },
  "coachabadon": {
   "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
@@ -119,5 +122,31 @@
  },
  "frntierblade": {
   "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 7 Symbol Defends\">"
+ },
+ "e4edge": {
+  "bertha": "<img src=\"http://i.imgur.com/MDcdCka.png\" title=\"Bertha Badge: 5 E4 Defends\">",
+  "koga": "<img src=\"http://i.imgur.com/2eC21HT.png\" title=\"Koga Badge: 10 E4 Defends\">",
+  "aegislash": "<img src=\"http://i.imgur.com/aJY3eKg.png\" title=\"Aegislash: Winner of a major Sora tournament\">"
+ },
+ "gymldrwaffles": {
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">"
+ },
+ "gymldrfloat": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">",
+  "aegislash": "<img src=\"http://i.imgur.com/aJY3eKg.png\" title=\"Aegislash: Winner of a major Sora tournament\">"
+ },
+ "e4silvy": {
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "gym": "<img src=\"http://i.imgur.com/tnkW9J9.png\" title=\"Gym Badge Collector: Obtained all 18 Gym Badges\">",
+  "e4": "<img src=\"http://i.imgur.com/y21ENWF.png\" title=\"Elite Four Conqueror: Cleared the Elite Four\">",
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">",
+  "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">",
+  "bertha": "<img src=\"http://i.imgur.com/MDcdCka.png\" title=\"Bertha Badge: 5 E4 Defends\">",
+  "egg": "<img src=\"http://i.imgur.com/dLyGYK5.png\" title=\"This user is an egg without trying\">",
+  "porygonz": "<img src=\"http://i.imgur.com/bJrRxB8.png\" title=\"Porygon-Z: Broke the server while trying to repair it. Good job mate\">"
  }
 }
