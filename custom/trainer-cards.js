@@ -113,14 +113,14 @@ exports.commands = {
 
 	silvy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>H</b>∆<br />' +
+		this.sendReplyBox('∆E4 <b>Silvy</b>∆<br />' +
 			'<i>"Silvy-Chan at your service, here to steel the kill. My body is regi. So come at me, if you will~ ;)"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
 			'<b>Ace:</b> None <br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'- None<br />' +
 			seen('e4silvy') + 
-			getBadges('e4silvy'));
+			getBadges('siiilver'));
 	},
 
 	edge: function (target, room, user) {
