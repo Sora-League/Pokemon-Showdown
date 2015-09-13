@@ -647,8 +647,7 @@ exports.commands = {
 			process.exit();
 		}, 10000);
 	},
-	
->>>>>>> 5bf70cc4db1d8f0ba7a9a66b6a26eab73b0da7b4
+
 	//Panagram
 	panagramhelp: 'panagramrules',
     panagramrules: function(target, room, user) {
