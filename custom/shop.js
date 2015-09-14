@@ -72,7 +72,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		var User;
 		if (!toId(target)) User = user.name;
-		else User = Users.get(target) ? Users.get(target).name : target;
+		else User = Users.getExact(target) ? Users.getExact(target).name : target;
 		var money = Number(Core.read('money', toId(User))) || 'no';
 		this.sendReplyBox(User + ' has ' + money + ' buck' + (money === 1 ? '' : 's') + '.');
 	},
