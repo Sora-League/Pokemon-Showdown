@@ -532,13 +532,12 @@ exports.commands = {
 
 		var self = this;
 		if (!showAll) {
-			require('satelize').satelize({ip: targetUser.latestIp}, function (err, data) {
+			return require('satelize').satelize({ip: targetUser.latestIp}, function (err, data) {
 				data = JSON.parse(data);
 				var flag = '';
 				if (!err && data.country) flag = '<img src = "http://128.199.160.98:8000/flags/' + toId(data.country_code) + '.png" title = ' + data.country + '>';
 				self.sendReplyBox(name + flag + buf);
 			});
-			return;
 		}
 		buf += '<br />';
 		if (user.can('alts', targetUser) || user.can('alts') && user === targetUser) {
