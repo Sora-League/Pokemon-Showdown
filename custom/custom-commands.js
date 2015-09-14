@@ -503,7 +503,7 @@ exports.commands = {
 		var buf = '<strong class="username" style = "color:' + Core.color(targetUser.userid) + ';"><small style="display:none;">' + targetUser.group + '</small>' + Tools.escapeHTML(targetUser.name) + '</strong> ' + (!targetUser.connected ? ' <em style="color:gray">(offline)</em>' : '');
 		
 		var flag = geoip.lookup(targetUser.latestIp);
-		if (flag) buf += '<img src = "http://128.199.160.98:8000/flags/' + toId(flag.country) + '.png" title = ' + require('country-code-lookup').byFips(flag.country).country + '>"
+		if (flag) buf += '<img src = "http://128.199.160.98:8000/flags/' + toId(flag.country) + '.png" title = ' + require('country-code-lookup').byFips(flag.country).country + '>';
 		
 		if (Config.groups[targetUser.group] && Config.groups[targetUser.group].name) {
 			buf += "<br />" + Config.groups[targetUser.group].name + " (" + targetUser.group + ")";
