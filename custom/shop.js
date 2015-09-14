@@ -175,7 +175,7 @@ exports.commands = {
 		//these items have their own specifics
 		if (target === 'avatar') {
 			if (user.hasavatar) return this.sendReply("You have already bought a custom avatar. Use /customavatar [URL] to set it.");
-			if (!Number(user.avatar)) return this.sendReply('You already have a custom avatar!');
+			if (!Number(user.avatar)) return this.sendReply('You already have a custom avatar. Buy a fix if you want to change it.');
 
 			this.sendReply("|html|You have bought a custom avatar. Use /customavatar <i>URL</i> to set it.");
 			this.sendReply("It is recommended that you use an image with dimensions 80 x 80, or your avatar may not show up correctly.");
