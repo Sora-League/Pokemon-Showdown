@@ -1,6 +1,8 @@
 var fs = require('fs');
 var request = require('request');
 var http = require('http');
+var geoip = require('geoip-lite');
+geoip.startWatchingDataUpdate();
 var poofoff = false;
 
 exports.commands = {
@@ -498,8 +500,11 @@ exports.commands = {
 			return this.errorReply("/alts - Access denied.");
 		}
 
-		var buf = '',
-			name = '<strong class="username" style = "color:' + Core.color(targetUser.userid) + '"><small style="display:none">' + targetUser.group + '</small>' + Tools.escapeHTML(targetUser.name) + '</strong> ' + (!targetUser.connected ? ' <em style="color:gray">(offline)</em>' : '');
+		var buf = '<strong class="username" style = "color:' + Core.color(targetUser.userid) + ';"><small style="display:none;">' + targetUser.group + '</small>' + Tools.escapeHTML(targetUser.name) + '</strong> ' + (!targetUser.connected ? ' <em style="color:gray">(offline)</em>' : '');
+		
+		var flag = geoip.lookup(targetUser.latestIp);
+		if (flag) buf += '<img src = "http://128.199.160.98:8000/flags/' + toId(flag.country) + '.png" title = ' + require('country-code-lookup').byFips(flag.country).country + '>"
+		
 		if (Config.groups[targetUser.group] && Config.groups[targetUser.group].name) {
 			buf += "<br />" + Config.groups[targetUser.group].name + " (" + targetUser.group + ")";
 		}
@@ -530,14 +535,8 @@ exports.commands = {
 		}
 		buf += '<br />Rooms: ' + (publicrooms || '<em>(no public rooms)</em>');
 
-		var self = this;
 		if (!showAll) {
-			return require('satelize').satelize({ip: targetUser.latestIp}, function (err, data) {
-				data = JSON.parse(data);
-				var flag = '';
-				if (!err && data.country) flag = '<img src = "http://128.199.160.98:8000/flags/' + toId(data.country_code) + '.png" title = ' + data.country + '>';
-				self.sendReplyBox(name + flag + buf);
-			});
+			return this.sendReplyBox(buf);
 		}
 		buf += '<br />';
 		if (user.can('alts', targetUser) || user.can('alts') && user === targetUser) {
@@ -583,12 +582,7 @@ exports.commands = {
 		if ((user === targetUser || user.hasConsoleAccess(connection)) && privaterooms) {
 			buf += '<br />Private rooms: ' + privaterooms;
 		}
-		require('satelize').satelize({ip: targetUser.latestIp}, function (err, data) {
-			data = JSON.parse(data);
-			var flag = '';
-			if (!err && data.country) flag = '<img src = "http://128.199.160.98:8000/flags/' + toId(data.country_code) + '.png" title = ' + data.country + '>';
-			self.sendReplyBox(name + flag + buf);
-		});
+		this.sendReplyBox(buf);
 	},
 
 	uptime: function (target, room, user) {
