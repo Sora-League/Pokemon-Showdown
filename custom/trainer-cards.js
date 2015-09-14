@@ -538,6 +538,20 @@ exports.commands = {
 			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#meme"><img src="http://i.imgur.com/XWAudeE.gif" title="Yee"></a><a href="http://soraleague.weebly.com/badges.html#smeargle"><img src="http://i.imgur.com/A8h3FJN.png" title="Created the Official breAdminTeam Background"></a><a href="http://soraleague.weebly.com/badges.html#bertha"><img src="http://i.imgur.com/MDcdCka.png" title="Bertha Badge: 5 E4 Defends"></a><a href="http://soraleague.weebly.com/badges.html#koga"><img src="http://i.imgur.com/2eC21HT.png" title="Koga Badge: 10 E4 Defends"></a><br />' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center></details> <br />');
 	},
+	
+	darkus: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><span style = "font-size: 11pt; font-weight: bold; color: ' + Core.color('soradarkus') + '">∆SoraDarkus∆</span><br>' +
+		'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br><br>' +
+		'<b>Aces:</b> Bisharp and Crawdaunt<br>' +
+		'<b>Skilled in:</b> Monotype<br>' +
+		'<b>Preferred types:</b> Dark, Psychic and Steel<br>' +
+		'<b>Achievements:</b> Sora E4, Gym Leader and Side-Mission<br>' +
+		'<b>Known for:</b> Being one of the original members of Sora, and having mad Dark mono skills.<br>' +
+		seen('soradarkus') + '<br>' +
+		'<img src = "http://play.pokemonshowdown.com/sprites/xyani/bisharp.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/crawdaunt.gif" style = "transform: rotateY(180deg)"><br>' +
+		getBadges('soradarkus'));
+	},
 
 	edgy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -676,7 +690,7 @@ exports.commands = {
 
 	afraud: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<div style="background-image: url(&quot;http://i.imgur.com/jBfZq5A.jpg&quot;) ; background-size: cover" target="_blank"><br \><br /><br /><br /><br /><br /><br /><br /><br />' +
+		this.sendReplyBox('<div style="background-image: url(&quot;http://i.imgur.com/jBfZq5A.jpg&quot;) ; background-size: cover"><br \><br /><br /><br /><br /><br /><br /><br /><br />' +
 			'<br \><center><font size=3 color=#00FF40><b>A Fraud</b> - <i>Izzaro Flame</i></font><br \>' +
 			'<audio src="https://dl.pushbulletusercontent.com/Pl3dDtxvFMbdAn6IZQHAF6gxFluLoAhA/A%20Fraud%20-%20%20A%20Big%20Fraud.mp3" controls="" loop style="width: 100% ; border: 2px solid #58FAF4 ; background-color: #00000a" target="_blank"></audio></center><br \><br \>');
 	},
@@ -688,6 +702,11 @@ exports.commands = {
 			'<audio autoplay controls style = "border: 2px solid red; background: black; width: 100%" src = "http://www.myinstants.com/media/sounds/wombo-combo_2.mp3">' +
 			'</audio></center>');
 	},
+	
+	/*nojohns: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<div style = "background: url(http://i.imgur.com/dTD1J7o.gif); background-size: cover;"><span style = "color: white; font-size: 12pt;"><br>' +
+			<audio controls loop src = "*/
 	
 	ichibannotakaramono: function (target, room, user) {
         	if (!this.canBroadcast()) return;
