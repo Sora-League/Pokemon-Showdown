@@ -132,8 +132,8 @@ var comm = {
 		var user1Badges = Core.read('badges', toId(user1));
 		var user2Badges = Core.read('badges', toId(user2)) || {};
 		if (Object.keys(user1Badges).length < 1) return this.sendReply("User " + user1 + " doesn't have any badges to transfer.");
-		Core.write('badges', user2, Object.merge(user1Badges, user2Badges));
-		Core.Delete('badges', user1);
+		Core.write('badges', toId(user2), Object.merge(user1Badges, user2Badges));
+		Core.Delete('badges', toId(user1));
 		return this.sendReply(user1 + '\'s badges have successfully been transferred to ' + user2);
 	},
 	
