@@ -94,6 +94,6 @@ var cmds = {
 };
 
 exports.commands = {
-	ca: 'customavatar'
+	ca: 'customavatar',
 	customavatar: cmds
 }
