@@ -183,7 +183,7 @@ exports.commands = {
 
 		} else if (target === 'potd') {
 			if (Config.potd) return this.sendReply('The Pokémon of the Day has already been set.');
-			this.sendReply("|html|Use /setpotd <i>Pokémon</i> to set the Pokémon of the day.");
+			this.sendReply("|html|Use /setpotd <em>Pokémon</em> to set the Pokémon of the day.");
 			user.setpotd = true;
 		}
 
@@ -199,7 +199,7 @@ exports.commands = {
 		addLog(user.name + ' bought a ' + target + ' from the shop.');
 	},
 
-	setpotd: function(target, room, user) {
+	setpotd: function (target, room, user) {
 		if (!user.setpotd) return this.sendReply("You need to buy the ability to set the Pokemon of the Day!");
 		if (user.alreadysetpotd) return this.sendReply("You've already set the POTD!");
 
@@ -210,40 +210,5 @@ exports.commands = {
 		this.logModCommand('The Pokemon of the Day was changed to ' + target + ' by ' + user.name + '.');
 		user.setpotd = false;
 		user.alreadysetpotd = true;
-	},
-
-	customavatar: 'setavatar',
-	setavatar: function(target, room, user, connection, cmd) {
-		if (!toId(target)) return this.sendReply('/setavatar URL - Sets a custom avatar.');
-		if (!user.boughtAvatar && !this.can('hotpatch')) return false;
-		if (typeof user.avatar === 'string') fs.unlink('config/avatars/' + user.avatar);
-		target = target.trim();
-		var formatList = ['.png', '.jpg', '.gif', '.bmp', '.jpeg'];
-		var format = path.extname(target);
-		if (formatList.indexOf(format) === -1) return this.sendReply('The format of your avatar is not supported. The allowed formats are ' + formatList.join(', ') + '.');
-		if (target.indexOf('https://') === 0) target = 'http://' + target.substr(8);
-		else if (target.indexOf('http://') !== 0) target = 'http://' + target;
-
-		var self = this;
-		request.get(target).on('error', function() {
-			return self.sendReply("The avatar you picked doesn\'t exist. Try picking a new avatar.");
-		}).on('response', function(response) {
-			if (response.statusCode == 404) return self.sendReply("The avatar you picked is unavailable. Try picking a new avatar.");
-			user.avatar = user.userid + format;
-			Config.customavatars[user.userid] = user.avatar;
-			self.sendReply('|html|Your new avatar has been set to<br/><img src = "' + target + '" width = 80 height = 80>');
-			response.pipe(fs.createWriteStream('config/avatars/' + user.userid + format));
-		});
-		user.boughtAvatar = false;
-	},
-
-	removeavatar: function(target, room, user, connection, cmd) {
-		if (typeof user.avatar === 'Number') return this.sendReply('You do not own a custom avatar.');
-		if (toId(target) !== 'confirm')
-			this.sendReply('WARNING: If you choose to delete your avatar now, it cannot be recovered later. If you\'re sure you want to do this, use \'/removeavatar confirm.\'');
-		delete Config.customavatars[user.userid];
-		fs.unlink('config/avatars/' + user.avatar);
-		user.avatar = 1;
-		this.sendReply('Your custom avatar has been successfully removed.');
 	}
 };
