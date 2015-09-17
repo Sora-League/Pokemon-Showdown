@@ -1,5 +1,9 @@
 /*Sooo.. here's a small script I made that adds custom avatars.
 ~SilverTactic*/
+var fs = require('fs');
+var request = require('request');
+var path = require('path');
+
 function loadAvatars() {
 	var formatList = ['.png', '.gif', '.bmp', '.jpeg', '.jpg'];
 	var avatarList = fs.readdirSync('config/avatars');
