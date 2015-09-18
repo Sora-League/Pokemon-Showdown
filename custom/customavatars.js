@@ -106,8 +106,8 @@ var cmds = {
 	move: function (target, room, user, connection, cmd) {
 		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Delete\'s the specified user\'s custom avatar.');
 		target = this.splitTarget(target);
-		var user1 = (Users.get(target) ? Users.get(target).name : target);
-		var user2 = (this.targetUser ? this.targetUser.name : this.targetUsername);
+		var user1 = (this.targetUser ? this.targetUser.name : this.targetUsername);
+		var user2 = (Users.get(target) ? Users.get(target).name : target);
 		var user1Av = Config.customavatars[toId(user1)];
 		var user2Av = Config.customavatars[toId(user2)];
 		if (!user1Av) return this.sendReply(user1 + ' does not have a custom avatar.');
