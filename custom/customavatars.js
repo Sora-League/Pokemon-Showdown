@@ -100,10 +100,9 @@ var cmds = {
 			Users.get(target).send('Your custom avatar has been removed.');
 			Users.get(target).avatar = 1;
 		}
-	}
+	},
 	
 	shift: 'move',
-	forcemove: 'move',
 	move: function (target, room, user, connection, cmd) {
 		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Delete\'s the specified user\'s custom avatar.');
 		target = this.splitTarget(target);
