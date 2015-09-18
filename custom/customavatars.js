@@ -39,7 +39,6 @@ var cmds = {
 			'<li>/ca set <small>or</small> /setavatar <em>User</em>, <em>URL</em> - Sets the specified user\'s avatar to the specified image link.' +
 			'<li>/ca delete <small>or</small> /deleteavatar <em>User</em> - Delete\'s the specified user\'s custom avatar.' +
 			'<li>/ca move <small>or</small> /moveavatar <em>User 1</em>, <em>User 2</em> - Moves User 1\'s custom avatar to User 2.' +
-			'<li>/ca swap <small>or</small> /swapavatar <em>User 1</em>, <em>User 2</em> - Swaps User 1\'s and User 2\'s custom avatars.'
 		);
 	},
 
@@ -48,6 +47,7 @@ var cmds = {
 	set: function (target, room, user, connection, cmd) {
 		var User;
 		if (!this.can('hotpatch')) {
+			//You'll have to set a *user.boughtAvatar = true;* statement somewhere in your shop code when a user buys a custom avatar
 			if (cmd === 'forceset') return false;
 			if (!target || !target.trim()) return this.sendReply('|html|/avatar ' + cmd + ' <em>URL</em> - Sets your custom avatar to the specified image.');
 			if (!user.boughtAvatar) return this.sendReply('You need to buy a custom avatar from the shop before using this command.');
@@ -88,11 +88,12 @@ var cmds = {
 	
 	remove: 'delete',
 	'delete': function (target, room, user, connection, cmd) {
-		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Delete\'s the specified user\'s custom avatar.');
+		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Deletes the specified user\'s custom avatar.');
 		target = Users.get(target) ? Users.get(target).name : target;
-		if (!Config.customavatars[toId(target)]) return this.sendReply('User ' + target + ' does not have a custom avatar.');
-		fs.unlink('config/avatars/' + Config.customavatars[toId(target)]);
-		delete Config.customavatars[toId(target)];
+		var avatars = Config.customavatars;
+		if (!avatars[toId(target)]) return this.sendReply('User ' + target + ' does not have a custom avatar.');
+		fs.unlink('config/avatars/' + avatars[toId(target)]);
+		delete avatars[toId(target)];
 		this.sendReply(target + '\'s custom avatar has been successfully removed.');
 		if (Users.get(target) && Users.get(target).connected) {
 			Users.get(target).send('Your custom avatar has been removed.');
@@ -102,7 +103,7 @@ var cmds = {
 	
 	shift: 'move',
 	move: function (target, room, user, connection, cmd) {
-		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Delete\'s the specified user\'s custom avatar.');
+		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User 1</em>, <em>User 2</em> - Moves User 1\'s custom avatar to User 2.');
 		target = this.splitTarget(target);
 		var user1 = (this.targetUser ? this.targetUser.name : this.targetUsername);
 		var user2 = (Users.get(target) ? Users.get(target).name : target);
@@ -125,6 +126,7 @@ var cmds = {
 exports.commands = {
 	ca: 'customavatar',
 	customavatar: cmds,
+	shiftavatar: 'moveavatar',
 	moveavatar: cmds.move,
 	deleteavatar: 'removeavatar',
 	removeavatar: cmds['delete'],
