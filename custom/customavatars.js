@@ -32,7 +32,7 @@ var cmds = {
 	'': 'help',
 	help: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		return this.sendReplyBox('<b>Custom Avatar commands<b><br>' +
+		return this.sendReplyBox('<b>Custom Avatar commands</b><br>' +
 			'All commands require ~ unless specified otherwise.<br><br>' +
 			'<li>/ca set <small>or</small> /setavatar <em>URL</em> (For normal users) - Sets the user\'s avatar to the specified image link.The user needs to buy this from the shop first.' +
 			'<li>/ca set <small>or</small> /setavatar <em>User</em>, <em>URL</em> - Sets the specified user\'s avatar to the specified image link.' +
