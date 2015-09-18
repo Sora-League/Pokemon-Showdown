@@ -78,15 +78,15 @@ var cmds = {
 		}).on('response', function (response) {
 			if (response.statusCode == 404) return self.sendReply("The selected avatar is unavailable. Try picking a different one.");
 			var img = toId(User) + format;
-			var their = (toId(User) === user.userid ? User.name + '\'s' : 'Your');
 			if (Users.getExact(User)) {
 				delete User.avatar;
 				User.avatar = img;
 			}
+			avatars[toId(User)] = img;
+			var their = (toId(User) === user.userid ? User.name + '\'s' : 'Your');
 			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div>');
 			response.pipe(fs.createWriteStream('config/avatars/' + img));
 		});
-		loadAvatars();
 	},
 	
 	remove: 'delete',
