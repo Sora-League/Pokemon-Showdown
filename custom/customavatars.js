@@ -53,7 +53,7 @@ var cmds = {
 			if (!user.boughtAvatar) return this.sendReply('You need to buy a custom avatar from the shop before using this command.');
 
 			target = target.trim();
-			User = user.name;
+			User = user;
 		} else {
 			if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
 			target = this.splitTarget(target);
@@ -61,9 +61,8 @@ var cmds = {
 			if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
 			if (!targetUser && cmd !== 'forceset') return this.sendReply('User ' + this.targetUsername + ' is offline. Use the command "forceset" instead of "' + cmd + '" to set their custom avatar.');
 			target = target.trim();
-			User = (targetUser ? targetUser.name : this.targetUsername);
+			User = targetUser || this.targetUsername;
 		}
-		User = Users.getExact(User) || User;
 		var avatars = Config.customavatars;
 		var formatList = ['.png', '.jpg', '.gif', '.bmp', '.jpeg'];
 		var format = path.extname(target);
@@ -80,7 +79,10 @@ var cmds = {
 			if (response.statusCode == 404) return self.sendReply("The selected avatar is unavailable. Try picking a different one.");
 			var img = toId(User) + format;
 			var their = (toId(User) === user.userid ? User.name + '\'s' : 'Your');
-			if (Users.getExact(User)) User.avatar = img;
+			if (Users.getExact(User)) {
+				delete User.avatar;
+				User.avatar = img;
+			}
 			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div>');
 			response.pipe(fs.createWriteStream('config/avatars/' + img));
 		});
