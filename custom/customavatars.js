@@ -49,15 +49,16 @@ var cmds = {
 		if (!this.can('hotpatch')) {
 			//You'll have to set a *user.boughtAvatar = true;* statement somewhere in your shop code when a user buys a custom avatar
 			if (cmd === 'forceset') return false;
-			if (!target || !target.trim()) return this.sendReply('|html|/avatar ' + cmd + ' <em>URL</em> - Sets your custom avatar to the specified image.');
+			if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>URL</em> - Sets your custom avatar to the specified image.');
 			if (!user.boughtAvatar) return this.sendReply('You need to buy a custom avatar from the shop before using this command.');
 
 			target = target.trim();
 			User = user.name;
 		} else {
-			if (!target || !target.trim()) return this.sendReply('|html|/avatar ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
+			if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
 			target = this.splitTarget(target);
 			var targetUser = Users.getExact(this.targetUsername);
+			if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
 			if (!targetUser && cmd !== 'forceset') return this.sendReply('User ' + this.targetUsername + ' is offline. Use the command "forceset" instead of "' + cmd + '" to set their custom avatar.');
 			target = target.trim();
 			User = (targetUser ? targetUser.name : this.targetUsername);
@@ -79,10 +80,13 @@ var cmds = {
 			if (response.statusCode == 404) return self.sendReply("The selected avatar is unavailable. Try picking a different one.");
 			var img = toId(User) + format;
 			var their = (toId(User) === user.userid ? User.name + '\'s' : 'Your');
+			if (Users.getExact(User)) {
+				User.avatar = 1;
+				User.avatar = img;
+			}
+			avatars[toId(User)] = img;
 			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div>');
 			response.pipe(fs.createWriteStream('config/avatars/' + img));
-			if (Users.getExact(User)) User.avatar = img;
-			avatars[toId(User)] = img;
 		});
 	},
 	
@@ -108,6 +112,7 @@ var cmds = {
 		var avatars = Config.customavatars;
 		var user1 = (this.targetUser ? Users.getExact(this.targetUsername) : this.targetUsername);
 		var user2 = (Users.getExact(target) ? Users.getExact(target).name : target);
+		if (!toId(user1) || !toId(user2)) return this.sendReply('|html|/ca ' + cmd + ' <em>User 1</em>, <em>User 2</em> - Moves User 1\'s custom avatar to User 2.');
 		var user1Av = avatars[toId(user1)];
 		var user2Av = avatars[toId(user2)];
 		if (!user1Av) return this.sendReply(user1 + ' does not have a custom avatar.');
