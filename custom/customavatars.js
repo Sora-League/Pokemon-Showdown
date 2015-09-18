@@ -109,7 +109,7 @@ var cmds = {
 		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User 1</em>, <em>User 2</em> - Moves User 1\'s custom avatar to User 2.');
 		target = this.splitTarget(target);
 		var avatars = Config.customavatars;
-		var user1 = (this.targetUser ? Users.getExact(this.targetUsername) : this.targetUsername);
+		var user1 = (this.targetUser ? Users.getExact(this.targetUsername).name : this.targetUsername);
 		var user2 = (Users.getExact(target) ? Users.getExact(target).name : target);
 		if (!toId(user1) || !toId(user2)) return this.sendReply('|html|/ca ' + cmd + ' <em>User 1</em>, <em>User 2</em> - Moves User 1\'s custom avatar to User 2.');
 		var user1Av = avatars[toId(user1)];
@@ -122,7 +122,10 @@ var cmds = {
 		delete avatars[toId(user1)];
 		avatars[toId(user2)] = newAv;
 		if (Users.getExact(user1)) Users.getExact(user1).avatar = 1;
-		if (Users.getExact(user2)) Users.getExact(user1).avatar = newAv;
+		if (Users.getExact(user2)) {
+			delete Users.getExact(user1).avatar;
+			Users.getExact(user1).avatar = newAv;
+		}
 
 		return this.sendReply(user1 + '\'s custom avatar has been moved to ' + user2);
 	}
