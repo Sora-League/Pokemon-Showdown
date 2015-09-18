@@ -83,7 +83,6 @@ var cmds = {
 			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div>');
 			response.pipe(fs.createWriteStream('config/avatars/' + img));
 		});
-		loadAvatars();
 	},
 	
 	'delete': 'remove',
@@ -117,6 +116,8 @@ var cmds = {
 		fs.renameSync('config/avatars/' + user1Av, 'config/avatars/' + newAv);
 		delete Config.customavatars[toId(user1)];
 		Config.customavatars[toId(user2)] = newAv;
+		if (Users.get(user1)) Users.get(user1).avatar = 1;
+		if (Users.get(user2)) Users.get(user1).avatar = newAv;
 
 		return this.sendReply(user1 + '\'s custom avatar has been moved to ' + user2);
 	}
