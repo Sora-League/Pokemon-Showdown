@@ -43,48 +43,54 @@ var cmds = {
 	},
 
 	add: 'set',
+	forceset: 'set',
 	set: function (target, room, user, connection, cmd) {
 		var User;
 		if (!this.can('hotpatch')) {
+			if (cmd === 'forceset') return false;
 			if (!target || !target.trim()) return this.sendReply('|html|/avatar ' + cmd + ' <em>URL</em> - Sets your custom avatar to the specified image.');
 			if (!user.boughtAvatar) return this.sendReply('You need to buy a custom avatar from the shop before using this command.');
 
 			target = target.trim();
-			User = user;
+			User = user.name;
 		} else {
 			if (!target || !target.trim()) return this.sendReply('|html|/avatar ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
 			target = this.splitTarget(target);
 			var targetUser = this.targetUser;
-			if (!targetUser) return this.sendReply('User ' + this.targetUsername + ' not found. Did you misspell their name?');
+			if (!targetUser && cmd !== 'forceset') return this.sendReply('User ' + this.targetUsername + ' was not found. Did you misspell their name?');
 			target = target.trim();
-			User = targetUser;
+			User = (targetUser ? targetUser.name : this.targetUsername);
 		}
+		User = Users.get(User) || User;
+		var avatars = Config.customavatars;
 		var formatList = ['.png', '.jpg', '.gif', '.bmp', '.jpeg'];
 		var format = path.extname(target);
-		if (formatList.indexOf(format) === -1) return this.sendReply('The format of your avatar is not supported. The allowed formats are ' + formatList.join(', ') + '.');
+		if (formatList.indexOf(format) === -1) return this.sendReply('The format of the selected avatar is not supported. The allowed formats are: ' + formatList.join(', ') + '.');
 		if (target.indexOf('https://') === 0) target = 'http://' + target.substr(8);
 		else if (target.indexOf('http://') !== 0) target = 'http://' + target;
 
 		//We don't need to keep the user's original avatar
-		if (typeof user.avatar === 'string') fs.unlink('config/avatars/' + user.avatar);
+		if (avatars[toId(User)]) fs.unlink('config/avatars/' + avatars[toId(User)]);
 		var self = this;
 		request.get(target).on('error', function () {
-			return self.sendReply("The selected avatar doesn\'t exist. Try picking a new avatar.");
+			return self.sendReply("The selected avatar doesn\'t exist. Try picking a different one.");
 		}).on('response', function (response) {
 			if (response.statusCode == 404) return self.sendReply("The selected avatar is unavailable. Try picking a different one.");
-			User.avatar = User.userid + format;
-			Config.customavatars[user.userid] = User.avatar;
-			var their = (User.userid === user.userid ? User.name + '\'s' : 'Your');
+			var img = toId(User) + format;
+			if (Users.get(User)) User.avatar = img;
+			avatars[toId(User)] = img;
+			var their = (toId(User) === user.userid ? User.name + '\'s' : 'Your');
 			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div>');
-			response.pipe(fs.createWriteStream('config/avatars/' + User.userid + format));
+			response.pipe(fs.createWriteStream('config/avatars/' + img));
 		});
 		loadAvatars();
 	},
 	
 	'delete': 'remove',
+	forcedelete: 'remove',
 	remove: function (target, room, user, connection, cmd) {
 		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Delete\'s the specified user\'s custom avatar.');
-		if (!Users.get(target) || !Users.get(target).connected) return this.sendReply('User ' + target + ' is not online. If you still want to delete this user\'s avatar, use the command "forcedelete" instead.');
+		if ((!Users.get(target) || !Users.get(target).connected) && cmd !== 'forcedelete') return this.sendReply('User ' + target + ' is not online. If you still want to delete this user\'s avatar, use the command "forcedelete" instead of "' + cmd + '".');
 		target = Users.get(target) ? Users.get(target).name : target;
 		if (!Config.customavatars(toId(target))) return this.sendReply('User ' + target + ' does not have a custom avatar.');
 		fs.unlink('config/avatars/' + Config.customavatars[toId(target)]);
@@ -94,6 +100,26 @@ var cmds = {
 			Users.get(target).send('Your custom avatar has been removed.');
 			Users.get(target).avatar = 1;
 		}
+	}
+	
+	shift: 'move',
+	forcemove: 'move',
+	move: function (target, room, user, connection, cmd) {
+		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Delete\'s the specified user\'s custom avatar.');
+		target = this.splitTarget(target);
+		var user1 = (Users.get(target) ? Users.get(target).name : target);
+		var user2 = (this.targetUser ? this.targetUser.name : this.targetUsername);
+		var user1Av = Config.customavatars[toId(user1)];
+		var user2Av = Config.customavatars[toId(user2)];
+		if (!user1Av) return this.sendReply(user1 + ' does not have a custom avatar.');
+
+		if (user2Av) fs.unlink('config/avatars/' + user2Av);
+		var newAv = toId(user2) + path.extname(user1Av);
+		fs.renameSync('config/avatars/' + user1Av, 'config/avatars/' + newAv);
+		delete Config.customavatars[toId(user1)];
+		Config.customavatars[toId(user2)] = newAv;
+
+		return this.sendReply(user1 + '\'s custom avatar has been moved to ' + user2);
 	}
 };
 
