@@ -1,5 +1,6 @@
-/*Sooo.. here's a small script I made that adds custom avatars.
-~SilverTactic*/
+/* A small script that deals with custom avatars. Please report any bugs to me~
+~SilverTactic/Siiilver
+*/
 var fs = require('fs');
 var request = require('request');
 var path = require('path');
@@ -85,13 +86,11 @@ var cmds = {
 		});
 	},
 	
-	'delete': 'remove',
-	forcedelete: 'remove',
-	remove: function (target, room, user, connection, cmd) {
+	remove: 'delete',
+	'delete': function (target, room, user, connection, cmd) {
 		if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em> - Delete\'s the specified user\'s custom avatar.');
-		if ((!Users.get(target) || !Users.get(target).connected) && cmd !== 'forcedelete') return this.sendReply('User ' + target + ' is not online. If you still want to delete this user\'s avatar, use the command "forcedelete" instead of "' + cmd + '".');
 		target = Users.get(target) ? Users.get(target).name : target;
-		if (!Config.customavatars(toId(target))) return this.sendReply('User ' + target + ' does not have a custom avatar.');
+		if (!Config.customavatars[toId(target)]) return this.sendReply('User ' + target + ' does not have a custom avatar.');
 		fs.unlink('config/avatars/' + Config.customavatars[toId(target)]);
 		delete Config.customavatars[toId(target)];
 		this.sendReply(target + '\'s custom avatar has been successfully removed.');
@@ -125,5 +124,9 @@ var cmds = {
 
 exports.commands = {
 	ca: 'customavatar',
-	customavatar: cmds
+	customavatar: cmds,
+	moveavatar: cmds.move,
+	deleteavatar: 'removeavatar',
+	removeavatar: cmds['delete'],
+	setavatar: cmds.set
 }
