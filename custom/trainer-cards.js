@@ -703,10 +703,12 @@ exports.commands = {
 			'</audio></center>');
 	},
 	
-	/*nojohns: function (target, room, user) {
+	nojohns: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<div style = "background: url(http://i.imgur.com/dTD1J7o.gif); background-size: cover;"><span style = "color: white; font-size: 12pt;"><br>' +
-			<audio controls loop src = "*/
+		this.sendReplyBox('<div style = "background: url(http://i.imgur.com/dTD1J7o.gif); height: 299px; background-size: cover;"><span style = "color: white; font-size: 12pt;">No Johns</span><br>' +
+			'<audio controls src = "http://s0.vocaroo.com/media/download_temp/Vocaroo_s0JSb5SljS5I.mp3" style = "border: 1px solid yellow; border-radius: 0px; background: black;"></audio>'
+		);
+	},
 	
 	ichibannotakaramono: function (target, room, user) {
         	if (!this.canBroadcast()) return;
