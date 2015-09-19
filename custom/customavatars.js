@@ -92,7 +92,7 @@ var cmds = {
 			}
 			avatars[toId(User)] = img;
 			var their = (toId(User) === user.userid ? 'Your' : User + '\'s');
-			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div>');
+			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div><br>If you don\'t see it, try refreshing or clearing your cache.');
 			response.pipe(fs.createWriteStream('config/avatars/' + img));
 		});
 	},
@@ -130,10 +130,7 @@ var cmds = {
 		delete avatars[toId(user1)];
 		avatars[toId(user2)] = newAv;
 		if (Users.getExact(user1)) Users.getExact(user1).avatar = 1;
-		if (Users.getExact(user2)) {
-			delete Users.getExact(user2).avatar;
-			Users.getExact(user2).avatar = newAv;
-		}
+		if (Users.getExact(user2)) Users.getExact(user2).avatar = newAv;
 
 		return this.sendReply(user1 + '\'s custom avatar has been moved to ' + user2);
 	}
