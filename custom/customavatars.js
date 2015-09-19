@@ -5,6 +5,14 @@ var fs = require('fs');
 var request = require('request');
 var path = require('path');
 
+function exists (file) {
+	return fs.existsSync('config/avatars/' + file);
+}
+
+function Delete (file) {
+	return fs.unlinkSync('config/avatars/' + file);
+}
+
 function loadAvatars() {
 	var formatList = ['.png', '.gif', '.bmp', '.jpeg', '.jpg'];
 	var avatarList = fs.readdirSync('config/avatars');
@@ -53,7 +61,7 @@ var cmds = {
 			if (!user.boughtAvatar) return this.sendReply('You need to buy a custom avatar from the shop before using this command.');
 
 			target = target.trim();
-			User = user;
+			User = user.name;
 		} else {
 			if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
 			target = this.splitTarget(target);
@@ -61,7 +69,7 @@ var cmds = {
 			if (!target || !target.trim()) return this.sendReply('|html|/ca ' + cmd + ' <em>User</em>, <em>URL</em> - Sets the specified user\'s custom avatar to the specified image.');
 			if (!targetUser && cmd !== 'forceset') return this.sendReply('User ' + this.targetUsername + ' is offline. Use the command "forceset" instead of "' + cmd + '" to set their custom avatar.');
 			target = target.trim();
-			User = targetUser || this.targetUsername;
+			User = targetUser.name || this.targetUsername;
 		}
 		var avatars = Config.customavatars;
 		var formatList = ['.png', '.jpg', '.gif', '.bmp', '.jpeg'];
@@ -71,7 +79,7 @@ var cmds = {
 		else if (target.indexOf('http://') !== 0) target = 'http://' + target;
 
 		//We don't need to keep the user's original avatar
-		if (avatars[toId(User)]) fs.unlinkSync('config/avatars/' + avatars[toId(User)]);
+		if (avatars[toId(User)] && exists(avatars[toId(User)])) Delete(avatars[toId(User)]);
 		var self = this;
 		request.get(target).on('error', function () {
 			return self.sendReply("The selected avatar doesn\'t exist. Try picking a different one.");
@@ -79,11 +87,11 @@ var cmds = {
 			if (response.statusCode == 404) return self.sendReply("The selected avatar is unavailable. Try picking a different one.");
 			var img = toId(User) + format;
 			if (Users.getExact(User)) {
-				delete User.avatar;
-				User.avatar = img;
+				delete Users.getExact(User);
+				Users.getExact(User).avatar = img;
 			}
 			avatars[toId(User)] = img;
-			var their = (toId(User) === user.userid ? User.name + '\'s' : 'Your');
+			var their = (toId(User) === user.userid ? 'Your' : User + '\'s');
 			self.sendReply('|html|' + their + ' custom avatar has been set to <br><div style = "width: 80px; height: 80px; overflow: hidden;"><img src = "' + target + '" style = "max-height: 100%; max-width: 100%"></div>');
 			response.pipe(fs.createWriteStream('config/avatars/' + img));
 		});
@@ -95,7 +103,7 @@ var cmds = {
 		target = Users.getExact(target) ? Users.getExact(target).name : target;
 		var avatars = Config.customavatars;
 		if (!avatars[toId(target)]) return this.sendReply('User ' + target + ' does not have a custom avatar.');
-		fs.unlinkSync('config/avatars/' + avatars[toId(target)]);
+		if (exists(avatars[toId(target)])) Delete(avatars[toId(target)]);
 		delete avatars[toId(target)];
 		this.sendReply(target + '\'s custom avatar has been successfully removed.');
 		if (Users.getExact(target) && Users.getExact(target).connected) {
@@ -114,17 +122,17 @@ var cmds = {
 		if (!toId(user1) || !toId(user2)) return this.sendReply('|html|/ca ' + cmd + ' <em>User 1</em>, <em>User 2</em> - Moves User 1\'s custom avatar to User 2.');
 		var user1Av = avatars[toId(user1)];
 		var user2Av = avatars[toId(user2)];
-		if (!user1Av) return this.sendReply(user1 + ' does not have a custom avatar.');
+		if (!user1Av || !exists(user1Av)) return this.sendReply(user1 + ' does not have a custom avatar.');
 
-		if (user2Av) fs.unlinkSync('config/avatars/' + user2Av);
+		if (user2Av && exists(user2Av)) Delete(user2Av);
 		var newAv = toId(user2) + path.extname(user1Av);
 		fs.renameSync('config/avatars/' + user1Av, 'config/avatars/' + newAv);
 		delete avatars[toId(user1)];
 		avatars[toId(user2)] = newAv;
 		if (Users.getExact(user1)) Users.getExact(user1).avatar = 1;
 		if (Users.getExact(user2)) {
-			delete Users.getExact(user1).avatar;
-			Users.getExact(user1).avatar = newAv;
+			delete Users.getExact(user2).avatar;
+			Users.getExact(user2).avatar = newAv;
 		}
 
 		return this.sendReply(user1 + '\'s custom avatar has been moved to ' + user2);
