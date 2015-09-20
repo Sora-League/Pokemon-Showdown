@@ -404,7 +404,7 @@ exports.commands = {
 			'<b>Ace:</b> Don\'t Do Drugs (Mega Glalie)<br />' +
 			seen('gymldrmark') + '<br>' +
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif" style = "transform: rotateY(180deg)"><br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
 			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio>' +
 			getBadges('gymldrmark')
 		);
