@@ -1,3 +1,4 @@
+var spamroom = Rooms.get('spamroom');
 function getTells (user) {
 	var tells = Core.read('tells', user.userid);
 	if (!tells || !tells.length) return;
@@ -75,6 +76,7 @@ Rooms.GlobalRoom.prototype.onRename = function (user, oldid, joining) {
 		Core.write('lastseen', user.userid, Date.now());
 		Core.write('lastseen', toId(oldid), Date.now());
 	}
+	user.updateIdentity();
 	delete this.users[oldid];
 	this.users[user.userid] = user;
 	getTells(user);
@@ -102,8 +104,6 @@ Rooms.GlobalRoom.prototype.onJoin = function (user, connection, merging) {
 };
 
 Users.User.prototype.hasSysopAccess = function () {
-	//go ahead and add in a comma separated list of names in the array below. 
-	//Remember, ONLY give Sysop access to people you absolutely trust.
 	var systemOperators = ['femalegallade', 'champinnah', 'onyxeagle', 'e4silvy', 'frntierblade'];
 	if (systemOperators.map(toId).indexOf(this.userid) > -1) {
 		return true;
@@ -115,7 +115,6 @@ Users.prototype.chat = function (message, room, connection) {
 	var now = new Date().getTime();
 
 	if (message.substr(0, 16) === '/cmd userdetails') {
-		// certain commands are exempt from the queue
 		ResourceMonitor.activeIp = connection.ip;
 		room.chat(this, message, connection);
 		ResourceMonitor.activeIp = null;
@@ -194,10 +193,14 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 	message = CommandParser.parse(message, this, user, connection);
 
 	if (message && message !== true) {
-		var isAdv = message.toLowerCase().replace(/ /g, '').indexOf('.psim.us');
-		if (isAdv > -1 && !user.can('broadcast', null, this)) {
-			if (message.indexOf('sora') !== (isAdv + 1) || message.indexOf('thesoraleague') !== (isAdv + 1)) {
-				this.connection.sendTo(this, '|html|<div class="message-error">Please do not advertise other servers.</div>');
+		var isAdv = message.toLowerCase().replace(/ /g, '').split('.psim.us');
+		if (isAdv.length > 1 && !user.can('broadcast', null, this)) {
+			for (var i = 0; i < isAdv.length; i++) {
+				if (isAdv[i].lastIndexOf('sora') !== isAdv[i].length - 4) {
+					if (!isAdv[i]) continue;
+					connection.sendTo(this, '|html|<div class="message-error">Please do not advertise servers.</div>');
+					return false;
+				}
 			}
 		}
 		if (user.isSpamroomed()) {
@@ -293,18 +296,22 @@ exports.commands = {
 			}
 		}
 
-		var isAdv = target.toLowerCase().replace(/ /g, '').indexOf('.psim.us');
-		if (isAdv > -1 && !this.can('broadcast')) {
-			if (message.indexOf('sora') !== (isAdv + 1) || message.indexOf('thesoraleague') !== (isAdv + 1)) {
-				return this.errorReply('Please do not advertise other servers.');
+		var isAdv = target.toLowerCase().replace(/ /g, '').split('.psim.us');
+		if (isAdv.length > 1 && !this.can('broadcast')) {
+			for (var i = 0; i < isAdv.length; i++) {
+				if (isAdv[i].lastIndexOf('sora') !== isAdv[i].length - 4) {
+					if (!isAdv[i]) continue;
+					return this.errorReply('Please do not advertise other servers.');
+				}
 			}
 		}
 		var message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
 		user.send(message);
 		if (targetUser !== user && !user.isSpamroomed()) targetUser.send(message);
 		if (user.isSpamroomed()) {
-			spamroom.add('|c|' + user.getIdentity() + '| __(Private to ' + targetUser.getIdentity() + ')__' + target);
+			spamroom.add('|c|' + user.getIdentity() + '| __(Private to ' + targetUser.getIdentity() + ')__ ' + target);
+			spamroom.update();
 		} else targetUser.lastPM = user.userid;
 		user.lastPM = targetUser.userid;
 	}
-}
+};
