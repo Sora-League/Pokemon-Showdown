@@ -268,8 +268,17 @@ var commands = exports.commands = {
 				targetRoom.isPrivate = true;
 				targetRoom.chatRoomData.isPrivate = true;
 				Rooms.global.writeChatRoomData();
+				if (Rooms('upperstaff')) {
+					Rooms('upperstaff').add('|raw|<div class="broadcast-green">Private chat room created: <b>' + Tools.escapeHTML(target) + '</b></div>').update();
+				}
 				return this.sendReply("The private chat room '" + target + "' was created.");
 			} else {
+				if (Rooms('staff')) {
+					Rooms('staff').add('|raw|<div class="broadcast-green">Public chat room created: <b>' + Tools.escapeHTML(target) + '</b></div>').update();
+				}
+				if (Rooms('upperstaff')) {
+					Rooms('upperstaff').add('|raw|<div class="broadcast-green">Public chat room created: <b>' + Tools.escapeHTML(target) + '</b></div>').update();
+				}
 				return this.sendReply("The chat room '" + target + "' was created.");
 			}
 		}
@@ -321,6 +330,9 @@ var commands = exports.commands = {
 				Rooms.global.writeChatRoomData();
 			}
 		} else {
+			if (room.isPrivate === setting) {
+				return this.errorReply("This room is already " + (setting === true ? 'secret' : setting) + ".");
+			}
 			room.isPrivate = setting;
 			this.addModCommand("" + user.name + " made this room " + (setting === true ? 'secret' : setting) + ".");
 			if (room.chatRoomData) {
@@ -383,9 +395,8 @@ var commands = exports.commands = {
 	roomdesc: function (target, room, user) {
 		if (!target) {
 			if (!this.canBroadcast()) return;
-			var re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
 			if (!room.desc) return this.sendReply("This room does not have a description set.");
-			this.sendReplyBox("The room description is: " + room.desc.replace(re, '<a href="$1">$1</a>'));
+			this.sendReplyBox("The room description is: " + Tools.escapeHTML(room.desc));
 			return;
 		}
 		if (!this.can('declare')) return false;
@@ -448,21 +459,20 @@ var commands = exports.commands = {
 	},
 
 	roomalias: function (target, room, user) {
-		if (!room.chatRoomData) return this.sendReply("This room isn't designed for aliases.");
 		if (!target) {
 			if (!this.canBroadcast()) return;
-			if (!room.chatRoomData.aliases || !room.chatRoomData.aliases.length) return this.sendReplyBox("This room does not have any aliases.");
-			return this.sendReplyBox("This room has the following aliases: " + room.chatRoomData.aliases.join(", ") + "");
+			if (!room.aliases || !room.aliases.length) return this.sendReplyBox("This room does not have any aliases.");
+			return this.sendReplyBox("This room has the following aliases: " + room.aliases.join(", ") + "");
 		}
 		if (!this.can('setalias')) return false;
 		var alias = toId(target);
 		if (!alias.length) return this.sendReply("Only alphanumeric characters are valid in an alias.");
 		if (Rooms.get(alias) || Rooms.aliases[alias]) return this.sendReply("You cannot set an alias to an existing room or alias.");
 
-		Rooms.aliases[alias] = room;
+		Rooms.aliases[alias] = room.id;
 		this.privateModCommand("(" + user.name + " added the room alias '" + target + "'.)");
 
-		if (!room.aliases) room.aliases = room.chatRoomData.aliases || [];
+		if (!room.aliases) room.aliases = [];
 		room.aliases.push(alias);
 		if (room.chatRoomData) {
 			room.chatRoomData.aliases = room.aliases;
@@ -471,19 +481,17 @@ var commands = exports.commands = {
 	},
 
 	removeroomalias: function (target, room, user) {
-		if (!room.chatRoomData) return this.sendReply("This room isn't designed for aliases.");
-		if (!room.chatRoomData.aliases) return this.sendReply("This room does not have any aliases.");
+		if (!room.aliases) return this.sendReply("This room does not have any aliases.");
 		if (!this.can('setalias')) return false;
 		var alias = toId(target);
 		if (!alias.length || !Rooms.aliases[alias]) return this.sendReply("Please specify an existing alias.");
-		if (toId(Rooms.aliases[alias]) !== room.id) return this.sendReply("You may only remove an alias from the current room.");
+		if (Rooms.aliases[alias] !== room.id) return this.sendReply("You may only remove an alias from the current room.");
 
 		this.privateModCommand("(" + user.name + " removed the room alias '" + target + "'.)");
 
-		var aliases = room.aliases || room.chatRoomData.aliases;
-		var aliasIndex = aliases.indexOf(alias);
+		var aliasIndex = room.aliases.indexOf(alias);
 		if (aliasIndex >= 0) {
-			aliases.splice(aliasIndex, 1);
+			room.aliases.splice(aliasIndex, 1);
 			delete Rooms.aliases[alias];
 			Rooms.global.writeChatRoomData();
 		}
@@ -499,7 +507,7 @@ var commands = exports.commands = {
 
 		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' is not online.");
 
-		if (!this.can('makeroom', targetUser, room)) return false;
+		if (!this.can('makeroom')) return false;
 
 		if (!room.auth) room.auth = room.chatRoomData.auth = {};
 
@@ -525,7 +533,7 @@ var commands = exports.commands = {
 		if (!userid || userid === '') return this.sendReply("User '" + name + "' does not exist.");
 
 		if (room.auth[userid] !== '#') return this.sendReply("User '" + name + "' is not a room owner.");
-		if (!this.can('makeroom', null, room)) return false;
+		if (!this.can('makeroom')) return false;
 
 		delete room.auth[userid];
 		this.sendReply("(" + name + " is no longer Room Owner.)");
@@ -577,11 +585,13 @@ var commands = exports.commands = {
 		if ((room.auth[userid] || Config.groupsranking[0]) === nextGroup) {
 			return this.sendReply("User '" + name + "' is already a " + groupName + " in this room.");
 		}
-		if (currentGroup !== ' ' && !user.can('room' + (Config.groups[currentGroup] ? Config.groups[currentGroup].id : 'voice'), null, room)) {
-			return this.sendReply("/" + cmd + " - Access denied for promoting/demoting from " + (Config.groups[currentGroup] ? Config.groups[currentGroup].name : "an undefined group") + ".");
-		}
-		if (nextGroup !== ' ' && !user.can('room' + Config.groups[nextGroup].id, null, room)) {
-			return this.sendReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
+		if (!user.can('makeroom')) {
+			if (currentGroup !== ' ' && !user.can('room' + (Config.groups[currentGroup] ? Config.groups[currentGroup].id : 'voice'), null, room)) {
+				return this.sendReply("/" + cmd + " - Access denied for promoting/demoting from " + (Config.groups[currentGroup] ? Config.groups[currentGroup].name : "an undefined group") + ".");
+			}
+			if (nextGroup !== ' ' && !user.can('room' + Config.groups[nextGroup].id, null, room)) {
+				return this.sendReply("/" + cmd + " - Access denied for promoting/demoting to " + Config.groups[nextGroup].name + ".");
+			}
 		}
 
 		if (nextGroup === ' ') {
@@ -807,6 +817,9 @@ var commands = exports.commands = {
 			return this.sendReply("User " + this.targetUsername + " not found.");
 		}
 		if (targetRoom.id === "global") return this.sendReply("Users cannot be redirected to the global room.");
+		if (targetRoom.isPrivate) {
+			return this.errorReply("Do not redirect users to private rooms. Use /invite if you must, but honestly, the room probably wants to be kept private.");
+		}
 		if (Rooms.rooms[targetRoom.id].users[targetUser.userid]) {
 			return this.sendReply("User " + targetUser.name + " is already in the room " + targetRoom.title + "!");
 		}
@@ -814,8 +827,7 @@ var commands = exports.commands = {
 			return this.sendReply("User " + this.targetUsername + " is not in the room " + room.id + ".");
 		}
 		if (targetUser.joinRoom(targetRoom.id) === false) return this.sendReply("User " + targetUser.name + " could not be joined to room " + targetRoom.title + ". They could be banned from the room.");
-		var roomName = (targetRoom.isPrivate) ? "a private room" : "room " + targetRoom.title;
-		this.addModCommand("" + targetUser.name + " was redirected to " + roomName + " by " + user.name + ".");
+		this.addModCommand("" + targetUser.name + " was redirected to room " + targetRoom.title + " by " + user.name + ".");
 		targetUser.leaveRoom(room);
 	},
 	redirhelp: ["/redirect OR /redir [username], [roomname] - Attempts to redirect the user [username] to the room [roomname]. Requires: % @ & ~"],
@@ -1959,6 +1971,8 @@ var commands = exports.commands = {
 
 	addplayer: function (target, room, user) {
 		if (!target) return this.parse('/help addplayer');
+		if (!room.battle) return this.sendReply("You can only do this in battle rooms.");
+		if (room.rated) return this.sendReply("You can only add a Player to unrated battles.");
 
 		target = this.splitTarget(target, true);
 		var userid = toId(this.targetUsername);
@@ -1966,7 +1980,6 @@ var commands = exports.commands = {
 		var name = this.targetUsername;
 
 		if (!targetUser) return this.sendReply("User " + name + " not found.");
-		if (!room.joinBattle) return this.sendReply("You can only do this in battle rooms.");
 		if (targetUser.can('joinbattle', null, room)) {
 			return this.sendReply("" + name + " can already join battles as a Player.");
 		}
@@ -2171,6 +2184,26 @@ var commands = exports.commands = {
 		user.team = target;
 	},
 
+	vtm: function (target, room, user, connection) {
+		if (ResourceMonitor.countPrepBattle(connection.ip, user.name)) {
+			connection.popup("Due to high load, you are limited to 6 team validations every 3 minutes.");
+			return;
+		}
+		var format = Tools.getFormat(target);
+		if (format.effectType !== 'Format') format = Tools.getFormat('Anything Goes');
+		if (format.effectType !== 'Format') {
+			connection.popup("Please provide a valid format.");
+			return;
+		}
+		TeamValidator.validateTeam(format.id, user.team, function (success, details) {
+			if (success) {
+				connection.popup("Your team is valid for " + format.name + ".");
+			} else {
+				connection.popup("Your team was rejected for the following reasons:\n\n- " + details.replace(/\n/g, '\n- '));
+			}
+		});
+	},
+
 	/*********************************************************
 	 * Low-level
 	 *********************************************************/
@@ -2227,6 +2260,15 @@ var commands = exports.commands = {
 			connection.send('|queryresponse|rooms|' + JSON.stringify(
 				Rooms.global.getRooms(user)
 			));
+		} else if (cmd === 'laddertop') {
+			if (!trustable) return false;
+			Ladders(target).getTop().then(function (result) {
+				connection.send('|queryresponse|laddertop|' + JSON.stringify(result));
+			});
+		} else {
+			// default to sending undefined
+			if (!trustable) return false;
+			connection.send('|queryresponse|' + cmd + '|undefined');
 		}
 	},
 
