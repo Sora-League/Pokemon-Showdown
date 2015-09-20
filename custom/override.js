@@ -193,7 +193,7 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 	message = CommandParser.parse(message, this, user, connection);
 
 	if (message && message !== true) {
-		var isAdv = message.toLowerCase().replace(/ /g, '').split('.psim.us');
+		/*var isAdv = message.toLowerCase().replace(/ /g, '').split('.psim.us');
 		if (isAdv.length > 1 && !user.can('broadcast', null, this)) {
 			for (var i = 0; i < isAdv.length; i++) {
 				if (isAdv[i].lastIndexOf('sora') !== isAdv[i].length - 4) {
@@ -202,7 +202,7 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 					return false;
 				}
 			}
-		}
+		}*/
 		if (user.isSpamroomed()) {
 			connection.sendTo(this, '|c|' + user.getIdentity() + '|' + message);
 			spamroom.add('|c|' + user.getIdentity() + '| __(to room ' + this.title + ')__ ' + message);
@@ -214,7 +214,7 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 	this.update();
 };
 
-exports.commands = {
+/*exports.commands = {
 	pm: 'msg',
 	whisper: 'msg',
 	w: 'msg',
@@ -315,3 +315,4 @@ exports.commands = {
 		user.lastPM = targetUser.userid;
 	}
 };
+*/
