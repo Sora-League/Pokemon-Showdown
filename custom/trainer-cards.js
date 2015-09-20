@@ -537,8 +537,8 @@ exports.commands = {
 
 	bamdee: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><font size= 4><center><b><font color = ff00b6>Bamdee</font></b></a><br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/ditto.gif"> <br />' +
+		this.sendReplyBox('<span style = "font-size: 12pt; color: #ff00b6; text-align: center;"><b>Bamdee</b></span><br />' +
+			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/ditto.gif"></center><br>' +
 			'<audio controls src = "https://dl.pushbulletusercontent.com/xFgUAMGfNsNhld0TC7Bf9nehzEiVRkGo/sonic.mp3" style = "border: 2px solid pink; background: black; width: 100%;"></audio><br>' +
 			getBadges('bamdee')
 		);
