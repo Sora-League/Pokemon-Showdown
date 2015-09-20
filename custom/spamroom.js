@@ -242,23 +242,3 @@ exports.commands = {
 	spamroomlist: commands.list,
 	spamroom: commands
 };
-
-Rooms.Room.prototype.chat = function (user, message, connection) {
-	// Battle actions are actually just text commands that are handled in
-	// parseCommand(), which in turn often calls Simulator.prototype.sendFor().
-	// Sometimes the call to sendFor is done indirectly, by calling
-	// room.decision(), where room.constructor === BattleRoom.
-
-	message = CommandParser.parse(message, this, user, connection);
-
-	if (message && message !== true) {
-		if (user.isSpamroomed()) {
-			connection.sendTo(this, '|c|' + user.getIdentity() + '|' + message);
-			spamroom.add('|c|' + user.getIdentity() + '|__(to room ' + this.title + ')__ ' + message);
-			spamroom.update();
-			return false;
-		}
-		this.add('|c|' + user.getIdentity(this.id) + '|' + message);
-	}
-	this.update();
-};
