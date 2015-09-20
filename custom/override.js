@@ -214,7 +214,7 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 	this.update();
 };
 
-/*exports.commands = {
+exports.commands = {
 	pm: 'msg',
 	whisper: 'msg',
 	w: 'msg',
@@ -296,7 +296,7 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 			}
 		}
 
-		var isAdv = target.toLowerCase().replace(/ /g, '').split('.psim.us');
+		/*var isAdv = target.toLowerCase().replace(/ /g, '').split('.psim.us');
 		if (isAdv.length > 1 && !this.can('broadcast')) {
 			for (var i = 0; i < isAdv.length; i++) {
 				if (isAdv[i].lastIndexOf('sora') !== isAdv[i].length - 4) {
@@ -304,7 +304,7 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 					return this.errorReply('Please do not advertise other servers.');
 				}
 			}
-		}
+		}*/
 		var message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
 		user.send(message);
 		if (targetUser !== user && !user.isSpamroomed()) targetUser.send(message);
@@ -315,4 +315,3 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 		user.lastPM = targetUser.userid;
 	}
 };
-*/
