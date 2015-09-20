@@ -8,7 +8,7 @@ var shopList = {
 	//require an admin's assistance
 	potd: ['POTD', 'Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD.', 2],
 	poof: ['Poof', 'Buy a poof message to be added into the pool of possible poofs.', 10, true],
-	avatar: ['Avatar', 'Set your own custom avatar.', 35],
+	avatar: ['Avatar', 'Set your own custom avatar.', 35, true],
 	card: ['Card', 'Buys a trainer card which can show information through a command.', 50, true],
 	song: ['Song', 'Buys a song that can be played on a declarable card. (You must supply the song as a RAW MP3/OGG URL) <button name="send", value="/feelingit"><b>Example</b></button>', 25, true],
 	customize: ['Customise', 'This allows you to stylise your Trainer Card with HTML5 Elements such as Audio/Mouse Cursor/Background Image/etc.', 15, true],
@@ -174,12 +174,7 @@ exports.commands = {
 
 		//these items have their own specifics
 		if (target === 'avatar') {
-			if (user.hasavatar) return this.sendReply("You have already bought a custom avatar. Use /customavatar [URL] to set it.");
-			if (!Number(user.avatar)) return this.sendReply('You already have a custom avatar. Buy a fix if you want to change it.');
-
-			this.sendReply("|html|You have bought a custom avatar. Use /customavatar <i>URL</i> to set it.");
-			this.sendReply("It is recommended that you use an image with dimensions 80 x 80, or your avatar may not show up correctly.");
-			user.boughtAvatar = true;
+			if (!Number(user.avatar) && fs.existsSync('config/avatars/' + user.avatar)) return this.sendReply('You already have a custom avatar. Buy a fix if you want to change it.');
 
 		} else if (target === 'potd') {
 			if (Config.potd) return this.sendReply('The Pokémon of the Day has already been set.');
