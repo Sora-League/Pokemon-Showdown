@@ -196,7 +196,7 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 	if (message && message !== true) {
 		var isAdv = message.toLowerCase().replace(/ /g, '').indexOf('.psim.us');
 		if (isAdv > -1 && !user.can('broadcast', null, this)) {
-			if (msg.indexOf('sora') !== (isAdv + 1) || msg.indexOf('thesoraleague') !== (isAdv + 1)) {
+			if (message.indexOf('sora') !== (isAdv + 1) || message.indexOf('thesoraleague') !== (isAdv + 1)) {
 				this.connection.sendTo(this, '|html|<div class="message-error">Please do not advertise other servers.</div>');
 			}
 		}
@@ -295,7 +295,7 @@ exports.commands = {
 
 		var isAdv = target.toLowerCase().replace(/ /g, '').indexOf('.psim.us');
 		if (isAdv > -1 && !this.can('broadcast')) {
-			if (msg.indexOf('sora') !== (isAdv + 1) || msg.indexOf('thesoraleague') !== (isAdv + 1)) {
+			if (message.indexOf('sora') !== (isAdv + 1) || message.indexOf('thesoraleague') !== (isAdv + 1)) {
 				return this.errorReply('Please do not advertise other servers.');
 			}
 		}
