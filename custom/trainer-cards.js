@@ -20,7 +20,7 @@ exports.commands = {
 	leaguemembers: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Champiön Nöah∆', '∆Chаmpion Bart∆', '∆FrontierHead Risu∆', 'OnyxEagle', '∆Fröntier∆Blade☯', '∆Coach Abadon∆', 'Bamdee', '∆Frontier Jerattata∆', 'Neith Cass'];
+		var list = ['∆Champiön Nöah∆', '∆Chаmpion Bart∆', '∆FrontierHead Risu∆', 'OnyxEagle', '∆Fröntier∆Blade☯', '∆Coach Abadon∆', 'Bamdee', '∆Frontier Jerattata∆', '∆Frontier Neith∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Alcor∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Fröntier∆Blade☯', '∆Frontier Zachary∆', '∆Frontier Meows∆'];
+		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Alcor∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Fröntier∆Blade☯', '∆Frontier Meows∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -39,7 +39,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
-			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr Taco∆', '∆Gym Ldr Crash∆',
+			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆',
 			'∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆'
 		];
 		for (var i = 0; i < list.length; i++) {
@@ -410,23 +410,22 @@ exports.commands = {
 		);
 	},
 
-	normal: 'taco',
-        taco: function(target, room, user) {
+	
+        normal: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('∆Gym Ldr <b>Taco</b>∆<br />'+
-		'<i>"Dont underestimate normals"</i> <br />'+
+	this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+		'<i>"???"</i> <br />'+
 	    '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
-		'<b>Ace:</b> Lopunny<br />' + seen('gymldrtaco') + '<br />'+
-		'<a><img src="http://play.pokemonshowdown.com/sprites/xyani/lopunny-mega.gif"></a>' + getBadges('gymldrtaco'));
+		'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
     },
 
-	     poison: 'crash',
-	crash: function (target, room, user) {
+	     
+	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Crash</b>∆<br />' +
-			'<i>"Poison is in everything, and nothing is without poison. The dosage makes it either a poison or a remedy."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Weezing<br />' + seen('gymldrcrash') + getBadges('gymldrcrash'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('gymldrcrash'));
 	},
 	
 	psychic: 'connor',
