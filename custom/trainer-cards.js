@@ -392,7 +392,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Enrique</b>∆<br />' +
 			'<i>"Get ready to be grounded."</i> <br />' +
 			'<b>Type: <font color = 5b3a00>Ground</font></b><br />' +
-			'<b>Ace: Excadrill</b> <br />' + seen('gymldrenrique'));
+			'<b>Ace:</b> Excadrill <br />' + seen('gymldrenrique'));
 	},
 
 	ice: 'mark',
