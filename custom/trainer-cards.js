@@ -410,13 +410,13 @@ exports.commands = {
 		);
 	},
 
-	
-        normal: function(target, room, user) {
+	normal: 'bigo',
+        bigo: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-		'<i>"???"</i> <br />'+
+	this.sendReplyBox('∆Gym Ldr <b>Bigo</b>∆<br />'+
+		'<i>"Don\'t underestimate the normal, cause being \'normal\'  doesn\'t mean to be weak"</i> <br />'+
 	    '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
-		'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+		'<b>Ace:</b> Lopunny<br />' + seen('gymldrbigo') + getBadges('gymldrbigo'));
     },
 
 	     
