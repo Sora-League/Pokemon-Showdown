@@ -386,14 +386,6 @@ exports.commands = {
 			'<b>Ace:</b> Victreebel <br />' + seen('gymldrmitsuka') + getBadges('gymldrmitsuka'));
 	},
 
-      
-	ground: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b><br />' +
-			'<i>"???"</i> <br />' +
-			'<b>Type: <font color = 5b3a00>Ground</font></b><br />' +
-			'<b>Ace:</b> <br />' + seen(''));
-	},
 
 	ice: 'mark',
 	mark: function (target, room, user) {
