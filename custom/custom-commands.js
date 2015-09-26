@@ -1,8 +1,6 @@
 var fs = require('fs');
 var request = require('request');
 var http = require('http');
-var geoip = require('geoip-lite');
-geoip.startWatchingDataUpdate();
 var poofoff = false;
 
 exports.commands = {
@@ -482,107 +480,6 @@ exports.commands = {
 		setTimeout(function () {
 			process.exit();
 		}, 10000);
-	},
-
-	ip: 'whois',
-	rooms: 'whois',
-	alt: 'whois',
-	alts: 'whois',
-	whoare: 'whois',
-	whois: function (target, room, user, connection, cmd) {
-		if (room.id === 'staff' && !this.canBroadcast()) return;
-		var targetUser = this.targetUserOrSelf(target, user.group === ' ');
-		if (!targetUser) {
-			return this.sendReply("User " + this.targetUsername + " not found.");
-		}
-		var showAll = (cmd === 'ip' || cmd === 'whoare' || cmd === 'alt' || cmd === 'alts');
-		if (showAll && !user.can('lock') && targetUser !== user) {
-			return this.errorReply("/alts - Access denied.");
-		}
-
-		var buf = '<strong class="username" style = "color:' + Core.color(targetUser.userid) + ';"><small style="display:none;">' + targetUser.group + '</small>' + Tools.escapeHTML(targetUser.name) + '</strong> ' + (!targetUser.connected ? ' <em style="color:gray">(offline)</em>' : '');
-		
-		var flag = geoip.lookup(targetUser.latestIp);
-		if (flag) buf += '<img src = "http://128.199.160.98:8000/flags/' + toId(flag.country) + '.png" title = ' + flag.country + '>';
-		
-		if (Config.groups[targetUser.group] && Config.groups[targetUser.group].name) {
-			buf += "<br />" + Config.groups[targetUser.group].name + " (" + targetUser.group + ")";
-		}
-		if (targetUser.isSysop) {
-			buf += "<br />(Pok&eacute;mon Showdown System Operator)";
-		}
-		if (!targetUser.registered) {
-			buf += "<br />(Unregistered)";
-		}
-		var publicrooms = "";
-		var hiddenrooms = "";
-		var privaterooms = "";
-		for (var i in targetUser.roomCount) {
-			if (i === 'global') continue;
-			var targetRoom = Rooms.get(i);
-
-			var output = (targetRoom.auth && targetRoom.auth[targetUser.userid] ? targetRoom.auth[targetUser.userid] : '') + '<a href="/' + i + '" room="' + i + '">' + i + '</a>';
-			if (targetRoom.isPrivate === true) {
-				if (privaterooms) privaterooms += " | ";
-				privaterooms += output;
-			} else if (targetRoom.isPrivate) {
-				if (hiddenrooms) hiddenrooms += " | ";
-				hiddenrooms += output;
-			} else {
-				if (publicrooms) publicrooms += " | ";
-				publicrooms += output;
-			}
-		}
-		buf += '<br />Rooms: ' + (publicrooms || '<em>(no public rooms)</em>');
-
-		if (!showAll) {
-			return this.sendReplyBox(buf);
-		}
-		buf += '<br />';
-		if (user.can('alts', targetUser) || user.can('alts') && user === targetUser) {
-			var alts = targetUser.getAlts(true);
-			var output = Object.keys(targetUser.prevNames).join(", ");
-			if (output) buf += "<br />Previous names: " + Tools.escapeHTML(output);
-
-			for (var j = 0; j < alts.length; ++j) {
-				var targetAlt = Users.get(alts[j]);
-				if (!targetAlt.named && !targetAlt.connected) continue;
-				if (targetAlt.group === '~' && user.group !== '~') continue;
-
-				buf += '<br />Alt: <span class="username">' + Tools.escapeHTML(targetAlt.name) + '</span>' + (!targetAlt.connected ? " <em style=\"color:gray\">(offline)</em>" : "");
-				output = Object.keys(targetAlt.prevNames).join(", ");
-				if (output) buf += "<br />Previous names: " + output;
-			}
-			if (targetUser.locked) {
-				buf += '<br />Locked: ' + targetUser.locked;
-				switch (targetUser.locked) {
-				case '#dnsbl':
-					buf += " - IP is in a DNS-based blacklist";
-					break;
-				case '#range':
-					buf += " - IP or host is in a temporary range-lock";
-					break;
-				case '#hostfilter':
-					buf += " - host is permanently locked for being a proxy";
-					break;
-				}
-			}
-			if (targetUser.semilocked) {
-				buf += '<br />Semilocked: ' + targetUser.semilocked;
-			}
-		}
-		if ((user.can('ip', targetUser) || user === targetUser)) {
-			var ips = Object.keys(targetUser.ips);
-			buf += "<br /> IP" + ((ips.length > 1) ? "s" : "") + ": " + ips.join(", ") +
-					(user.group !== ' ' && targetUser.latestHost ? "<br />Host: " + Tools.escapeHTML(targetUser.latestHost) : "");
-		}
-		if ((user === targetUser || user.can('alts')) && hiddenrooms) {
-			buf += '<br />Hidden rooms: ' + hiddenrooms;
-		}
-		if ((user === targetUser || user.hasConsoleAccess(connection)) && privaterooms) {
-			buf += '<br />Private rooms: ' + privaterooms;
-		}
-		this.sendReplyBox(buf);
 	},
 
 	//Panagram
