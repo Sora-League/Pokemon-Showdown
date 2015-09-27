@@ -1,17 +1,8 @@
 const fileName = 'storage-files/poof.json';
 var fs = require('fs');
 var poofoff = false;
-try {
-	var poofs = JSON.parse(fs.readFileSync(fileName));
-} catch (e) {
-	var list = ['used Explosion!', 'is blasting off again!', 'was licked by Siiilver!', 'was smitten by Siiilver\'s mighty sword!', 
-		'leaves the server', 'forgot to pray to Lord Helix and is now paying the price!', 'A large dodo bird picked up (user) and tossed them into a closet!'
-	].map(function (msg) {
-		if (!msg.match(/\(user\)/)) return '(user) ' + msg;
-	});
-	fs.writeFileSync(fileName, JSON.stringify(list, null, 1));
-	var poofs = JSON.parse(fs.readFileSync(fileName));
-}
+var poofs = JSON.parse(fs.readFileSync(fileName));
+
 function randomColor () {
 	var colors = ['9900f2', '4ca2ff', '4cff55', 'e87f00', 'd30007', '8e8080', 'd8b00d', '01776a', '0c4787', '0c870e', '8e892c',
 		'5b5931', '660c60', '9e5a99', 'c43873', '39bf39', '7c5cd6', '76d65c', '38c9c9', '2300af', '1daf00'
@@ -20,6 +11,11 @@ function randomColor () {
 }
 
 exports.commands = {
+	lolol: function (target, room, user) {
+		poofs.map(function (msg) { if (!msg.match(/\(user\)/)) return '(user) ' + msg;}); 
+		
+		fs.writeFileSync('storage-files/poof.json', JSON.stringify(a, null, 1));
+	},
 	poofhelp: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('-/poof - Leaves a random message in the chat and disconnects the user from the server.<br>' +
@@ -81,6 +77,7 @@ exports.commands = {
 
 	deletepoof: function (target, room, user) {
 		if (!target || !target.trim()) return this.sendReply('|html|/deletepoof <em>Message</em> - Deletes the selected message from the list of poofs.');
+		if (!target.match(/\(user\)/)) target = '(user) ' + target;
 		var pos = poofs.map(toId).indexOf(toId(target));
 		if (pos === -1) return this.sendReply('That poof message doesn\'t exist.');
 		this.popupReply('|html|The poof message "' + poofs[pos] + '" has been deleted.');
