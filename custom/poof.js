@@ -14,7 +14,7 @@ exports.commands = {
 	lolol: function (target, room, user) {
 		poofs.map(function (msg) { if (!msg.match(/\(user\)/)) return '(user) ' + msg;}); 
 		
-		fs.writeFileSync('storage-files/poof.json', JSON.stringify(a, null, 1));
+		fs.writeFileSync('storage-files/poof.json', JSON.stringify(poofs, null, 1));
 	},
 	poofhelp: function (target, room, user) {
 		if (!this.canBroadcast()) return;
