@@ -30,17 +30,6 @@ exports.commands = {
 		user.disconnectAll();
 	},
 
-	custompoof: 'cpoof',
-	cpoof: function (target, room, user) {
-		if (!this.canTalk()) return;
-		if (poofoff) return this.sendReply("Poofs are currently disabled.");
-		if (!target || !target.trim()) return this.parse('/poof');
-		if (!target.match(/\(user\)/)) target = Tools.escapeHTML(user.name) + ' ' + target;
-		else target = target.replace(/\(user\)/, Tools.escapeHTML(user.name));
-		this.add('|html|<center><span style = "color:#' + randomColor() + '"><b>~~ ' + target.trim() + ' ~~</b></span>');
-		this.disconnectAll();
-	},
-
 	addpoof: function (target, room, user) {
 		if (!this.can('hotpatch')) return false;
 		if (!target) return this.parse('/addpoofhelp');
@@ -48,11 +37,7 @@ exports.commands = {
 		if (target.length > 100) return this.sendReply('Poof messages can only contain a maximum of 100 characters.');
 		if (!target.match(/\(user\)/)) target = '(user) ' + target;
 		poofs.push(target.trim());
-		poofs.map(function (msg) {
-		if (!msg.match(/\(user\)/)) return '(user) ' + msg;
-	});
 		fs.writeFileSync(fileName, JSON.stringify(poofs, null, 1));
-		poofs = JSON.parse(fs.readFileSync(fileName));
 		return this.sendReply('|html|"' + target + '" has been added to the list of poof messages.');
 	},
 
