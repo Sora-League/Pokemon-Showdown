@@ -11,11 +11,6 @@ function randomColor () {
 }
 
 exports.commands = {
-	lolol: function (target, room, user) {
-		poofs.map(function (msg) { if (!msg.match(/\(user\)/)) return '(user) ' + msg;}); 
-		
-		fs.writeFileSync('storage-files/poof.json', JSON.stringify(poofs, null, 1));
-	},
 	poofhelp: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('-/poof - Leaves a random message in the chat and disconnects the user from the server.<br>' +
@@ -30,7 +25,9 @@ exports.commands = {
 	poof: function (target, room, user) {
 		if (!this.canTalk()) return;
 		if (poofoff) return this.sendReply("Poofs are currently disabled.");
-		var message = poofs[Math.floor(Math.random() * poofs.length)].replace(/\(user\)/g, Tools.escapeHTML(user.name));
+		var message = poofs[Math.floor(Math.random() * poofs.length)];
+		if (message.match(/\(user\)/)) message = message.replace(/\(user\)/g, Tools.escapeHTML(user.name));
+		else message = Tools.escapeHTML(user.name) + ' ' + message;
 		this.add('|html|<center><span style = "color:#' + randomColor() + '"><b>~~ ' + message + ' ~~</b></span>');
 		user.disconnectAll();
 	},
