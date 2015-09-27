@@ -1,55 +1,46 @@
 //This file should contain most of the important functions needed for doing stuff. Yeah.
 var fs = require('fs');
+var fileName = 'config/info.json';
+var file = JSON.parse(fs.readFileSync(fileName));
+function reload () {
+	fs.writeFileSync(fileName, JSON.stringify(file));
+}
 
 var Core = exports.Core = {
-	write: function (fileName, item, value, options, subItem) {
-		//File SHOULD be a .JSON file. This is by far the best kind of file to store data in.
-		fileName = 'storage-files/' + fileName + '.json';
-		if (!fs.existsSync(fileName)) fs.writeFileSync(fileName, '{}');
-		var file = JSON.parse(fs.readFileSync(fileName));
-		if (subItem) {
-			if (!file[item]) file[item] = {};
-			if (!options || !file[item].subItem) file[item][subItem] = value;
-			else if (options === '+') file[item][subItem] += value;
-			else if (options === '-') file[item][subItem] -= value;
-			else file[item][subItem] = value;
-		} else {
-			if (!options || !file[item]) file[item] = value;
-			else if (options === '+') file[item] += value;
-			else if (options === '-') file[item] -= value;
-			else file[item] = value;
+	write: function (name, key, value, options) {
+		if (!file[name]) file[name] = {};
+		if (!(key in file[name])) file[name][key] = 0;
+		switch (options) {
+			case '+':
+				file[name][key] += value;
+				break;
+			case '+':
+				file[name][key] -= value;
+				break;
+			default: file[name][key] = value;
 		}
-		fs.writeFileSync(fileName, JSON.stringify(file, null, 1));
+		fs.writeFileSync(fileName, JSON.stringify(file));
 	},
-	read: function (fileName, item, subItem) {
-		fileName = 'storage-files/' + fileName + '.json';
-		if (!fs.existsSync(fileName)) fs.writeFileSync(fileName, '{}');
-		var file = JSON.parse(fs.readFileSync(fileName));
-		if (subItem) {
-			if (file[item]) return file[item][subItem];
-		}
-		return file[item] || 0;
+	read: function (name, key) {
+		if (!file[name]) return 0;
+		return file[name][key] || 0;
 	},
-	Delete: function (fileName, item, subItem) {
-		fileName = 'storage-files/' + fileName + '.json';
-		if (!fs.existsSync(fileName)) return;
-		var file = JSON.parse(fs.readFileSync(fileName));
-		if (subItem) {
-			if (file[item]) delete file[item][subItem];
-		} else delete file[item];
-		fs.writeFileSync(fileName, JSON.stringify(file, null, 1));
+	Delete: function (name, key) {
+		if (!file[name]) return;
+		if (!key) delete file[name];
+		else delete file[name][key];
+		fs.writeFileSync(fileName, JSON.stringify(file));
 	},
 	getLastSeen: function (user) {
 		user = toId(user);
-		var file = JSON.parse(fs.readFileSync('storage-files/lastseen.json'));
-		if (!file[user]) return 'never';
+		if (!file[user] || !file[user].seen) return 'never';
 
 		var format = function (target, word) {
 			if (Math.floor(target) === 0) return '';
 			if (Math.floor(target) !== 1) return target + ' ' + word + "s";
 			return target + ' ' + word;
 		}
-		var rawDate = Date.now() - Number(file[user]);
+		var rawDate = Date.now() - Number(file[user].seen);
 		var seconds = Math.floor(rawDate / 1000);
 		var mins = Math.floor(seconds / 60);
 		var hours = Math.floor(mins / 60);
