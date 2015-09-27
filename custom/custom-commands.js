@@ -1,7 +1,6 @@
 var fs = require('fs');
 var request = require('request');
 var http = require('http');
-var poofoff = false;
 
 exports.commands = {
 	//misc
@@ -310,50 +309,6 @@ exports.commands = {
 			}
 		}
 		request(options, callback);
-	},
-
-	poof: function (target, room, user) {
-		if (!this.canTalk()) return;
-		if (poofoff) return this.sendReply("Poof is currently disabled.");
-		var colors = ['9900f2', '4ca2ff', '4cff55', 'e87f00', 'd30007', '8e8080', 'd8b00d', '01776a', '0c4787', '0c870e', '8e892c',
-			'5b5931', '660c60', '9e5a99', 'c43873', '39bf39', '7c5cd6', '76d65c', '38c9c9', '2300af', '1daf00'
-		];
-		var randomColor = colors[Math.floor(Math.random() * colors.length)];
-		var poof = JSON.parse(fs.readFileSync('storage-files/poof.json'));
-		var message = poof[Math.floor(Math.random() * poof.length)];
-		if (message.indexOf('(user)') > -1) message = message.replace(/\(user\)/ig, user.name);
-		else message = user.name + ' ' + message;
-		this.add('|html|<center><b><font color = "' + randomColor + '">~~ ' + message + ' ~~');
-		user.disconnectAll();
-	},
-
-	addpoof: function (target, room, user) {
-		if (!this.can('hotpatch')) return false;
-		if (!target) return this.sendReply('/addpoof [message] - Adds a poof message into the list of possible poofs. No need to include any name at the start, just the message. Adding "(user)" into a poof message replaces "(user)" with the user\'s name.');
-		target = target.replace(/"/g, '\"').trim();
-		if (!fs.existsSync('storage-files/poof.json')) fs.writeFile('storage-files/poof.json', '[]');
-		var poof = JSON.parse(fs.readFileSync('storage-files/poof.json'));
-		for (var i in poof) {
-			if (toId(target) == toId(poof[i])) return this.sendReply('That poof message already exists!');
-		}
-		poof.push(target);
-		fs.writeFile('storage-files/poof.json', JSON.stringify(poof, null, 1));
-		if (target.indexOf('(user)') === -1) target = '(user) ' + target;
-		return this.sendReply('"' + target + '" has been added to the list of poof messages.');
-	},
-
-	poofoff: function (target, room, user) {
-		if (!this.can('hotpatch')) return false;
-		if (poofoff) return this.sendReply('Poofs have already been disabled.');
-		poofoff = true;
-		this.sendReply("Poofs have been disabled.");
-	},
-
-	poofon: function (target, room, user) {
-		if (!this.can('hotpatch')) return false;
-		if (!poofoff) return this.sendReply('Poofs have not been disabled.');
-		poofoff = false;
-		this.sendReply("Poofs have been enabled.");
 	},
 
 	sprite: function (target, room, user, connection, cmd) {
