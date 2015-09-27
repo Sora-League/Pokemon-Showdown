@@ -155,22 +155,6 @@ exports.Formats = [
 			return problems;
 		}
 	},
-	{
-		name: "MonoColor",
-		section: "Sora Exclusive",
-
-		ruleset: ['OU'],
-		onStart: function () {
-			this.add('rule', 'Same Color Clause: Pokémon in a team must share a color');
-		},
-		onValidateTeam: function (team, format) {
-			var color = this.getTemplate(team[0].species).color;
-			for (var i = 0; i < team.length; i++) {
-				if (color !== this.getTemplate(team[i].species).color) return ['Your team must share a color.'];
-			}
-		}
-	},
-	
 
 	// XY Singles
 	///////////////////////////////////////////////////////////////////
