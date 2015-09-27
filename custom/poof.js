@@ -52,6 +52,7 @@ exports.commands = {
 		if (!msg.match(/\(user\)/)) return '(user) ' + msg;
 	});
 		fs.writeFileSync(fileName, JSON.stringify(poofs, null, 1));
+		poofs = JSON.parse(fs.readFileSync(fileName));
 		return this.sendReply('|html|"' + target + '" has been added to the list of poof messages.');
 	},
 
