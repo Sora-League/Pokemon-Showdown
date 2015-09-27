@@ -1719,6 +1719,9 @@ var commands = exports.commands = {
 
 		var lvlSet, natureSet, ivSet, evSet, baseSet, modSet = false;
 
+		var pokemon;
+		var useStat = '';
+
 		var level = 100;
 		var calcHP = false;
 		var nature = 1.0;
@@ -1729,16 +1732,18 @@ var commands = exports.commands = {
 		var positiveMod = true;
 
 		for (var i in targets) {
+			var lowercase = targets[i].toLowerCase();
+
 			if (!lvlSet) {
-				if (targets[i].toLowerCase() === 'lc') {
+				if (lowercase === 'lc') {
 					level = 5;
 					lvlSet = true;
 					continue;
-				} else if (targets[i].toLowerCase() === 'vgc') {
+				} else if (lowercase === 'vgc') {
 					level = 50;
 					lvlSet = true;
 					continue;
-				} else if (targets[i].toLowerCase().startsWith('lv') || targets[i].toLowerCase().startsWith('level')) {
+				} else if (lowercase.startsWith('lv') || lowercase.startsWith('level')) {
 					level = parseInt(targets[i].replace(/\D/g, ''), 10);
 					lvlSet = true;
 					if (level < 1 || level > 9999) {
@@ -1748,27 +1753,52 @@ var commands = exports.commands = {
 				}
 			}
 
-			if (targets[i].toLowerCase() === 'hp') {
-				calcHP = true;
+			if (!useStat) {
+				switch (lowercase) {
+				case 'hp':
+				case 'hitpoints':
+					calcHP = true;
+					useStat = 'hp';
+					break;
+				case 'atk':
+				case 'attack':
+					useStat = 'atk';
+					break;
+				case 'def':
+				case 'defense':
+					useStat = 'def';
+					break;
+				case 'spa':
+					useStat = 'spa';
+					break;
+				case 'spd':
+				case 'sdef':
+					useStat = 'spd';
+					break;
+				case 'spe':
+				case 'speed':
+					useStat = 'spe';
+					break;
+				}
 				continue;
 			}
 
 			if (!natureSet) {
-				if (targets[i] === 'boosting' || targets[i] === 'positive') {
+				if (lowercase === 'boosting' || lowercase === 'positive') {
 					nature = 1.1;
 					natureSet = true;
 					continue;
-				} else if (targets[i] === 'negative' || targets[i] === 'inhibiting') {
+				} else if (lowercase === 'negative' || lowercase === 'inhibiting') {
 					nature = 0.9;
 					natureSet = true;
 					continue;
-				} else if (targets[i] === 'neutral') {
+				} else if (lowercase === 'neutral') {
 					continue;
 				}
 			}
 
 			if (!ivSet) {
-				if (targets[i].toLowerCase().endsWith('iv') || targets[i].toLowerCase().endsWith('ivs')) {
+				if (lowercase.endsWith('iv') || lowercase.endsWith('ivs')) {
 					iv = parseInt(targets[i]);
 					ivSet = true;
 
@@ -1781,12 +1811,12 @@ var commands = exports.commands = {
 			}
 
 			if (!evSet) {
-				if (targets[i].toLowerCase() === 'invested' || targets[i].toLowerCase() === 'max') {
+				if (lowercase === 'invested' || lowercase === 'max') {
 					evSet = true;
-				} else if (targets[i].toLowerCase() === 'uninvested') {
+				} else if (lowercase === 'uninvested') {
 					ev = 0;
 					evSet = true;
-				} else if (targets[i].toLowerCase().endsWith('ev') || targets[i].toLowerCase().endsWith('evs')) {
+				} else if (lowercase.endsWith('ev') || lowercase.endsWith('evs')) {
 					ev = parseInt(targets[i]);
 					evSet = true;
 
@@ -1831,11 +1861,30 @@ var commands = exports.commands = {
 				}
 			}
 
+			if (!pokemon) {
+				var testPoke = Tools.getTemplate(targets[i]);
+				if (testPoke.baseStats) {
+					pokemon = testPoke.baseStats;
+					baseSet = true;
+					continue;
+				}
+			}
+
 			var tempStat = parseInt(targets[i]);
 
 			if (!isNaN(tempStat) && !baseSet && tempStat > 0 && tempStat < 256) {
 				statValue = tempStat;
 				baseSet = true;
+			}
+
+			var pokemon = Tools.getTemplate(targets[i]);
+		}
+
+		if (pokemon) {
+			if (useStat) {
+				statValue = pokemon[useStat];
+			} else {
+				return this.sendReplyBox('No stat found.');
 			}
 		}
 
@@ -1930,7 +1979,7 @@ var commands = exports.commands = {
 	bugs: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (room.battle) {
-			this.sendReplyBox("<center><button name=\"saveReplay\"><i class=\"icon-upload\"></i> Save Replay</button> &mdash; <a href=\"https://www.smogon.com/forums/threads/3520646/\">Questions</a> &mdash; <a href=\"https://www.smogon.com/forums/threads/3469932/\">Bug Reports</a></center>");
+			this.sendReplyBox("<center><button name=\"saveReplay\"><i class=\"fa fa-upload\"></i> Save Replay</button> &mdash; <a href=\"https://www.smogon.com/forums/threads/3520646/\">Questions</a> &mdash; <a href=\"https://www.smogon.com/forums/threads/3469932/\">Bug Reports</a></center>");
 		} else {
 			this.sendReplyBox(
 				"Have a replay showcasing a bug on Pok&eacute;mon Showdown?<br />" +
@@ -1942,7 +1991,7 @@ var commands = exports.commands = {
 
 	avatars: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox("You can <button name=\"avatars\">change your avatar</button> by clicking on it in the <button name=\"openOptions\"><i class=\"icon-cog\"></i> Options</button> menu in the upper right. Custom avatars are only obtainable by staff.");
+		this.sendReplyBox("You can <button name=\"avatars\">change your avatar</button> by clicking on it in the <button name=\"openOptions\"><i class=\"fa fa-cog\"></i> Options</button> menu in the upper right. Custom avatars are only obtainable by staff.");
 	},
 	avatarshelp: ["/avatars - Explains how to change avatars.",
 		"!avatars - Show everyone that information. Requires: + % @ # & ~"],
@@ -2147,6 +2196,14 @@ var commands = exports.commands = {
 			"- !showimage <em>[url], [width], [height]</em>: shows an image to the room<br />" +
 			"<br />" +
 			"More detailed help can be found in the <a href=\"https://www.smogon.com/sim/roomauth_guide\">roomauth guide</a><br />" +
+			"<br />" +
+			"Tournament Help:<br />" +
+			"- /tour create <em>format</em>, elimination: Creates a new single elimination tournament in the current room.<br />" +
+			"- /tour create <em>format</em>, roundrobin: Creates a new round robin tournament in the current room.<br />" +
+			"- /tour end: Forcibly ends the tournament in the current room<br />" +
+			"- /tour start: Starts the tournament in the current room<br />" +
+			"<br />" +
+			"More detailed help can be found <a href=\"https://gist.github.com/verbiage/0846a552595349032fbe\">here</a><br />" +
 			"</div>"
 		);
 	},
@@ -2432,7 +2489,7 @@ var commands = exports.commands = {
 
 	register: function () {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('You will be prompted to register upon winning a rated battle. Alternatively, there is a register button in the <button name="openOptions"><i class="icon-cog"></i> Options</button> menu in the upper right.');
+		this.sendReplyBox('You will be prompted to register upon winning a rated battle. Alternatively, there is a register button in the <button name="openOptions"><i class="fa fa-cog"></i> Options</button> menu in the upper right.');
 	},
 
 	/*********************************************************

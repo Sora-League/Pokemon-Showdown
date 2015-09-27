@@ -190,6 +190,14 @@ var commands = exports.commands = {
 						return this.errorReply('The room "' + innerTarget + '" does not exist.');
 					}
 				}
+				if (targetRoom.modjoin) {
+					if (targetRoom.auth && (targetRoom.isPrivate === true || targetUser.group === ' ') && !(targetUser.userid in targetRoom.auth)) {
+						this.parse('/roomvoice ' + targetUser.name, false, targetRoom);
+						if (!(targetUser.userid in targetRoom.auth)) {
+							return;
+						}
+					}
+				}
 
 				target = '/invite ' + targetRoom.id;
 				break;
@@ -286,6 +294,88 @@ var commands = exports.commands = {
 	},
 	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: ~"],
 
+	makegroupchat: function (target, room, user, connection, cmd) {
+		if (!user.autoconfirmed) {
+			return this.errorReply("You don't have permission to make a group chat right now.");
+		}
+		if (target.length > 64) return this.errorReply("Title must be under 32 characters long.");
+		var targets = target.split(',', 2);
+
+		// Title defaults to a random 8-digit number.
+		var title = targets[0].trim();
+		if (title.length >= 32) {
+			return this.errorReply("Title must be under 32 characters long.");
+		} else if (!title) {
+			title = ('' + Math.floor(Math.random() * 100000000));
+		} else if (Config.chatfilter) {
+			var filterResult = Config.chatfilter.call(this, title, user, null, connection);
+			if (!filterResult) return;
+			if (title !== filterResult) {
+				return this.errorReply("Invalid title.");
+			}
+		}
+		// `,` is a delimiter used by a lot of /commands
+		// `|` and `[` are delimiters used by the protocol
+		// `-` has special meaning in roomids
+		if (title.includes(',') || title.includes('|') || title.includes('[') || title.includes('-')) {
+			return this.errorReply("Room titles can't contain any of: ,|[-");
+		}
+
+		// Even though they're different namespaces, to cut down on confusion, you
+		// can't share names with registered chatrooms.
+		var existingRoom = Rooms.search(toId(title));
+		if (existingRoom && !existingRoom.modjoin) return this.errorReply("The room '" + title + "' already exists.");
+		// Room IDs for groupchats are groupchat-TITLEID
+		var titleid = toId(title);
+		if (!titleid) {
+			titleid = '' + Math.floor(Math.random() * 100000000);
+		}
+		var roomid = 'groupchat-' + user.userid + '-' + titleid;
+		// Titles must be unique.
+		if (Rooms.search(roomid)) return this.errorReply("A group chat named '" + title + "' already exists.");
+		// Tab title is prefixed with '[G]' to distinguish groupchats from
+		// registered chatrooms
+		title = title;
+
+		if (ResourceMonitor.countGroupChat(connection.ip)) {
+			this.errorReply("Due to high load, you are limited to creating 4 group chats every hour.");
+			return;
+		}
+
+		// Privacy settings, default to hidden.
+		var privacy = toId(targets[1]) || 'hidden';
+		var privacySettings = {private: true, hidden: 'hidden', public: false};
+		if (!(privacy in privacySettings)) privacy = 'hidden';
+
+		var groupChatLink = '<code>&lt;&lt;' + roomid + '>></code>';
+		var groupChatURL = '';
+		if (Config.serverid) {
+			groupChatURL = 'http://' + (Config.serverid === 'showdown' ? 'psim.us' : Config.serverid + '.psim.us') + '/' + roomid;
+			groupChatLink = '<a href="' + groupChatURL + '">' + groupChatLink + '</a>';
+		}
+		var titleHTML = '';
+		if (/^[0-9]+$/.test(title)) {
+			titleHTML = groupChatLink;
+		} else {
+			titleHTML = Tools.escapeHTML(title) + ' <small style="font-weight:normal;font-size:9pt">' + groupChatLink + '</small>';
+		}
+		var targetRoom = Rooms.createChatRoom(roomid, '[G] ' + title, {
+			isPersonal: true,
+			isPrivate: privacySettings[privacy],
+			auth: {},
+			introMessage: '<h2 style="margin-top:0">' + titleHTML + '</h2><p>There are several ways to invite people:<br />- in this chat: <code>/invite USERNAME</code><br />- anywhere in PS: link to <code>&lt;&lt;' + roomid + '>></code>' + (groupChatURL ? '<br />- outside of PS: link to <a href="' + groupChatURL + '">' + groupChatURL + '</a>' : '') + '</p><p>This room will expire after 40 minutes of inactivity or when the server is restarted.</p><p style="margin-bottom:0"><button name="send" value="/roomhelp">Room management</button>'
+		});
+		if (targetRoom) {
+			// The creator is RO.
+			targetRoom.auth[user.userid] = '#';
+			// Join after creating room. No other response is given.
+			user.joinRoom(targetRoom.id);
+			return;
+		}
+		return this.errorReply("An unknown error occurred while trying to create the room '" + title + "'.");
+	},
+	makegroupchathelp: ["/makegroupchat [roomname], [private|hidden|public] - Creates a group chat named [roomname]. Leave off privacy to default to hidden."],
+
 	deregisterchatroom: function (target, room, user) {
 		if (!this.can('makeroom')) return;
 		var id = toId(target);
@@ -305,24 +395,38 @@ var commands = exports.commands = {
 	hideroom: 'privateroom',
 	hiddenroom: 'privateroom',
 	secretroom: 'privateroom',
+	publicroom: 'privateroom',
 	privateroom: function (target, room, user, connection, cmd) {
+		if (room.battle || room.isPersonal) {
+			if (!this.can('editroom', null, room)) return;
+		} else {
+			// registered chatrooms show up on the room list and so require
+			// higher permissions to modify privacy settings
+			if (!this.can('makeroom')) return;
+		}
 		var setting;
 		switch (cmd) {
 		case 'privateroom':
+			return this.parse('/help privateroom');
+		case 'publicroom':
+			setting = false;
+			break;
 		case 'secretroom':
-			if (!this.can('makeroom')) return;
 			setting = true;
 			break;
 		default:
-			if (!this.can('privateroom', null, room)) return;
 			if (room.isPrivate === true && target !== 'force') {
-				return this.sendReply("This room is a secret room. Use /privateroom to toggle, or /hiddenroom force to force hidden.");
+				return this.sendReply("This room is a secret room. Use `/publicroom` to make it public, or `/hiddenroom force` to force hidden.");
 			}
 			setting = 'hidden';
 			break;
 		}
 
-		if (target === 'off') {
+		if ((setting === true || room.isPrivate === true) && !room.isPersonal) {
+			if (!this.can('makeroom')) return;
+		}
+
+		if (target === 'off' || !setting) {
 			delete room.isPrivate;
 			this.addModCommand("" + user.name + " made this room public.");
 			if (room.chatRoomData) {
@@ -341,11 +445,16 @@ var commands = exports.commands = {
 			}
 		}
 	},
-	privateroomhelp: ["/privateroom [on/off] - Makes or unmakes a room private. Requires: ~",
-		"/hiddenroom [on/off] - Makes or unmakes a room hidden. Hidden rooms will maintain global ranks of users. Requires: \u2605 ~"],
+	privateroomhelp: ["/secretroom - Makes a room secret. Secret rooms are visible to & and up. Requires: & ~",
+		"/hiddenroom [on/off] - Makes a room hidden. Hidden rooms are visible to % and up, and inherit global ranks. Requires: \u2605 & ~",
+		"/publicroom - Makes a room public. Requires: \u2605 & ~"],
 
 	modjoin: function (target, room, user) {
-		if (!this.can('privateroom', null, room)) return;
+		if (room.battle || room.isPersonal) {
+			if (!this.can('editroom', null, room)) return;
+		} else {
+			if (!this.can('makeroom')) return;
+		}
 		if (target === 'off' || target === 'false') {
 			delete room.modjoin;
 			this.addModCommand("" + user.name + " turned off modjoin.");
@@ -354,7 +463,7 @@ var commands = exports.commands = {
 				Rooms.global.writeChatRoomData();
 			}
 		} else {
-			if ((target === 'on' || target === 'true' || !target) || !user.can('privateroom')) {
+			if ((target === 'on' || target === 'true' || !target) || !user.can('editroom')) {
 				room.modjoin = true;
 				this.addModCommand("" + user.name + " turned on modjoin.");
 			} else if (target in Config.groups) {
@@ -468,6 +577,7 @@ var commands = exports.commands = {
 		var alias = toId(target);
 		if (!alias.length) return this.sendReply("Only alphanumeric characters are valid in an alias.");
 		if (Rooms.get(alias) || Rooms.aliases[alias]) return this.sendReply("You cannot set an alias to an existing room or alias.");
+		if (room.isPersonal) return this.sendReply("Personal rooms can't have aliases.");
 
 		Rooms.aliases[alias] = room.id;
 		this.privateModCommand("(" + user.name + " added the room alias '" + target + "'.)");
@@ -577,7 +687,7 @@ var commands = exports.commands = {
 			return this.sendReply("Group '" + nextGroup + "' does not exist.");
 		}
 
-		if (Config.groups[nextGroup].globalonly) {
+		if (Config.groups[nextGroup].globalonly || (Config.groups[nextGroup].battleonly && !room.battle)) {
 			return this.sendReply("Group 'room" + Config.groups[nextGroup].id + "' does not exist as a room rank.");
 		}
 
@@ -620,7 +730,8 @@ var commands = exports.commands = {
 	roomauth: function (target, room, user, connection) {
 		var targetRoom = room;
 		if (target) targetRoom = Rooms.search(target);
-		if (!targetRoom || (targetRoom !== room && targetRoom.modjoin && !user.can('bypassall'))) return this.sendReply("The room '" + target + "' does not exist.");
+		var unavailableRoom = targetRoom && (targetRoom !== room && (targetRoom.modjoin || targetRoom.staffRoom) && !user.can('makeroom'));
+		if (!targetRoom || unavailableRoom) return this.sendReply("The room '" + target + "' does not exist.");
 		if (!targetRoom.auth) return this.sendReply("/roomauth - The room '" + (targetRoom.title ? targetRoom.title : target) + "' isn't designed for per-room moderation and therefore has no auth list.");
 
 		var rankLists = {};
@@ -665,11 +776,26 @@ var commands = exports.commands = {
 		if (innerBuffer.length) {
 			buffer.push('Room auth: ' + innerBuffer.join(', '));
 		}
+		if (targetId === user.userid || user.can('lock')) {
+			innerBuffer = [];
+			for (var i = 0; i < Rooms.global.chatRooms.length; i++) {
+				var curRoom = Rooms.global.chatRooms[i];
+				if (!curRoom.auth || !curRoom.isPrivate) continue;
+				if (curRoom.isPrivate === true) continue;
+				var auth = curRoom.auth[targetId];
+				if (!auth) continue;
+				innerBuffer.push(auth + curRoom.id);
+			}
+			if (innerBuffer.length) {
+				buffer.push('Hidden room auth: ' + innerBuffer.join(', '));
+			}
+		}
 		if (targetId === user.userid || user.can('makeroom')) {
 			innerBuffer = [];
 			for (var i = 0; i < Rooms.global.chatRooms.length; i++) {
 				var curRoom = Rooms.global.chatRooms[i];
 				if (!curRoom.auth || !curRoom.isPrivate) continue;
+				if (curRoom.isPrivate !== true) continue;
 				var auth = curRoom.auth[targetId];
 				if (!auth) continue;
 				innerBuffer.push(auth + curRoom.id);
@@ -697,6 +823,9 @@ var commands = exports.commands = {
 		var userid = toId(name);
 
 		if (!userid || !targetUser) return this.sendReply("User '" + name + "' does not exist.");
+		if (target.length > MAX_REASON_LENGTH) {
+			return this.sendReply("The reason is too long. It cannot exceed " + MAX_REASON_LENGTH + " characters.");
+		}
 		if (!this.can('ban', targetUser, room)) return false;
 		if (!room.bannedUsers || !room.bannedIps) {
 			return this.sendReply("Room bans are not meant to be used in room " + room.id + ".");
@@ -785,6 +914,7 @@ var commands = exports.commands = {
 	warn: function (target, room, user) {
 		if (!target) return this.parse('/help warn');
 		if (room.isMuted(user) && !user.can('bypassall')) return this.sendReply("You cannot do this while unable to talk.");
+		if (room.isPersonal && !user.can('warn')) return this.sendReply("Warning is unavailable in group chats.");
 
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
@@ -806,10 +936,12 @@ var commands = exports.commands = {
 	redirect: 'redir',
 	redir: function (target, room, user, connection) {
 		if (!target) return this.parse('/help redirect');
+		if (room.isPrivate || room.isPersonal) return this.sendReply("Users cannot be redirected from private or personal rooms.");
+
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
 		var targetRoom = Rooms.search(target);
-		if (!targetRoom) {
+		if (!targetRoom || targetRoom.modjoin) {
 			return this.sendReply("The room '" + target + "' does not exist.");
 		}
 		if (!this.can('warn', targetUser, room) || !this.can('warn', targetUser, targetRoom)) return false;
@@ -817,8 +949,8 @@ var commands = exports.commands = {
 			return this.sendReply("User " + this.targetUsername + " not found.");
 		}
 		if (targetRoom.id === "global") return this.sendReply("Users cannot be redirected to the global room.");
-		if (targetRoom.isPrivate) {
-			return this.errorReply("Do not redirect users to private rooms. Use /invite if you must, but honestly, the room probably wants to be kept private.");
+		if (targetRoom.isPrivate || targetRoom.isPersonal) {
+			return this.parse('/msg ' + this.targetUsername + ', /invite ' + targetRoom.id);
 		}
 		if (Rooms.rooms[targetRoom.id].users[targetUser.userid]) {
 			return this.sendReply("User " + targetUser.name + " is already in the room " + targetRoom.title + "!");
@@ -879,7 +1011,7 @@ var commands = exports.commands = {
 		if (!this.can('mute', null, room)) return false;
 
 		var targetUser = this.targetUser;
-		var successfullyUnmuted = room.unmute(targetUser ? targetUser.userid : this.targetUsername);
+		var successfullyUnmuted = room.unmute(targetUser ? targetUser.userid : this.targetUsername, "Your mute in '" + room.title + "' has been lifted.");
 
 		if (successfullyUnmuted) {
 			this.addModCommand("" + (targetUser ? targetUser.name : successfullyUnmuted) + " was unmuted by " + user.name + ".");
@@ -1347,6 +1479,10 @@ var commands = exports.commands = {
 			var targets = target.split(',');
 			target = targets[1].trim();
 			roomId = toId(targets[0]) || room.id;
+		}
+
+		if (room.id.startsWith('battle-') || room.id.startsWith('groupchat-')) {
+			return this.errorReply("Battles and groupchats do not have modlogs.");
 		}
 
 		// Let's check the number of lines to retrieve or if it's a word instead
@@ -2266,9 +2402,9 @@ var commands = exports.commands = {
 				connection.send('|queryresponse|laddertop|' + JSON.stringify(result));
 			});
 		} else {
-			// default to sending undefined
+			// default to sending null
 			if (!trustable) return false;
-			connection.send('|queryresponse|' + cmd + '|undefined');
+			connection.send('|queryresponse|' + cmd + '|null');
 		}
 	},
 

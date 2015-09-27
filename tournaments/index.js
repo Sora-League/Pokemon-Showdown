@@ -56,19 +56,17 @@ function createTournament(room, format, generator, playerCap, isRated, args, out
 	}
 	return (exports.tournaments[room.id] = new Tournament(room, format, createTournamentGenerator(generator, args, output), playerCap, isRated));
 }
-function deleteTournament(name, output) {
-	var id = toId(name);
+function deleteTournament(id, output) {
 	var tournament = exports.tournaments[id];
 	if (!tournament) {
-		output.sendReply(name + " doesn't exist.");
+		output.sendReply(id + " doesn't exist.");
 		return false;
 	}
 	tournament.forceEnd(output);
 	delete exports.tournaments[id];
 	return true;
 }
-function getTournament(name, output) {
-	var id = toId(name);
+function getTournament(id, output) {
 	if (exports.tournaments[id]) {
 		return exports.tournaments[id];
 	}
@@ -766,7 +764,7 @@ Tournament = (function () {
 			}
 		}
 		this.isEnded = true;
-		delete exports.tournaments[toId(this.room.id)];
+		delete exports.tournaments[this.room.id];
 	};
 
 	return Tournament;
@@ -910,7 +908,7 @@ var commands = {
 		end: 'delete',
 		stop: 'delete',
 		delete: function (tournament, user) {
-			if (deleteTournament(tournament.room.title, this)) {
+			if (deleteTournament(tournament.room.id, this)) {
 				this.privateModCommand("(" + user.name + " forcibly ended a tournament.)");
 			}
 		}
@@ -930,7 +928,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReply('|tournaments|info|' + JSON.stringify(Object.keys(exports.tournaments).filter(function (tournament) {
 			tournament = exports.tournaments[tournament];
-			return !tournament.room.isPrivate && !tournament.room.staffRoom;
+			return !tournament.room.isPrivate && !tournament.room.isPersonal && !tournament.room.staffRoom;
 		}).map(function (tournament) {
 			tournament = exports.tournaments[tournament];
 			return {room: tournament.room.title, format: tournament.format, generator: tournament.generator.name, isStarted: tournament.isTournamentStarted};
@@ -980,7 +978,7 @@ CommandParser.commands.tournament = function (paramString, room, user) {
 			}
 		}
 	} else {
-		var tournament = getTournament(room.title);
+		var tournament = getTournament(room.id);
 		if (!tournament) {
 			return this.sendReply("There is currently no tournament running in this room.");
 		}
