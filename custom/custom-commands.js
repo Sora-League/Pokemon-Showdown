@@ -1,9 +1,6 @@
 var fs = require('fs');
 var request = require('request');
 var http = require('http');
-var geoip = require('geoip-lite');
-geoip.startWatchingDataUpdate();
-var poofoff = false;
 
 exports.commands = {
 	//misc
@@ -314,50 +311,6 @@ exports.commands = {
 		request(options, callback);
 	},
 
-	poof: function (target, room, user) {
-		if (!this.canTalk()) return;
-		if (poofoff) return this.sendReply("Poof is currently disabled.");
-		var colors = ['9900f2', '4ca2ff', '4cff55', 'e87f00', 'd30007', '8e8080', 'd8b00d', '01776a', '0c4787', '0c870e', '8e892c',
-			'5b5931', '660c60', '9e5a99', 'c43873', '39bf39', '7c5cd6', '76d65c', '38c9c9', '2300af', '1daf00'
-		];
-		var randomColor = colors[Math.floor(Math.random() * colors.length)];
-		var poof = JSON.parse(fs.readFileSync('storage-files/poof.json'));
-		var message = poof[Math.floor(Math.random() * poof.length)];
-		if (message.indexOf('(user)') > -1) message = message.replace(/\(user\)/ig, user.name);
-		else message = user.name + ' ' + message;
-		this.add('|html|<center><b><font color = "' + randomColor + '">~~ ' + message + ' ~~');
-		user.disconnectAll();
-	},
-
-	addpoof: function (target, room, user) {
-		if (!this.can('hotpatch')) return false;
-		if (!target) return this.sendReply('/addpoof [message] - Adds a poof message into the list of possible poofs. No need to include any name at the start, just the message. Adding "(user)" into a poof message replaces "(user)" with the user\'s name.');
-		target = target.replace(/"/g, '\"').trim();
-		if (!fs.existsSync('storage-files/poof.json')) fs.writeFile('storage-files/poof.json', '[]');
-		var poof = JSON.parse(fs.readFileSync('storage-files/poof.json'));
-		for (var i in poof) {
-			if (toId(target) == toId(poof[i])) return this.sendReply('That poof message already exists!');
-		}
-		poof.push(target);
-		fs.writeFile('storage-files/poof.json', JSON.stringify(poof, null, 1));
-		if (target.indexOf('(user)') === -1) target = '(user) ' + target;
-		return this.sendReply('"' + target + '" has been added to the list of poof messages.');
-	},
-
-	poofoff: function (target, room, user) {
-		if (!this.can('hotpatch')) return false;
-		if (poofoff) return this.sendReply('Poofs have already been disabled.');
-		poofoff = true;
-		this.sendReply("Poofs have been disabled.");
-	},
-
-	poofon: function (target, room, user) {
-		if (!this.can('hotpatch')) return false;
-		if (!poofoff) return this.sendReply('Poofs have not been disabled.');
-		poofoff = false;
-		this.sendReply("Poofs have been enabled.");
-	},
-
 	sprite: function (target, room, user, connection, cmd) {
 		if (!this.canBroadcast()) return;
 		if (!toId(target)) return this.sendReply('/sprite [Pokémon] - Allows you to view the sprite of a Pokémon');
@@ -482,107 +435,6 @@ exports.commands = {
 		setTimeout(function () {
 			process.exit();
 		}, 10000);
-	},
-
-	ip: 'whois',
-	rooms: 'whois',
-	alt: 'whois',
-	alts: 'whois',
-	whoare: 'whois',
-	whois: function (target, room, user, connection, cmd) {
-		if (room.id === 'staff' && !this.canBroadcast()) return;
-		var targetUser = this.targetUserOrSelf(target, user.group === ' ');
-		if (!targetUser) {
-			return this.sendReply("User " + this.targetUsername + " not found.");
-		}
-		var showAll = (cmd === 'ip' || cmd === 'whoare' || cmd === 'alt' || cmd === 'alts');
-		if (showAll && !user.can('lock') && targetUser !== user) {
-			return this.errorReply("/alts - Access denied.");
-		}
-
-		var buf = '<strong class="username" style = "color:' + Core.color(targetUser.userid) + ';"><small style="display:none;">' + targetUser.group + '</small>' + Tools.escapeHTML(targetUser.name) + '</strong> ' + (!targetUser.connected ? ' <em style="color:gray">(offline)</em>' : '');
-		
-		var flag = geoip.lookup(targetUser.latestIp);
-		if (flag) buf += '<img src = "http://128.199.160.98:8000/flags/' + toId(flag.country) + '.png" title = ' + flag.country + '>';
-		
-		if (Config.groups[targetUser.group] && Config.groups[targetUser.group].name) {
-			buf += "<br />" + Config.groups[targetUser.group].name + " (" + targetUser.group + ")";
-		}
-		if (targetUser.isSysop) {
-			buf += "<br />(Pok&eacute;mon Showdown System Operator)";
-		}
-		if (!targetUser.registered) {
-			buf += "<br />(Unregistered)";
-		}
-		var publicrooms = "";
-		var hiddenrooms = "";
-		var privaterooms = "";
-		for (var i in targetUser.roomCount) {
-			if (i === 'global') continue;
-			var targetRoom = Rooms.get(i);
-
-			var output = (targetRoom.auth && targetRoom.auth[targetUser.userid] ? targetRoom.auth[targetUser.userid] : '') + '<a href="/' + i + '" room="' + i + '">' + i + '</a>';
-			if (targetRoom.isPrivate === true) {
-				if (privaterooms) privaterooms += " | ";
-				privaterooms += output;
-			} else if (targetRoom.isPrivate) {
-				if (hiddenrooms) hiddenrooms += " | ";
-				hiddenrooms += output;
-			} else {
-				if (publicrooms) publicrooms += " | ";
-				publicrooms += output;
-			}
-		}
-		buf += '<br />Rooms: ' + (publicrooms || '<em>(no public rooms)</em>');
-
-		if (!showAll) {
-			return this.sendReplyBox(buf);
-		}
-		buf += '<br />';
-		if (user.can('alts', targetUser) || user.can('alts') && user === targetUser) {
-			var alts = targetUser.getAlts(true);
-			var output = Object.keys(targetUser.prevNames).join(", ");
-			if (output) buf += "<br />Previous names: " + Tools.escapeHTML(output);
-
-			for (var j = 0; j < alts.length; ++j) {
-				var targetAlt = Users.get(alts[j]);
-				if (!targetAlt.named && !targetAlt.connected) continue;
-				if (targetAlt.group === '~' && user.group !== '~') continue;
-
-				buf += '<br />Alt: <span class="username">' + Tools.escapeHTML(targetAlt.name) + '</span>' + (!targetAlt.connected ? " <em style=\"color:gray\">(offline)</em>" : "");
-				output = Object.keys(targetAlt.prevNames).join(", ");
-				if (output) buf += "<br />Previous names: " + output;
-			}
-			if (targetUser.locked) {
-				buf += '<br />Locked: ' + targetUser.locked;
-				switch (targetUser.locked) {
-				case '#dnsbl':
-					buf += " - IP is in a DNS-based blacklist";
-					break;
-				case '#range':
-					buf += " - IP or host is in a temporary range-lock";
-					break;
-				case '#hostfilter':
-					buf += " - host is permanently locked for being a proxy";
-					break;
-				}
-			}
-			if (targetUser.semilocked) {
-				buf += '<br />Semilocked: ' + targetUser.semilocked;
-			}
-		}
-		if ((user.can('ip', targetUser) || user === targetUser)) {
-			var ips = Object.keys(targetUser.ips);
-			buf += "<br /> IP" + ((ips.length > 1) ? "s" : "") + ": " + ips.join(", ") +
-					(user.group !== ' ' && targetUser.latestHost ? "<br />Host: " + Tools.escapeHTML(targetUser.latestHost) : "");
-		}
-		if ((user === targetUser || user.can('alts')) && hiddenrooms) {
-			buf += '<br />Hidden rooms: ' + hiddenrooms;
-		}
-		if ((user === targetUser || user.hasConsoleAccess(connection)) && privaterooms) {
-			buf += '<br />Private rooms: ' + privaterooms;
-		}
-		this.sendReplyBox(buf);
 	},
 
 	//Panagram

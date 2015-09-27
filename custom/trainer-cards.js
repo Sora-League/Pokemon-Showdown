@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
 			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆',
-			'∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆'
+			'∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -127,10 +127,10 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Edge</b>∆<br />' +
 			'<i>"How can you face your problem when your problem is your face?"</i> <br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Landorus<br />' +
+			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
+			'<b>Ace:</b> ???<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-No Hazards<br />' + 
+			'???<br />' + 
 			seen('e4edge') +
 			getBadges('e4edge'));
 	},
@@ -139,10 +139,10 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Alcor</b>∆<br />' +
 			'<i>"The pattern repeats, will your flaws too?"</i> <br />' +
-			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Medicham<br />' +
+			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+			'<b>Ace:</b> Togekiss<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + 
+			'-No Status Healing Moves<br />' + 
 			seen('e4alcor') +
 			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
 			getBadges('e4alcor'));
@@ -387,14 +387,6 @@ exports.commands = {
 	},
 
 
-	ground: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
-			'<b>Type: <font color = 5b3a00>Ground</font></b><br />' +
-			'<b>Ace:</b> <br />' + seen(''));
-	},
-
 	ice: 'mark',
 	mark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -410,13 +402,13 @@ exports.commands = {
 		);
 	},
 
-	
-        normal: function(target, room, user) {
+	normal: 'bigo',
+        bigo: function(target, room, user) {
 	if (!this.canBroadcast()) return;
-	this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-		'<i>"???"</i> <br />'+
+	this.sendReplyBox('∆Gym Ldr <b>Bigo</b>∆<br />'+
+		'<i>"Don\'t underestimate the normal, cause being \'normal\'  doesn\'t mean to be weak"</i> <br />'+
 	    '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
-		'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+		'<b>Ace:</b> Lopunny<br />' + seen('gymldrbigo') + getBadges('gymldrbigo'));
     },
 
 	     
