@@ -127,10 +127,10 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Edge</b>∆<br />' +
 			'<i>"How can you face your problem when your problem is your face?"</i> <br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Landorus<br />' +
+			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
+			'<b>Ace:</b> ???<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-No Hazards<br />' + 
+			'???<br />' + 
 			seen('e4edge') +
 			getBadges('e4edge'));
 	},
@@ -139,8 +139,8 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Alcor</b>∆<br />' +
 			'<i>"The pattern repeats, will your flaws too?"</i> <br />' +
-			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Medicham<br />' +
+			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+			'<b>Ace:</b> Togekiss<br />' +
 			'<b>Battle Rules:</b><br />' +
 			'-None<br />' + 
 			seen('e4alcor') +
