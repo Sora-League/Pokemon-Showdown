@@ -2,10 +2,6 @@ const fileName = 'storage-files/poof.json';
 var fs = require('fs');
 var poofoff = false;
 var poofs = JSON.parse(fs.readFileSync(fileName));
-poofs.map(function (msg) {
-		if (!msg.match(/\(user\)/)) return '(user) ' + msg;
-	});
-fs.writeFileSync(fileName, JSON.stringify(poofs, null, 1));
 
 function randomColor () {
 	var colors = ['9900f2', '4ca2ff', '4cff55', 'e87f00', 'd30007', '8e8080', 'd8b00d', '01776a', '0c4787', '0c870e', '8e892c',
@@ -52,6 +48,9 @@ exports.commands = {
 		if (target.length > 100) return this.sendReply('Poof messages can only contain a maximum of 100 characters.');
 		if (!target.match(/\(user\)/)) target = '(user) ' + target;
 		poofs.push(target.trim());
+		poofs.map(function (msg) {
+		if (!msg.match(/\(user\)/)) return '(user) ' + msg;
+	});
 		fs.writeFileSync(fileName, JSON.stringify(poofs, null, 1));
 		return this.sendReply('|html|"' + target + '" has been added to the list of poof messages.');
 	},
