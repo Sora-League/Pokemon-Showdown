@@ -142,7 +142,7 @@ exports.commands = {
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Togekiss<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + 
+			'-No Status Healing Moves<br />' + 
 			seen('e4alcor') +
 			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
 			getBadges('e4alcor'));
