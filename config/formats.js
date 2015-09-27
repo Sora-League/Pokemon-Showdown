@@ -18,28 +18,28 @@ exports.Formats = [
 			'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Soul Dew', 'Greninja', 'Genesect'
 		],
 		onStart: function () {
-            this.add('rule', 'Monotype Exception Clause: Monotype teams follow their own set of rules, ignoring normal OU rules.');
-        },
+            		this.add('rule', 'Monotype Exception Clause: Monotype teams follow their own set of rules, ignoring normal OU rules.');
+        	},
 		onValidateTeam: function (team, format, teamHas) {
 			var template = this.getTemplate(team[0].species);
 			if (team.length === 1) {
 				if (template.tier === 'Uber') return [template.name + ' is in Ubers, which is banned on OU teams'];
 			}
 			var isMono = true;
-            var typeTable = template.types;
-            if (!typeTable) isMono = false;
-            for (var i = 1; i < team.length; i++) {
-                template = this.getTemplate(team[i].species);
-                if (!template.types) {
+        		var typeTable = template.types;
+        		if (!typeTable) isMono = false;
+            		for (var i = 1; i < team.length; i++) {
+                		template = this.getTemplate(team[i].species);
+                		if (!template.types) {
 					isMono = false;
 					break;
 				}
-                typeTable = typeTable.intersect(template.types);
-                if (!typeTable.length) {
+        			typeTable = typeTable.intersect(template.types);
+                		if (!typeTable.length) {
 					isMono = false;
 					break;
 				}
-            }
+            		}
 
 			var problems = [];
 			if (isMono) {
@@ -155,6 +155,22 @@ exports.Formats = [
 			return problems;
 		}
 	},
+	{
+		name: "MonoColor",
+		section: "Sora Exclusive",
+
+		ruleset: ['OU'],
+		onStart: function () {
+			this.add('rule', 'Same Color Clause: Pokémon in a team must share a color');
+		},
+		onValidateTeam: function (team, format) {
+			var color = this.getTemplate(team[0]).color;
+			for (var i = 0; i < team.length; i++) {
+				if (color !== this.getTemplate(team[i]).color) return ['Your team must share a color.'];
+			}
+		}
+	},
+	
 
 	// XY Singles
 	///////////////////////////////////////////////////////////////////
