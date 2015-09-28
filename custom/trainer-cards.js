@@ -343,13 +343,13 @@ exports.commands = {
 			'<b>Ace: </b>Zygarde<br />');
 	},
 	
-
+    Tails: 'fighting'
     fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Tails</b>∆<br />'+
+			'<i>"Give up or Get beaten Up"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Mega Medicham<br />' + seen('gymldrtails') + getBadges('gymldrtails'));
         },
 
 
