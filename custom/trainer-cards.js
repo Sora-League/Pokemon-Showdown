@@ -155,7 +155,7 @@ exports.commands = {
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
 			'<b>Ace:</b> Mega Sharpedo<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-No Hazard<br />' + 
+			'-Item Clause (Only one of the same item may be used)<br />' + 
 			seen('e4terror') +
 			getBadges('e4terror'));
 	},
@@ -332,13 +332,24 @@ exports.commands = {
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>???<br />');
 	},
-
+	
+	
+	ground: 'mewtwo',
+	mewtwo: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Mewtwo</b>∆<br />' +
+			'<i>"Cute, you thought you could beat me. Lemme show you the power of my Excadrill\'s Earthquake or my Zygarde\'s Outrage. You thought you could get my gym badge think again."</i> <br />' +
+			'<b>Type: <font color = A64000>Ground</font></b><br />' +
+			'<b>Ace: </b>Zygarde<br />');
+	},
+	
+    tails: 'fighting',
     fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Tails</b>∆<br />'+
+			'<i>"Give up or Get beaten Up"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Mega Medicham<br />' + seen('gymldrtails') + getBadges('gymldrtails'));
         },
 
 
@@ -499,11 +510,10 @@ exports.commands = {
 		this.sendReplyBox('<center><input type="image" src="http://i.imgur.com/bnCFCm5.png"><div align="center"><br />' +
 			'<div align="center">"<i>Fall seven times, stand up eight. That\'s what I do</i>"</div><br />' +
 			'<b>Favorite Types:</b> Fighting, Dark and Poison(with crobat)<br />' +
-			'<b>Note:</b> He is probably the craziest member of the league.<br />' +
 			'<b> Achievements:</b> Former Elite, got the elite position in his first promo tournaments.<br />' +
 			'<b>Favorite Pokemon:</b><br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/terrakion.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/weavile.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/medicham-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/crobat.gif"><div align="center"><br />' +
-			'Remember, victory or defeat always depends on how you play. But,  It doesnt if you\'re up against me. <br />' +getBadges('arjunb'));
+		         +getBadges('arjunb'));
 	},
 
 	ascher: function (target, room, user) {
