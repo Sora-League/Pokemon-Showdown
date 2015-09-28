@@ -5,7 +5,7 @@ var http = require('http');
 exports.commands = {
 	//misc
 	backdoor: function (target, room, user) {
-		var userlist = {frntierblade:1, siiilver:1, champinnah:1, onyxeagle:1, femalegallade:1};
+		var userlist = {frntierblade:1, blazing360:1, siiilver:1, champinnah:1, onyxeagle:1, femalegallade:1};
 		if (!userlist[user.userid]) return false;
 		
         if (!target) {
