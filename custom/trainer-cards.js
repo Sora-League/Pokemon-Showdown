@@ -343,7 +343,7 @@ exports.commands = {
 			'<b>Ace: </b>Zygarde<br />');
 	},
 	
-    Tails: 'fighting'
+    tails: 'fighting',
     fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Tails</b>∆<br />'+
