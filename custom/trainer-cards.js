@@ -332,6 +332,17 @@ exports.commands = {
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>???<br />');
 	},
+	
+	
+	ground: 'mewtwo',
+	mewtwo: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Mewtwo</b>∆<br />' +
+			'<i>"Cute, you thought you could beat me. Lemme show you the power of my Excadrill\'s Earthquake or my Zygarde\'s Outrage. You thought you could get my gym badge think again."</i> <br />' +
+			'<b>Type: <font color = A64000>Ground</font></b><br />' +
+			'<b>Ace: </b>Zygarde<br />');
+	},
+	
 
     fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
