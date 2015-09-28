@@ -510,11 +510,10 @@ exports.commands = {
 		this.sendReplyBox('<center><input type="image" src="http://i.imgur.com/bnCFCm5.png"><div align="center"><br />' +
 			'<div align="center">"<i>Fall seven times, stand up eight. That\'s what I do</i>"</div><br />' +
 			'<b>Favorite Types:</b> Fighting, Dark and Poison(with crobat)<br />' +
-			'<b>Note:</b> He is probably the craziest member of the league.<br />' +
 			'<b> Achievements:</b> Former Elite, got the elite position in his first promo tournaments.<br />' +
 			'<b>Favorite Pokemon:</b><br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/terrakion.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/weavile.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/medicham-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/crobat.gif"><div align="center"><br />' +
-			'Remember, victory or defeat always depends on how you play. But,  It doesnt if you\'re up against me. <br />' +getBadges('arjunb'));
+		         +getBadges('arjunb'));
 	},
 
 	ascher: function (target, room, user) {
