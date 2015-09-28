@@ -294,7 +294,7 @@ var commands = exports.commands = {
 	},
 	makechatroomhelp: ["/makechatroom [roomname] - Creates a new room named [roomname]. Requires: ~"],
 
-	/*makegroupchat: function (target, room, user, connection, cmd) {
+	makegroupchat: function (target, room, user, connection, cmd) {
 		if (!user.autoconfirmed) {
 			return this.errorReply("You don't have permission to make a group chat right now.");
 		}
@@ -373,7 +373,7 @@ var commands = exports.commands = {
 			return;
 		}
 		return this.errorReply("An unknown error occurred while trying to create the room '" + title + "'.");
-	},*/
+	},
 	makegroupchathelp: ["/makegroupchat [roomname], [private|hidden|public] - Creates a group chat named [roomname]. Leave off privacy to default to hidden."],
 
 	deregisterchatroom: function (target, room, user) {
