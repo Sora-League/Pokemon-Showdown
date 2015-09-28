@@ -715,6 +715,13 @@ exports.commands = {
 			'<audio controls src = "http://s0.vocaroo.com/media/download_temp/Vocaroo_s0JSb5SljS5I.mp3" style = "border: 1px solid yellow; border-radius: 0px; background: black; width: 100%"></audio>'
 		);
 	},
+
+	lyin: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReply('|html|<div class = "infobox" style = "background: url(https://pbs.twimg.com/profile_images/639126796223451136/Mwvgb7qH.png) no-repeat 0px -30px; background-size: 100%; height: 300px;">' +
+			'<audio controls src = "http://b.sc.egghd.com/media/b0/a2/b0a2bf0d5e10ef92fcd8726640fabdb9.mp3?id=223206908&key=eadd7f5398105057d30329e22c595d27e4ce8794" style = "float: right; margin-top: 100px; margin-right: 5px; background: black; border: 2px solid red;"></div>'
+		);
+	},
 	
 	ichibannotakaramono: function (target, room, user) {
         	if (!this.canBroadcast()) return;
