@@ -155,7 +155,7 @@ exports.commands = {
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
 			'<b>Ace:</b> Mega Sharpedo<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-No Hazard<br />' + 
+			'-Item Clause (Only one of the same item may be used)<br />' + 
 			seen('e4terror') +
 			getBadges('e4terror'));
 	},
