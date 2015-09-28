@@ -396,7 +396,7 @@ exports.grouplist = [
 		id: "voice",
 		name: "Voice",
 		inherit: ' ',
-		tournaments: true
+		tournaments: true,
 		alts: 's',
 		broadcast: true
 	},
