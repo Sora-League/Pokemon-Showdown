@@ -3,7 +3,6 @@ if (!global.ttt) global.ttt = [{}, {}];
 var tttgames = global.ttt[0];
 var tttplayers = global.ttt[1];
 
-const EXPIRATION_TIME = 90 * 1000;
 const INACTIVE_KICK_TIME = 30 * 1000;
 
 var TicTacToe = (function () {
@@ -32,7 +31,7 @@ var TicTacToe = (function () {
 		};
 		this.markedCount = 0;
 		this.phase = 'waiting';
-		this.timer = setTimeout(this.end.bind(this, 'The game request has expired.'), EXPIRATION_TIME);
+		this.timer = setTimeout(this.end.bind(this, 'The game request has expired.'), 90 * 1000);
 	}
 
 	TicTacToe.prototype.accept = function () {
