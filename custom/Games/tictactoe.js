@@ -131,9 +131,9 @@ var TicTacToe = (function () {
 		if (message) {
 			if (this.phase === 'waiting') {
 				message = '|pm|' + this.p2.getIdentity() + '|' + this.p1.getIdentity() + '|/error ' + message;
-			}
+			} else message = '|popup|' + message;
 			this.players.forEach(function (user) {
-				user.popup(message);
+				user.send(message);
 			});
 		}
 		clearTimeout(this.timer);
@@ -174,17 +174,17 @@ var cmds = {
 		if (user.userid === target.userid) return this.sendReply('You can\'t play Tic-Tac-Toe with yourself!');
 		if (user.userid in tttplayers) {
 			var game = tttgames[tttplayers[user.userid]];
-			if (game.phase === 'waiting') return this.sendReply('You have already requested ' + game.checkPlayer(user) + ' to a game of Tic-Tac-Toe. Wait for their response.');
-			if (game.checkPlayer(target)) return this.sendReply('You are already playing Tic-Tac-Toe with ' + target.name + '!');
-			return this.sendReply('You are already playing Tic-Tac-Toe with another user. You cannot ' + target.name + ' a request.');
+			if (game.phase === 'waiting') return this.sendReply('You have already challenged ' + game.checkPlayer(user) + ' to a game of Tic-Tac-Toe. Wait for their response.');
+			if (game.checkPlayer(target)) return this.sendReply('You\'re playing Tic-Tac-Toe with ' + target.name + ' right now!');
+			return this.sendReply('You are currently playing Tic-Tac-Toe with another user. You cannot send ' + target.name + ' a request.');
 		}
 		if (target.userid in tttplayers) {
 			var game = tttgames[tttplayers[target.userid]];
-			if (game.checkPlayer(user)) return this.sendReply(game.checkPlayer(user) + ' has already sent you a request...');
-			return this.sendReply(target.name + ' has already asked someone else for a game of Tic-Tac-Toe.');
+			if (game.checkPlayer(user)) return this.sendReply(game.checkPlayer(user) + ' has already sent you a game request...');
+			return this.sendReply(target.name + ' has already challenged someone else to a game of Tic-Tac-Toe. Either wait for them to finish, or play with someone else.');
 		}
 		for (var i in tttgames)
-			if (tttgames[i].checkPlayer(user)) return this.sendReply('You were sent a game request by ' + tttgames[i].checkPlayer(user) + '. First respond to that request before challenging someone else.');
+			if (tttgames[i].checkPlayer(user)) return this.sendReply(tttgames[i].checkPlayer(user) + ' sent you a request. Respond to that before challenging anyone else.');
 		target.send('|pm|' + user.getIdentity() + '|' + target.getIdentity() + '|/html ' + user.getIdentity() + ' wants to play Tic-Tac-Toe!<br>' +
 			'<button name = "send" value = "/ttt accept ' + user.userid + '">Accept</button> <button name = "send" value = "/ttt decline ' + user.userid + '">Decline</button>'
 		);
@@ -199,11 +199,11 @@ var cmds = {
 		var game = tttgames[tttplayers[user.userid]];
 		var targetUser = (Users.get(target) ? Users.get(target).name : target);
 		target = Users.get(target);
-		if (!target || !target.connected) return this.sendReply('User ' + targetUser + ' is offline.');
+		if (!target || !target.connected) return this.sendReply('User ' + targetUser + ' is offline. Wait for them to come back online.');
 		if (user.userid in tttplayers) {
 			if (game.phase === 'waiting') return this.sendReply('You have already challenged someone else to a game of Tic-Tac-Toe. You cannot accept this user\'s challenge.');
-			if (game.checkPlayer(target)) return this.sendReply(game.checkPlayer(user) + ' is playing with you right now!');
-			return this.sendReply('You are already playing Tic-Tac-Toe with someone else. You cannot accept ' + target.name + 's request.');
+			if (game.checkPlayer(target)) return this.sendReply('You\'re playing Tic-Tac-Toe with ' + game.checkPlayer(user) + ' right now!');
+			return this.sendReply('You are currently playing Tic-Tac-Toe with another user. You cannot accept ' + target.name + '\'s request.');
 		}
 		if (user.userid === target.userid) return this.sendReply('You can\'t accept a challenge from yourself!');
 		if (!(target.userid in tttplayers)) return this.sendReply(target.name + ' has not challenged you to a game of Tic-Tac-Toe.');
@@ -225,36 +225,34 @@ var cmds = {
 		if (!(target.userid in tttplayers) || !game.checkPlayer(target)) return this.sendReply(target + ' has not challenged you to a game of Tic-Tac-Toe.');
 		if (game.checkPlayer(target) && game.phase == 'started') return this.sendReply('You are playing with ' + game.checkPlayer(user) + ' right now. If you want to end the game, use /ttt end.');
 
-		if (Users.get(target) && Users.get(target).connected) Users.get(target).send('|pm|' + user.getIdentity() + '|' + Users.get(target).getIdentity() + '|/error Your Tic-Tac-Toe request was declined.');
-		user.send('|pm|' + Users.get(target) + '|' + user.getIdentity() + '|/error You have declined the game request.');
-
-		game.end();
+		game.end('The Tic-Tac-Toe challenge was declined.');
 	},
 
 	mark: 'markbox',
 	markbox: function (target, room, user, connection, cmd) {
 		if (!(user.userid in tttplayers)) return this.sendReply('You aren\'t playing a game of Tic-Tac-Toe right now.');
 		var game = tttgames[tttplayers[user.userid]];
-		if (game.phase === 'waiting') return this.sendReply('The request has not been accepted yet. You can only use this command in an active game.');
+		if (game.phase === 'waiting') return this.sendReply('Your request has not been accepted yet. You can only use this command in an active game.');
 		game.markBox(user, target);
 	},
 
 	update: 'see',
 	view: 'see',
 	show: 'see',
+	open: 'see',
 	see: function (target, room, user) {
-		if (!(user.userid in tttplayers)) return this.sendReply('You aren\'t playing a game of Tic-Tac-Toe right now.');
+		if (!(user.userid in tttplayers)) return this.sendReply('You aren\'t playing a game of Tic-Tac-Toe right now...');
 		var game = tttgames[tttplayers[user.userid]];
-		if (game.phase === 'waiting') return this.sendReply('The request has not been accepted yet. You can only use this command in an active game.');
+		if (game.phase === 'waiting') return this.sendReply('Your request has not been accepted yet. You can only use this command in an active game.');
 		game.update();
 	},
 
 	exit: 'end',
 	leave: 'end',
 	end: function (target, room, user) {
-		if (!(user.userid in tttplayers)) return this.sendReply('You aren\'t playing a game of Tic-Tac-Toe right now.');
+		if (!(user.userid in tttplayers)) return this.sendReply('You aren\'t playing a game of Tic-Tac-Toe right now...');
 		var game = tttgames[tttplayers[user.userid]];
-		if (game.phase === 'waiting') game.end('The request was withdrawn.');
+		if (game.phase === 'waiting') game.end('The Tic-Tac-Toe challenge was declined.');
 		else game.end(user.name + ' has decided to leave the game midway.');
 	}
 };
