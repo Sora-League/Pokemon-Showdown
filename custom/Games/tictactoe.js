@@ -252,7 +252,7 @@ var cmds = {
 	end: function (target, room, user) {
 		if (!(user.userid in tttplayers)) return this.sendReply('You aren\'t playing a game of Tic-Tac-Toe right now...');
 		var game = tttgames[tttplayers[user.userid]];
-		if (game.phase === 'waiting') game.end('The Tic-Tac-Toe challenge was declined.');
+		if (game.phase === 'waiting') game.end('The Tic-Tac-Toe challenge was withdrawn.');
 		else game.end(user.name + ' has decided to leave the game midway.');
 	}
 };
