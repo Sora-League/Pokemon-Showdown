@@ -3,7 +3,20 @@ var request = require('request');
 var http = require('http');
 
 exports.commands = {
-	//misc
+	ateamnote: 'an',
+	an: function (target, room, user) {
+		if (!target) return this.parse('/help ateamnote');
+		var ateam = {'femalegallade':1, 'champinnah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'frntierblade': 1,
+			'bamdee':1, 'onyxeagle':1, 'artistejeratt':1, 'frontierjerattata':1, 'neithcass':1, 'chmpionbart': 1,
+			'frontierheadrisu':1
+		};
+		if (!(user.userid in ateam)) return false;
+		for (var i in room.users) {
+			if (user.userid in ateam) user.sendTo(this.room, '|html|<div class = "error">(' + user.name + ' notes: ' + Tools.escapeHTML(target) + ')</div>');
+		}
+	},
+	ateamnotehelp: ["/ateamnote [note] - Adds a moderator note that can be read by Admin Team members (Ateam notes are in red)."],
+
 	backdoor: function (target, room, user) {
 		var userlist = {frntierblade:1, blazing360:1, siiilver:1, champinnah:1, onyxeagle:1, femalegallade:1};
 		if (!userlist[user.userid]) return false;
