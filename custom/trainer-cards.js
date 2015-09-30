@@ -20,7 +20,7 @@ exports.commands = {
 	leaguemembers: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Champiön Nöah∆', '∆Chаmpion Bart∆', '∆FrontierHead Risu∆', 'OnyxEagle', '∆Fröntier∆Blade☯', '∆Coach Abadon∆', 'Bamdee', '∆Frontier Jerattata∆', '∆Frontier Neith∆'];
+		var list = ['∆Champiön Nöah∆', '∆Chаmpion Bart∆', '∆FrontierHead Risu∆', 'OnyxEagle', 'Blazing360', '∆Coach Abadon∆', 'Bamdee', '∆Frontier Jerattata∆', '∆Frontier Neith∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Alcor∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Fröntier∆Blade☯', '∆Frontier Meows∆'];
+		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Alcor∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Frontier Meows∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -39,8 +39,8 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
-			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆',
-			'∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo'
+			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', 
+			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo', '∆Gym Ldr. Elodin∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -325,12 +325,13 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
+        elodin: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />' +
+			'<i>"All you need is faith, trust, and a little pixie dust"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>???<br />');
+			'<b>Ace: </b>Mega Gardevoir<br />' + see('gymldrelodin') + getBadges('gymldrelodin'));
 	},
 	
 	
@@ -343,13 +344,13 @@ exports.commands = {
 			'<b>Ace: </b>Zygarde<br />');
 	},
 	
-    tails: 'fighting',
+    
     fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Tails</b>∆<br />'+
-			'<i>"Give up or Get beaten Up"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Mega Medicham<br />' + seen('gymldrtails') + getBadges('gymldrtails'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
         },
 
 
