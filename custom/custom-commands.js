@@ -8,7 +8,7 @@ exports.commands = {
 		if (!target) return this.parse('/help ateamnote');
 		var ateam = {'femalegallade':1, 'champinnah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'frntierblade': 1,
 			'bamdee':1, 'onyxeagle':1, 'artistejeratt':1, 'frontierjerattata':1, 'neithcass':1, 'chmpionbart': 1,
-			'frontierheadrisu':1
+			'frontierheadrisu':1, 'frontierneith': 1
 		};
 		if (!(user.userid in ateam)) return false;
 		for (var i in room.users) {
