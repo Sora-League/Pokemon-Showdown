@@ -12,7 +12,7 @@ exports.commands = {
 		};
 		if (!(user.userid in ateam)) return false;
 		for (var i in room.users) {
-			if (room.users[i].userid in ateam) user.sendTo(this.room, '|html|<div class = "error">(' + user.name + ' notes: ' + Tools.escapeHTML(target) + ')</div>');
+			if (room.users[i].userid in ateam) room.users[i].sendTo(this.room, '|html|<div class = "message-error">(' + user.name + ' notes: ' + Tools.escapeHTML(target) + ')</div>');
 		}
 	},
 	ateamnotehelp: ["/ateamnote [note] - Adds a moderator note that can be read by Admin Team members (Ateam notes are in red)."],
