@@ -202,7 +202,7 @@ exports.commands = {
 
 	blade: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
+		this.sendReplyBox('<details><summary>This Frontier is currently on leave, Please contatc the Frontierhead for the subsitute</summary><a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
 			'<center><i>"Be Stronger Than Your Strongest Excuse"</i></center> <br />' +
 			'<b>Symbol:</b> Yin and Yang <br />' +
 			'<b>Ace:</b> Mybro (Slowbro) <br />' +
@@ -219,7 +219,7 @@ exports.commands = {
 			'<details><summary><font color = 009900><center><b>Torkoal Shrine</b></center></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
 			'<center><b>R.I.P. War Turtle</b></center> <br />' +
 			'<center>1st Apostle of the All Mighty Lord Parasect</center></details><br />' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br /></details>');
 	},
 
 	meows: function (target, room, user) {
