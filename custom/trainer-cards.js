@@ -331,7 +331,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />' +
 			'<i>"All you need is faith, trust, and a little pixie dust"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Mega Gardevoir<br />' + see('gymldrelodin') + getBadges('gymldrelodin'));
+			'<b>Ace: </b>Mega Gardevoir<br />' + seen('gymldrelodin') + getBadges('gymldrelodin'));
 	},
 	
 	
