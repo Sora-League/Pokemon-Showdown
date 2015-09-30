@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
 			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', 
-			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo', '∆Gym Ldr. Elodin∆'
+			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr TSwiv∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr. Mewtwo∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -202,7 +202,7 @@ exports.commands = {
 
 	blade: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<details><summary>This Frontier is currently on leave, Please contatc the Frontierhead for the subsitute</summary><a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
+		this.sendReplyBox('<details><summary>This Frontier is currently on leave, Please contact the Frontierhead for the subsitute. P.s click me I have a sexy card</summary><a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
 			'<center><i>"Be Stronger Than Your Strongest Excuse"</i></center> <br />' +
 			'<b>Symbol:</b> Yin and Yang <br />' +
 			'<b>Ace:</b> Mybro (Slowbro) <br />' +
