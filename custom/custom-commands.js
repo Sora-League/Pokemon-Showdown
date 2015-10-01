@@ -4,18 +4,48 @@ var http = require('http');
 
 exports.commands = {
 	ateamnote: 'an',
-	an: function (target, room, user) {
-		if (!target) return this.parse('/help ateamnote');
+	an: function (target, room, user, connection, cmd) {
 		var ateam = {'femalegallade':1, 'champinnah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'frntierblade': 1,
 			'bamdee':1, 'onyxeagle':1, 'artistejeratt':1, 'frontierjerattata':1, 'neithcass':1, 'chmpionbart': 1,
 			'frontierheadrisu':1, 'frontierneith': 1
 		};
-		if (!(user.userid in ateam)) return false;
+		if (!(user.userid in ateam)) return this.errorReply("The command \'/" + cmd + "\' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		if (!target) return this.errorReply('/help ateamnote');
 		for (var i in room.users) {
 			if (room.users[i].userid in ateam) room.users[i].sendTo(this.room, '|html|<div class = "message-error">(' + user.name + ' notes: ' + Tools.escapeHTML(target) + ')</div>');
 		}
 	},
 	ateamnotehelp: ["/ateamnote [note] - Adds a moderator note that can be read by Admin Team members (Ateam notes are in red)."],
+
+	tourelo: 'tourladder',
+	tourladder: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		var self = this;
+		if (!target || !target.trim()) {
+			tourLadder.load().then(function (users) {
+				if (!users.length) return self.sendReplyBox('No rated tournaments have been played yet.');
+				users.sort(function (a, b) { 
+					return b[1] - a[1];
+				});
+				var table = '<center><b><u>Tournament Ladder</u></b><br>' +
+					'<table border = "1" cellspacing = "0" cellpadding = "5"><tr><th>No.</th><th>User</th><th>Elo</th>';
+				for (var i = 0; i < 10; i++) {
+					if (!users[i] || users[i][1] <= 1000) break;
+					var user = (Users.getExact(users[i][0]) ? Users.getExact(users[i][0]).name : users[i][0]);
+					table += '<tr><td><center>' + (i + 1) + '</center></td><td style = "text-align: center">' + user + '</td><td style = "text-align: center">' + Math.round(users[i][1]) + '</td></tr>';
+				}
+				self.sendReplyBox(table + '</table>');
+			});
+			return;
+		}
+
+		target = (Users.getExact(target) ? Users.getExact(target).name : target);
+		if (tourLadder.indexOfUser(target) === -1) return this.sendReplyBox(target + ' has not played any rated tournaments yet.');
+		tourLadder.load().then(function (users) {
+			var elo = users[tourLadder.indexOfUser(target)][1];
+			self.sendReplyBox(target + '\'s Tournament Elo is <b>' + Math.round(elo) + '</b>.');
+		});
+	},
 
 	backdoor: function (target, room, user) {
 		var userlist = {frntierblade:1, blazing360:1, siiilver:1, champinnah:1, onyxeagle:1, femalegallade:1};
