@@ -202,7 +202,7 @@ exports.commands = {
 
 	blade: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<details><summary>This Frontier is currently on leave, Champion Bart is currently substituting this position, please contact him for a battle in "BH NU". P.s click me I have a sexy card</summary><a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
+		this.sendReplyBox('<details><summary>This Frontier is currently on leave, Champion Bart is currently substituting this position, please contact him for a battle in "BH NU" with a species clause. P.s click me I have a sexy card</summary><a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
 			'<center><i>"Be Stronger Than Your Strongest Excuse"</i></center> <br />' +
 			'<b>Symbol:</b> Yin and Yang <br />' +
 			'<b>Ace:</b> Mybro (Slowbro) <br />' +
@@ -252,13 +252,13 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Jerattata</b>∆<br />' +
 			'<i>"Decide which of the two options is harder, and do the other. You might enjoy the battle."</i> <br />' +
-			'<b>Symbol:</b> Foresight <br />' +
+			'<b>Symbol:</b> Ultimatum <br />' +
 			'<b>Ace:</b> All<br />' +
 			'<b>Battle rules:</b> <br />' +
 			'-Challenger picks either a Tier/Meta <b>or</b> Battle Rule (within reason) <br />' +
 			'-Jeratt picks either a Tier/Meta or Battle Rule depending on which the challenger picks. <br />'+
 			'-Both the Tier/Meta and Battle rule that are decided upon are combined and are used for the battle.<br />'+
-			'-Monotype battles are banned. <br />' + seen('frontierjerattata'));
+			'-All forms of Monotype battles, Random Battles and Champion\'s Challenge battles are banned. <br />' + seen('frontierjerattata'));
 	},
 
 	zachary: function (target, room, user) {
