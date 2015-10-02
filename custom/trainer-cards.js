@@ -178,7 +178,7 @@ exports.commands = {
 		this.sendReplyBox('<center><font size = 3><b>∆Coach Abadon∆<b></font><br>' +
 			'<i>"SWIGGITY SWOOTY I\'M COMING FOR THAT BOOTY"</i><br><br>' +
 			'<b>Achievements:</b>' +
-			'<li>Sora\'s best ground E4' + 
+			'<li>Sora\'s best Ghost and Ground E4' + 
 			'<li>Sora\'s coach' + 
 			'<li>All round top bloke<br>' +
 			'<img style = "margin: 5px" src = "http://128.199.160.98:8000/avatars/' + Config.customavatars.coachabadon + '">' +
