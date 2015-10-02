@@ -214,6 +214,8 @@ Rooms.Room.prototype.chat = function (user, message, connection) {
 	this.update();
 };
 
+var fs = require('fs');
+
 exports.commands = {
 	pm: 'msg',
 	whisper: 'msg',
