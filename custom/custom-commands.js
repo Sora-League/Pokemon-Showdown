@@ -21,6 +21,7 @@ exports.commands = {
 	tourladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var self = this;
+		var tourLadder = Ladders('tournaments');
 		if (!target || !target.trim()) {
 			tourLadder.load().then(function (users) {
 				if (!users.length) return self.sendReplyBox('No rated tournaments have been played yet.');
