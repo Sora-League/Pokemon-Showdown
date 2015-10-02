@@ -335,13 +335,13 @@ exports.commands = {
 	},
 	
 	
-	ground: 'mewtwo',
-	mewtwo: function (target, room, user) {
+	
+	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Mewtwo</b>∆<br />' +
-			'<i>"Cute, you thought you could beat me. Lemme show you the power of my Excadrill\'s Earthquake or my Zygarde\'s Outrage. You thought you could get my gym badge think again."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = A64000>Ground</font></b><br />' +
-			'<b>Ace: </b>Zygarde<br />');
+			'<b>Ace: </b>???<br />');
 	},
 	
     
