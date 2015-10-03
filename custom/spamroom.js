@@ -84,7 +84,7 @@ var commands = {
 	remove: function (target, room, user, connection, cmd) {
 		if (!this.can('lock')) return false;
 		if (!toId(target)) return this.sendReply('/spamroom ' + cmd + ' [user] - Removes a user and all of their alts from the spamroom.');
-		var targetUser = Users.get(target);
+		var targetUser = Users.getExact(target);
 		if (!targetUser) return this.sendReply('User ' + target + ' not found.');
 		if (!this.can('lock', targetUser)) return false;
 		var check;
