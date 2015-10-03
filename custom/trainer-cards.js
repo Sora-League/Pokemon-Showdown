@@ -155,7 +155,7 @@ exports.commands = {
 			'<b>Type: <font color = A64000>Ground</font></b><br />' +
 			'<b>Ace:</b> Excadrill<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-Item Clause (Only one of the same item may be used)<br />' + 
+			'-None<br />' + 
 			seen('e4terror') +
 			getBadges('e4terror'));
 	},
