@@ -151,9 +151,9 @@ exports.commands = {
 	terror: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Terror</b>∆<br />' +
-			'<i>"Better get out of the water because the waves are coming for you."</i> <br />' +
-			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Mega Sharpedo<br />' +
+			'<i>"Water you talking about? My new type shall be enough to take you down."</i> <br />' +
+			'<b>Type: <font color = A64000>Ground</font></b><br />' +
+			'<b>Ace:</b> Excadrill<br />' +
 			'<b>Battle Rules:</b><br />' +
 			'-Item Clause (Only one of the same item may be used)<br />' + 
 			seen('e4terror') +
