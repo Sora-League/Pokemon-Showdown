@@ -337,10 +337,11 @@ exports.commands = {
 	pharo: 'ground',
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Pharo</b>∆<br />' +
-			'<i>"Always hold your ground."</i> <br />' +
-			'<b>Type: <font color = A64000>Ground</font></b><br />' +
-			'<b>Ace: </b>Excadrill<br />'
+		this.sendReplyBox('∆Gym Ldr <b>Pharo</b>∆<br>' +
+			'<i>"Always hold your ground."</i> <br>' +
+			'<b>Type: <font color = A64000>Ground</font></b><br>' +
+			'<b>Ace: </b>Excadrill<br>' + 
+			seen('gymldrpharo') + getBadges('gymldrpharo')
 		);
 	},
 
