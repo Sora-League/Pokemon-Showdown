@@ -333,26 +333,25 @@ exports.commands = {
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>Mega Gardevoir<br />' + seen('gymldrelodin') + getBadges('gymldrelodin'));
 	},
-	
-	
-	
+
+	pharo: 'ground',
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Pharo</b>∆<br />' +
+			'<i>"Always hold your ground."</i> <br />' +
 			'<b>Type: <font color = A64000>Ground</font></b><br />' +
-			'<b>Ace: </b>???<br />');
+			'<b>Ace: </b>Excadrill<br />'
+		);
 	},
-	
-    
-    fighting: function(target, room, user) {
+
+	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+		);
         },
-
 
 	fire: 'waffles',
     	waffles: function(target, room, user) {
