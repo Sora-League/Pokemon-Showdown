@@ -1,92 +1,129 @@
-/*var Panagram = (function () {
-	function Panagram (category) {
-		this.category = category;
+var pGames = exports.pGames = {};
+
+function mix(word) {
+	var arr = [];
+	for (var k = 0; k < word.length; k++) {
+		arr.push(word[k]);
 	}
-	Panagram.prototype.Dex = function () {
+	var a, b, i = arr.length;
+	while (i) {
+		a = Math.floor(Math.random() * i);
+		i--;
+		b = arr[i];
+		arr[i] = arr[a];
+		arr[a] = b;
+	}
+	return arr.join('').toString();
+}
+
+var Panagram = (function () {
+	function Panagram(room, category) {
+		this.room = room;
+		this.category = category;
 		switch (toId(category)) {
-			case 'pokmon': return Tools.data.Pokedex;
-			case 'item': return Tools.data.Items;
-			case '
+		case 'items':
+		case 'item':
+			this.dex = Tools.data.Items;
+			break;
+		case 'abilities':
+		case 'ability':
+			this.dex = Tools.data.Abilities;
+			break;
+		case 'moves':
+		case 'move':
+			this.dex = Tools.data.Movedex;
+			break;
+		default:
+			this.dex = Tools.data.Pokedex;
+		}
+		do {
+			this.answer = this.dex[Object.keys(this.dex)[Math.floor(Math.random() * Object.keys(this.dex).length)]];
+		} while (this.answer.num < 1 || this.answer.baseSpecies);
+		this.mixed = mix(this.category === 'pokemon' ? toId(this.answer.species) : this.answer.name.toLowerCase());
+
+		this.room.add('|html|<div class = "infobox"><center>A game of Panagram was started! Scrambled word: <b>' + this.mixed + '</b>. Category: <b>' + category + '</b><br>' +
+			'<small>Enter your answer into the chat to guess!</small></center>'
+		);
+		this.users = {};
+		this.guessed = {};
+
+		var Game = this;
+		this.room.chat = function (user, message, connection) {
+			message = CommandParser.parse(message, this, user, connection);
+			if (Game.dex[toId(message)]) {
+				var guess = Game.dex[toId(message)];
+				var guessName = guess.id || toId(guess.species);
+				if (Game.users[user.userid]) return user.sendTo(this, 'You cannot guess more than once per game of panagram.');
+				for (var i in Game.users)
+					if (Game.users[i].latestIp === user.latestIp) return user.sendTo(this, 'One of your alts have already guessed once in this game of panagram.');
+				if (guessName in Game.guessed) return user.sendTo(this, 'That word has already been guessed.');
+				if (guessName === (Game.answer.id || toId(Game.answer.species))) {
+					this.add('|html|<b>' + user.name + '</b> guessed <b>' + (guess.name || guess.species) + '</b>, which was the correct answer! Congratulations!');
+					Game.end();
+				} else if (guess.num < 1 || guess.baseSpecies) user.sendTo(this, (guess.name || guess.species) + ' is either an alternate form or doesn\'t exist in the games. These cannot be guessed.');
+				else {
+					if (Object.keys(Game.users).length < 3) {
+						this.add('|html|<b>' + user.name + '</b> guessed <b>' + (guess.name || guess.species) + '</b>, but was not the correct answer...');
+						Game.guessed[guessName] = user.userid;
+						Game.users[user.userid] = user;
+					} else {
+						this.add('|html|<b>' + user.name + '</b> guessed <b>' + (guess.name || guess.species) + '</b>, but was not the correct answer. You have failed to guess the Pokemon, which was <b>' + (answer.name || answer.species) + '</b>');
+						Game.end();
+					}
+				}
+			} else {
+				if (message && message !== true) {
+					this.add('|c|' + user.getIdentity(this.id) + '|' + message);
+				}
+			}
+			this.update();
+		};
+	}
+
+	Panagram.prototype.end = function (forced) {
+		if (forced) this.room.add('The game of panagram has been forcibly ended.');
+		this.room.chat = Rooms.Room.prototype.chat;
+		delete pGames[this.room.id];
+	};
+	return Panagram;
+})();
+
+var cmds = {
+	rules: 'help',
+	help: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<b>Panagram Commands</b><br>' +
+			'<li>/panagram <em>Category</em> - Starts a game of panagram that follows the specified category. Valid categories include <i>Pokemon, Items, Abilities</i> and <i>moves</i>. Not specifying a category starts a pokemon panagram by default. Requires + or higher to use.' +
+			'<li>/panagram end <small>or</small> /endp - Ends a game of panagram. Requires + or higher to use.<br>' +
+			'Users can guess answers by simply typing them into the chat.'
+		);
+	},
+
+	pokemon: '',
+	item: '',
+	items: '',
+	ability: '',
+	abilities: '',
+	move: '',
+	moves: '',
+	'': function (target, room, user, connection, cmd) {
+		if (pGames[room.id]) return this.sendReply('There is currently a game of panagram going on in this room.');
+		if (!this.can('broadcast', null, room)) return this.sendReply('You must be ranked + or higher to start a game of panagram in this room.');
+		if (!cmd) cmd = 'pokemon';
+
+		pGames[room.id] = new Panagram(room, cmd);
+	},
+
+	end: function (target, room, user) {
+		if (!pGames[room.id]) return this.sendReply('There is no game of panagram going on in this room.');
+		if (!this.can('broadcast', null, room)) return this.sendReply('You must be ranked + or higher to end a game of panagram in this room.');
+
+		pGames[room.id].end(true);
+	}
+}
 
 exports.commands = {
-	panagramhelp: 'panagramrules',
-	panagramrules: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		return this.sendReplyBox('<u><font size = 2><center>Pangram rules and commands</center></font></u><br />' +
-			'<b>/panagram</b> - Starts a game of Panagram in the room (Panagrams are just anagrams with Pokemon). Illegal and CAP Pokemon won\'t be selected. Must be ranked + or higher to use.<br />' +
-			'<b>/guessp [Pokemon]</b> - Guesses a Pokémon. After guessing incorrectly, you cannot guess again in the same game. There are a total of 3 tries per game. The answer is revealed after all 3 chances are over.<br />' +
-			'<b>/panagramend</b> OR <b>/endpanagram</b> OR <b>/endp</b> - Ends the current game of Panagram.');
-	},
-	//panagram commands.
-	panagram: function(target, room, user) {
-		if (!this.can('broadcast', null, room)) return false;
-		if (room.panagram) return this.sendReply('There is already a game of Panagram going on.');
-		var mixer = function(word) {
-			var array = [];
-			for (var k = 0; k < word.length; k++) {
-				array.push(word[k]);
-			}
-			var a;
-			var b;
-			var i = array.length;
-			while (i) {
-				a = Math.floor(Math.random() * i);
-				i--;
-				b = array[i];
-				array[i] = array[a];
-				array[a] = b;
-			}
-			return array.join('').toString();
-		}
-		var pokedex = Object.keys(Tools.data.Pokedex), poke;
-		do {
-			poke = pokedex[Math.floor(Math.random() * pokedex.length)];
-		} while (Tools.data.Pokedex[poke].num < 0 || Tools.data.Pokedex[poke].num < 0)
-		var panagram = mixer(poke.toString());
-		while (panagram == poke) {
-			panagram = mixer(poke);
-		}
-		//var x = Math.floor(Math.random() * panagram.length);
-		this.add('|html|<div class = "infobox"><center><b>A game of Panagram has been started!</b><br/>' +
-			'The scrambled Pokémon is <b>' + panagram + '</b><br/>' +
-			'<font size = 1>Type in <b>/gp or /guesspoke [Pokémon]</b> to guess the Pokémon!');
-		room.panagram = {};
-		room.panagram.guessed = [];
-		room.panagram.chances = 2;
-		room.panagram.answer = toId(poke);
-	},
-
-	gp: 'guessp',
-	guesspoke: 'guessp',
-	guessp: function(target, room, user, cmd) {
-		if (!room.panagram) return this.sendReply('There is no game of Panagram going on in this room.');
-		if (room.panagram[user.userid]) return this.sendReply("You've already guessed once!");
-		if (!target) return this.sendReply("The proper syntax is /guessp [pokemon]");
-		if (!Tools.data.Pokedex[toId(target)]) return this.sendReply("'" + target + "' is not a valid Pokémon.");
-		if (Tools.data.Pokedex[toId(target)].num < 1) return this.sendReply(Tools.data.Pokedex[toId(target)].species + ' is either an illegal or a CAP Pokémon.');
-		if (Tools.data.Pokedex[toId(target)].baseSpecies) target = toId(Tools.data.Pokedex[toId(target)].baseSpecies);
-		if (room.panagram.guessed.indexOf(toId(target)) > -1) return this.sendReply("That Pokemon has already been guessed!");
-		if (room.panagram.answer == toId(target)) {
-			this.add('|html|<b>' + user.name + '</b> guessed <b>' + Tools.data.Pokedex[toId(target)].species + '</b>, which was the correct answer! Congratulations!');
-			delete room.panagram;
-		} else {
-			if (room.panagram.chances > 0) {
-				this.add('|html|<b>' + user.name + '</b> guessed <b>' + Tools.data.Pokedex[toId(target)].species + '</b>, but was not the correct answer...');
-				room.panagram[user.userid] = toId(target);
-				room.panagram.guessed.push(toId(target));
-				room.panagram.chances--;
-			} else {
-				this.add('|html|<b>' + user.name + '</b> guessed <b>' + Tools.data.Pokedex[toId(target)].species + '</b>, but was not the correct answer. You have failed to guess the Pokemon, which was <b>' + Tools.data.Pokedex[room.panagram.answer].species + '</b>');
-				delete room.panagram;
-			}
-		}
-	},
-	panagramoff: 'endpanagram',
-	endp: 'endpanagram',
-	panagramend: 'endpanagram',
-	endpanagram: function(target, room, user) {
-		if (!room.panagram) return this.sendReply('There is no panagram game going on in this room yet.');
-		this.add("|html|<b>The game of Panagram has been ended.</b>");
-		delete room.panagram;
-	}
-};*/
+	panagram: cmds,
+	endpanagram: 'endp',
+	endp: cmds.end,
+}
