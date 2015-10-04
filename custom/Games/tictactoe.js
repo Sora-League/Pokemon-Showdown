@@ -39,10 +39,11 @@ var TicTacToe = (function () {
 		this.markers[this.p2.userid] = 'O';
 		this.currentPlayer = this.players[Math.floor(Math.random() * 2)];
 		this.phase = 'started';
+		this.p1Name = this.p1.name;
+		this.p2Name = this.p2.name;
 		this.resetTimer();
 		var message = 'If you accidentally close out, use <em><b>/ttt open</b></em> to reopen the game.';
-		this.updateUser(this.p1, message);
-		this.updateUser(this.p2, message);
+		this.update(message);
 	};
 
 	TicTacToe.prototype.switchPlayer = function () {
@@ -89,6 +90,15 @@ var TicTacToe = (function () {
 
 	TicTacToe.prototype.update = function () {
 		var message = '|html|<center><b style = "color:' + Core.color(this.currentPlayer.userid) + '">' + this.currentPlayer.name + '\'s turn!</b><br/>' + this.getGrid();
+		if (text) message += '<br>' + text;
+		if (toId(this.p1Name) !== this.p1.userid) {
+			message += '<br>' + this.p1Name + ' changed their name to ' + this.p1.name;
+			this.p1Name = this.p1.name;
+		}
+		if (toId(this.p2Name) !== this.p2.userid) {
+			message += '<br>' + this.p2Name + ' changed their name to ' + this.p2.name;
+			this.p2Name = this.p2.name;
+		}
 		this.players.forEach(function (user) {
 			user.popup(message);
 		});
