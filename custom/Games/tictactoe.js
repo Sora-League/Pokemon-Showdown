@@ -19,17 +19,7 @@ var TicTacToe = (function () {
 		}.bind(this);
 		this.markers = {};
 		this.markers[this.p1.userid] = 'X';
-		this.boxes = {
-			'1': 1,
-			'2': 2,
-			'3': 3,
-			'4': 4,
-			'5': 5,
-			'6': 6,
-			'7': 7,
-			'8': 8,
-			'9': 9
-		};
+		this.boxes = {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9};
 		this.markedCount = 0;
 		this.phase = 'waiting';
 		this.timer = setTimeout(this.end.bind(this, 'The game request has expired.'), EXPIRATION_TIME);
@@ -39,11 +29,8 @@ var TicTacToe = (function () {
 		this.markers[this.p2.userid] = 'O';
 		this.currentPlayer = this.players[Math.floor(Math.random() * 2)];
 		this.phase = 'started';
-		this.p1Name = this.p1.name;
-		this.p2Name = this.p2.name;
 		this.resetTimer();
-		var message = 'If you accidentally close out, use <em><b>/ttt open</b></em> to reopen the game.';
-		this.update(message);
+		this.update('If you accidentally close out, use <em><b>/ttt open</b></em> to reopen the game.');
 	};
 
 	TicTacToe.prototype.switchPlayer = function () {
@@ -88,17 +75,9 @@ var TicTacToe = (function () {
 		}
 	};
 
-	TicTacToe.prototype.update = function () {
+	TicTacToe.prototype.update = function (text) {
 		var message = '|html|<center><b style = "color:' + Core.color(this.currentPlayer.userid) + '">' + this.currentPlayer.name + '\'s turn!</b><br/>' + this.getGrid();
 		if (text) message += '<br>' + text;
-		if (toId(this.p1Name) !== this.p1.userid) {
-			message += '<br>' + this.p1Name + ' changed their name to ' + this.p1.name;
-			this.p1Name = this.p1.name;
-		}
-		if (toId(this.p2Name) !== this.p2.userid) {
-			message += '<br>' + this.p2Name + ' changed their name to ' + this.p2.name;
-			this.p2Name = this.p2.name;
-		}
 		this.players.forEach(function (user) {
 			user.popup(message);
 		});
