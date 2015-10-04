@@ -1,4 +1,4 @@
-var pGames = exports.pGames = {};
+/*var pGames = exports.pGames = {};
 
 function mix(word) {
 	var arr = [];
@@ -126,4 +126,4 @@ exports.commands = {
 	panagram: cmds,
 	endpanagram: 'endp',
 	endp: cmds.end,
-}
+}*/
