@@ -56,7 +56,7 @@ var TicTacToe = (function () {
 			if (typeof this.boxes[i] === 'string') marked.push(this.boxes[i]);
 			else marked.push('<button style = "height: 80px%; width: 80px; font-size: 20pt" name = "send" value = "/ttt markbox ' + i + '"><b>' + i + '</b></button>');
 		}
-		var style = 'width: 100px; height: 100px; font-size: 20pt; background-image: url(http://i.imgur.com/xufVRE8.png); background-size: contain; border-right: 3px solid;';
+		var style = 'width: 100px; height: 100px; font-size: 20pt;';
 		var grid = '<table cellspacing = "0">' +
 			//row 1
 			'<tr><th style = "' + style + ';"><center>' + marked[0] + '</center></td>' +
