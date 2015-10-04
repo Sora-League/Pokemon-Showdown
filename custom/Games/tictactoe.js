@@ -59,17 +59,17 @@ var TicTacToe = (function () {
 		var style = 'width: 100px; height: 100px; font-size: 20pt; ';
 		var grid = '<table cellspacing = "0">' +
 			//row 1
-			'<tr><th style = "' + style + ' border-right: 3px solid; border-bottom: 3px solid;"><center>' + marked[0] + '</center></td>' +
-			'<th style = "' + style + ' border-bottom: 3px solid;"><center>' + marked[1] + '</center></th>' +
-			'<th style = "' + style + ' border-left: 3px solid; border-bottom: 3px solid;"><center>' + marked[2] + '</center></th></tr>' +
+			'<tr><th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/xufVRE8.png&quot;); background-size: contain; border-right: 3px solid; border-bottom: 3px solid;"><center>' + marked[0] + '</center></td>' +
+			'<th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/2TUk6qY.png&quot;); background-size: contain; border-bottom: 3px solid;"><center>' + marked[1] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/tCk005Y.png&quot;); background-size: contain; border-left: 3px solid; border-bottom: 3px solid;"><center>' + marked[2] + '</center></th></tr>' +
 			//row 2
-			'<tr><th style = "' + style + ' border-right: 3px solid;"><center>' + marked[3] + '</center></th>' +
-			'<th style = "' + style + '"><center>' + marked[4] + '</center></th>' +
-			'<th style = "' + style + ' border-left: 3px solid;"><center>' + marked[5] + '</center></th></tr>' +
+			'<tr><th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/fzQAvCe.png&quot;); background-size: contain;border-right: 3px solid;"><center>' + marked[3] + '</center></th>' +
+			'<th style = "' + style + 'background-image: url(&quot;http://i.imgur.com/DZZ76rh.png&quot;); background-size: contain"><center>' + marked[4] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/wbA17yf.png&quot;); background-size: contain; border-left: 3px solid;"><center>' + marked[5] + '</center></th></tr>' +
 			//row 3
-			'<tr><th style = "' + style + ' border-right: 3px solid; border-top: 3px solid;"><center>' + marked[6] + '</center></th>' +
-			'<th style = "' + style + ' border-top: 3px solid;"><center>' + marked[7] + '</center></th>' +
-			'<th style = "' + style + ' border-left: 3px solid; border-top: 3px solid;"><center>' + marked[8] + '</center></th></tr></table><br>';
+			'<tr><th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/n8uJJ6M.png&quot;); background-size: contain; border-right: 3px solid; border-top: 3px solid;"><center>' + marked[6] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/1T2RxUT.png&quot;); background-size: contain; border-top: 3px solid;"><center>' + marked[7] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(&quot;http://i.imgur.com/N95RsA5.png&quot;); background-size: contain; border-left: 3px solid; border-top: 3px solid;"><center>' + marked[8] + '</center></th></tr></table><br>';
 		if (!gameOver) grid += '<button name = "send" value = "/ttt end"><small>End Game</small></button>';
 		return grid;
 	};
