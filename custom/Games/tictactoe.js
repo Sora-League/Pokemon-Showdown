@@ -185,7 +185,7 @@ var cmds = {
 		}
 		for (var i in tttgames) {
 			if (tttgames[i].checkPlayer(user)) return this.sendReply(tttgames[i].checkPlayer(user) + ' sent you a request. Respond to that before challenging anyone else.');
-			if (tttgames[i].checkPlayer(target.userid)) return this.sendReply(target.name + ' has already challenged someone else to a game of Tic-Tac-Toe. Either wait for them to finish, or play with someone else.');
+			if (tttgames[i].checkPlayer(target)) return this.sendReply(target.name + ' has already challenged someone else to a game of Tic-Tac-Toe. Either wait for them to finish, or play with someone else.');
 		}
 		target.send('|pm|' + user.getIdentity() + '|' + target.getIdentity() + '|/html ' + user.getIdentity() + ' wants to play Tic-Tac-Toe!<br>' +
 			'<button name = "send" value = "/ttt accept ' + user.userid + '">Accept</button> <button name = "send" value = "/ttt decline ' + user.userid + '">Decline</button>'
