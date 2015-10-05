@@ -615,11 +615,11 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b>∆Artiste Jeratt∆</b></center></a><br />' +
 			'<center><i>"No one out-predicts me, but me."</i></center><br />' +
-			'<img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"><br />' +
-			'<b>Highly skilled in:</b> Dragon & Ice<br />' +
-			'<b>Skilled in:</b> Making quotes, backgrounds for Sora and many Pokemon types.<br />' +
-			'<b>Note:</b> Close the Lobby and see what I can really do. <br/>' +
-			'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4. <br/>' +
+			'<center><img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"></center><br />' +
+			'<b>Highly skilled in:</b> VGC, Monotype<br />' +
+			'<b>Skilled in:</b> Making quotes, backgrounds for Sora, creating custom EVs, strategising.<br />' +
+			'<b>Note:</b> Can register league wins and award bucks.<br/>' +
+			'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4, Top 8 VGC 2014 regionals. <br/>' +
 			'P.S. I\'m still Dragon you away with my coldness. <br/>' +
 			'P.P.S Use Scizor against me, and I\'ll get fired up and blast you! <br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/vanilluxe.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/zoroark.gif"></center>' +
