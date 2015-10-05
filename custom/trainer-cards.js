@@ -623,7 +623,7 @@ exports.commands = {
 			'P.S. I\'m still Dragon you away with my coldness. <br/>' +
 			'P.P.S Use Scizor against me, and I\'ll get fired up and blast you! <br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/vanilluxe.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/zoroark.gif"></center><br />' +
-			getBadges('FrontierJerattata') + '<br /><center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + getBadges('frontierjerattata'));
 	},
 	
 	nightanglet: function (target, room, user) {
