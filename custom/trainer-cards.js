@@ -615,17 +615,15 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b>∆Artiste Jeratt∆</b></center></a><br />' +
 			'<center><i>"No one out-predicts me, but me."</i></center><br />' +
-			'<img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"><br />' +
-			'<b>Highly skilled in:</b> Dragon & Ice<br />' +
-			'<b>Skilled in:</b> Making quotes, backgrounds for Sora and many Pokemon types.<br />' +
-			'<b>Note:</b> Close the Lobby and see what I can really do. <br/>' +
-			'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4. <br/>' +
+			'<center><img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"></center><br />' +
+			'<b>Highly skilled in:</b> VGC, Monotype<br />' +
+			'<b>Skilled in:</b> Making quotes, backgrounds for Sora, creating custom EVs, strategising.<br />' +
+			'<b>Note:</b> Can register league wins and award bucks.<br/>' +
+			'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4, Top 8 VGC 2014 regionals. <br/>' +
 			'P.S. I\'m still Dragon you away with my coldness. <br/>' +
 			'P.P.S Use Scizor against me, and I\'ll get fired up and blast you! <br/>' +
-			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/vanilluxe.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/zoroark.gif"></center>' +
-			'<details><summary><b>Badges:</b></summary><br />' +
-			'<a href="http://soraleague.weebly.com/badges.html#smeargle"><img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Resident Artist of Sora, Metagame Creator: CC, Priomons, Incl Weather, PokeSandbox"></a><a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#badges"><img src="http://i.imgur.com/tnkW9J9.png" title="Badge Collector: Defeat all 18 Gym Leaders"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#porygon"><img src="http://i.imgur.com/bJrRxB8.png" title="Broke the server while trying to repair it, good job mate"></a> </details><br />' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/vanilluxe.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/zoroark.gif"></center><br />' +
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + getBadges('frontierjerattata'));
 	},
 	
 	nightanglet: function (target, room, user) {

@@ -19,17 +19,7 @@ var TicTacToe = (function () {
 		}.bind(this);
 		this.markers = {};
 		this.markers[this.p1.userid] = 'X';
-		this.boxes = {
-			'1': 1,
-			'2': 2,
-			'3': 3,
-			'4': 4,
-			'5': 5,
-			'6': 6,
-			'7': 7,
-			'8': 8,
-			'9': 9
-		};
+		this.boxes = {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9};
 		this.markedCount = 0;
 		this.phase = 'waiting';
 		this.timer = setTimeout(this.end.bind(this, 'The game request has expired.'), EXPIRATION_TIME);
@@ -40,9 +30,7 @@ var TicTacToe = (function () {
 		this.currentPlayer = this.players[Math.floor(Math.random() * 2)];
 		this.phase = 'started';
 		this.resetTimer();
-		var message = 'If you accidentally close out, use <em><b>/ttt open</b></em> to reopen the game.';
-		this.updateUser(this.p1, message);
-		this.updateUser(this.p2, message);
+		this.update('If you accidentally close out, use <em><b>/ttt open</b></em> to reopen the game.');
 	};
 
 	TicTacToe.prototype.switchPlayer = function () {
@@ -56,20 +44,20 @@ var TicTacToe = (function () {
 			if (typeof this.boxes[i] === 'string') marked.push(this.boxes[i]);
 			else marked.push('<button style = "height: 80px%; width: 80px; font-size: 20pt" name = "send" value = "/ttt markbox ' + i + '"><b>' + i + '</b></button>');
 		}
-		var style = 'width: 100px; height: 100px; font-size: 20pt; ';
+		var style = 'width: 100px; height: 100px; font-size: 20pt;';
 		var grid = '<table cellspacing = "0">' +
 			//row 1
-			'<tr><th style = "' + style + ' border-right: 3px solid; border-bottom: 3px solid;"><center>' + marked[0] + '</center></td>' +
-			'<th style = "' + style + ' border-bottom: 3px solid;"><center>' + marked[1] + '</center></th>' +
-			'<th style = "' + style + ' border-left: 3px solid; border-bottom: 3px solid;"><center>' + marked[2] + '</center></th></tr>' +
+			'<tr><th style = "' + style + ';"><center>' + marked[0] + '</center></td>' +
+			'<th style = "' + style + ' background-image: url(http://i.imgur.com/2TUk6qY.png); background-size: contain; border-bottom: 3px solid;"><center>' + marked[1] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(;http://i.imgur.com/tCk005Y.png); background-size: contain; border-left: 3px solid; border-bottom: 3px solid;"><center>' + marked[2] + '</center></th></tr>' +
 			//row 2
-			'<tr><th style = "' + style + ' border-right: 3px solid;"><center>' + marked[3] + '</center></th>' +
-			'<th style = "' + style + '"><center>' + marked[4] + '</center></th>' +
-			'<th style = "' + style + ' border-left: 3px solid;"><center>' + marked[5] + '</center></th></tr>' +
+			'<tr><th style = "' + style + ' background-image: url(;http://i.imgur.com/fzQAvCe.png); "><center>' + marked[3] + '</center></th>' +
+			'<th style = "' + style + 'background-image: url(;http://i.imgur.com/DZZ76rh.png); background-size: contain"><center>' + marked[4] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(;http://i.imgur.com/wbA17yf.png); background-size: contain; border-left: 3px solid;"><center>' + marked[5] + '</center></th></tr>' +
 			//row 3
-			'<tr><th style = "' + style + ' border-right: 3px solid; border-top: 3px solid;"><center>' + marked[6] + '</center></th>' +
-			'<th style = "' + style + ' border-top: 3px solid;"><center>' + marked[7] + '</center></th>' +
-			'<th style = "' + style + ' border-left: 3px solid; border-top: 3px solid;"><center>' + marked[8] + '</center></th></tr></table><br>';
+			'<tr><th style = "' + style + ' background-image: url(;http://i.imgur.com/n8uJJ6M.png); background-size: contain; border-right: 3px solid; border-top: 3px solid;"><center>' + marked[6] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(;http://i.imgur.com/1T2RxUT.png); background-size: contain; border-top: 3px solid;"><center>' + marked[7] + '</center></th>' +
+			'<th style = "' + style + ' background-image: url(;http://i.imgur.com/N95RsA5.png); background-size: contain; border-left: 3px solid; border-top: 3px solid;"><center>' + marked[8] + '</center></th></tr></table><br>';
 		if (!gameOver) grid += '<button name = "send" value = "/ttt end"><small>End Game</small></button>';
 		return grid;
 	};
@@ -87,8 +75,9 @@ var TicTacToe = (function () {
 		}
 	};
 
-	TicTacToe.prototype.update = function () {
+	TicTacToe.prototype.update = function (text) {
 		var message = '|html|<center><b style = "color:' + Core.color(this.currentPlayer.userid) + '">' + this.currentPlayer.name + '\'s turn!</b><br/>' + this.getGrid();
+		if (text) message += '<br>' + text;
 		this.players.forEach(function (user) {
 			user.popup(message);
 		});
@@ -183,13 +172,15 @@ var cmds = {
 			if (game.checkPlayer(user)) return this.sendReply(game.checkPlayer(user) + ' has already sent you a game request...');
 			return this.sendReply(target.name + ' has already challenged someone else to a game of Tic-Tac-Toe. Either wait for them to finish, or play with someone else.');
 		}
-		for (var i in tttgames)
+		for (var i in tttgames) {
 			if (tttgames[i].checkPlayer(user)) return this.sendReply(tttgames[i].checkPlayer(user) + ' sent you a request. Respond to that before challenging anyone else.');
+			if (tttgames[i].checkPlayer(target)) return this.sendReply(target.name + ' has already challenged someone else to a game of Tic-Tac-Toe. Either wait for them to finish, or play with someone else.');
+		}
 		target.send('|pm|' + user.getIdentity() + '|' + target.getIdentity() + '|/html ' + user.getIdentity() + ' wants to play Tic-Tac-Toe!<br>' +
 			'<button name = "send" value = "/ttt accept ' + user.userid + '">Accept</button> <button name = "send" value = "/ttt decline ' + user.userid + '">Decline</button>'
 		);
 		user.send('|pm|' + target.getIdentity() + '|' + user.getIdentity() + '|/html You have challenged ' + target.getIdentity() + ' to a game of Tic-Tac-Toe. Waiting for their response...');
-		var gameId = tttplayers[user.userid] = (Object.keys(tttgames).length ? Object.keys(tttgames).length - 1 : 0);
+		var gameId = tttplayers[user.userid] = Object.keys(tttgames).length;
 		tttgames[gameId] = new TicTacToe(user, target, gameId);
 	},
 
