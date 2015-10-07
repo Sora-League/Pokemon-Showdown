@@ -135,18 +135,7 @@ exports.commands = {
 			getBadges('e4edge'));
 	},
 
-	alcor: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Alcor</b>∆<br />' +
-			'<i>"The pattern repeats, will your flaws too?"</i> <br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Togekiss<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-No Status Healing Moves<br />' + 
-			seen('e4alcor') +
-			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
-			getBadges('e4alcor'));
-	},
+
 	
 	terror: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -379,12 +368,14 @@ exports.commands = {
 	},
 
     
+        alcor: 'ghost',    
 	ghost: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Alcor</b>∆<br />' +
+			'<i>"Halloween is the spoopiest time of the year the ascher has been fed and no one is safe."</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
+			'<b>Ace:</b> Cofagrigus<br />' + seen('gymldralcor') + getBadges('e4alcor'));
 	},
 
 
