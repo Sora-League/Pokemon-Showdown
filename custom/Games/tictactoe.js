@@ -51,7 +51,7 @@ var TicTacToe = (function () {
 			'<th style = "' + style + ' background-image: url(http://i.imgur.com/2TUk6qY.png); background-size: contain; border-bottom: 3px solid;"><center>' + marked[1] + '</center></th>' +
 			'<th style = "' + style + ' background-image: url(http://i.imgur.com/tCk005Y.png); background-size: contain; border-left: 3px solid; border-bottom: 3px solid;"><center>' + marked[2] + '</center></th></tr>' +
 			//row 2
-			'<tr><th style = "' + style + ' background-image: url(http://i.imgur.com/fzQAvCe.png); "><center>' + marked[3] + '</center></th>' +
+			'<tr><th style = "' + style + ' background-image: url(http://i.imgur.com/fzQAvCe.png)"><center>' + marked[3] + '</center></th>' +
 			'<th style = "' + style + 'background-image: url(http://i.imgur.com/DZZ76rh.png); background-size: contain"><center>' + marked[4] + '</center></th>' +
 			'<th style = "' + style + ' background-image: url(http://i.imgur.com/wbA17yf.png); background-size: contain; border-left: 3px solid;"><center>' + marked[5] + '</center></th></tr>' +
 			//row 3
