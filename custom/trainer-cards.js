@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Alcor∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Frontier Meows∆'];
+		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Frontier Meows∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
 			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', 
-			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', 
+			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
