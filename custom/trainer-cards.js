@@ -374,7 +374,6 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Alcor</b>∆<br />' +
 			'<i>"Halloween is the spoopiest time of the year the ascher has been fed and no one is safe."</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
 			'<b>Ace:</b> Cofagrigus<br />'+
 		        '<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
 			seen('gymldralcor') + getBadges('e4alcor'));
