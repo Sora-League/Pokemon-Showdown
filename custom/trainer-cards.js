@@ -340,7 +340,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />'+
 			'<i>"How much can you possibly know about yourself if you\'ve never been in a fight?"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Sawk<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> Sawk<br />' + seen('gymldrelodin') + getBadges('gymldrelodin')
 		);
         },
 
