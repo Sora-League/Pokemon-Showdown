@@ -314,13 +314,13 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
-        elodin: 'fairy',
+        
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />' +
-			'<i>"All you need is faith, trust, and a little pixie dust"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Mega Gardevoir<br />' + seen('gymldrelodin') + getBadges('gymldrelodin'));
+			'<b>Ace: </b>???<br />' + seen('') + getBadges(''));
 	},
 
 	pharo: 'ground',
@@ -334,12 +334,13 @@ exports.commands = {
 		);
 	},
 
+	elodin: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />'+
+			'<i>"How much can you possibly know about yourself if you\'ve never been in a fight?"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> Sawk<br />' + seen('') + getBadges('')
 		);
         },
 
