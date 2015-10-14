@@ -314,13 +314,13 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
-        
+        you: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>You</b>∆<br />' +
+			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>???<br />' + seen('') + getBadges(''));
+			'<b>Ace: </b>Diancie<br />' + seen('gymldryou') + getBadges('gymldryou'));
 	},
 
 	pharo: 'ground',
