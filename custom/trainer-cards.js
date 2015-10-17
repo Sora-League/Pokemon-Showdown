@@ -286,14 +286,14 @@ exports.commands = {
 			  '<b>Ace:</b> Mega Pinsir <br />' + seen('gymldrflamespell') + getBadges('gymldrflamespell'));
 	},
 
-	dark: 'bk',
-	bk: function (target, room, user) {
+	
+	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>BK</b>∆<br />' +
-			'<i>"There is always a light even at the darkest of times."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Bisharp<br />' +
-			seen('gymldrBK') + '<br />'); 
+			'<b>Ace:</b> ???<br />' +
+			seen('') + '<br />'); 
 	},
 
 	dragon: 'lou',
@@ -305,13 +305,13 @@ exports.commands = {
 			'<b>Ace:</b> Latias<br />' + seen('gymldrlou') + getBadges('gymldrlou'));
 	},
 
-	
+	bk: 'electric',
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>>BK</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Eelektross<br />' + seen('gymldrbk') + getBadges('gymldrbk'));
 	},
 
         you: 'fairy',
