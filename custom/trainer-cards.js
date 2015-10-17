@@ -308,7 +308,7 @@ exports.commands = {
 	bk: 'electric',
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>>BK</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>BK</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> Eelektross<br />' + seen('gymldrbk') + getBadges('gymldrbk'));
