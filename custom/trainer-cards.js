@@ -148,6 +148,18 @@ exports.commands = {
 			seen('e4terror') +
 			getBadges('e4terror'));
 	},
+	
+	barney: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Barney</b>∆<br />' +
+			'<i>"This battle is gonna be Legen...wait for it...dary."</i> <br />' +
+			'<b>Type: <font color = 230077>Dragon</font></b><br />' +
+			'<b>Ace:</b> Goodra<br />' +
+			'<b>Battle Rules:</b><br />' +
+			'-No hazards<br />' + 
+			seen('e4barney') +
+			getBadges('e4barney'));
+	},
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
