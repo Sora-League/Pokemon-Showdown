@@ -236,6 +236,7 @@ exports.commands = {
 
 	silver: "siiilver",
 	siiilver: function (target, room, user) {
+		if (!this.canBroadcast()) return;
 		var colorify = function (text) {
 			var colors = ['red', 'orange', 'yellow', 'lime', '#007fff', 'cyan', '#9800ff', 'violet'], set = [];
 			for (var i = 0, j = 0; i < text.length; i++) {
