@@ -34,7 +34,7 @@ a.button:hover {
 a.button i, a.button span {
     color: black;
 }
-.chat {
+.chat-log .chat {
 	font-size: 8pt !important;
 }
 .chat-log .notice {
