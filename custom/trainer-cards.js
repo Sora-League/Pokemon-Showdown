@@ -249,7 +249,7 @@ exports.commands = {
 		}
 		var msg;
 		if (Users.get('siiilver') && Users.get('siiilver').connected) {
-			msg = '<button name = "send" value = "/transferbucks ' + Users.get('siiilver').name + ', 1" style = "margin: 3px; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('$$$ Click 2 flip bucks at me! $$$') + '</b></span></button><br>' +
+			msg = '<button name = "send" value = "/me flips cash at Silvy-chan :D" style = "margin: 3px; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('$$$ Click 2 flip cash at me! $$$') + '</b></span></button><br>' +
 				'<button name = "send" value = "/me pets Silvy-chan :3" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Pet me') + ' :3</b></span></button>' +
 				' <button name = "send" value = "/kick ' + Users.get('siiilver').name + ', 2sexy4us" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Kick me') + ' :D</b></span></button>';
 		} else msg = '<span style = "color: gold; text-shadow: 0px 0px 5px">Last seen in da hood <b>' + colorify(Core.getLastSeen('siiilver') + ' ago') + '</b></span><br>';
