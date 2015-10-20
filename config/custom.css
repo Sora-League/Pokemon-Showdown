@@ -34,15 +34,17 @@ a.button:hover {
 a.button i, a.button span {
     color: black;
 }
-.chat-log .notice, .chat-log b, .chat-log small, .chat-log strong, .chat-log em, .chat-log span, .chat-log small {
-    font-size: 8pt;
+.chat {
+	font-size: 8pt !important;
+}
+.chat-log .notice {
+	font-size: 8pt;
 }
 
 /*Waffles's chat color*/
 .chat.chatmessage-gymldrwaffles strong {
-    color: #09aa3e !important
+    color: #09aa3e !important;
 }
-
 li#lobby-userlist-user-gymldrwaffles strong, li#gamecorner-userlist-user-gymldrwaffles strong, li#staff-userlist-user-gymldrwaffles strong {
-    color: #09aa3e !important
+    color: #09aa3e !important;
 }
