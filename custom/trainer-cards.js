@@ -39,7 +39,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
-			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', 
+			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr SolarWolf∆', 
 			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor'
 		];
 		for (var i = 0; i < list.length; i++) {
@@ -500,14 +500,14 @@ exports.commands = {
 
 	},
 
-        water: 'angel9',
-	angel9: function (target, room, user) {
+       
+	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Angel9</b>∆<br />' +
-			'<i>"Watch my beautiful waters submerge you deep."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Quagsire <br/>' +
-			seen('gymldrangel9') + getBadges('gymldrangel9'));
+			'<b>Ace:</b> ??? <br/>' +
+			seen('') + getBadges(''));
 	},
 
 	/////////////
@@ -650,27 +650,17 @@ exports.commands = {
 
 	jeratt: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReply('|html|<table style = "box-shadow: 2px 2px 10px black; text-shadow: 0px 0px 10px; padding: 7px; width: 100%; background: radial-gradient(circle, black, #000d70, black, #000d70, black, #000d70); color: #8CC6FB;">' +
-			'<tr><td colspan = 2 style = "padding-bottom: 7px"><center><b style = "font-size: 15pt">∆Jerattata∆</b><br>' +
-			'<i>"I am not a man who writes, but a man who is written about."<br> - A man of Action</i><br>' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"><img src = "http://sprites.pokecheck.org/i/235.gif"><img src = "http://sprites.pokecheck.org/t/033.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"></center>' + 
-			'<audio controls src = "https://dl.pushbulletusercontent.com/zvNULWYufM42wsTK3xNPoscIp4UT4m14/sugar.mp3" style = "width: 100%; background: black; border: 1px solid blue; border-radius: 0px;"></td></tr>' +
-			
-			'<tr><td><center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center></td>' +
-			'<td style = "box-shadow: 2px 2px 10px black; padding: 5px; margin-right: 3px; width: 220px; background: rgba(33, 37, 38, 0.7)"><center>' +
-			'<small><b><u>Highly skilled in</u></b><br><li style = "padding: 2px;">VGC and Monotype<br><br>' +
-			'<b><u>Skilled in</u></b>' +
-			'<li style = "padding: 2px;">Making quotes' +
-			'<li style = "padding: 2px;">Making backgrounds for Sora' +
-			'<li style = "padding: 2px;">Creating custom EV sets' +
-			'<li style = "padding: 2px;">Strategizing<br><br>' +
-			'<b><u>History</u></b>' +
-			'<li style = "padding: 2px;">Greatest Ice E4 and <s>undefeated</s> Dragon E4' +
-			'<li style = "padding: 2px;">Top 8 VGC 2014 Regionals</small></td></tr>' +
-			'<tr><td colspan = 2><center><img src = "http://play.pokemonshowdown.com/sprites/xyani/torkoal.gif" style = "transform: rotateY(180deg)"><img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/torterra.gif" style = "transform: rotateY(180deg)"><img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/blastoise.gif" style = "transform: rotateY(180deg)"><img src = "http://play.pokemonshowdown.com/sprites/xyani/aggron-mega.gif"><br>' +
-			'<audio controls src = "https://dl.pushbulletusercontent.com/a8L7ZScvc1RPgHylxZemiTqeO1PagA22/shellshocked.mp3" style = "width: 100%; background: black; border: 1px solid blue; border-radius: 0px;"></center></td></tr>' +
-			'<tr><td colspan = 2><center>' + getBadges('frontierjerattata') + '</center></td></tr></table>'
-		);
+		this.sendReplyBox('<a><font size= 4><center><b>∆Artiste Jeratt∆</b></center></a><br />' +
+			'<center><i>"No one out-predicts me, but me."</i></center><br />' +
+			'<center><img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"></center><br />' +
+			'<b>Highly skilled in:</b> VGC, Monotype<br />' +
+			'<b>Skilled in:</b> Making quotes, backgrounds for Sora, creating custom EVs, strategising.<br />' +
+			'<b>Note:</b> Can register league wins and award bucks.<br/>' +
+			'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4, Top 8 VGC 2014 regionals. <br/>' +
+			'P.S. I\'m still Dragon you away with my coldness. <br/>' +
+			'P.P.S Use Scizor against me, and I\'ll get fired up and blast you! <br/>' +
+			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/vanilluxe.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/zoroark.gif"></center><br />' +
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + getBadges('frontierjerattata'));
 	},
 	
 	nightanglet: function (target, room, user) {
