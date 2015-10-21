@@ -722,6 +722,12 @@ exports.commands = {
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">'+
 			getBadges('e4terror'));
 	},
+	
+	
+	showtier: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReply('<center><img src="http://i.imgur.com/DI9T4Y6.png" width=550></center>'
+	},
 
 	////////////
 	//Music Cards
