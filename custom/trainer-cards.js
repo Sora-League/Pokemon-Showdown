@@ -726,7 +726,7 @@ exports.commands = {
 	
 	showtier: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReply('<center><img src="http://i.imgur.com/DI9T4Y6.png" width=550></center>');
+		this.sendReplyBox('<center><img src="http://i.imgur.com/DI9T4Y6.png" width=550></center>');
 	},
 
 	////////////
