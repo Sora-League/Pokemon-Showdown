@@ -636,16 +636,16 @@ exports.commands = {
 	},
 	meowsofsora: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<b><font color = 55dbe8><a><font size= 4><center>MeowsofSora</font></center></b><br />'+
-		'<center><i>"I might be a bitch, but I\'m definitely not a pussy"</i><br />'+
+		this.sendReplyBox('<center><b><font size = 4 color = "#55dbe8">MeowsofSora</font></b><br />'+
+		'<i>"I might be a bitch, but I\'m definitely not a pussy"</i><br />'+
 		'<i>"Abs=Win"</i><br /><br />'+
 		'<b>Who am I:</b> Resident OU Specialist and OM Lover <br />'+
 		'<b>Specialty:</b> OU <br />'+
-		'<b>Ace:</b> Latios and Azumarill </center><br />'+
-		'<b>Achievements:</b> Peaked top 20 for OU/OU (No Mega), top 500 for Monotype <br />'+
+		'<b>Ace:</b> Latias</center><br>'+
+		'<b>Achievements:</b> Peaked top 20 for OU/OU (No Mega), top 500 for Monotype, most symbol defends in Sora<br>'+
 		'<b>Current Position:</b> OU Frontier of Sora <br />'+
-		'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/latios.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"></center><br />'+
-		'<center><font size=2 color=#0000FF><b>Girl\'s Day</b> - <i>Ring My Bell (for hookups and battles)</i></font><br \><audio src="https://dl.pushbulletusercontent.com/GZk1vZlsoisCqMSCSnSOWV7bZlsjTroX/02%20%EB%A7%81%EB%A7%88%EB%B2%A8%20%28Ring%20My%20Bell%29.mp3" controls="" style="width: 100%" target="_blank"></audio></center><br \><br \>'+ getBadges('frontiermeows'));
+		'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/raikou.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gardevoir-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/latias.gif"></center><br />'+
+		'<center><font size=2 color=#0000FF><b><i>AOA - 심쿵해</i></b></font><br><audio controls src="https://dl.pushbulletusercontent.com/HyHutVw74A7d0fgUYCZbuXZi2KRBinPn/AOA%20-%20%EC%8B%AC%EC%BF%B5%ED%95%B4%20%28Heart%20Attack%29.mp3" style="width: 100%"></center><br \><br \>'+ getBadges('frontiermeows'));
 	},
 
 	jeratt: function (target, room, user) {
