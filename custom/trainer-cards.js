@@ -770,8 +770,8 @@ exports.commands = {
 
 	lyin: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReply('|html|<div class = "infobox" style = "background: url(https://pbs.twimg.com/profile_images/639126796223451136/Mwvgb7qH.png) no-repeat 0px -30px; background-size: 100%; height: 300px;">' +
-			'<audio controls src = "http://b.sc.egghd.com/media/b0/a2/b0a2bf0d5e10ef92fcd8726640fabdb9.mp3?id=223206908&key=eadd7f5398105057d30329e22c595d27e4ce8794" style = "float: right; margin-top: 100px; margin-right: 5px; background: black; border: 2px solid red;"></div>'
+		this.sendReplyBox('<center><span style = "font-size: 12pt; color: red;"><i>Lyin\'</i></span><br>' +
+			'<video controls src = "https://dl.pushbulletusercontent.com/PlrszI1cm30CsAtEGVfnefB2w9HVsyh4/lyin.mp4#t=56" style = "width: 100%"></center>'
 		);
 	},
 	
