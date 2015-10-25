@@ -24,31 +24,6 @@ function addLog(message) {
 	global.moneyLog += message + '<br/>';
 }
 
-//Avatar reloading
-function loadAvatars() {
-	var formatList = ['.png', '.gif', '.bmp', '.jpeg', '.jpg'];
-	var avatarList = fs.readdirSync('config/avatars');
-	for (var i = 0; i < avatarList.length; i++) {
-		var name = path.basename(avatarList[i], path.extname(avatarList[i]));
-		if (Config.customavatars[name] || formatList.indexOf(path.extname(avatarList[i])) === -1) continue;
-		Config.customavatars[name] = avatarList[i];
-	}
-}
-loadAvatars();
-
-if (Config.watchconfig) {
-	fs.watchFile(path.resolve(__dirname, 'config/config.js'), function(curr, prev) {
-		if (curr.mtime <= prev.mtime) return;
-		try {
-			delete require.cache[require.resolve('./config/config.js')];
-			global.Config = require('./config/config.js');
-			if (global.Users) Users.cacheGroupData();
-			console.log('Reloaded config/config.js');
-			loadAvatars();
-		} catch (e) {}
-	});
-}
-
 exports.commands = {
 
 	getbucks: function(target, room, user) {
