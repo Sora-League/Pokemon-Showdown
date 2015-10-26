@@ -72,7 +72,6 @@ exports.commands = {
 		this.sendReply('The shop is now ' + (global.shopclosed ? 'closed' : 'open') + '.');
 	},
 
-	give: 'award',
 	givebucks: 'award',
 	givebucks: 'award',
 	gb: 'award',
@@ -91,9 +90,9 @@ exports.commands = {
 		Core.write('money', targetUser.userid, amt, '+');
 		var giveFormat = (amt == 1) ? 'buck' : 'bucks';
 		var hasFormat = (Core.read('money', toId(targetUser)) === 1) ? 'buck' : 'bucks';
-		if (Users.getExact(targetUser)) targetUser.send('|popup|' + user.name + ' has given you ' + amt + ' ' + giveFormat + '. You now have ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
+		if (Users.getExact(targetUser)) Users.getExact(targetUser).send('|popup|' + user.name + ' has given you ' + amt + ' ' + giveFormat + '. You now have ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
 		addLog(user.name + ' has given ' + targetUser + ' ' + amt + ' ' + giveFormat + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
-		return this.sendReply(targetUser.name + ' was given ' + amt + ' ' + giveFormat + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
+		return this.sendReply(targetUser + ' was given ' + amt + ' ' + giveFormat + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
 	},
 
 	removebucks: 'remove',
@@ -117,9 +116,9 @@ exports.commands = {
 		Core.write('money', toId(targetUser), amt, '-');
 		var takeFormat = (amt === 1) ? 'buck' : 'bucks';
 		var hasFormat = (Core.read('money', toId(targetUser)) === 1) ? 'buck' : 'bucks';
-		targetUser.send('|popup|' + user.name + ' has taken away ' + amt + ' ' + takeFormat + ' from you. You now have ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
+		if (Users.getExact(targetUser)) Users.getExact(targetUser).send('|popup|' + user.name + ' has taken away ' + amt + ' ' + takeFormat + ' from you. You now have ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
 		addLog(user.name + ' has taken away ' + amt + ' ' + takeFormat + ' from ' + targetUser + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
-		return this.sendReply('You have taken away ' + amt + ' ' + takeFormat + ' from ' + targetUser. + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
+		return this.sendReply('You have taken away ' + amt + ' ' + takeFormat + ' from ' + targetUser + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
 	},
 
 	transfermoney: 'transferbucks',
@@ -154,7 +153,6 @@ exports.commands = {
 		//these items have their own specifics
 		if (target === 'avatar') {
 			if (!Number(user.avatar) && fs.existsSync('config/avatars/' + user.avatar)) return this.sendReply('You already have a custom avatar. Buy a fix if you want to change it.');
-
 		} else if (target === 'potd') {
 			if (Config.potd) return this.sendReply('The Pokémon of the Day has already been set.');
 			this.sendReply("|html|Use /setpotd <em>Pokémon</em> to set the Pokémon of the day.");
