@@ -81,11 +81,11 @@ exports.commands = {
 		target = target.split(',');
 		if (target.length < 2) return this.sendReply('/' + cmd + ' [user], [amount] - Gives a user the specified number of bucks.')
 		var targetUser = Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0];
-		var amt = Number(target[1]) || target[1];
+		var amt = Number(toId(target[1])) || target[1];
 		if (!amt) return this.sendReply('You need to mention the number of bucks you want to give ' + targetUser);
 		if (isNaN(amt)) return this.sendReply(amt + " is not a valid number.");
 		if (amt < 1) return this.sendReply('You cannot give ' + targetUser + ' anything less than 1 buck!');
-		if (amt.match(/./)) return this.sendReply('You cannot give ' + targetUser + ' fractions of bucks.');
+		if (~String(amt).indexOf('.')) return this.sendReply('You cannot give ' + targetUser + ' fractions of bucks.');
 
 		Core.write('money', targetUser.userid, amt, '+');
 		var giveFormat = (amt == 1) ? 'buck' : 'bucks';
@@ -106,11 +106,11 @@ exports.commands = {
 		target = target.split(',');
 		if (target.length < 2) return this.sendReply('/' + cmd + ' [user], [amount] - Gives a user the specified number of bucks.')
 		var targetUser = Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0];
-		var amt = Number(target[1]) || target[1];
+		var amt = Number(toId(target[1])) || target[1];
 		if (!amt) return this.sendReply('You need to mention the number of bucks you want to take from ' + targetUser + '.');
 		if (isNaN(amt)) return this.sendReply(amt + " is not a valid number.");
 		if (amt < 1) return this.sendReply('You cannot take away anything less than 1 buck!');
-		if (amt.match(/./)) return this.sendReply('You cannot take away fractions of bucks.');
+		if (~String(amt).indexOf('.')) return this.sendReply('You cannot take away fractions of bucks.');
 		if (Core.read('money', toId(targetUser)) < amt) return this.sendReply('You can\'t take away more than what ' + targetUser + ' already has!');
 
 		Core.write('money', toId(targetUser), amt, '-');
