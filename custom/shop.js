@@ -87,7 +87,7 @@ exports.commands = {
 		if (amt < 1) return this.sendReply('You cannot give ' + targetUser + ' anything less than 1 buck!');
 		if (~String(amt).indexOf('.')) return this.sendReply('You cannot give ' + targetUser + ' fractions of bucks.');
 
-		Core.write('money', targetUser.userid, amt, '+');
+		Core.write('money', toId(targetUser), amt, '+');
 		var giveFormat = (amt == 1) ? 'buck' : 'bucks';
 		var hasFormat = (Core.read('money', toId(targetUser)) === 1) ? 'buck' : 'bucks';
 		if (Users.getExact(targetUser)) Users.getExact(targetUser).send('|popup|' + user.name + ' has given you ' + amt + ' ' + giveFormat + '. You now have ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
