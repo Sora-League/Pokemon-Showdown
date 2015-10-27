@@ -19,8 +19,8 @@ li#lobby-userlist-user-champinnah, li#lobby-userlist-user-frntierblade, li#lobby
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
 }
 
-li#lobby-userlist-user-coachabadon{ background: url("http://imgur.com/cK069Jn") no-repeat right;
-}
+/*li#lobby-userlist-user-user{ background: url("http://imgur.com/cK069Jn") no-repeat right;
+}*/
 
 .chat-log {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
