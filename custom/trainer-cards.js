@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
 			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr You∆',
-			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor'
+			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr ArthurZH∆', '∆Gym Ldr Zoro∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -321,13 +321,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	bug: 'flamespell',
-	flamespell: function(target, room, user) {
+	
+	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Flamespell</b>∆<br />'+
-			  '<i>"Fear is the ultimate weapon, Fear my swarm."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Mega Pinsir <br />' + seen('gymldrflamespell') + getBadges('gymldrflamespell'));
+			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
 	
@@ -460,13 +460,13 @@ exports.commands = {
 		'<b>Ace:</b> Lopunny<br />' + seen('gymldrbigo') + getBadges('gymldrbigo'));
     },
 
-	     
+	zoro: 'poison',     
 	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Zoro</b>∆<br />' +
+			'<i>"I don\'t have a quote."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('gymldrcrash'));
+			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
 	},
 	
 	psychic: 'connor',
@@ -500,14 +500,14 @@ exports.commands = {
 
 	},
 
-       
+       arthurzh: 'water',
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>ArthurZH</b>∆<br />' +
+			'<i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>' +
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Gyarados <br/>' +
+			seen('gymldrarthurzh') + getBadges('gymldrarthurzh'));
 	},
 
 	/////////////
