@@ -517,7 +517,7 @@ exports.commands = {
 	aboottothehead: 'abtth',
 	abtth: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('|html|<center><b><font size="4" color="03b206">ABootToTheHead</font></b></center><br>' +
+		this.sendReplyBox('<center><b><font size="4" color="03b206">ABootToTheHead</font></b></center><br>' +
 			'<center><i>"Stardust-weaved ARiA, please keep this melody going."</i></center><br /><br />' +
 			'<b>Ace: </b>Scizor and Whimsicott<br />' +
 			'<b>Favorite Pokemon: </b>Typhlosion and Scizor<br />' +
@@ -527,7 +527,7 @@ exports.commands = {
 			'<b>Affiliation:</b> Cheeky Nandos Squad<br><br>' +
 			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center><br />' +
 			getBadges('aboottothehead') + '<br>' +
-			'<img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125">'
+			'<center><img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125"></center>'
 		);
 	},
 
