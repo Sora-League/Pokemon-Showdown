@@ -517,8 +517,7 @@ exports.commands = {
 	aboottothehead: 'abtth',
 	abtth: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReply('|html|<div style = "padding: 5px;  border-radius: 10px; background: radial-gradient(circle, white, #dddddd, white, #dddddd, white, #dddddd);">' +
-			'<center><b><font size="4" color="03b206">ABootToTheHead</font></b></center><br>' +
+		this.sendReplyBox('|html|<center><b><font size="4" color="03b206">ABootToTheHead</font></b></center><br>' +
 			'<center><i>"Stardust-weaved ARiA, please keep this melody going."</i></center><br /><br />' +
 			'<b>Ace: </b>Scizor and Whimsicott<br />' +
 			'<b>Favorite Pokemon: </b>Typhlosion and Scizor<br />' +
@@ -527,7 +526,8 @@ exports.commands = {
 			'<b>Achievements: </b>Ex-Elite Frontier, ex-Elite Four<br>' +
 			'<b>Affiliation:</b> Cheeky Nandos Squad<br><br>' +
 			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center><br />' +
-			getBadges('aboottothehead') + '</div>'
+			getBadges('aboottothehead') + '<br>' +
+			'<img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125">'
 		);
 	},
 
