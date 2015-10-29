@@ -47,11 +47,11 @@ var TicTacToe = (function () {
 		var style = 'width: 100px; height: 100px; font-size: 20pt;';
 		var grid = '<table cellspacing = "0">' +
 			//row 1
-			'<tr><th style = "' + style + ';"><center>' + marked[0] + '</center></td>' +
+			'<tr><th style = "' + style + ' background-image: url(http://i.imgur.com/xufVRE8.png&quot); background-size: contain; border-right: 3px solid; border-bottom: 3px solid;"><center>' + marked[0] + '</center></td>' +
 			'<th style = "' + style + ' background-image: url(http://i.imgur.com/2TUk6qY.png); background-size: contain; border-bottom: 3px solid;"><center>' + marked[1] + '</center></th>' +
 			'<th style = "' + style + ' background-image: url(http://i.imgur.com/tCk005Y.png); background-size: contain; border-left: 3px solid; border-bottom: 3px solid;"><center>' + marked[2] + '</center></th></tr>' +
 			//row 2
-			'<tr><th style = "' + style + ' background-image: url(http://i.imgur.com/fzQAvCe.png)"><center>' + marked[3] + '</center></th>' +
+			'<tr><th style = "' + style + ' background-image: url(http://i.imgur.com/fzQAvCe.png); background-size: contain;border-right: 3px solid;"><center>' + marked[3] + '</center></th>' +
 			'<th style = "' + style + 'background-image: url(http://i.imgur.com/DZZ76rh.png); background-size: contain"><center>' + marked[4] + '</center></th>' +
 			'<th style = "' + style + ' background-image: url(http://i.imgur.com/wbA17yf.png); background-size: contain; border-left: 3px solid;"><center>' + marked[5] + '</center></th></tr>' +
 			//row 3
