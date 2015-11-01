@@ -1,6 +1,12 @@
 var fs = require('fs');
 var request = require('request');
+var tourLadder = Ladders('tournaments');
+var deleteLadderConfirm = false;
 
+function display (message, self) {
+	if (self.broadcasting) return self.sendReplyBox(message);
+	return self.popupReply('|html|' + message);
+}
 
 exports.commands = {
 	ateamnote: 'an',
@@ -39,6 +45,7 @@ exports.commands = {
 				if (self.broadcasting && users.length > 10) table += '<center><button name = "send" value = "/tourladder"><small>Click to see the full ladder</small></button></center>';
 
 				display(table + '</table>', self);
+				if (self.broadcasting) room.update();
 			});
 			return;
 		}
@@ -56,12 +63,12 @@ exports.commands = {
 		if (!this.can('hotpatch')) return false;
 		tourLadder.load().then(function (users) {
 			if (!users.length) return this.sendReply('No rated tournaments have been played yet.');
-			if (!confirm) {
-				confirm = true;
+			if (!deleteLadderConfirm) {
+				deleteLadderConfirm = true;
 				return this.sendReply('WARNING: This will permanently delete all tournament ladder ratings. If you\'re sure you want to do this, use this command again.');
 			}
-			require('fs').unlinkSync('config/ladders/tournaments.csv');
-			Rooms('lobby').add('The Tournament Ladder has been reset.');
+			require('fs').unlinkSync('config/ladders/tournaments.tsv');
+			Rooms('lobby').add('|html|<b>The Tournament Ladder has been reset.</b>');
 			Rooms('lobby').update();
 			if (room.id !== 'lobby') this.sendReply('The Tournament Ladder has been reset.');
 		}.bind(this));
