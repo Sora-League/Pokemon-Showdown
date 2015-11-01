@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Alcor∆', '∆E4 Silvy∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Frontier Meows∆'];
+		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Silvy∆', '∆E4 Barney∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Frontier Meows∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -39,8 +39,8 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Lou∆', '∆Gym Ldr Connor∆', '∆Gym Ldr Float∆', 
-			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr Angel9∆', '∆Gym Ldr SolarWolf∆', 
-			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr Flamespell∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', 
+			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr You∆',
+			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr ArthurZH∆', '∆Gym Ldr Zoro∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -135,18 +135,7 @@ exports.commands = {
 			getBadges('e4edge'));
 	},
 
-	alcor: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Alcor</b>∆<br />' +
-			'<i>"The pattern repeats, will your flaws too?"</i> <br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Togekiss<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-No Status Healing Moves<br />' + 
-			seen('e4alcor') +
-			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
-			getBadges('e4alcor'));
-	},
+
 	
 	terror: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -158,6 +147,18 @@ exports.commands = {
 			'-None<br />' + 
 			seen('e4terror') +
 			getBadges('e4terror'));
+	},
+	
+	barney: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Barney</b>∆<br />' +
+			'<i>"This battle is gonna be Legen...wait for it...dary."</i> <br />' +
+			'<b>Type: <font color = 230077>Dragon</font></b><br />' +
+			'<b>Ace:</b> Goodra<br />' +
+			'<b>Battle Rules:</b><br />' +
+			'-No hazards<br />' + 
+			seen('e4barney') +
+			getBadges('e4barney'));
 	},
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -233,6 +234,38 @@ exports.commands = {
 			'-No Trick/Switcheroo <br />' + seen('frontiermeows') + getBadges('frontiermeows'));
 	},
 
+	silver: "siiilver",
+	siiilver: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		var colorify = function (text) {
+			var colors = ['red', 'orange', 'yellow', 'lime', '#007fff', 'cyan', '#9800ff', 'violet'], set = [];
+			for (var i = 0, j = 0; i < text.length; i++) {
+				set.push(text[i].trim() ? '<span style = "color: ' + colors[j] + '; text-shadow: 0px 0px 10px;">' + text[i] + '</span>' : text[i]);
+				if (!text[i].trim()) continue;
+				if (j === colors.length - 1) j = 0;
+				else j++;
+			}
+			return set.join('');
+		}
+		var msg;
+		if (Users.get('siiilver') && Users.get('siiilver').connected) {
+			msg = '<button name = "send" value = "/me flips cash at Silvy-chan :D" style = "margin: 3px; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('$$$ Click 2 flip cash at me! $$$') + '</b></span></button><br>' +
+				'<button name = "send" value = "/me pets Silvy-chan :3" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Pet me') + ' :3</b></span></button>' +
+				' <button name = "send" value = "/kick ' + Users.get('siiilver').name + ', 2sexy4us" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Kick me') + ' :D</b></span></button>';
+		} else msg = '<span style = "color: gold; text-shadow: 0px 0px 5px">Last seen in da hood <b>' + colorify(Core.getLastSeen('siiilver') + ' ago') + '</b></span><br>';
+		this.sendReply('|html|<center><div style = "border-radius: 7px; padding: 5px; box-shadow: 2px 2px 5px black; background: radial-gradient(circle, #1c1c1c, #333232, #1c1c1c, #333232, #1c1c1c, #333232);">' +
+			'<b style = "font-size: 17pt;">' + colorify('☆☆☆☆☆☆☆☆ S I I I L V E R ☆☆☆☆☆☆☆☆') + '</b><br>' +
+			'<i><span style = "color: silver; text-shadow: 0px 0px 5px;">"Not all heroes wear capes... Some like me wear just underwear :D"</span></i><br>' +
+			'<br><div style = "display: inline-block; width: 49%"><img style = "max-height: 100%; max-width: 100%;" src = "http://data.whicdn.com/images/56986059/large.gif"></div> ' +
+			'<div style = "display: inline-block; width: 49%"><img style = "max-height: 100%; max-width: 100%;" src = "http://i.skyrock.net/1358/86461358/pics/3227855009_1_10_BQlwaOHj.gif"></div><br>' +
+			msg + '<br><span style = "text-shadow: 0px 0px 5px"><b>' + colorify('Known 4:') + '</b>' +
+			'<span style = "color: silver; text-shadow: 0px 0px 5px"><li>Being a verr verr gud chat presence and being an inspiration to eberywun around~' +
+			'<li>Breaking the server. Cuz Server-Kun\'s dense af</span><br>' +
+			(user.userid in {'siiilver':1, 'e4silvy':1, 'theh':1} ? '' : '<br><span style = "text-shadow: 0px 0px 5px"><b><span style = "color: lime;">P</span><span style = "color: blue;">.</span><span style = "color: cyan;">S</span><span style = "color: violet;">.</span></b>- <span style = "color: silver">' + user.name + '\'s a n00b</span></span><br>') +
+			'<br><span style = "color: gold">' + getBadges('siiilver').replace('<b>Badges:</b> (Click here to open)', '<b> ' + colorify('Badges:') + '</b> ' + colorify('(Click here to open)'))
+		);
+	},
+
 	srewop: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Elite Frontier <b>Srewop</b>∆<br />' +
@@ -288,23 +321,23 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	bug: 'flamespell',
-	flamespell: function(target, room, user) {
+	
+	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Flamespell</b>∆<br />'+
-			  '<i>"Fear is the ultimate weapon, Fear my swarm."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Mega Pinsir <br />' + seen('gymldrflamespell') + getBadges('gymldrflamespell'));
+			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
-	dark: 'bk',
-	bk: function (target, room, user) {
+	
+	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>BK</b>∆<br />' +
-			'<i>"There is always a light even at the darkest of times."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Bisharp<br />' +
-			seen('gymldrBK') + '<br />'); 
+			'<b>Ace:</b> ???<br />' +
+			seen('') + '<br />'); 
 	},
 
 	dragon: 'lou',
@@ -316,22 +349,22 @@ exports.commands = {
 			'<b>Ace:</b> Latias<br />' + seen('gymldrlou') + getBadges('gymldrlou'));
 	},
 
-	
+	bk: 'electric',
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>BK</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Eelektross<br />' + seen('gymldrbk') + getBadges('gymldrbk'));
 	},
 
-        elodin: 'fairy',
+        you: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />' +
-			'<i>"All you need is faith, trust, and a little pixie dust"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>You</b>∆<br />' +
+			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Mega Gardevoir<br />' + seen('gymldrelodin') + getBadges('gymldrelodin'));
+			'<b>Ace: </b>Diancie<br />' + seen('gymldryou') + getBadges('gymldryou'));
 	},
 
 	pharo: 'ground',
@@ -345,12 +378,13 @@ exports.commands = {
 		);
 	},
 
+	elodin: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />'+
+			'<i>"How much can you possibly know about yourself if you\'ve never been in a fight?"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> Sawk<br />' + seen('gymldrelodin') + getBadges('gymldrelodin')
 		);
         },
 
@@ -379,12 +413,15 @@ exports.commands = {
 	},
 
     
+        alcor: 'ghost',    
 	ghost: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Alcor</b>∆<br />' +
+			'<i>"Halloween is the spoopiest time of the year the ascher has been fed and no one is safe."</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Cofagrigus<br />'+
+		        '<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
+			seen('gymldralcor') + getBadges('e4alcor'));
 	},
 
 
@@ -423,23 +460,23 @@ exports.commands = {
 		'<b>Ace:</b> Lopunny<br />' + seen('gymldrbigo') + getBadges('gymldrbigo'));
     },
 
-	     
+	zoro: 'poison',     
 	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Zoro</b>∆<br />' +
+			'<i>"I don\'t have a quote."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('gymldrcrash'));
+			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
 	},
 	
-	psychic: 'connor',
-	connor: function (target, room, user) {
+	
+	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Connor</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 		        'Leader Ranking: <font color = 9dff00><b>3rd</font></b> <br />' + 
-			'<i>"Psychic power isn\'t something that only a few people have. Everyone has psychic power. People just don\'t realize it."</i> <br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Gardevoir <br />' + seen('gymldrconnor') + getBadges ('gymldrconnor'));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
 	},
 
 	rock: 'core',
@@ -463,14 +500,14 @@ exports.commands = {
 
 	},
 
-        water: 'angel9',
-	angel9: function (target, room, user) {
+       arthurzh: 'water',
+	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Angel9</b>∆<br />' +
-			'<i>"Watch my beautiful waters submerge you deep."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>ArthurZH</b>∆<br />' +
+			'<i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Quagsire <br/>' +
-			seen('gymldrangel9') + getBadges('gymldrangel9'));
+			'<b>Ace:</b> Gyarados <br/>' +
+			seen('gymldrarthurzh') + getBadges('gymldrarthurzh'));
 	},
 
 	/////////////
@@ -487,11 +524,11 @@ exports.commands = {
 			'<b>Preferred tiers: </b>VGC, Ubers, OU <br />' +
 			'<b>Known for: </b>VoltTurn and Whimsistall shenanigans<br />' +
 			'<b>Achievements: </b>Ex-Elite Frontier, ex-Elite Four<br>' +
-			'<b>Affiliation:</b> Cheeky Nandos Squad<br><br>' +
+			'<b>Affiliation:</b> Gracidea Shaymins<br><br>' +
 			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center><br />' +
-			'<center><img src = "http://i.imgur.com/AaO6Xze.png" width = "120" height = "120"><img src = "http://i.imgur.com/JSRaFVC.png" width = "120" height = "120"><img src = "http://i.imgur.com/I0NbMSO.png" width = "120" height = "120"></center><br>' +
 			getBadges('aboottothehead') + '<br>' +
-			'<center><img src = "http://i.imgur.com/ty6OYpg.png" width = "100" height = "100"> <img src = "http://i.imgur.com/YoDeO4O.png" width = "100" height = "100"></center>');
+			'<center><img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125"></center>'
+		);
 	},
 
 	sorarani: 'arani',
@@ -594,38 +631,48 @@ exports.commands = {
 			'<table align = "center"><tr><td><div style = "display: inline-block; width: 120px; height: 101px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/leafeon-2.gif) no-repeat 0px -70px"></div></td>' +
 			'<td><div style = "transform: rotateY(180deg); display: inline-block; width: 120px; height: 101px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/leafeon-2.gif) no-repeat 0px -70px"></div></td></tr></table>' +
 			'<center><audio controls src = "https://dl.pushbulletusercontent.com/91078HKzh36ORZdMm7EaE2suEdL7iwr1/Devil%20Survivor%202%20-%20Septentrion%20%5Bwww.songmirror.org%5D.mp3" style = "width: 100%; border-radius: 0px; background: linear-gradient(45deg, #011100, #00ad17, #011100, #00ad17, #011100, #00ad17, #011100, #00ad17);"></audio><br>' +
-			getBadges('e4alcor') + 
-			'</div>');
+			getBadges('AlcorSeptentrion') + '</div>'
+		);
 	},
 	meowsofsora: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<b><font color = 55dbe8><a><font size= 4><center>MeowsofSora</font></center></b><br />'+
-		'<center><i>"I might be a bitch, but I\'m definitely not a pussy"</i><br />'+
+		this.sendReplyBox('<center><b><font size = 4 color = "#55dbe8">MeowsofSora</font></b><br />'+
+		'<i>"I might be a bitch, but I\'m definitely not a pussy"</i><br />'+
 		'<i>"Abs=Win"</i><br /><br />'+
 		'<b>Who am I:</b> Resident OU Specialist and OM Lover <br />'+
 		'<b>Specialty:</b> OU <br />'+
-		'<b>Ace:</b> Latios and Azumarill </center><br />'+
-		'<b>Achievements:</b> Peaked top 20 for OU/OU (No Mega), top 500 for Monotype <br />'+
+		'<b>Ace:</b> Latias</center><br>'+
+		'<b>Achievements:</b> Peaked top 20 for OU/OU (No Mega), top 500 for Monotype, most symbol defends in Sora<br>'+
 		'<b>Current Position:</b> OU Frontier of Sora <br />'+
-		'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/latios.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"></center><br />'+
-		'<center><font size=2 color=#0000FF><b>Girl\'s Day</b> - <i>Ring My Bell (for hookups and battles)</i></font><br \><audio src="https://dl.pushbulletusercontent.com/GZk1vZlsoisCqMSCSnSOWV7bZlsjTroX/02%20%EB%A7%81%EB%A7%88%EB%B2%A8%20%28Ring%20My%20Bell%29.mp3" controls="" style="width: 100%" target="_blank"></audio></center><br \><br \>'+ getBadges('frontiermeows'));
+		'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/raikou.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gardevoir-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/latias.gif"></center><br />'+
+		'<center><font size=2 color=#0000FF><i><b>현아</b> - Because I\'m the Best (Feat. 정일훈)</i></font><br><audio controls src="https://dl.pushbulletusercontent.com/jff9FOcg7fLsplNbywP27oPEry1D7xZg/HYUNA%20-%20%EC%9E%98%EB%82%98%EA%B0%80%EC%84%9C%20%EA%B7%B8%EB%9E%98.mp3" style="width: 100%"></center><br \><br \>'+ getBadges('frontiermeows'));
 	},
 
 	jeratt: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><font size= 4><center><b>∆Artiste Jeratt∆</b></center></a><br />' +
-			'<center><i>"No one out-predicts me, but me."</i></center><br />' +
-			'<center><img src="http://sprites.pokecheck.org/i/235.gif"> <img src="http://sprites.pokecheck.org/t/033.gif"></center><br />' +
-			'<b>Highly skilled in:</b> VGC, Monotype<br />' +
-			'<b>Skilled in:</b> Making quotes, backgrounds for Sora, creating custom EVs, strategising.<br />' +
-			'<b>Note:</b> Can register league wins and award bucks.<br/>' +
-			'<b>History:</b> Greatest Ice E4, <strike>undefeated</strike> Dragon E4, Top 8 VGC 2014 regionals. <br/>' +
-			'P.S. I\'m still Dragon you away with my coldness. <br/>' +
-			'P.P.S Use Scizor against me, and I\'ll get fired up and blast you! <br/>' +
-			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/vanilluxe.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/zoroark.gif"></center><br />' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + getBadges('frontierjerattata'));
+		this.sendReply('|html|<table style = "box-shadow: 2px 2px 10px black; text-shadow: 0px 0px 10px; padding: 7px; width: 100%; background: radial-gradient(circle, black, #000d70, black, #000d70, black, #000d70); color: #8CC6FB;">' +
+			'<tr><td colspan = 2 style = "padding-bottom: 7px"><center><b style = "font-size: 15pt">∆Jerattata∆</b><br>' +
+			'<i>"I am not a man who writes, but a man who is written about."<br> - A man of Action</i><br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/rattata.gif"><img src = "http://sprites.pokecheck.org/i/235.gif"><img src = "http://sprites.pokecheck.org/t/033.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/mamoswine.gif"></center>' + 
+			'<audio controls src = "https://dl.pushbulletusercontent.com/zvNULWYufM42wsTK3xNPoscIp4UT4m14/sugar.mp3" style = "width: 100%; background: black; border: 1px solid blue; border-radius: 0px;"></td></tr>' +
+			
+			'<tr><td><center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center></td>' +
+			'<td style = "box-shadow: 2px 2px 10px black; padding: 5px; margin-right: 3px; width: 220px; background: rgba(33, 37, 38, 0.7)"><center>' +
+			'<small><b><u>Highly skilled in</u></b><br><li style = "padding: 2px;">VGC and Monotype<br><br>' +
+			'<b><u>Skilled in</u></b>' +
+			'<li style = "padding: 2px;">Making quotes' +
+			'<li style = "padding: 2px;">Making backgrounds for Sora' +
+			'<li style = "padding: 2px;">Creating custom EV sets' +
+			'<li style = "padding: 2px;">Strategizing<br><br>' +
+			'<b><u>History</u></b>' +
+			'<li style = "padding: 2px;">Greatest Ice E4 and <s>undefeated</s> Dragon E4' +
+			'<li style = "padding: 2px;">Top 8 VGC 2014 Regionals</small></td></tr>' +
+			'<tr><td colspan = 2><center><img src = "http://play.pokemonshowdown.com/sprites/xyani/torkoal.gif" style = "transform: rotateY(180deg)"><img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/torterra.gif" style = "transform: rotateY(180deg)"><img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/blastoise.gif" style = "transform: rotateY(180deg)"><img src = "http://play.pokemonshowdown.com/sprites/xyani/aggron-mega.gif"><br>' +
+			'<audio controls src = "https://dl.pushbulletusercontent.com/a8L7ZScvc1RPgHylxZemiTqeO1PagA22/shellshocked.mp3" style = "width: 100%; background: black; border: 1px solid blue; border-radius: 0px;"></center></td></tr>' +
+			'<tr><td colspan = 2><center>' + getBadges('frontierjerattata') + '</center></td></tr></table>'
+		);
 	},
-	
+
 	nightanglet: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><i><font color="blue"><h1>Nightanglet</h1></font></center><br>' +
@@ -675,6 +722,12 @@ exports.commands = {
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">'+
 			getBadges('e4terror'));
 	},
+	
+	
+	showtier: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><img src="http://i.imgur.com/DI9T4Y6.png" width=550></center>');
+	},
 
 	////////////
 	//Music Cards
@@ -717,11 +770,18 @@ exports.commands = {
 
 	lyin: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReply('|html|<div class = "infobox" style = "background: url(https://pbs.twimg.com/profile_images/639126796223451136/Mwvgb7qH.png) no-repeat 0px -30px; background-size: 100%; height: 300px;">' +
+		this.sendReply('|html|<div class = "infobox" style = "background: url(https://thoughtcatalog.files.wordpress.com/2015/09/screen-shot-2015-09-03-at-8-40-19-pm.png?w=786&h=600) no-repeat 0px -30px; background-size: 100%; height: 300px;">' +
 			'<audio controls src = "http://b.sc.egghd.com/media/b0/a2/b0a2bf0d5e10ef92fcd8726640fabdb9.mp3?id=223206908&key=eadd7f5398105057d30329e22c595d27e4ce8794" style = "float: right; margin-top: 100px; margin-right: 5px; background: black; border: 2px solid red;"></div>'
 		);
 	},
-	
+
+	lyinfull: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center><span style = "font-size: 12pt; color: red;"><i>Lyin\'</i></span><br>' +
+			'<video controls src = "https://dl.pushbulletusercontent.com/PlrszI1cm30CsAtEGVfnefB2w9HVsyh4/lyin.mp4#t=56" style = "width: 100%"></center>'
+		);
+	},
+
 	ichibannotakaramono: function (target, room, user) {
         	if (!this.canBroadcast()) return;
         	this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://img2.wikia.nocookie.net/__cb20101231031301/angelbeats/images/f/f5/EP10-Yui-and-Hinata-500x281.png&quot;) ; background-size: cover" target="_blank">'+

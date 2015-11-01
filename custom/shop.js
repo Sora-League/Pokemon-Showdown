@@ -24,31 +24,6 @@ function addLog(message) {
 	global.moneyLog += message + '<br/>';
 }
 
-//Avatar reloading
-function loadAvatars() {
-	var formatList = ['.png', '.gif', '.bmp', '.jpeg', '.jpg'];
-	var avatarList = fs.readdirSync('config/avatars');
-	for (var i = 0; i < avatarList.length; i++) {
-		var name = path.basename(avatarList[i], path.extname(avatarList[i]));
-		if (Config.customavatars[name] || formatList.indexOf(path.extname(avatarList[i])) === -1) continue;
-		Config.customavatars[name] = avatarList[i];
-	}
-}
-loadAvatars();
-
-if (Config.watchconfig) {
-	fs.watchFile(path.resolve(__dirname, 'config/config.js'), function(curr, prev) {
-		if (curr.mtime <= prev.mtime) return;
-		try {
-			delete require.cache[require.resolve('./config/config.js')];
-			global.Config = require('./config/config.js');
-			if (global.Users) Users.cacheGroupData();
-			console.log('Reloaded config/config.js');
-			loadAvatars();
-		} catch (e) {}
-	});
-}
-
 exports.commands = {
 
 	getbucks: function(target, room, user) {
@@ -70,11 +45,10 @@ exports.commands = {
 	purse: 'wallet',
 	wallet: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		var User;
-		if (!toId(target)) User = user.name;
-		else User = Users.getExact(target) ? Users.getExact(target).name : target;
-		var money = Number(Core.read('money', toId(User))) || 'no';
-		this.sendReplyBox(User + ' has ' + money + ' buck' + (money === 1 ? '' : 's') + '.');
+		if (!toId(target)) target = user.name;
+		else target = Users.getExact(target) ? Users.getExact(target).name : target;
+		var money = Number(Core.read('money', toId(target))) || 'no';
+		this.sendReplyBox(target + ' has ' + money + ' buck' + (money === 1 ? '' : 's') + '.');
 	},
 
 	shop: function(target, room, user) {
@@ -98,26 +72,27 @@ exports.commands = {
 		this.sendReply('The shop is now ' + (global.shopclosed ? 'closed' : 'open') + '.');
 	},
 
-	give: 'award',
 	givebucks: 'award',
 	givebucks: 'award',
 	gb: 'award',
 	award: function(target, room, user, connection, cmd) {
 		if (!this.can('hotpatch')) return false;
 		if (!target) return this.sendReply('The correct syntax is /' + cmd + ' [user], [amount]');
-		target = this.splitTarget(target);
-		var targetUser = this.targetUser;
-		if (!targetUser) return this.sendReply('User \'' + this.targetUsername + '\' not found.');
-		if (!target) return this.sendReply('You need to mention the number of bucks you want to give ' + targetUser.name);
-		if (isNaN(target)) return this.sendReply(target + " is not a valid number.");
-		if (target < 1) return this.sendReply('You cannot give ' + targetUser.name + ' anything less than 1 buck!');
+		target = target.split(',');
+		if (target.length < 2) return this.sendReply('/' + cmd + ' [user], [amount] - Gives a user the specified number of bucks.')
+		var targetUser = Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0];
+		var amt = Number(toId(target[1])) || target[1];
+		if (!amt) return this.sendReply('You need to mention the number of bucks you want to give ' + targetUser);
+		if (isNaN(amt)) return this.sendReply(amt + " is not a valid number.");
+		if (amt < 1) return this.sendReply('You cannot give ' + targetUser + ' anything less than 1 buck!');
+		if (~String(amt).indexOf('.')) return this.sendReply('You cannot give ' + targetUser + ' fractions of bucks.');
 
-		Core.write('money', targetUser.userid, Number(target), '+');
-		var amt = (Number(target) == 1) ? 'buck' : 'bucks';
-		var bucks = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
-		targetUser.send('|popup|' + user.name + ' has given you ' + target + ' ' + amt + '. You now have ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
-		addLog(user.name + ' has given ' + targetUser.name + ' ' + target + ' ' + amt + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
-		return this.sendReply(targetUser.name + ' was given ' + Number(target) + ' ' + amt + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
+		Core.write('money', toId(targetUser), amt, '+');
+		var giveFormat = (amt == 1) ? 'buck' : 'bucks';
+		var hasFormat = (Core.read('money', toId(targetUser)) === 1) ? 'buck' : 'bucks';
+		if (Users.getExact(targetUser)) Users.getExact(targetUser).send('|popup|' + user.name + ' has given you ' + amt + ' ' + giveFormat + '. You now have ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
+		addLog(user.name + ' has given ' + targetUser + ' ' + amt + ' ' + giveFormat + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
+		return this.sendReply(targetUser + ' was given ' + amt + ' ' + giveFormat + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + '.');
 	},
 
 	removebucks: 'remove',
@@ -128,19 +103,22 @@ exports.commands = {
 	remove: function(target, room, user, connection, cmd) {
 		if (!this.can('hotpatch')) return false;
 		if (!target) return this.sendReply('/' + cmd + ' [user], [amount] - Gives the specified user the specified number of bucks.');
-		target = this.splitTarget(target);
-		var targetUser = this.targetUser;
-		if (!targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
-		if (!toId(target)) return this.sendReply('You need to specify the number of bucks you want to remove from ' + targetUser.name);
-		if (isNaN(target)) return this.sendReply(target + " isn't a valid number.");
-		if (Core.read('money', targetUser.userid) < target) return this.sendReply('You can\'t take away more than what ' + targetUser.name + ' already has!');
+		target = target.split(',');
+		if (target.length < 2) return this.sendReply('/' + cmd + ' [user], [amount] - Gives a user the specified number of bucks.')
+		var targetUser = Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0];
+		var amt = Number(toId(target[1])) || target[1];
+		if (!amt) return this.sendReply('You need to mention the number of bucks you want to take from ' + targetUser + '.');
+		if (isNaN(amt)) return this.sendReply(amt + " is not a valid number.");
+		if (amt < 1) return this.sendReply('You cannot take away anything less than 1 buck!');
+		if (~String(amt).indexOf('.')) return this.sendReply('You cannot take away fractions of bucks.');
+		if (Core.read('money', toId(targetUser)) < amt) return this.sendReply('You can\'t take away more than what ' + targetUser + ' already has!');
 
-		Core.write('money', targetUser.userid, Number(target), '-');
-		var bucks = (Core.read('money', targetUser.userid) == 1) ? 'buck' : 'bucks';
-		var amt = (target == 1) ? 'buck' : 'bucks';
-		targetUser.send('|popup|' + user.name + ' has taken away ' + target + ' ' + amt + ' from you. You now have ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
-		addLog(user.name + ' has taken away ' + target + ' ' + amt + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
-		return this.sendReply('You have taken away ' + target + ' ' + amt + ' from ' + targetUser.name + '. This user now has ' + Core.read('money', targetUser.userid) + ' ' + bucks + '.');
+		Core.write('money', toId(targetUser), amt, '-');
+		var takeFormat = (amt === 1) ? 'buck' : 'bucks';
+		var hasFormat = (Core.read('money', toId(targetUser)) === 1) ? 'buck' : 'bucks';
+		if (Users.getExact(targetUser)) Users.getExact(targetUser).send('|popup|' + user.name + ' has taken away ' + amt + ' ' + takeFormat + ' from you. You now have ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
+		addLog(user.name + ' has taken away ' + amt + ' ' + takeFormat + ' from ' + targetUser + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
+		return this.sendReply('You have taken away ' + amt + ' ' + takeFormat + ' from ' + targetUser + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + hasFormat + ' left.');
 	},
 
 	transfermoney: 'transferbucks',
@@ -175,7 +153,6 @@ exports.commands = {
 		//these items have their own specifics
 		if (target === 'avatar') {
 			if (!Number(user.avatar) && fs.existsSync('config/avatars/' + user.avatar)) return this.sendReply('You already have a custom avatar. Buy a fix if you want to change it.');
-
 		} else if (target === 'potd') {
 			if (Config.potd) return this.sendReply('The Pokémon of the Day has already been set.');
 			this.sendReply("|html|Use /setpotd <em>Pokémon</em> to set the Pokémon of the day.");

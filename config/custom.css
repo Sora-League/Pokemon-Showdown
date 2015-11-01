@@ -15,9 +15,12 @@ body {
     background: rgb(252,183,63);
 }*/
 
-li#lobby-userlist-user-champinnah, li#lobby-userlist-user-frntierblade, li#lobby-userlist-user-chmpionbart, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-frontierjerattata, li#lobby-userlist-user-coachabadon, li#lobby-userlist-user-coachbloodfist, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-bamdee, li#lobby-userlist-user-frontierheadrisu, li#lobby-userlist-user-frontierneith, li#lobby-userlist-user-blazing360 {
+li#lobby-userlist-user-champinnah, li#lobby-userlist-user-frntierblade, li#lobby-userlist-user-chmpionbart, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-frontierjerattata, li#lobby-userlist-user-coachabadon, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-bamdee, li#lobby-userlist-user-frontierheadrisu, li#lobby-userlist-user-frontierneith, li#lobby-userlist-user-blazing360 {
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
 }
+
+/*li#lobby-userlist-user-user{ background: url("http://imgur.com/cK069Jn") no-repeat right;
+}*/
 
 .chat-log {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
@@ -34,15 +37,17 @@ a.button:hover {
 a.button i, a.button span {
     color: black;
 }
-.chat-log .notice, .chat-log b, .chat-log small, .chat-log strong, .chat-log em, .chat-log span, .chat-log small {
-    font-size: 8pt;
+.chat-log .chat {
+	font-size: 8pt !important;
+}
+.chat-log .notice {
+	font-size: 8pt;
 }
 
 /*Waffles's chat color*/
 .chat.chatmessage-gymldrwaffles strong {
-    color: #09aa3e !important
+    color: #09aa3e !important;
 }
-
 li#lobby-userlist-user-gymldrwaffles strong, li#gamecorner-userlist-user-gymldrwaffles strong, li#staff-userlist-user-gymldrwaffles strong {
-    color: #09aa3e !important
+    color: #09aa3e !important;
 }
