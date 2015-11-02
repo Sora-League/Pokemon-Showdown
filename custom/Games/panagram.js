@@ -130,7 +130,9 @@ exports.commands = {
 
 /////////////////////////////////////////////
 
-/*var pGames = exports.pGames = {};
+/*Panagrams by SilverTactic (Siiilver) with some guidance from panpawn*/
+if (!Gold.pGames) global.pGames = {};
+var pGames = global.pGames;
 
 function mix(word) {
 	var arr = [];
@@ -160,17 +162,18 @@ var Panagram = (function () {
 			this.mixed = mix(toId(this.answer.species));
 		} while (this.mixed === toId(this.answer.species));
 
-		this.room.add('|html|<div class = "broadcast-gold"><center>A game of Panagram was started! Scrambled Pokemon: <b>' + this.mixed + '</b>. (Remaining Sessions: ' + this.sessions + ')<br>' +
+		this.room.add('|html|<div class = "infobox"><center>A game of Panagram was started! Scrambled Pokemon: <b>' + this.mixed + '</b>. (Remaining Sessions: ' + this.sessions + ')<br>' +
 			'<small>Enter your answer into the chat to guess!</small></center>'
 		);
 		this.guessed = {};
-		this.hint = ['The Pokémon\'s name is <b>' + this.answer.species.length + '</b> characters long.',
+		this.hint = ['The scrambled Pokémon is <b>' + this.mixed + '</b>.',
+			'The Pokémon\'s name is <b>' + this.answer.species.length + '</b> characters long.',
 			'The first letter is <b>' + this.answer.species[0] + '</b>.',
 			'This Pokémon\'s type is <b>' + this.answer.types.join('/') + '</b>.'
 		].join('<br>');
 
 		this.room.chat = function (user, message, connection) {
-			if (Tools.data.Pokedex[toId(message)] && !message.match(/^[\/!]/)) message = '/gp ' + message;
+			if (Tools.data.Pokedex[toId(message)] && message.match(/^[a-z ]/i)) message = '/gp ' + message;
 			message = CommandParser.parse(message, this, user, connection);
 
 			if (message && message !== true) {
@@ -180,24 +183,23 @@ var Panagram = (function () {
 		}
 	}
 	Panagram.prototype.guess = function (user, guess) {
+	    function nameColor(name) {
+	        return '<font color="' + Gold.hashColor(toId(name)) + '">' + Tools.escapeHTML(name) + '</font>';
+	    }
 		if (guess.species === this.answer.species) {
-			this.room.add('|html|<b>' + user.name + '</b> guessed <b>' + guess.species + '</b>, which was the correct answer! This user has also won 1 buck!');
-			//economy.writeMoney('money', user.userid, +1);
+			this.room.add('|html|<b>' + nameColor(user.name) + '</b> guessed <b>' + guess.species + '</b>, which was the correct answer!');
 			this.end();
 		} else {
-			this.room.add('|html|<b>' + user.name + '</b> guessed <b>' + guess.species + '</b>, but was not the correct answer...');
+			this.room.add('|html|<b>' + nameColor(user.name) + '</b> guessed <b>' + guess.species + '</b>, but was not the correct answer...');
 			this.guessed[toId(guess.species)] = user.userid;
 		}
 	};
 	Panagram.prototype.end = function (forced) {
 		if (forced) this.room.add('|html|The game of panagram has been forcibly ended. The answer was <b>' + this.answer.species + '</b>.');
 		if (this.sessions > 1 && !forced) {
-			setTimeout(function () {
-				pGames[this.room.id] = new Panagram(this.room, this.sessions - 1);
-				this.room.update();
-			}.bind(this), 500); //half a second
-		}
-		else {
+			pGames[this.room.id] = new Panagram(this.room, this.sessions - 1);
+			this.room.update();
+		} else {
 			this.room.chat = Rooms.Room.prototype.chat;
 			delete pGames[this.room.id];
 		}
@@ -211,8 +213,8 @@ exports.commands = {
 	panagramhelp: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><b>Panagram Help</b><br>' +
-			'<i style = "color:gray">By SilverTactic (Siiilver) and panpawn</i></center><br><br>' +
-			'<code>/panagram [session number]</code> - Starts a game of Panagram in the room for [session number] games (Panagrams are just anagrams with Pokemon). Alternate forms and CAP Pokemon won\'t be selected. Requires @ or higher.<br>' +
+			'<i style = "color:gray">By SilverTactic (Siiilver) and panpawn</i></center><br>' +
+			'<code>/panagram [session number]</code> - Starts a game of Panagram in the room for [session number] games (Panagrams are just anagrams with Pokemon). Alternate forms and CAP Pokemon won\'t be selected. Requires + or higher.<br>' +
 			'<code>/panagramend</code> OR <code>/endp</code> - Ends a game of panagram. Requires + or higher.<br>' +
 			'<code>/panagramskip</code> OR <code>/pskip</code> - Skips the current session of the game of panagram. Requires + or higher.<br>' +
 			'<code>/panagramhint</code> OR <code>/ph</code> - Gives a hint to the answer.<br>' +
@@ -221,18 +223,18 @@ exports.commands = {
 		);
 	},
 
+	panagrams: 'panagram',
 	panagram: function (target, room, user, connection, cmd) {
 		if (pGames[room.id]) return this.errorReply("There is currently a game of panagram going on in this room.");
-		if (!this.can('roomban', null, room)) return this.errorReply("You must be ranked @ or higher to start a game of panagram in this room.");
-		//if (room.id !== 'gamechamber') return this.sendReply('|html|<div class = "message-error">You can only start a game of Panagram in the <button name = "send" value = "/join gamechamber">Game Chamber</button></div>');
-		if (!target || isNaN(target)) return this.errorReply("Usage: /panagram [number of sessions]");
-		if (target < 1) return this.errorReply("You cannot set the number of sessions to anything less than 1.");
+		if (!this.can('broadcast', null, room)) return this.errorReply("You must be ranked + or higher to start a game of panagram in this room.");
+		if (!target || isNaN(target)) target = '1';
+		if (~target.indexOf('.')) return this.errorReply("The number of sessions cannot be a decimal value.");
 
 		pGames[room.id] = new Panagram(room, Number(target));
 	},
 
 	ph: 'panagramhint',
-	panagramhint: function (target, room, user) {
+	panagramhint: function(target, room, user) {
 		if (!pGames[room.id]) return this.errorReply("There is no game of panagram going on in this room.");
 		if (!this.canBroadcast()) return;
 
@@ -266,4 +268,4 @@ exports.commands = {
 		if (skipCmd) room.add('|html|The current session of panagram has been ended by ' + user.name + '. The answer was <b>' + pGames[room.id].answer.species + '</b>.');
 		pGames[room.id].end(!skipCmd);
 	}
-}*/
+};
