@@ -131,7 +131,7 @@ exports.commands = {
 /////////////////////////////////////////////
 
 /*Panagrams by SilverTactic (Siiilver) with some guidance from panpawn*/
-if (!Gold.pGames) global.pGames = {};
+if (!global.pGames) global.pGames = {};
 var pGames = global.pGames;
 
 function mix(word) {
@@ -183,14 +183,11 @@ var Panagram = (function () {
 		}
 	}
 	Panagram.prototype.guess = function (user, guess) {
-	    function nameColor(name) {
-	        return '<font color="' + Gold.hashColor(toId(name)) + '">' + Tools.escapeHTML(name) + '</font>';
-	    }
 		if (guess.species === this.answer.species) {
-			this.room.add('|html|<b>' + nameColor(user.name) + '</b> guessed <b>' + guess.species + '</b>, which was the correct answer!');
+			this.room.add('|html|<b>' + user.name + '</b> guessed <b>' + guess.species + '</b>, which was the correct answer!');
 			this.end();
 		} else {
-			this.room.add('|html|<b>' + nameColor(user.name) + '</b> guessed <b>' + guess.species + '</b>, but was not the correct answer...');
+			this.room.add('|html|<b>' + user.name + '</b> guessed <b>' + guess.species + '</b>, but was not the correct answer...');
 			this.guessed[toId(guess.species)] = user.userid;
 		}
 	};
