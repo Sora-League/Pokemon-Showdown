@@ -658,7 +658,7 @@ var GlobalRoom = (function () {
 			title: title
 		};
 		var room = Rooms.createChatRoom(id, title, chatRoomData);
-		// Only add room to chatRoomData if it is not a personal room, those aren't saved.
+		this.chatRoomData.push(chatRoomData);
 		this.chatRooms.push(room);
 		this.writeChatRoomData();
 		return true;
@@ -1405,6 +1405,11 @@ var BattleRoom = (function () {
 		}
 		this.expireTimer = null;
 
+		if (this.muteTimer) {
+			clearTimeout(this.muteTimer);
+		}
+		this.muteTimer = null;
+
 		// get rid of some possibly-circular references
 		delete rooms[this.id];
 	};
@@ -1433,7 +1438,7 @@ var ChatRoom = (function () {
 			};
 			this.logEntry('NEW CHATROOM: ' + this.id);
 			if (Config.loguserstats) {
-				setInterval(this.logUserStats.bind(this), Config.loguserstats);
+				this.logUserStatsInterval = setInterval(this.logUserStats.bind(this), Config.loguserstats);
 			}
 		}
 
@@ -1588,28 +1593,22 @@ var ChatRoom = (function () {
 	ChatRoom.prototype.tryExpire = function () {
 		this.destroy();
 	};
-	ChatRoom.prototype.getIntroMessage = function () {
-		if (this.modchat && this.introMessage) {
-			return '\n|raw|<div class="infobox"><div' + (!this.isOfficial ? ' class="infobox-limited"' : '') + '>' + this.introMessage + '</div>' +
-				'<br />' +
-				'<div class="broadcast-red">' +
-				'Must be rank ' + this.modchat + ' or higher to talk right now.' +
-				'</div></div>';
-		}
-
+	ChatRoom.prototype.getIntroMessage = function (user) {
+		var message = '';
+		if (this.introMessage) message += '\n|raw|<div class="infobox"><div' + (!this.isOfficial ? ' class="infobox-limited"' : '') + '>' + this.introMessage + '</div>';
+		if (this.staffMessage && user.can('mute', null, this)) message += (message ? '<br />' : '\n|raw|<div class="infobox">') + '(Staff intro:)<br /><div>' + this.staffMessage + '</div>';
 		if (this.modchat) {
-			return '\n|raw|<div class="infobox"><div class="broadcast-red">' +
+			message += (message ? '<br />' : '\n|raw|<div class="infobox">') + '<div class="broadcast-red">' +
 				'Must be rank ' + this.modchat + ' or higher to talk right now.' +
-				'</div></div>';
+				'</div>';
 		}
-
-		if (this.introMessage) return '\n|raw|<div class="infobox"><div' + (!this.isOfficial ? ' class="infobox-limited"' : '') + '>' + this.introMessage + '</div></div>';
-
-		return '';
+		if (message) message += '</div>';
+		return message;
 	};
 	ChatRoom.prototype.onJoinConnection = function (user, connection) {
 		var userList = this.userList ? this.userList : this.getUserList();
-		this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-25).join('\n') + this.getIntroMessage());
+		this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-25).join('\n') + this.getIntroMessage(user));
+		if (this.poll) this.poll.display(user, false);
 		if (global.Tournaments && Tournaments.get(this.id)) {
 			Tournaments.get(this.id).updateFor(user, connection);
 		}
@@ -1623,8 +1622,8 @@ var ChatRoom = (function () {
 
 		if (!merging) {
 			var userList = this.userList ? this.userList : this.getUserList();
-			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage());
-
+			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
+			if (this.poll) this.poll.display(user, false);
 			if (global.Tournaments && Tournaments.get(this.id)) {
 				Tournaments.get(this.id).updateFor(user, connection);
 			}
@@ -1650,6 +1649,7 @@ var ChatRoom = (function () {
 			} else {
 				entry = '|J|' + user.getIdentity(this.id);
 			}
+			if (this.staffMessage && user.can('mute', null, this)) this.sendUser(user, '|raw|<div class="infobox">(Staff intro:)<br /><div>' + this.staffMessage + '</div></div>');
 		} else if (!user.named) {
 			entry = '|L| ' + oldid;
 		} else {
@@ -1710,6 +1710,20 @@ var ChatRoom = (function () {
 			}
 		}
 
+		// Clear any active timers for the room
+		if (this.muteTimer) {
+			clearTimeout(this.muteTimer);
+		}
+		this.muteTimer = null;
+		if (this.reportJoinsInterval) {
+			clearTimeout(this.reportJoinsInterval);
+		}
+		this.reportJoinsInterval = null;
+		if (this.logUserStatsInterval) {
+			clearTimeout(this.logUserStatsInterval);
+		}
+		this.logUserStatsInterval = null;
+
 		// get rid of some possibly-circular references
 		delete rooms[this.id];
 	};
@@ -1736,8 +1750,8 @@ Rooms.createBattle = function (roomid, format, p1, p2, options) {
 	if (!roomid) roomid = 'default';
 	if (!rooms[roomid]) {
 		// console.log("NEW BATTLE ROOM: " + roomid);
-		ResourceMonitor.countBattle(p1.latestIp, p1.name);
-		ResourceMonitor.countBattle(p2.latestIp, p2.name);
+		Monitor.countBattle(p1.latestIp, p1.name);
+		Monitor.countBattle(p2.latestIp, p2.name);
 		rooms[roomid] = new BattleRoom(roomid, format, p1, p2, options);
 	}
 	return rooms[roomid];

@@ -187,7 +187,7 @@ var Context = exports.Context = (function () {
 		if (this.pmTarget) {
 			this.connection.send('|pm|' + this.user.getIdentity() + '|' + (this.pmTarget.getIdentity ? this.pmTarget.getIdentity() : ' ' + this.pmTarget) + '|/error ' + message);
 		} else {
-			this.connection.sendTo(this.room, '|html|<div class="message-error">' + Tools.escapeHTML(message) + '</div>');
+			this.sendReply('|html|<div class="message-error">' + Tools.escapeHTML(message) + '</div>');
 		}
 	};
 	Context.prototype.sendReplyBox = function (html) {
@@ -329,12 +329,25 @@ var Context = exports.Context = (function () {
 	Context.prototype.canHTML = function (html) {
 		html = '' + (html || '');
 		var images = html.match(/<img\b[^<>]*/ig);
-		if (!images) return true;
-		for (var i = 0; i < images.length; i++) {
-			if (!/width=([0-9]+|"[0-9]+")/i.test(images[i]) || !/height=([0-9]+|"[0-9]+")/i.test(images[i])) {
-				this.errorReply('All images must have a width and height attribute');
+		if (images) {
+			if (this.room.isPersonal && !this.user.can('announce')) {
+				this.errorReply("Images are not allowed in personal rooms.");
 				return false;
 			}
+			for (var i = 0; i < images.length; i++) {
+				if (!/width=([0-9]+|"[0-9]+")/i.test(images[i]) || !/height=([0-9]+|"[0-9]+")/i.test(images[i])) {
+					// Width and height are required because most browsers insert the
+					// <img> element before width and height are known, and when the
+					// image is loaded, this changes the height of the chat area, which
+					// messes up autoscrolling.
+					this.errorReply('All images must have a width and height attribute');
+					return false;
+				}
+			}
+		}
+		if ((this.room.isPersonal || this.room.isPrivate === true) && !this.user.can('lock') && html.match(/<button /)) {
+			this.errorReply('You do not have permission to use buttons in HTML.');
+			return false;
 		}
 		if (/>here.?</i.test(html) || /click here/i.test(html)) {
 			this.errorReply('Do not use "click here"');
@@ -378,7 +391,6 @@ var Context = exports.Context = (function () {
 		return this.targetUser;
 	};
 	Context.prototype.getLastIdOf = function (user) {
-		if (typeof user === 'string') user = Users.get(user);
 		return (user.named ? user.userid : (Object.keys(user.prevNames).last() || user.userid));
 	};
 	Context.prototype.splitTarget = function (target, exactName) {
