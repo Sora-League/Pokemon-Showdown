@@ -644,7 +644,7 @@ exports.commands = {
 		'<b>Ace:</b> Latias</center><br>'+
 		'<b>Achievements:</b> Peaked top 20 for OU/OU (No Mega), top 500 for Monotype, most symbol defends in Sora<br>'+
 		'<b>Current Position:</b> OU Frontier of Sora <br />'+
-		'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/raikou.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gardevoir-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/latias.gif"></center><br />'+
+		'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/raikou.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/scizor.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/latias.gif"></center><br />'+
 		'<center><font size=2 color=#0000FF><i><b>현아</b> - Because I\'m the Best (Feat. 정일훈)</i></font><br><audio controls src="https://dl.pushbulletusercontent.com/jff9FOcg7fLsplNbywP27oPEry1D7xZg/HYUNA%20-%20%EC%9E%98%EB%82%98%EA%B0%80%EC%84%9C%20%EA%B7%B8%EB%9E%98.mp3" style="width: 100%"></center><br \><br \>'+ getBadges('frontiermeows'));
 	},
 
