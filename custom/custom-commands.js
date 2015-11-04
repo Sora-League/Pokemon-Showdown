@@ -36,7 +36,7 @@ exports.commands = {
 				var padding = self.broadcasting ? '5' : '8';
 				var table = '<center><b><u>Tournament Ladder</u></b><br>' +
 					'<table border = "1" cellspacing = "0" cellpadding = "' + padding + '"><tr><th>No.</th><th>User</th><th>Elo</th>';
-				for (var i = 0; i < 10; i++) {
+				for (var i = 0; i < (self.broadcasting ? 10 : users.length); i++) {
 					if (!users[i] || users[i][1] <= 1000) break;
 					var user = (Users.getExact(users[i][0]) ? Users.getExact(users[i][0]).name : users[i][0]);
 					table += '<tr><td><center>' + (i + 1) + '</center></td><td style = "text-align: center">' + user + '</td><td style = "text-align: center">' + Math.round(users[i][1]) + '</td></tr>';
