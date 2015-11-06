@@ -20,7 +20,7 @@ exports.commands = {
 	leaguemembers: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Champiön Nöah∆', '∆Chаmpion Bart∆', '∆FrontierHead Risu∆', 'OnyxEagle', 'Blazing360', '∆Coach Abadon∆', 'Bamdee', '∆Frontier Jerattata∆', '∆Frontier Neith∆'];
+		var list = ['∆Champiön Nöah∆', '∆Chаmpion Bart∆', '∆FrontierHead Risu∆', 'OnyxEagle', '∆Fröntier∆Blade☯', '∆Coach Abadon∆', 'Bamdee', '∆Frontier Jerattata∆', '∆Frontier Neith∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Silvy∆', '∆E4 Barney∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Frontier Meows∆'];
+		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Silvy∆', '∆E4 Barney∆', '∆Frontier Asch∆', '∆Frontier∆ Srewop', '∆Frontier Meows∆', '∆Fröntier∆Blade☯', '∆Frontier Jerattata∆', '∆Frontier Neith∆'] ;
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
