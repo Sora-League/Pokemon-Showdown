@@ -478,8 +478,8 @@ exports.commands = {
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
 	},
 
-	rock: 'WF',
-	WF: function (target, room, user) {
+	rock: 'wf',
+	wf: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>WF</b>∆<br />' +
 			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
