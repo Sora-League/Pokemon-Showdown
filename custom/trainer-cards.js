@@ -473,7 +473,6 @@ exports.commands = {
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-		        'Leader Ranking: <font color = 9dff00><b>3rd</font></b> <br />' + 
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
