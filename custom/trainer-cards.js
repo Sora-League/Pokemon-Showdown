@@ -38,9 +38,9 @@ exports.commands = {
 		}
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Gym Ldr Float∆', 
-			'∆Gym Ldr Mark∆', '∆Gym Ldr Core∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr SolarWolf∆', '∆Gym Ldr You∆',
-			'∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr ArthurZH∆', '∆Gym Ldr Zoro∆', '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor'
+		var list = ['∆Gym Ldr Float∆', '∆Gym Ldr Mark∆', '∆Gym Ldr WF∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr SolarWolf∆', 
+		        '∆Gym Ldr You∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr ArthurZH∆', '∆Gym Ldr Zoro∆', 
+		        '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor∆', '∆Gym Ldr Dogelord∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -478,13 +478,13 @@ exports.commands = {
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
 	},
 
-	rock: 'core',
-	core: function (target, room, user) {
+	rock: 'WF',
+	WF: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Core</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>WF</b>∆<br />' +
 			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Archeops<br />' + seen('gymldrcore') + getBadges('gymldrcore'));
+			'<b>Ace:</b> Archeops<br />' + seen('gymldrwf') + getBadges('gymldrwf'));
 	},
 
 	
