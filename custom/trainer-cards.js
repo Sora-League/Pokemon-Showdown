@@ -361,7 +361,8 @@ exports.commands = {
         you: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>You</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>You</b>∆<br />'+
+		        'Leader Ranking: <font color = 00FF00><b>3rd</font></b> <br />' +
 			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>Diancie<br />' + seen('gymldryou') + getBadges('gymldryou'));
@@ -392,7 +393,6 @@ exports.commands = {
     	waffles: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
-		      'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
 	              '<i>"Don\'t waffle out of the situation."</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
 	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + '<br>' +
@@ -428,7 +428,6 @@ exports.commands = {
     grass: function(target, room, user) {
 	if (!this.canBroadcast()) return;
 	this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />'+
-	                'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
 			'<i>"Storm of leaf and Draining root!"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
 			'<b>Ace:</b> Victreebel <br />' + seen('gymldrmitsuka') + getBadges('gymldrmitsuka'));
@@ -454,6 +453,7 @@ exports.commands = {
         bigo: function(target, room, user) {
 	if (!this.canBroadcast()) return;
 	this.sendReplyBox('∆Gym Ldr <b>Bigo</b>∆<br />'+
+	        'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
 		'<i>"Don\'t underestimate the normal, cause being \'normal\'  doesn\'t mean to be weak"</i> <br />'+
 	    '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
 		'<b>Ace:</b> Lopunny<br />' + seen('gymldrbigo') + getBadges('gymldrbigo'));
@@ -463,6 +463,7 @@ exports.commands = {
 	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Zoro</b>∆<br />' +
+		        'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
 			'<i>"I don\'t have a quote."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
 			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
@@ -883,9 +884,9 @@ exports.commands = {
 	ranks: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Listed here are the Top 3 Leaders in The Sora League based on performance in our Monthly Promotional Tournament! Please keep in mind, the number of ranked Leaders may change month to month and the ranking methodology may be changed in the future.<br />' +
-			'-<b>1st <font color= 006b0a>Mitsuka</font></b> (Grass)<br />' +
-			'-<b>2nd <font color= FF0000>Waffles</font></b></b> (Fire)<br />' +
-			'-<b>3rd <font color= ff00b6>Connor</font></b> (Psychic)<br />' +
+			'-<b>1st <font color= ffa5d5>Bigo</font></b> (Normal)<br />' +
+			'-<b>2nd <font color= aa00ff>Zoro</font></b></b> (Poison)<br />' +
+			'-<b>3rd <font color= ff42a0>You</font></b> (Fairy)<br />' +
 			'</div>');
 	},
 
