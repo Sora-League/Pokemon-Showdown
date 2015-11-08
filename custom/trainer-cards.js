@@ -333,11 +333,11 @@ exports.commands = {
 	alcor: 'dark',
 	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Alcor</b>∆<br />' +
 			'<i>"All journeys are one-way as the result of your decisions cannot be undone."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
-			'<b>Ace:</b> Bisharp <br />' + seen('gymldralcor') + getBadges('e4alcor'));
+			'<b>Ace:</b> Bisharp <br />' + seen('gymldralcor') + getBadges('e4alcor')+
+			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>');
 	},
 
 	dogelord: 'dragon',
