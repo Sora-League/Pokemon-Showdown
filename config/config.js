@@ -398,6 +398,7 @@ exports.grouplist = [
 		inherit: ' ',
 		tournaments: true,
 		alts: 's',
+		makegroupchat: true,
 		broadcast: true
 	},
 	{
