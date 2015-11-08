@@ -330,14 +330,14 @@ exports.commands = {
 			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
-	
+	alcor: 'dark',
 	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"All journeys are one-way as the result of your decisions cannot be undone."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br />'); 
+			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
+			'<b>Ace:</b> Bisharp <br />' + seen('gymldralcor') + getBadges('e4alcor'));
 	},
 
 	dogelord: 'dragon',
@@ -413,15 +413,14 @@ exports.commands = {
 	},
 
     
-        alcor: 'ghost',    
+        
 	ghost: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Alcor</b>∆<br />' +
-			'<i>"Halloween is the spoopiest time of the year the ascher has been fed and no one is safe."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Cofagrigus<br />'+
-		        '<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>' +
-			seen('gymldralcor') + getBadges('e4alcor'));
+			'<b>Ace:</b> ???<br />'+
+			seen('') + getBadges(''));
 	},
 
 
