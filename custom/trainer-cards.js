@@ -542,7 +542,7 @@ exports.commands = {
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/keldeo-resolute.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/thundurus-therian.gif">');
 	},
 	
-	arjunb: function (target, room, user) {
+	arjun: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><input type="image" src="http://i.imgur.com/bnCFCm5.png"><div align="center"><br />' +
 			'<div align="center">"<i>Fall seven times, stand up eight. That\'s what I do</i>"</div><br />' +
