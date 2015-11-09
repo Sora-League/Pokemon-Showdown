@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Gym Ldr Float∆', '∆Gym Ldr Mark∆', '∆Gym Ldr WF∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr SolarWolf∆', 
 		        '∆Gym Ldr You∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr BK∆', '∆Gym Ldr ArthurZH∆', '∆Gym Ldr Zoro∆', 
-		        '∆Gym Ldr Bigo∆', '∆Gym Ldr. Elodin∆', '∆Gym Ldr Alcor∆', '∆Gym Ldr Dogelord∆'
+		        '∆Gym Ldr Bigo∆', '∆Gym Ldr. Arjunb∆', '∆Gym Ldr Alcor∆', '∆Gym Ldr Dogelord∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -379,13 +379,13 @@ exports.commands = {
 		);
 	},
 
-	elodin: 'fighting',
+	arjunb 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Elodin</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />'+
 			'<i>"How much can you possibly know about yourself if you\'ve never been in a fight?"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Sawk<br />' + seen('gymldrelodin') + getBadges('gymldrelodin')
+			'<b>Ace:</b> Sawk<br />' + seen('gymldrarjunb') + getBadges('gymldrarjunb')
 		);
         },
 
