@@ -349,13 +349,12 @@ exports.commands = {
 			'<b>Ace:</b> Dragonite<br />' + seen('gymldrdogelord') + getBadges('gymldrdogelord'));
 	},
 
-	bk: 'electric',
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>BK</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> Eelektross<br />' + seen('gymldrbk') + getBadges('gymldrbk'));
+			'<b>Ace:</b> ??<br />');
 	},
 
         you: 'fairy',
