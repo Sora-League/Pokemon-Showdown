@@ -378,7 +378,7 @@ exports.commands = {
 		);
 	},
 
-	arjunb 'fighting',
+	arjunb: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />'+
