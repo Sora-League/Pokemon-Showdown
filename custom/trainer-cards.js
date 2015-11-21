@@ -498,14 +498,13 @@ exports.commands = {
 
 	},
 
-       arthurzh: 'water',
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>ArthurZH</b>∆<br />' +
-			'<i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Gyarados <br/>' +
-			seen('gymldrarthurzh') + getBadges('gymldrarthurzh'));
+			'<b>Ace:</b> ??? <br/>'
+		);
 	},
 
 	/////////////
