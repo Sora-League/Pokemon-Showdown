@@ -17,6 +17,7 @@ background: function(target, room, user) {
                 '<tr><td><a href="https://www.dropbox.com/s/jr38uagsk6wyksb/Risu%27s%20Dragon%20Mono.png?dl=1"><img src="http://i.imgur.com/g4QeSP8.png" width=170></a></td></tr></table><br>'+
                 '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details><br><br>'+
                 
+                
                 '<details><summary>Jeratt\'s 2014 Collection (Click me to expand)</summary><table style="width:100%"><tr>'+
                 '<td><a href="https://www.dropbox.com/s/82xvmq22aoeas3b/Bug%20Type.png?dl=1"><img src="http://i.imgur.com/SaepSCp.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/p8tcozimsnwpizz/Dark%20Type.png?dl=1"><img src="http://i.imgur.com/T7C8R0G.png" width=170></a></td>'+
@@ -29,7 +30,25 @@ background: function(target, room, user) {
                 '<tr><td><a href="https://www.dropbox.com/s/wpu4g3qu388ipdc/Onyx%27s%20Dedication.png?dl=1"><img src="http://i.imgur.com/g4GGZXw.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/kf3me6ebcaidaws/Sora%27s%20X-mas.png?dl=1"><img src="http://i.imgur.com/h3MxvAr.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/gijxahuc894odcq/Toast%27s%20Fire%20Mono.png?dl=1"><img src="http://i.imgur.com/Cc6FJwG.png" width=170></a></td></tr></table><br>'+
-                '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details><br><br>'
+                '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details><br><br>'+
+                
+                
+                '<details><summary>Jeratt\'s 2015 Collection (Click me to expand)</summary><table style="width:100%"><tr>'+
+                '<td><a href="https://www.dropbox.com/s/j01f535zpgf0ycc/Electric%20Type%20Remake.png?dl=1"><img src="http://i.imgur.com/j58Ro3Z.png" width=170></a></td>'+
+                '<td><a href="https://www.dropbox.com/s/aw2wn0e3hdrhrpm/Fairy%20Type.png?dl=1"><img src="http://i.imgur.com/EpBAigM.png" width=170></a></td>'+
+                '<td><a href="https://www.dropbox.com/s/52mxsnfvnhgc09p/Fighting%20Type.png?dl=1"><img src="http://i.imgur.com/qkwkGTL.png" width=170></a></td></tr>'+
+                
+                '<tr><td><a href="https://www.dropbox.com/s/x99cjgjbwnilth5/Grass%20Type.jpg?dl=1"><img src="http://i.imgur.com/S0cfN5x.jpg" width=170></a></td></tr></table><br>'+
+                '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details><br><br>'+
+                
+                
+                '<details><summary>ABootToTheHead\'s 2015 Collection (Click me to expand)</summary><table style="width:100%"><tr>'+
+                '<td><a href="https://www.dropbox.com/s/ybk5gaa4rkzf16k/Blue%20Shield.jpg?dl=1"><img src="http://i.imgur.com/APAQS7y.jpg" width=170></a></td>'+
+                '<td><a href="https://www.dropbox.com/s/fbhsz5vlfwmamuf/Grey%20Shield.jpg?dl=1"><img src="http://i.imgur.com/MP37DTZ.jpg" width=170></a></td>'+
+                '<td><a href="https://www.dropbox.com/s/lcsx1bqprw8bjmp/Old%20Moonlight.png?dl=1"><img src="http://i.imgur.com/sAzIMJk.png" width=170></a></td></tr>'+
+                
+                '<tr><td><a href="https://www.dropbox.com/s/do1kfdyrkpm7lfl/New%20Moonlight.png?dl=1"><img src="http://i.imgur.com/97FLTsX.png" width=170></a></td></tr></table><br>'+
+                '<font size=0.5>These images belong to <b>ABootToTheHead</b>, citing is required before reusage. Where possible cite twitter account @MetatyphT</font></details>'
                 );
 	}
 		         
