@@ -14,7 +14,7 @@ background: function(target, room, user) {
                 '<td><a href="https://www.dropbox.com/s/pxlbeylejj0a5ec/Onyx%27s%20Rock%20Mono.png?dl=1"><img src="http://i.imgur.com/lZbrX8m.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/r79nb8rwzvflx34/Poison%20Type.png?dl=1"><img src="http://i.imgur.com/iBMDE6g.png" width=170></a></td></tr>'+
                 
-                '<tr><td><a href="https://www.dropbox.com/s/jr38uagsk6wyksb/Risu%27s%20Dragon%20Mono.png?dl=1"><img src="http://i.imgur.com/g4QeSP8.png" width=170></a></td></tr><br>'+
+                '<tr><td><a href="https://www.dropbox.com/s/jr38uagsk6wyksb/Risu%27s%20Dragon%20Mono.png?dl=1"><img src="http://i.imgur.com/g4QeSP8.png" width=170></a></td></tr></table><br>'+
                 '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details>'
                 );
 	}
