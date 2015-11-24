@@ -17,7 +17,7 @@ background: function(target, room, user) {
                 '<tr><td><a href="https://www.dropbox.com/s/jr38uagsk6wyksb/Risu%27s%20Dragon%20Mono.png?dl=1"><img src="http://i.imgur.com/g4QeSP8.png" width=170></a></td></tr></table><br>'+
                 '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details><br><br>'+
                 
-                'details><summary>Jeratt\'s 2014 Collection (Click me to expand)</summary><table style="width:100%"><tr>'+
+                '<details><summary>Jeratt\'s 2014 Collection (Click me to expand)</summary><table style="width:100%"><tr>'+
                 '<td><a href="https://www.dropbox.com/s/82xvmq22aoeas3b/Bug%20Type.png?dl=1"><img src="http://i.imgur.com/SaepSCp.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/p8tcozimsnwpizz/Dark%20Type.png?dl=1"><img src="http://i.imgur.com/T7C8R0G.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/hg4fejrghcpq0k2/Dragon%20Type.png?dl=1"><img src="http://i.imgur.com/PhmyjpU.png" width=170></a></td>'+
