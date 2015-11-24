@@ -29,7 +29,7 @@ background: function(target, room, user) {
                 '<td><a href="https://www.dropbox.com/s/wpu4g3qu388ipdc/Onyx%27s%20Dedication.png?dl=1"><img src="http://i.imgur.com/g4GGZXw.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/kf3me6ebcaidaws/Sora%27s%20X-mas.png?dl=1"><img src="http://i.imgur.com/h3MxvAr.png" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/gijxahuc894odcq/Toast%27s%20Fire%20Mono.png?dl=1"><img src="http://i.imgur.com/Cc6FJwG.png" width=170></a></td></tr></table><br>'+
-                '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details><br><br>'+
+                '<font size=0.5>These images belong to <b>Artiste Jeratt</b>, citing is required before reusage.</font></details><br><br>'
                 );
 	}
 		         
