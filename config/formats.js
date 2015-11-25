@@ -115,13 +115,16 @@ exports.Formats = [
 		}
 
 	},
-	{
+	/*{
 		name: "Pokemon Sandbox",
 		section: "Sora Exclusive",
 
 		mod: 'tiershift',
 		ruleset: ['HP Percentage Mod', 'Team Preview'],
-		validateSet: function(set) {
+		banlist: ['Illegal', 'Unreleased', 'Soul Dew', 'Mewtwo', 'Lugia', 'Ho-Oh', 'Kyogre', 'Groudon', 'Rayquaza', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Palkia', 
+			'Giratina', 'Giratina-Origin', 'Darkrai', 'Arceus', 'Reshiram', 'Zekrom', 'Kyurem-White', 'Xerneas', 'Yveltal', 'Greninja', 'Regigigas', 'Slaking', 'Torkoal'
+		],
+		/*validateSet: function(set) {
 			var template = this.getTemplate(set.species);
 			var item = this.getItem(set.item);
 			var problems = [];
@@ -154,7 +157,22 @@ exports.Formats = [
 			}
 			return problems;
 		}
-	},
+		validateSet: function (set, teamHas) {
+			var statusProblems = this.validateSet(set, teamHas, {ignorestabmoves: {'Status':1}});
+			if (!statusProblems.length) return;
+			var attackProblems = this.validateSet(set, teamHas, {ignorestabmoves: {'Physical':1, 'Special':1}});
+			if (!attackProblems.length) return;
+
+			var problems = [];
+			for (var i = 0; i < statusProblems.length; i++) {
+				problems.push('(Status) ' + statusProblems[i]);
+			}
+			for (var i = 0; i < attackProblems.length; i++) {
+				problems.push('(Attack) ' + attackProblems[i]);
+			}
+			return problems;
+		}
+	},*/
 
 	// XY Singles
 	///////////////////////////////////////////////////////////////////
