@@ -152,9 +152,9 @@ exports.commands = {
 	barney: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Barney</b>∆<br />' +
-			'<i>"This battle is gonna be Legen...wait for it...dary."</i> <br />' +
-			'<b>Type: <font color = 230077>Dragon</font></b><br />' +
-			'<b>Ace:</b> Goodra<br />' +
+			'<i>"I came to win, to fight, to conquer, to thrive. I came to win, to survive, to prosper, to rise, to fly."</i> <br />' +
+			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+			'<b>Ace:</b> Dragonite<br />' +
 			'<b>Battle Rules:</b><br />' +
 			'-No hazards<br />' + 
 			seen('e4barney') +
