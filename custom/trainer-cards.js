@@ -468,13 +468,13 @@ exports.commands = {
 			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
 	},
 	
-	
+	giratina: 'psychic'
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Giratina</b>∆<br />' +
+			'<i>"If you faint in the game you faint in real life."</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
+			'<b>Ace:</b> Gallade <br />' + seen('') + getBadges (''));
 	},
 
 	rock: 'wf',
