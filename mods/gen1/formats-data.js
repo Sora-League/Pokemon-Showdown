@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleFormatsData = {
 	bulbasaur: {
 		randomBattleMoves: ["razorleaf","sleeppowder","swordsdance","bodyslam","toxic","leechseed"],

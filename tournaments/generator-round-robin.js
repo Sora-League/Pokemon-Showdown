@@ -1,6 +1,4 @@
-'use strict';
-
-let RoundRobin = (function () {
+var RoundRobin = (function () {
 	function RoundRobin(isDoubles) {
 		this.isDoubles = !!isDoubles;
 		this.isBracketFrozen = false;
@@ -26,13 +24,13 @@ let RoundRobin = (function () {
 	RoundRobin.prototype.removeUser = function (user) {
 		if (this.isBracketFrozen) return 'BracketFrozen';
 
-		let userIndex = this.users.indexOf(user);
+		var userIndex = this.users.indexOf(user);
 		if (userIndex < 0) return 'UserNotAdded';
 
 		this.users.splice(userIndex, 1);
 	};
 	RoundRobin.prototype.replaceUser = function (user, replacementUser) {
-		let userIndex = this.users.indexOf(user);
+		var userIndex = this.users.indexOf(user);
 		if (userIndex < 0) return 'UserNotAdded';
 
 		if (this.users.indexOf(replacementUser) >= 0) return 'UserAlreadyAdded';
@@ -44,7 +42,7 @@ let RoundRobin = (function () {
 	};
 
 	RoundRobin.prototype.getBracketData = function () {
-		let data = {};
+		var data = {};
 		data.type = 'table';
 		data.tableHeaders = {
 			cols: this.users.slice(0),
@@ -55,11 +53,11 @@ let RoundRobin = (function () {
 				if (!this.isDoubles && col >= row) return null;
 				if (userA === userB) return null;
 
-				let cell = {};
+				var cell = {};
 				if (!this.isBracketFrozen) {
 					cell.state = 'unavailable';
 				} else {
-					let match = this.matches[row][col];
+					var match = this.matches[row][col];
 					cell.state = match.state;
 					if (match.state === 'finished') {
 						cell.result = match.result;
@@ -91,7 +89,7 @@ let RoundRobin = (function () {
 	RoundRobin.prototype.disqualifyUser = function (user) {
 		if (!this.isBracketFrozen) return 'BracketNotFrozen';
 
-		let userIndex = this.users.indexOf(user);
+		var userIndex = this.users.indexOf(user);
 		if (userIndex < 0) return 'UserNotAdded';
 
 		this.matches[userIndex].forEach(function (match, col) {
@@ -104,7 +102,7 @@ let RoundRobin = (function () {
 		}, this);
 
 		this.matches.forEach(function (challenges, row) {
-			let match = challenges[userIndex];
+			var match = challenges[userIndex];
 			if (!match || match.state !== 'available') return;
 			match.state = 'finished';
 			match.result = 'win';
@@ -116,14 +114,14 @@ let RoundRobin = (function () {
 	RoundRobin.prototype.getUserBusy = function (user) {
 		if (!this.isBracketFrozen) return 'BracketNotFrozen';
 
-		let userIndex = this.users.indexOf(user);
+		var userIndex = this.users.indexOf(user);
 		if (userIndex < 0) return 'UserNotAdded';
 		return this.isUsersBusy[userIndex];
 	};
 	RoundRobin.prototype.setUserBusy = function (user, isBusy) {
 		if (!this.isBracketFrozen) return 'BracketNotFrozen';
 
-		let userIndex = this.users.indexOf(user);
+		var userIndex = this.users.indexOf(user);
 		if (userIndex < 0) return 'UserNotAdded';
 		this.isUsersBusy[userIndex] = isBusy;
 	};
@@ -131,7 +129,7 @@ let RoundRobin = (function () {
 	RoundRobin.prototype.getAvailableMatches = function () {
 		if (!this.isBracketFrozen) return 'BracketNotFrozen';
 
-		let matches = [];
+		var matches = [];
 		this.matches.forEach(function (challenges, row) {
 			challenges.forEach(function (match, col) {
 				if (!match) return;
@@ -147,14 +145,14 @@ let RoundRobin = (function () {
 
 		if (!(result in {win:1, loss:1, draw:1})) return 'InvalidMatchResult';
 
-		let userIndexA = this.users.indexOf(match[0]);
-		let userIndexB = this.users.indexOf(match[1]);
+		var userIndexA = this.users.indexOf(match[0]);
+		var userIndexB = this.users.indexOf(match[1]);
 		if (userIndexA < 0 || userIndexB < 0) return 'UserNotAdded';
 
 		match = this.matches[userIndexA][userIndexB];
 		if (!match || match.state !== 'available') return 'InvalidMatch';
 
-		let virtualScore;
+		var virtualScore;
 		if (result === 'win') {
 			virtualScore = [1, 0];
 		} else if (result === 'loss') {
@@ -179,13 +177,13 @@ let RoundRobin = (function () {
 	RoundRobin.prototype.getResults = function () {
 		if (!this.isTournamentEnded()) return 'TournamentNotEnded';
 
-		let sortedScores = this.userScores.map(function (score, userIndex) {
+		var sortedScores = this.userScores.map(function (score, userIndex) {
 			return {userIndex: userIndex, score: score};
 		}).sort(function (a, b) { return b.score - a.score; });
 
-		let results = [];
-		let currentScore = sortedScores[0].score;
-		let currentRank = [];
+		var results = [];
+		var currentScore = sortedScores[0].score;
+		var currentRank = [];
 		results.push(currentRank);
 		sortedScores.forEach(function (score) {
 			if (score.score < currentScore) {

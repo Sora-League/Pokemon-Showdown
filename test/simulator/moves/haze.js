@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Haze - RBY', function () {
 	afterEach(function () {

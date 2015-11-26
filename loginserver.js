@@ -7,15 +7,14 @@
  * @license MIT license
  */
 
-'use strict';
-
 const LOGIN_SERVER_TIMEOUT = 15000;
 const LOGIN_SERVER_BATCH_TIME = 1000;
 
-const http = require("http");
-const url = require('url');
+var http = require("http");
+var url = require('url');
 
-let LoginServer = module.exports = (function () {
+/* global LoginServer: true */
+var LoginServer = module.exports = (function () {
 	function LoginServer(uri) {
 		console.log('Creating LoginServer object for ' + uri + '...');
 		this.uri = uri;
@@ -35,8 +34,8 @@ let LoginServer = module.exports = (function () {
 	LoginServer.prototype.lastRequest = 0;
 	LoginServer.prototype.openRequests = 0;
 
-	let getLoginServer = function (action) {
-		let uri;
+	var getLoginServer = function (action) {
+		var uri;
 		if (Config.loginservers) {
 			uri = Config.loginservers[action] || Config.loginservers[null];
 		} else {
@@ -54,7 +53,7 @@ let LoginServer = module.exports = (function () {
 	LoginServer.request = function (action, data, callback) {
 		return getLoginServer(action).request(action, data, callback);
 	};
-	let TimeoutError = LoginServer.TimeoutError = function (message) {
+	var TimeoutError = LoginServer.TimeoutError = function (message) {
 		Error.captureStackTrace(this, TimeoutError);
 		this.name = "TimeoutError";
 		this.message = message || "";
@@ -66,9 +65,9 @@ let LoginServer = module.exports = (function () {
 		return this.name + ": " + this.message;
 	};
 
-	let parseJSON = function (json) {
+	var parseJSON = function (json) {
 		if (json[0] === ']') json = json.substr(1);
-		let data = {error: null};
+		var data = {error: null};
 		try {
 			data.json = JSON.parse(json);
 		} catch (err) {
@@ -87,14 +86,14 @@ let LoginServer = module.exports = (function () {
 			return;
 		}
 		this.openRequests++;
-		let dataString = '';
+		var dataString = '';
 		if (data) {
-			for (let i in data) {
+			for (var i in data) {
 				dataString += '&' + i + '=' + encodeURIComponent('' + data[i]);
 			}
 		}
-		let req = http.get(url.parse(this.uri + 'action.php?act=' + action + '&serverid=' + Config.serverid + '&servertoken=' + encodeURIComponent(Config.servertoken) + '&nocache=' + new Date().getTime() + dataString), function (res) {
-			let buffer = '';
+		var req = http.get(url.parse(this.uri + 'action.php?act=' + action + '&serverid=' + Config.serverid + '&servertoken=' + encodeURIComponent(Config.servertoken) + '&nocache=' + new Date().getTime() + dataString), function (res) {
+			var buffer = '';
 			res.setEncoding('utf8');
 
 			res.on('data', function (chunk) {
@@ -102,7 +101,7 @@ let LoginServer = module.exports = (function () {
 			});
 
 			res.on('end', function () {
-				let data = parseJSON(buffer).json;
+				var data = parseJSON(buffer).json;
 				setImmediate(callback, data, res.statusCode);
 				this.openRequests--;
 			});
@@ -142,36 +141,36 @@ let LoginServer = module.exports = (function () {
 	};
 	LoginServer.prototype.makeRequests = function () {
 		this.requestTimer = null;
-		let self = this;
-		let requests = this.requestQueue;
+		var self = this;
+		var requests = this.requestQueue;
 		this.requestQueue = [];
 
 		if (!requests.length) return;
 
-		let requestCallbacks = [];
-		for (let i = 0, len = requests.length; i < len; i++) {
-			let request = requests[i];
+		var requestCallbacks = [];
+		for (var i = 0, len = requests.length; i < len; i++) {
+			var request = requests[i];
 			requestCallbacks[i] = request.callback;
 			delete request.callback;
 		}
 
 		this.requestStart(requests.length);
-		let postData = 'serverid=' + Config.serverid + '&servertoken=' + encodeURIComponent(Config.servertoken) + '&nocache=' + new Date().getTime() + '&json=' + encodeURIComponent(JSON.stringify(requests)) + '\n';
-		let requestOptions = url.parse(this.uri + 'action.php');
+		var postData = 'serverid=' + Config.serverid + '&servertoken=' + encodeURIComponent(Config.servertoken) + '&nocache=' + new Date().getTime() + '&json=' + encodeURIComponent(JSON.stringify(requests)) + '\n';
+		var requestOptions = url.parse(this.uri + 'action.php');
 		requestOptions.method = 'post';
 		requestOptions.headers = {
 			'Content-Type': 'application/x-www-form-urlencoded',
 			'Content-Length': postData.length
 		};
 
-		let req = null;
-		let onReqError = function onReqError(error) {
+		var req = null;
+		var onReqError = function onReqError(error) {
 			if (self.requestTimeoutTimer) {
 				clearTimeout(self.requestTimeoutTimer);
 				self.requestTimeoutTimer = null;
 			}
 			req.abort();
-			for (let i = 0, len = requestCallbacks.length; i < len; i++) {
+			for (var i = 0, len = requestCallbacks.length; i < len; i++) {
 				setImmediate(requestCallbacks[i], null, null, error);
 			}
 			self.requestEnd();
@@ -182,21 +181,21 @@ let LoginServer = module.exports = (function () {
 				clearTimeout(self.requestTimeoutTimer);
 				self.requestTimeoutTimer = null;
 			}
-			let buffer = '';
+			var buffer = '';
 			res.setEncoding('utf8');
 
 			res.on('data', function onData(chunk) {
 				buffer += chunk;
 			});
 
-			let endReq = function endRequest() {
+			var endReq = function endRequest() {
 				if (self.requestTimeoutTimer) {
 					clearTimeout(self.requestTimeoutTimer);
 					self.requestTimeoutTimer = null;
 				}
 				//console.log('RESPONSE: ' + buffer);
-				let data = parseJSON(buffer).json;
-				for (let i = 0, len = requestCallbacks.length; i < len; i++) {
+				var data = parseJSON(buffer).json;
+				for (var i = 0, len = requestCallbacks.length; i < len; i++) {
 					if (data) {
 						setImmediate(requestCallbacks[i], data[i], res.statusCode);
 					} else {

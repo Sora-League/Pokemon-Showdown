@@ -1,10 +1,8 @@
-'use strict';
-
-let battle;
-const assert = require('assert');
+var battle;
+var assert = require('assert');
 
 describe('Inverse Battle', function () {
-	let battleCounter = 0;
+	var battleCounter = 0;
 
 	beforeEach(function () {
 		battle = BattleEngine.Battle.construct('battle-inverse-' + battleCounter++, 'inversebattle');

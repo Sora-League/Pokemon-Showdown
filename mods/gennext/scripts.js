@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleScripts = {
 	init: function () {
 		this.modData('Pokedex', 'cherrimsunshine').types = ['Grass', 'Fire'];
@@ -120,7 +118,7 @@ exports.BattleScripts = {
 		this.modData('Pokedex', 'crawdaunt').abilities['H'] = 'Tough Claws';
 
 		// Every hidden ability becomes released
-		for (let i in this.data.FormatsData) {
+		for (var i in this.data.FormatsData) {
 			this.modData('FormatsData', i).unreleasedHidden = false;
 		}
 	}

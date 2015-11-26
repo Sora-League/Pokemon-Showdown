@@ -11,16 +11,14 @@
  * @license MIT license
  */
 
-'use strict';
+var battles = Object.create(null);
 
-let battles = Object.create(null);
-
-let SimulatorProcess = (function () {
+var SimulatorProcess = (function () {
 	function SimulatorProcess() {
 		this.process = require('child_process').fork('battle-engine.js', {cwd: __dirname});
 		this.process.on('message', function (message) {
-			let lines = message.split('\n');
-			let battle = battles[lines[0]];
+			var lines = message.split('\n');
+			var battle = battles[lines[0]];
 			if (battle) {
 				battle.receive(lines);
 			}
@@ -32,7 +30,7 @@ let SimulatorProcess = (function () {
 	SimulatorProcess.processes = [];
 	SimulatorProcess.spawn = function (num) {
 		if (!num) num = Config.simulatorprocesses || 1;
-		for (let i = this.processes.length; i < num; ++i) {
+		for (var i = this.processes.length; i < num; ++i) {
 			this.processes.push(new SimulatorProcess());
 		}
 	};
@@ -44,8 +42,8 @@ let SimulatorProcess = (function () {
 		this.spawn();
 	};
 	SimulatorProcess.acquire = function () {
-		let process = this.processes[0];
-		for (let i = 1; i < this.processes.length; ++i) {
+		var process = this.processes[0];
+		for (var i = 1; i < this.processes.length; ++i) {
 			if (this.processes[i].load < process.load) {
 				process = this.processes[i];
 			}
@@ -70,9 +68,9 @@ let SimulatorProcess = (function () {
 // Create the initial set of simulator processes.
 SimulatorProcess.spawn();
 
-let slice = Array.prototype.slice;
+var slice = Array.prototype.slice;
 
-let Battle = (function () {
+var Battle = (function () {
 	function Battle(id, format, rated, room) {
 		if (battles[id]) {
 			throw new Error("Battle with ID " + id + " already exists.");
@@ -121,7 +119,7 @@ let Battle = (function () {
 		this.process.send('' + this.id + '|' + slice.call(arguments).join('|'));
 	};
 	Battle.prototype.sendFor = function (user, action) {
-		let player = this.playerTable[toId(user)];
+		var player = this.playerTable[toId(user)];
 		if (!player) {
 			Monitor.debug('SENDFOR FAILED in ' + this.id + ': Player doesn\'t exist: ' + user.name);
 			return;
@@ -130,8 +128,8 @@ let Battle = (function () {
 		this.send.apply(this, [action, player].concat(slice.call(arguments, 2)));
 	};
 	Battle.prototype.sendForOther = function (user, action) {
-		let opposite = {'p1':'p2', 'p2':'p1'};
-		let player = this.playerTable[toId(user)];
+		var opposite = {'p1':'p2', 'p2':'p1'};
+		var player = this.playerTable[toId(user)];
 		if (!player) return;
 
 		this.send.apply(this, [action, opposite[player]].concat(slice.call(arguments, 2)));
@@ -140,6 +138,7 @@ let Battle = (function () {
 	Battle.prototype.rqid = '';
 	Battle.prototype.inactiveQueued = false;
 	Battle.prototype.receive = function (lines) {
+		var player;
 		Monitor.activeIp = this.activeIp;
 		switch (lines[1]) {
 		case 'update':
@@ -161,25 +160,23 @@ let Battle = (function () {
 			this.inactiveSide = -1;
 			break;
 
-		case 'sideupdate': {
-			let player = this.getPlayer(lines[2]);
+		case 'sideupdate':
+			player = this.getPlayer(lines[2]);
 			if (player) {
 				player.sendTo(this.id, lines[3]);
 			}
 			break;
-		}
 
-		case 'callback': {
-			let player = this.getPlayer(lines[2]);
+		case 'callback':
+			player = this.getPlayer(lines[2]);
 			if (player) {
 				player.sendTo(this.id, '|callback|' + lines[3]);
 			}
 			break;
-		}
 
-		case 'request': {
-			let player = this.getPlayer(lines[2]);
-			let rqid = lines[3];
+		case 'request':
+			player = this.getPlayer(lines[2]);
+			var rqid = lines[3];
 			if (player) {
 				this.requests[player.userid] = lines[4];
 				player.sendTo(this.id, '|request|' + lines[4]);
@@ -189,7 +186,6 @@ let Battle = (function () {
 				this.inactiveQueued = true;
 			}
 			break;
-		}
 
 		case 'log':
 			this.logData = JSON.parse(lines[2]);
@@ -207,7 +203,7 @@ let Battle = (function () {
 	};
 
 	Battle.prototype.resendRequest = function (connection) {
-		let request = this.requests[connection.user];
+		var request = this.requests[connection.user];
 		if (request) {
 			connection.sendTo(this.id, '|request|' + request);
 		}
@@ -251,7 +247,7 @@ let Battle = (function () {
 			user.battles[this.id] = true;
 		}
 		this.players[slot] = (user || null);
-		let oldplayerid = this.playerids[slot];
+		var oldplayerid = this.playerids[slot];
 		if (oldplayerid) {
 			if (user) {
 				this.requests[user.userid] = this.requests[oldplayerid];
@@ -261,9 +257,9 @@ let Battle = (function () {
 		this.playerids[slot] = (user ? user.userid : null);
 		this.playerTable = {};
 		this.active = !this.ended;
-		for (let i = 0, len = this.players.length; i < len; i++) {
-			let player = this.players[i];
-			this['p' + (i + 1)] = player ? player.name : '';
+		for (var i = 0, len = this.players.length; i < len; i++) {
+			var player = this.players[i];
+			this['p' + (i + 1)] = player ? player.name :    '';
 			if (!player) {
 				this.active = false;
 				continue;
@@ -295,13 +291,13 @@ let Battle = (function () {
 		if (this.players[slot] || slot >= this.players.length) return false;
 		if (user === this.players[0] || user === this.players[1]) return false;
 
-		for (let i = 0; i < user.connections.length; i++) {
-			let connection = user.connections[i];
+		for (var i = 0; i < user.connections.length; i++) {
+			var connection = user.connections[i];
 			Sockets.subchannelMove(connection.worker, this.id, slot + 1, connection.socketid);
 		}
 		this.setPlayer(user, slot);
 
-		let message = '' + user.avatar;
+		var message = '' + user.avatar;
 		if (!this.started) {
 			message += "\n" + team;
 		}
@@ -311,9 +307,9 @@ let Battle = (function () {
 	};
 
 	Battle.prototype.rename = function () {
-		for (let i = 0, len = this.players.length; i < len; i++) {
-			let player = this.players[i];
-			let playerid = this.playerids[i];
+		for (var i = 0, len = this.players.length; i < len; i++) {
+			var player = this.players[i];
+			var playerid = this.playerids[i];
 			if (!player) continue;
 			if (player.userid !== playerid) {
 				this.setPlayer(player, i);
@@ -323,12 +319,12 @@ let Battle = (function () {
 	};
 
 	Battle.prototype.leave = function (user) {
-		for (let i = 0, len = this.players.length; i < len; i++) {
-			let player = this.players[i];
+		for (var i = 0, len = this.players.length; i < len; i++) {
+			var player = this.players[i];
 			if (player === user) {
 				this.sendFor(user, 'leave');
-				for (let j = 0; j < user.connections.length; j++) {
-					let connection = user.connections[j];
+				for (var j = 0; j < user.connections.length; j++) {
+					var connection = user.connections[j];
 					Sockets.subchannelMove(connection.worker, this.id, '0', connection.socketid);
 				}
 				this.setPlayer(null, i);

@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleTypeChart = {
 	"Bug": {
 		inherit: true,

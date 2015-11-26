@@ -1,15 +1,13 @@
-'use strict';
-
 const REPL_ENABLED = false;
 
-const fs = require('fs');
-const path = require('path');
-const net = require('net');
+var fs = require('fs');
+var path = require('path');
+var net = require('net');
 
-let sockets = [];
+var sockets = [];
 
 function cleanup() {
-	for (let s = 0; s < sockets.length; ++s) {
+	for (var s = 0; s < sockets.length; ++s) {
 		try {
 			fs.unlinkSync(sockets[s]);
 		} catch (e) {}
@@ -30,27 +28,29 @@ exports.start = function (prefix, suffix, evalFunction) {
 	if (!REPL_ENABLED) return;
 	if (process.platform === 'win32') return; // Windows doesn't support sockets mounted in the filesystem
 
-	let resolvedPrefix = path.resolve(__dirname, Config.replsocketprefix || 'logs/repl', prefix);
+	var resolvedPrefix = path.resolve(__dirname, Config.replsocketprefix || 'logs/repl', prefix);
 	if (!evalFunction) {
 		evalFunction = suffix;
 		suffix = "";
 	}
-	let name = resolvedPrefix + suffix;
+	var name = resolvedPrefix + suffix;
 
 	if (prefix === 'app') {
 		// Clear out any old sockets
-		let directory = path.dirname(resolvedPrefix);
+		var directory = path.dirname(resolvedPrefix);
 		fs.readdirSync(directory).forEach(function (file) {
-			let stat = fs.statSync(directory + '/' + file);
+			var stat = fs.statSync(directory + '/' + file);
 			if (!stat.isSocket()) {
 				return;
 			}
 
-			let socket = net.connect(directory + '/' + file, function () {
+			var socket = net.connect(directory + '/' + file, function () {
 				socket.end();
 				socket.destroy();
 			}).on('error', function () {
-				fs.unlink(directory + '/' + file, function () {});
+				try {
+					fs.unlinkSync(directory + '/' + file);
+				} catch (e) {}
 			});
 		});
 	}
@@ -69,18 +69,12 @@ exports.start = function (prefix, suffix, evalFunction) {
 		}).on('exit', socket.end.bind(socket));
 		socket.on('error', socket.destroy.bind(socket));
 	}).listen(name, function () {
-		fs.chmodSync(name, Config.replsocketmode || 0o600);
+		fs.chmodSync(name, Config.replsocketmode || 0600);
 		sockets.push(name);
 	}).on('error', function (e) {
 		if (e.code === "EADDRINUSE") {
-			fs.unlink(name, function (e) {
-				if (e && e.code !== "ENOENT") {
-					require('./crashlogger.js')(e, 'REPL: ' + name);
-					return;
-				}
-
-				exports.start(prefix, suffix, evalFunction);
-			});
+			fs.unlinkSync(name);
+			exports.start(prefix, suffix, evalFunction);
 			return;
 		}
 

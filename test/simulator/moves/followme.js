@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Follow Me', function () {
 	afterEach(function () {
@@ -9,8 +7,6 @@ describe('Follow Me', function () {
 	});
 
 	it('should redirect single-target moves towards it if it is a valid target', function () {
-		this.timeout(5000);
-
 		battle = BattleEngine.Battle.construct('battle-followme', 'triplescustomgame');
 		battle.join('p1', 'Guest 1', 1, [
 			{species: 'Clefable', ability: 'unaware', moves: ['followme']},
@@ -23,7 +19,7 @@ describe('Follow Me', function () {
 			{species: 'Alakazam', ability: 'synchronize', moves: ['lowkick']}
 		]);
 		battle.commitDecisions(); // Team Preview
-		let hitCount = 0;
+		var hitCount = 0;
 		battle.on('Damage', battle.getFormat(), function (damage, pokemon) {
 			if (pokemon.template.speciesid === 'clefable') {
 				hitCount++;

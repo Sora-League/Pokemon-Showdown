@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Substitute', function () {
 	afterEach(function () {
@@ -13,7 +11,7 @@ describe('Substitute', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: 'Mewtwo', ability: 'pressure', moves: ['substitute']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Mewtwo', ability: 'pressure', moves: ['recover']}]);
 		battle.commitDecisions();
-		let pokemon = battle.p1.active[0];
+		var pokemon = battle.p1.active[0];
 		assert.strictEqual(pokemon.maxhp - pokemon.hp, Math.floor(pokemon.maxhp / 4));
 	});
 
@@ -33,7 +31,7 @@ describe('Substitute', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: 'Mewtwo', ability: 'pressure', moves: ['substitute']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Mewtwo', ability: 'pressure', item: 'laggingtail', moves: ['psystrike']}]);
 		battle.commitDecisions();
-		let pokemon = battle.p1.active[0];
+		var pokemon = battle.p1.active[0];
 		assert.strictEqual(pokemon.maxhp - pokemon.hp, Math.floor(pokemon.maxhp / 4));
 	});
 
@@ -44,7 +42,7 @@ describe('Substitute', function () {
 		battle.commitDecisions();
 		battle.choose('p1', 'move 2');
 		battle.commitDecisions();
-		let pokemon = battle.p1.active[0];
+		var pokemon = battle.p1.active[0];
 		assert.notStrictEqual(pokemon.maxhp - pokemon.hp, Math.floor(pokemon.maxhp / 4));
 	});
 
@@ -55,7 +53,7 @@ describe('Substitute', function () {
 		battle.commitDecisions();
 		battle.choose('p2', 'move 2');
 		battle.commitDecisions();
-		let pokemon = battle.p2.active[0];
+		var pokemon = battle.p2.active[0];
 		assert.strictEqual(pokemon.maxhp - pokemon.hp, Math.ceil(Math.floor(battle.p1.active[0].maxhp / 4) / 2));
 	});
 
@@ -64,7 +62,7 @@ describe('Substitute', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: 'Zangoose', ability: 'pressure', moves: ['substitute']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Zangoose', ability: 'noguard', moves: ['bellydrum', 'drainpunch']}]);
 		battle.commitDecisions();
-		let hp = battle.p2.active[0].hp;
+		var hp = battle.p2.active[0].hp;
 		battle.choose('p2', 'move 2');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p2.active[0].hp - hp, Math.ceil(Math.floor(battle.p1.active[0].maxhp / 4) / 2));
@@ -74,7 +72,7 @@ describe('Substitute', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Mewtwo', ability: 'noguard', moves: ['substitute']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Mewtwo', ability: 'pressure', item: 'laggingtail', moves: ['hypnosis', 'toxic', 'poisongas', 'thunderwave', 'willowisp']}]);
-		for (let i = 1; i <= 5; i++) {
+		for (var i = 1; i <= 5; i++) {
 			battle.choose('p2', 'move ' + i);
 			battle.commitDecisions();
 			assert.strictEqual(battle.p1.active[0].status, '');

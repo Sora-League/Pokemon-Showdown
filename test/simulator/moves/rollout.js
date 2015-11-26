@@ -1,13 +1,11 @@
-'use strict';
+var assert = require('assert');
+var battle;
 
-const assert = require('assert');
-let battle;
+var moves = ['Ice Ball', 'Rollout'];
 
-let moves = ['Ice Ball', 'Rollout'];
-
-for (let i = 0; i < moves.length; i++) {
+for (var i = 0; i < moves.length; i++) {
 	describe(moves[i], function () {
-		let id = moves[i].toLowerCase().replace(/\W+/g, '');
+		var id = moves[i].toLowerCase().replace(/\W+/g, '');
 
 		afterEach(function () {
 			battle.destroy();
@@ -19,8 +17,8 @@ for (let i = 0; i < moves.length; i++) {
 			battle.join('p2', 'Guest 2', 1, [{species: 'Steelix', ability: 'noguard', moves: ['recover']}]);
 			battle.commitDecisions(); // Team Preview
 
-			let ebp = 30;
-			let count = 0;
+			var ebp = 30;
+			var count = 0;
 			battle.on('BasePower', battle.getFormat(), function (basePower) {
 				count++;
 				assert.strictEqual(basePower, ebp);
@@ -31,7 +29,7 @@ for (let i = 0; i < moves.length; i++) {
 				}
 			});
 
-			for (let j = 0; j < 8; j++) {
+			for (var j = 0; j < 8; j++) {
 				battle.commitDecisions();
 			}
 			assert.strictEqual(count, 8);
@@ -43,8 +41,8 @@ for (let i = 0; i < moves.length; i++) {
 			battle.join('p2', 'Guest 2', 1, [{species: 'Steelix', ability: 'furcoat', moves: ['recover']}]);
 			battle.commitDecisions(); // Team Preview
 
-			let ebp = 30;
-			let count = 0;
+			var ebp = 30;
+			var count = 0;
 			battle.on('Accuracy', battle.getFormat(), function (accuracy, target, pokemon, move) {
 				if (move.id === 'recover') return;
 
@@ -61,7 +59,7 @@ for (let i = 0; i < moves.length; i++) {
 				ebp *= 2;
 			});
 
-			for (let j = 0; j < 5; j++) {
+			for (var j = 0; j < 5; j++) {
 				battle.commitDecisions();
 			}
 			assert.strictEqual(count, 5);
@@ -73,8 +71,8 @@ for (let i = 0; i < moves.length; i++) {
 			battle.join('p2', 'Guest 2', 1, [{species: 'Steelix', ability: 'noguard', moves: ['recover']}]);
 			battle.commitDecisions(); // Team Preview
 
-			let ebp = 30;
-			let count = 0;
+			var ebp = 30;
+			var count = 0;
 			battle.on('BeforeMove', battle.getFormat(), function (attacker, defender, move) {
 				if (move.id === 'recover') return;
 
@@ -89,7 +87,7 @@ for (let i = 0; i < moves.length; i++) {
 				ebp *= 2;
 			});
 
-			for (let j = 0; j < 5; j++) {
+			for (var j = 0; j < 5; j++) {
 				battle.commitDecisions();
 			}
 			assert.strictEqual(count, 5);
@@ -101,7 +99,7 @@ for (let i = 0; i < moves.length; i++) {
 			battle.join('p2', 'Guest 2', 1, [{species: 'Steelix', ability: 'noguard', moves: ['recover']}]);
 			battle.commitDecisions(); // Team Preview
 
-			let runCount = 0;
+			var runCount = 0;
 			battle.on('BasePower', battle.getFormat(), function (basePower) {
 				assert.strictEqual(basePower, 60);
 				runCount++;
@@ -119,7 +117,7 @@ for (let i = 0; i < moves.length; i++) {
 			battle.join('p2', 'Guest 2', 1, [{species: 'Steelix', ability: 'noguard', moves: ['recover']}]);
 			battle.commitDecisions(); // Team Preview
 
-			let hitCount = 0;
+			var hitCount = 0;
 			battle.on('BasePower', battle.getFormat(), function (basePower) {
 				assert.strictEqual(basePower, 30);
 				hitCount++;

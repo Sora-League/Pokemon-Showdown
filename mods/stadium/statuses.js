@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleStatuses = {
 	brn: {
 		effectType: 'Status',

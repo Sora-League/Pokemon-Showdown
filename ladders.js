@@ -7,17 +7,15 @@
  * @license MIT license
  */
 
-'use strict';
+/* global Ladders: true */
+var Ladders = module.exports = getLadder;
 
-let Ladders = module.exports = getLadder;
-
-const fs = require('fs');
+var fs = require('fs');
+var readline = require('readline');
 
 function getLadder(formatid) {
 	return new Ladder(formatid);
 }
-
-Ladders.get = Ladders;
 
 // tells the client to ask the server for format information
 Ladders.formatsListPrefix = '|,LL';
@@ -27,7 +25,7 @@ Ladders.formatsListPrefix = '|,LL';
 // ladder is basically a 2D array representing the corresponding ladder.tsv
 //   with userid in front
 // ladder = [[userid, elo, username, w, l, t]]
-let ladderCaches = Ladders.ladderCaches = Object.create(null);
+var ladderCaches = Ladders.ladderCaches = Object.create(null);
 
 function Ladder(formatid) {
 	this.formatid = toId(formatid);
@@ -38,9 +36,9 @@ function Ladder(formatid) {
 Ladder.prototype.load = function () {
 	// ladderCaches[formatid]
 	if (this.formatid in ladderCaches) {
-		let cachedLadder = ladderCaches[this.formatid];
+		var cachedLadder = ladderCaches[this.formatid];
 		if (cachedLadder.then) {
-			let self = this;
+			var self = this;
 			return cachedLadder.then(function (ladder) {
 				self.loadedLadder = ladder;
 				return ladder;
@@ -49,7 +47,7 @@ Ladder.prototype.load = function () {
 			return Promise.resolve(this.loadedLadder = cachedLadder);
 		}
 	}
-	let self = this;
+	var self = this;
 	return (ladderCaches[this.formatid] = new Promise(function (resolve, reject) {
 		fs.readFile('config/ladders/' + self.formatid + '.tsv', function (err, data) {
 			if (err) {
@@ -58,12 +56,12 @@ Ladder.prototype.load = function () {
 				resolve(self.loadedLadder);
 				return;
 			}
-			let ladder = [];
-			let dataLines = ('' + data).split('\n');
-			for (let i = 1; i < dataLines.length; i++) {
-				let line = dataLines[i].trim();
+			var ladder = [];
+			var dataLines = ('' + data).split('\n');
+			for (var i = 1; i < dataLines.length; i++) {
+				var line = dataLines[i].trim();
 				if (!line) continue;
-				let row = line.split('\t');
+				var row = line.split('\t');
 				ladder.push([toId(row[1]), Number(row[0]), row[1], Number(row[2]), Number(row[3]), Number(row[4]), row[5]]);
 			}
 			self.loadedLadder = ladderCaches[self.formatid] = ladder;
@@ -77,7 +75,7 @@ Ladder.prototype.save = function () {
 	if (this.saving) return;
 	this.saving = true;
 	if (!this.loadedLadder) {
-		let self = this;
+		var self = this;
 		this.ladder.then(function () {
 			self.save();
 		});
@@ -87,10 +85,10 @@ Ladder.prototype.save = function () {
 		this.saving = false;
 		return;
 	}
-	let stream = fs.createWriteStream('config/ladders/' + this.formatid + '.tsv');
+	var stream = fs.createWriteStream('config/ladders/' + this.formatid + '.tsv');
 	stream.write('Elo\tUsername\tW\tL\tT\tLast update\r\n');
-	for (let i = 0; i < this.loadedLadder.length; i++) {
-		let row = this.loadedLadder[i];
+	for (var i = 0; i < this.loadedLadder.length; i++) {
+		var row = this.loadedLadder[i];
 		stream.write(row.slice(1).join('\t') + '\r\n');
 	}
 	stream.end();
@@ -98,12 +96,12 @@ Ladder.prototype.save = function () {
 };
 
 Ladder.prototype.indexOfUser = function (username, createIfNeeded) {
-	let userid = toId(username);
-	for (let i = 0; i < this.loadedLadder.length; i++) {
+	var userid = toId(username);
+	for (var i = 0; i < this.loadedLadder.length; i++) {
 		if (this.loadedLadder[i][0] === userid) return i;
 	}
 	if (createIfNeeded) {
-		let index = this.loadedLadder.length;
+		var index = this.loadedLadder.length;
 		this.loadedLadder.push([userid, 1000, username, 0, 0, 0]);
 		return index;
 	}
@@ -111,14 +109,14 @@ Ladder.prototype.indexOfUser = function (username, createIfNeeded) {
 };
 
 Ladder.prototype.getTop = function () {
-	let formatid = this.formatid;
-	let name = Tools.getFormat(formatid).name;
+	var formatid = this.formatid;
+	var name = Tools.getFormat(formatid).name;
 	return this.ladder.then(function (ladder) {
-		let buf = '<h3>' + name + ' Top 100</h3>';
+		var buf = '<h3>' + name + ' Top 100</h3>';
 		buf += '<table>';
 		buf += '<tr><th>' + ['', 'Username', '<abbr title="Elo rating">Elo</abbr>', 'W', 'L', 'T'].join('</th><th>') + '</th></tr>';
-		for (let i = 0; i < ladder.length; i++) {
-			let row = ladder[i];
+		for (var i = 0; i < ladder.length; i++) {
+			var row = ladder[i];
 			buf += '<tr><td>' + [
 				i + 1, row[2], '<strong>' + Math.round(row[1]) + '</strong>', row[3], row[4], row[5]
 			].join('</td><td>') + '</td></tr>';
@@ -128,28 +126,28 @@ Ladder.prototype.getTop = function () {
 };
 
 Ladder.prototype.getRating = function (userid) {
-	let formatid = this.formatid;
-	let user = Users.getExact(userid);
+	var formatid = this.formatid;
+	var user = Users.getExact(userid);
 	if (user && user.mmrCache[formatid]) {
 		return Promise.resolve(user.mmrCache[formatid]);
 	}
-	let self = this;
+	var self = this;
 	return this.ladder.then(function () {
 		if (user.userid !== userid) return;
-		let index = self.indexOfUser(userid);
+		var index = self.indexOfUser(userid);
 		if (index < 0) return (user.mmrCache[formatid] = 1000);
 		return (user.mmrCache[formatid] = self.loadedLadder[index][1]);
 	});
 };
 
 Ladder.prototype.updateRow = function (row, score, foeElo) {
-	let elo = row[1];
+	var elo = row[1];
 
 	// The K factor determines how much your Elo changes when you win or
 	// lose games. Larger K means more change.
 	// In the "original" Elo, K is constant, but it's common for K to
 	// get smaller as your rating goes up
-	let K = 50;
+	var K = 50;
 
 	// dynamic K-scaling (optional)
 	if (elo < 1200) {
@@ -165,7 +163,7 @@ Ladder.prototype.updateRow = function (row, score, foeElo) {
 	}
 
 	// main Elo formula
-	let E = 1 / (1 + Math.pow(10, (foeElo - elo) / 400));
+	var E = 1 / (1 + Math.pow(10, (foeElo - elo) / 400));
 	elo += K * (score - E);
 
 	if (elo < 1000) elo = 1000;
@@ -182,20 +180,22 @@ Ladder.prototype.updateRow = function (row, score, foeElo) {
 };
 
 Ladder.prototype.updateRating = function (p1name, p2name, p1score, room) {
-	let formatid = this.formatid;
-	let self = this;
+	var formatid = this.formatid;
+	var self = this;
 	this.ladder.then(function () {
 		if (!room.battle) {
 			console.log('room expired before ladder update was received');
 			return;
 		}
-		let p1newElo, p2newElo;
+		var p1newElo, p2newElo;
 		try {
-			let p1index = self.indexOfUser(p1name, true);
-			let p1elo = self.loadedLadder[p1index][1];
+			var p1id = toId(p1name);
+			var p1index = self.indexOfUser(p1name, true);
+			var p1elo = self.loadedLadder[p1index][1];
 
-			let p2index = self.indexOfUser(p2name, true);
-			let p2elo = self.loadedLadder[p2index][1];
+			var p2id = toId(p2name);
+			var p2index = self.indexOfUser(p2name, true);
+			var p2elo = self.loadedLadder[p2index][1];
 
 			self.updateRow(self.loadedLadder[p1index], p1score, p2elo);
 			self.updateRow(self.loadedLadder[p2index], 1 - p1score, p1elo);
@@ -206,12 +206,12 @@ Ladder.prototype.updateRating = function (p1name, p2name, p1score, room) {
 			// console.log('L: ' + self.loadedLadder.map(r => ''+Math.round(r[1])+' '+r[2]).join('\n'));
 
 			// move p1 to its new location
-			let newIndex = p1index;
+			var newIndex = p1index;
 			while (newIndex > 0 && self.loadedLadder[newIndex - 1][1] <= p1newElo) newIndex--;
 			while (newIndex === p1index || (self.loadedLadder[newIndex] && self.loadedLadder[newIndex][1] > p1newElo)) newIndex++;
 			// console.log('ni='+newIndex+', p1i='+p1index);
 			if (newIndex !== p1index && newIndex !== p1index + 1) {
-				let row = self.loadedLadder.splice(p1index, 1)[0];
+				var row = self.loadedLadder.splice(p1index, 1)[0];
 				// adjust for removed row
 				if (newIndex > p1index) newIndex--;
 				if (p2index > p1index) p2index--;
@@ -227,14 +227,14 @@ Ladder.prototype.updateRating = function (p1name, p2name, p1score, room) {
 			while (newIndex === p2index || (self.loadedLadder[newIndex] && self.loadedLadder[newIndex][1] > p2newElo)) newIndex++;
 			// console.log('ni='+newIndex+', p2i='+p2index);
 			if (newIndex !== p2index && newIndex !== p2index + 1) {
-				let row = self.loadedLadder.splice(p2index, 1)[0];
+				var row = self.loadedLadder.splice(p2index, 1)[0];
 				// adjust for removed row
 				if (newIndex > p2index) newIndex--;
 
 				self.loadedLadder.splice(newIndex, 0, row);
 			}
 
-			let reasons = '' + (Math.round(p1newElo) - Math.round(p1elo)) + ' for ' + (p1score > 0.9 ? 'winning' : (p1score < 0.1 ? 'losing' : 'tying'));
+			var reasons = '' + (Math.round(p1newElo) - Math.round(p1elo)) + ' for ' + (p1score > 0.9 ? 'winning' : (p1score < 0.1 ? 'losing' : 'tying'));
 			if (reasons.charAt(0) !== '-') reasons = '+' + reasons;
 			room.addRaw(Tools.escapeHTML(p1name) + '\'s rating: ' + Math.round(p1elo) + ' &rarr; <strong>' + Math.round(p1newElo) + '</strong><br />(' + reasons + ')');
 
@@ -242,9 +242,9 @@ Ladder.prototype.updateRating = function (p1name, p2name, p1score, room) {
 			if (reasons.charAt(0) !== '-') reasons = '+' + reasons;
 			room.addRaw(Tools.escapeHTML(p2name) + '\'s rating: ' + Math.round(p2elo) + ' &rarr; <strong>' + Math.round(p2newElo) + '</strong><br />(' + reasons + ')');
 
-			let p1 = Users.getExact(p1name);
+			var p1 = Users.getExact(p1name);
 			if (p1) p1.mmrCache[formatid] = +p1newElo;
-			let p2 = Users.getExact(p2name);
+			var p2 = Users.getExact(p2name);
 			if (p2) p2.mmrCache[formatid] = +p2newElo;
 			self.save();
 			room.update();
@@ -259,3 +259,4 @@ Ladder.prototype.updateRating = function (p1name, p2name, p1score, room) {
 		}
 	});
 };
+

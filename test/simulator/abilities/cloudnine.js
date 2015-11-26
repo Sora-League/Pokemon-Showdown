@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Cloud Nine', function () {
 	afterEach(function () {
@@ -20,7 +18,7 @@ describe('Cloud Nine', function () {
 
 	it('should negate the effects of Sun on Fire-type and Water-type attacks', function () {
 		battle = BattleEngine.Battle.construct();
-		let move, basePower;
+		var move, basePower;
 		battle.join('p1', 'Guest 1', 1, [{species: 'Groudon', ability: 'drought', moves: ['rest']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Golduck', ability: 'cloudnine', moves: ['calmmind']}]);
 		battle.commitDecisions();
@@ -34,7 +32,7 @@ describe('Cloud Nine', function () {
 
 	it('should negate the effects of Rain on Fire-type and Water-type attacks', function () {
 		battle = BattleEngine.Battle.construct();
-		let move, basePower;
+		var move, basePower;
 		battle.join('p1', 'Guest 1', 1, [{species: 'Kyogre', ability: 'drizzle', moves: ['rest']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Golduck', ability: 'cloudnine', moves: ['calmmind']}]);
 		battle.commitDecisions();
@@ -92,7 +90,7 @@ describe('Cloud Nine', function () {
 		battle.join('p2', 'Guest 2', 1, [{species: 'Sunkern', ability: 'solarpower', moves: ['sunnyday']}]);
 		battle.commitDecisions();
 		assert.strictEqual(battle.log[battle.lastMoveLine + 1], '|-weather|SunnyDay');
-		for (let i = 0; i < 4; i++) {
+		for (var i = 0; i < 4; i++) {
 			assert.strictEqual(battle.log[battle.lastMoveLine + 3], '|-weather|SunnyDay|[upkeep]');
 			battle.commitDecisions();
 		}

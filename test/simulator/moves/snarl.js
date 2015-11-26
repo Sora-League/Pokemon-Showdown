@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Snarl', function () {
 	afterEach(function () {

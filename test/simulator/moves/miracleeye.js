@@ -1,7 +1,5 @@
-'use strict';
-
-let battle;
-const assert = require('assert');
+var battle;
+var assert = require('assert');
 
 describe('Miracle Eye', function () {
 	afterEach(function () {
@@ -25,7 +23,7 @@ describe('Miracle Eye', function () {
 		battle.choose('p1', 'move 2');
 		battle.commitDecisions();
 		battle.boost({evasion: 6}, battle.p2.active[0]);
-		for (let i = 0; i < 16; i++) {
+		for (var i = 0; i < 16; i++) {
 			battle.commitDecisions();
 			assert.notStrictEqual(battle.p2.active[0].hp, battle.p2.active[0].maxhp);
 		}
@@ -38,7 +36,7 @@ describe('Miracle Eye', function () {
 		battle.choose('p1', 'move 3');
 		battle.commitDecisions();
 		battle.boost({spe: 6, evasion: -6}, battle.p2.active[0]);
-		for (let i = 0; i < 16; i++) {
+		for (var i = 0; i < 16; i++) {
 			battle.commitDecisions();
 			assert.notStrictEqual(battle.p2.active[0].hp, battle.p2.active[0].maxhp);
 		}

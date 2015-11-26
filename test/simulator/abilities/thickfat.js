@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Thick Fat', function () {
 	afterEach(function () {
@@ -12,8 +10,8 @@ describe('Thick Fat', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: "Hariyama", ability: 'thickfat', moves: ['splash']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Nidoking", ability: 'sheerforce', moves: ['incinerate', 'icebeam']}]);
-		let damage;
-		let pokemon = battle.p1.active[0];
+		var damage;
+		var pokemon = battle.p1.active[0];
 		battle.commitDecisions();
 		damage = pokemon.maxhp - pokemon.hp;
 		assert.ok(damage >= 29 && damage <= 35);
@@ -28,8 +26,8 @@ describe('Thick Fat', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: "Hariyama", ability: 'thickfat', moves: ['splash']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Nidoking", ability: 'moldbreaker', moves: ['incinerate', 'icebeam']}]);
-		let damage;
-		let pokemon = battle.p1.active[0];
+		var damage;
+		var pokemon = battle.p1.active[0];
 		battle.commitDecisions();
 		damage = pokemon.maxhp - pokemon.hp;
 		assert.ok(damage >= 57 && damage <= 68);

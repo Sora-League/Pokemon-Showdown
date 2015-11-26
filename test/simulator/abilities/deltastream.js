@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Delta Stream', function () {
 	afterEach(function () {
@@ -19,7 +17,7 @@ describe('Delta Stream', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: "Tornadus", ability: 'deltastream', item: 'weaknesspolicy', moves: ['recover']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Smeargle", ability: 'owntempo', moves: ['thundershock', 'powdersnow', 'powergem']}]);
-		for (let i = 0; i < 3; i++) {
+		for (var i = 0; i < 3; i++) {
 			battle.choose('p2', 'move ' + i);
 			battle.commitDecisions();
 			assert.strictEqual(battle.p1.active[0].boosts.atk, 0);
@@ -46,7 +44,7 @@ describe('Delta Stream', function () {
 			{species: "Tyranitar", ability: 'sandstream', moves: ['sandstorm']},
 			{species: "Abomasnow", ability: 'snowwarning', moves: ['hail']}
 		]);
-		for (let i = 2; i <= 5; i++) {
+		for (var i = 2; i <= 5; i++) {
 			battle.choose('p1', 'switch ' + i);
 			battle.commitDecisions();
 			assert.ok(battle.isWeather('deltastream'));

@@ -5,9 +5,6 @@
  * Ice was neutral to fire
  * Psychic was immune to ghost
  */
-
-'use strict';
-
 exports.BattleTypeChart = {
 	"Bug": {
 		damageTaken: {

@@ -1,15 +1,13 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
-let plates = ['Draco Plate', 'Dread Plate', 'Earth Plate', 'Fist Plate', 'Flame Plate', 'Icicle Plate',
+var assert = require('assert');
+var battle;
+var plates = ['Draco Plate', 'Dread Plate', 'Earth Plate', 'Fist Plate', 'Flame Plate', 'Icicle Plate',
 				'Insect Plate', 'Iron Plate', 'Meadow Plate', 'Mind Plate', 'Pixie Plate', 'Sky Plate',
 				'Splash Plate', 'Spooky Plate', 'Stone Plate', 'Toxic Plate', 'Zap Plate'];
 
 describe('Plates', function () {
-	for (let i = 0; i < plates.length; i++) {
+	for (var i = 0; i < plates.length; i++) {
 		describe(plates[i], function () {
-			let id = plates[i].replace(/\W+/g, '').toLowerCase();
+			var id = plates[i].replace(/\W+/g, '').toLowerCase();
 
 			afterEach(function () {
 				battle.destroy();

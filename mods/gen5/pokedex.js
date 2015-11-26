@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattlePokedex = {
 	butterfree: {
 		inherit: true,

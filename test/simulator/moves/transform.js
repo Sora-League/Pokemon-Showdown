@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Transform', function () {
 	afterEach(function () {
@@ -21,9 +19,9 @@ describe('Transform', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: "Ditto", ability: 'limber', moves: ['transform']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Mewtwo", ability: 'pressure', moves: ['rest']}]);
 		battle.commitDecisions();
-		let p1poke = battle.p1.active[0];
-		let p2poke = battle.p2.active[0];
-		for (let stat in p1poke.stats) {
+		var p1poke = battle.p1.active[0];
+		var p2poke = battle.p2.active[0];
+		for (var stat in p1poke.stats) {
 			assert.strictEqual(p1poke.stats[stat], p2poke.stats[stat]);
 		}
 		assert.notStrictEqual(p1poke.hp, p2poke.hp);
@@ -34,13 +32,13 @@ describe('Transform', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: "Mew", ability: 'synchronize', item: 'laggingtail', moves: ['calmmind', 'agility', 'transform']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Scolipede", ability: 'swarm', moves: ['honeclaws', 'irondefense', 'doubleteam']}]);
-		for (let i = 1; i <= 3; i++) {
+		for (var i = 1; i <= 3; i++) {
 			battle.choose('p1', 'move ' + i);
 			battle.choose('p2', 'move ' + i);
 		}
-		let p1poke = battle.p1.active[0];
-		let p2poke = battle.p2.active[0];
-		for (let stat in p1poke.boosts) {
+		var p1poke = battle.p1.active[0];
+		var p2poke = battle.p2.active[0];
+		for (var stat in p1poke.boosts) {
 			assert.strictEqual(p1poke.boosts[stat], p2poke.boosts[stat]);
 		}
 	});
@@ -49,15 +47,15 @@ describe('Transform', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: "Ditto", ability: 'limber', moves: ['transform']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Mew", ability: 'synchronize', moves: ['rest', 'psychic', 'energyball', 'hyperbeam']}]);
-		let p1poke = battle.p1.active[0];
-		let p2poke = battle.p2.active[0];
+		var p1poke = battle.p1.active[0];
+		var p2poke = battle.p2.active[0];
 		battle.commitDecisions();
 		assert.strictEqual(p1poke.moves.length, p2poke.moves.length);
-		for (let i = 0; i < p1poke.moves.length; i++) {
-			let move = p1poke.moves[i];
+		for (var i = 0; i < p1poke.moves.length; i++) {
+			var move = p1poke.moves[i];
 			assert.strictEqual(move, p2poke.moves[i]);
 			move = battle.getMove(move);
-			let movepp = p1poke.getMoveData(move);
+			var movepp = p1poke.getMoveData(move);
 			assert.strictEqual(movepp.pp, 5);
 		}
 	});

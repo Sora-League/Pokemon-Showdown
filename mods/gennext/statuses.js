@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleStatuses = {
 	frz: {
 		effectType: 'Status',
@@ -31,7 +29,7 @@ exports.BattleStatuses = {
 			return this.random(2, 4);
 		},
 		onResidual: function (target) {
-			let move = this.getMove(target.lastMove);
+			var move = this.getMove(target.lastMove);
 			if (!move.self || move.self.volatileStatus !== 'lockedmove') {
 				// don't lock, and bypass confusion for calming
 				delete target.volatiles['lockedmove'];
@@ -50,7 +48,7 @@ exports.BattleStatuses = {
 	confusion: {
 		// this is a volatile status
 		onStart: function (target, source, sourceEffect) {
-			let result = this.runEvent('TryConfusion', target, source, sourceEffect);
+			var result = this.runEvent('TryConfusion', target, source, sourceEffect);
 			if (!result) return result;
 			if (sourceEffect && sourceEffect.id === 'lockedmove') {
 				this.add('-start', target, 'confusion', '[fatigue]');
@@ -265,7 +263,7 @@ exports.BattleStatuses = {
 		// Cryogonal: infinite hail, Ice Body
 		onModifyMove: function (move) {
 			if (move.id === 'hail') {
-				let weather = move.weather;
+				var weather = move.weather;
 				move.weather = null;
 				move.onHit = function (target, source) {
 					this.setWeather(weather, source, this.getAbility('snowwarning'));
@@ -288,7 +286,7 @@ exports.BattleStatuses = {
 		// Probopass: infinite sand
 		onModifyMove: function (move) {
 			if (move.id === 'sandstorm') {
-				let weather = move.weather;
+				var weather = move.weather;
 				move.weather = null;
 				move.onHit = function (target, source) {
 					this.setWeather(weather, source, this.getAbility('sandstream'));
@@ -302,7 +300,7 @@ exports.BattleStatuses = {
 		// Phione: infinite rain
 		onModifyMove: function (move) {
 			if (move.id === 'raindance') {
-				let weather = move.weather;
+				var weather = move.weather;
 				move.weather = null;
 				move.onHit = function (target, source) {
 					this.setWeather(weather, source, this.getAbility('drizzle'));

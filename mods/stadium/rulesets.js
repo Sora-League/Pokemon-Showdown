@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleFormats = {
 	standard: {
 		effectType: 'Banlist',
@@ -7,12 +5,12 @@ exports.BattleFormats = {
 		banlist: ['Unreleased', 'Illegal'],
 		onValidateSet: function (set) {
 			// limit one of each move in Standard
-			let moves = [];
+			var moves = [];
 			if (set.moves) {
-				let hasMove = {};
-				for (let i = 0; i < set.moves.length; i++) {
-					let move = this.getMove(set.moves[i]);
-					let moveid = move.id;
+				var hasMove = {};
+				for (var i = 0; i < set.moves.length; i++) {
+					var move = this.getMove(set.moves[i]);
+					var moveid = move.id;
 					if (hasMove[moveid]) continue;
 					hasMove[moveid] = true;
 					moves.push(set.moves[i]);

@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Unburden', function () {
 	afterEach(function () {
@@ -12,7 +10,7 @@ describe('Unburden', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Hitmonlee', ability: 'unburden', item: 'whiteherb', moves: ['closecombat']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Scizor', ability: 'swarm', item: 'focussash', moves: ['swordsdance']}]);
-		let speed = battle.p1.active[0].getStat('spe');
+		var speed = battle.p1.active[0].getStat('spe');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].getStat('spe'), 2 * speed);
 	});
@@ -21,7 +19,7 @@ describe('Unburden', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Drifblim', ability: 'unburden', item: 'airballoon', moves: ['endure']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Machamp', ability: 'noguard', moves: ['stoneedge']}]);
-		let speed = battle.p1.active[0].getStat('spe');
+		var speed = battle.p1.active[0].getStat('spe');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].getStat('spe'), 2 * speed);
 	});
@@ -30,7 +28,7 @@ describe('Unburden', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Sceptile', ability: 'unburden', item: 'oranberry', moves: ['naturalgift']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Scizor', ability: 'swarm', item: 'focussash', moves: ['swordsdance']}]);
-		let speed = battle.p1.active[0].getStat('spe');
+		var speed = battle.p1.active[0].getStat('spe');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].getStat('spe'), 2 * speed);
 	});
@@ -39,7 +37,7 @@ describe('Unburden', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Sceptile', ability: 'unburden', item: 'whiteherb', moves: ['fling']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Scizor', ability: 'swarm', item: 'focussash', moves: ['swordsdance']}]);
-		let speed = battle.p1.active[0].getStat('spe');
+		var speed = battle.p1.active[0].getStat('spe');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].getStat('spe'), 2 * speed);
 	});
@@ -48,7 +46,7 @@ describe('Unburden', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Sceptile', ability: 'unburden', item: 'whiteherb', moves: ['leechseed']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Scizor', ability: 'swarm', moves: ['knockoff']}]);
-		let speed = battle.p1.active[0].getStat('spe');
+		var speed = battle.p1.active[0].getStat('spe');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].getStat('spe'), 2 * speed);
 	});
@@ -57,7 +55,7 @@ describe('Unburden', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Sceptile', ability: 'unburden', item: 'whiteherb', moves: ['leechseed']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Scizor', ability: 'moldbreaker', moves: ['knockoff']}]);
-		let speed = battle.p1.active[0].getStat('spe');
+		var speed = battle.p1.active[0].getStat('spe');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].getStat('spe'), 2 * speed);
 	});
@@ -66,7 +64,7 @@ describe('Unburden', function () {
 		battle = BattleEngine.Battle.construct();
 		battle.join('p1', 'Guest 1', 1, [{species: 'Hitmonlee', ability: 'unburden', item: 'fightinggem', moves: ['machpunch']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Togekiss', ability: 'serenegrace', item: 'laggingtail', moves: ['bestow', 'followme']}]);
-		let speed = battle.p1.active[0].getStat('spe');
+		var speed = battle.p1.active[0].getStat('spe');
 		battle.choose('p2', 'move followme');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].getStat('spe'), 2 * speed);

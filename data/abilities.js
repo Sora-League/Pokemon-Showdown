@@ -36,8 +36,6 @@ Ratings and how they work:
 
 */
 
-'use strict';
-
 exports.BattleAbilities = {
 	"adaptability": {
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
@@ -951,10 +949,7 @@ exports.BattleAbilities = {
 	"gooey": {
 		shortDesc: "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.",
 		onAfterDamage: function (damage, target, source, effect) {
-			if (effect && effect.flags['contact']) {
-				this.add('-ability', target, 'Gooey');
-				this.boost({spe: -1}, source, target);
-			}
+			if (effect && effect.flags['contact']) this.boost({spe: -1}, source, target);
 		},
 		id: "gooey",
 		name: "Gooey",
@@ -1242,7 +1237,7 @@ exports.BattleAbilities = {
 					activated = true;
 				}
 				if (foeactive[i].volatiles['substitute']) {
-					this.add('-immune', foeactive[i], '[msg]');
+					this.add('-activate', foeactive[i], 'Substitute', 'ability: Intimidate', '[of] ' + pokemon);
 				} else {
 					this.boost({atk: -1}, foeactive[i], pokemon);
 				}
@@ -1578,25 +1573,27 @@ exports.BattleAbilities = {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual: function (pokemon) {
-			var stats = [];
+			var stats = [], i = '';
 			var boost = {};
-			for (var statPlus in pokemon.boosts) {
-				if (pokemon.boosts[statPlus] < 6) {
-					stats.push(statPlus);
+			for (var i in pokemon.boosts) {
+				if (pokemon.boosts[i] < 6) {
+					stats.push(i);
 				}
 			}
-			var randomStat = stats.length ? stats[this.random(stats.length)] : "";
-			if (randomStat) boost[randomStat] = 2;
-
+			if (stats.length) {
+				i = stats[this.random(stats.length)];
+				boost[i] = 2;
+			}
 			stats = [];
-			for (var statMinus in pokemon.boosts) {
-				if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
-					stats.push(statMinus);
+			for (var j in pokemon.boosts) {
+				if (pokemon.boosts[j] > -6 && j !== i) {
+					stats.push(j);
 				}
 			}
-			randomStat = stats.length ? stats[this.random(stats.length)] : "";
-			if (randomStat) boost[randomStat] = -1;
-
+			if (stats.length) {
+				i = stats[this.random(stats.length)];
+				boost[i] = -1;
+			}
 			this.boost(boost);
 		},
 		id: "moody",
@@ -1822,17 +1819,23 @@ exports.BattleAbilities = {
 		onResidual: function (pokemon) {
 			if (pokemon.item) return;
 			var pickupTargets = [];
-			var allActives = pokemon.side.active.concat(pokemon.side.foe.active);
-			for (var i = 0; i < allActives.length; i++) {
-				var target = allActives[i];
+			var target;
+			for (var i = 0; i < pokemon.side.active.length; i++) {
+				target = pokemon.side.active[i];
+				if (target.lastItem && target.usedItemThisTurn && this.isAdjacent(pokemon, target)) {
+					pickupTargets.push(target);
+				}
+			}
+			for (var i = 0; i < pokemon.side.foe.active.length; i++) {
+				target = pokemon.side.foe.active[i];
 				if (target.lastItem && target.usedItemThisTurn && this.isAdjacent(pokemon, target)) {
 					pickupTargets.push(target);
 				}
 			}
 			if (!pickupTargets.length) return;
-			var randomTarget = pickupTargets[this.random(pickupTargets.length)];
-			pokemon.setItem(randomTarget.lastItem);
-			randomTarget.lastItem = '';
+			target = pickupTargets[this.random(pickupTargets.length)];
+			pokemon.setItem(target.lastItem);
+			target.lastItem = '';
 			var item = pokemon.getItem();
 			this.add('-item', pokemon, item, '[from] Pickup');
 			if (item.isBerry) pokemon.update();

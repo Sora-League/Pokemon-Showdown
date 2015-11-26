@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Misty Terrain', function () {
 	afterEach(function () {
@@ -30,8 +28,8 @@ describe('Misty Terrain', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: "Shaymin", ability: 'naturalcure', moves: ['mistyterrain']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Shaymin-Sky", ability: 'serenegrace', moves: ['leechseed']}]);
 		battle.commitDecisions();
-		let basePower;
-		let move = Tools.getMove('dragonpulse');
+		var basePower;
+		var move = Tools.getMove('dragonpulse');
 		basePower = battle.runEvent('BasePower', battle.p2.active[0], battle.p1.active[0], move, move.basePower, true);
 		assert.strictEqual(basePower, battle.modify(move.basePower, 0.5));
 		basePower = battle.runEvent('BasePower', battle.p1.active[0], battle.p2.active[0], move, move.basePower, true);
@@ -65,7 +63,7 @@ describe('Misty Terrain', function () {
 		battle.choose('p1', 'move 2');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].status, '');
-		let dataLine = battle.log[battle.lastMoveLine + 1].split('|');
+		var dataLine = battle.log[battle.lastMoveLine + 1].split('|');
 		assert.strictEqual(dataLine[1], '-start');
 		assert.ok(toId(dataLine[3]).endsWith('yawn'));
 	});
@@ -97,7 +95,7 @@ describe('Misty Terrain', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: "Whimsicott", ability: 'prankster', moves: ['mistyterrain']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Shuckle", ability: 'sturdy', moves: ['naturepower']}]);
 		battle.commitDecisions();
-		let resultMove = toId(battle.log[battle.lastMoveLine].split('|')[3]);
+		var resultMove = toId(battle.log[battle.lastMoveLine].split('|')[3]);
 		assert.strictEqual(resultMove, 'moonblast');
 	});
 });

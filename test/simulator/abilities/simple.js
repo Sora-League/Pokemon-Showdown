@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Simple', function () {
 	afterEach(function () {
@@ -28,7 +26,7 @@ describe('Simple [Gen 4]', function () {
 		battle = BattleEngine.Battle.construct('battle-simple-dpp-boosts', 'gen4customgame');
 		battle.join('p1', 'Guest 1', 1, [{species: "Bibarel", ability: 'simple', moves: ['defensecurl']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Gyarados", ability: 'moxie', moves: ['splash']}]);
-		let defense = battle.p1.active[0].getStat('def');
+		var defense = battle.p1.active[0].getStat('def');
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].boosts['def'], 1);
 		assert.strictEqual(battle.p1.active[0].getStat('def'), 2 * defense);
@@ -52,7 +50,7 @@ describe('Simple [Gen 4]', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: "Bibarel", ability: 'simple', moves: ['defensecurl']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Haxorus", ability: 'moldbreaker', item: 'laggingtail', moves: ['earthquake']}]);
 		battle.commitDecisions();
-		let hploss = battle.p1.active[0].maxhp - battle.p1.active[0].hp;
+		var hploss = battle.p1.active[0].maxhp - battle.p1.active[0].hp;
 		assert(hploss >= 102 && hploss <= 120);
 	});
 });

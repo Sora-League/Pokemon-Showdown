@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Battle Armor', function () {
 	afterEach(function () {
@@ -13,7 +11,7 @@ describe('Battle Armor', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: 'Slowbro', ability: 'battlearmor', moves: ['quickattack']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Cyrogonal', ability: 'noguard', moves: ['frostbreath']}]);
 		battle.commitDecisions(); // Team Preview
-		let successfulEvent = false;
+		var successfulEvent = false;
 		battle.on('ModifyDamage', battle.getFormat(), function (damage, attacker, defender, move) {
 			if (move.id === 'frostbreath') {
 				successfulEvent = true;
@@ -29,7 +27,7 @@ describe('Battle Armor', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: 'Slowbro', ability: 'battlearmor', moves: ['quickattack']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Cyrogonal', ability: 'moldbreaker', item: 'zoomlens', moves: ['frostbreath']}]);
 		battle.commitDecisions(); // Team Preview
-		let successfulEvent = false;
+		var successfulEvent = false;
 		battle.on('ModifyDamage', battle.getFormat(), function (damage, attacker, defender, move) {
 			if (move.id === 'frostbreath') {
 				successfulEvent = true;

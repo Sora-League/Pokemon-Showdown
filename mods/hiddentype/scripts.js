@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleScripts = {
 	pokemon: {
 		formeChange: function (template, dontRecalculateStats) {
@@ -10,7 +8,7 @@ exports.BattleScripts = {
 			this.template = template;
 			this.types = template.types;
 			this.typesData = [];
-			for (let i = 0, l = this.types.length; i < l; i++) {
+			for (var i = 0, l = this.types.length; i < l; i++) {
 				this.typesData.push({
 					type: this.types[i],
 					suppressed: false,
@@ -27,12 +25,12 @@ exports.BattleScripts = {
 			}
 
 			if (!dontRecalculateStats) {
-				for (let statName in this.stats) {
-					let stat = this.template.baseStats[statName];
+				for (var statName in this.stats) {
+					var stat = this.template.baseStats[statName];
 					stat = Math.floor(Math.floor(2 * stat + this.set.ivs[statName] + Math.floor(this.set.evs[statName] / 4)) * this.level / 100 + 5);
 
 					// nature
-					let nature = this.battle.getNature(this.set.nature);
+					var nature = this.battle.getNature(this.set.nature);
 					if (statName === nature.plus) stat *= 1.1;
 					if (statName === nature.minus) stat *= 0.9;
 					this.baseStats[statName] = this.stats[statName] = Math.floor(stat);
@@ -42,7 +40,7 @@ exports.BattleScripts = {
 			return true;
 		},
 		transformInto: function (pokemon, user) {
-			let template = pokemon.template;
+			var template = pokemon.template;
 			if (pokemon.fainted || pokemon.illusion || (pokemon.volatiles['substitute'] && this.battle.gen >= 5)) {
 				return false;
 			}
@@ -53,10 +51,10 @@ exports.BattleScripts = {
 				return false;
 			}
 			this.transformed = true;
-			let typeMap = {};
+			var typeMap = {};
 			this.typesData = [];
-			for (let i = 0, l = pokemon.typesData.length; i < l; i++) {
-				let typeData = pokemon.typesData[i];
+			for (var i = 0, l = pokemon.typesData.length; i < l; i++) {
+				var typeData = pokemon.typesData[i];
 				if (typeMap[typeData.type]) continue;
 				typeMap[typeData.type] = true;
 
@@ -75,7 +73,7 @@ exports.BattleScripts = {
 					});
 				}
 			}
-			for (let statName in this.stats) {
+			for (var statName in this.stats) {
 				this.stats[statName] = pokemon.stats[statName];
 			}
 			this.moveset = [];
@@ -83,10 +81,10 @@ exports.BattleScripts = {
 			this.set.ivs = (this.battle.gen >= 5 ? this.set.ivs : pokemon.set.ivs);
 			this.hpType = (this.battle.gen >= 5 ? this.hpType : pokemon.hpType);
 			this.hpPower = (this.battle.gen >= 5 ? this.hpPower : pokemon.hpPower);
-			for (let i = 0; i < pokemon.moveset.length; i++) {
-				let move = this.battle.getMove(this.set.moves[i]);
-				let moveData = pokemon.moveset[i];
-				let moveName = moveData.move;
+			for (var i = 0; i < pokemon.moveset.length; i++) {
+				var move = this.battle.getMove(this.set.moves[i]);
+				var moveData = pokemon.moveset[i];
+				var moveName = moveData.move;
 				if (moveData.id === 'hiddenpower') {
 					moveName = 'Hidden Power ' + this.hpType;
 				}
@@ -100,7 +98,7 @@ exports.BattleScripts = {
 				});
 				this.moves.push(toId(moveName));
 			}
-			for (let j in pokemon.boosts) {
+			for (var j in pokemon.boosts) {
 				this.boosts[j] = pokemon.boosts[j];
 			}
 			this.battle.add('-transform', this, pokemon);

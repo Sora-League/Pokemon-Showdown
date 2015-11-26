@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Stealth Rock', function () {
 	afterEach(function () {
@@ -29,8 +27,8 @@ describe('Stealth Rock', function () {
 		]);
 		battle.choose('p1', 'move 2');
 		battle.commitDecisions();
-		let pokemon;
-		for (let i = 2; i <= 6; i++) {
+		var pokemon;
+		for (var i = 2; i <= 6; i++) {
 			battle.choose('p2', 'switch ' + i);
 			battle.commitDecisions();
 			pokemon = battle.p2.active[0];

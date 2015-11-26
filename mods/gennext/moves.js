@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleMovedex = {
 	/******************************************************************
 	Perfect accuracy moves:
@@ -149,7 +147,7 @@ exports.BattleMovedex = {
 				if (target === source || move.flags['authentic'] || move.infiltrates) {
 					return;
 				}
-				let damage = this.getDamage(source, target, move);
+				var damage = this.getDamage(source, target, move);
 				if (!damage) {
 					return null;
 				}
@@ -192,7 +190,7 @@ exports.BattleMovedex = {
 			onTryHit: function (target, source, move) {
 				if (target.volatiles.substitute || !move.flags['protect']) return;
 				this.add('-activate', target, 'Protect');
-				let lockedmove = source.getVolatile('lockedmove');
+				var lockedmove = source.getVolatile('lockedmove');
 				if (lockedmove) {
 					// Outrage counter is reset
 					if (source.volatiles['lockedmove'].duration === 2) {
@@ -214,7 +212,7 @@ exports.BattleMovedex = {
 			onTryHit: function (target, source, move) {
 				if (target.volatiles.substitute || !move.flags['protect'] || move.category === 'Status') return;
 				this.add('-activate', target, 'Protect');
-				let lockedmove = source.getVolatile('lockedmove');
+				var lockedmove = source.getVolatile('lockedmove');
 				if (lockedmove) {
 					// Outrage counter is reset
 					if (source.volatiles['lockedmove'].duration === 2) {
@@ -631,7 +629,7 @@ exports.BattleMovedex = {
 						return false;
 					}
 					this.add('-end', pokemon, 'Bide');
-					let target = this.effectData.sourceSide.active[this.effectData.sourcePosition];
+					var target = this.effectData.sourceSide.active[this.effectData.sourcePosition];
 					this.moveHit(target, pokemon, 'bide', {damage: this.effectData.totalDamage * 2});
 					return false;
 				}
@@ -718,7 +716,7 @@ exports.BattleMovedex = {
 			if (pokemon.baseTemplate.species !== 'Meloetta' || pokemon.transformed) {
 				return;
 			}
-			let natureChange = {
+			var natureChange = {
 				'Modest': 'Adamant',
 				'Adamant': 'Modest',
 				'Timid': 'Jolly',
@@ -726,22 +724,22 @@ exports.BattleMovedex = {
 			};
 			if (pokemon.template.speciesid === 'meloettapirouette' && pokemon.formeChange('Meloetta')) {
 				this.add('-formechange', pokemon, 'Meloetta');
-				let tmpAtkEVs = pokemon.set.evs.atk;
+				var tmpAtkEVs = pokemon.set.evs.atk;
 				pokemon.set.evs.atk = pokemon.set.evs.spa;
 				pokemon.set.evs.spa = tmpAtkEVs;
 				if (natureChange[pokemon.set.nature]) pokemon.set.nature = natureChange[pokemon.set.nature];
-				let Atk2SpA = (pokemon.boosts.spa || 0) - (pokemon.boosts.atk || 0);
+				var Atk2SpA = (pokemon.boosts.spa || 0) - (pokemon.boosts.atk || 0);
 				this.boost({
 					atk: Atk2SpA,
 					spa: -Atk2SpA
 				}, pokemon);
 			} else if (pokemon.formeChange('Meloetta-Pirouette')) {
 				this.add('-formechange', pokemon, 'Meloetta-Pirouette');
-				let tmpAtkEVs = pokemon.set.evs.atk;
+				var tmpAtkEVs = pokemon.set.evs.atk;
 				pokemon.set.evs.atk = pokemon.set.evs.spa;
 				pokemon.set.evs.spa = tmpAtkEVs;
 				if (natureChange[pokemon.set.nature]) pokemon.set.nature = natureChange[pokemon.set.nature];
-				let Atk2SpA = (pokemon.boosts.spa || 0) - (pokemon.boosts.atk || 0);
+				var Atk2SpA = (pokemon.boosts.spa || 0) - (pokemon.boosts.atk || 0);
 				this.boost({
 					atk: Atk2SpA,
 					spa: -Atk2SpA
@@ -776,9 +774,9 @@ exports.BattleMovedex = {
 				this.add('-sidestart', side, 'move: Stealth Rock');
 			},
 			onSwitchIn: function (pokemon) {
-				let factor = 2;
+				var factor = 2;
 				if (pokemon.hasType('Flying')) factor = 4;
-				this.damage(pokemon.maxhp * factor / 16);
+				var damage = this.damage(pokemon.maxhp * factor / 16);
 			}
 		}
 	},
@@ -810,15 +808,15 @@ exports.BattleMovedex = {
 			chance: 100,
 			self: {
 				onHit: function (target, source) {
-					let stats = [];
-					for (let i in target.boosts) {
+					var stats = [];
+					for (var i in target.boosts) {
 						if (i !== 'accuracy' && i !== 'evasion' && i !== 'atk' && target.boosts[i] < 6) {
 							stats.push(i);
 						}
 					}
 					if (stats.length) {
-						let i = stats[this.random(stats.length)];
-						let boost = {};
+						var i = stats[this.random(stats.length)];
+						var boost = {};
 						boost[i] = 1;
 						this.boost(boost);
 					} else {
@@ -840,15 +838,15 @@ exports.BattleMovedex = {
 			chance: 100,
 			self: {
 				onHit: function (target, source) {
-					let stats = [];
-					for (let i in target.boosts) {
+					var stats = [];
+					for (var i in target.boosts) {
 						if (i !== 'accuracy' && i !== 'evasion' && i !== 'atk' && target.boosts[i] < 6) {
 							stats.push(i);
 						}
 					}
 					if (stats.length) {
-						let i = stats[this.random(stats.length)];
-						let boost = {};
+						var i = stats[this.random(stats.length)];
+						var boost = {};
 						boost[i] = 1;
 						this.boost(boost);
 					} else {
@@ -864,15 +862,15 @@ exports.BattleMovedex = {
 			chance: 100,
 			self: {
 				onHit: function (target, source) {
-					let stats = [];
-					for (let i in target.boosts) {
+					var stats = [];
+					for (var i in target.boosts) {
 						if (i !== 'accuracy' && i !== 'evasion' && i !== 'atk' && target.boosts[i] < 6) {
 							stats.push(i);
 						}
 					}
 					if (stats.length) {
-						let i = stats[this.random(stats.length)];
-						let boost = {};
+						var i = stats[this.random(stats.length)];
+						var boost = {};
 						boost[i] = 1;
 						this.boost(boost);
 					} else {
@@ -1031,7 +1029,7 @@ exports.BattleMovedex = {
 		inherit: true,
 		basePower: 80,
 		onBasePower: function (power, user) {
-			let GossamerWingUsers = {"Butterfree":1, "Venomoth":1, "Masquerain":1, "Dustox":1, "Beautifly":1, "Mothim":1, "Lilligant":1, "Volcarona":1, "Vivillon":1};
+			var GossamerWingUsers = {"Butterfree":1, "Venomoth":1, "Masquerain":1, "Dustox":1, "Beautifly":1, "Mothim":1, "Lilligant":1, "Volcarona":1, "Vivillon":1};
 			if (user.hasItem('stick') && GossamerWingUsers[user.template.species]) {
 				return power * 1.5;
 			}
@@ -1220,13 +1218,13 @@ exports.BattleMovedex = {
 		inherit: true,
 		basePower: 30,
 		onBasePower: function (power, user) {
-			let doubled = false;
+			var doubled = false;
 			if (user.removeVolatile('leechseed')) {
 				this.add('-end', user, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + user);
 				doubled = true;
 			}
-			let sideConditions = {spikes:1, toxicspikes:1, stealthrock:1};
-			for (let i in sideConditions) {
+			var sideConditions = {spikes:1, toxicspikes:1, stealthrock:1};
+			for (var i in sideConditions) {
 				if (user.side.removeSideCondition(i)) {
 					this.add('-sideend', user.side, this.getEffect(i).name, '[from] move: Rapid Spin', '[of] ' + user);
 					doubled = true;
@@ -1851,7 +1849,7 @@ exports.BattleMovedex = {
 		accuracy: 100,
 		onModifyMove: function (move, user) {
 			if (user.illusion) {
-				let illusionMoves = user.illusion.moves.filter(function (move) {
+				var illusionMoves = user.illusion.moves.filter(function (move) {
 					return this.getMove(move).category !== 'Status';
 				}, this);
 				if (!illusionMoves.length) return;
@@ -1911,7 +1909,7 @@ exports.BattleMovedex = {
 		secondary: {
 			chance: 10,
 			onHit: function (target, source) {
-				let result = this.random(3);
+				var result = this.random(3);
 				if (result === 0) {
 					target.trySetStatus('brn', source);
 				} else if (result === 1) {

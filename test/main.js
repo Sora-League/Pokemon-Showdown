@@ -1,16 +1,14 @@
-'use strict';
+var assert = require('assert');
+var stream = require('stream');
+var path = require('path');
+var net = require('net');
+var fs = require('fs');
+var noop = function () {};
 
-const assert = require('assert');
-const stream = require('stream');
-const path = require('path');
-const net = require('net');
-const fs = require('fs');
-const noop = function () {};
-
-let testPort;
+var testPort;
 function getPort(callback) {
-	let port = testPort;
-	let server = net.createServer();
+	var port = testPort;
+	var server = net.createServer();
 
 	server.listen(port, function (err) {
 		server.once('close', function onclose() {
@@ -31,7 +29,7 @@ function init(callback) {
 	});
 
 	// Run the battle engine in the main process to keep our sanity
-	let BattleEngine = global.BattleEngine = require('./../battle-engine.js');
+	var BattleEngine = global.BattleEngine = require('./../battle-engine.js');
 	process.listeners('message').forEach(function (listener) {
 		process.removeListener('message', listener);
 	});
@@ -40,7 +38,7 @@ function init(callback) {
 	BattleEngine.Battle.prototype.send = noop;
 	BattleEngine.Battle.prototype.receive = noop;
 
-	let Simulator = global.Simulator;
+	var Simulator = global.Simulator;
 	Simulator.Battle.prototype.send = noop;
 	Simulator.Battle.prototype.receive = noop;
 	Simulator.SimulatorProcess.processes.forEach(function (process) {
@@ -64,7 +62,7 @@ before('initialization', function (done) {
 	this.timeout(0); // Remove timeout limitation
 
 	// Load and override configuration before starting the server
-	let config;
+	var config;
 	try {
 		config = require('./../config/config.js');
 	} catch (err) {
@@ -77,7 +75,7 @@ before('initialization', function (done) {
 		config = require('./../config/config.js');
 	}
 	try {
-		let chatRoomsPath = require.resolve('./../config/chatrooms.json');
+		var chatRoomsPath = require.resolve('./../config/chatrooms.json');
 		require.cache[chatRoomsPath] = [];
 	} catch (e) {}
 
@@ -93,8 +91,8 @@ before('initialization', function (done) {
 	config.logchat = false;
 
 	// TODO: Use a proper fs sandbox
-	let fsMethodsNullify = ['chmod', 'rename', 'rmdir', 'symlink', 'unlink', 'writeFile'];
-	for (let i = 0; i < fsMethodsNullify.length; i++) {
+	var fsMethodsNullify = ['chmod', 'rename', 'rmdir', 'symlink', 'unlink', 'writeFile'];
+	for (var i = 0; i < fsMethodsNullify.length; i++) {
 		fs[fsMethodsNullify[i]] = noop;
 		fs[fsMethodsNullify[i] + 'Sync'] = noop;
 	}
@@ -116,7 +114,7 @@ before('initialization', function (done) {
 });
 
 describe('Native timer/event loop globals', function () {
-	let globalList = ['setTimeout', 'clearTimeout', 'setImmediate', 'clearImmediate'];
+	var globalList = ['setTimeout', 'clearTimeout', 'setImmediate', 'clearImmediate'];
 	globalList.forEach(function (elem) {
 		describe('`' + elem + '`', function () {
 			it('should be a global function', function () {

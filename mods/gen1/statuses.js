@@ -7,9 +7,6 @@
  * separated as volatile statuses that are applied on switch in, removed
  * under certain conditions and re-applied under other conditions.
  */
-
-'use strict';
-
 exports.BattleStatuses = {
 	brn: {
 		effectType: 'Status',
@@ -19,7 +16,7 @@ exports.BattleStatuses = {
 		},
 		onAfterMoveSelfPriority: 2,
 		onAfterMoveSelf: function (pokemon) {
-			let toxicCounter = 1;
+			var toxicCounter = 1;
 			if (pokemon.volatiles['residualdmg']) {
 				pokemon.volatiles['residualdmg'].counter++;
 				toxicCounter = pokemon.volatiles['residualdmg'].counter;
@@ -102,7 +99,7 @@ exports.BattleStatuses = {
 		},
 		onAfterMoveSelfPriority: 2,
 		onAfterMoveSelf: function (pokemon) {
-			let toxicCounter = 1;
+			var toxicCounter = 1;
 			if (pokemon.volatiles['residualdmg']) {
 				pokemon.volatiles['residualdmg'].counter++;
 				toxicCounter = pokemon.volatiles['residualdmg'].counter;
@@ -136,7 +133,7 @@ exports.BattleStatuses = {
 	confusion: {
 		// this is a volatile status
 		onStart: function (target, source, sourceEffect) {
-			let result = this.runEvent('TryConfusion');
+			var result = this.runEvent('TryConfusion');
 			if (!result) return result;
 			if (sourceEffect && sourceEffect.id === 'lockedmove') {
 				this.add('-start', target, 'confusion', '[silent]');
@@ -157,7 +154,7 @@ exports.BattleStatuses = {
 			this.add('-activate', pokemon, 'confusion');
 			if (this.random(256) >= 128) {
 				// We check here to implement the substitute bug since otherwise we need to change directDamage to take target.
-				let damage = Math.floor(Math.floor(((Math.floor(2 * pokemon.level / 5) + 2) * pokemon.getStat('atk') * 40) / pokemon.getStat('def', false, false, true)) / 50) + 2;
+				var damage = Math.floor(Math.floor(((Math.floor(2 * pokemon.level / 5) + 2) * pokemon.getStat('atk') * 40) / pokemon.getStat('def', false, false, true)) / 50) + 2;
 				if (pokemon.volatiles['substitute']) {
 					// If there is Substitute, we check for opposing substitute.
 					if (target.volatiles['substitute']) {
@@ -217,7 +214,7 @@ exports.BattleStatuses = {
 	},
 	partialtrappinglock: {
 		durationCallback: function () {
-			let duration = [2, 2, 2, 3, 3, 3, 4, 5][this.random(8)];
+			var duration = [2, 2, 2, 3, 3, 3, 4, 5][this.random(8)];
 			return duration;
 		},
 		onResidual: function (target) {
@@ -232,8 +229,8 @@ exports.BattleStatuses = {
 			if (!pokemon.hasMove(this.effectData.move)) {
 				return;
 			}
-			let moves = pokemon.moveset;
-			for (let i = 0; i < moves.length; i++) {
+			var moves = pokemon.moveset;
+			for (var i = 0; i < moves.length; i++) {
 				if (moves[i].id !== this.effectData.move) {
 					moves[i].disabled = true;
 				}
@@ -251,15 +248,15 @@ exports.BattleStatuses = {
 		// this is a side condition
 		onStart: function (side) {
 			this.effectData.positions = [];
-			for (let i = 0; i < side.active.length; i++) {
+			for (var i = 0; i < side.active.length; i++) {
 				this.effectData.positions[i] = null;
 			}
 		},
 		onResidualOrder: 3,
 		onResidual: function (side) {
-			let finished = true;
-			for (let i = 0; i < side.active.length; i++) {
-				let posData = this.effectData.positions[i];
+			var finished = true;
+			for (var i = 0; i < side.active.length; i++) {
+				var posData = this.effectData.positions[i];
 				if (!posData) continue;
 
 				posData.duration--;
@@ -270,8 +267,8 @@ exports.BattleStatuses = {
 				}
 
 				// time's up; time to hit! :D
-				let target = side.foe.active[posData.targetPosition];
-				let move = this.getMove(posData.move);
+				var target = side.foe.active[posData.targetPosition];
+				var move = this.getMove(posData.move);
 				if (target.fainted) {
 					this.add('-hint', '' + move.name + ' did not hit because the target is fainted.');
 					this.effectData.positions[i] = null;
@@ -305,7 +302,7 @@ exports.BattleStatuses = {
 		onStallMove: function () {
 			// this.effectData.counter should never be undefined here.
 			// However, just in case, use 1 if it is undefined.
-			let counter = this.effectData.counter || 1;
+			var counter = this.effectData.counter || 1;
 			if (counter >= 256) {
 				// 2^32 - special-cased because Battle.random(n) can't handle n > 2^16 - 1
 				return (this.random() * 4294967296 < 1);

@@ -1,9 +1,7 @@
-'use strict';
-
-let EventEmitter = require('events').EventEmitter;
+var EventEmitter = require('events').EventEmitter;
 
 function createWorker() {
-	let fakeWorker = new EventEmitter();
+	var fakeWorker = new EventEmitter();
 	fakeWorker.send = function () {};
 	Sockets.workers[fakeWorker.id] = fakeWorker;
 	return fakeWorker;
@@ -18,14 +16,14 @@ function createConnection(ip, workerid, socketid) {
 			socketid++;
 		}
 	}
-	let connectionid = workerid + '-' + socketid;
-	let connection = Users.connections[connectionid] = new Users.Connection(connectionid, Sockets.workers[workerid], socketid, null, ip || '127.0.0.1');
+	var connectionid = workerid + '-' + socketid;
+	var connection = Users.connections[connectionid] = new Users.Connection(connectionid, Sockets.workers[workerid], socketid, null, ip || '127.0.0.1');
 	return connection;
 }
 
 function createUser(connection) {
 	if (!connection) connection = createConnection();
-	let user = new Users.User(connection);
+	var user = new Users.User(connection);
 	connection.user = user;
 	user.joinRoom('global', connection);
 	return user;

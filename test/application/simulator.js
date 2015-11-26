@@ -1,13 +1,11 @@
-'use strict';
-
-const assert = require('assert');
-let userUtils = require('./../../dev-tools/users-utils.js');
-let User = userUtils.User;
+var assert = require('assert');
+var userUtils = require('./../../dev-tools/users-utils.js');
+var User = userUtils.User;
 
 describe('Simulator abstraction layer features', function () {
 	describe('Battle', function () {
 		describe('player identifiers', function () {
-			let p1, p2, room;
+			var p1, p2, room;
 			afterEach(function () {
 				if (p1) {
 					p1.disconnectAll();
@@ -21,7 +19,7 @@ describe('Simulator abstraction layer features', function () {
 			});
 
 			it('should not get out of sync in rated battles on rename', function () {
-				let packedTeam = 'Weavile||lifeorb||swordsdance,knockoff,iceshard,iciclecrash|Jolly|,252,,,4,252|||||';
+				var packedTeam = 'Weavile||lifeorb||swordsdance,knockoff,iceshard,iciclecrash|Jolly|,252,,,4,252|||||';
 				p1 = new User();
 				p2 = new User();
 				p1.forceRename("Missingno."); // Don't do this at home
@@ -31,8 +29,8 @@ describe('Simulator abstraction layer features', function () {
 					room.joinBattle(p2, packedTeam);
 				}
 				p1.resetName();
-				for (let i = 0; i < room.battle.playerids.length; i++) {
-					let curId = room.battle.playerids[i];
+				for (var i = 0; i < room.battle.playerids.length; i++) {
+					var curId = room.battle.playerids[i];
 					assert.strictEqual(room.battle.playerTable[curId], 'p' + (i + 1));
 					if (!curId) {
 						assert.ok(!room.battle.players[i]);

@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleItems = {
 	"abomasite": {
 		id: "abomasite",
@@ -125,7 +123,7 @@ exports.BattleItems = {
 			basePower: 10
 		},
 		onStart: function (target) {
-			if (!target.ignoringItem() && !this.getPseudoWeather('gravity')) {
+			if (!target.ignoringItem()) {
 				this.add('-item', target, 'Air Balloon');
 			}
 		},
@@ -2324,9 +2322,9 @@ exports.BattleItems = {
 				pokemon.removeVolatile('leppaberry');
 			} else {
 				var pp = 99;
-				for (var moveid in pokemon.moveset) {
-					if (pokemon.moveset[moveid].pp < pp) {
-						move = pokemon.moveset[moveid];
+				for (var i in pokemon.moveset) {
+					if (pokemon.moveset[i].pp < pp) {
+						move = pokemon.moveset[i];
 						pp = move.pp;
 					}
 				}
@@ -4331,15 +4329,15 @@ exports.BattleItems = {
 		},
 		onEat: function (pokemon) {
 			var stats = [];
-			for (var stat in pokemon.boosts) {
-				if (stat !== 'accuracy' && stat !== 'evasion' && pokemon.boosts[stat] < 6) {
-					stats.push(stat);
+			for (var i in pokemon.boosts) {
+				if (i !== 'accuracy' && i !== 'evasion' && pokemon.boosts[i] < 6) {
+					stats.push(i);
 				}
 			}
 			if (stats.length) {
-				var randomStat = stats[this.random(stats.length)];
+				var i = stats[this.random(stats.length)];
 				var boost = {};
-				boost[randomStat] = 2;
+				boost[i] = 2;
 				this.boost(boost);
 			}
 		},

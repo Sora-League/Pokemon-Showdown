@@ -1,9 +1,7 @@
-'use strict';
+var assert = require('assert');
+var battle;
 
-const assert = require('assert');
-let battle;
-
-let adderMoves = [
+var adderMoves = [
 	{name: 'Trick-or-Treat', type: 'Ghost'},
 	{name: 'Forest\'s Curse', type: 'Grass'}
 ];
@@ -46,7 +44,7 @@ describe('Type addition', function () {
 						battle.join('p1', 'Guest 1', 1, [{species: "Gourgeist", ability: 'frisk', moves: [moveData.name]}]);
 						battle.join('p2', 'Guest 2', 1, [{species: "Deoxys-Speed", ability: 'pressure', moves: ['spikes']}]);
 						battle.commitDecisions();
-						let cachedTypes = battle.p2.active[0].getTypes();
+						var cachedTypes = battle.p2.active[0].getTypes();
 						battle.commitDecisions();
 						assert.deepEqual(battle.p2.active[0].getTypes(), cachedTypes);
 						assert.ok(battle.log[battle.lastMoveLine + 1].startsWith('|-fail|'));
@@ -58,7 +56,7 @@ describe('Type addition', function () {
 						battle.join('p2', 'Guest 2', 1, [{species: "Deoxys-Speed", ability: 'pressure', moves: ['spikes']}]);
 						battle.choose('p1', 'move 2');
 						battle.commitDecisions();
-						let cachedTypes = battle.p2.active[0].getTypes();
+						var cachedTypes = battle.p2.active[0].getTypes();
 						battle.commitDecisions();
 						assert.notDeepEqual(battle.p2.active[0].getTypes(), cachedTypes);
 						assert.deepEqual(battle.p2.active[0].getTypes(), ['Psychic', moveData.type]);

@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Primordial Sea', function () {
 	afterEach(function () {
@@ -20,8 +18,8 @@ describe('Primordial Sea', function () {
 		battle.join('p1', 'Guest 1', 1, [{species: "Kyogre", ability: 'primordialsea', moves: ['helpinghand']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: "Blastoise", ability: 'torrent', moves: ['waterpledge']}]);
 		battle.commitDecisions();
-		let move = Tools.getMove('waterpledge');
-		let basePower = battle.runEvent('BasePower', battle.p2.active[0], battle.p1.active[0], move, move.basePower, true);
+		var move = Tools.getMove('waterpledge');
+		var basePower = battle.runEvent('BasePower', battle.p2.active[0], battle.p1.active[0], move, move.basePower, true);
 		assert.strictEqual(basePower, move.basePower);
 	});
 
@@ -51,7 +49,7 @@ describe('Primordial Sea', function () {
 			{species: "Tyranitar", ability: 'sandstream', moves: ['sandstorm']},
 			{species: "Abomasnow", ability: 'snowwarning', moves: ['hail']}
 		]);
-		for (let i = 2; i <= 5; i++) {
+		for (var i = 2; i <= 5; i++) {
 			battle.choose('p1', 'switch ' + i);
 			battle.commitDecisions();
 			assert.ok(battle.isWeather('primordialsea'));

@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Sturdy', function () {
 	afterEach(function () {
@@ -10,7 +8,7 @@ describe('Sturdy', function () {
 
 	it('should give the user an immunity to OHKO moves', function () {
 		battle = BattleEngine.Battle.construct();
-		battle.join('p1', 'Guest 1', 1, [{species: 'Aron', level: 1, ability: 'sturdy', moves: ['sleeptalk']}]);
+		battle.join('p1', 'Guest 1', 1, [{species: 'Aron', level: 1, ability: 'sturdy',  moves: ['sleeptalk']}]);
 		battle.join('p2', 'Guest 2', 1, [{species: 'Kyogre', ability: 'noguard', moves: ['sheercold']}]);
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].hp, battle.p1.active[0].maxhp);

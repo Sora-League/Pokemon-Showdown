@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Roost', function () {
 	afterEach(function () {
@@ -62,7 +60,7 @@ describe('Roost', function () {
 		]);
 		battle.commitDecisions();
 
-		let hitCount = 0;
+		var hitCount = 0;
 		battle.p2.active[0].damage = function () {
 			hitCount++;
 			return BattleEngine.BattlePokemon.prototype.damage.apply(this, arguments);

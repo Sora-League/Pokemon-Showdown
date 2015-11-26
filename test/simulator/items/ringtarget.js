@@ -1,7 +1,5 @@
-'use strict';
-
-let battle;
-const assert = require('assert');
+var battle;
+var assert = require('assert');
 
 describe('Ring Target', function () {
 	afterEach(function () {

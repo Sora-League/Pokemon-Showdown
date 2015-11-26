@@ -12,20 +12,18 @@
  * @license MIT license
  */
 
-'use strict';
-
 // Because I don't want two files, we're going to fork ourselves.
 
 if (!process.send) {
 	// This is the parent
 
-	let guid = 1;
-	let callbacks = {};
-	let callbackData = {};
+	var guid = 1;
+	var callbacks = {};
+	var callbackData = {};
 
-	let child = require('child_process').fork('verifier.js', {cwd: __dirname});
+	var child = require('child_process').fork('verifier.js', {cwd: __dirname});
 	exports.verify = function (data, signature, callback) {
-		let localGuid = guid++;
+		var localGuid = guid++;
 		callbacks[localGuid] = callback;
 		callbackData[localGuid] = data;
 		child.send({data: data, sig: signature, guid: localGuid});
@@ -41,15 +39,15 @@ if (!process.send) {
 	// This is the child
 
 	global.Config = require('./config/config.js');
-	let crypto = require('crypto');
+	var crypto = require('crypto');
 
-	let keyalgo = Config.loginserverkeyalgo;
-	let pkey = Config.loginserverpublickey;
+	var keyalgo = Config.loginserverkeyalgo;
+	var pkey = Config.loginserverpublickey;
 
 	process.on('message', function (message) {
-		let verifier = crypto.createVerify(keyalgo);
+		var verifier = crypto.createVerify(keyalgo);
 		verifier.update(message.data);
-		let success = false;
+		var success = false;
 		try {
 			success = verifier.verify(pkey, message.sig, 'hex');
 		} catch (e) {}

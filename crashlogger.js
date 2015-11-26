@@ -8,8 +8,6 @@
  * @license MIT license
  */
 
-'use strict';
-
 exports = module.exports = (function () {
 	var lastCrashLog = 0;
 	var transport;

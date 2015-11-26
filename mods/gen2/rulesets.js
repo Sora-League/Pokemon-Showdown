@@ -1,11 +1,9 @@
-'use strict';
-
 exports.BattleFormats = {
 	pokemon: {
 		effectType: 'Banlist',
 		onValidateSet: function (set, format) {
-			let template = this.getTemplate(set.species);
-			let problems = [];
+			var template = this.getTemplate(set.species);
+			var problems = [];
 			if (set.species === set.name) delete set.name;
 
 			if (template.gen > this.gen) {
@@ -13,10 +11,10 @@ exports.BattleFormats = {
 			} else if (template.isNonstandard) {
 				problems.push(set.species + ' is not a real Pokemon.');
 			}
-			let hasHP = false;
-			let hasSD = false;
+			var hasHP = false;
+			var hasSD = false;
 			if (set.item) {
-				let item = this.getItem(set.item);
+				var item = this.getItem(set.item);
 				if (item.gen > this.gen) {
 					problems.push(item.name + ' does not exist in gen ' + this.gen + '.');
 				} else if (item.isNonstandard) {
@@ -24,8 +22,8 @@ exports.BattleFormats = {
 				}
 			}
 			if (set.moves) {
-				for (let i = 0; i < set.moves.length; i++) {
-					let move = this.getMove(set.moves[i]);
+				for (var i = 0; i < set.moves.length; i++) {
+					var move = this.getMove(set.moves[i]);
 					if (move.gen > this.gen) {
 						problems.push(move.name + ' does not exist in gen ' + this.gen + '.');
 					} else if (move.isNonstandard) {
@@ -56,7 +54,7 @@ exports.BattleFormats = {
 				if (!set.ivs) {
 					set.ivs = {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30};
 				} else {
-					for (let iv in set.ivs) {
+					for (var iv in set.ivs) {
 						// Since Gen 2 has 0-15 DVs that increase 2 points, we only want pair numbers
 						if (set.ivs[iv] % 2 !== 0) set.ivs[iv]--;
 						// This shouldn't even be possible
@@ -68,7 +66,7 @@ exports.BattleFormats = {
 				// Calculate all the IV oddness on gen 2.
 				// If you use Marowak with Thick Club, we'll be gentle enough to deal with your Attack DVs.
 				// This is only done because the gen 6 Teambuilder is confusing, using IVs and all.
-				let marowakClub = false;
+				var marowakClub = false;
 				if (toId(set.item) === 'thickclub' && set.species === 'Marowak' && hasSD) {
 					set.ivs.atk = 26;
 					marowakClub = true;
@@ -132,12 +130,12 @@ exports.BattleFormats = {
 		],
 		onValidateSet: function (set) {
 			// limit one of each move in Standard
-			let moves = [];
+			var moves = [];
 			if (set.moves) {
-				let hasMove = {};
-				for (let i = 0; i < set.moves.length; i++) {
-					let move = this.getMove(set.moves[i]);
-					let moveid = move.id;
+				var hasMove = {};
+				for (var i = 0; i < set.moves.length; i++) {
+					var move = this.getMove(set.moves[i]);
+					var moveid = move.id;
 					if (hasMove[moveid]) continue;
 					hasMove[moveid] = true;
 					moves.push(set.moves[i]);

@@ -1,12 +1,10 @@
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
+var fs = require('fs');
+var path = require('path');
 
 function loadTests (desc, dir) {
-	let contents = fs.readdirSync(path.join(__dirname, dir));
+	var contents = fs.readdirSync(path.join(__dirname, dir));
 	describe(desc, function () {
-		for (let i = 0; i < contents.length; i++) {
+		for (var i = 0; i < contents.length; i++) {
 			if (contents[i].substr(-3) === '.js') require('./' + path.join(dir, contents[i]));
 		}
 	});

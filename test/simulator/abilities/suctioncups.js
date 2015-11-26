@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Suction Cups', function () {
 	afterEach(function () {
@@ -18,7 +16,7 @@ describe('Suction Cups', function () {
 		battle.commitDecisions();
 		assert.strictEqual(battle.p2.active[0].item, ''); // If Red Card is not working properly, this will fail
 		assert.strictEqual(battle.p1.active[0].template.speciesid, 'shuckle');
-		for (let i = 2; i <= 4; i++) {
+		for (var i = 2; i <= 4; i++) {
 			battle.choose('p2', 'move ' + i);
 			battle.commitDecisions();
 			assert.strictEqual(battle.p1.active[0].template.speciesid, 'shuckle');

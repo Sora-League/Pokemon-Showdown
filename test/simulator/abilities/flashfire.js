@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert');
-let battle;
+var assert = require('assert');
+var battle;
 
 describe('Flash Fire', function () {
 	afterEach(function () {
@@ -14,7 +12,7 @@ describe('Flash Fire', function () {
 		battle.join('p2', 'Guest 2', 1, [{species: 'Talonflame', ability: 'galewings', moves: ['flareblitz']}]);
 		battle.commitDecisions();
 		assert.strictEqual(battle.p1.active[0].hp, battle.p1.active[0].maxhp);
-		let damage = battle.p2.active[0].maxhp - battle.p2.active[0].hp;
+		var damage = battle.p2.active[0].maxhp - battle.p2.active[0].hp;
 		assert.ok(damage >= 82 && damage <= 97);
 	});
 
@@ -43,7 +41,7 @@ describe('Flash Fire', function () {
 		battle.seed = battle.startingSeed.slice();
 		battle.choose('p1', 'move 2');
 		battle.choose('p2', 'move 2');
-		let damage = battle.p2.active[0].maxhp - battle.p2.active[0].hp;
+		var damage = battle.p2.active[0].maxhp - battle.p2.active[0].hp;
 		assert.ok(damage >= 54 && damage <= 65);
 	});
 });

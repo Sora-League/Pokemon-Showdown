@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleStatuses = {
 	brn: {
 		effectType: 'Status',
@@ -95,7 +93,7 @@ exports.BattleStatuses = {
 	confusion: {
 		inherit: true,
 		onStart: function (target, source, sourceEffect) {
-			let result = this.runEvent('TryConfusion', target, source, sourceEffect);
+			var result = this.runEvent('TryConfusion', target, source, sourceEffect);
 			if (!result) return result;
 			if (sourceEffect && sourceEffect.id === 'lockedmove') {
 				this.add('-start', target, 'confusion', '[silent]');
@@ -151,7 +149,7 @@ exports.BattleStatuses = {
 			return this.effectData.move;
 		},
 		onBeforeTurn: function (pokemon) {
-			let move = this.getMove(this.effectData.move);
+			var move = this.getMove(this.effectData.move);
 			if (move.id) {
 				this.debug('Forcing into ' + move.id);
 				this.changeDecision(pokemon, {move: move.id});
@@ -172,7 +170,7 @@ exports.BattleStatuses = {
 		},
 		onStallMove: function () {
 			// Gen 2 starts counting at x=255, x/256 and then halves x on every turn
-			let counter = this.effectData.counter || 255;
+			var counter = this.effectData.counter || 255;
 			this.debug("Success chance: " + Math.round(counter / 256) + "% (" + counter + "/256)");
 			return (this.random(counter) === 0);
 		},

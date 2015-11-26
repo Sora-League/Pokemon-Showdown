@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleFormatsData = {
 	aegislash: {
 		inherit: true,

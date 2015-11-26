@@ -1,5 +1,3 @@
-'use strict';
-
 exports.BattleStatuses = {
 	par: {
 		inherit: true,
