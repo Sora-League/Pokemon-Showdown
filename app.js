@@ -58,18 +58,12 @@ function runNpm(command) {
 	process.exit(0);
 }
 
-var isLegacyEngine = !(''.includes);
-
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 try {
 	require('sugar');
-	if (isLegacyEngine) require('es6-shim');
 } catch (e) {
 	runNpm('install --production');
-}
-if (isLegacyEngine && !(''.includes)) {
-	runNpm('update --production');
 }
 
 /*********************************************************
@@ -103,14 +97,17 @@ if (Config.watchconfig) {
 
 // Autoconfigure the app when running in cloud hosting environments:
 try {
-	var cloudenv = require('cloud-env');
+	let cloudenv = require('cloud-env');
 	Config.bindaddress = cloudenv.get('IP', Config.bindaddress || '');
 	Config.port = cloudenv.get('PORT', Config.port);
 } catch (e) {}
 
-if (require.main === module && process.argv[2] && parseInt(process.argv[2])) {
-	Config.port = parseInt(process.argv[2]);
-	Config.ssl = null;
+if (require.main === module && process.argv[2]) {
+	let port = parseInt(process.argv[2]); // eslint-disable-line radix
+	if (port) {
+		Config.port = port;
+		Config.ssl = null;
+	}
 }
 
 /*********************************************************
