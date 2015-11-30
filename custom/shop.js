@@ -66,7 +66,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		var shop = getShop();
 		if (this.broadcasting) {
-			return this.sendReply('|uhtml|shop|<div class = "infobox"><center>Click <button name = "receive" value = "|uhtmlchange|shop|<div class = &quot;infobox&quot;' + shop + '</div>">here</button> to enter our shop!</center></div>');
+			return this.sendReply('|uhtml|shop|<div class = "infobox"><center>Click <button name = "receive" value = "|uhtmlchange|shop|<div class = &quot;infobox&quot;>' + shop + '</div>">here</button> to enter our shop!</center></div>');
 		}
 		this.sendReplyBox(shop);
 	},
