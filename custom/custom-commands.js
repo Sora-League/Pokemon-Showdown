@@ -11,7 +11,7 @@ function display (message, self) {
 exports.commands = {
 	ateamnote: 'an',
 	an: function (target, room, user, connection, cmd) {
-		var ateam = {'femalegallade':1, 'champinnah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'frntierblade': 1,
+		var ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'frntierblade': 1,
 			'bamdee':1, 'onyxeagle':1, 'jeratt':1, 'frontierjerattata':1, 'neithcass':1, 'chmpionbart': 1,
 			'frontierheadrisu':1, 'frontierneith': 1
 		};
