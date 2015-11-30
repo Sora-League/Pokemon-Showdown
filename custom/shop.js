@@ -144,7 +144,7 @@ exports.commands = {
 		addLog(user.name + ' has transferred ' + target + ' ' + bucks + ' to ' + targetUser + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + amt + '. ' + user.name + ' has ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
 		return this.sendReply('You have transferred ' + target + ' ' + bucks + ' to ' + targetUser + '. You have ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
 	},
-	transferbuckshelp: ['/' + cmd + ' [user], [amount] - Transfers a specified number of bucks to a user.'];
+	transferbuckshelp: ['/transferbucks or /transfermoney [user], [amount] - Transfers the specified number of bucks to a user.']
 
 	buy: function(target, room, user) {
 		if (global.shopclosed) return this.sendReply("The shop is closed for now. Wait until it re-opens shortly.");
