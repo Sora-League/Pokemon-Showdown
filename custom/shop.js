@@ -17,6 +17,17 @@ var shopList = {
 	rng: ['RNG', 'Buys Floatzel\'s and Tempest\'s RNG/Cloning <a href="http://pastebin.com/eL8CjvS1">Services</a> for Pokemon X&Y/ORAS. <button name ="send", value="/Powersaves"><b>More Info</b></button>', 2]
 };
 
+function getShop () {
+	var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
+	var text = '<center><h3><b><u>Sora\'s Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
+
+	for (var i in shopList) {
+		text = text + '<tr><td>' + shopList[i][0] + '</td><td>' + shopList[i][1] + '</td><td>' + shopList[i][2] + '</td><td><button name = "send", value="/buy ' + i + '"><b>Buy!</b></button></td></tr>';
+	}
+	text = text + '</table><br />' + status + '</center>';
+	return text;
+}
+
 function addLog(message) {
 	if (!global.moneyLog) global.moneyLog = '';
 	var d = new Date();
@@ -53,15 +64,11 @@ exports.commands = {
 
 	shop: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		if (this.broadcasting) return this.sendReplyBox('<center><b>Click <button name = "send" value = "/shop">here</button> to enter our shop!');
-		var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
-		var text = '<center><h3><b><u>Sora\'s Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
-
-		for (var i in shopList) {
-			text = text + '<tr><td>' + shopList[i][0] + '</td><td>' + shopList[i][1] + '</td><td>' + shopList[i][2] + '</td><td><button name = "send", value="/buy ' + i + '"><b>Buy!</b></button></td></tr>';
+		var shop = getShop();
+		if (this.broadcasting) {
+			return this.sendReply('|uhtml|shop|<center><b>Click <button name = "receive" value = "|uhtmlchange|shop|' + shop + '">here</button> to enter our shop!');
 		}
-		text = text + '</table><br />' + status + '</center>';
-		this.sendReplyBox(text);
+		this.sendReplyBox(shop);
 	},
 
 	toggleshop: 'adjustshop',
@@ -144,7 +151,7 @@ exports.commands = {
 		addLog(user.name + ' has transferred ' + target + ' ' + bucks + ' to ' + targetUser + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + amt + '. ' + user.name + ' has ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
 		return this.sendReply('You have transferred ' + target + ' ' + bucks + ' to ' + targetUser + '. You have ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
 	},
-	transferbuckshelp: ['/transferbucks or /transfermoney [user], [amount] - Transfers the specified number of bucks to a user.']
+	transferbuckshelp: ['/transferbucks or /transfermoney [user], [amount] - Transfers the specified number of bucks to a user.'],
 
 	buy: function(target, room, user) {
 		if (global.shopclosed) return this.sendReply("The shop is closed for now. Wait until it re-opens shortly.");
