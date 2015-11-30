@@ -18,13 +18,13 @@ var shopList = {
 };
 
 function getShop () {
-	var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br />To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
+	var status = (!global.shopclosed) ? '<b>Shop status: <font color = "green">Open</font></b><br>To buy an item, type in /buy [item] in the chat, or simply click on one of the buttons.' : '<b>Shop status: <font color = "red">Closed</font></b>';
 	var text = '<center><h3><b><u>Sora\'s Shop</u></b></h3><table border = "1" cellspacing = "0" cellpadding = "4"><tr><th>Item</th><th>Description</th><th>Price</th><th></th></tr>';
 
 	for (var i in shopList) {
 		text = text + '<tr><td>' + shopList[i][0] + '</td><td>' + shopList[i][1] + '</td><td>' + shopList[i][2] + '</td><td><button name = "send", value="/buy ' + i + '"><b>Buy!</b></button></td></tr>';
 	}
-	text = text + '</table><br />' + status + '</center>';
+	text = text + '</table><br>' + status + '</center>';
 	return text;
 }
 
@@ -66,7 +66,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		var shop = getShop();
 		if (this.broadcasting) {
-			return this.sendReply('|uhtml|shop|<center><b>Click <button name = "receive" value = "|uhtmlchange|shop|' + shop + '">here</button> to enter our shop!');
+			return this.sendReply('|uhtml|shop|<center>Click <button name = "receive" value = "|uhtmlchange|shop|' + shop + '">here</button> to enter our shop!</center>');
 		}
 		this.sendReplyBox(shop);
 	},
