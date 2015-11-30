@@ -25,7 +25,7 @@ function getShop () {
 		text = text + '<tr><td>' + shopList[i][0] + '</td><td>' + shopList[i][1] + '</td><td>' + shopList[i][2] + '</td><td><button name = "send", value="/buy ' + i + '"><b>Buy!</b></button></td></tr>';
 	}
 	text = text + '</table><br>' + status + '</center>';
-	return text;
+	return text.replace(/"/g, '&quot;'); //escaping quotation marks
 }
 
 function addLog(message) {
