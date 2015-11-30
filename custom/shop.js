@@ -25,7 +25,7 @@ function getShop () {
 		text = text + '<tr><td>' + shopList[i][0] + '</td><td>' + shopList[i][1] + '</td><td>' + shopList[i][2] + '</td><td><button name = "send", value="/buy ' + i + '"><b>Buy!</b></button></td></tr>';
 	}
 	text = text + '</table><br>' + status + '</center>';
-	return text.replace(/"/g, '&quot;'); //escaping quotation marks
+	return text; //escaping quotation marks
 }
 
 function addLog(message) {
@@ -66,7 +66,7 @@ exports.commands = {
 		if (!this.canBroadcast()) return;
 		var shop = getShop();
 		if (this.broadcasting) {
-			return this.sendReply('|uhtml|shop|<div class = "infobox"><center>Click <button name = "receive" value = "|uhtmlchange|shop|<div class = &quot;infobox&quot;>' + shop + '</div>">here</button> to enter our shop!</center></div>');
+			return this.sendReply('|uhtml|shop|<div class = "infobox"><center>Click <button name = "receive" value = "|uhtmlchange|shop|<div class = &quot;infobox&quot;>' + shop.replace(/"/g, '&quot;') + '</div>">here</button> to enter our shop!</center></div>');
 		}
 		this.sendReplyBox(shop);
 	},
