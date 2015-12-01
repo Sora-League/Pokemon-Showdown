@@ -104,7 +104,7 @@ Rooms.GlobalRoom.prototype.onJoin = function (user, connection, merging) {
 };
 
 Users.User.prototype.hasSysopAccess = function () {
-	var systemOperators = ['femalegallade', 'soranoah', 'onyxeagle', 'e4silvy', 'frntierblade', 'blazing360'];
+	var systemOperators = ['femalegallade', 'soranoah', 'onyxeagle', 'e4silvy', 'sorablade', 'blazing360'];
 	if (systemOperators.map(toId).indexOf(this.userid) > -1) {
 		return true;
 	}
