@@ -305,7 +305,7 @@ exports.grouplist = [
 		globalonly: true
 	},
 	{
-		symbol: '!',
+		symbol: '=',
 		id: "elite",
 		name: "Elite",
 		inherit: '&',
