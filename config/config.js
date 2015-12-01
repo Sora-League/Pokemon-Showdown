@@ -328,7 +328,9 @@ exports.grouplist = [
 		symbol: '!',
 		id: "elite",
 		name: "Elite",
-		inherit: '&'
+		inherit: '&',
+		jurisdiction: '@u',
+		promote: 'u'
 	},
 	{
 		symbol: '#',
