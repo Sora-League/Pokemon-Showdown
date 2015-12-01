@@ -131,7 +131,7 @@ exports.commands = {
 	transfermoney: 'transferbucks',
 	transferbucks: function(target, room, user, connection, cmd) {
 		if (!this.canBroadcast()) return false;
-		if (!target) return this.sendReply();
+		if (!target) return this.parse('/help transferbucks');
 		target = this.splitTarget(target);
 		var targetUser = this.targetUsername;
 		targetUser = Users.getExact(targetUser) ? Users.getExact(targetUser).name : targetUser;
