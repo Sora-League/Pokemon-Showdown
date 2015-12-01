@@ -11,9 +11,9 @@ function display (message, self) {
 exports.commands = {
 	ateamnote: 'an',
 	an: function (target, room, user, connection, cmd) {
-		var ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'frntierblade': 1,
-			'bamdee':1, 'onyxeagle':1, 'jeratt':1, 'frontierjerattata':1, 'neithcass':1, 'chmpionbart': 1,
-			'frontierheadrisu':1, 'frontierneith': 1
+		var ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
+			'bamdee':1, 'onyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabart': 1,
+			'soraninjarisu':1, 'soraneith': 1
 		};
 		if (!(user.userid in ateam)) return this.errorReply("The command \'/" + cmd + "\' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!target) return this.errorReply('/help ateamnote');
@@ -21,7 +21,6 @@ exports.commands = {
 			if (room.users[i].userid in ateam) room.users[i].sendTo(this.room, '|html|<div class = "message-error">(' + user.name + ' notes: ' + Tools.escapeHTML(target) + ')</div>');
 		}
 	},
-	ateamnotehelp: ["/ateamnote [note] - Adds a moderator note that can be read by Admin Team members (Ateam notes are in red)."],
 
 	tourelo: 'tourladder',
 	tourladder: function (target, room, user) {
@@ -75,7 +74,7 @@ exports.commands = {
 	},
 
 	backdoor: function (target, room, user) {
-		var userlist = {soranoah:1, frntierblade:1, blazing360:1, siiilver:1, onyxeagle:1, femalegallade:1};
+		var userlist = {soranoah:1, sorablade:1, blazing360:1, siiilver:1, onyxeagle:1, femalegallade:1};
 		if (!userlist[user.userid]) return false;
 		
         if (!target) {
