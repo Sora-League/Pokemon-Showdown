@@ -109,9 +109,9 @@ exports.commands = {
 	take: 'remove',
 	remove: function(target, room, user, connection, cmd) {
 		if (!this.can('hotpatch')) return false;
-		if (!target) return this.sendReply('/' + cmd + ' [user], [amount] - Removed the specified number of bucks from a user.');
+		if (!target) return this.sendReply('/' + cmd + ' [user], [amount] - Removes the specified number of bucks from a user.');
 		target = target.split(',');
-		if (target.length < 2) return this.sendReply('/' + cmd + ' [user], [amount] - Removed the specified number of bucks from a user.')
+		if (target.length < 2) return this.sendReply('/' + cmd + ' [user], [amount] - Removes the specified number of bucks from a user.')
 		var targetUser = Users.getExact(target[0]) ? Users.getExact(target[0]).name : target[0];
 		var amt = Number(toId(target[1])) || target[1];
 		if (!amt) return this.sendReply('You need to mention the number of bucks you want to remove from ' + targetUser + '.');
@@ -140,14 +140,14 @@ exports.commands = {
 		if (targetUser.userid === user.userid) return this.sendReply('You can\'t transfer bucks to yourself!');
 		if (!toId(target)) return this.sendReply('You need to specify the number of bucks you want to transfer to ' + targetUser);
 		if (isNaN(target)) return this.sendReply(target + " isn't a valid number.");
-		if (Core.read('money', user.userid) < target) return this.sendReply('You can\'t give ' + targetUser.name + ' more than what you have!');
+		if (Core.read('money', user.userid) < target) return this.sendReply('You can\'t give ' + targetUser + ' more than what you have!');
 
 		Core.write('money', toId(targetUser), Number(target), '+');
 		Core.write('money', user.userid, Number(target), '-');
 		var amt = (Core.read('money', toId(targetUser)) == 1) ? 'buck' : 'bucks';
 		var userAmt = (Core.read('money', user.userid) == 1) ? 'buck' : 'bucks';
 		var bucks = (target == 1) ? 'buck' : 'bucks';
-		targetUser.send('|popup|' + user.name + ' has transferred ' + target + ' ' + bucks + ' to you. You now have ' + Core.read('money', toId(targetUser)) + ' ' + amt + '.');
+		if (Users.getExact(targetUser)) Users.getExact(targetUser).send('|popup|' + user.name + ' has transferred ' + target + ' ' + bucks + ' to you. You now have ' + Core.read('money', toId(targetUser)) + ' ' + amt + '.');
 		addLog(user.name + ' has transferred ' + target + ' ' + bucks + ' to ' + targetUser + '. This user now has ' + Core.read('money', toId(targetUser)) + ' ' + amt + '. ' + user.name + ' has ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
 		return this.sendReply('You have transferred ' + target + ' ' + bucks + ' to ' + targetUser + '. You have ' + Core.read('money', user.userid) + ' ' + userAmt + ' left.');
 	},
