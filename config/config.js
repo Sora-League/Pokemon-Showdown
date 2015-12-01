@@ -305,6 +305,12 @@ exports.grouplist = [
 		globalonly: true
 	},
 	{
+		symbol: '!',
+		id: "elite",
+		name: "Elite",
+		inherit: '&',
+	},
+	{
 		symbol: '&',
 		id: "leader",
 		name: "Leader",
@@ -323,14 +329,6 @@ exports.grouplist = [
 		disableladder: true,
 		globalonly: true,
 		tournamentsmanagement: true
-	},
-	{
-		symbol: '!',
-		id: "elite",
-		name: "Elite",
-		inherit: '&',
-		jurisdiction: '@u',
-		promote: 'u'
 	},
 	{
 		symbol: '#',
