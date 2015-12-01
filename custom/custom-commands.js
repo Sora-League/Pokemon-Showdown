@@ -1,6 +1,5 @@
 var fs = require('fs');
 var request = require('request');
-var tourLadder = Ladders('tournaments');
 var deleteLadderConfirm = false;
 
 function display (message, self) {
@@ -26,6 +25,7 @@ exports.commands = {
 	tourladder: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var self = this;
+		var tourLadder = Ladders('tournaments');
 		if (!target || !target.trim()) {
 			tourLadder.load().then(function (users) {
 				if (!users.length) return self.sendReplyBox('No rated tournaments have been played yet.');
@@ -60,12 +60,13 @@ exports.commands = {
 	deletetourladder: 'resettourladder',
 	resettourladder: function (target, room, user) {
 		if (!this.can('hotpatch')) return false;
-		tourLadder.load().then(function (users) {
+		Ladders('tournaments').load().then(function (users) {
 			if (!users.length) return this.sendReply('No rated tournaments have been played yet.');
 			if (!deleteLadderConfirm) {
 				deleteLadderConfirm = true;
 				return this.sendReply('WARNING: This will permanently delete all tournament ladder ratings. If you\'re sure you want to do this, use this command again.');
 			}
+			deleteLadderConfirm = false;
 			require('fs').unlinkSync('config/ladders/tournaments.tsv');
 			Rooms('lobby').add('|html|<b>The Tournament Ladder has been reset.</b>');
 			Rooms('lobby').update();
