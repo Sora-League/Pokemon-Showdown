@@ -325,6 +325,12 @@ exports.grouplist = [
 		tournamentsmanagement: true
 	},
 	{
+		symbol: '!',
+		id: "elite",
+		name: "Elite",
+		inherit: '&'
+	},
+	{
 		symbol: '#',
 		id: "owner",
 		name: "Room Owner",
