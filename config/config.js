@@ -309,6 +309,9 @@ exports.grouplist = [
 		id: "elite",
 		name: "Elite",
 		inherit: '&',
+		jurisdiction: '@u',
+		promote: 'u'
+		
 	},
 	{
 		symbol: '&',
