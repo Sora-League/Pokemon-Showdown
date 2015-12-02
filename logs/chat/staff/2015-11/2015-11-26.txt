@@ -1,0 +1,266 @@
+00:00:13 |J|%Gym Ldr. You
+00:00:13 |N|%Gym Ldr. You|gymldryou
+00:00:22 |N|%∆Gym Ldr. You∆|gymldryou
+00:00:22 |N|%∆Gym Ldr. You∆|gymldryou
+00:05:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:1|@:3|★:0|#:0|&:0|~:1
+00:08:02 |L| ∆Frontier Meows∆
+00:11:22 |L| ∆Gym Ldr. You∆
+00:15:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:0|@:2|★:0|#:0|&:0|~:1
+00:25:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:0|@:2|★:0|#:0|&:0|~:1
+00:35:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:0|@:2|★:0|#:0|&:0|~:1
+00:36:11 |J|%∆Gym Ldr. You∆
+00:36:11 |N|%∆Gym Ldr. You∆|gymldryou
+00:45:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:1
+00:55:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:1
+00:59:23 |J|&E4 Edge
+00:59:23 |N|&E4 Edge|e4edge
+00:59:34 |N|&∆E4 Edge∆|e4edge
+00:59:34 |N|&∆E4 Edge∆|e4edge
+01:05:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:1|~:1
+01:15:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:1|~:1
+01:19:40 |J|&E4 Barney
+01:19:40 |N|&E4 Barney|e4barney
+01:19:44 |N|&∆E4 Barney∆|e4barney
+01:19:44 |N|&∆E4 Barney∆|e4barney
+01:19:45 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+01:19:45 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+01:19:45 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+01:20:00 |J|%Gym ldr giratina
+01:20:00 |N|%Gym ldr giratina|gymldrgiratina
+01:20:00 |N|%Gym ldr giratina|gymldrgiratina
+01:20:31 |N| Gym ldr giratina|gymldrgiratina
+01:20:31 |N| Gym ldr giratina|gymldrgiratina
+01:22:05 |N|%Gym ldr giratina|gymldrgiratina
+01:23:14 ∆Champiön Nöah∆ used /updateserver
+01:23:14 Running `git stash && git pull --rebase && git stash pop`
+01:23:14 Saved working directory and index state WIP on master: 4def0e7 Updated Barney's card
+01:23:14 HEAD is now at 4def0e7 Updated Barney's card
+01:23:14 First, rewinding head to replay your work on top of it...
+01:23:14 Fast-forwarded master to 7c9e8b4fe7329ce5e1f7cc0b1aa949570ccb6cf6.
+01:23:14 Removing config/avatars/frontierzachary.png
+01:23:14 Removing config/avatars/e4terror.gif
+01:23:14 On branch master
+01:23:14 Your branch is up-to-date with 'origin/master'.
+01:23:14 
+01:23:14 Changes not staged for commit:
+01:23:14   (use "git add/rm <file>..." to update what will be committed)
+01:23:14   (use "git checkout -- <file>..." to discard changes in working directory)
+01:23:14 
+01:23:14 	deleted:    config/avatars/e4terror.gif
+01:23:14 	deleted:    config/avatars/frontierzachary.png
+01:23:14 	modified:   storage-files/badges.json
+01:23:14 	modified:   storage-files/lastseen.json
+01:23:14 	modified:   storage-files/money.json
+01:23:14 	modified:   storage-files/poof.json
+01:23:14 	modified:   storage-files/tourwins.json
+01:23:14 
+01:23:14 Untracked files:
+01:23:14   (use "git add <file>..." to include in what will be committed)
+01:23:14 
+01:23:14 	storage-files/tells.json
+01:23:14 
+01:23:14 no changes added to commit (use "git add" and/or "git commit -a")
+01:23:14 Dropped refs/stash@{0} (8ce60a108807af772212e63fed17d8247b38175b)
+01:23:14 From https://github.com/Sora-League/Sora
+01:23:14    4def0e7..7c9e8b4  master     -> origin/master
+01:23:14 
+01:23:15 ∆Champiön Nöah∆ used /hotpatch chat
+01:23:51 ∆Champiön Nöah∆ used /updateserver
+01:23:51 Running `git stash && git pull --rebase && git stash pop`
+01:23:51 Saved working directory and index state WIP on master: 7c9e8b4 Update trainer-cards.js
+01:23:51 HEAD is now at 7c9e8b4 Update trainer-cards.js
+01:23:51 First, rewinding head to replay your work on top of it...
+01:23:51 Fast-forwarded master to abf918be3bed1d7fa22904e063f24db4058d2e7f.
+01:23:51 Removing config/avatars/frontierzachary.png
+01:23:51 Removing config/avatars/e4terror.gif
+01:23:51 On branch master
+01:23:51 Your branch is up-to-date with 'origin/master'.
+01:23:51 
+01:23:51 Changes not staged for commit:
+01:23:51   (use "git add/rm <file>..." to update what will be committed)
+01:23:51   (use "git checkout -- <file>..." to discard changes in working directory)
+01:23:51 
+01:23:51 	deleted:    config/avatars/e4terror.gif
+01:23:51 	deleted:    config/avatars/frontierzachary.png
+01:23:51 	modified:   storage-files/badges.json
+01:23:51 	modified:   storage-files/lastseen.json
+01:23:51 	modified:   storage-files/money.json
+01:23:51 	modified:   storage-files/poof.json
+01:23:51 	modified:   storage-files/tourwins.json
+01:23:51 
+01:23:51 Untracked files:
+01:23:51   (use "git add <file>..." to include in what will be committed)
+01:23:51 
+01:23:51 	storage-files/tells.json
+01:23:51 
+01:23:51 no changes added to commit (use "git add" and/or "git commit -a")
+01:23:51 Dropped refs/stash@{0} (e232b5023fbf1e7ea0560ec3a8c270f8db1462de)
+01:23:51 From https://github.com/Sora-League/Sora
+01:23:51    7c9e8b4..abf918b  master     -> origin/master
+01:23:51 
+01:23:52 ∆Champiön Nöah∆ used /hotpatch chat
+01:25:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:2|★:0|#:0|&:2|~:1
+01:27:01 |N|%∆Gym ldr giratina∆|gymldrgiratina
+01:27:01 |N|%∆Gym ldr giratina∆|gymldrgiratina
+01:28:40 |L| gymldrgiratina
+01:29:18 |J|%Gym Ldr Giratina
+01:30:48 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+01:30:48 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+01:33:00 |J|~FrontierHead Risu
+01:33:00 |N|~FrontierHead Risu|frontierheadrisu
+01:33:11 |N|~FrontierHead∆Risu|frontierheadrisu
+01:33:11 |N|~FrontierHead∆Risu|frontierheadrisu
+01:35:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:2|@:2|★:0|#:0|&:2|~:2
+01:37:03 |L| ∆Fröntier∆Blade☯- ⒶⒻⓀ
+01:45:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:2
+01:47:09 |L| ∆Gym Ldr Giratina∆
+01:47:12 |J|%∆Gym Ldr Giratina∆
+01:47:12 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+01:51:03 |N|~∆Champiön Nöah∆- ⒶⒻⓀ|champinnah
+01:51:03 |N|~∆Champiön Nöah∆- ⒶⒻⓀ|champinnah
+01:51:03 |N|~∆Champiön Nöah∆- ⒶⒻⓀ|champinnah
+01:55:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:2
+02:04:46 |L| ∆Gym Ldr Giratina∆
+02:05:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:2
+02:11:22 |J|%∆Gym Ldr Giratina∆
+02:11:22 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+02:13:58 |L| ∆Gym Ldr Giratina∆
+02:15:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:2
+02:16:14 |J|%∆Gym Ldr Giratina∆
+02:16:14 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+02:17:10 |L| ∆Gym Ldr Giratina∆
+02:19:10 |J|%Gym Ldr Alcor
+02:19:10 |N|%Gym Ldr Alcor|gymldralcor
+02:19:16 |N|%∆Gym Ldr Alcor∆|gymldralcor
+02:19:16 |N|%∆Gym Ldr Alcor∆|gymldralcor
+02:20:16 |L| ∆E4 Edge∆
+02:22:37 |J|@∆Fröntier∆Blade☯- ⒶⒻⓀ
+02:22:37 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+02:25:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:2|★:0|#:0|&:1|~:2
+02:26:31 |N|~∆Champiön Nöah∆|champinnah
+02:26:31 |N|~∆Champiön Nöah∆|champinnah
+02:26:31 |N|~∆Champiön Nöah∆|champinnah
+02:28:57 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+02:28:57 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+02:28:57 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+02:33:16 |N|~FrontierHead∆Risu- ⒶⒻⓀ|frontierheadrisu
+02:33:16 |N|~FrontierHead∆Risu- ⒶⒻⓀ|frontierheadrisu
+02:33:16 |N|~FrontierHead∆Risu- ⒶⒻⓀ|frontierheadrisu
+02:35:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:2|★:0|#:0|&:1|~:2
+02:45:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:2|★:0|#:0|&:1|~:2
+02:53:31 |J|%∆Gym Ldr Bigo∆
+02:53:31 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+02:55:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+03:01:58 |N|~FrontierHead∆Risu|frontierheadrisu
+03:01:58 |N|~FrontierHead∆Risu|frontierheadrisu
+03:01:58 |N|~FrontierHead∆Risu|frontierheadrisu
+03:05:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+03:15:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+03:18:55 |N|@∆Frontier Zachary∆|frontierzachary
+03:18:55 |N|@∆Frontier Zachary∆|frontierzachary
+03:18:55 |N|@∆Frontier Zachary∆|frontierzachary
+03:19:21 |J|~∆Chаmpion Bart∆
+03:19:21 |N|~∆Chаmpion Bart∆|chmpionbart
+03:19:29 |J|&E4 Terror
+03:19:29 |N|&E4 Terror|e4terror
+03:25:34 |userstats|total:10|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:2|~:3
+03:35:34 |userstats|total:10|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:2|~:3
+03:39:13 |N|&∆E4 Terror∆|e4terror
+03:39:13 |N|&∆E4 Terror∆|e4terror
+03:43:21 |J|@Frontier Meows
+03:43:21 |N|@Frontier Meows|frontiermeows
+03:43:23 |N|@∆Frontier Meows∆|frontiermeows
+03:43:23 |N|@∆Frontier Meows∆|frontiermeows
+03:43:50 |L| FrontierHead∆Risu
+03:45:34 |userstats|total:10|guests:0| :0|+:0|$:0|%:3|@:3|★:0|#:0|&:2|~:2
+03:45:49 |N|@∆Frontier Meows∆|frontiermeows
+03:55:34 |userstats|total:10|guests:0| :0|+:0|$:0|%:3|@:3|★:0|#:0|&:2|~:2
+03:58:09 |N|@∆Frontier Meows∆- ⒶⒻⓀ|frontiermeows
+03:58:09 |N|@∆Frontier Meows∆- ⒶⒻⓀ|frontiermeows
+03:58:09 |N|@∆Frontier Meows∆- ⒶⒻⓀ|frontiermeows
+03:59:35 |N|@∆Frontier Meows∆|frontiermeows
+03:59:35 |N|@∆Frontier Meows∆|frontiermeows
+03:59:35 |N|@∆Frontier Meows∆|frontiermeows
+04:00:02 |J|%Gym Ldr Arjunb
+04:00:02 |N|%Gym Ldr Arjunb|gymldrarjunb
+04:00:02 |N|%Gym Ldr Arjunb|gymldrarjunb
+04:00:32 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:00:32 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:00:52 |L| ∆E4 Barney∆
+04:05:34 |userstats|total:10|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:1|~:2
+04:13:24 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:13:24 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:13:24 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:15:34 |userstats|total:10|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:1|~:2
+04:25:18 |J|&∆E4 Barney∆
+04:25:18 |N|&∆E4 Barney∆|e4barney
+04:25:34 |userstats|total:11|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+04:35:34 |userstats|total:11|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+04:45:34 |userstats|total:11|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+04:54:32 |N|%∆Gym Ldr Bigo∆- ⒶⒻⓀ|gymldrbigo
+04:54:32 |N|%∆Gym Ldr Bigo∆- ⒶⒻⓀ|gymldrbigo
+04:54:32 |N|%∆Gym Ldr Bigo∆- ⒶⒻⓀ|gymldrbigo
+04:55:34 |userstats|total:11|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+05:01:37 |N|~∆Chаmpion Bart∆- ⒶⒻⓀ|chmpionbart
+05:01:37 |N|~∆Chаmpion Bart∆- ⒶⒻⓀ|chmpionbart
+05:01:37 |N|~∆Chаmpion Bart∆- ⒶⒻⓀ|chmpionbart
+05:05:34 |userstats|total:11|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+05:12:08 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+05:12:08 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+05:12:08 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+05:13:08 |N|~∆Chаmpion Bart∆|chmpionbart
+05:13:08 |N|~∆Chаmpion Bart∆|chmpionbart
+05:13:08 |N|~∆Chаmpion Bart∆|chmpionbart
+05:15:34 |userstats|total:11|guests:0| :0|+:0|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+05:16:12 |L|@∆Frontier Meows∆
+05:16:41 |L|&∆E4 Barney∆
+05:20:24 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:20:24 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:20:24 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:22:27 |L| ∆Gym Ldr Arjunb∆
+05:25:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+05:35:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+05:36:55 |N|@∆Fröntier∆Blade☯|frntierblade
+05:36:55 |N|@∆Fröntier∆Blade☯|frntierblade
+05:36:55 |N|@∆Fröntier∆Blade☯|frntierblade
+05:39:23 |raw|<div class="broadcast-red"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>
+05:55:30 NEW CHATROOM: staff
+05:56:24 NEW CHATROOM: staff
+05:58:44 NEW CHATROOM: staff
+06:05:55 NEW CHATROOM: staff
+06:13:29 NEW CHATROOM: staff
+06:17:51 NEW CHATROOM: staff
+22:47:34 NEW CHATROOM: staff
+22:47:54 |J|@∆Fröntier∆Blade☯
+22:47:54 |N|@∆Fröntier∆Blade☯|frntierblade
+22:48:34 |c|@∆Fröntier∆Blade☯|Rip in Zarel
+22:50:45 |J|%Gym Ldr Alcor
+22:50:45 |N|%Gym Ldr Alcor|gymldralcor
+22:50:47 |N|%∆Gym Ldr Alcor∆|gymldralcor
+22:50:47 |N|%∆Gym Ldr Alcor∆|gymldralcor
+22:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+23:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+23:17:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+23:19:01 |J|%Siiilver
+23:19:01 |N|%Siiilver|siiilver
+23:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+23:37:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+23:41:03 |J|~?Champiön Nöah?
+23:41:03 |N|~?Champiön Nöah?|champinnah
+23:41:15 |N|~Champiön Nöah|champinnah
+23:41:15 |N|~Champiön Nöah|champinnah
+23:41:17 |N|~∆Champiön Nöah∆|champinnah
+23:41:17 |N|~∆Champiön Nöah∆|champinnah
+23:42:59 |J|%∆Gym Ldr. You∆
+23:42:59 |N|%∆Gym Ldr. You∆|gymldryou
+23:45:05 |L| ∆Gym Ldr Alcor∆
+23:45:07 |J|%∆Gym Ldr Alcor∆
+23:45:07 |N|%∆Gym Ldr Alcor∆|gymldralcor
+23:45:40 |L| ∆Champiön Nöah∆
+23:45:42 |J|~∆Champiön Nöah∆
+23:45:42 |N|~∆Champiön Nöah∆|champinnah
+23:47:02 |L| ∆Gym Ldr Alcor∆
+23:47:05 |J|%∆Gym Ldr Alcor∆
+23:47:05 |N|%∆Gym Ldr Alcor∆|gymldralcor
+23:47:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1
+23:57:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1

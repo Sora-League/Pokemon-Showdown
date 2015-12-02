@@ -1,0 +1,824 @@
+00:05:54 |L| ∆Gym Ldr. You∆
+00:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+00:07:43 |J|@Neith Cass
+00:07:43 |N|@Neith Cass|neithcass
+00:07:49 |N|@Neith Cass|neithcass
+00:08:26 |L| Neith Cass
+00:14:26 |J|@∆Fröntier∆Blade☯
+00:14:26 |N|@∆Fröntier∆Blade☯|frntierblade
+00:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:1|★:0|#:0|&:0|~:0
+00:22:50 |J|@Neith Cass
+00:22:50 |N|@Neith Cass|neithcass
+00:24:15 |N|@Neith Cass|neithcass
+00:27:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:0|@:2|★:0|#:0|&:0|~:0
+00:28:11 |L| Neith Cass
+00:28:27 |J|%Gym Ldr. Dogelord
+00:28:27 |N|%Gym Ldr. Dogelord|gymldrdogelord
+00:29:56 |L|%Gym Ldr. Dogelord
+00:31:43 |J|@Neith Cass
+00:31:43 |N|@Neith Cass|neithcass
+00:31:48 |N|@Neith Cass|neithcass
+00:36:32 |J|%∆Gym Ldr. You∆
+00:36:32 |N|%∆Gym Ldr. You∆|gymldryou
+00:37:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:0
+00:43:26 |L| Neith Cass
+00:46:22 |J|@Neith Cass
+00:46:22 |N|@Neith Cass|neithcass
+00:46:26 |N|@Neith Cass|neithcass
+00:47:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:0
+00:57:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:0
+01:07:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:0
+01:17:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:0
+01:26:52 |J|~FrontierHead Risu
+01:26:52 |N|~FrontierHead Risu|frontierheadrisu
+01:27:01 |N|~FrontierHead∆Risu|frontierheadrisu
+01:27:01 |N|~FrontierHead∆Risu|frontierheadrisu
+01:27:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:1
+01:27:50 |N|~FrontierHead∆Risu|frontierheadrisu
+01:37:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:1
+01:47:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:1
+01:48:03 |L| Neith Cass
+01:48:48 |J|@Neith Cass
+01:48:48 |N|@Neith Cass|neithcass
+01:50:21 |N|@Neith Cass|neithcass
+01:55:10 |L| Neith Cass
+01:57:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:1
+02:07:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:1
+02:13:36 |J|~?Champiön Nöah?
+02:13:36 |N|~?Champiön Nöah?|champinnah
+02:14:24 |L| ?Champiön Nöah?
+02:14:57 |J|~Female Gallade
+02:14:57 |N|~Female Gallade|femalegallade
+02:17:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:2
+02:27:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:2
+02:37:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:2
+02:47:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:2
+02:49:35 |N| Sora Noah|femalegallade
+02:49:48 |N|~Sora Noah|soranoah
+02:49:58 |N| Sora Noah|soranoah
+02:49:58 |N| Sora Noah|soranoah
+02:50:10 |N|~Sora Noah|soranoah
+02:54:11 |raw|<div class="broadcast-green"><b>Greetings all, it is I; Noah. As you all may have noticed I have a new alt, this is for one reason and one alone: the alt Champinnah I suspect has been compromised. The password no longer works on any server, so I suspect somehow my account may have been stolen. I have taken all the steps to deauth the account and keep the server safe, as a result I have a new alt. Before you all ask "Why not use Champion Noah?" The pass for that, I forgot a long time go. As well as this, some of you may remember a Poll being conducted in which we asked if you all think we should change how the league identifies itself name-wise, I believe it's time for a re-vote and my new alt will serve as an example as to how the names will appear. Regardless of the poll results, my name will remain this way due to me no longer having a "Champion" alt I can use as well as me not wanting to change my name due to the name Noah being widely known as me on PS. -Noah</b></div>
+02:54:33 |c|~Sora Noah|This is the alt I speak of, if there are any more questions, ask me personally.
+02:56:46 |N|~Female Gallade|soranoah
+02:56:53 Female Gallade used /updateserver
+02:56:53 Running `git stash && git pull --rebase && git stash pop`
+02:56:53 Saved working directory and index state WIP on master: 481d47a Revert "Updates from main"
+02:56:53 HEAD is now at 481d47a Revert "Updates from main"
+02:56:53 First, rewinding head to replay your work on top of it...
+02:56:53 Fast-forwarded master to b944ebf2c7f61e14ca19fa2df6921d1e8f94da07.
+02:56:53 On branch master
+02:56:53 Your branch is up-to-date with 'origin/master'.
+02:56:53 
+02:56:53 Changes not staged for commit:
+02:56:53   (use "git add <file>..." to update what will be committed)
+02:56:53   (use "git checkout -- <file>..." to discard changes in working directory)
+02:56:53 
+02:56:53 	modified:   storage-files/lastseen.json
+02:56:53 	modified:   storage-files/money.json
+02:56:53 	modified:   storage-files/tourwins.json
+02:56:53 
+02:56:53 Untracked files:
+02:56:53   (use "git add <file>..." to include in what will be committed)
+02:56:53 
+02:56:53 	storage-files/tells.json
+02:56:53 
+02:56:53 no changes added to commit (use "git add" and/or "git commit -a")
+02:56:53 Dropped refs/stash@{0} (9ed845186ebe1234e1d7ce19b95ba6b3e3fe4961)
+02:56:53 From https://github.com/Sora-League/Sora
+02:56:53    481d47a..b944ebf  master     -> origin/master
+02:56:53 
+02:56:55 Female Gallade used /hotpatch chat
+02:57:03 |N|~Sora Noah|femalegallade
+02:57:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:2
+02:57:55 |N| Chаmpion Noah|frontierheadrisu
+02:58:44 |N|~FrontierHead∆Risu|chmpionnoah
+02:59:14 |N|~FrontierHead∆Risu|frontierheadrisu
+02:59:26 |N|~Female Gallade|soranoah
+02:59:33 Female Gallade used /updateserver
+02:59:33 Running `git stash && git pull --rebase && git stash pop`
+02:59:33 Saved working directory and index state WIP on master: b944ebf Remove "Champinnah" from /backdoor, add Sora Noah
+02:59:33 HEAD is now at b944ebf Remove "Champinnah" from /backdoor, add Sora Noah
+02:59:33 First, rewinding head to replay your work on top of it...
+02:59:33 Fast-forwarded master to c210e04d22e40b0e678d3b273ac854fdf93a3213.
+02:59:33 On branch master
+02:59:33 Your branch is up-to-date with 'origin/master'.
+02:59:33 
+02:59:33 Changes not staged for commit:
+02:59:33   (use "git add <file>..." to update what will be committed)
+02:59:33   (use "git checkout -- <file>..." to discard changes in working directory)
+02:59:33 
+02:59:33 	modified:   storage-files/lastseen.json
+02:59:33 	modified:   storage-files/money.json
+02:59:33 	modified:   storage-files/tourwins.json
+02:59:33 
+02:59:33 Untracked files:
+02:59:33   (use "git add <file>..." to include in what will be committed)
+02:59:33 
+02:59:33 	storage-files/tells.json
+02:59:33 
+02:59:33 no changes added to commit (use "git add" and/or "git commit -a")
+02:59:33 Dropped refs/stash@{0} (b4ea9c1db438312b6a75a4b3c9401de0d370df43)
+02:59:33 From https://github.com/Sora-League/Sora
+02:59:33    b944ebf..c210e04  master     -> origin/master
+02:59:33 
+02:59:35 Female Gallade used /hotpatch chat
+02:59:42 |N|~Sora Noah|femalegallade
+03:07:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:2
+03:07:50 |J|%Gym Ldr. Dogelord
+03:07:50 |N|%Gym Ldr. Dogelord|gymldrdogelord
+03:09:49 |J|&E4 Barney
+03:09:49 |N|&E4 Barney|e4barney
+03:10:52 |N|&∆E4 Barney∆|e4barney
+03:10:52 |N|&∆E4 Barney∆|e4barney
+03:11:53 |J|%∆Gym Ldr Mitsuka∆
+03:11:53 |N|%∆Gym Ldr Mitsuka∆|gymldrmitsuka
+03:11:58 |J|&E4 Terror
+03:11:58 |N|&E4 Terror|e4terror
+03:12:02 |N|&∆E4 Barney∆ - ⒹⓘⓝⒹⓘⓝⓢ|e4barney
+03:12:02 |N|&∆E4 Barney∆ - ⒹⓘⓝⒹⓘⓝⓢ|e4barney
+03:12:02 |N|&∆E4 Barney∆ - ⒹⓘⓝⒹⓘⓝⓢ|e4barney
+03:12:11 |N|&∆E4 Terror∆|e4terror
+03:12:11 |N|&∆E4 Terror∆|e4terror
+03:12:30 |L| ∆Gym Ldr Mitsuka∆
+03:12:40 |L|~Sora Noah
+03:12:47 |J|~Sora Noah
+03:12:47 |N|~Sora Noah|soranoah
+03:15:46 (Sora Noah changed the roomintro.)
+03:15:54 |N| Sora Terror|e4terror
+03:15:54 |L|~Sora Noah
+03:16:00 |N|&E4 Terror|soraterror
+03:16:11 |N| Sora Terror|e4terror
+03:16:23 |J|~Sora Noah
+03:16:23 |N|~Sora Noah|soranoah
+03:16:29 |N| Sora Terror|soraterror
+03:16:29 |N| Sora Terror|soraterror
+03:16:38 |N|&E4 Terror|soraterror
+03:16:40 |N|&∆E4 Terror∆|e4terror
+03:16:40 |N|&∆E4 Terror∆|e4terror
+03:17:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:2
+03:18:49 |L| ∆Fröntier∆Blade☯
+03:19:54 |N| Sora You|gymldryou
+03:20:06 |N| Sora Youmaton|sorayou
+03:20:38 |N|%Gym Ldr. You|sorayoumaton
+03:20:43 |N|%∆Gym Ldr. You∆|gymldryou
+03:20:43 |N|%∆Gym Ldr. You∆|gymldryou
+03:22:24 |N|&∆E4 Terror∆|e4terror
+03:24:53 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+03:24:53 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+03:25:18 |J|%∆Gym Ldr. Waffles∆
+03:25:18 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+03:26:06 |N|&∆E4 Terror∆|e4terror
+03:26:14 |L|%∆Gym Ldr. You∆
+03:26:19 |J|%∆Gym Ldr. You∆
+03:26:19 |N|%∆Gym Ldr. You∆|gymldryou
+03:27:18 |J|@∆Fröntier∆Blade☯
+03:27:18 |N|@∆Fröntier∆Blade☯|frntierblade
+03:27:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:2|~:2
+03:31:30 |J|@∆Frontier Zachary∆
+03:31:30 |N|@∆Frontier Zachary∆|frontierzachary
+03:33:55 |N|@∆Frontier Zachary∆|frontierzachary
+03:36:12 |J|@Sorarani
+03:36:12 |N|@Sorarani|sorarani
+03:37:36 |userstats|total:10|guests:0| :0|+:0|$:0|%:3|@:3|★:0|#:0|&:2|~:2
+03:37:56 |J|&Frontier Srewop
+03:37:56 |N|&Frontier Srewop|frontiersrewop
+03:38:19 |N|+SoraHeat|frontiersrewop
+03:40:03 |L| ∆Gym Ldr. Dogelord∆
+03:40:19 |J|%Gym Ldr Alcor
+03:40:19 |N|%Gym Ldr Alcor|gymldralcor
+03:40:23 |N|%∆Gym Ldr Alcor∆|gymldralcor
+03:40:23 |N|%∆Gym Ldr Alcor∆|gymldralcor
+03:42:28 |N| Sora ArthurZH|frontierzachary
+03:42:30 |N| sora leaf|gymldralcor
+03:42:40 |J|%∆Gym Ldr. Dogelord∆
+03:42:40 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+03:42:49 |N| sora leaf|soraleaf
+03:42:49 |N| sora leaf|soraleaf
+03:42:49 |N| Sora Terror|e4terror
+03:42:57 |N| sora alcor|soraleaf
+03:42:59 |N|&E4 Terror|soraterror
+03:43:05 |N|&∆E4 Terror∆|e4terror
+03:43:05 |N|&∆E4 Terror∆|e4terror
+03:43:12 |N| sora alcor|soraalcor
+03:43:12 |N| sora alcor|soraalcor
+03:43:33 |N| sora leaf|soraalcor
+03:43:36 |N| Sora Arthur|soraarthurzh
+03:43:51 |N| Sora Zachary|soraarthur
+03:43:53 |L| ∆Gym Ldr. Dogelord∆
+03:43:57 |N|%Gym Ldr Alcor|soraleaf
+03:43:59 |N| Sora Arthur|sorazachary
+03:44:01 |N|%∆Gym Ldr Alcor∆|gymldralcor
+03:44:01 |N|%∆Gym Ldr Alcor∆|gymldralcor
+03:44:04 |L| ∆Gym Ldr. Waffles∆
+03:45:00 |N| Sora Sparks|e4terror
+03:45:25 |N|&E4 Terror|sorasparks
+03:45:34 |N|@Frontier Zachary|soraarthur
+03:45:37 |N|@∆Frontier Zachary∆|frontierzachary
+03:45:37 |N|@∆Frontier Zachary∆|frontierzachary
+03:46:09 |L| Sora Noah
+03:46:10 |J|%∆Gym Ldr. Waffles∆
+03:46:10 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+03:46:12 |J|~Sora Noah
+03:46:12 |N|~Sora Noah|soranoah
+03:46:58 |N|&∆E4 Terror∆|e4terror
+03:46:58 |N|&∆E4 Terror∆|e4terror
+03:47:36 |userstats|total:11|guests:0| :0|+:1|$:0|%:3|@:3|★:0|#:0|&:2|~:2
+03:47:38 |N|~∆Sora Noah∆|soranoah
+03:47:38 |N|~∆Sora Noah∆|soranoah
+03:47:58 |N|&∆E4 Barney∆|e4barney
+03:47:58 |N|&∆E4 Barney∆|e4barney
+03:47:58 |N|&∆E4 Barney∆|e4barney
+03:49:32 (A poll was started by ∆Sora Noah∆.)
+03:50:06 |c|%∆Gym Ldr Alcor∆|i like the new system since it represents our current mindset
+03:50:06 |N|&∆E4 Barney∆|e4barney
+03:50:10 |c|%∆Gym Ldr Alcor∆|community first league second
+03:50:16 |c|~∆Sora Noah∆|Also if you could all not end this or bump it up, I'd appreciate it.
+03:50:28 |N| Sora Connor|e4barney
+03:50:40 |c|%∆Gym Ldr. Waffles∆|what about the e4s
+03:50:41 |N| Sora Connor|soraconnor
+03:50:41 |N| Sora Connor|soraconnor
+03:50:43 |L| ∆Gym Ldr. You∆
+03:50:45 |J|%∆Gym Ldr. You∆
+03:50:45 |N|%∆Gym Ldr. You∆|gymldryou
+03:50:51 |c|%∆Gym Ldr. Waffles∆|and the e frontiers
+03:50:53 |N|&E4 Barney|soraconnor
+03:50:56 |N|&∆E4 Barney∆|e4barney
+03:50:56 |N|&∆E4 Barney∆|e4barney
+03:51:00 |N|&∆E4 Barney∆|e4barney
+03:51:05 |raw|<div class="broadcast-red"><b>Moderated chat was set to ~!</b><br />Only users of rank ~ and higher can talk.</div>
+03:51:32 |L|@∆Fröntier∆Blade☯
+03:51:34 |c|~∆Sora Noah∆|We'll work around that, Admin Team has a plan now stop bumping this up please.
+03:51:36 |J|@∆Fröntier∆Blade☯
+03:51:36 |N|@∆Fröntier∆Blade☯|frntierblade
+03:51:42 |raw|<div class="broadcast-blue"><b>Moderated chat was disabled!</b><br />Anyone may talk now.</div>
+03:51:53 |raw|<div class="broadcast-red"><b>New poll system displays at bottom everytime you join staff</b></div>
+03:52:08 |c|@∆Fröntier∆Blade☯|so you can chat if you like but poll will always be down the bottom when you refresh
+03:54:23 |c|~∆Sora Noah∆|This poll will be ended if one side takes a majority of 1.5x or more or at 3pm my time tomorrow, whichever comes first.
+03:56:07 |c|%∆Gym Ldr. You∆|im actually curious about e4s and efrontiers
+03:56:17 |c|%∆Gym Ldr. You∆|they are the same rank, so what will happen?
+03:56:26 ∆Gym Ldr. You∆ was kicked by FrontierHead∆Risu.
+03:56:26 |L|%∆Gym Ldr. You∆
+03:57:03 |raw|<div class="broadcast-red"><b>Before we ask about ranks and stuff, can we focus on this one poll first</b></div>
+03:57:06 |L|~∆Sora Noah∆
+03:57:10 |J|~∆Sora Noah∆
+03:57:10 |N|~∆Sora Noah∆|soranoah
+03:57:17 |c|@∆Fröntier∆Blade☯|to answer your questions, Yes I can make a new rank
+03:57:28 |c|@∆Fröntier∆Blade☯|but can we stay focused on the question asked atm
+03:57:36 |userstats|total:10|guests:0| :0|+:1|$:0|%:2|@:3|★:0|#:0|&:2|~:2
+03:57:43 |c|~FrontierHead∆Risu|that doesnt matter, and at this point noah cant change back to the alt that the rest of us use, so the outcome will either be we all look the same under Sora ___ or noah will be the odd one out
+03:58:36 |L| Sorarani
+03:59:31 |c|~∆Sora Noah∆|>highlight
+03:59:37 |c|&∆E4 Terror∆|^
+04:00:17 |c|&∆E4 Terror∆|Couldn't you do the whole champion noàh with different accents?
+04:00:39 |c|@∆Fröntier∆Blade☯|yeah but thing is we want to see if we want to change
+04:00:56 |J|%∆Gym Ldr. You∆
+04:00:56 |N|%∆Gym Ldr. You∆|gymldryou
+04:01:03 |raw|<div class="broadcast-green"><b>Gonna remove the early end vote limit.</b></div>
+04:01:14 |raw|<div class="broadcast-green"><b>Vote responsibly, all.</b></div>
+04:01:20 |c|%∆Gym Ldr Alcor∆|wut?
+04:01:34 |c|~∆Sora Noah∆|Said I'd end if one got 1.5x more than the other
+04:01:35 |c|%∆Gym Ldr. Waffles∆|dunno what to vote for
+04:01:37 |c|%∆Gym Ldr. Waffles∆|i'm fine with both
+04:01:38 |c|~∆Sora Noah∆|Was shown it's stupid
+04:01:42 |c|%∆Gym Ldr Alcor∆|oke
+04:02:13 |c|%∆Gym Ldr Alcor∆|maybe twice as many would work but yeah 1.5x with this few votes would happen a lot
+04:03:41 |raw|<div class="broadcast-red"><b>Okey there's some confusion out there and to clear it up Ateam has discussed every possible outcome a few weeks back. We are now opening this to you. <highlight>This name change comes out of a proposal to keep up with other leagues as we are the only league currently using this system for names.</highlight> Other reasons include the possibility of having a longer name without replays bugging and not saving. Before you also ask Symbols/NoSymbols, Ranks, when we change etc. will be discussed if the poll proves a pass</b></div>
+04:04:15 |c|~∆Sora Noah∆|also this isn't lobby
+04:04:27 |c|%∆Gym Ldr. You∆|yeh lets stop go back to lobby xD
+04:04:44 |raw|<div style = "background: #ffe100; color: black; padding: 2px 4px;"><b>And you wont have a problem by your name already being regged by someone else a year ago</b></div>
+04:04:47 |c|@∆Fröntier∆Blade☯|just putin it out there so people won't be russian to ask questions
+04:06:28 |N| Sora Waffles|gymldrwaffles
+04:06:50 |N|%gym ldr waffles|sorawaffles
+04:06:53 |N|%∆gym ldr waffles∆|gymldrwaffles
+04:06:53 |N|%∆gym ldr waffles∆|gymldrwaffles
+04:07:08 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+04:07:08 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+04:07:30 |c|@∆Fröntier∆Blade☯|**tl:dr , go read the declares**
+04:07:36 |userstats|total:10|guests:0| :0|+:1|$:0|%:3|@:2|★:0|#:0|&:2|~:2
+04:12:21 |L|~∆Sora Noah∆
+04:12:27 |J|~∆Sora Noah∆
+04:12:27 |N|~∆Sora Noah∆|soranoah
+04:17:36 |userstats|total:10|guests:0| :0|+:1|$:0|%:3|@:2|★:0|#:0|&:2|~:2
+04:20:08 |J|%Gym Ldr Arjunb
+04:20:08 |N|%Gym Ldr Arjunb|gymldrarjunb
+04:20:13 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:20:13 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:21:55 |L| ∆Fröntier∆Blade☯
+04:27:36 |userstats|total:10|guests:0| :0|+:1|$:0|%:4|@:1|★:0|#:0|&:2|~:2
+04:31:23 |L| FrontierHead∆Risu
+04:37:36 |userstats|total:9|guests:0| :0|+:1|$:0|%:4|@:1|★:0|#:0|&:2|~:1
+04:47:36 |userstats|total:9|guests:0| :0|+:1|$:0|%:4|@:1|★:0|#:0|&:2|~:1
+04:57:36 |userstats|total:9|guests:0| :0|+:1|$:0|%:4|@:1|★:0|#:0|&:2|~:1
+04:58:23 |L| ∆Frontier Zachary∆
+04:58:31 |J|@∆Frontier Zachary∆
+04:58:31 |N|@∆Frontier Zachary∆|frontierzachary
+04:58:54 |J|%∆Gym Ldr. WF∆
+04:58:54 |N|%∆Gym Ldr. WF∆|gymldrwf
+05:07:36 |userstats|total:10|guests:0| :0|+:1|$:0|%:5|@:1|★:0|#:0|&:2|~:1
+05:09:21 |L| ∆E4 Barney∆
+05:09:26 |J|&∆E4 Barney∆
+05:09:26 |N|&∆E4 Barney∆|e4barney
+05:12:05 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+05:12:05 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+05:12:05 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+05:12:22 |N| EA are the best|gymldrwaffles
+05:12:44 |L| gymldralcor
+05:13:59 |N|%Gym ldr Waffles|eaarethebest
+05:14:17 |N|%∆Gym ldr Waffles∆|gymldrwaffles
+05:14:17 |N|%∆Gym ldr Waffles∆|gymldrwaffles
+05:14:28 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+05:14:28 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+05:17:36 |userstats|total:9|guests:0| :0|+:1|$:0|%:4|@:1|★:0|#:0|&:2|~:1
+05:19:07 |N|@∆Frontier Zachary∆- ⒶⒻⓀ|frontierzachary
+05:19:07 |N|@∆Frontier Zachary∆- ⒶⒻⓀ|frontierzachary
+05:19:07 |N|@∆Frontier Zachary∆- ⒶⒻⓀ|frontierzachary
+05:20:14 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:20:14 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:20:14 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:21:52 |J|@∆Fröntier∆Blade☯
+05:21:52 |N|@∆Fröntier∆Blade☯|frntierblade
+05:22:06 |N|@∆Fröntier∆Blade☯|frntierblade
+05:22:20 |c|%∆Gym Ldr. You∆|i think the new system has won xD
+05:23:25 |c|%∆Gym Ldr Arjunb∆|Has it?
+05:23:31 |c|@∆Fröntier∆Blade☯|yeah
+05:23:41 |c|@∆Fröntier∆Blade☯|very near
+05:23:49 |c|@∆Fröntier∆Blade☯|we still have alot of other ofline members
+05:24:07 |c|%∆Gym Ldr Arjunb∆|We still have to wait till tommorow as the 1.5x thing is no more
+05:24:15 |L| ∆E4 Barney∆
+05:25:41 |N| Sora Youmaton|gymldryou
+05:25:53 |N|%Gym Ldr. You|sorayoumaton
+05:26:01 |N| Sora Waffles|gymldrwaffles
+05:26:09 |N|%∆Gym Ldr. You∆|gymldryou
+05:26:09 |N|%∆Gym Ldr. You∆|gymldryou
+05:27:36 |userstats|total:9|guests:0| :1|+:1|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+05:28:19 |N| ∆Sora Waffles∆|sorawaffles
+05:28:19 |N| ∆Sora Waffles∆|sorawaffles
+05:29:45 |N| Sora GL You|gymldryou
+05:30:38 |N|%∆Gym Ldr. You∆|soraglyou
+05:30:41 |L| ∆Gym Ldr. You∆
+05:32:34 |N| Sora Arjun|gymldrarjunb
+05:33:30 |N| Sora Arjunb|soraarjun
+05:34:26 |J|%∆Gym Ldr. You∆
+05:34:26 |N|%∆Gym Ldr. You∆|gymldryou
+05:34:54 |N| Sorarjun|soraarjunb
+05:35:17 |N| Sora Youmaton|gymldryou
+05:35:32 |N| Sorarjunb|sorarjun
+05:36:13 |N| Sora GL You|sorayoumaton
+05:36:40 |N|%Gym Ldr Arjunb|sorarjunb
+05:36:59 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:36:59 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:37:36 |userstats|total:9|guests:0| :2|+:1|$:0|%:2|@:2|★:0|#:0|&:1|~:1
+05:37:39 |N| Sora Youmaton|soraglyou
+05:38:04 |N|%Gym Ldr. You|sorayoumaton
+05:38:09 |N|%∆Gym Ldr. You∆|gymldryou
+05:38:09 |N|%∆Gym Ldr. You∆|gymldryou
+05:43:16 |J|@Sorarani
+05:43:16 |N|@Sorarani|sorarani
+05:45:56 |L| ∆Gym Ldr. You∆
+05:46:02 |J|%∆Gym Ldr. You∆
+05:46:02 |N|%∆Gym Ldr. You∆|gymldryou
+05:47:36 |userstats|total:10|guests:0| :1|+:1|$:0|%:3|@:3|★:0|#:0|&:1|~:1
+05:47:53 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+05:47:53 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+05:47:53 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+05:50:11 |L| ∆Gym Ldr. You∆
+05:51:51 |L| sorawaffles
+05:53:01 |J|%gym ldr waffles
+05:53:27 |N|%∆gym ldr waffles∆|gymldrwaffles
+05:53:27 |N|%∆gym ldr waffles∆|gymldrwaffles
+05:53:39 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+05:53:39 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+05:54:43 |J|%∆Gym Ldr. You∆
+05:54:43 |N|%∆Gym Ldr. You∆|gymldryou
+05:55:20 |J|%gasp
+05:55:20 |N|%gasp|gasp
+05:57:36 |userstats|total:11|guests:0| :0|+:1|$:0|%:5|@:3|★:0|#:0|&:1|~:1
+05:57:44 |J|%Siiilver
+05:57:44 |N|%Siiilver|siiilver
+05:58:07 |N|&E4 Silvy|siiilver
+05:58:13 |N|&∆E4 Silvy∆|e4silvy
+05:58:13 |N|&∆E4 Silvy∆|e4silvy
+06:00:16 |N| Sora Silvy|e4silvy
+06:00:24 |N| Sora Silvyy|sorasilvy
+06:00:27 |N| Sora Silvyyy|sorasilvyy
+06:00:29 |N| Sora Silvyyyy|sorasilvyyy
+06:00:31 |N| Sora Silvyyyyy|sorasilvyyyy
+06:00:34 |N| Sora Silvyyyyyy|sorasilvyyyyy
+06:00:38 |N| Sora Silvyyyyyyy|sorasilvyyyyyy
+06:00:47 |N| Sora Silver|sorasilvyyyyyyy
+06:00:53 |N| Sora Silvee|sorasilver
+06:00:57 |N| Sora Silveee|sorasilvee
+06:00:59 |N| Sora Silveeee|sorasilveee
+06:01:01 |N| Sora Silveeeee|sorasilveeee
+06:01:03 |N| Sora Silveeeeee|sorasilveeeee
+06:01:15 |N| Sora Silveeeeeee|sorasilveeeeee
+06:01:17 |N| Sora Silveeeeeeee|sorasilveeeeeee
+06:01:19 |N| Sora Silveeeeeeeee|sorasilveeeeeeee
+06:01:44 |N|&E4 Silvy|sorasilveeeeeeeee
+06:02:13 |J|@Frontier Jerattata
+06:02:13 |N|@Frontier Jerattata|frontierjerattata
+06:02:23 |N| Sora Silvy|e4silvy
+06:04:09 |N|@∆Frontier Zachary∆|frontierzachary
+06:04:09 |N|@∆Frontier Zachary∆|frontierzachary
+06:04:09 |N|@∆Frontier Zachary∆|frontierzachary
+06:04:23 |L| ∆Gym Ldr. You∆
+06:04:29 |J|%∆Gym Ldr. You∆
+06:04:29 |N|%∆Gym Ldr. You∆|gymldryou
+06:07:36 |userstats|total:13|guests:0| :1|+:1|$:0|%:5|@:4|★:0|#:0|&:1|~:1
+06:09:08 |N|%Siiilver|sorasilvy
+06:10:05 |L| ∆Gym Ldr. You∆
+06:13:12 |J|%∆Gym Ldr. You∆
+06:13:12 |N|%∆Gym Ldr. You∆|gymldryou
+06:15:35 |L| ∆Fröntier∆Blade☯- ⒶⒻⓀ
+06:16:27 |L| Frontier Jerattata
+06:17:21 |L| ∆Gym Ldr. You∆
+06:17:27 |J|%∆Gym Ldr. You∆
+06:17:27 |N|%∆Gym Ldr. You∆|gymldryou
+06:17:36 |userstats|total:11|guests:0| :0|+:1|$:0|%:6|@:2|★:0|#:0|&:1|~:1
+06:18:26 |L|%∆Gym Ldr. You∆
+06:18:44 |J|%∆Gym Ldr. You∆
+06:18:44 |N|%∆Gym Ldr. You∆|gymldryou
+06:23:42 |N|%∆Gym Ldr. You∆|gymldryou
+06:25:30 |L| ∆Gym Ldr. You∆
+06:26:02 |L| Sorarani
+06:26:14 |N|@∆Frontier Zachary∆ - ⒹⓘⓝⒹⓘⓝⓢ|frontierzachary
+06:26:14 |N|@∆Frontier Zachary∆ - ⒹⓘⓝⒹⓘⓝⓢ|frontierzachary
+06:26:14 |N|@∆Frontier Zachary∆ - ⒹⓘⓝⒹⓘⓝⓢ|frontierzachary
+06:26:39 |N|&E4 Silvy|siiilver
+06:27:36 |userstats|total:9|guests:0| :0|+:1|$:0|%:4|@:1|★:0|#:0|&:2|~:1
+06:27:59 |J|%∆Gym Ldr. You∆
+06:27:59 |N|%∆Gym Ldr. You∆|gymldryou
+06:34:30 |L| ∆Gym Ldr Arjunb∆
+06:34:35 |L| ∆Gym Ldr. You∆
+06:37:36 |userstats|total:8|guests:0| :0|+:1|$:0|%:3|@:1|★:0|#:0|&:2|~:1
+06:37:47 |J|%∆Gym Ldr. You∆
+06:37:47 |N|%∆Gym Ldr. You∆|gymldryou
+06:37:54 |L| SoraHeat
+06:38:31 |N|&E4 Silvy|e4silvy
+06:39:02 |N|@∆Frontier Zachary∆|frontierzachary
+06:39:02 |N|@∆Frontier Zachary∆|frontierzachary
+06:39:02 |N|@∆Frontier Zachary∆|frontierzachary
+06:41:09 |L| ∆Gym Ldr. You∆
+06:43:06 |N|&∆E4 Silvy∆|e4silvy
+06:43:06 |N|&∆E4 Silvy∆|e4silvy
+06:44:52 |J|%∆Gym Ldr. You∆
+06:44:52 |N|%∆Gym Ldr. You∆|gymldryou
+06:45:40 |J|~FrontierHead Risu
+06:45:40 |N|~FrontierHead Risu|frontierheadrisu
+06:45:46 |L| ∆Gym Ldr. You∆
+06:45:52 |N|~FrontierHead∆Risu|frontierheadrisu
+06:45:52 |N|~FrontierHead∆Risu|frontierheadrisu
+06:47:25 |J|%∆Gym Ldr. You∆
+06:47:25 |N|%∆Gym Ldr. You∆|gymldryou
+06:47:36 |userstats|total:9|guests:0| :0|+:0|$:0|%:4|@:1|★:0|#:0|&:2|~:2
+06:47:55 |L| ∆Gym Ldr. You∆
+06:48:00 |J|%∆Gym Ldr. You∆
+06:48:00 |N|%∆Gym Ldr. You∆|gymldryou
+06:48:25 |L| ∆Gym Ldr. You∆
+06:48:30 |J|%∆Gym Ldr. You∆
+06:48:30 |N|%∆Gym Ldr. You∆|gymldryou
+06:52:18 |L|%∆Gym Ldr. Waffles∆
+06:56:53 |L| ∆Gym Ldr. You∆
+06:57:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:2
+06:59:41 |J|%∆Gym Ldr. You∆
+06:59:41 |N|%∆Gym Ldr. You∆|gymldryou
+07:05:44 |L| ∆Gym Ldr. You∆
+07:07:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:2
+07:08:15 |J|%∆Gym Ldr. You∆
+07:08:15 |N|%∆Gym Ldr. You∆|gymldryou
+07:09:38 |J|%∆Gym Ldr. Waffles∆
+07:09:38 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+07:10:12 |L| ∆Gym Ldr. You∆
+07:10:14 |J|%∆Gym Ldr. You∆
+07:10:14 |N|%∆Gym Ldr. You∆|gymldryou
+07:11:03 |L| ∆Gym Ldr. You∆
+07:11:37 |J|%∆Gym Ldr. You∆
+07:11:37 |N|%∆Gym Ldr. You∆|gymldryou
+07:17:36 |userstats|total:9|guests:0| :0|+:0|$:0|%:4|@:1|★:0|#:0|&:2|~:2
+07:27:36 |userstats|total:9|guests:0| :0|+:0|$:0|%:4|@:1|★:0|#:0|&:2|~:2
+07:34:26 |N| Sora E4 Terror|e4terror
+07:34:43 |N| Sora E4 Terror|sorae4terror
+07:34:43 |N| Sora E4 Terror|sorae4terror
+07:34:53 |N|&E4 Terror|sorae4terror
+07:34:58 |N|&∆E4 Terror∆|e4terror
+07:34:58 |N|&∆E4 Terror∆|e4terror
+07:35:11 |L| ∆E4 Terror∆
+07:35:13 |J|&∆E4 Terror∆
+07:35:13 |N|&∆E4 Terror∆|e4terror
+07:36:51 |L| ∆Gym Ldr. You∆
+07:37:30 |J|%∆Gym Ldr Arjunb∆
+07:37:30 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+07:37:35 |L| gymldrarjunb
+07:37:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:2|~:2
+07:39:51 |J|~OnyxEagle
+07:39:51 |N|~OnyxEagle|onyxeagle
+07:40:12 |J|%Gym Ldr Arjunb
+07:40:12 |N|%Gym Ldr Arjunb|gymldrarjunb
+07:40:17 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+07:40:17 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+07:41:09 |N|&∆E4 Silvy∆|e4silvy
+07:42:58 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+07:42:58 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+07:42:58 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+07:43:50 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+07:43:50 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+07:43:50 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+07:44:25 |J|%∆Gym Ldr. You∆
+07:44:25 |N|%∆Gym Ldr. You∆|gymldryou
+07:47:36 |userstats|total:11|guests:0| :0|+:0|$:0|%:5|@:1|★:0|#:0|&:2|~:3
+07:54:50 |J|%Gym Ldr Float
+07:54:50 |N|%Gym Ldr Float|gymldrfloat
+07:54:54 |N|%Gym Ldr Float|gymldrfloat
+07:54:59 |N|%∆Gym Ldr Float∆|gymldrfloat
+07:54:59 |N|%∆Gym Ldr Float∆|gymldrfloat
+07:57:36 |userstats|total:12|guests:0| :0|+:0|$:0|%:6|@:1|★:0|#:0|&:2|~:3
+07:57:53 |N| Sora Float|gymldrfloat
+07:58:32 |N|%Gym Ldr Float|sorafloat
+07:58:42 |N|%∆Gym Ldr Float∆|gymldrfloat
+07:58:42 |N|%∆Gym Ldr Float∆|gymldrfloat
+08:00:05 |raw|<div style = "background: #ffe100; color: black; padding: 2px 4px;"><b>Congrats to Zachary for winning the first elite frontier promo tour since like august or something crazy like that, i wasnt end here at the start of that month. Anywho, won both games he played and can now fight an elite for his spot.</b></div>
+08:01:16 (FrontierHead∆Risu changed the roomintro.)
+08:01:23 |raw|<div class="broadcast-green"><b>The Leader tournament for December 2015 is now open. Good luck Leaders!</b></div>
+08:02:16 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:02:16 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:02:16 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:02:28 |L| ∆Gym Ldr. Waffles∆- ⒶⒻⓀ
+08:04:09 |N|&∆E4 Terror∆|e4terror
+08:07:36 |userstats|total:11|guests:0| :0|+:0|$:0|%:5|@:1|★:0|#:0|&:2|~:3
+08:12:11 |J|@Frontier Meows
+08:12:11 |N|@Frontier Meows|frontiermeows
+08:12:19 |N|@∆Frontier Meows∆|frontiermeows
+08:12:19 |N|@∆Frontier Meows∆|frontiermeows
+08:12:30 |L| ∆Gym Ldr. You∆
+08:12:38 |J|%∆Gym Ldr. You∆
+08:12:38 |N|%∆Gym Ldr. You∆|gymldryou
+08:16:12 |L|&∆E4 Terror∆
+08:16:28 |J|&∆E4 Terror∆
+08:16:28 |N|&∆E4 Terror∆|e4terror
+08:16:53 |L| ∆E4 Terror∆
+08:17:36 |userstats|total:11|guests:0| :0|+:0|$:0|%:5|@:2|★:0|#:0|&:1|~:3
+08:24:25 |L| ∆Gym Ldr Float∆
+08:25:45 |L| ∆Gym Ldr. You∆
+08:26:05 |J|%∆Gym Ldr. You∆
+08:26:05 |N|%∆Gym Ldr. You∆|gymldryou
+08:26:54 |L| ∆Gym Ldr. You∆
+08:27:23 |J|%∆Gym Ldr. You∆
+08:27:23 |N|%∆Gym Ldr. You∆|gymldryou
+08:27:36 |userstats|total:10|guests:0| :0|+:0|$:0|%:4|@:2|★:0|#:0|&:1|~:3
+08:29:49 |N|%∆Gym Ldr. WF∆- ⒷⓊⓈⓎ|gymldrwf
+08:29:49 |N|%∆Gym Ldr. WF∆- ⒷⓊⓈⓎ|gymldrwf
+08:29:49 |N|%∆Gym Ldr. WF∆- ⒷⓊⓈⓎ|gymldrwf
+08:37:36 |userstats|total:10|guests:0| :0|+:0|$:0|%:4|@:2|★:0|#:0|&:1|~:3
+08:38:29 |L|%∆Gym Ldr. You∆
+08:38:29 |L|@∆Frontier Zachary∆
+08:38:43 |N|%∆Gym Ldr. WF∆|gymldrwf
+08:38:43 |N|%∆Gym Ldr. WF∆|gymldrwf
+08:38:43 |N|%∆Gym Ldr. WF∆|gymldrwf
+08:39:06 |L|%∆Gym Ldr. WF∆
+08:43:59 |J|%∆Gym Ldr Bigo∆
+08:43:59 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+08:47:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:1|~:3
+08:50:42 |L| ∆Gym Ldr Bigo∆
+08:50:45 |J|%∆Gym Ldr Bigo∆
+08:50:45 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+08:51:07 |J|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ
+08:51:07 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+08:57:36 |userstats|total:9|guests:0| :0|+:0|$:0|%:4|@:1|★:0|#:0|&:1|~:3
+09:01:58 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+09:01:58 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+09:01:58 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+09:03:50 |L| ∆Frontier Meows∆
+09:04:12 |J|@∆Frontier Meows∆
+09:04:12 |N|@∆Frontier Meows∆|frontiermeows
+09:07:36 |userstats|total:9|guests:0| :0|+:0|$:0|%:4|@:1|★:0|#:0|&:1|~:3
+09:10:40 |L| ∆Frontier Meows∆
+09:12:18 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+09:12:18 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+09:12:18 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+09:17:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:1|~:3
+09:19:36 |L| ∆Gym Ldr Arjunb∆
+09:25:06 |L| ∆Gym Ldr. Waffles∆- ⒶⒻⓀ
+09:27:36 |userstats|total:6|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:3
+09:28:52 |raw|-- <b><font color="#000000">∆E4 Silvy∆</font></b> is now away. 
+09:28:52 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+09:28:52 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+09:28:52 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+09:28:57 |c|&∆E4 Silvy∆- ⒶⒻⓀ|Laters
+09:29:38 |L|~∆Sora Noah∆
+09:29:42 |J|~∆Sora Noah∆
+09:29:42 |N|~∆Sora Noah∆|soranoah
+09:30:02 |L|~∆Sora Noah∆
+09:36:11 |L|%gasp
+09:36:26 |J|%gasp
+09:36:26 |N|%gasp|gasp
+09:36:42 |L| FrontierHead∆Risu
+09:37:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:1
+09:38:46 |L| gasp
+09:47:00 |L| OnyxEagle
+09:47:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+09:50:22 |J|@∆Frontier Meows∆
+09:50:22 |N|@∆Frontier Meows∆|frontiermeows
+09:57:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+10:07:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+10:17:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+10:23:39 |J|~∆Chаmpion Bart∆
+10:23:39 |N|~∆Chаmpion Bart∆|chmpionbart
+10:23:56 |N|~∆Chаmpion Bart∆|chmpionbart
+10:24:54 |L| ∆Gym Ldr Bigo∆
+10:27:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:0|@:1|★:0|#:0|&:1|~:1
+10:33:18 (∆Chаmpion Bart∆ changed the roomintro.)
+10:33:35 |L| ∆Chаmpion Bart∆
+10:33:38 |J|~∆Chаmpion Bart∆
+10:33:38 |N|~∆Chаmpion Bart∆|chmpionbart
+10:34:47 |L| ∆Frontier Meows∆
+10:37:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:1
+10:41:03 |L| ∆Chаmpion Bart∆
+10:47:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+10:57:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+11:07:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+11:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+11:27:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+11:37:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+11:47:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+11:57:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+11:58:36 |N|&∆E4 Silvy∆|e4silvy
+11:58:36 |N|&∆E4 Silvy∆|e4silvy
+11:58:36 |N|&∆E4 Silvy∆|e4silvy
+11:58:39 |L|&∆E4 Silvy∆
+12:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:17:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:27:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:37:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:47:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:57:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:17:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:27:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:37:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:47:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:57:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:17:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:27:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:37:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:47:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:57:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:17:33 |J|%∆Gym Ldr. You∆
+15:17:33 |N|%∆Gym Ldr. You∆|gymldryou
+15:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+15:19:30 |L| ∆Gym Ldr. You∆
+15:24:52 |J|%∆Gym Ldr. You∆
+15:24:52 |N|%∆Gym Ldr. You∆|gymldryou
+15:27:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+15:30:32 |L| ∆Gym Ldr. You∆
+15:37:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:47:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:48:38 |J|%∆Gym Ldr. You∆
+15:48:38 |N|%∆Gym Ldr. You∆|gymldryou
+15:51:46 |L| ∆Gym Ldr. You∆
+15:57:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:17:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:27:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:37:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:47:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:57:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:17:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:27:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:37:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:47:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:56:44 |J|&E4 Barney
+17:56:44 |N|&E4 Barney|e4barney
+17:57:08 |L| E4 Barney
+17:57:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+18:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+18:17:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+18:18:21 |J|@Neith Cass
+18:18:21 |N|@Neith Cass|neithcass
+18:18:32 |N|@Neith Cass|neithcass
+18:21:53 |J|%Gym Ldr. You
+18:21:53 |N|%Gym Ldr. You|gymldryou
+18:22:42 |L| Neith Cass
+18:27:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:37:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:47:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:57:31 |N|%∆Gym Ldr. You∆|gymldryou
+18:57:31 |N|%∆Gym Ldr. You∆|gymldryou
+18:57:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+19:01:05 |L| ∆Gym Ldr. You∆
+19:07:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+19:17:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+19:27:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+19:37:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+19:47:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+19:57:36 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+20:01:45 |J|%Gym Ldr Arjunb
+20:01:45 |N|%Gym Ldr Arjunb|gymldrarjunb
+20:02:23 |c|%Gym Ldr Arjunb|1:2
+20:02:27 |N|%Gym Ldr Arjunb|gymldrarjunb
+20:07:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+20:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+20:21:50 |J|&frontier srewop
+20:21:50 |N|&frontier srewop|frontiersrewop
+20:22:08 |N|+SoraHeat|frontiersrewop
+20:23:01 |N|&frontier srewop|soraheat
+20:23:21 |N|+SoraHeat|frontiersrewop
+20:26:09 |J|%Siiilver
+20:26:09 |N|%Siiilver|siiilver
+20:26:15 |L| Siiilver
+20:27:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+20:34:11 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+20:34:11 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+20:37:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+20:47:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+20:57:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+21:07:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+21:17:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+21:27:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+21:37:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+21:47:36 |userstats|total:2|guests:0| :0|+:1|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+21:48:45 |J|@Frontier Meows
+21:48:45 |N|@Frontier Meows|frontiermeows
+21:48:46 |N|@∆Frontier Meows∆|frontiermeows
+21:48:46 |N|@∆Frontier Meows∆|frontiermeows
+21:51:32 |J|@∆Coach Abadon∆
+21:51:32 |N|@∆Coach Abadon∆|coachabadon
+21:51:53 |c|@∆Coach Abadon∆|how are we all guys
+21:57:36 |userstats|total:4|guests:0| :0|+:1|$:0|%:1|@:2|★:0|#:0|&:0|~:0
+22:01:55 |L| ∆Coach Abadon∆
+22:07:36 |userstats|total:3|guests:0| :0|+:1|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+22:10:49 |J|%∆Gym Ldr. You∆
+22:10:49 |N|%∆Gym Ldr. You∆|gymldryou
+22:10:55 |N|%∆Gym Ldr. You∆|gymldryou
+22:11:50 |L|%∆Gym Ldr. You∆
+22:11:56 |J|%∆Gym Ldr. You∆
+22:11:56 |N|%∆Gym Ldr. You∆|gymldryou
+22:12:13 |N|%∆Gym Ldr. You∆|gymldryou
+22:17:36 |userstats|total:4|guests:0| :0|+:1|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+22:19:02 |J|@Neith Cass
+22:19:02 |N|@Neith Cass|neithcass
+22:19:13 |N|@Neith Cass|neithcass
+22:27:36 |userstats|total:5|guests:0| :0|+:1|$:0|%:2|@:2|★:0|#:0|&:0|~:0
+22:30:18 |L| ∆Gym Ldr. You∆
+22:37:36 |userstats|total:4|guests:0| :0|+:1|$:0|%:1|@:2|★:0|#:0|&:0|~:0
+22:39:20 |L| ∆Frontier Meows∆
+22:42:53 |J|%∆Gym Ldr. You∆
+22:42:53 |N|%∆Gym Ldr. You∆|gymldryou
+22:42:54 |N|%∆Gym Ldr. You∆|gymldryou
+22:47:36 |userstats|total:4|guests:0| :0|+:1|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+22:54:21 |J|~FrontierHead Risu
+22:54:21 |N|~FrontierHead Risu|frontierheadrisu
+22:54:29 |N|~FrontierHead∆Risu|frontierheadrisu
+22:54:29 |N|~FrontierHead∆Risu|frontierheadrisu
+22:57:36 |userstats|total:5|guests:0| :0|+:1|$:0|%:2|@:1|★:0|#:0|&:0|~:1
+22:59:05 |L| ∆Gym Ldr. You∆
+22:59:23 |N|~FrontierHead∆Risu|frontierheadrisu
+22:59:27 |J|~Sora Ninjarisu
+22:59:27 |N|~Sora Ninjarisu|soraninjarisu
+22:59:27 |N|~Sora Ninjarisu|soraninjarisu
+22:59:31 |N|~FrontierHead∆Risu|frontierheadrisu
+22:59:37 |L|~Sora Ninjarisu
+23:00:08 (The poll was ended by FrontierHead∆Risu.)
+23:00:09 |c|~FrontierHead∆Risu|**NAME CHANGE TIME BOIS**
+23:00:18 |L|~FrontierHead∆Risu
+23:00:18 |J| Sora Ninjarisu
+23:00:48 |L|~Sora Ninjarisu
+23:00:54 |J|~Sora Ninjarisu
+23:00:54 |N|~Sora Ninjarisu|soraninjarisu
+23:02:31 |c|~Sora Ninjarisu|RIP the poll died when i hit end poll
+23:03:00 |L| Sora Ninjarisu
+23:03:07 |J|~Sora Ninjarisu
+23:03:07 |N|~Sora Ninjarisu|soraninjarisu
+23:07:36 |userstats|total:4|guests:0| :0|+:1|$:0|%:1|@:1|★:0|#:0|&:0|~:1
+23:17:36 |userstats|total:4|guests:0| :0|+:1|$:0|%:1|@:1|★:0|#:0|&:0|~:1
+23:27:36 |userstats|total:4|guests:0| :0|+:1|$:0|%:1|@:1|★:0|#:0|&:0|~:1
+23:29:22 |J|%Gym Ldr Alcor
+23:29:22 |N|%Gym Ldr Alcor|gymldralcor
+23:30:59 |N| Gym Ldr Alcor|gymldralcor
+23:31:12 |N| Sora Leaf|gymldralcor
+23:31:16 |N|%Sora Leaf|soraleaf
+23:31:19 |N|%∆Sora Leaf∆|soraleaf
+23:31:19 |N|%∆Sora Leaf∆|soraleaf
+23:33:15 |L| SoraHeat
+23:37:36 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:1
+23:42:42 |J|%∆Gym Ldr. You∆
+23:42:42 |N|%∆Gym Ldr. You∆|gymldryou
+23:43:24 |N| ∆Gym Ldr. You∆|gymldryou
+23:43:40 |L| ∆Gym Ldr. You∆
+23:44:02 |J|~Sora Noah
+23:44:02 |N|~Sora Noah|soranoah
+23:45:04 |J|%Sora Youmaton
+23:45:04 |N|%Sora Youmaton|sorayoumaton
+23:45:04 |N|%Sora Youmaton|sorayoumaton
+23:45:54 |N| Sora Youmaton|sorayoumaton
+23:45:54 |N| Sora Youmaton|sorayoumaton
+23:46:03 |N|%Sora Youmaton|sorayoumaton
+23:46:08 |N|%∆Sora Youmaton∆|sorayoumaton
+23:46:08 |N|%∆Sora Youmaton∆|sorayoumaton
+23:47:22 |N| Sora Ninjarice|soraninjarisu
+23:47:36 |userstats|total:6|guests:0| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1
+23:47:40 |N|~Sora Ninjarisu|soraninjarice
+23:57:36 |userstats|total:6|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:2
