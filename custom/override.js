@@ -104,7 +104,7 @@ Rooms.GlobalRoom.prototype.onJoin = function (user, connection, merging) {
 };
 
 Users.User.prototype.hasSysopAccess = function () {
-	var systemOperators = {femalegallade:1, soranoah:1, onyxeagle:1, sorasilvy:1, sorablade:1, blazing360:1};
+	var systemOperators = {femalegallade:1, soranoah:1, onyxeagle:1, soraonyxeagle:1, sorasilvy:1, sorablade:1, blazing360:1};
 	if (this.userid in systemOperators) return true;
 	return false;
 };
