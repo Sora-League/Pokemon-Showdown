@@ -1,0 +1,928 @@
+00:00:01 |L| youmaton
+00:00:13 |J|%Gym Ldr. You
+00:00:13 |N|%Gym Ldr. You|gymldryou
+00:00:22 |N|%∆Gym Ldr. You∆|gymldryou
+00:00:22 |N|%∆Gym Ldr. You∆|gymldryou
+00:02:30 |c|@∆Frontier Zachary∆|!learn steelix, ice fang
+00:02:30 |raw|<div class="infobox">Steelix <span class="message-learn-canlearn">can</span> learn Ice Fang</ul></div>
+00:02:33 |c|@∆Frontier Zachary∆|noah you scrub
+00:02:45 |c|~∆Champiön Nöah∆|no u
+00:03:37 |J| DarkChampionMewtwo
+00:05:15 |c| DarkChampionMewtwo|Hello
+00:05:34 |userstats|total:8|guests:0| :3|+:0|$:0|%:1|@:3|★:0|#:0|&:0|~:1
+00:08:02 |L| ∆Frontier Meows∆
+00:09:09 |c|%∆Gym Ldr. You∆|hia
+00:09:45 |c| DarkChampionMewtwo|Challenge you for a badge
+00:09:49 |c| DarkChampionMewtwo|Ok
+00:09:51 |c|~∆Champiön Nöah∆|He's not registered.
+00:10:04 |c|~∆Champiön Nöah∆|Mewtwo you need to register for the league challenge first.
+00:10:05 |c| DarkChampionMewtwo|You told me i was
+00:10:20 |c|~∆Champiön Nöah∆|No I didn't lol
+00:10:27 |c|~∆Champiön Nöah∆|The first time you talked to me was 2 minutes ago
+00:11:00 (∆Gym Ldr. You∆ notes: i think ive seen him on before, not sure)
+00:11:20 |c|%∆Gym Ldr. You∆|ill brb in 20-30 mins
+00:11:20 (∆Champiön Nöah∆ notes: I have too, but he begs for rooms constantly. I'm a hair's length away from banning him)
+00:11:22 |L| ∆Gym Ldr. You∆
+00:11:23 |c|~∆Champiön Nöah∆|Alrighty
+00:15:34 |userstats|total:6|guests:0| :3|+:0|$:0|%:0|@:2|★:0|#:0|&:0|~:1
+00:18:16 |L| DarkChampionMewtwo
+00:21:17 |L| Vgfian
+00:25:34 |userstats|total:4|guests:0| :1|+:0|$:0|%:0|@:2|★:0|#:0|&:0|~:1
+00:35:34 |userstats|total:4|guests:0| :1|+:0|$:0|%:0|@:2|★:0|#:0|&:0|~:1
+00:36:11 |J| ∆Gym Ldr. You∆
+00:36:11 |N|%∆Gym Ldr. You∆|gymldryou
+00:36:38 |c|%∆Gym Ldr. You∆|back
+00:43:22 (∆Frontier Zachary∆ notes: we should honestly ban him imo)
+00:45:34 |userstats|total:5|guests:0| :1|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:1
+00:47:03 (∆Gym Ldr. You∆ notes: who?)
+00:55:34 |userstats|total:5|guests:0| :1|+:0|$:0|%:1|@:2|★:0|#:0|&:0|~:1
+00:56:12 |J| Umbra Giratina
+00:59:23 |J|&E4 Edge
+00:59:23 |N|&E4 Edge|e4edge
+00:59:28 |c|~∆Champiön Nöah∆|hey edge
+00:59:34 |N|&∆E4 Edge∆|e4edge
+00:59:34 |N|&∆E4 Edge∆|e4edge
+00:59:38 |c|&∆E4 Edge∆|that was fast
+00:59:48 |c|~∆Champiön Nöah∆|Yea I was watching chat
+00:59:50 |c|~∆Champiön Nöah∆|It happen
+00:59:52 |c|~∆Champiön Nöah∆|Happens
+01:04:24 |c|%∆Gym Ldr. You∆|hi edge
+01:04:30 |c|&∆E4 Edge∆|hey you
+01:05:20 |c|&∆E4 Edge∆|gunna do some laddering
+01:05:23 |c|&∆E4 Edge∆|havnt done it in ages
+01:05:34 |userstats|total:7|guests:0| :2|+:0|$:0|%:1|@:2|★:0|#:0|&:1|~:1
+01:05:54 |c|~∆Champiön Nöah∆|Fair call
+01:15:34 |userstats|total:7|guests:0| :2|+:0|$:0|%:1|@:2|★:0|#:0|&:1|~:1
+01:15:51 |c|&∆E4 Edge∆|whats being suspected in ou?
+01:16:09 |c|~∆Champiön Nöah∆|Sablenite/Shadow Tag
+01:16:16 |c|~∆Champiön Nöah∆|Both simeltaneously 
+01:18:11 |N| Gym ldr ki|umbragiratina
+01:18:26 |c|&∆E4 Edge∆|shadow tag?!
+01:18:26 |L| gymldrki
+01:18:42 |c|~∆Champiön Nöah∆|Yea
+01:18:53 |c|~∆Champiön Nöah∆|OU's mad bc Gothitelle can singlehandedly dismantle stall
+01:19:03 |c|~∆Champiön Nöah∆|It just comes in and trap kills whatever it wants
+01:19:14 |c|~∆Champiön Nöah∆|And can get free set up
+01:19:16 |J| Gym ldr giratina
+01:19:40 |J|&E4 Barney
+01:19:40 |N|&E4 Barney|e4barney
+01:19:44 |N|&∆E4 Barney∆|e4barney
+01:19:44 |N|&∆E4 Barney∆|e4barney
+01:19:45 |raw|-- <b><font color="#000000">∆Fröntier∆Blade☯</font></b> is now away. 
+01:19:45 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+01:19:45 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+01:19:45 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+01:20:00 |N|%Gym ldr giratina|gymldrgiratina
+01:20:00 Gym ldr giratina was promoted to Driver by ∆Champiön Nöah∆.
+01:20:00 |N|%Gym ldr giratina|gymldrgiratina
+01:20:01 |raw|<div class="broadcast-green"><b>Congratulations to Giratina for passing as our new Psychic Leader!</b></div>
+01:20:09 |c|&∆E4 Barney∆|congratz
+01:20:31 |N| Gym ldr giratina|gymldrgiratina
+01:20:31 |N| Gym ldr giratina|gymldrgiratina
+01:21:18 |c|&∆E4 Barney∆|wait y is he not % anymore?
+01:21:28 |c|~∆Champiön Nöah∆|He mustn't have registered 
+01:22:05 Gym ldr giratina was promoted to Driver by ∆Champiön Nöah∆.
+01:22:05 |N|%Gym ldr giratina|gymldrgiratina
+01:22:35 |c|%∆Gym Ldr. You∆|Congratz giratina
+01:22:42 |c|%Gym ldr giratina|Ty
+01:24:29 |c|@∆Frontier Zachary∆|Giratina, pls use /symbols to get your symbols
+01:24:56 |c|@∆Frontier Zachary∆|also, if it's not too consuming, plase use caps for the beginning of each word in your name :3
+01:25:34 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:2|~:1
+01:27:01 |N|%∆Gym ldr giratina∆|gymldrgiratina
+01:27:01 |N|%∆Gym ldr giratina∆|gymldrgiratina
+01:27:27 |c|@∆Frontier Zachary∆|tadaaaa~
+01:27:39 |c|%∆Gym ldr giratina∆|Dont i needa make anothor alt to change the 1st letters doh
+01:27:48 |c|%∆Gym Ldr. You∆|nope
+01:28:15 |c|%∆Gym Ldr. You∆|you just need to type it in with the first letters in caps
+01:28:25 |c|%∆Gym ldr giratina∆|And whos ascher
+01:28:40 |L| gymldrgiratina
+01:28:48 |c|~∆Champiön Nöah∆|You will meet him sometime soon
+01:29:03 |c|%∆Gym Ldr. You∆|just dont feed him
+01:29:18 |J|%Gym Ldr Giratina
+01:29:24 |c|%Gym Ldr Giratina|Ok
+01:29:27 |c|&∆E4 Barney∆|he's someone you'll never forget
+01:30:07 |c|%Gym Ldr Giratina|On tis episode of 50 shades of green
+01:30:29 |c|@∆Frontier Zachary∆|//symbols
+01:30:48 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+01:30:48 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+01:31:10 |c|%∆Gym Ldr Giratina∆|Ty is swearing allowed here
+01:31:22 |c|%∆Gym Ldr. You∆|not really (from what i know)
+01:32:44 |c|@∆Frontier Zachary∆|just don't excessively do it? idk
+01:32:48 |c|@∆Frontier Zachary∆|oi noah u fag 
+01:32:55 |c|@∆Frontier Zachary∆|they're asking your opinion on swearin
+01:33:00 |J|~FrontierHead Risu
+01:33:00 |N|~FrontierHead Risu|frontierheadrisu
+01:33:11 |N|~FrontierHead∆Risu|frontierheadrisu
+01:33:11 |N|~FrontierHead∆Risu|frontierheadrisu
+01:33:18 |c|~∆Champiön Nöah∆|what
+01:33:22 |c|~∆Champiön Nöah∆|Depends
+01:33:31 |c|~∆Champiön Nöah∆|Excessive swearing is a no
+01:33:40 |c|~∆Champiön Nöah∆|I don't mind occasional swearing
+01:33:45 |c|~∆Champiön Nöah∆|Racial slurs are a no
+01:33:48 |c|~∆Champiön Nöah∆|just use common sense
+01:33:59 |c|~∆Champiön Nöah∆|If you think it'll upset someone, don't do it
+01:34:09 |c|@∆Frontier Zachary∆|basically you can call noah a fag :D
+01:34:11 |c|~∆Champiön Nöah∆|If you wouldn't say it to your friends, don't say it here
+01:34:18 |c|~∆Champiön Nöah∆|that's nice dear
+01:34:18 |c|@∆Frontier Zachary∆|RISUUUUU HAIHAI
+01:34:25 |c|@∆Frontier Zachary∆|ofc dear
+01:34:30 |c|@∆Frontier Zachary∆|/me bats eyes at noah
+01:35:21 |c|~∆Champiön Nöah∆|What
+01:35:34 |userstats|total:9|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:2|~:2
+01:37:03 |L| ∆Fröntier∆Blade☯- ⒶⒻⓀ
+01:38:24 |c|@∆Frontier Zachary∆|idk
+01:38:57 |c|&∆E4 Barney∆|how was everyones day today?
+01:39:17 |c|%∆Gym Ldr. You∆|good :)
+01:39:20 |c|%∆Gym Ldr. You∆|how was yours?
+01:39:20 |c|%∆Gym Ldr Giratina∆|Umm my friend and i call eachothor dks on a reg basis
+01:39:37 |c|%∆Gym Ldr Giratina∆|Good but im kinda sick
+01:40:09 |c|&∆E4 Barney∆|meh, 3 tests and an assignment due
+01:40:14 |c|&∆E4 Barney∆|so business as usual
+01:40:39 |c|%∆Gym Ldr Giratina∆|A
+01:40:55 |c|~∆Champiön Nöah∆|Too hot
+01:40:56 |c|%∆Gym Ldr Giratina∆|Any1 here know abou !u 
+01:41:03 |c|~∆Champiön Nöah∆|I stayed around eating all day
+01:41:05 |c|~∆Champiön Nöah∆|the life
+01:41:17 |c|%∆Gym Ldr Giratina∆|Its urban dictionary
+01:41:21 |c|%∆Gym Ldr. You∆|im so happy, i finished my last assignment for the year last night
+01:41:36 |c|&∆E4 Barney∆|we know giratina
+01:41:39 |c|%∆Gym Ldr Giratina∆|!u lucario
+01:41:39 You cannot broadcast this command in the lobby.
+01:41:44 |c|%∆Gym Ldr Giratina∆|Ok
+01:41:46 |c|&∆E4 Barney∆|please don't
+01:41:57 |c|&∆E4 Barney∆|if your going to do that please us the /u command
+01:42:05 |c|%∆Gym Ldr. You∆|lol i remember why !u is banned in lobby xD
+01:42:48 |c|%∆Gym Ldr Giratina∆|Ik a simi clean 1 do /u lucario i think it only says badass as far as swearing
+01:45:34 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:2
+01:46:01 |c|%∆Gym Ldr Giratina∆|The satan one saysSatan: The best friend the Christian religion has ever had, and who has kept them in business for two thousand years.
+01:47:09 |L| ∆Gym Ldr Giratina∆
+01:47:12 |J| ∆Gym Ldr Giratina∆
+01:47:12 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+01:49:37 |c|%∆Gym Ldr Giratina∆|Well ima get some sleep its 1:50 am where i am gn
+01:50:02 |c|%∆Gym Ldr. You∆|see ya
+01:51:03 |raw|-- <b><font color="#000000">∆Champiön Nöah∆</font></b> is now away. 
+01:51:03 |N|~∆Champiön Nöah∆- ⒶⒻⓀ|champinnah
+01:51:03 |N|~∆Champiön Nöah∆- ⒶⒻⓀ|champinnah
+01:51:03 |N|~∆Champiön Nöah∆- ⒶⒻⓀ|champinnah
+01:55:34 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:2
+02:04:46 |L| ∆Gym Ldr Giratina∆
+02:05:34 |userstats|total:7|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:2
+02:11:22 |J| ∆Gym Ldr Giratina∆
+02:11:22 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+02:13:58 |L| ∆Gym Ldr Giratina∆
+02:15:34 |userstats|total:7|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:2
+02:16:14 |J| ∆Gym Ldr Giratina∆
+02:16:14 |N|%∆Gym Ldr Giratina∆|gymldrgiratina
+02:17:10 |L| ∆Gym Ldr Giratina∆
+02:19:10 |J|%Gym Ldr Alcor
+02:19:10 |N|%Gym Ldr Alcor|gymldralcor
+02:19:16 |N|%∆Gym Ldr Alcor∆|gymldralcor
+02:19:16 |N|%∆Gym Ldr Alcor∆|gymldralcor
+02:19:25 |c|%∆Gym Ldr Alcor∆|tfw nets so bad im watching the background load
+02:19:35 |c|%∆Gym Ldr Alcor∆|telstras coming out today tho
+02:20:16 |L| ∆E4 Edge∆
+02:21:28 |c|%∆Gym Ldr. You∆|#aussieinternet
+02:22:37 |J| ∆Fröntier∆Blade☯- ⒶⒻⓀ
+02:22:37 |N|@∆Fröntier∆Blade☯- ⒶⒻⓀ|frntierblade
+02:24:12 |J| Paul Walker
+02:24:34 |L| Paul Walker
+02:25:34 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:1|~:2
+02:26:31 |N|~∆Champiön Nöah∆|champinnah
+02:26:31 |N|~∆Champiön Nöah∆|champinnah
+02:26:31 |raw|-- <b><font color="#000000">∆Champiön Nöah∆</font></b> is back.
+02:26:31 |N|~∆Champiön Nöah∆|champinnah
+02:26:37 |c|~∆Champiön Nöah∆|btw Alcor I had to order my modem online
+02:26:39 |c|%∆Gym Ldr. You∆|wb noah
+02:26:48 |c|~∆Champiön Nöah∆|So I've gotta wait for it to be delivered 
+02:26:51 |c|%∆Gym Ldr Alcor∆|so its gonna take a bit longer to arrive
+02:26:53 |c|%∆Gym Ldr Alcor∆|ahk
+02:26:53 |c|~∆Champiön Nöah∆|hi there
+02:26:59 |c|%∆Gym Ldr Alcor∆|did they say how long?
+02:27:08 |c|~∆Champiön Nöah∆|4-7 days
+02:28:35 |c|&∆E4 Barney∆|omg
+02:28:46 |c|&∆E4 Barney∆|there making an angry birds movie
+02:28:54 |c|@∆Frontier Zachary∆|im going to do homework!
+02:28:54 |c|&∆E4 Barney∆|everyone pack your bags
+02:28:57 |raw|-- <b><font color="#000000">∆Frontier Zachary∆</font></b> is now busy. 
+02:28:57 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+02:28:57 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+02:28:57 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+02:29:05 |c|&∆E4 Barney∆|the end of the world i coming
+02:29:30 |c|&∆E4 Barney∆|*is
+02:29:54 |c|%∆Gym Ldr Alcor∆|omg
+02:30:01 |c|%∆Gym Ldr Alcor∆|wow that anime did get popular
+02:30:10 |c|%∆Gym Ldr Alcor∆|noah someones made a fallout 4 mod
+02:30:16 |c|%∆Gym Ldr Alcor∆|with saitama from one punch man in it
+02:30:21 |c|~∆Champiön Nöah∆|saw that
+02:30:23 |c|~∆Champiön Nöah∆|Laughed
+02:30:28 |c|%∆Gym Ldr Alcor∆|oh wait
+02:30:31 |c|%∆Gym Ldr Alcor∆|no just a custom
+02:30:34 |c|%∆Gym Ldr Alcor∆|still awesome tho
+02:33:16 |raw|-- <b><font color="#000000">FrontierHead∆Risu</font></b> is now away. 
+02:33:16 |N|~FrontierHead∆Risu- ⒶⒻⓀ|frontierheadrisu
+02:33:16 |N|~FrontierHead∆Risu- ⒶⒻⓀ|frontierheadrisu
+02:33:16 |N|~FrontierHead∆Risu- ⒶⒻⓀ|frontierheadrisu
+02:34:27 |c|~∆Champiön Nöah∆|"saying m2k is the true Doctor Mario offends actual Doc mains"
+02:34:32 |c|~∆Champiön Nöah∆|"all 3 of them"
+02:34:34 |c|%∆Gym Ldr Alcor∆|the amount of stats he would have had to grind tho
+02:34:39 |c|%∆Gym Ldr Alcor∆|to ohko a behemoth
+02:34:47 |c|~∆Champiön Nöah∆|Nah it's a mod lol
+02:34:49 |c|%∆Gym Ldr Alcor∆|emily still has to nuke them im prett sure
+02:34:53 |c|%∆Gym Ldr Alcor∆|ah oke
+02:35:12 |c|~∆Champiön Nöah∆|I had 10 strength and 100 Melee Weapons on one of my saves in New Vegas and I couldn't one shot a Death Claw with a Power fist
+02:35:22 |c|~∆Champiön Nöah∆|Which is the best Melee Weapon
+02:35:25 |c|~∆Champiön Nöah∆|So it's a hack
+02:35:34 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:1|~:2
+02:35:36 |c|%∆Gym Ldr Alcor∆|how high is 10 strength compared to most?
+02:36:16 |c|~∆Champiön Nöah∆|Well it's out of 10
+02:36:48 |c|~∆Champiön Nöah∆|In fallout 4 you have a lot less SPECIAL points to use
+02:38:02 |c|%∆Gym Ldr Alcor∆|i c
+02:38:21 |c|%∆Gym Ldr Alcor∆|so essentially maximum potential physical traits cant even get close to that attacking power
+02:38:26 |c|~∆Champiön Nöah∆|No
+02:38:35 |c|~∆Champiön Nöah∆|Especially in Fallout 4
+02:38:39 |c|~∆Champiön Nöah∆|A lot harder
+02:39:57 |c|~∆Champiön Nöah∆|To rank up your base stats (SPECIAL) in Fallout 4 you have to spend a point which you can also use on perks every time you level up
+02:40:02 |c|~∆Champiön Nöah∆|But you only get 1 per level up
+02:40:20 |c|~∆Champiön Nöah∆|My main Save has 10 Charisma and Endurance and I love it
+02:40:53 |c|%∆Gym Ldr Alcor∆|attractively indestructible?
+02:41:28 |c|~∆Champiön Nöah∆|yea
+02:41:35 |c|~∆Champiön Nöah∆|Charisma and Endurance have the best perks imo
+02:41:39 |c|~∆Champiön Nöah∆|Luck has some good ones too
+02:44:33 |J| Yung Zeno
+02:44:43 |c|%∆Gym Ldr Alcor∆|and charisma would defo make relations and monetary concerns less problematic
+02:45:19 |L| Yung Zeno
+02:45:34 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:1|~:2
+02:47:02 |c|@∆Fröntier∆Blade☯- ⒶⒻⓀ|Charisma 10 Noah
+02:47:24 |c|@∆Fröntier∆Blade☯- ⒶⒻⓀ|Leaf also later tonight Unturned
+02:47:38 |c|@∆Fröntier∆Blade☯- ⒶⒻⓀ|You need to use Hamachi tho
+02:47:39 |c|@∆Fröntier∆Blade☯- ⒶⒻⓀ|https://secure.logmein.com/products/hamachi/download.aspx
+02:47:58 |c|%∆Gym Ldr Alcor∆|if the nets up im game
+02:48:04 |c|%∆Gym Ldr Alcor∆|already have hamachi btw
+02:48:09 |c|%∆Gym Ldr Alcor∆|from the terraria days
+02:48:25 |c|@∆Fröntier∆Blade☯- ⒶⒻⓀ|Ay
+02:48:35 |c|@∆Fröntier∆Blade☯- ⒶⒻⓀ|but tfw we port forawrded
+02:53:31 |J|%∆Gym Ldr Bigo∆
+02:53:31 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+02:55:34 |userstats|total:9|guests:0| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+03:01:16 |c|~∆Champiön Nöah∆|The HG/SS theme for Kanto leaders is pree dank tbh
+03:01:58 |N|~FrontierHead∆Risu|frontierheadrisu
+03:01:58 |N|~FrontierHead∆Risu|frontierheadrisu
+03:01:58 |raw|-- <b><font color="#000000">FrontierHead∆Risu</font></b> is back.
+03:01:58 |N|~FrontierHead∆Risu|frontierheadrisu
+03:03:28 |c|~∆Champiön Nöah∆|ok I would like to thank Sacred Gold for giving Brock a Sudowoodo on his team
+03:03:34 |c|~∆Champiön Nöah∆|Sticking to the anime
+03:05:34 |userstats|total:9|guests:0| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+03:15:34 |userstats|total:9|guests:0| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+03:18:55 |N|@∆Frontier Zachary∆|frontierzachary
+03:18:55 |N|@∆Frontier Zachary∆|frontierzachary
+03:18:55 |raw|-- <b><font color="#000000">∆Frontier Zachary∆</font></b> is back.
+03:18:55 |N|@∆Frontier Zachary∆|frontierzachary
+03:19:21 |J|~∆Chаmpion Bart∆
+03:19:21 |N|~∆Chаmpion Bart∆|chmpionbart
+03:19:29 |J|&E4 Terror
+03:19:29 |N|&E4 Terror|e4terror
+03:22:19 |c|~∆Chаmpion Bart∆|the ammount of thanksgiving putin turkey memes is too high
+03:22:25 |c|%∆Gym Ldr Bigo∆|lol
+03:22:36 |c|~∆Champiön Nöah∆|I love it
+03:22:36 |c|~∆Chаmpion Bart∆|hi btw
+03:22:46 |c|~∆Chаmpion Bart∆|i just had 4 in a row
+03:22:51 |c|~∆Chаmpion Bart∆|from different people
+03:22:51 |c|%∆Gym Ldr Bigo∆|kewl
+03:22:54 |c|~∆Champiön Nöah∆|Everyone's really Putin Turkey on blast
+03:23:02 |c|%∆Gym Ldr Bigo∆|also guys
+03:23:04 |c|~∆Chаmpion Bart∆|stahp
+03:23:06 |c|%∆Gym Ldr Bigo∆|real news
+03:23:08 |c|%∆Gym Ldr Bigo∆|its not big of a deal
+03:23:28 |c|~∆Chаmpion Bart∆|i swear to god if u said "it's not a Bigo deal"
+03:23:33 |c|%∆Gym Ldr Bigo∆|LOL
+03:23:50 |c|%∆Gym Ldr Alcor∆|sora is bad jokes bart
+03:23:55 |c|%∆Gym Ldr Alcor∆|deal with it
+03:24:02 |c|%∆Gym Ldr Alcor∆|so whats the news bigo?
+03:24:17 |c|%∆Gym Ldr. You∆|"you" will have to deal with it, its not a bigo deal
+03:24:34 |c|%∆Gym Ldr. You∆|But i noah person who is a bit of a terror to us all
+03:24:49 |c|~∆Champiön Nöah∆|please stop
+03:24:50 |c|~∆Chаmpion Bart∆|can you....
+03:24:53 |c|~∆Chаmpion Bart∆|ye that
+03:25:09 |c|%∆Gym Ldr. You∆|sorry, i was just proving barts point xD
+03:25:34 |userstats|total:11|guests:0| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:2|~:3
+03:25:51 |c|~∆Champiön Nöah∆|wtf why is it yellow outside
+03:25:52 |c|~∆Chаmpion Bart∆|it's that time of the year again http://gabegaming.com/
+03:26:00 |c|%∆Gym Ldr Alcor∆|well frankly i think your barney
+03:26:24 |c|~∆Chаmpion Bart∆|gdi it's not linked properly.... anyway Steam's havin a sale bois
+03:26:37 |c|%∆Gym Ldr. You∆|plz no xD
+03:26:46 |c|%∆Gym Ldr. You∆|my wallet has only just recovered...
+03:27:17 |c|%∆Gym Ldr Alcor∆|its yellow in sydney?
+03:27:23 |c|%∆Gym Ldr Alcor∆|normal blue sky shiz here
+03:27:28 |c|~∆Chаmpion Bart∆|life is strange 50%, h1z1 is 35%, everything fallout is MAD SALED
+03:29:25 |raw|<div class="broadcast-green"><b> "I'm training my bird Pokemon, want to battle?" <img src="http://i.imgur.com/FlJ1v5Q.png" width=500></b></div>
+03:29:35 |c|~∆Champiön Nöah∆|Kanto trainers have no fear
+03:29:44 |c|%∆Gym Ldr Bigo∆|wait..
+03:29:47 |c|%∆Gym Ldr Bigo∆|the steam sale..
+03:29:56 |c|%∆Gym Ldr Alcor∆|this is bug catcher caterpie vs charizard all over again
+03:29:59 |c|%∆Gym Ldr Bigo∆|praise lord gaben
+03:30:00 |c|%∆Gym Ldr Bigo∆|gaben.tv
+03:30:05 |c|%∆Gym Ldr Bigo∆|just open it
+03:30:13 |c|~∆Champiön Nöah∆|Oh what he said afterward makes sense
+03:30:27 |c|~∆Champiön Nöah∆|"If you have a weak Pokemon you want to train put it in first then switch it out straight away"
+03:30:39 |c|~∆Champiön Nöah∆|Except he didn't switch
+03:30:47 |c|~∆Champiön Nöah∆|A giant sea serpent obliterated it
+03:31:48 |c|%∆Gym Ldr Alcor∆|did he have any other pokes that werent weak?
+03:32:02 |c|~∆Champiön Nöah∆|A Level 58 Aerodactyl
+03:32:12 |c|%∆Gym Ldr Alcor∆|dayum
+03:32:13 |c|%∆Gym Ldr Alcor∆|not bad
+03:35:34 |userstats|total:11|guests:0| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:2|~:3
+03:38:06 |J|+SoraHeat
+03:39:13 |N|&∆E4 Terror∆|e4terror
+03:39:13 |N|&∆E4 Terror∆|e4terror
+03:39:22 |c|&∆E4 Terror∆|peepee the frog
+03:43:21 |J|@Frontier Meows
+03:43:21 |N|@Frontier Meows|frontiermeows
+03:43:23 |N|@∆Frontier Meows∆|frontiermeows
+03:43:23 |N|@∆Frontier Meows∆|frontiermeows
+03:43:33 |c|@∆Frontier Meows∆|so why is Arjunb at the bottom with no rank?
+03:43:43 |c|~∆Champiön Nöah∆|idk
+03:43:50 |L| FrontierHead∆Risu
+03:44:20 |c|@∆Frontier Meows∆|and am I the only one who sees putin memes everywhere
+03:44:43 |c|~∆Champiön Nöah∆|nah
+03:44:43 |c|~∆Chаmpion Bart∆|meows
+03:44:45 |c|~∆Chаmpion Bart∆|go up a bit
+03:44:56 |c|@∆Frontier Meows∆|oh.
+03:45:00 |c|@∆Frontier Meows∆|haha?
+03:45:07 |c|@∆Frontier Meows∆|its literally everywhere on Facebook
+03:45:27 |c|@∆Frontier Meows∆|Now how on earth am I supposed to look at my minions
+03:45:34 |userstats|total:12|guests:0| :1|+:1|$:0|%:3|@:3|★:0|#:0|&:2|~:2
+03:45:45 ∆Frontier Meows∆ was kicked by ∆Champiön Nöah∆ (don't joke about that).
+03:45:45 |L|@∆Frontier Meows∆
+03:45:49 |J|@∆Frontier Meows∆
+03:45:49 |N|@∆Frontier Meows∆|frontiermeows
+03:45:51 |c|@∆Frontier Meows∆|;-;
+03:45:58 |c|@∆Frontier Meows∆|so how's everyone
+03:46:12 |c|%∆Gym Ldr. You∆|good
+03:46:13 |c|~∆Chаmpion Bart∆|good
+03:46:20 |c|%∆Gym Ldr. You∆|what bout you?
+03:46:26 |c|@∆Frontier Meows∆|I just got a job so maybe sometime soon I'll donate to the server :>
+03:46:31 |c|~∆Champiön Nöah∆|ayyy
+03:47:39 |c|&∆E4 Terror∆|omfg
+03:47:47 |c|&∆E4 Terror∆|that reminded me of something
+03:47:54 |c|~∆Chаmpion Bart∆|u had a job?
+03:47:57 |c|&∆E4 Terror∆|no
+03:48:21 |c|&∆E4 Terror∆|I think it was my uncle's gf, who broke up with him and flew to america and married a rich guy
+03:48:48 |c|@∆Frontier Meows∆|o.0
+03:48:49 |c|&∆E4 Terror∆|and one of my aunty's asked her how to get a thing to work in america and she's like "just get a rich husband"
+03:49:05 |c|@∆Frontier Zachary∆|tfw brutally honest
+03:49:07 |c|@∆Frontier Meows∆|Noah how much is one month's worth of fees?
+03:49:11 |c|~∆Chаmpion Bart∆|....how did meows getting a job remind you about that
+03:49:20 |c|@∆Frontier Meows∆|that's cause its terror
+03:49:33 |c|&∆E4 Terror∆|ssh
+03:49:35 |c|~∆Champiön Nöah∆|+currency conversion it's around $18
+03:49:42 |c|@∆Frontier Meows∆|Das a lot
+03:49:58 |c|@∆Frontier Meows∆|how are you not broke again
+03:50:14 |c|&∆E4 Terror∆|1 month's worth
+03:50:30 |c|~∆Champiön Nöah∆|I earn $220 a week on a good week
+03:50:43 |c|~∆Champiön Nöah∆|And I've got no bills/rent/board to pay
+03:50:51 |c|@∆Frontier Meows∆|that's more than $300 in my currency iirc
+03:50:57 |c|~∆Champiön Nöah∆|Until next month that is
+03:51:05 |c|~∆Champiön Nöah∆|Which I'm gonna have to start paying board
+03:51:11 |c|@∆Frontier Meows∆|fuck I'll make only $100 on a good week
+03:51:12 |c|~∆Champiön Nöah∆|Since Mum stops getting child support from my father
+03:51:29 |c|@∆Frontier Meows∆|what do you mean by pay board?
+03:51:54 |c|~∆Champiön Nöah∆|It's like rent
+03:52:00 |c|@∆Frontier Meows∆|ah I see
+03:52:02 |c|~∆Champiön Nöah∆|But since I'm living with my Mum I'm pitching in
+03:52:06 |c|~∆Champiön Nöah∆|Not paying rent
+03:52:11 |c|~∆Champiön Nöah∆|Like I give her money to pay rent
+03:52:13 |c|~∆Champiön Nöah∆|Ya feel
+03:52:23 |c|~∆Champiön Nöah∆|Hypothetical: Rent is 500 a week
+03:52:30 |c|~∆Champiön Nöah∆|I give my mum $150 in board
+03:52:41 |c|@∆Frontier Meows∆|I see
+03:52:44 |c|~∆Champiön Nöah∆|So she only has to pay $350
+03:52:50 |c|~∆Champiön Nöah∆|Since she has my $150
+03:53:26 |c|~∆Chаmpion Bart∆|100$ is more than the minimum monthly pay in my country
+03:53:48 |c|%∆Gym Ldr Alcor∆|board is a form of cheaper rent
+03:53:51 |c|%∆Gym Ldr Alcor∆|when your living at home
+03:54:00 |c|%∆Gym Ldr Alcor∆|its meant to cover basic living expenses for yourself like food
+03:54:05 |c|@∆Frontier Meows∆|Oooo
+03:54:35 |c|%∆Gym Ldr Alcor∆|its usually used by young adults living at home so they arent having to worry about money too much but still chipping in
+03:55:04 |c|%∆Gym Ldr Alcor∆|i only have to pay $50 board but i've been paying it since almost the start of this year
+03:55:20 |c|@∆Frontier Meows∆|never heard of the term tbh
+03:55:34 |userstats|total:12|guests:0| :1|+:1|$:0|%:3|@:3|★:0|#:0|&:2|~:2
+03:57:44 |J| Blackelpie
+03:58:09 |raw|-- <b><font color="#000000">∆Frontier Meows∆</font></b> is now away.  (mom&apos;s yelling)
+03:58:09 |N|@∆Frontier Meows∆- ⒶⒻⓀ|frontiermeows
+03:58:09 |N|@∆Frontier Meows∆- ⒶⒻⓀ|frontiermeows
+03:58:09 |N|@∆Frontier Meows∆- ⒶⒻⓀ|frontiermeows
+03:58:15 |c| Gym Ldr Arjunb|Hmm
+03:58:49 |c| Gym Ldr Arjunb|Can anyone help me with the reason im demoted from yesterday
+03:59:01 |c|~∆Chаmpion Bart∆|uhh
+03:59:35 |N|@∆Frontier Meows∆|frontiermeows
+03:59:35 |N|@∆Frontier Meows∆|frontiermeows
+03:59:35 |raw|-- <b><font color="#000000">∆Frontier Meows∆</font></b> is back.
+03:59:35 |N|@∆Frontier Meows∆|frontiermeows
+03:59:39 |c|@∆Frontier Meows∆|you aren't demoted?
+03:59:45 |c|~∆Chаmpion Bart∆|he is?
+03:59:48 |c| Blackelpie|yes he is
+03:59:57 |c| Gym Ldr Arjunb|I couldnt talk in modchat
+04:00:00 |c| Gym Ldr Arjunb|Yesterday
+04:00:02 |N|%Gym Ldr Arjunb|gymldrarjunb
+04:00:02 Gym Ldr Arjunb was promoted to Driver by ∆Chаmpion Bart∆.
+04:00:02 |N|%Gym Ldr Arjunb|gymldrarjunb
+04:00:02 |c|@∆Frontier Meows∆|you were banned by Risu
+04:00:08 |c|@∆Frontier Meows∆|maybe that's why
+04:00:10 |c|~∆Chаmpion Bart∆|wh...y?
+04:00:13 |c|@∆Frontier Meows∆|idk
+04:00:14 |c|%∆Gym Ldr Alcor∆|oh yeah
+04:00:16 |c|@∆Frontier Meows∆|don't ask me
+04:00:16 |c|%∆Gym Ldr Alcor∆|ik why
+04:00:20 |c|@∆Frontier Meows∆|pls share leaf
+04:00:20 |c|~∆Chаmpion Bart∆|so?
+04:00:22 |c|%Gym Ldr Arjunb|But I was driver after that
+04:00:26 |c|@∆Frontier Meows∆|pls symbols arjunb
+04:00:32 |c|%∆Gym Ldr Alcor∆|he quoted smth rice accidentally said in lobby
+04:00:32 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:00:32 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:00:41 |c|%∆Gym Ldr Alcor∆|which rice had cleared lobby bc people werent meant to see
+04:00:43 |c|%∆Gym Ldr Arjunb∆|Alcor but I was driver
+04:00:44 |c|%∆Gym Ldr Alcor∆|so he banned arjunb
+04:00:46 |c|@∆Frontier Meows∆|oh
+04:00:50 |c|%∆Gym Ldr Arjunb∆|After that
+04:00:52 |L| ∆E4 Barney∆
+04:00:53 |c|%∆Gym Ldr Alcor∆|being banned kills your auth
+04:00:57 |c|@∆Frontier Meows∆|^
+04:01:01 |c|%∆Gym Ldr Arjunb∆|....
+04:01:01 |c|%∆Gym Ldr Alcor∆|it has to be reinstated after a global ban
+04:01:18 |c|%∆Gym Ldr Alcor∆|protip: dont piss off admins and get banned then it isnt an issue
+04:01:22 |c|~∆Chаmpion Bart∆|~~and what was that Rice didnt want peeps to see?~~
+04:01:32 |c|@∆Frontier Meows∆|rice will kill us if its here again
+04:01:35 |c|@∆Frontier Meows∆|whatever it is
+04:01:55 |c|%∆Gym Ldr Arjunb∆|Idk
+04:02:00 |c|%∆Gym Ldr Arjunb∆|Im getting glitches
+04:02:04 |c|%∆Gym Ldr Arjunb∆|Alot of them
+04:02:15 |c|%∆Gym Ldr Arjunb∆|On this server
+04:02:19 |c|%∆Gym Ldr Alcor∆|maybe so but thats probably not one of them
+04:02:35 |c|%∆Gym Ldr Alcor∆|well bart i cant really say it in lobby now can i
+04:02:35 |c|%∆Gym Ldr Arjunb∆|But I do remember being driver after being unbanned
+04:02:47 |c|%∆Gym Ldr Alcor∆|if he doesnt want people seeing badly enough to ban them
+04:02:52 |c|~∆Chаmpion Bart∆|u cant imo
+04:02:53 |c|%∆Gym Ldr Alcor∆|for saying it
+04:03:20 |c|%∆Gym Ldr Arjunb∆|Why did he say it inbthe first place
+04:03:29 |c|@∆Frontier Meows∆|maybe it was a mistake?
+04:03:54 |c|%∆Gym Ldr Arjunb∆|And then he clearalled
+04:04:10 |L| Blackelpie
+04:04:22 |c|%∆Gym Ldr Arjunb∆|But I could still see it and people were like first second and asking questions
+04:04:50 |c|%∆Gym Ldr Arjunb∆|So that got me confused
+04:05:14 |c|@∆Frontier Meows∆|did he say not to quote it or smth
+04:05:24 |c|%∆Gym Ldr Arjunb∆|Umm ive done everything that was on this subject
+04:05:33 |c|%∆Gym Ldr Arjunb∆|I dont think ill do science now
+04:05:34 |userstats|total:11|guests:0| :0|+:1|$:0|%:4|@:3|★:0|#:0|&:1|~:2
+04:05:42 |c|%∆Gym Ldr Alcor∆|he literally had just refreshed the page bc it was in the lobb
+04:05:44 |c|%∆Gym Ldr Alcor∆|lobby*
+04:06:16 |c|%∆Gym Ldr Arjunb∆|But the problem was, I wondered that why would he say not to quote it when its still visible
+04:06:20 |c|@∆Frontier Meows∆|oh
+04:06:27 |c|@∆Frontier Meows∆|okay how about we drop the subject
+04:06:34 |c|%∆Gym Ldr Arjunb∆|So I asked what does this mean
+04:06:41 |c|@∆Frontier Meows∆|let's drop the subject
+04:06:46 |c|%∆Gym Ldr Arjunb∆|And it occured that itbhad been cleared for everyone else
+04:07:24 |c|@∆Frontier Meows∆|oh Leaf you didn't change your type
+04:07:36 |c|%∆Gym Ldr Alcor∆|nah failed the test
+04:07:44 |c|%∆Gym Ldr Alcor∆|couldnt be bothered improving the team or making a new one
+04:07:45 |c|@∆Frontier Meows∆|ah I see
+04:07:48 |c|%∆Gym Ldr Alcor∆|might try again soonish
+04:08:00 |c|%∆Gym Ldr Alcor∆|since i have holidays coming up i have plenty of practice time etc
+04:08:13 |c|@∆Frontier Meows∆|a tad bit close to the promo tours tho
+04:11:35 |c|%∆Gym Ldr Arjunb∆|Meows just because someone else is goid at a tier doesnt mean you cant play that. I would love someone else in sora loving nu and its fun too
+04:11:46 |c|%∆Gym Ldr Arjunb∆|Good*
+04:12:04 |c|@∆Frontier Meows∆|?????
+04:12:11 |c|@∆Frontier Meows∆|ain't that like from yesterday
+04:12:18 |c|%∆Gym Ldr Arjunb∆|Is that?
+04:12:26 |c|@∆Frontier Meows∆|ye
+04:12:27 |c|%∆Gym Ldr Arjunb∆|Well it highlighted me
+04:13:24 |raw|-- <b><font color="#000000">∆Gym Ldr Arjunb∆</font></b> is now away. 
+04:13:24 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:13:24 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:13:24 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:13:40 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|Yea im gonna touch English
+04:15:34 |userstats|total:11|guests:0| :0|+:1|$:0|%:4|@:3|★:0|#:0|&:1|~:2
+04:17:32 |J|+ABootToTheHead
+04:17:35 |c|+ABootToTheHead|hai
+04:18:12 |c|+ABootToTheHead|bai
+04:18:14 |N|+ABootToTheHead- ⒶⒻⓀ|aboottothehead
+04:18:14 |N|+ABootToTheHead- ⒶⒻⓀ|aboottothehead
+04:18:14 |N|+ABootToTheHead- ⒶⒻⓀ|aboottothehead
+04:20:15 |c|~∆Chаmpion Bart∆|If people don't understand your psychodelic essay, does that mean i succeeded?
+04:25:18 |J| ∆E4 Barney∆
+04:25:18 |N|&∆E4 Barney∆|e4barney
+04:25:34 |userstats|total:13|guests:0| :0|+:2|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+04:29:17 |c|@∆Frontier Meows∆|ded like ballsac
+04:31:06 |c|&∆E4 Barney∆|agreed
+04:35:34 |userstats|total:13|guests:0| :0|+:2|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+04:35:51 |c|~∆Champiön Nöah∆|Sorry friend's group tried to put me on roast
+04:35:55 |c|~∆Champiön Nöah∆|Had to drop some bombs
+04:35:57 |c|~∆Champiön Nöah∆|How's it goin
+04:36:51 |c|~∆Chаmpion Bart∆|risu's secrets, meows rantin about other tiers, arjun reincarnated
+04:36:52 |c|~∆Chаmpion Bart∆|nothing much
+04:37:33 |c|@∆Frontier Meows∆|I wasn't ranting today
+04:37:37 |c|@∆Frontier Meows∆|the rant was yesterday lmao
+04:38:46 |c|%∆Gym Ldr Alcor∆|*meows post-ranting
+04:41:34 |c|@∆Frontier Meows∆|its real ded
+04:41:37 |c|@∆Frontier Meows∆|so terror
+04:41:45 |c|&∆E4 Terror∆|wot
+04:41:59 |c|@∆Frontier Meows∆|do you think connor is better than you in everything
+04:42:12 |c|@∆Frontier Meows∆|*matt
+04:42:15 |c|&∆E4 Terror∆|???
+04:42:16 |c|@∆Frontier Meows∆|compared wrong person lmao
+04:42:31 |c|@∆Frontier Meows∆|do you think matt's better than you as e4
+04:42:32 |c|&∆E4 Terror∆|IM BETTER AS AN E4
+04:42:49 |c|@∆Frontier Meows∆|prove it m8
+04:43:15 |c|&∆E4 Terror∆|!badgecase
+04:43:15 |raw|<div class="infobox"><details><summary>∆E4 Terror∆'s Badges:</summary><img src="http://i.imgur.com/ELFPzW8.png" title = "Achieved Gym Leader Status"> <img src="http://i.imgur.com/QtECCD9.png" title = "Achieved Elite 4 Status"> <img src="http://i.imgur.com/y21ENWF.png" title="Elite Four Conqueror: Cleared the Elite Four"> <img src="http://i.imgur.com/zaLhq1k.png" title="Starly: One Year on Sora"> <img src="http://i.imgur.com/MDcdCka.png" title="Bertha Badge: 5 E4 Defends"> <img src="http://i.imgur.com/2eC21HT.png" title="Koga Badge: 10 E4 Defends"> <img src="http://i.imgur.com/dLyGYK5.png" title="This user is an egg without trying"> <img src="http://i.imgur.com/fbbyoaR.png" title="Caitlin Badge: 20 E4 Defends"> </details></div>
+04:43:52 |c|@∆Frontier Meows∆|doesn't prove anything m8
+04:44:11 |c|+ABootToTheHead- ⒶⒻⓀ|who's matt
+04:44:31 |c|@∆Frontier Meows∆|the guy who's better as e4
+04:44:37 |c|%∆Gym Ldr Bigo∆|lol
+04:44:42 |c|+ABootToTheHead- ⒶⒻⓀ|oh\
+04:44:44 |c|@∆Frontier Zachary∆|rip
+04:44:50 |c|@∆Frontier Zachary∆|I still remember that guy
+04:44:55 |c|@∆Frontier Meows∆|me too
+04:45:12 |c|@∆Frontier Meows∆|am I the only one who can't access main?
+04:45:20 |c|&∆E4 Barney∆|nope
+04:45:25 |c|&∆E4 Barney∆|i can't either
+04:45:34 |userstats|total:13|guests:0| :0|+:2|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+04:45:38 |c|@∆Frontier Meows∆|oh phew 
+04:45:44 |c|%∆Gym Ldr. You∆|i cant either
+04:45:46 |c|%∆Gym Ldr Bigo∆|me neither
+04:45:50 |c|@∆Frontier Meows∆|its probs down then
+04:45:56 |c|%∆Gym Ldr Bigo∆|or either
+04:45:56 |c|%∆Gym Ldr. You∆|i think they are doing some updates n stuff
+04:45:57 |c|%∆Gym Ldr Bigo∆|idk english
+04:45:58 |c|@∆Frontier Meows∆|anyone wanna OU? gotta test a new team
+04:46:02 |c|+ABootToTheHead- ⒶⒻⓀ|[16:45:14] Metatyph: so when you drop in the assault vest cresselia
+04:46:03 |c|%∆Gym Ldr Bigo∆|yus meows
+04:46:03 |c|+ABootToTheHead- ⒶⒻⓀ|[16:45:22] Metatyph: they can't do jack shit about it
+04:46:12 |c|+ABootToTheHead- ⒶⒻⓀ|anyways brb again
+04:46:13 |c|&∆E4 Barney∆|i wanted to test my new doubles team
+04:46:25 |c|@∆Frontier Meows∆|cries
+04:46:28 |c|%∆Gym Ldr. You∆|barney ill help test your doubles team
+04:46:32 |c|&∆E4 Barney∆|ok
+04:50:27 |N|+ABootToTheHead|aboottothehead
+04:50:27 |N|+ABootToTheHead|aboottothehead
+04:50:27 |N|+ABootToTheHead|aboottothehead
+04:54:32 |raw|-- <b><font color="#000000">∆Gym Ldr Bigo∆</font></b> is now away.  (gdi homework)
+04:54:32 |N|%∆Gym Ldr Bigo∆- ⒶⒻⓀ|gymldrbigo
+04:54:32 |N|%∆Gym Ldr Bigo∆- ⒶⒻⓀ|gymldrbigo
+04:54:32 |N|%∆Gym Ldr Bigo∆- ⒶⒻⓀ|gymldrbigo
+04:55:34 |userstats|total:13|guests:0| :0|+:2|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+04:56:22 |c|@∆Frontier Meows∆|anyone wants an OU battle
+04:56:32 |c|~∆Chаmpion Bart∆|;)
+04:56:44 |c|~∆Chаmpion Bart∆|sure ;)))))
+04:57:03 |c|@∆Frontier Meows∆|I feel like I'll regret this
+04:57:40 |tournament|create|ou|Single Elimination|0
+04:57:40 (∆Gym Ldr. You∆ created a tournament in ou format.)
+04:57:43 |tournament|join|∆Frontier Meows∆
+04:57:44 |tournament|join|∆Gym Ldr. You∆
+04:58:23 |tournament|join|∆Chаmpion Bart∆
+05:00:56 |tournament|join|∆E4 Barney∆
+05:01:25 |c|&∆E4 Barney∆|lets start this will probs be the max we get
+05:01:34 |tournament|leave|∆Chаmpion Bart∆
+05:01:37 |raw|-- <b><font color="#000000">∆Chаmpion Bart∆</font></b> is now away.  (dindins)
+05:01:37 |N|~∆Chаmpion Bart∆- ⒶⒻⓀ|chmpionbart
+05:01:37 |N|~∆Chаmpion Bart∆- ⒶⒻⓀ|chmpionbart
+05:01:37 |N|~∆Chаmpion Bart∆- ⒶⒻⓀ|chmpionbart
+05:01:52 |tournament|leave|∆E4 Barney∆
+05:01:55 |tournament|join|∆E4 Barney∆
+05:02:32 |c|%∆Gym Ldr. You∆|should we start now?
+05:02:35 |c|%∆Gym Ldr. You∆|or wait for 1 more?
+05:02:49 |c|&∆E4 Barney∆|idk meows' call
+05:02:52 |c|%∆Gym Ldr. You∆|meows?
+05:02:53 |c|@∆Frontier Meows∆|er sure?
+05:02:56 |c|@∆Frontier Meows∆|not even my tour tho?
+05:03:01 |c|@∆Frontier Meows∆|gimme time to make a team first tho
+05:03:08 |c|&∆E4 Barney∆|oh well it's your tour you
+05:03:12 |c|&∆E4 Barney∆|so it's your call
+05:03:40 |tournament|start
+05:03:47 |tournament|battlestart|∆Gym Ldr. You∆|∆E4 Barney∆|battle-ou-3890
+05:05:10 |c|+ABootToTheHead|what the hell happened
+05:05:16 |c|+ABootToTheHead|I couldn't reconnect to sora for a sec
+05:05:31 |c|~∆Champiön Nöah∆|Was just you I think
+05:05:34 |userstats|total:13|guests:0| :0|+:2|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+05:05:36 |c|+ABootToTheHead|huh
+05:06:02 |c|@∆Frontier Meows∆|o.0
+05:10:13 |tournament|battleend|∆Gym Ldr. You∆|∆E4 Barney∆|loss|0,3
+05:10:19 |tournament|battlestart|∆E4 Barney∆|∆Frontier Meows∆|battle-ou-3891
+05:11:52 |c|@∆Frontier Meows∆|tfw everyone leaves the battle
+05:12:08 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+05:12:08 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+05:12:08 |raw|-- <b><font color="#000000">∆Gym Ldr Bigo∆</font></b> is back.
+05:12:08 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+05:12:13 |c|~∆Champiön Nöah∆|it slows my emulator
+05:12:17 |c|%∆Gym Ldr Bigo∆|goddamit missed a tour
+05:12:38 |c|%∆Gym Ldr. You∆|we could always start another one...
+05:12:49 |c|%∆Gym Ldr. You∆|maybe, idk
+05:12:56 |c|%∆Gym Ldr. You∆|donno the rules with these things xD
+05:13:08 |N|~∆Chаmpion Bart∆|chmpionbart
+05:13:08 |N|~∆Chаmpion Bart∆|chmpionbart
+05:13:08 |raw|-- <b><font color="#000000">∆Chаmpion Bart∆</font></b> is back.
+05:13:08 |N|~∆Chаmpion Bart∆|chmpionbart
+05:13:21 |c|~∆Chаmpion Bart∆|ahhh, what's better than kfc on a weekend morning
+05:14:06 |c|&∆E4 Barney∆|maccas
+05:14:09 |c|~∆Champiön Nöah∆|no
+05:14:15 |c|&∆E4 Barney∆|oporto?
+05:14:26 |c|~∆Champiön Nöah∆|Okay I'd say they're both equal
+05:15:34 |userstats|total:13|guests:0| :0|+:2|$:0|%:4|@:3|★:0|#:0|&:2|~:2
+05:16:01 |tournament|battleend|∆E4 Barney∆|∆Frontier Meows∆|loss|0,5
+05:16:01 |tournament|end|{"results":[["∆Frontier Meows∆"]],"format":"ou","generator":"Single Elimination","bracketData":{"type":"tree","rootNode":{"children":[{"children":[{"children":[],"team":"∆Gym Ldr. You∆"},{"children":[],"team":"∆E4 Barney∆"}],"state":"finished","team":"∆E4 Barney∆","result":"loss","score":[0,3]},{"children":[],"team":"∆Frontier Meows∆"}],"state":"finished","team":"∆Frontier Meows∆","result":"loss","score":[0,5]}}}
+05:16:12 |html|<center><span style = "color:#7c5cd6"><b>~~ ∆Frontier Meows∆ is better as E4! ~~</b></span>
+05:16:12 |L|@∆Frontier Meows∆
+05:16:33 |J| Hiver Laurant
+05:16:41 |html|<center><span style = "color:#660c60"><b>~~ ∆E4 Barney∆ was knocked out cold by Snover! ~~</b></span>
+05:16:41 |L|&∆E4 Barney∆
+05:16:48 |c|%∆Gym Ldr Bigo∆|double kill
+05:17:14 |c|%∆Gym Ldr. You∆|rip
+05:17:28 |L| hiverlaurant
+05:17:41 |J| Genocide Sans
+05:17:48 |c|%∆Gym Ldr Bigo∆|~~u wont be missed~~
+05:20:00 |c|~∆Chаmpion Bart∆|rip me, im doin integrals ;-;
+05:20:20 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|Omg
+05:20:24 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:20:24 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:20:24 |raw|-- <b><font color="#000000">∆Gym Ldr Arjunb∆</font></b> is back.
+05:20:24 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+05:20:37 |c|%∆Gym Ldr. You∆|wb 
+05:20:43 |c|%∆Gym Ldr Arjunb∆|I realize ive already done half of the ssr
+05:20:45 |c|%∆Gym Ldr Arjunb∆|Sst
+05:20:50 |c|%∆Gym Ldr Arjunb∆|Ty
+05:22:27 |L| ∆Gym Ldr Arjunb∆
+05:24:27 |c|%∆Gym Ldr. You∆|rip chat
+05:25:34 |userstats|total:11|guests:0| :1|+:2|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+05:30:23 |c|~∆Champiön Nöah∆|NO WAY
+05:30:28 |c|%∆Gym Ldr. You∆|?
+05:30:28 |c|~∆Champiön Nöah∆|DRIZZLE POLITOED IS IN SACRED GOLD
+05:30:31 |c|~∆Champiön Nöah∆|MISTY HAS ONE
+05:30:33 |c|~∆Champiön Nöah∆|GOD DAMN IT
+05:30:36 |c|~∆Champiön Nöah∆|aaaaaaaaaaaaaaaa
+05:30:36 |c|%∆Gym Ldr Bigo∆|PLS NO
+05:30:41 |c|%∆Gym Ldr Bigo∆|rip
+05:31:38 |c|~∆Champiön Nöah∆|but in reality
+05:31:47 |c|~∆Champiön Nöah∆|What's a Drizzle Politoed to a Petal Dance Venusaur?
+05:34:20 |c|+ABootToTheHead|oi noah
+05:34:26 |c|+ABootToTheHead|zss infinite's discovered
+05:34:30 |c|~∆Champiön Nöah∆|Saw it
+05:34:32 |c|+ABootToTheHead|o
+05:34:40 |c|~∆Champiön Nöah∆|Down smash, Down Smash, Down Smash, nair, flip kick
+05:35:29 |c|~∆Champiön Nöah∆|holy shit venusaur tanked a psychic from Misty's Starmie
+05:35:32 |c|~∆Champiön Nöah∆|What a mad man
+05:35:34 |userstats|total:11|guests:0| :1|+:2|$:0|%:3|@:2|★:0|#:0|&:1|~:2
+05:35:37 |c|~∆Champiön Nöah∆|It had 4 levels on him
+05:36:32 |c|~∆Champiön Nöah∆|Misty's Golduck used Water Pulse
+05:36:33 |c|~∆Champiön Nöah∆|???
+05:36:40 |c|~∆Champiön Nöah∆|Your team is Level 60
+05:36:53 |c|@∆Fröntier∆Blade☯- ⒶⒻⓀ|Noah why can't you update?
+05:36:55 |N|@∆Fröntier∆Blade☯|frntierblade
+05:36:55 |N|@∆Fröntier∆Blade☯|frntierblade
+05:36:55 |raw|-- <b><font color="#000000">∆Fröntier∆Blade☯</font></b> is back.
+05:36:55 |N|@∆Fröntier∆Blade☯|frntierblade
+05:37:00 |c|~∆Champiön Nöah∆|Just because your team is 60 doesn't mean the BP of your moves has to be as well
+05:37:01 |c|~∆Chаmpion Bart∆|Misty's prepared for a p-don man
+05:37:03 ∆Fröntier∆Blade☯ used /updateserver
+05:37:03 Running `git stash && git pull --rebase && git stash pop`
+05:37:03 Saved working directory and index state WIP on master: abf918b Update trainer-cards.js
+05:37:03 HEAD is now at abf918b Update trainer-cards.js
+05:37:03 Current branch master is up to date.
+05:37:03 Removing config/avatars/frontierzachary.png
+05:37:03 Removing config/avatars/e4terror.gif
+05:37:03 On branch master
+05:37:03 Your branch is up-to-date with 'origin/master'.
+05:37:03 
+05:37:03 Changes not staged for commit:
+05:37:03   (use "git add/rm <file>..." to update what will be committed)
+05:37:03   (use "git checkout -- <file>..." to discard changes in working directory)
+05:37:03 
+05:37:03 	deleted:    config/avatars/e4terror.gif
+05:37:03 	deleted:    config/avatars/frontierzachary.png
+05:37:03 	modified:   storage-files/badges.json
+05:37:03 	modified:   storage-files/lastseen.json
+05:37:03 	modified:   storage-files/money.json
+05:37:03 	modified:   storage-files/poof.json
+05:37:03 	modified:   storage-files/tourwins.json
+05:37:03 
+05:37:03 Untracked files:
+05:37:03   (use "git add <file>..." to include in what will be committed)
+05:37:03 
+05:37:03 	storage-files/tells.json
+05:37:03 
+05:37:03 no changes added to commit (use "git add" and/or "git commit -a")
+05:37:03 Dropped refs/stash@{0} (0366e6a6bafecc399d3a8ea676ba0fb23db7bbc9)
+05:37:03 
+05:37:22 |c|~∆Champiön Nöah∆|Syntax error Blade
+05:37:26 |c|~∆Champiön Nöah∆|If I knew I'd have fixed
+05:37:31 |c|~∆Champiön Nöah∆|I thought it was my code
+05:37:32 ∆Fröntier∆Blade☯ used /hotpatch chat
+05:37:33 |c|~∆Champiön Nöah∆|Migth not be
+05:37:37 |c|~∆Champiön Nöah∆|We may be out of RAM
+05:37:49 |c|@∆Fröntier∆Blade☯|&#x2f;home&#x2f;sora&#x2f;Sora&#x2f;command-parser.js:27
+05:37:50 |c|@∆Fröntier∆Blade☯|const MAX_MESSAGE_LENGTH = 300;
+05:37:53 |c|@∆Fröntier∆Blade☯|this is the error
+05:38:05 |c|@∆Fröntier∆Blade☯|something about a max message length
+05:38:06 |c|@∆Fröntier∆Blade☯|weird
+05:38:32 |c|@∆Fröntier∆Blade☯|lemme try a fix
+05:38:47 |c|@∆Fröntier∆Blade☯|right silver merged with main
+05:38:50 |c|@∆Fröntier∆Blade☯|we need a reboot
+05:39:06 |c|@∆Fröntier∆Blade☯|Now or later noah boi?
+05:39:12 |c|~∆Champiön Nöah∆|CHat's dead
+05:39:13 |c|~∆Champiön Nöah∆|May as well
+05:39:23 |raw|<div class="broadcast-red"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>
+05:39:23 ∆Fröntier∆Blade☯ used /lockdown
+05:39:31 |c|@∆Fröntier∆Blade☯|we got 1 active battle
+05:40:31 |c|~∆Champiön Nöah∆|OH MY GOD
+05:40:32 |c|~∆Champiön Nöah∆|MISTY NO THAT'S MY TACTIC
+05:40:39 |c|~∆Champiön Nöah∆|VAPOREON IN RAIN IS MINE GO AWAY
+05:40:40 |c|~∆Champiön Nöah∆|SHOO
+05:41:14 |c|@∆Fröntier∆Blade☯|Hahhahahahahhahahahha
+05:41:26 |c|~∆Champiön Nöah∆|But then again what's Vaporeon in rain to an Overgrow Petal Dance from a Venusaur with one level on you
+05:41:38 |c|@∆Fröntier∆Blade☯|hue
+05:41:42 |c|~∆Champiön Nöah∆|Faschist nukes everything
+05:41:52 |c|~∆Champiön Nöah∆|Kill your son or Nuke Misty's team
+05:41:55 |c|~∆Chаmpion Bart∆|u named ur venusaur Faschist?
+05:42:00 |c|~∆Champiön Nöah∆|Yea
+05:42:02 |c| Genocide Sans|That he did
+05:42:04 |c|~∆Champiön Nöah∆|Clever play on words
+05:42:12 |c|~∆Chаmpion Bart∆|lol
+05:42:19 |c|%∆Gym Ldr Bigo∆|:p
+05:42:55 |c|~∆Chаmpion Bart∆|yesterday on me and asch's mirror dark match, his hydra's name was "Hail" and mine's "Hitler"
+05:42:56 |c|~∆Chаmpion Bart∆|:P
+05:43:24 |c|&∆E4 Terror∆|aaaaaa
+05:43:28 |c|&∆E4 Terror∆|serverpls
+05:44:13 |raw|<div class="broadcast-red"><b>gonna drop that restart nuke in a few secs</b></div>
+05:44:19 |c|%∆Gym Ldr. You∆|nuuuu
+05:44:20 ∆Fröntier∆Blade☯ used /kill
+05:55:30 NEW CHATROOM: lobby
+05:55:55 |raw|<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> TypeError: undefined is not a function<br />    at Object.exports.parse (&#x2f;home&#x2f;sora&#x2f;Sora&#x2f;command-parser.js:467:27)<br />Please restart the server.</div>
+05:55:55 |raw|<div class="broadcast-red">You will not be able to talk in the lobby or start new battles until the server restarts.</div>
+05:56:24 NEW CHATROOM: lobby
+05:58:44 NEW CHATROOM: lobby
+05:59:07 |raw|<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> TypeError: undefined is not a function<br />    at Object.exports.parse (&#x2f;home&#x2f;sora&#x2f;Sora&#x2f;command-parser.js:467:27)<br />Please restart the server.</div>
+05:59:07 |raw|<div class="broadcast-red">You will not be able to talk in the lobby or start new battles until the server restarts.</div>
+06:05:55 NEW CHATROOM: lobby
+06:06:30 |raw|<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> TypeError: undefined is not a function<br />    at Object.exports.parse (&#x2f;home&#x2f;sora&#x2f;Sora&#x2f;command-parser.js:467:27)<br />Please restart the server.</div>
+06:06:30 |raw|<div class="broadcast-red">You will not be able to talk in the lobby or start new battles until the server restarts.</div>
+06:13:29 NEW CHATROOM: lobby
+06:17:51 NEW CHATROOM: lobby
+06:18:21 |raw|<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> TypeError: undefined is not a function<br />    at Object.exports.parse (&#x2f;home&#x2f;sora&#x2f;Sora&#x2f;command-parser.js:467:27)<br />Please restart the server.</div>
+06:18:21 |raw|<div class="broadcast-red">You will not be able to talk in the lobby or start new battles until the server restarts.</div>
+22:47:34 NEW CHATROOM: lobby
+22:47:54 |J|@∆Fröntier∆Blade☯
+22:47:54 |N|@∆Fröntier∆Blade☯|frntierblade
+22:48:39 |c|@∆Fröntier∆Blade☯|We back
+22:50:45 |J|%Gym Ldr Alcor
+22:50:45 |N|%Gym Ldr Alcor|gymldralcor
+22:50:47 |N|%∆Gym Ldr Alcor∆|gymldralcor
+22:50:47 |N|%∆Gym Ldr Alcor∆|gymldralcor
+22:50:50 |c|%∆Gym Ldr Alcor∆|gj blade :D
+22:51:02 |c|%∆Gym Ldr Alcor∆|how much of the updates did we lose?
+22:51:10 |c|%∆Gym Ldr Alcor∆|i notice you dont have the ateam glow now
+22:51:12 |c|@∆Fröntier∆Blade☯|silvy reverted msot of it
+22:51:24 |c|@∆Fröntier∆Blade☯|I'm looking into stuff vps wise
+22:51:39 |c|@∆Fröntier∆Blade☯|like I can't get a new version of the node program for the VPS as of now
+22:52:25 |c|%∆Gym Ldr Alcor∆|not entirely sure what that means but it sounds bad
+22:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+23:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+23:17:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+23:19:01 |J|%Siiilver
+23:19:01 |N|%Siiilver|siiilver
+23:24:53 |c|%Siiilver|Okay my avatar's broken
+23:24:59 |c|%Siiilver|y u do dis server-kun
+23:25:03 |c|%∆Gym Ldr Alcor∆|silver is brokened
+23:25:08 |c|%∆Gym Ldr Alcor∆|just like server-kun
+23:25:10 |c|%Siiilver|:(
+23:25:14 |c|%Siiilver|//crai
+23:25:54 |c|%Siiilver|Hey Leaf, it's just the three of us in here
+23:25:55 |c|%Siiilver|;))))
+23:26:04 |c|%Siiilver|~~anime and chill~~
+23:26:08 |c|%∆Gym Ldr Alcor∆|ah
+23:26:09 |c|%∆Gym Ldr Alcor∆|god no
+23:26:31 |c|%Siiilver|Do we need an adult
+23:26:34 |c|%Siiilver|Oh we have you
+23:26:47 |c|%∆Gym Ldr Alcor∆|you dont have me
+23:26:52 |c|%∆Gym Ldr Alcor∆|btw blades almost an adult
+23:26:53 |c|%Siiilver|Dw it's safe, we have adult supervision
+23:27:02 |c|%Siiilver|Well I'm almost an adult too, okay? >.>
+23:27:15 |c|%∆Gym Ldr Alcor∆|are you?
+23:27:20 |c|%Siiilver|Well I'm 17
+23:27:25 |c|%Siiilver|and my birthday's in June
+23:27:27 |c|%∆Gym Ldr Alcor∆|pfft know your place child
+23:27:32 |c|%Siiilver|Btw Alcor
+23:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+23:27:37 |c|%Siiilver|I share my birthday with Blade
+23:27:44 |c|%Siiilver|So if he's almost an adult, I am too
+23:27:45 |c|%Siiilver|:P
+23:27:46 |c|%∆Gym Ldr Alcor∆|what same day?
+23:27:48 |c|%Siiilver|Yep
+23:27:51 |c|%Siiilver|June 12th
+23:27:53 |c|%Siiilver|Right Blade?
+23:28:07 |c|%∆Gym Ldr Alcor∆|maybe hes earlier in hours
+23:28:14 |c|@∆Fröntier∆Blade☯|My highlight list emptied weird
+23:28:17 |c|%Siiilver|lol
+23:28:26 |c|@∆Fröntier∆Blade☯|cookies cleared themselves....
+23:28:26 |c|%Siiilver|Oh yeah, there was some sorta client error
+23:28:35 |c|@∆Fröntier∆Blade☯|Ohhh and they clared cookies
+23:28:37 |c|%Siiilver|Huh
+23:28:39 |c|%Siiilver|Weird
+23:28:41 |c|%Siiilver|I still have my teams
+23:28:42 |c|%Siiilver|._.
+23:29:35 |c|@∆Fröntier∆Blade☯|how tf do you remember my birthday?
+23:29:49 |c|@∆Fröntier∆Blade☯|oh wait same fucking birthdate
+23:29:51 |c|@∆Fröntier∆Blade☯|coincident?
+23:29:53 |c|@∆Fröntier∆Blade☯|sp00ky?
+23:30:00 |c|%Siiilver|lmao
+23:30:05 |c|%Siiilver|HAX
+23:30:10 |c|%Siiilver|IT'S LIFE HAX
+23:31:03 |c|%∆Gym Ldr Alcor∆|funnily enough ik two others with a shared DOB
+23:31:07 |c|%∆Gym Ldr Alcor∆|even born same hospital
+23:31:13 |c|@∆Fröntier∆Blade☯|sp00ky
+23:31:14 |c|%∆Gym Ldr Alcor∆|its their party im going to this sat
+23:31:15 |c|%Siiilver|Me too Alcor. They're twins
+23:31:22 |c|%Siiilver|:P
+23:31:23 |c|%∆Gym Ldr Alcor∆|these two arent related silver
+23:31:25 |c|%Siiilver|Oh
+23:31:27 |c|%Siiilver|Sp00ky
+23:31:27 |c|@∆Fröntier∆Blade☯|sp00ky that the fact that several babies around the world are born per second
+23:31:34 |c|@∆Fröntier∆Blade☯|like something crazy
+23:31:44 |c|%∆Gym Ldr Alcor∆|duh blade
+23:31:48 |c|%∆Gym Ldr Alcor∆|the stork is working overtime
+23:31:53 |c|@∆Fröntier∆Blade☯|4.3 birth per second
+23:31:59 |c|%∆Gym Ldr Alcor∆|makes santa look like a lazy bastard
+23:31:59 |c|%Siiilver|Sp00ky is the fact that there are at least a few hundred thousand couples have sex every minute
+23:32:04 |c|%∆Gym Ldr Alcor∆|he only works ONE day a year
+23:32:05 |c|%Siiilver|Around the world
+23:32:05 |c|@∆Fröntier∆Blade☯|stork is getting x10 payment or something
+23:32:08 |c|@∆Fröntier∆Blade☯|permanent over time
+23:32:10 |c|%Siiilver|lol
+23:32:18 |c|%∆Gym Ldr Alcor∆|time and a half erry second
+23:32:21 |c|@∆Fröntier∆Blade☯|like 200 an hour
+23:32:25 |c|@∆Fröntier∆Blade☯|at a x10 penalty rate
+23:32:26 |c|%∆Gym Ldr Alcor∆|and unlike santa he doesnt have a slave army to help him
+23:32:34 |c|%∆Gym Ldr Alcor∆|hes also single bc he spends all his time working
+23:32:39 |c|%∆Gym Ldr Alcor∆|doesnt have time for family matters
+23:32:43 |c|@∆Fröntier∆Blade☯|the problem for santa is the stork himself
+23:32:46 |c|%∆Gym Ldr Alcor∆|mrs stork broke it off years ago
+23:32:47 |c|@∆Fröntier∆Blade☯|santa is lazy
+23:32:47 |c|%∆Gym Ldr Alcor∆|poor guy
+23:32:51 |c|%Siiilver|It's been calculated that santa needs to hit 84 houses per second to deliver presents to everyone in the US
+23:33:04 |c|%Siiilver|>lazy santa
+23:33:17 |c|@∆Fröntier∆Blade☯|the stork hits 4.3 hospitals per second every single day
+23:33:25 |c|%Siiilver|Tru
+23:33:28 |c|%Siiilver|Wait
+23:33:52 |c|%Siiilver|Then how many souls does the grim reaper reap per second?
+23:35:04 |c|%∆Gym Ldr Alcor∆|like 3.5 maybe
+23:35:14 |c|%∆Gym Ldr Alcor∆|bc more people are being born a day than dying
+23:35:32 |c|%Siiilver|Tru
+23:37:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+23:39:44 |c|%∆Gym Ldr Alcor∆|which we really need to do something about
+23:39:52 |c|%∆Gym Ldr Alcor∆|we do not need an increased population
+23:41:03 |J|~?Champiön Nöah?
+23:41:03 |N|~?Champiön Nöah?|champinnah
+23:41:15 |N|~Champiön Nöah|champinnah
+23:41:15 |N|~Champiön Nöah|champinnah
+23:41:17 |N|~∆Champiön Nöah∆|champinnah
+23:41:17 |N|~∆Champiön Nöah∆|champinnah
+23:41:27 |c|~∆Champiön Nöah∆|Is the .css gone or is it just me
+23:41:47 |c|%∆Gym Ldr Alcor∆|its pretty vanilla atm
+23:41:50 |c|%∆Gym Ldr Alcor∆|no background
+23:41:56 |c|~∆Champiön Nöah∆|Blade
+23:42:05 |c|~∆Champiön Nöah∆|Is the .css not working
+23:42:06 |c|%∆Gym Ldr Alcor∆|and your ateam glowy magic is gone
+23:42:14 |c|~∆Champiön Nöah∆|Yea that's all .css code
+23:42:23 |c|~∆Champiön Nöah∆|Background, userlist highlights
+23:42:26 |c|~∆Champiön Nöah∆|Custom chat font
+23:42:36 |c|~∆Champiön Nöah∆|All of our aesthetic changes are .css
+23:42:59 |J|%∆Gym Ldr. You∆
+23:42:59 |N|%∆Gym Ldr. You∆|gymldryou
+23:43:13 |c|%∆Gym Ldr. You∆|hi all =D
+23:44:04 |c|%Siiilver|I see everything
+23:44:17 |c|%Siiilver|Try refreshing and clearing your cache, Noah and Alcor
+23:44:58 |c|~∆Champiön Nöah∆|okai
+23:45:05 |L| ∆Gym Ldr Alcor∆
+23:45:07 |J| ∆Gym Ldr Alcor∆
+23:45:07 |N|%∆Gym Ldr Alcor∆|gymldralcor
+23:45:40 |L| ∆Champiön Nöah∆
+23:45:42 |J| ∆Champiön Nöah∆
+23:45:42 |N|~∆Champiön Nöah∆|champinnah
+23:45:47 |c|~∆Champiön Nöah∆|Much better
+23:47:02 |L| ∆Gym Ldr Alcor∆
+23:47:05 |J| ∆Gym Ldr Alcor∆
+23:47:05 |N|%∆Gym Ldr Alcor∆|gymldralcor
+23:47:12 |c|%∆Gym Ldr Alcor∆|ay the backgrounds back
+23:47:17 |c|%∆Gym Ldr Alcor∆|and the ateam magic glow
+23:47:27 |c|%∆Gym Ldr Alcor∆|also
+23:47:29 |c|%Siiilver|?
+23:47:31 |c|%∆Gym Ldr Alcor∆|THE YEAR IS OVER
+23:47:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1
+23:49:06 |c|%Siiilver|???
+23:49:51 |c|%∆Gym Ldr Alcor∆|school year
+23:49:59 |c|%∆Gym Ldr Alcor∆|months of no responsibilities
+23:50:01 |c|%∆Gym Ldr Alcor∆|parties
+23:50:02 |c|%∆Gym Ldr Alcor∆|drinking
+23:50:05 |c|%∆Gym Ldr Alcor∆|sleeping in
+23:50:06 |c|%∆Gym Ldr. You∆|gaming xD
+23:50:29 |c|%∆Gym Ldr. You∆|using up all the monthly internet usage
+23:56:48 |c|~∆Champiön Nöah∆|tfw graduated from school
+23:57:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1

@@ -1,0 +1,1710 @@
+06:45:30 NEW CHATROOM: lobby
+06:45:49 |J| Bogman
+06:46:02 |J|@∆Fröntier∆Blade☯
+06:46:02 |N|@∆Fröntier∆Blade☯|frntierblade
+06:46:03 |J|&∆Frontier Asch∆
+06:46:03 |N|&∆Frontier Asch∆|frontierasch
+06:46:07 |c|&∆Frontier Asch∆|3sty
+06:46:11 |c|@∆Fröntier∆Blade☯|Good job Silvy you made a syntax error
+06:46:24 |c|&∆Frontier Asch∆|gosh did he turn the server into a calculator
+06:46:30 |J|&E4 Silvy
+06:46:30 |N|&E4 Silvy|e4silvy
+06:46:58 |c|&E4 Silvy|Oh
+06:46:58 |c|&E4 Silvy|Where
+06:47:01 |N|&∆E4 Silvy∆|e4silvy
+06:47:01 |N|&∆E4 Silvy∆|e4silvy
+06:47:03 |J|%∆Gym Ldr. You∆
+06:47:03 |N|%∆Gym Ldr. You∆|gymldryou
+06:47:08 |L| ∆Gym Ldr. You∆
+06:47:08 |c|&∆E4 Silvy∆|@Blade
+06:47:13 |J| ∆Gym Ldr. You∆
+06:47:13 |N|%∆Gym Ldr. You∆|gymldryou
+06:47:14 |J|~FrontierHead Risu
+06:47:14 |N|~FrontierHead Risu|frontierheadrisu
+06:47:22 |c|&∆E4 Silvy∆|And Asch, I always do that
+06:47:25 |N|~FrontierHead∆Risu|frontierheadrisu
+06:47:25 |N|~FrontierHead∆Risu|frontierheadrisu
+06:47:30 |L| ∆Gym Ldr. You∆
+06:47:34 |c|&∆E4 Silvy∆|!eval 60 + 9
+06:47:34 ||<< 69
+06:47:35 |c|&∆E4 Silvy∆|:P
+06:47:36 |J| ∆Gym Ldr. You∆
+06:47:36 |N|%∆Gym Ldr. You∆|gymldryou
+06:48:58 |c|@∆Fröntier∆Blade☯|!eval 2^4 - 8 + (30 + 1)
+06:48:58 ||<< 25
+06:49:05 |c|@∆Fröntier∆Blade☯|NOAH AND RISU BOI
+06:49:12 |c|@∆Fröntier∆Blade☯|WE HAVE A CALCULATOR LMAO
+06:49:16 |c|~FrontierHead∆Risu|why do we need that
+06:49:20 |c|@∆Fröntier∆Blade☯|Maybe Risu cant use it
+06:49:23 |c|@∆Fröntier∆Blade☯|try using eval
+06:49:25 |c|~FrontierHead∆Risu|wont that just use memory
+06:49:26 |c|@∆Fröntier∆Blade☯|I think you cant
+06:49:37 |c|~FrontierHead∆Risu|nope
+06:49:40 |c|@∆Fröntier∆Blade☯|battles use more calculations
+06:49:43 |L| ∆Gym Ldr. You∆
+06:49:46 |c|@∆Fröntier∆Blade☯|eval is a mod command
+06:49:46 |c|~FrontierHead∆Risu|access denied
+06:49:52 |c|&∆E4 Silvy∆|Ye you can't lol
+06:50:03 |c|@∆Fröntier∆Blade☯|it access the core system basic built in features of the VPS
+06:50:04 |c|&∆E4 Silvy∆|If I ever get the chance, I'll make a calculator command
+06:50:16 |c|~FrontierHead∆Risu|every comp has a calc in it
+06:50:18 |c|@∆Fröntier∆Blade☯|I know noah needs a calculator from time to time
+06:50:23 |c|~FrontierHead∆Risu|theres no need for one
+06:50:23 |c|@∆Fröntier∆Blade☯|and he doesnt open his calc
+06:50:25 |c|@∆Fröntier∆Blade☯|so I'll tell him
+06:50:34 |J| ∆Gym Ldr. You∆
+06:50:34 |N|%∆Gym Ldr. You∆|gymldryou
+06:50:35 |c|~FrontierHead∆Risu|my calc was a default hotkey
+06:50:49 |c|~FrontierHead∆Risu|function button and numpad enter
+06:50:51 |c|&∆E4 Silvy∆|Risu, everyone has PS open here
+06:50:51 |c|&∆E4 Silvy∆|I don't know if anyone always has their laptop calculators open
+06:50:52 |c|&∆E4 Silvy∆|:P
+06:51:02 |c|&∆E4 Silvy∆|*I don't know anyone who
+06:51:03 |c|~FrontierHead∆Risu|its not hard to open
+06:51:08 |c|&∆E4 Silvy∆|#2Lazy
+06:51:23 |c|~FrontierHead∆Risu|and the rare times u need to calc u dont need to ask the server to do it for you
+06:51:32 |c|~FrontierHead∆Risu|anyway, back to code learning
+06:51:32 |c|&∆E4 Silvy∆|Well
+06:51:36 |c|&∆E4 Silvy∆|Oh
+06:51:38 |c|&∆E4 Silvy∆|Which code?
+06:51:47 |c|@∆Fröntier∆Blade☯|HTML5
+06:51:47 |c|~FrontierHead∆Risu|html5 and css
+06:51:51 |c|&∆E4 Silvy∆|Neato
+06:51:51 |J|~?Champiön Nöah?
+06:51:51 |N|~?Champiön Nöah?|champinnah
+06:51:54 |L| ∆Gym Ldr. You∆
+06:51:54 |c|@∆Fröntier∆Blade☯|Ooooo CSS
+06:51:58 |c|~FrontierHead∆Risu|ye wanna help out more
+06:52:01 |c|@∆Fröntier∆Blade☯|I havent been bothered yet
+06:52:01 |c|&∆E4 Silvy∆|Uh
+06:52:03 |c|&∆E4 Silvy∆|lol
+06:52:06 |c|&∆E4 Silvy∆|Css is ez
+06:52:07 |c|@∆Fröntier∆Blade☯|but css makes things look really nice
+06:52:13 |c|&∆E4 Silvy∆|CSS3 keyframes are annoying though
+06:52:13 |N|~Champiön Nöah|champinnah
+06:52:13 |N|~Champiön Nöah|champinnah
+06:52:15 |N|~∆Champiön Nöah∆|champinnah
+06:52:15 |N|~∆Champiön Nöah∆|champinnah
+06:52:18 |c|&∆E4 Silvy∆|And the worst part is
+06:52:21 |J|+SoraHeat
+06:52:21 |c|~FrontierHead∆Risu|css is all done in a separate tab
+06:52:22 |c|@∆Fröntier∆Blade☯|maybe risu you can give the server a new look after you learn css
+06:52:23 |c|&∆E4 Silvy∆|Not even stylish supports keyframes
+06:52:37 |c|&∆E4 Silvy∆|>implying I couldn't have done that
+06:52:39 |J|%Gym Ldr Alcor
+06:52:39 |N|%Gym Ldr Alcor|gymldralcor
+06:52:40 |c|&∆E4 Silvy∆|Hue
+06:52:48 |c|~FrontierHead∆Risu|and as long as you have grouped all the div's by name its pretty easy to css
+06:52:57 |J| ∆Gym Ldr. You∆
+06:52:57 |N|%∆Gym Ldr. You∆|gymldryou
+06:53:02 |c|~FrontierHead∆Risu|as im finding
+06:53:02 |c|&∆Frontier Asch∆|risu u da bes keep it up
+06:53:08 |c|&∆E4 Silvy∆|^
+06:53:10 |c|&∆E4 Silvy∆|Tru
+06:53:11 |c|@∆Fröntier∆Blade☯|tfw it has been one night
+06:53:13 |c|~FrontierHead∆Risu|tnx a tn ba
+06:53:17 |c|@∆Fröntier∆Blade☯|and risu knows more css then me
+06:53:18 |c|~FrontierHead∆Risu|more like one hour
+06:53:21 |L| ∆Gym Ldr. You∆
+06:53:28 |J| ∆Gym Ldr. You∆
+06:53:28 |N|%∆Gym Ldr. You∆|gymldryou
+06:53:40 |c|&∆E4 Silvy∆|Which site are you learning from, Risu?
+06:53:45 |c|~FrontierHead∆Risu|codeac
+06:53:51 |c|&∆E4 Silvy∆|Oh
+06:53:57 |c|&∆E4 Silvy∆|Okay then
+06:54:00 |c|&∆E4 Silvy∆|If you ever need a reference
+06:54:01 |c|&∆E4 Silvy∆|https://developer.mozilla.org/en/docs/Web/CSS/CSS3
+06:54:02 |c|~FrontierHead∆Risu|codecademy
+06:54:07 |c|&∆E4 Silvy∆|MDN is better than w3schools
+06:54:19 |c|~FrontierHead∆Risu|well start with the basics and work my way up
+06:55:01 |c|~FrontierHead∆Risu|so far all this is is telling you what each thing does and then makes up build the site we use to look at ourselfs in little steps
+06:55:03 |J|@Frontier Meows
+06:55:03 |N|@Frontier Meows|frontiermeows
+06:55:17 |c|&∆E4 Silvy∆|lol
+06:55:23 |c|@∆Fröntier∆Blade☯|Yeah I like codecademy cause it has the thing on the right where you can practise
+06:55:27 |c|&∆E4 Silvy∆|I get bored of codeacademy really soon
+06:55:30 |userstats|total:11|guests:1| :2|+:1|$:0|%:2|@:2|★:0|#:0|&:2|~:2
+06:55:39 |c|@∆Fröntier∆Blade☯|good for basic starters I believe
+06:55:44 |c|@∆Fröntier∆Blade☯|fast way to learn
+06:55:45 |c|&∆E4 Silvy∆|I tried the codeacademy javascript course
+06:55:50 |c|&∆E4 Silvy∆|Got bored after 7% lol
+06:55:51 |J| Alliance Meta
+06:55:54 |L| Alliance Meta
+06:55:58 |c|&∆E4 Silvy∆|And the first lesson was just substrings
+06:56:02 |N|@∆Frontier Meows∆|frontiermeows
+06:56:02 |N|@∆Frontier Meows∆|frontiermeows
+06:56:08 |J| Alliance Meta
+06:56:36 |raw|<div class="broadcast-blue"><b>Moderated chat was disabled!</b><br />Anyone may talk now.</div>
+06:56:40 |c| Alliance Meta|hi
+06:56:42 |c|&∆E4 Silvy∆|Hayyy
+06:56:43 |c|@∆Frontier Meows∆|Risu
+06:56:45 |c|%∆Gym Ldr. You∆|Hi
+06:56:45 |N|%∆Gym Ldr Alcor∆|gymldralcor
+06:56:45 |N|%∆Gym Ldr Alcor∆|gymldralcor
+06:56:46 |c|%∆Gym Ldr Alcor∆|?
+06:56:48 |c|~FrontierHead∆Risu|yo
+06:56:49 |c|@∆Frontier Meows∆|Is the tier OU
+06:56:50 |c|%∆Gym Ldr Alcor∆|damnit
+06:56:55 |c|~FrontierHead∆Risu|guy the tier is a tier
+06:56:57 |c|%∆Gym Ldr Alcor∆|hows everyone doing?
+06:57:00 |c|@∆Frontier Meows∆|??????
+06:57:02 |c|@∆Frontier Meows∆|What
+06:57:04 |c|~FrontierHead∆Risu|its a tier
+06:57:13 |c| Alliance Meta|anyone wants to battle?
+06:57:13 |c|@∆Frontier Meows∆|Link pl0x
+06:57:15 |c|%∆Gym Ldr. You∆|Search it up meows
+06:57:17 |c|~FrontierHead∆Risu|ive just added the rule o no sclad
+06:57:23 |c|~FrontierHead∆Risu|google.com
+06:57:32 |c|@∆Frontier Meows∆|I'm on phone can't switch tabs
+06:58:03 |c|~FrontierHead∆Risu|then how is me giving u a link going to help
+06:58:20 |c|~FrontierHead∆Risu|!dt protect
+06:58:20 |c|~|/data-move Protect
+|raw|<font size="1"><font color=#585858>Priority:</font> 4&nbsp;|&ThickSpace;<font color=#585858>Gen:</font> 2&nbsp;|&ThickSpace;<font color=#585858>Target:</font> User</font>
+06:58:23 |c|@∆Frontier Meows∆|Actually good point
+06:58:32 |c|~FrontierHead∆Risu|any move with that status symbol is unuseable
+06:58:42 |c|~FrontierHead∆Risu|the yin yang symbol
+06:58:46 |c|@∆Frontier Meows∆|Oh fuck
+06:58:52 |c|%∆Gym Ldr. You∆|Detect protect combo
+06:58:56 |c|%∆Gym Ldr. You∆|Ultimate stall
+06:59:01 |c|@∆Frontier Meows∆|Das bullshit bruh
+06:59:04 |L| Alliance Meta
+06:59:06 |c|~FrontierHead∆Risu|and im making scald fuck off too
+06:59:20 |c|~FrontierHead∆Risu|cause i can
+06:59:25 |J| Alliance Meta
+06:59:27 |c|~FrontierHead∆Risu|and no one likes scald anyway
+07:00:12 |J|%Gym Ldr Arjunb
+07:00:12 |N|%Gym Ldr Arjunb|gymldrarjunb
+07:00:22 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+07:00:22 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+07:00:24 |c|@∆Frontier Meows∆|I can't BP boosts too goddammit
+07:00:33 |L| Alliance Meta
+07:00:36 |c|~FrontierHead∆Risu|'set background color to #f7f7f7'
+07:00:40 |J| Alliance Meta
+07:00:40 |c|~FrontierHead∆Risu|cloud confirmed
+07:00:55 |c|%∆Gym Ldr Alcor∆|is anyone else lagging as well?
+07:01:04 |c|%∆Gym Ldr Alcor∆|cause meta is and i am a tad too
+07:01:18 |c|@∆Frontier Meows∆|Who's meta
+07:01:32 |c|~FrontierHead∆Risu|lag is 99% of the time on the users end
+07:01:32 |L| ∆Gym Ldr. You∆
+07:01:35 |c|@∆Frontier Meows∆|Oh it's dat visitor
+07:01:37 |J| ∆Gym Ldr. You∆
+07:01:37 |N|%∆Gym Ldr. You∆|gymldryou
+07:01:48 |L| ∆Gym Ldr. You∆
+07:01:55 |J| ∆Gym Ldr. You∆
+07:01:55 |N|%∆Gym Ldr. You∆|gymldryou
+07:01:58 |L| Alliance Meta
+07:01:59 |c|@∆Fröntier∆Blade☯|Clarified the intro for you Risu
+07:02:01 |L| ∆Gym Ldr. You∆
+07:02:07 |J| ∆Gym Ldr. You∆
+07:02:07 |N|%∆Gym Ldr. You∆|gymldryou
+07:02:13 |N|~FrontierHead∆Risu|frontierheadrisu
+07:02:21 |c|~FrontierHead∆Risu|thanks 
+07:02:46 |c|@∆Frontier Meows∆|You''re welcome
+07:03:11 |c|%∆Gym Ldr. You∆|So much lag =P
+07:03:11 |c|@∆Frontier Meows∆|Risu can I not participate tho
+07:03:20 |c|@∆Fröntier∆Blade☯|Hmm should I participate
+07:03:29 |c|@∆Fröntier∆Blade☯|~~or go back to gym ldrs~~
+07:03:38 |c|%∆Gym Ldr Arjunb∆|Participate in?
+07:03:41 |c|@∆Fröntier∆Blade☯|spoiler: leaning to second option more atm
+07:03:44 |c|~FrontierHead∆Risu|is your reason something that doesnt include 'i dont feel like trying a new tier'
+07:03:54 |c|@∆Fröntier∆Blade☯|Nah
+07:03:55 |c|@∆Frontier Meows∆|I don't really want EFrontier
+07:03:58 |c|@∆Fröntier∆Blade☯|I want challengers
+07:04:05 |J| Alliance Meta
+07:04:06 |c|@∆Fröntier∆Blade☯|I've been Efrontier two times now
+07:04:09 |c|@∆Frontier Meows∆|Like I really like my spot now
+07:04:22 |c|~FrontierHead∆Risu|well alot with winning the tour you get immunity from being challegned by the next winner of the frontier promo
+07:04:27 |c|~FrontierHead∆Risu|along*
+07:04:33 |c|@∆Fröntier∆Blade☯|Frontier is a great place to rest if your life is running 100000km/h
+07:04:39 |c|@∆Fröntier∆Blade☯|but once it all calms down
+07:04:41 |c|@∆Frontier Meows∆|I don't mind being challenged tho
+07:04:43 |c|@∆Fröntier∆Blade☯|I need to demolish some scrubs
+07:04:51 |c|@∆Frontier Meows∆|I'll just smash them into pieces
+07:04:55 |c|%∆Gym Ldr Arjunb∆|M/s>km/h
+07:05:01 |c|~FrontierHead∆Risu|so basically u two are telling me that one battle between arth and remy is all im gonna get
+07:05:02 |c|@∆Fröntier∆Blade☯|you mean
+07:05:06 |c|@∆Fröntier∆Blade☯|km/s arjun
+07:05:08 |c|%∆Gym Ldr Alcor∆|miles are longer than kilometres
+07:05:09 |c|@∆Fröntier∆Blade☯|do you even
+07:05:09 |c|@∆Frontier Meows∆|Maybeeee
+07:05:10 |c|@∆Fröntier∆Blade☯|sanic
+07:05:20 |c|%∆Gym Ldr Alcor∆|murica be like
+07:05:23 |J| Genocide Sans
+07:05:25 |c|%∆Gym Ldr. You∆|Sanic the azumarill
+07:05:27 |c|@∆Frontier Meows∆|Ew miles
+07:05:30 |userstats|total:13|guests:0| :3|+:1|$:0|%:3|@:2|★:0|#:0|&:2|~:2
+07:05:32 |c|~FrontierHead∆Risu|100km/h is 27.78 m/s
+07:05:38 |c|~FrontierHead∆Risu|year 10 physics
+07:05:41 |c|@∆Frontier Meows∆|Lmao
+07:05:42 |c|%∆Gym Ldr Alcor∆|1 mile = 1.6 km
+07:05:46 |c|%∆Gym Ldr Alcor∆|the fuck are you on rice?
+07:05:53 |c|@∆Fröntier∆Blade☯|fuck imperial system
+07:05:56 |c|~FrontierHead∆Risu|m/s is metres per second u idiots
+07:05:56 |c|@∆Fröntier∆Blade☯|its retarded
+07:06:03 |c|@∆Frontier Meows∆|Ikr
+07:06:03 |c|@∆Fröntier∆Blade☯|yes we metric people can convert easy
+07:06:09 |c|@∆Fröntier∆Blade☯|but
+07:06:10 |c| Genocide Sans|imperial is really dumb
+07:06:18 |c|@∆Frontier Meows∆|They have foot and what boys
+07:06:20 |c|~FrontierHead∆Risu|why are u talking about miles when he said m/s
+07:06:21 |c|@∆Fröntier∆Blade☯|americans cant convert to metric
+07:06:21 |c|@∆Frontier Meows∆|*not
+07:06:30 |c|@∆Fröntier∆Blade☯|yeah arjun abd leaf
+07:06:35 |c|@∆Fröntier∆Blade☯|I said m/s
+07:06:35 |c|@∆Frontier Meows∆|Do they use fingers too
+07:06:39 |c|@∆Fröntier∆Blade☯|nothing with miles
+07:06:49 |L| Alliance Meta
+07:06:52 |c|~FrontierHead∆Risu|arjun didnt say miles
+07:06:55 |c|~FrontierHead∆Risu|only leaf did
+07:07:02 |c|%∆Gym Ldr Arjunb∆|If the magnitude is the same umm
+07:07:08 |J|%gasp
+07:07:08 |N|%gasp|gasp
+07:07:09 |c|~FrontierHead∆Risu|leaf just cant physics clearly
+07:07:21 |c|%∆Gym Ldr Arjunb∆|Yeh I meant meter
+07:07:24 |c| Genocide Sans|leaf is too american
+07:07:27 |c| Genocide Sans|for his own good
+07:07:31 |c|%∆Gym Ldr Alcor∆|i am a bit
+07:07:32 |c|@∆Frontier Meows∆|In Leaf's defence he said M/s not m/s
+07:07:37 |c|%∆Gym Ldr Alcor∆|watched way too much american tv as a kid
+07:07:45 |c|%∆Gym Ldr Alcor∆|now people think im canadian bc of my 'accent'
+07:07:52 |c| Genocide Sans|lmao
+07:07:59 |c|~FrontierHead∆Risu|no one uses miles per second as a measurement
+07:08:02 |c|%∆Gym Ldr Arjunb∆|I always caps the first letter
+07:08:08 |c|@∆Frontier Meows∆|I remember missing A for a paper cause I wrote M/s instead of m/s
+07:08:13 |c|%∆Gym Ldr Arjunb∆|Sorry to create cobfusiob
+07:08:22 |c| Genocide Sans|cobfusion
+07:08:27 |c| Genocide Sans|the fusing of corn
+07:08:30 |c|%∆Gym Ldr Arjunb∆|^
+07:08:54 |c|@∆Frontier Meows∆|Gaiz I took the wrong bus oml
+07:08:59 |raw|-- <b><font color="#000000">∆Gym Ldr Arjunb∆</font></b> is now away. 
+07:08:59 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+07:08:59 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+07:08:59 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+07:09:10 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|Sstudy
+07:09:14 |c|@∆Frontier Meows∆|I'm now heading to some place that doesn't even have lights
+07:09:21 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|Im busy these days
+07:09:21 |c| Genocide Sans|idiot
+07:09:23 |c|%∆Gym Ldr. You∆|Rip meows
+07:09:24 |c|@∆Frontier Meows∆|I don't wanna get raped ;-;
+07:09:32 |c| Genocide Sans|you deserve it
+07:09:40 |c|%∆Gym Ldr. You∆|Use a focus sash meows
+07:09:55 |c|%∆Gym Ldr Alcor∆|maybe the speed of light uses miles per second
+07:09:56 |c|@∆Frontier Meows∆|Thank god this bus still goes to my house
+07:09:56 |c|%∆Gym Ldr Alcor∆|god rice
+07:10:00 |c|%∆Gym Ldr Alcor∆|you dont know everyone
+07:10:03 |c|~FrontierHead∆Risu|umm
+07:10:04 |c|%∆Gym Ldr Alcor∆|judgmental much?
+07:10:04 |c|~FrontierHead∆Risu|come again
+07:10:13 |c|@∆Frontier Meows∆|They don't?
+07:10:14 |c|%∆Gym Ldr Alcor∆|silver
+07:10:19 |c|~FrontierHead∆Risu|i dont understand what you just said to me
+07:10:21 |c|&∆E4 Silvy∆|Yeah?
+07:10:22 |c|%∆Gym Ldr Alcor∆|talk to risu for me
+07:10:24 |c|%∆Gym Ldr. You∆|Meows - use a choice scarf!
+07:10:25 |c|@∆Frontier Meows∆|I SEE LIGHTS
+07:10:30 |c|%∆Gym Ldr. You∆|Itll make you go fast
+07:10:30 |c|~FrontierHead∆Risu|i __do__ know everything
+07:10:33 |c|@∆Frontier Meows∆|IM HEADING TO HUMANITY
+07:10:38 |c| Genocide Sans|leaf
+07:10:41 |c| Genocide Sans|the speed of light
+07:10:44 |c| Genocide Sans|uses lightyears
+07:10:47 |c|%∆Gym Ldr Alcor∆|ik
+07:10:48 |c| Genocide Sans|duh
+07:10:51 |c|%∆Gym Ldr Alcor∆|but if you really wanted to
+07:10:52 |c|@∆Frontier Meows∆|God thank lord  I stay in Singapore
+07:10:55 |c|%∆Gym Ldr Alcor∆|you could use a smaller measurement
+07:11:06 |c|&∆E4 Silvy∆|speed of light in miles per second = 186282
+07:11:10 |c|~FrontierHead∆Risu|and no, its metres per second leaf
+07:11:12 |c|@∆Frontier Meows∆|Miles???????????
+07:11:16 |c|%∆Gym Ldr Alcor∆|for instance i can move much faster than this but if i really wanted to i could measure my running speed in metres per hour
+07:11:18 |c|@∆Frontier Meows∆|Why miles??????
+07:11:22 |c| Genocide Sans|miles is mi
+07:11:23 |c| Genocide Sans|not m
+07:11:27 |c|%∆Gym Ldr Alcor∆|bc im eccentric meowsie :D
+07:11:27 |c|~FrontierHead∆Risu|its approx to 300,000,000 metres per second in school
+07:11:28 |c|&∆E4 Silvy∆|Speed of light in metres per second = 3 x 10^8
+07:11:31 |c|@∆Frontier Meows∆|No one uses the imperial system in physics
+07:11:35 |c|&∆E4 Silvy∆|^
+07:11:36 |c|&∆E4 Silvy∆|True
+07:11:39 |c|&∆E4 Silvy∆|Plus, you SHOULDN'T
+07:11:41 |c|~FrontierHead∆Risu|its actually like 2.7 x 10^8
+07:11:42 |c| Genocide Sans|not even americans do
+07:11:47 |c|&∆E4 Silvy∆|The imperial system sucks
+07:11:48 |c|&∆E4 Silvy∆|imo
+07:11:56 |c|@∆Frontier Meows∆|Sucks more than Silvy
+07:12:16 |c|~FrontierHead∆Risu|63% done hype
+07:12:16 |c|&∆E4 Silvy∆|Meows
+07:12:25 |c|&∆E4 Silvy∆|What happens in the bed
+07:12:26 |c|&∆E4 Silvy∆|Stays in the bed
+07:12:31 |c|@∆Frontier Meows∆|????????
+07:12:31 |c|&∆E4 Silvy∆|__understood?__
+07:12:34 |c|%∆Gym Ldr Alcor∆|so has there been an exact release date for the cloud patch rice?
+07:12:36 |c|@∆Frontier Meows∆|I'm a virgin?????
+07:12:37 |c|&∆E4 Silvy∆|Hue
+07:12:41 |c|%∆Gym Ldr Alcor∆|cause i wanna buster sword a bitch
+07:12:46 |c|&∆E4 Silvy∆|Lies, Meows
+07:12:47 |c|&∆E4 Silvy∆|LIES
+07:12:51 |c|%∆Gym Ldr Alcor∆|your right silver
+07:12:53 |c|~FrontierHead∆Risu|no there hasnt
+07:12:54 |c|%∆Gym Ldr Alcor∆|sleep does stay in the bed
+07:12:57 |c|%∆Gym Ldr Alcor∆|where it should
+07:13:01 |c|~FrontierHead∆Risu|but itll be after the december announcement
+07:13:03 |c|@∆Frontier Meows∆|I don't even watch porn??????
+07:13:05 |c|%∆Gym Ldr Alcor∆|well there and long car rides
+07:13:06 |c|%∆Gym Ldr Alcor∆|oh
+07:13:10 |c|%∆Gym Ldr Alcor∆|we have to wait till december
+07:13:11 |c|~FrontierHead∆Risu|like right after it finsihes
+07:13:12 |c|%∆Gym Ldr Alcor∆|gdi
+07:13:14 |c|&∆E4 Silvy∆|Nah Alcor, my bed's for anime and chill
+07:13:15 |c|&∆E4 Silvy∆|<3
+07:13:23 |c|@∆Frontier Meows∆|The only thing closest to pporn that I watch is like abs
+07:13:25 |c|%∆Gym Ldr Alcor∆|there was no chill ._.
+07:13:25 |c|~FrontierHead∆Risu|how the roy ryu lucas one happened
+07:13:39 |c|%∆Gym Ldr Alcor∆|abs is literally just fit people not wearing shirts meows
+07:13:50 |c|@∆Frontier Meows∆|I know
+07:14:04 |c|&∆Frontier Asch∆|blade
+07:14:11 |c|&∆Frontier Asch∆|will tilepuzzle ever receive new puzzles
+07:14:11 |c|&∆E4 Silvy∆|[17:43] @∆Frontier Meows∆: The only thing closest to pporn that I watch is like abs
+07:14:12 |c|&∆E4 Silvy∆|The closest thing to porn you watch is yourself in the mirror
+07:14:14 |c|&∆E4 Silvy∆|Hue
+07:14:23 |c|@∆Frontier Meows∆|IM NEAR A YATCH CLUB
+07:14:28 |c|%∆Gym Ldr Alcor∆|meows isnt a greek myth
+07:14:30 |c|@∆Frontier Meows∆|HUMANITY!!!!
+07:14:31 |c|&∆Frontier Asch∆|>yatch
+07:14:35 |c|%∆Gym Ldr Alcor∆|he isnt going to fall in love with himself and drown
+07:14:39 |c|@∆Frontier Meows∆|AND I SEE PEOPLE
+07:14:45 |c|%∆Gym Ldr. You∆|Yay
+07:14:51 |c|@∆Frontier Meows∆|God this bus ride is long
+07:14:58 |c|&∆E4 Silvy∆|Like my dongers ;)
+07:15:01 |c|&∆E4 Silvy∆|I mean
+07:15:02 |c|&∆E4 Silvy∆|wat
+07:15:03 |c|@∆Frontier Meows∆|I've been on the bus for like 30 minutes
+07:15:08 |c|@∆Frontier Meows∆|And I'm still not there
+07:15:30 |userstats|total:13|guests:0| :2|+:1|$:0|%:4|@:2|★:0|#:0|&:2|~:2
+07:15:48 |c|@∆Frontier Meows∆|Test
+07:16:13 |c|@∆Frontier Meows∆|Any challengers at 8 badges and haven't touched frontier?
+07:16:27 |c| Genocide Sans|I'm at 7 badges
+07:16:32 |c|%∆Gym Ldr. You∆|Bk is at 7
+07:16:43 |c|@∆Frontier Meows∆|Bleh
+07:16:57 |c|@∆Frontier Meows∆|Is BK coming back to get the last one
+07:17:03 |c|%∆Gym Ldr. You∆|Yeh
+07:17:12 |c|@∆Frontier Meows∆|I haven't seen him in a while
+07:17:22 |c|%∆Gym Ldr. You∆|Its peak assessment period, so we are busy =P
+07:17:25 |c|@∆Frontier Meows∆|Ooooooooo when is he coming back
+07:17:33 |c|@∆Frontier Meows∆|Ah understandable
+07:17:40 |c|%∆Gym Ldr. You∆|XD
+07:17:59 |c|%∆Gym Ldr. You∆|20 min speech due tuesday
+07:18:15 |c|@∆Frontier Meows∆|I have this huge ass pimple and it's disgusting
+07:18:16 |c|@∆Frontier Meows∆|Halp
+07:18:47 |c|%∆Gym Ldr. You∆|Also meows
+07:18:51 |c|@∆Frontier Meows∆|Ye?
+07:19:04 |c|%∆Gym Ldr. You∆|I am still debating cha
+07:19:11 |c|@∆Frontier Meows∆|Huh what
+07:19:13 |c|%∆Gym Ldr. You∆|Challenging again*
+07:19:13 |c|%∆Gym Ldr Alcor∆|hey meows you levelled up
+07:19:21 |c|@∆Frontier Meows∆|Oh nice You
+07:19:27 |c|@∆Frontier Meows∆|YAYYYYY I LEVELLED UP
+07:19:30 |c|@∆Frontier Meows∆|^.^
+07:19:38 |c|%∆Gym Ldr Alcor∆|just kidding you died
+07:19:41 |c|%∆Gym Ldr. You∆|I would if i wernt for the 3 leaves only thing
+07:19:46 |c|@∆Frontier Meows∆|oh 
+07:19:51 |c|@∆Frontier Meows∆|rip
+07:19:54 |c|%∆Gym Ldr Alcor∆|nah you did level up im just playing ya
+07:19:59 |c|@∆Frontier Meows∆|YAYYYYY
+07:20:03 |c|@∆Frontier Meows∆|^.^
+07:20:07 |c|%∆Gym Ldr. You∆|Thats thing im scared of ):
+07:20:33 |c|@∆Frontier Meows∆|Guys I'm starting to see traffic lights
+07:21:22 |c|@∆Frontier Meows∆|Hey it's gasp
+07:21:34 |c|@∆Frontier Meows∆|Hey gasp
+07:22:09 |L| ∆Frontier Meows∆
+07:23:11 |L| ∆Gym Ldr. You∆
+07:24:15 |c|%gasp|hello
+07:24:50 |J|@∆Frontier Zachary∆
+07:24:50 |N|@∆Frontier Zachary∆|frontierzachary
+07:25:30 |userstats|total:12|guests:0| :2|+:1|$:0|%:3|@:2|★:0|#:0|&:2|~:2
+07:25:41 |c|@∆Frontier Zachary∆|HIHI MINNA SAN~
+07:25:49 |c|@∆Frontier Zachary∆|how is evry 1
+07:25:55 |c|@∆Frontier Zachary∆|noah what happened to le locke
+07:25:58 |c|@∆Frontier Zachary∆|did u give up
+07:26:00 |c|%∆Gym Ldr Alcor∆|im level grinding herb
+07:26:04 |c|%∆Gym Ldr Alcor∆|you?
+07:26:15 |c|@∆Frontier Zachary∆|almost done grinding every mofo to level 50
+07:26:26 |c|@∆Frontier Zachary∆|leaving alcor the empoleon and tempest the zapdos at lvl 48 or 46
+07:26:43 |c|%∆Gym Ldr Alcor∆|so how come me and tempest are getting the shaft with levels?
+07:26:58 |c|@∆Frontier Zachary∆|coz you guys are stronger
+07:27:03 |c|%∆Gym Ldr Alcor∆|fair enough
+07:27:08 |c|@∆Frontier Zachary∆|which by the way is already not the case with empoleon
+07:27:12 |c|@∆Frontier Zachary∆|now you only have water moves
+07:27:48 |c|@∆Frontier Zachary∆|which is an disadvantage with wild kingdras and brelooms
+07:28:15 |J|&E4 Terror
+07:28:15 |N|&E4 Terror|e4terror
+07:28:48 |c|@∆Fröntier∆Blade☯|taglest
+07:29:01 |c|@∆Fröntier∆Blade☯|Noah Boi
+07:29:06 |c|@∆Fröntier∆Blade☯|!eval 1 + 1
+07:29:06 ||<< 2
+07:29:13 |c|@∆Fröntier∆Blade☯|calculator exist for you
+07:29:17 |c|@∆Fröntier∆Blade☯|do /eval
+07:29:20 |c|@∆Fröntier∆Blade☯|and type equation
+07:29:29 |c|@∆Fröntier∆Blade☯|it can do complicated shizzles like powers and surds
+07:29:29 |c|~∆Champiön Nöah∆|cool
+07:29:37 |c|~∆Champiön Nöah∆|I got a Wii U zach
+07:29:41 |c|~∆Champiön Nöah∆|That's what happened to it
+07:29:44 |c|@∆Frontier Zachary∆|oh
+07:29:45 |c|@∆Frontier Zachary∆|rip
+07:30:12 |c|@∆Fröntier∆Blade☯|splatoon or smash atm?
+07:30:17 |c|@∆Fröntier∆Blade☯|and fallout
+07:30:18 |J| ∆Gym Ldr. You∆
+07:30:18 |N|%∆Gym Ldr. You∆|gymldryou
+07:30:21 |c|@∆Fröntier∆Blade☯|AAAAaaaaaaaa
+07:30:23 |c|@∆Fröntier∆Blade☯|game season
+07:30:24 |c|%∆Gym Ldr Alcor∆|what games you got noah?
+07:30:26 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|Damn it
+07:30:30 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|Out of cofee
+07:30:51 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|C you guys later
+07:30:56 |L| ∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+07:31:53 |c|@∆Fröntier∆Blade☯|Leaf he got Splatoon and Smash 4
+07:31:59 |c|%∆Gym Ldr Alcor∆|god damn
+07:32:00 |c|%∆Gym Ldr Alcor∆|nice
+07:32:11 |c|%∆Gym Ldr Alcor∆|so i guess he has mewtwo now too
+07:32:12 |c|@∆Fröntier∆Blade☯|I'm gonna wait for the black friday combo
+07:32:18 |c|@∆Fröntier∆Blade☯|splatoon and smash 4 preinstalled
+07:32:38 |c|%∆Gym Ldr Alcor∆|you are a patient man blade
+07:33:12 |c|%∆Gym Ldr Alcor∆|only a few levels till herb and igmeowsius evolve
+07:33:41 |raw|-- <b><font color="#000000">∆Fröntier∆Blade☯</font></b> is now busy.  (games)
+07:33:41 |N|@∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|frntierblade
+07:33:41 |N|@∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|frntierblade
+07:33:41 |N|@∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|frntierblade
+07:35:30 |userstats|total:13|guests:0| :2|+:1|$:0|%:3|@:2|★:0|#:0|&:3|~:2
+07:36:10 |c|%∆Gym Ldr Alcor∆|who wants to see my semi viable nuzlocke team?
+07:36:16 |c|%∆Gym Ldr. You∆|Me
+07:36:17 |c|@∆Frontier Zachary∆|i wanna i wanna
+07:36:30 |c|%∆Gym Ldr Alcor∆|aight gimme a sec to heal
+07:36:54 |c|%∆Gym Ldr Alcor∆|http://prntscr.com/9447gr
+07:37:49 |c|%∆Gym Ldr Alcor∆|i also have a pc box graveyard for my ded companions
+07:37:52 |c|%∆Gym Ldr Alcor∆|rip canonfodder
+07:37:57 |c|%∆Gym Ldr Alcor∆|cnonfodder*
+07:39:44 |c|%∆Gym Ldr Alcor∆|hey i found snek
+07:39:53 |c|%∆Gym Ldr Alcor∆|but already caught a poke here so i gotta murder him
+07:42:05 |J|%∆Gym Ldr. WF∆
+07:42:05 |N|%∆Gym Ldr. WF∆|gymldrwf
+07:42:24 |L| SoraHeat
+07:42:42 |c|%∆Gym Ldr. WF∆|hai guys back from a Smash Fest
+07:42:53 |c|~FrontierHead∆Risu|nioce
+07:42:56 |c|%∆Gym Ldr Alcor∆|how'd it go core?
+07:43:00 |c|%∆Gym Ldr Alcor∆|do you feel enlightened?
+07:43:08 |c|%∆Gym Ldr. WF∆|It felt great
+07:43:11 |c|%∆Gym Ldr Alcor∆|yay .-. evolved
+07:43:18 |c|%∆Gym Ldr Alcor∆|core has transcended humanity
+07:43:19 |c|%∆Gym Ldr. WF∆|I landed a Falcon Punch twice
+07:43:21 |L| Bogman
+07:43:24 |c|%∆Gym Ldr. WF∆|in Melee that is
+07:43:28 |c|~FrontierHead∆Risu|dope
+07:43:38 |c|%∆Gym Ldr. WF∆|The people in the venue were watching
+07:43:45 |c|%∆Gym Ldr. WF∆|they were like HOLY SHIT
+07:44:07 |c|%∆Gym Ldr. WF∆|I also threw out a random B-reverse Falcon Punch
+07:44:09 |c|%∆Gym Ldr. WF∆|and somehow it landed
+07:44:13 |c|%∆Gym Ldr Alcor∆|god damn man
+07:44:15 |c|%∆Gym Ldr. WF∆|and people cheered again
+07:44:17 |c|%∆Gym Ldr Alcor∆|sounds like you had a good day
+07:44:20 |c|~FrontierHead∆Risu|so whats it like being a god
+07:44:20 |c|%∆Gym Ldr. WF∆|yeah
+07:44:20 |c|%∆Gym Ldr Alcor∆|the peoples hero
+07:44:31 |c|~FrontierHead∆Risu|did u walk up slowly though
+07:44:36 |c|~FrontierHead∆Risu|and PeoplesChamp
+07:44:42 |c|%∆Gym Ldr. WF∆|I tried
+07:44:43 |c| Genocide Sans|walk up slowly
+07:44:46 |c| Genocide Sans|and downsmash
+07:44:47 |c|~FrontierHead∆Risu|thats what counts
+07:44:49 |c|%∆Gym Ldr. WF∆|but he dodged if of course
+07:44:59 |c|~FrontierHead∆Risu|the effort is whats important
+07:45:07 |c|%∆Gym Ldr. WF∆|and in the end
+07:45:12 |c|%∆Gym Ldr. WF∆|I did a Sacred Combo
+07:45:17 |c|%∆Gym Ldr. WF∆|against a Yoshi player
+07:45:25 |c| Genocide Sans|thats not even a real combo
+07:45:26 |c|%∆Gym Ldr. WF∆|That's when I and the entire venue got hyped
+07:45:30 |userstats|total:13|guests:1| :2|+:0|$:0|%:4|@:2|★:0|#:0|&:3|~:2
+07:45:34 |c| Genocide Sans|just the opponent being bad
+07:45:42 |c|~FrontierHead∆Risu|:O
+07:45:53 |c|%∆Gym Ldr. WF∆|well the opponent was very good bro
+07:46:04 |c| Genocide Sans|was he really?
+07:46:11 |c|~FrontierHead∆Risu|NOAH
+07:46:12 |c|%∆Gym Ldr. WF∆|Genocide you can't say the opponent was bad when you actually didn't play against him
+07:46:14 |c|~FrontierHead∆Risu|GET ON
+07:46:20 |c|%∆Gym Ldr. WF∆|dude his Yoshi was pretty good
+07:46:20 |c|~FrontierHead∆Risu|CORE WENT HAM
+07:46:21 |c| Genocide Sans|compared to whom is he good?
+07:46:26 |c|%∆Gym Ldr Alcor∆|LEGIT NOAH CORE BECAME SMASH GOD
+07:46:27 |c|%∆Gym Ldr. WF∆|Compared to Amsa
+07:46:30 |c|~∆Champiön Nöah∆|hi
+07:46:34 |c|%∆Gym Ldr. WF∆|he is pretty good
+07:46:48 |c|~FrontierHead∆Risu|sacred falcon combo on a yoshi
+07:47:01 |c|~∆Champiön Nöah∆|Neat
+07:47:04 |c|%∆Gym Ldr Alcor∆|also landed two falcon punches in melee
+07:47:09 |c|~∆Champiön Nöah∆|Surprised he didn't just jump through it tbh
+07:47:24 |c|~FrontierHead∆Risu|i like how we are telling noah and not core
+07:47:24 |c|%∆Gym Ldr Alcor∆|hahahaha noah
+07:47:30 |c|%∆Gym Ldr Alcor∆|dray made a goof
+07:47:35 |c|~∆Champiön Nöah∆|I'm srs
+07:47:35 |c|%∆Gym Ldr. WF∆|One randy Falcon Punch
+07:47:37 |c|%∆Gym Ldr Alcor∆|i got a call from the bike shop
+07:47:44 |J|+ABootToTheHead
+07:47:44 |c|%∆Gym Ldr Alcor∆|even tho the mum gives the bike
+07:47:48 |c|%∆Gym Ldr. WF∆|one Falcon Punch Edgeguard
+07:47:58 |L| genocidesans
+07:48:25 |c|~∆Champiön Nöah∆|Same
+07:48:26 |c|%∆Gym Ldr Alcor∆|well we are new to the hype rice
+07:48:32 |c|%∆Gym Ldr Alcor∆|so it makes sense we have maximum interest
+07:48:40 |c|%∆Gym Ldr. WF∆|Then I got a Sacred Combo
+07:48:44 |c|%∆Gym Ldr. WF∆|this Yoshi was pretty good
+07:49:07 |c|~∆Champiön Nöah∆|btw WF do you have Sm4sh for WiiU
+07:49:31 |N|&∆E4 Terror∆|e4terror
+07:49:31 |N|&∆E4 Terror∆|e4terror
+07:49:32 |c|%∆Gym Ldr Alcor∆|god damn herb is slaying woopers left and right
+07:49:51 |c|%∆Gym Ldr. WF∆|yeah I do
+07:49:52 |c|+ABootToTheHead|hai
+07:49:58 |c|~∆Champiön Nöah∆|What's your Nintendo ID?
+07:50:04 |c|%∆Gym Ldr. WF∆|ummm I'll tell you later
+07:50:09 |c|%∆Gym Ldr. WF∆|right now I'm just at my room
+07:50:17 |c|~FrontierHead∆Risu|i still need your's aswell
+07:50:18 |c|%∆Gym Ldr. WF∆|I have a special console room so yeah
+07:50:22 |c|~FrontierHead∆Risu|rip
+07:50:24 |c|%∆Gym Ldr. WF∆|I'll get there later
+07:50:30 |c|%∆Gym Ldr Alcor∆|jesus you have a games room?
+07:50:33 |c|%∆Gym Ldr. WF∆|yeah
+07:50:35 |c|%∆Gym Ldr Alcor∆|how rich are you?
+07:50:49 |c|%∆Gym Ldr. WF∆|Nintendo Wii PS2 Wii U PS3
+07:50:50 |L| ∆Gym Ldr. You∆
+07:50:55 |c|%∆Gym Ldr. WF∆|and also some handhelds are in there too
+07:51:02 |c|%∆Gym Ldr Alcor∆|not into xbox?
+07:51:06 |c|%∆Gym Ldr. WF∆|not really
+07:51:13 |c|%∆Gym Ldr Alcor∆|fair enough
+07:51:14 |c|%∆Gym Ldr. WF∆|I grew up with Nintendo and Sony
+07:51:18 |c|%∆Gym Ldr. WF∆|but more on Sony
+07:51:30 |c|%∆Gym Ldr. WF∆|but ended up becoming a fan of Nintendo
+07:51:43 |J| ∆Gym Ldr. You∆
+07:51:43 |N|%∆Gym Ldr. You∆|gymldryou
+07:51:50 |c|%∆Gym Ldr. WF∆|and oh man I tell you Leaf
+07:51:52 |c|%∆Gym Ldr. WF∆|that Yoshi main
+07:51:54 |c|%∆Gym Ldr. WF∆|was pretty cool
+07:52:00 |c|%∆Gym Ldr Alcor∆|do you have a replay?
+07:52:01 |c|%∆Gym Ldr. WF∆|he was doing Double Jump Parries and what not
+07:52:03 |c|~∆Champiön Nöah∆|Well if you decide to add me, my NID is TheDankLordRevan
+07:52:06 |c|%∆Gym Ldr Alcor∆|is there a vid anywhere or anything?
+07:52:11 |c|%∆Gym Ldr. WF∆|nah
+07:52:14 |c|%∆Gym Ldr. WF∆|it was just a smash fest
+07:52:18 |c|%∆Gym Ldr. You∆|Ima get some sleep
+07:52:19 |c|%∆Gym Ldr. You∆|Bye
+07:52:22 |c|%∆Gym Ldr. WF∆|no recording equipment
+07:52:23 |c|%∆Gym Ldr. WF∆|bye
+07:52:26 |c|%∆Gym Ldr. WF∆|anyways
+07:52:34 |L| ∆Gym Ldr. You∆
+07:52:35 |c|%∆Gym Ldr. WF∆|That Yoshi was doing some Amsa stuff
+07:52:41 |c|%∆Gym Ldr. WF∆|I was like woah how in the fuck
+07:52:44 |c|%∆Gym Ldr Alcor∆|and i regret to inform the crowd Bucky the bidoof has died
+07:53:04 |c|%∆Gym Ldr. WF∆|and that's when I started playing a bit more seriously
+07:53:08 |c|%∆Gym Ldr. WF∆|coz this Yoshi was good
+07:53:13 |c|%∆Gym Ldr Alcor∆|murdered by a wild snek
+07:53:20 |c|~∆Champiön Nöah∆|Yoshi's in Melee are either Amsa tier
+07:53:21 |c|%∆Gym Ldr. WF∆|He ain't like your casual "Oh I wanna be like Amsa" dude
+07:53:23 |c|%∆Gym Ldr Alcor∆|what was the overall score?
+07:53:23 |c|~∆Champiön Nöah∆|Or casual tier
+07:53:54 |c|%∆Gym Ldr. WF∆|He beat up a Fox quite badly
+07:53:59 |c|%∆Gym Ldr. WF∆|3 stocked
+07:54:03 |c|%∆Gym Ldr. WF∆|I was like hyped
+07:54:11 |c|%∆Gym Ldr. WF∆|but when I challenged him with Falcon
+07:54:14 |c|%∆Gym Ldr. WF∆|it wasn't too pretty
+07:54:19 |c|%∆Gym Ldr. WF∆|it was more on hype
+07:54:27 |c|%∆Gym Ldr. WF∆|but the matches were still close
+07:54:44 |c|~∆Champiön Nöah∆|tfw an AI peach pulled a Bom-omb
+07:54:48 |c|%∆Gym Ldr. WF∆|I 3 stocked him in the 1st match then the 2nd match he beat me 1 stock and I beat him 1 stock
+07:54:48 |c|~∆Champiön Nöah∆|tfw I perfect shielded it
+07:55:06 |c|%∆Gym Ldr. WF∆|TheDankLordRevan
+07:55:08 |c|%∆Gym Ldr. WF∆|dat name tho
+07:55:11 |c|~FrontierHead∆Risu|ikr
+07:55:22 |c|~FrontierHead∆Risu|im mad cause i read darth to begin with
+07:55:25 |c|~∆Champiön Nöah∆|It's great
+07:55:30 |userstats|total:12|guests:1| :1|+:1|$:0|%:3|@:2|★:0|#:0|&:3|~:2
+07:55:33 |c|%∆Gym Ldr. WF∆|Can you guys PM it to me?
+07:55:40 |c|%∆Gym Ldr. WF∆|so that the chat log doesn't overflood it
+07:55:43 |c|~∆Champiön Nöah∆|He's one of the first Dark Lords of the Sith
+07:55:55 |c|~∆Champiön Nöah∆|like there are many darths 
+07:55:55 |c|~∆Champiön Nöah∆|but yea
+07:56:00 |c|%∆Gym Ldr Alcor∆|its aight core the chat is only talking bout this anyway
+07:56:08 |c|%∆Gym Ldr Alcor∆|and i think everyone cept us 4 is rip anyway
+07:56:13 |c|%∆Gym Ldr. WF∆|Leaf u have a Wii U?
+07:56:17 |c|%∆Gym Ldr. WF∆|or no you play 3DS?
+07:56:18 |c|%∆Gym Ldr Alcor∆|nah man
+07:56:19 |c|%∆Gym Ldr Alcor∆|i wish
+07:56:20 |c|@∆Frontier Zachary∆|http://prntscr.com/944ef1 MEET THE SORA SQUAD
+07:56:25 |c|@∆Frontier Zachary∆|IM REGI FOR RANDOMIZER ELITE FOUR
+07:56:27 |c|%∆Gym Ldr Alcor∆|theres two things i need my money for atm
+07:56:27 |c|@∆Frontier Zachary∆|ARE WE REGI
+07:56:34 |c|~FrontierHead∆Risu|sweet, i needed a random image
+07:56:36 |c|%∆Gym Ldr. WF∆|Hell yeah I'm badass
+07:56:36 |c|%∆Gym Ldr Alcor∆|getting a gift for a close frens bday
+07:56:49 |c|%∆Gym Ldr Alcor∆|and lots of alcohol to celebrate getting over illness and exam completion
+07:57:03 |c|%∆Gym Ldr Alcor∆|jesus that teams broken
+07:57:15 |c|%∆Gym Ldr Alcor∆|but it is a randomizer
+07:57:23 |c|%∆Gym Ldr Alcor∆|random ubers poke could come in and end you at any time
+07:57:35 |c|&∆E4 Terror∆|Omg ur still using me zach <3
+07:57:42 |c|&∆E4 Terror∆|female me anway
+07:58:34 |J|%∆Gym Ldr Zoro∆
+07:58:34 |N|%∆Gym Ldr Zoro∆|gymldrzoro
+07:58:37 |raw|-- <b><font color="#000000">∆Gym Ldr. WF∆</font></b> is now away.  (showering)
+07:58:37 |N|%∆Gym Ldr. WF∆- ⒶⒻⓀ|gymldrwf
+07:58:37 |N|%∆Gym Ldr. WF∆- ⒶⒻⓀ|gymldrwf
+07:58:37 |N|%∆Gym Ldr. WF∆- ⒶⒻⓀ|gymldrwf
+07:58:42 |c|@∆Frontier Zachary∆|OK
+07:58:45 |c|@∆Frontier Zachary∆|WE BEGIN LE ELITE FOUR
+07:59:23 |c|@∆Frontier Zachary∆|leading with le pupitar
+07:59:29 |c|+ABootToTheHead|Oh yeah guys
+07:59:36 |c|+ABootToTheHead|There's a shiny Diancie event
+07:59:41 |c|&∆E4 Silvy∆|Wow
+07:59:46 |c|%∆Gym Ldr Alcor∆|what game?
+07:59:47 |c|%∆Gym Ldr Alcor∆|oras
+07:59:48 |c|%∆Gym Ldr Alcor∆|?
+07:59:50 |c|+ABootToTheHead|ORAS
+07:59:54 |c|+ABootToTheHead|For Japan
+07:59:57 |c|%∆Gym Ldr Alcor∆|really
+08:00:03 |c|%∆Gym Ldr Alcor∆|you wait until i get hype to say japan
+08:00:05 |c|%∆Gym Ldr Alcor∆|fuck
+08:00:13 |c|@∆Frontier Zachary∆|koffing
+08:00:14 |c|@∆Frontier Zachary∆|ok
+08:00:20 |c|+ABootToTheHead|ur welcome
+08:00:47 |c|&∆E4 Silvy∆|Y'know
+08:01:02 |c|&∆E4 Silvy∆|If Game Freak could make more wi-fi events that are available in other countries, that'd be great
+08:01:04 |c|@∆Frontier Zachary∆|i think i overlevelled
+08:01:08 |c|@∆Frontier Zachary∆|WIll has level 0-42
+08:01:12 |c|@∆Frontier Zachary∆|all my mons are 50
+08:01:15 |c|&∆E4 Silvy∆|Now I'm just gonna have to inject WCs
+08:01:18 |c|&∆E4 Silvy∆|x.x
+08:02:15 |c|@∆Frontier Zachary∆|AND WILL IS DOWN
+08:03:56 |c|+ABootToTheHead|Silv
+08:03:59 |c|&∆E4 Silvy∆|Yeah?
+08:04:04 |c|+ABootToTheHead|They're making a special event for worldwide rn too
+08:04:08 |c|&∆E4 Silvy∆|Yay
+08:04:09 |c|+ABootToTheHead|Well not rn but soon
+08:04:12 |c|+ABootToTheHead|it's a delibird
+08:04:26 |c|&∆E4 Silvy∆|>delibird
+08:04:34 |c|+ABootToTheHead|tfw not even my contact can get this Diancie
+08:04:41 |c|@∆Frontier Zachary∆|ok so
+08:04:43 |c|&∆E4 Silvy∆|Imo
+08:04:44 |c|+ABootToTheHead|because he doesn't live in Japan and it's a local Pokemon Center thing
+08:04:47 |c|&∆E4 Silvy∆|Just inject the event
+08:04:47 |c|@∆Frontier Zachary∆|the first two elite four are a joke
+08:04:50 |c|&∆E4 Silvy∆|And SR for it yourself
+08:04:50 |c|@∆Frontier Zachary∆|they had LC mons
+08:05:01 |c|+ABootToTheHead|nah, I can't offer that for trade
+08:05:06 |c|~∆Champiön Nöah∆|Risu wanna play Sm4sh
+08:05:25 |c|~FrontierHead∆Risu|okay, ill stop the site im making for you to play a bit
+08:05:28 |c|~FrontierHead∆Risu|ull love it
+08:05:30 |userstats|total:13|guests:1| :1|+:1|$:0|%:4|@:2|★:0|#:0|&:3|~:2
+08:05:48 |c|%∆Gym Ldr Alcor∆|i'd play but it probs still wont let us play together
+08:05:52 |c|%∆Gym Ldr Alcor∆|for whatever reason
+08:05:53 |c|~FrontierHead∆Risu|~~now ive got him scared~~
+08:05:56 |c|~FrontierHead∆Risu|wiiu leaf
+08:05:56 |c|~∆Champiön Nöah∆|ok
+08:06:11 |c|%∆Gym Ldr Alcor∆|well that also doesnt help
+08:06:28 |c|~FrontierHead∆Risu|noah imma show u a sneak peek
+08:06:29 |c|@∆Frontier Zachary∆|http://prntscr.com/944i4p bruno has a god
+08:06:46 |c|&∆E4 Terror∆|RIP
+08:07:00 |c|&∆E4 Terror∆|Sacrifice me to lord parasect if you must
+08:07:06 |c|+ABootToTheHead|Parsect is RIP
+08:07:14 |c|%∆Gym Ldr Alcor∆|tfw neith is commiting deicide
+08:07:19 |c|@∆Frontier Zachary∆|BRUNO HAS TWO BEAUTIFLYS??????
+08:07:19 |c|+ABootToTheHead|inb4 survives wiith Occa
+08:07:24 |c|+ABootToTheHead|Spores
+08:07:25 |c|~FrontierHead∆Risu|well he has 2 machamps
+08:07:27 |c|&∆E4 Terror∆|WOT
+08:07:27 |c|+ABootToTheHead|5 turn sleep
+08:07:36 |c|%∆Gym Ldr Alcor∆|tfw bruno uses flutterflies
+08:07:38 |c|~FrontierHead∆Risu|was it machamp
+08:07:40 |c|+ABootToTheHead|5x X-Scissor crits
+08:07:41 |c|~FrontierHead∆Risu|or smt else
+08:07:50 |c|@∆Frontier Zachary∆|http://prntscr.com/944io0
+08:07:53 |c|@∆Frontier Zachary∆|should I heal
+08:08:07 |c|%∆Gym Ldr Alcor∆|nah
+08:08:10 |c|+ABootToTheHead|"should I heal"
+08:08:16 |c|+ABootToTheHead|ur playing a fukn nuzlocke
+08:08:20 |c|@∆Frontier Zachary∆|healing it is
+08:08:29 |c|&∆E4 Terror∆|how come u didn't evolve pupitar b4 e4
+08:08:29 |c|%∆Gym Ldr Alcor∆|oh inbetween battles?
+08:08:32 |c|%∆Gym Ldr Alcor∆|yeah always heal
+08:08:38 |c|@∆Frontier Zachary∆|terror
+08:08:45 |c|@∆Frontier Zachary∆|it evolves at fucking 55
+08:08:50 |c|@∆Frontier Zachary∆|i was crying to grind to 50
+08:09:17 |c|&∆E4 Terror∆|Oh yeah I guess in  HG/SS there's still postgame kanto and stuff
+08:09:31 |c|%∆Gym Ldr Alcor∆|and red
+08:09:35 |c|%∆Gym Ldr Alcor∆|oh man reds gonna be fun
+08:09:44 |c|%∆Gym Ldr Alcor∆|the pikachu that wont be a pikachu is like lv 90
+08:09:49 |c|%∆Gym Ldr Alcor∆|are you regi arty? :D
+08:09:55 |c|@∆Frontier Zachary∆|shhhhhhh
+08:09:58 |c|~∆Champiön Nöah∆|Sacred Gold Pikachu is Level 98 iirc
+08:10:00 |c|~∆Champiön Nöah∆|Or 100
+08:10:03 |c|&∆E4 Terror∆|Nah it's only 90 in Sacred Gold
+08:10:05 |c|%∆Gym Ldr. WF∆- ⒶⒻⓀ|inb4 Arceus
+08:10:06 |c|@∆Frontier Zachary∆|100
+08:10:07 |c|+ABootToTheHead|88 is the normal Pikachu
+08:10:08 |c|&∆E4 Terror∆|It's only around 82 in HGSS
+08:10:08 |N|%∆Gym Ldr. WF∆|gymldrwf
+08:10:08 |N|%∆Gym Ldr. WF∆|gymldrwf
+08:10:08 |raw|-- <b><font color="#000000">∆Gym Ldr. WF∆</font></b> is back.
+08:10:08 |N|%∆Gym Ldr. WF∆|gymldrwf
+08:10:11 |c|+ABootToTheHead|inb4 Giratina
+08:10:19 |c|+ABootToTheHead|how the fuck do you get past Giratina
+08:10:30 |c|@∆Frontier Zachary∆|crunch
+08:10:40 |c|+ABootToTheHead|lv 88??
+08:10:54 |c|%∆Gym Ldr Alcor∆|over level then crunch?
+08:10:55 |c|&∆E4 Terror∆|oh right this is randomizer it won't be pikachu
+08:10:57 |c|&∆E4 Terror∆|right
+08:11:17 |c|%∆Gym Ldr Alcor∆|oh
+08:11:17 |c|+ABootToTheHead|by the way
+08:11:22 |c|@∆Frontier Zachary∆|Strong Pokemon, Weak Pokemon, That is only the selfish perception of people. Truly skilled Trainers should try to win with the Pokemon they love best
+08:11:23 |c|+ABootToTheHead|new ORAS tournament coming up
+08:11:23 |c|%∆Gym Ldr Alcor∆|level 88 giratina would have aura sphere
+08:11:24 |c|@∆Frontier Zachary∆|- Karen
+08:11:27 |c|%∆Gym Ldr Alcor∆|you would be fucked arty
+08:11:33 |c|@∆Frontier Zachary∆|yea
+08:11:35 |c|+ABootToTheHead|lmao arthur
+08:11:38 |c|@∆Frontier Zachary∆|i have sand
+08:11:42 |c|+ABootToTheHead|tbh I absolutely despise that quote
+08:11:44 |c|@∆Frontier Zachary∆|not to mention I have chople berry
+08:11:56 |c|%∆Gym Ldr. WF∆|I bet you
+08:12:08 |c|%∆Gym Ldr Alcor∆|ok so you can survive one aura sphere
+08:12:18 |c|%∆Gym Ldr Alcor∆|which means if a level 88 giratina can take just one blow
+08:12:19 |c|%∆Gym Ldr. WF∆|the 2014 VGC Worlds Championships Winner took that quote seriously
+08:12:19 |c|+ABootToTheHead|wait
+08:12:20 |c|%∆Gym Ldr Alcor∆|it can kill you
+08:12:28 |c|+ABootToTheHead|do items get randomized
+08:12:32 |c|+ABootToTheHead|okay Core lemme tell you something
+08:12:33 |c|%∆Gym Ldr Alcor∆|no
+08:12:41 |c|%∆Gym Ldr. WF∆|in a way that is
+08:12:50 |c|+ABootToTheHead|Sejun is different from scrubs in that he used Pachirisu not because it's his favorite Pokemon
+08:12:57 |c|@∆Frontier Zachary∆|no items do not
+08:13:06 |c|+ABootToTheHead|he used Pachirisu because __it filled a niche nothing else can__
+08:13:14 |c|@∆Frontier Zachary∆|ok he has Vigoroth and Gliscor
+08:13:16 |c|@∆Frontier Zachary∆|so far so good
+08:13:17 |c|+ABootToTheHead|he used Pachirisu because it's the best for the situation
+08:13:22 |c|+ABootToTheHead|__not because it's unusual__
+08:13:28 |c|%∆Gym Ldr. WF∆|but it also is his favorite pokemon though
+08:13:37 |c|+ABootToTheHead|If Pachirisu was useless
+08:13:41 |c|+ABootToTheHead|He wouldn't have used it at all
+08:13:46 |c|@∆Frontier Zachary∆|FUCK
+08:13:51 |c|@∆Frontier Zachary∆|VIGOROTH HAD COUNTER
+08:13:53 |c|+ABootToTheHead|rip
+08:13:54 |c|@∆Frontier Zachary∆|TERROR
+08:13:55 |c|@∆Frontier Zachary∆|IM SO SORRY
+08:13:57 |c|@∆Frontier Zachary∆|YOU'RE DEAD
+08:13:58 |c|%∆Gym Ldr Alcor∆|terror died?
+08:14:01 |c|%∆Gym Ldr Alcor∆|oh
+08:14:04 |c|%∆Gym Ldr Alcor∆|/me consoles terror
+08:14:13 |c|~∆Champiön Nöah∆|tech attempted
+08:14:18 |c|+ABootToTheHead|wait
+08:14:21 |c|%∆Gym Ldr. WF∆|One time in a Korean Interview he did say that Pachirisu was indeed his favorite pokemon but he also liked it because of its moveset pool
+08:14:22 |c|+ABootToTheHead|that was a Garchomp that died
+08:14:25 |c|%∆Gym Ldr. WF∆|yeap
+08:14:28 |c|%∆Gym Ldr. WF∆|Garchomp died
+08:14:33 |c|%∆Gym Ldr. WF∆|Terror the Garchomp died
+08:14:38 |c|+ABootToTheHead|rip, that was one of the stronger Pokemon he had
+08:14:42 |c|@∆Frontier Zachary∆|RIP TERROR
+08:14:43 |c|@∆Frontier Zachary∆|I LOVED HIM
+08:14:45 |c|@∆Frontier Zachary∆|it ok
+08:14:48 |c|@∆Frontier Zachary∆|I have dragonite
+08:14:49 |c|@∆Frontier Zachary∆|it fine
+08:14:58 |c|&∆E4 Terror∆|OMG
+08:14:59 |c|&∆E4 Terror∆|FUCK
+08:15:00 |c|&∆E4 Terror∆|YOU
+08:15:03 |c|@∆Frontier Zachary∆|IT HAS CARNAVINE
+08:15:05 |c|+ABootToTheHead|also, I'll say it again, if Pachirisu didn't fulfill a niche, Sejun wouldn't have used it at all
+08:15:06 |c|&∆E4 Terror∆|HOW
+08:15:10 |c|+ABootToTheHead|You do know what it does right
+08:15:19 |c|@∆Frontier Zachary∆|COUNTER
+08:15:19 |c|%∆Gym Ldr. WF∆|31% for Episode 16 Reborn :3
+08:15:21 |c|@∆Frontier Zachary∆|FUCKING.
+08:15:23 |c|@∆Frontier Zachary∆|COUNTER.
+08:15:26 |c|&∆E4 Terror∆|FROM WHAT
+08:15:30 |c|+ABootToTheHead|Vigorith
+08:15:30 |userstats|total:13|guests:1| :1|+:1|$:0|%:4|@:2|★:0|#:0|&:3|~:2
+08:15:30 |c|%∆Gym Ldr. WF∆|Vigoroth
+08:15:32 |c|@∆Frontier Zachary∆|vigoroth
+08:15:33 |c|+ABootToTheHead|*Vigoroth
+08:15:40 |c|&∆E4 Terror∆|AT LEAST GIVE ME A FUCKING HONORABLE DEATH ;-;
+08:15:42 |c|%∆Gym Ldr Alcor∆|it can learn it
+08:15:52 |c|&∆E4 Terror∆|;-;
+08:15:54 |c|@∆Frontier Zachary∆|wailord and shellos
+08:15:55 |c|@∆Frontier Zachary∆|ok
+08:16:00 |c|+ABootToTheHead|tfw Arth had two OU mons
+08:16:03 |c|+ABootToTheHead|one's dead now
+08:16:16 |c|@∆Frontier Zachary∆|illumise as well
+08:16:27 |c|+ABootToTheHead|watch as champion gets legend shit
+08:16:34 |c|@∆Frontier Zachary∆|no no legend shit
+08:16:36 |c|+ABootToTheHead|inb4 champion legit gets CHALK-T
+08:16:39 |c|@∆Frontier Zachary∆|not one of it
+08:16:40 |c|+ABootToTheHead|oh
+08:17:03 |c|&∆E4 Terror∆|Whats the T
+08:17:49 |c|~∆Champiön Nöah∆|holy shit
+08:17:50 |c|@∆Frontier Zachary∆|http://prntscr.com/944mbt
+08:17:55 |c|@∆Frontier Zachary∆|beaten the fuck out of this mofo
+08:17:59 |c|@∆Frontier Zachary∆|who killed my shiny garchomp
+08:18:05 |c|+ABootToTheHead|Thundurus
+08:18:13 |c|+ABootToTheHead|oh
+08:19:08 |c|@∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|anyways guys I'm off for tonight
+08:19:13 |c|@∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|latery doos all
+08:19:18 |c|%∆Gym Ldr. WF∆|later blade
+08:19:26 |html|<center><span style = "color:#0c4787"><b>~~ ∆Fröntier∆Blade☯- ⒷⓊⓈⓎ has been drowned by Arthur's suspicious white fluids! ~~</b></span>
+08:19:26 |L|@∆Fröntier∆Blade☯- ⒷⓊⓈⓎ
+08:20:25 |c|@∆Frontier Zachary∆|http://prntscr.com/944ndh
+08:20:33 |c|@∆Frontier Zachary∆|IF ONLY SOMEONE DIDN'T GET RIP-ED BY COUNTER
+08:20:57 |L| ∆Gym Ldr. WF∆
+08:21:14 |J| ∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+08:21:14 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+08:21:27 |c|%∆Gym Ldr Alcor∆|if you rematch the e4 they get diff pokes dont they?
+08:21:50 |c|+ABootToTheHead|oh, shit
+08:21:54 |c|+ABootToTheHead|speaking of pachirisu
+08:22:03 |c|+ABootToTheHead|nothing handles it in festive feud
+08:22:06 |c|+ABootToTheHead|this is not a good result
+08:22:12 |c|~FrontierHead∆Risu|:^)
+08:22:20 |c|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|Hi
+08:22:22 |c|+ABootToTheHead|fuckit
+08:22:27 |c|+ABootToTheHead|I'm gonna run full counterteam
+08:22:30 |J| I got y0 mama
+08:22:31 |c|%∆Gym Ldr Alcor∆|and what may i ask is festive feud?
+08:22:32 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:22:32 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:22:32 |raw|-- <b><font color="#000000">∆Gym Ldr Arjunb∆</font></b> is back.
+08:22:32 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:22:32 |c|+ABootToTheHead|Time to grab Flygon
+08:22:39 |c|+ABootToTheHead|http://nuggetbridge.com/forums/topic/20756-festive-feud-battle-spot-competition/
+08:22:42 |c|+ABootToTheHead|^Festive Feud
+08:22:44 |N| I got y0 mama|igoty0mama
+08:22:44 |N| I got y0 mama|igoty0mama
+08:23:02 |L|%∆Gym Ldr Arjunb∆
+08:23:06 |J|%∆Gym Ldr Arjunb∆
+08:23:06 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:23:09 |c|%∆Gym Ldr Alcor∆|what is relic gold?
+08:24:10 |c|%∆Gym Ldr Arjunb∆|The thing I haye misr about these pokemon games is caves
+08:24:36 |c|%∆Gym Ldr Arjunb∆|Really
+08:24:49 |c|%∆Gym Ldr Arjunb∆|Hate
+08:24:56 |c|%∆Gym Ldr Alcor∆|what?
+08:25:14 |J| Nightanglet
+08:25:24 |L| ∆Gym Ldr Arjunb∆
+08:25:30 |userstats|total:12|guests:0| :2|+:1|$:0|%:3|@:1|★:0|#:0|&:3|~:2
+08:25:33 |J|%∆Gym Ldr Arjunb∆
+08:25:33 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:26:47 |L|%∆Gym Ldr Arjunb∆
+08:26:50 |J|%∆Gym Ldr Arjunb∆
+08:26:50 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:27:47 |c| Nightanglet|need a haircut but cant at this time and heavy rains predicted for the next 3-4 days
+08:28:23 |c|%∆Gym Ldr Arjunb∆|How is that related
+08:28:44 |L| ∆Gym Ldr Zoro∆
+08:28:53 |c| Nightanglet|cant get out of the house in the rain
+08:28:59 |c|%∆Gym Ldr Arjunb∆|Oh
+08:29:05 |c|%∆Gym Ldr Arjunb∆|oGlduck
+08:29:07 |c|@∆Frontier Zachary∆|ok so now my team has this issue with mamoswine
+08:29:13 |c|@∆Frontier Zachary∆|like all of them are weak to it one way or another
+08:29:19 |c|@∆Frontier Zachary∆|so should I take abomasnow for the sake of mamoswine
+08:29:26 |c|%∆Gym Ldr Arjunb∆|Golduck
+08:29:26 |c|@∆Frontier Zachary∆|or take bagon/dratini/random good mon
+08:29:57 |c|%∆Gym Ldr Arjunb∆|But is the rain on tam?
+08:30:02 |c|%∆Gym Ldr Arjunb∆|Atm
+08:30:03 |c|@∆Frontier Zachary∆|sand is
+08:30:05 |c|@∆Frontier Zachary∆|pupitar
+08:30:17 |c|@∆Frontier Zachary∆|!dt mild
+08:30:17 Mild nature: +10% Special Attack, -10% Defense.
+08:30:23 |c|@∆Frontier Zachary∆|yas moar spatk on suicune
+08:30:25 |c|@∆Frontier Zachary∆|could be worse
+08:30:27 |c| Nightanglet|supposed to be arjun
+08:30:33 |c| Nightanglet|from  sumatra
+08:30:37 |c|@∆Frontier Zachary∆|ok so screw everyone's thoughts, im taking my second legendary
+08:30:39 |c|@∆Frontier Zachary∆|come to papa suicune
+08:31:10 |c| Nightanglet|btw temp,is it raining where u live?
+08:31:18 |c|+ABootToTheHead|no
+08:31:20 |c| Nightanglet|k
+08:31:32 |c|%∆Gym Ldr Arjunb∆|I was wondering that umm
+08:31:48 |c| Nightanglet|what?
+08:31:52 |c|%∆Gym Ldr Arjunb∆|U said prediction
+08:32:13 |c| Nightanglet|i did
+08:33:20 |c|@∆Frontier Zachary∆|i am very very very happy I did not use EQ tm on terror
+08:33:32 |c|&∆E4 Terror∆|;__________;
+08:33:33 |c|@∆Frontier Zachary∆|since EQ doesn't hit harder than dragon ang boosted dragon claw
+08:33:40 |c|@∆Frontier Zachary∆|*fang
+08:34:04 |c| Nightanglet|eq marginally outdamages
+08:34:05 |L| gasp
+08:34:21 |c| Nightanglet|25/24% more
+08:34:50 |c|@∆Frontier Zachary∆|!dt dragon fang
+08:34:50 |c|~|/data-item Dragon Fang
+|raw|<font size="1"><font color=#585858>Gen:</font> 2&nbsp;|&ThickSpace;<font color=#585858>Fling Base Power:</font> 70</font>
+08:34:57 |c|@∆Frontier Zachary∆|oh 
+08:34:59 |c|@∆Frontier Zachary∆|I
+08:35:05 |c|@∆Frontier Zachary∆|.....then it might've saved terror
+08:35:16 |c|&∆E4 Terror∆|omg
+08:35:23 |c|&∆E4 Terror∆|are you saying
+08:35:26 |c|%∆Gym Ldr Alcor∆|its your fault terror died arty
+08:35:28 |c|&∆E4 Terror∆|that if you had given me an item
+08:35:30 |userstats|total:11|guests:0| :2|+:1|$:0|%:2|@:1|★:0|#:0|&:3|~:2
+08:35:32 |c|&∆E4 Terror∆|that nobody could of used
+08:35:36 |c|&∆E4 Terror∆|other than me
+08:35:39 |c|&∆E4 Terror∆|I wouldn't have died
+08:35:41 |c|@∆Frontier Zachary∆|I GAVE YOU A DRAGON FANG
+08:35:43 |c|@∆Frontier Zachary∆|SO SHUDDAP
+08:35:44 |c|%∆Gym Ldr Arjunb∆|Shut up
+08:35:45 |c| Nightanglet|*if he hadnt
+08:35:51 |c|&∆E4 Terror∆|no u arjunb
+08:35:52 |c|%∆Gym Ldr Arjunb∆|U deserve to ied
+08:35:58 |c|%∆Gym Ldr Alcor∆|you should give his body the dragon fang out of respect
+08:36:00 ∆Gym Ldr Arjunb∆ was kicked by ∆E4 Terror∆.
+08:36:00 |L|%∆Gym Ldr Arjunb∆
+08:36:04 |c|&∆E4 Terror∆|you deserve to be kicked
+08:36:15 |J|%∆Gym Ldr Arjunb∆
+08:36:15 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:36:38 |c|%∆Gym Ldr Arjunb∆|Im still alive :^)
+08:36:43 |c|@∆Frontier Zachary∆|nope
+08:36:44 |c|@∆Frontier Zachary∆|you died
+08:36:46 |c|@∆Frontier Zachary∆|resurrected
+08:36:48 |c|@∆Frontier Zachary∆|died again
+08:36:49 |c|@∆Frontier Zachary∆|I had fun
+08:36:52 |c|%∆Gym Ldr Arjunb∆|What
+08:37:35 |c|%∆Gym Ldr Arjunb∆|:(
+08:37:39 |c| Nightanglet|max revive?
+08:37:55 |c|%∆Gym Ldr Arjunb∆|What was I
+08:38:02 |c|@∆Frontier Zachary∆|magikarp :3
+08:38:07 |c|%∆Gym Ldr Arjunb∆|Oh
+08:38:07 |c|@∆Frontier Zachary∆|night, it's a nuzlocke
+08:38:09 |c|%∆Gym Ldr Arjunb∆|ooolC
+08:38:18 |c| Nightanglet|ik
+08:38:43 |c|%∆Gym Ldr Arjunb∆|Thats better than a chomp
+08:39:01 |c|%∆Gym Ldr Arjunb∆|m gonna take my revenge
+08:39:17 |c|%∆Gym Ldr Arjunb∆|Understand?
+08:40:20 |c|%∆Gym Ldr Arjunb∆|My power abusing niggas
+08:42:21 |c|%∆Gym Ldr Alcor∆|HAHAHA
+08:42:27 |c|%∆Gym Ldr Alcor∆|swablu mirror moved my ember
+08:42:32 |c|%∆Gym Ldr Alcor∆|flash fire only made me stronger
+08:43:20 |J| gasp
+08:43:20 |N|%gasp|gasp
+08:43:38 |c| Nightanglet|how many of u are into sacred fire nuzlocke?
+08:43:51 |c|%∆Gym Ldr Alcor∆|noah me artys doing a randomizer of it
+08:43:56 |c|%∆Gym Ldr Alcor∆|i think rice is playing too
+08:43:59 |c|%∆Gym Ldr Alcor∆|and probably more people
+08:44:06 |c| Nightanglet|i am planning to
+08:45:30 |userstats|total:12|guests:0| :2|+:1|$:0|%:3|@:1|★:0|#:0|&:3|~:2
+08:46:11 |c|~∆Champiön Nöah∆|Risu and I are doing Falcon Dittos in Sm4sh
+08:46:14 |c|~∆Champiön Nöah∆|It's hype af
+08:46:15 |c|~∆Champiön Nöah∆|All style
+08:46:17 |c|~∆Champiön Nöah∆|No grace
+08:46:21 |c|~FrontierHead∆Risu|mhmm
+08:47:49 |c|~FrontierHead∆Risu|he has all style
+08:47:53 |c|~FrontierHead∆Risu|he has no grace
+08:49:11 |L| ∆Frontier Asch∆
+08:51:57 |c| Nightanglet|The opposing Tyranitar used Ancient Power!
+08:52:05 |c| Nightanglet|whats going on in ladder?
+08:52:13 |c|~FrontierHead∆Risu|missing
+08:52:15 |c|%∆Gym Ldr Alcor∆|did he get the stat boosts?
+08:52:22 |c| Nightanglet|no
+08:52:33 |c| Nightanglet|toxic keldeo.......
+08:52:45 |c|%∆Gym Ldr Alcor∆|wow this guy is special
+08:53:26 |c| Nightanglet|i use guts machamp
+08:54:24 |c| Nightanglet|imagine liquid ooze blissey/chansey affected by leech seed
+08:54:44 |c|%∆Gym Ldr Alcor∆|that'd be horrifying
+08:55:02 |c|%∆Gym Ldr Alcor∆|you'd lose like 50 hp a turn
+08:55:11 |c| Nightanglet|wanna test it
+08:55:19 |c|%∆Gym Ldr Alcor∆|sure
+08:55:22 |c|%∆Gym Ldr Alcor∆|you make the blissey
+08:55:25 |c|%∆Gym Ldr Alcor∆|make sure its max evs
+08:55:30 |userstats|total:11|guests:0| :2|+:1|$:0|%:3|@:1|★:0|#:0|&:2|~:2
+08:55:46 |c|%∆Gym Ldr Alcor∆|just give it a useless move like growl
+08:55:51 |c| Nightanglet|done
+08:55:56 |L| Nightanglet
+08:56:05 |J| Nightanglet
+08:56:10 |J| ∆Frontier Asch∆
+08:56:10 |N|&∆Frontier Asch∆|frontierasch
+08:56:24 |c|%∆Gym Ldr Alcor∆|imma custom mine too to see if i can balance the drain
+08:58:19 |c|&∆Frontier Asch∆|★∆Gym Ldr Alcor∆: HOW TO OHKO SHUCKLE
+08:58:19 |c|&∆Frontier Asch∆|∆Gym Ldr Alcor∆ forfeited.
+08:58:22 |c|&∆Frontier Asch∆|0HKO'd
+08:58:49 |c| Nightanglet|pm me leaf
+08:59:07 |J|@Frontier Meows
+08:59:07 |N|@Frontier Meows|frontiermeows
+09:00:06 |raw|-- <b><font color="#000000">∆E4 Silvy∆</font></b> is now away. 
+09:00:06 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+09:00:06 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+09:00:06 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+09:00:10 |N|@∆Frontier Meows∆|frontiermeows
+09:00:10 |N|@∆Frontier Meows∆|frontiermeows
+09:00:15 |c|@∆Frontier Meows∆|duckballs
+09:02:03 |c|~FrontierHead∆Risu|FUCKING
+09:02:04 |c|~FrontierHead∆Risu|SHOW
+09:02:05 |c|~FrontierHead∆Risu|ME
+09:02:06 |c|~FrontierHead∆Risu|YOUR
+09:02:07 |c|~FrontierHead∆Risu|MOVES
+09:02:13 |c|~∆Champiön Nöah∆|AAAAAAAAAAAAAAAAAAAAAAAA
+09:02:15 |c|%∆Gym Ldr Alcor∆|i want you to eat
+09:02:18 |c|%∆Gym Ldr Alcor∆|50 hotdogs at once
+09:02:24 |c|@∆Frontier Zachary∆|MEOWS
+09:02:24 |c|+ABootToTheHead|fucking help
+09:02:26 |c|+ABootToTheHead|"Science flies you to the moon, religion flies you into a building.﻿"
+09:02:30 |c|@∆Frontier Meows∆|what
+09:02:32 |c|@∆Frontier Zachary∆|MY SHINY GARCHOMP NAMED TERROR
+09:02:34 |c|@∆Frontier Zachary∆|DIED
+09:02:35 |c|@∆Frontier Zachary∆|TO 
+09:02:35 |c|~FrontierHead∆Risu|noahs in the shadow realm now guys
+09:02:36 |c|@∆Frontier Zachary∆|FUCKING
+09:02:37 |c|@∆Frontier Zachary∆|COUNTER
+09:02:37 |c|~FrontierHead∆Risu|im sorry
+09:02:42 |c|@∆Frontier Meows∆|someone kick arthur
+09:03:50 |c|@∆Frontier Meows∆|its ded
+09:04:16 |J|%∆Gym Ldr. Waffles∆
+09:04:16 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+09:04:16 |c|@∆Frontier Meows∆|okay so hype hype I'll be playing my first match on Saturday :D
+09:04:18 |c|%∆Gym Ldr. Waffles∆|yo sons 
+09:04:40 |c|@∆Frontier Meows∆|Can't wait to play on Saturday :DDDD
+09:04:47 |c|+ABootToTheHead|??
+09:04:50 |c|%∆Gym Ldr. Waffles∆|play what?
+09:04:51 |c|+ABootToTheHead|whaddya playing
+09:05:00 |c|@∆Frontier Meows∆|My first softball match
+09:05:13 |c|+ABootToTheHead|o nice
+09:05:30 |userstats|total:14|guests:0| :2|+:1|$:0|%:4|@:2|★:0|#:0|&:3|~:2
+09:05:34 |c|%∆Gym Ldr. Waffles∆|how do you even play softball?
+09:05:44 |c|@∆Frontier Meows∆|its like baseball
+09:05:45 |c|@∆Frontier Meows∆|kind of
+09:05:46 |c|&∆Frontier Asch∆|you soft the ball
+09:05:48 |c|~FrontierHead∆Risu|but underarm
+09:05:50 |c|&∆Frontier Asch∆|like how you soccer the ball
+09:05:58 |c|@∆Frontier Meows∆|ye the pitch is underarm
+09:05:59 |c|~FrontierHead∆Risu|no pitching
+09:06:02 |c|%∆Gym Ldr. Waffles∆|it's football
+09:06:04 |c|%∆Gym Ldr. Waffles∆|you foot the ball
+09:06:08 |c|&∆Frontier Asch∆|no???
+09:06:12 |c|%∆Gym Ldr. Waffles∆|while in american scrubball you hand the ball
+09:06:26 |c|&∆Frontier Asch∆|you r soccer-ing the ball
+09:06:27 |c|%∆Gym Ldr. Waffles∆|you hand the egg i mean*
+09:06:35 |c|&∆Frontier Asch∆|you soccer the ball there there and there
+09:06:47 |c|+ABootToTheHead|asch
+09:06:49 |c|+ABootToTheHead|did u kno
+09:06:55 |c|+ABootToTheHead|there's a secret genocide boss
+09:07:10 |c|&∆Frontier Asch∆|which one
+09:07:17 |c|+ABootToTheHead|grilby
+09:07:22 |c|&∆Frontier Asch∆|rly now
+09:07:26 |c|+ABootToTheHead|wait that's not how you spell it
+09:07:29 |c|+ABootToTheHead|grillby
+09:07:32 |c|@∆Frontier Meows∆|...........
+09:07:37 |c|+ABootToTheHead|http://parasitecompany.tumblr.com/post/133458817540/grillby-bonus-boss-fight-genocide-run
+09:07:47 |c|&∆Frontier Asch∆|it aint real m8y :u
+09:07:52 |c|@∆Frontier Meows∆|also
+09:07:56 |c|@∆Frontier Meows∆|the ball is bigger for softball
+09:08:00 |c|+ABootToTheHead|gdi
+09:08:18 |c|+ABootToTheHead|see a fren of mine wanted to check but can't beat sans
+09:08:19 |c|@∆Frontier Meows∆|cause the baselines are like 18m for softball and 28m for baseball
+09:08:21 |c|&∆E4 Terror∆|I love how smash fans love roy but fire emblem fans hate him
+09:08:31 |c|+ABootToTheHead|honestly I'm sad it's fake
+09:08:59 |L| I got y0 mama
+09:09:29 |c|@∆Frontier Meows∆|o.0
+09:09:33 |c|&∆E4 Terror∆|aww it's fake ;-;
+09:09:50 |c|&∆E4 Terror∆|Like this is taken from a fire emblem community http://strawpoll.me/6032636/r
+09:10:00 |c|@∆Frontier Meows∆|pls help pray that I play infield on Saturday ;-;
+09:10:02 |c|&∆Frontier Asch∆|https://www.reddit.com/r/Undertale/comments/3t90iy/spoilersgrillby_bonus_boss_genocide_run/t
+09:10:04 |c|&∆Frontier Asch∆|https://www.reddit.com/r/Undertale/comments/3t90iy/spoilersgrillby_bonus_boss_genocide_run/
+09:10:05 |c|&∆Frontier Asch∆|tempest
+09:10:13 |c|&∆Frontier Asch∆|ignore the first link
+09:12:09 |c|+ABootToTheHead|lmfao
+09:12:09 |L| gymldralcor
+09:12:15 |c|&∆Frontier Asch∆|FUCK
+09:12:16 |c|&∆Frontier Asch∆|TEMPEST
+09:12:17 |c|&∆Frontier Asch∆|http://prntscr.com/9457sw
+09:12:17 |c|+ABootToTheHead|I actually ran through Genocide to make sure it's fake
+09:12:46 |c|+ABootToTheHead|what even is that
+09:13:19 |N|+ABootToTheHead|aboottothehead
+09:13:25 |N|+ABootToTheHead|aboottothehead
+09:13:52 |c|&∆Frontier Asch∆|he tweeted about wanting to add more to undertale but he wants to devote his time for other things
+09:13:57 |c|+ABootToTheHead|o
+09:13:58 |c|&∆Frontier Asch∆|toby is creator of undertale
+09:14:03 |c|+ABootToTheHead|no shit
+09:14:09 |c|+ABootToTheHead|also I think you gave me the wrong thing
+09:14:10 |c|&∆Frontier Asch∆|__his last 3 posts are about dogs__
+09:14:27 |c|+ABootToTheHead|TEMMIE GAME Y/N
+09:14:51 |c|%∆Gym Ldr. Waffles∆|i'm gonna destroy people in fifa
+09:14:52 |c|%∆Gym Ldr. Waffles∆|later
+09:15:01 |raw|-- <b><font color="#000000">∆Gym Ldr. Waffles∆</font></b> is now away. 
+09:15:01 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+09:15:01 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+09:15:01 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+09:15:26 |c|@∆Frontier Meows∆|waffles going to play soccer yo
+09:15:30 |userstats|total:12|guests:0| :1|+:1|$:0|%:3|@:2|★:0|#:0|&:3|~:2
+09:15:39 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|nah meows
+09:15:43 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|i'm playing it on playstation
+09:15:46 |c|@∆Frontier Meows∆|oh
+09:15:51 |c|@∆Frontier Meows∆|so you going to play e-soccer
+09:15:57 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|i played soccer in the morning 
+09:16:04 |c|+ABootToTheHead|why do you even still trust that company
+09:16:06 |c|&∆Frontier Asch∆|tempest
+09:16:11 |c|&∆Frontier Asch∆|the girl that designed temmie
+09:16:17 |c|&∆Frontier Asch∆|i'm going through her tweets rn and oh my god
+09:16:17 |c|+ABootToTheHead|didn't you have a hissy fit about them a few moments ago
+09:16:21 |c|&∆Frontier Asch∆|https://twitter.com/tuyoki
+09:16:24 |c|+ABootToTheHead|you mean... Temmie?
+09:16:30 |c|+ABootToTheHead|Temmie made Temmie
+09:16:33 |c|&∆Frontier Asch∆|yes
+09:16:34 |c|&∆Frontier Asch∆|tem
+09:16:35 |c|&∆Frontier Asch∆|temmie
+09:16:37 |c|&∆Frontier Asch∆|tuyoki
+09:16:43 |c|&∆Frontier Asch∆|i luv her
+09:16:52 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|Tempest
+09:16:54 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|the game is beautiful
+09:16:57 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|EA are dumb tho
+09:18:03 |c|+ABootToTheHead|so I think
+09:18:09 |c|+ABootToTheHead|Toby making Tem's character
+09:18:20 |c|+ABootToTheHead|is Toby actually replicating rl Temmie
+09:18:26 |c|+ABootToTheHead|because this shit is accurate as fuck
+09:19:13 |c|&∆Frontier Asch∆|"im very fast u see i move a mile an hour"
+09:19:38 |L| Nightanglet
+09:21:14 |L| gasp
+09:22:00 |c|&∆Frontier Asch∆|TEMPEST OH MY GOD
+09:22:01 |c|&∆Frontier Asch∆|https://www.youtube.com/watch?v=dRnE25-_zE0
+09:22:33 |L| ∆Frontier Meows∆
+09:22:51 |c|+ABootToTheHead|what the fuck am I watching
+09:23:38 |c|&∆Frontier Asch∆|idk either
+09:24:35 |c|+ABootToTheHead|asch
+09:24:37 |c|+ABootToTheHead|did u kno this
+09:24:38 |c|+ABootToTheHead|https://www.youtube.com/watch?v=L7Jzz0Vayyg
+09:25:24 |c|&∆Frontier Asch∆|TEMPEST
+09:25:24 |c|&∆Frontier Asch∆|HELP
+09:25:24 |c|&∆Frontier Asch∆|http://prntscr.com/945dd6
+09:25:30 |userstats|total:9|guests:0| :0|+:1|$:0|%:2|@:1|★:0|#:0|&:3|~:2
+09:25:43 |c|+ABootToTheHead|this is
+09:25:46 |c|+ABootToTheHead|literally rl tem
+09:25:46 |c|&∆Frontier Asch∆|"get the fuk a distance away from me"
+09:27:02 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|i hate you ea
+09:27:06 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|why are players so expensive 
+09:29:01 |c|&∆Frontier Asch∆|OH MY GOD TEMPEST
+09:29:05 |c|&∆Frontier Asch∆|IT MAKES SENSE NOW
+09:29:14 |c|&∆Frontier Asch∆|ON WHY IF YOU FLEX TEMMIE DIES
+09:29:16 |c|+ABootToTheHead|???
+09:29:27 |c|&∆Frontier Asch∆|"What is the story behind Aaron and why are you "reluctant" about creating him?" tem's response: horse muscles are icky
+09:30:57 |c|&∆Frontier Asch∆|wait
+09:31:02 |c|+ABootToTheHead|oh
+09:31:04 |c|&∆Frontier Asch∆|even tem doesn't know what the temmie ingame is
+09:31:12 |c|&∆Frontier Asch∆|"I liked it so much that I adapted it and modified it into a little avatar/mascot that I would use on a few social media sites (like my regular reblog-tumblr and steam) for several years. Then I would cameo in Undertale as that little dog cat thing."
+09:31:17 |c|&∆Frontier Asch∆|look at the last sentence
+09:31:44 |c|&∆Frontier Asch∆|it's apparently
+09:31:47 |c|&∆Frontier Asch∆|"a dog cat thing"
+09:31:54 |c|&∆Frontier Asch∆|that's what she refers to it as
+09:32:08 |c|+ABootToTheHead|...oh
+09:32:13 |c|+ABootToTheHead|with two ears apparently
+09:33:40 |c|&∆Frontier Asch∆|wait
+09:33:45 |c|&∆Frontier Asch∆|__Temmie's literally her name__
+09:33:52 |c|&∆Frontier Asch∆|it's not a nickname it's her n a m e
+09:34:19 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|wanna hear a joke?
+09:34:23 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|EA servers
+09:35:30 |userstats|total:9|guests:0| :0|+:1|$:0|%:2|@:1|★:0|#:0|&:3|~:2
+09:37:13 |c|&∆Frontier Asch∆|!!!
+09:37:15 |c|&∆Frontier Asch∆|tempest
+09:37:15 |c|~FrontierHead∆Risu|i got a better joke
+09:37:18 |c|~FrontierHead∆Risu|australian internet
+09:37:20 |c|&∆Frontier Asch∆|the bottom right one
+09:37:27 |c|+ABootToTheHead|wut
+09:37:27 |c|&∆Frontier Asch∆|gives me D E T E R M I N A T I O N http://36.media.tumblr.com/aa51c6fc377a8145b5bd7f3a489deb77/tumblr_nv2a9bgstj1qjod6ko1_1280.png
+09:37:50 |c|+ABootToTheHead|saaaaaaans 
+09:37:52 |c|+ABootToTheHead|best character
+09:37:57 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|Risu
+09:38:12 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|it took me 2 minutes to press the button "Send to club"
+09:39:52 |L| ∆Frontier Asch∆
+09:39:59 |c|~FrontierHead∆Risu|i get disconnected for no reason at all
+09:40:12 |c|~FrontierHead∆Risu|and get over 1000 ping in some games
+09:40:25 |c|~FrontierHead∆Risu|and its the best net we can get
+09:41:30 |J| ∆Frontier Asch∆
+09:41:30 |N|&∆Frontier Asch∆|frontierasch
+09:41:33 |c|&∆Frontier Asch∆|tempest
+09:41:34 |c|&∆Frontier Asch∆|tem gets me
+09:41:35 |c|&∆Frontier Asch∆|http://prntscr.com/945k5i
+09:42:01 |J| ∆Gym Ldr. WF∆
+09:42:01 |N|%∆Gym Ldr. WF∆|gymldrwf
+09:42:06 |c|~FrontierHead∆Risu|temp
+09:42:12 |c|~FrontierHead∆Risu|i just got a mac dair kill
+09:42:17 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|do you have 4g in australia risu?
+09:42:25 |c|~FrontierHead∆Risu|the city only
+09:42:30 |c|~FrontierHead∆Risu|like the cbd
+09:42:32 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|rip
+09:43:22 |c|+ABootToTheHead|rip
+09:43:52 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|this is like the 5th time i get disconnected from the ea servers in 15 minute
+09:43:54 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|minutes*
+09:44:08 |c|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|i hope they don't think i'm a bot and ban me for sniping players
+09:45:30 |userstats|total:10|guests:0| :0|+:1|$:0|%:3|@:1|★:0|#:0|&:3|~:2
+09:45:33 |L| ∆Frontier Zachary∆
+09:55:30 |userstats|total:9|guests:0| :0|+:1|$:0|%:3|@:0|★:0|#:0|&:3|~:2
+09:56:49 |L| ∆E4 Terror∆
+09:57:10 |J| ∆E4 Terror∆
+09:57:10 |N|&∆E4 Terror∆|e4terror
+10:00:09 |c|%∆Gym Ldr. WF∆|alright
+10:00:11 |c|%∆Gym Ldr. WF∆|I'm back
+10:00:25 |c|%∆Gym Ldr. WF∆|Imma move to my game room now
+10:00:32 |c|%∆Gym Ldr. WF∆|Imma add you now Risu and Noah
+10:00:45 |c|&∆E4 Silvy∆- ⒶⒻⓀ|"game room"
+10:00:49 |c|&∆E4 Silvy∆- ⒶⒻⓀ|Rich feg
+10:00:57 |c|&∆E4 Silvy∆- ⒶⒻⓀ|brb coming over to your house
+10:00:59 |c|&∆E4 Silvy∆- ⒶⒻⓀ|jkjk
+10:01:08 |c|&∆E4 Silvy∆- ⒶⒻⓀ|ok away again~
+10:01:14 |c|%∆Gym Ldr. WF∆|I just call it a game room
+10:01:25 |c|%∆Gym Ldr. WF∆|because it literally has nothing but a chair or a sofa and just games and consoles
+10:01:45 |c|%∆Gym Ldr. WF∆|there's no special posters or what not or any wall designs
+10:02:43 |c|~FrontierHead∆Risu|okay tell us when uve sent requests
+10:03:09 |c|&∆Frontier Asch∆|o tempest
+10:03:17 |c|&∆Frontier Asch∆|i just saw an actual pic of tem
+10:03:32 |c|&∆Frontier Asch∆|her hair's exactly how it is in temmie's sprite
+10:05:30 |userstats|total:9|guests:0| :0|+:1|$:0|%:3|@:0|★:0|#:0|&:3|~:2
+10:11:06 |c|&∆Frontier Asch∆|AAAAAAAAAAAAAAAAAA
+10:11:07 |c|&∆Frontier Asch∆|tempest
+10:11:19 |c|&∆Frontier Asch∆|i just found an anime that i feel like i should watch bc it soudns silly
+10:11:46 |L| ABootToTheHead
+10:15:12 |L| ∆Frontier Asch∆
+10:15:30 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:2|~:2
+10:15:48 |c|%∆Gym Ldr. WF∆|alright Risu
+10:15:53 |c|%∆Gym Ldr. WF∆|sent the friend request
+10:16:03 |c|~FrontierHead∆Risu|okay
+10:16:16 |J|%∆Gym Ldr Bigo∆
+10:16:16 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+10:16:19 |c|%∆Gym Ldr Bigo∆|hay
+10:17:06 |c|~FrontierHead∆Risu|added
+10:17:44 |c|~FrontierHead∆Risu|join up
+10:17:45 |N|&∆E4 Silvy∆|e4silvy
+10:17:45 |N|&∆E4 Silvy∆|e4silvy
+10:17:45 |raw|-- <b><font color="#000000">∆E4 Silvy∆</font></b> is back.
+10:17:45 |N|&∆E4 Silvy∆|e4silvy
+10:18:19 |c|~∆Champiön Nöah∆|Liking how my new Toon Link is coming along
+10:18:30 |c|~FrontierHead∆Risu|no comment
+10:18:38 |c|~∆Champiön Nöah∆|I saw some guy get to Grands in a MVG tournament using him
+10:18:42 |c|~∆Champiön Nöah∆|Inspired me to give him a shot
+10:18:46 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+10:18:57 |c|~FrontierHead∆Risu|u gonna join core
+10:19:04 |c|%∆Gym Ldr. WF∆|yeah
+10:19:07 |c|%∆Gym Ldr. WF∆|wait plz
+10:19:09 |c|~FrontierHead∆Risu|kk
+10:19:24 |N|&∆E4 Silvy∆|e4silvy
+10:20:02 |c|%∆Gym Ldr. WF∆|it might lag just so you know
+10:20:09 |c|%∆Gym Ldr. WF∆|for me that is
+10:20:24 |c|~FrontierHead∆Risu|i get lag on FG but not with friends
+10:20:28 |c|~FrontierHead∆Risu|dont ask how or why
+10:20:42 |c|~FrontierHead∆Risu|i get a solid second input delay on FG
+10:20:44 |c|%∆Gym Ldr. WF∆|k I found the room
+10:20:49 |c|%∆Gym Ldr. WF∆|wait wot
+10:20:55 |c|%∆Gym Ldr. WF∆|I failed to connect to ur device?
+10:20:58 |c|~FrontierHead∆Risu|gdi noah
+10:21:05 |c|~∆Champiön Nöah∆|lol
+10:21:07 |c|~∆Champiön Nöah∆|ok night guys
+10:21:08 |c|~FrontierHead∆Risu|called it
+10:21:09 |c|~∆Champiön Nöah∆|Have fun
+10:21:14 |c|%∆Gym Ldr. WF∆|why?
+10:21:14 |c|~FrontierHead∆Risu|catchya
+10:21:16 |c|~FrontierHead∆Risu|try again
+10:21:16 |c|%∆Gym Ldr. WF∆|what's wrong?
+10:21:19 |c|%∆Gym Ldr. WF∆|anyways
+10:21:23 |c|~∆Champiön Nöah∆|Closed NAT type
+10:21:24 |c|%∆Gym Ldr. WF∆|g'night Noah
+10:21:26 |c|~∆Champiön Nöah∆|Shit modem
+10:21:33 |c|~FrontierHead∆Risu|his net doesnt let anyone other than me bam and akkie play against him
+10:21:40 |c|%∆Gym Ldr. WF∆|oh ok then
+10:22:00 |L| ∆Champiön Nöah∆
+10:22:12 |c|%∆Gym Ldr. WF∆|might lag soz
+10:22:18 |c|%∆Gym Ldr. WF∆|so if in case I am doing something stupid
+10:22:47 |c|%∆Gym Ldr. WF∆|damn the lag tho XD
+10:23:18 |c|%∆Gym Ldr. WF∆|HOLY FUCK
+10:24:12 |c|~FrontierHead∆Risu|rip
+10:24:15 |c|%∆Gym Ldr. WF∆|ok that was weird.
+10:24:23 |c|%∆Gym Ldr. WF∆|Imma change my internet settings
+10:24:28 |c|%∆Gym Ldr. WF∆|gonna check and see what's wrong
+10:25:28 |c|~FrontierHead∆Risu|meh my bro might just be on twitch
+10:25:30 |userstats|total:7|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:2|~:1
+10:27:23 |J| ∆Frontier Asch∆
+10:27:23 |N|&∆Frontier Asch∆|frontierasch
+10:27:43 |c|~FrontierHead∆Risu|yes he is on twitch
+10:28:37 |c|%∆Gym Ldr. WF∆|ok
+10:28:38 |c|%∆Gym Ldr. WF∆|back
+10:28:43 |c|%∆Gym Ldr. WF∆|gonna go to ur room again
+10:31:33 |c|%∆Gym Ldr. WF∆|this lag tho
+10:31:41 |c|%∆Gym Ldr. WF∆|I swear I'm moving.
+10:31:52 |c|%∆Gym Ldr. WF∆|rip.
+10:31:59 |c|%∆Gym Ldr. WF∆|I just teleported to one side
+10:32:00 |c|~FrontierHead∆Risu|man that was going so well too
+10:32:03 |c|~FrontierHead∆Risu|really
+10:32:06 |c|~FrontierHead∆Risu|i saw u move
+10:32:12 |c|%∆Gym Ldr. WF∆|I can't handle this lag :(
+10:32:13 |c|~FrontierHead∆Risu|i just had an input delay
+10:32:21 |c|%∆Gym Ldr. WF∆|soz
+10:32:24 |c|~FrontierHead∆Risu|it was almost fine for me until the spike
+10:32:25 |c|%∆Gym Ldr. WF∆|Philippines Wifi shit
+10:32:26 |c|~FrontierHead∆Risu|no worries
+10:32:30 |c|~FrontierHead∆Risu|same with aus
+10:32:41 |c|%∆Gym Ldr. WF∆|If I was in Korea
+10:32:45 |c|%∆Gym Ldr. WF∆|then that would be a different case
+10:32:52 |c|%∆Gym Ldr. WF∆|I would be able to do something at the least
+10:32:54 |c|~FrontierHead∆Risu|and i mean ur a good melee player
+10:32:59 |c|~FrontierHead∆Risu|any lag will affect u badly
+10:33:12 |c|%∆Gym Ldr. WF∆|ty
+10:33:14 |c|~FrontierHead∆Risu|np
+10:33:15 |c|%∆Gym Ldr. WF∆|yeah true
+10:33:21 |c|%∆Gym Ldr. WF∆|Melee players hate lag lolz
+10:33:33 |c|~FrontierHead∆Risu|im a sm4sh player, im use to maybe a few frames
+10:33:52 |c|~FrontierHead∆Risu|but the end there is kinda what me playing FG is like
+10:34:24 |L| ∆Gym Ldr. Waffles∆- ⒶⒻⓀ
+10:34:24 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+10:34:24 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+10:34:24 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+10:34:58 |c|~FrontierHead∆Risu|oo rival of aether got a patch and alpharad has posted a vid on it
+10:35:18 |c|~FrontierHead∆Risu|new character
+10:35:30 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:3|~:1
+10:36:00 |c|~FrontierHead∆Risu|more broken than meta knight
+10:36:40 |c|~FrontierHead∆Risu|hype there core, comes out 19th
+10:36:56 |c|%∆Gym Ldr. WF∆|cool
+10:37:01 |c|%∆Gym Ldr. WF∆|since I do have Rivals
+10:37:04 |c|%∆Gym Ldr. WF∆|RoA*
+10:37:05 |c|~FrontierHead∆Risu|absa
+10:37:07 |c|%∆Gym Ldr. WF∆|I can play
+10:37:23 |c|~FrontierHead∆Risu|more broken than meta knight **in brawl**
+10:39:25 |c|%∆Gym Ldr. WF∆|ok
+10:39:28 |c|%∆Gym Ldr. WF∆|how is that even fair.
+10:39:48 |c|%∆Gym Ldr. WF∆|fucking F-Tilt is a fucking lightning bolt
+10:41:59 |c|&∆Frontier Asch∆|rivals of aether looks nice
+10:42:02 |c|&∆Frontier Asch∆|if only i had money
+10:42:12 |c|%∆Gym Ldr. WF∆|why am I playing Smash 4 right now
+10:42:15 |c|%∆Gym Ldr. WF∆|I have melee
+10:42:20 |c|%∆Gym Ldr. WF∆|oh well
+10:43:01 |c|~FrontierHead∆Risu|lol
+10:44:46 |J|~∆Chаmpion Bart∆
+10:44:46 |N|~∆Chаmpion Bart∆|chmpionbart
+10:44:52 |c|%∆Gym Ldr. WF∆|Imma try FG
+10:44:57 |c|%∆Gym Ldr. WF∆|gonna check if it lags like hell
+10:45:07 |c|~∆Chаmpion Bart∆|fuck
+10:45:15 |c|~∆Chаmpion Bart∆|i fell asleep on a couch
+10:45:30 |userstats|total:8|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:3|~:2
+10:45:34 |c|%∆Gym Ldr. WF∆|like the thing about playing Melee
+10:45:48 |c|~FrontierHead∆Risu|haha
+10:45:48 |c|%∆Gym Ldr. WF∆|is that once you start playing for a long time
+10:45:52 |c|%∆Gym Ldr. WF∆|you see every other game as slow
+10:47:18 |c|%∆Gym Ldr. WF∆|fucking two stocked this Ness
+10:47:20 |c|%∆Gym Ldr. WF∆|holy shit
+10:47:28 |c|%∆Gym Ldr. WF∆|why does my For Glory not lag.
+10:47:32 |c|%∆Gym Ldr. WF∆|this Ness got raped
+10:47:34 |c|%∆Gym Ldr. WF∆|by my ROB
+10:47:42 |c|%∆Gym Ldr. WF∆|and this guy was Japanese....
+10:48:19 |J|@Bamdee
+10:48:19 |N|@Bamdee|bamdee
+10:48:21 |c|@Bamdee|hey there kiddos
+10:48:47 |c|%∆Gym Ldr. WF∆|hi Bam
+10:50:38 |c|%∆Gym Ldr. WF∆|well this ZSS fucking styled on me
+10:50:43 |c|%∆Gym Ldr. WF∆|dear god
+10:50:47 |c|%∆Gym Ldr. WF∆|that ZSS was good
+10:51:55 |c|%∆Gym Ldr. WF∆|holy shit
+10:51:58 |c|%∆Gym Ldr. WF∆|I met a Little Mac
+10:52:01 |c|%∆Gym Ldr. WF∆|SIDE B OFFSTAGE.
+10:52:17 |c|~FrontierHead∆Risu|rip
+10:54:15 |c|%∆Gym Ldr. WF∆|RISU
+10:54:19 |c|%∆Gym Ldr. WF∆|I THINK I JUST MET MAD DAWG
+10:54:25 |c|~FrontierHead∆Risu|:O
+10:54:29 |c|%∆Gym Ldr. WF∆|DIS GANON SUCKS SO MUCH
+10:54:35 |c|%∆Gym Ldr. WF∆|HE GOT SHIELD BROKEN
+10:54:37 |c|~FrontierHead∆Risu|~~nah thats leaf~~
+10:54:40 |c|@Bamdee|probs risu lmao
+10:55:30 |userstats|total:9|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:3|~:2
+10:56:45 |N|&∆E4 Silvy∆|e4silvy
+10:56:45 |N|&∆E4 Silvy∆|e4silvy
+10:56:45 |N|&∆E4 Silvy∆|e4silvy
+10:57:09 |c|%∆Gym Ldr. WF∆|HARD ASS READS
+10:57:18 |c|%∆Gym Ldr. WF∆|fuck ur ez bake combos ZSS
+10:57:23 |c|%∆Gym Ldr. WF∆|Ike shall rule
+11:00:51 |c|%∆Gym Ldr. WF∆|wow this guy
+11:00:56 |c|%∆Gym Ldr. WF∆|goes Mario to counter my Ike
+11:03:26 |c|~∆Chаmpion Bart∆|dafuq's mad dawg?
+11:03:48 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+11:03:48 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+11:03:48 |N|&∆E4 Silvy∆- ⒶⒻⓀ|e4silvy
+11:03:55 |J| Nightanglet
+11:04:00 |c|~FrontierHead∆Risu|....
+11:04:03 |c|~FrontierHead∆Risu|he isnt a memer
+11:04:13 |c|~FrontierHead∆Risu|SACRIFICE HIM
+11:04:14 |c| Nightanglet|4moarholidays4me
+11:04:26 |c|%∆Gym Ldr. WF∆|holy shit
+11:04:28 |c|%∆Gym Ldr. WF∆|dis guy
+11:04:31 |c|%∆Gym Ldr. WF∆|he changed his tag
+11:04:34 |c|%∆Gym Ldr. WF∆|to MY REAL MAIN
+11:04:42 |c|~FrontierHead∆Risu|rip
+11:04:50 |c|~FrontierHead∆Risu|mad dawg wannabe
+11:04:53 |c|%∆Gym Ldr. WF∆|I'm having so much fun
+11:05:00 |c|%∆Gym Ldr. WF∆|Dis guy got JV3'd by my Ganon
+11:05:15 |c|%∆Gym Ldr. WF∆|Enough FG for me today....
+11:05:22 |c|~FrontierHead∆Risu|;-;
+11:05:30 |userstats|total:10|guests:0| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:3|~:2
+11:07:23 |L| ∆Gym Ldr Bigo∆
+11:13:32 |c|%∆Gym Ldr. WF∆|well I guess Imma sleep as well
+11:13:35 |c|%∆Gym Ldr. WF∆|cya guys
+11:13:36 |html|<center><span style = "color:#2300af"><b>~~ ∆Gym Ldr. WF∆ was incinerated by Magcargo! ~~</b></span>
+11:13:36 |L|%∆Gym Ldr. WF∆
+11:15:30 |userstats|total:8|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:3|~:2
+11:24:07 |c| Nightanglet|ded
+11:25:30 |userstats|total:8|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:3|~:2
+11:26:36 |L| ∆E4 Terror∆
+11:35:30 |userstats|total:7|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:2
+11:37:34 |c| Nightanglet|dieded
+11:37:50 |L| ∆Chаmpion Bart∆
+11:45:30 |userstats|total:6|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:1
+11:55:30 |userstats|total:6|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:1
+11:57:46 |L| Nightanglet
+12:02:26 |L| ∆Frontier Asch∆
+12:03:44 |J| ∆Frontier Asch∆
+12:03:44 |N|&∆Frontier Asch∆|frontierasch
+12:05:30 |userstats|total:5|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:2|~:1
+12:12:41 |L| ∆Frontier Asch∆
+12:15:30 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:1
+12:22:29 |J| ∆Frontier Asch∆
+12:22:29 |N|&∆Frontier Asch∆|frontierasch
+12:22:32 |L| ∆Frontier Asch∆
+12:25:30 |userstats|total:4|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:1
+12:27:38 |raw|<div class="broadcast-red"><b>Moderated chat was set to +!</b><br />Only users of rank + and higher can talk.</div>
+12:27:45 |html|<center><span style = "color:#e87f00"><b>~~ FrontierHead∆Risu IS REALLY FEELING IT ~~</b></span>
+12:27:45 |L|~FrontierHead∆Risu
+12:32:41 |L| Bamdee
+12:35:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+12:45:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+12:54:32 |J| ∆Frontier Asch∆
+12:54:32 |N|&∆Frontier Asch∆|frontierasch
+12:55:21 |L| ∆Frontier Asch∆
+12:55:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+13:05:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+13:15:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+13:25:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+13:35:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+13:41:55 |L| ∆E4 Silvy∆- ⒶⒻⓀ
+13:45:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+13:55:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:05:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:15:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:25:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:35:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:45:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:55:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+15:05:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+15:15:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+15:18:38 |J|%∆Gym Ldr. You∆
+15:18:38 |N|%∆Gym Ldr. You∆|gymldryou
+15:25:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+15:28:36 |L| ∆Gym Ldr. You∆
+15:30:19 |J| ∆Gym Ldr. You∆
+15:30:19 |N|%∆Gym Ldr. You∆|gymldryou
+15:30:32 |N|%∆Gym Ldr. You∆|gymldryou
+15:30:33 |N|%∆Gym Ldr. You∆|gymldryou
+15:30:36 |N|%∆Gym Ldr. You∆|gymldryou
+15:30:58 |J| Simbacaned2
+15:31:00 |L| Simbacaned2
+15:31:04 |N|%∆Gym Ldr. You∆|gymldryou
+15:31:09 |L| ∆Gym Ldr. You∆
+15:34:21 |J| ∆Gym Ldr. You∆
+15:34:21 |N|%∆Gym Ldr. You∆|gymldryou
+15:35:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+15:38:13 |L| ∆Gym Ldr. You∆
+15:40:52 |J| Simbacaned2
+15:41:08 |L| Simbacaned2
+15:45:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+15:46:24 |J| Simbacaned2
+15:47:25 |L| Simbacaned2
+15:55:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+16:05:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+16:15:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+16:25:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+16:35:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+16:39:21 |J|%∆Gym Ldr. You∆
+16:39:21 |N|%∆Gym Ldr. You∆|gymldryou
+16:45:30 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+16:46:58 |J| TaiWhale
+16:47:35 |J| tinadarling
+16:49:36 |J|@Neith Cass
+16:49:36 |N|@Neith Cass|neithcass
+16:49:42 |J| Gym TRNR HK5
+16:50:00 |L| gymtrnrhk5
+16:50:02 |raw|<div class="broadcast-red"><b>Moderated chat was set to autoconfirmed!</b><br />Only users of rank autoconfirmed and higher can talk.</div>
+16:50:28 |J| Hawkatana5
+16:52:36 |L| ∆Gym Ldr. You∆
+16:54:51 |J|%∆Gym Ldr. You∆
+16:54:51 |N|%∆Gym Ldr. You∆|gymldryou
+16:54:57 |c|%∆Gym Ldr. You∆|hi
+16:55:14 |c|%∆Gym Ldr. You∆|seriously 6 people on???
+16:55:30 |userstats|total:6|guests:0| :3|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+16:57:48 |c|%∆Gym Ldr. You∆|wow...
+16:58:19 |J| TheDungTran :^)
+16:58:43 |c|%∆Gym Ldr. You∆|7 people o.o
+17:00:09 |L| Neith Cass
+17:01:06 |L|%∆Gym Ldr. You∆
+17:01:17 |J|%∆Gym Ldr. You∆
+17:01:17 |N|%∆Gym Ldr. You∆|gymldryou
+17:02:03 |J| Breyn
+17:02:57 |L| Breyn
+17:05:30 |userstats|total:6|guests:0| :4|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+17:07:51 |L| ∆Gym Ldr. You∆
+17:11:33 |L| TheDungTran :^)
+17:11:56 |L| tinadarling
+17:12:01 |L| TaiWhale
+17:15:30 |userstats|total:3|guests:1| :2|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+17:19:41 |J|@Neith Cass
+17:19:41 |N|@Neith Cass|neithcass
+17:25:30 |userstats|total:4|guests:1| :2|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+17:30:09 |L| ∆Gym Ldr Arjunb∆
+17:33:52 |L| Neith Cass
+17:35:30 |userstats|total:1|guests:0| :1|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:45:30 |userstats|total:1|guests:0| :1|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:55:30 |userstats|total:1|guests:0| :1|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+18:05:30 |userstats|total:1|guests:0| :1|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+18:15:30 |userstats|total:1|guests:0| :1|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+18:16:49 |J|%Gym Ldr. Dogelord
+18:16:49 |N|%Gym Ldr. Dogelord|gymldrdogelord
+18:18:37 |L| Hawkatana5
+18:25:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:30:55 |L| Gym Ldr. Dogelord
+18:35:30 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+18:42:43 |J| Gym Ldr. Dogelord
+18:42:43 |N|%Gym Ldr. Dogelord|gymldrdogelord
+18:45:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:50:34 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+18:50:34 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+18:55:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+19:05:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+19:09:04 |J| Hawkatana5
+19:09:15 |L| hawkatana5
+19:09:30 |J| Gym TRNR HK5
+19:11:54 |J|%∆Gym Ldr. You∆
+19:11:54 |N|%∆Gym Ldr. You∆|gymldryou
+19:12:46 |L| ∆Gym Ldr. You∆
+19:15:30 |userstats|total:2|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+19:25:30 |userstats|total:2|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+19:27:56 |J| ∆Gym Ldr. You∆
+19:27:56 |N|%∆Gym Ldr. You∆|gymldryou
+19:28:01 |J| Blackelpie
+19:35:30 |userstats|total:4|guests:0| :2|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+19:38:23 |J| ThatTrumpetGuy
+19:42:05 |L| Blackelpie
+19:42:07 |J| Blackelpie
+19:43:49 |L| Gym TRNR HK5
+19:45:30 |userstats|total:4|guests:0| :2|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+19:55:30 |userstats|total:4|guests:0| :2|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+19:55:49 |c| ThatTrumpetGuy|GG
+20:02:08 |c|%∆Gym Ldr. You∆|wot
+20:04:22 |c|%∆Gym Ldr. Dogelord∆|Pingas
+20:05:30 |userstats|total:4|guests:0| :2|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+20:11:55 |c|%∆Gym Ldr. You∆|u wot m8
+20:15:30 |userstats|total:4|guests:0| :2|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+20:19:26 |c|%∆Gym Ldr. Dogelord∆|pingas
+20:21:13 |L| ∆Gym Ldr. You∆
+20:23:34 |J|@Neith Cass
+20:23:34 |N|@Neith Cass|neithcass
+20:24:42 |L| Neith Cass
+20:24:58 |L| ThatTrumpetGuy
+20:25:00 |L| Blackelpie
+20:25:30 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+20:34:21 |J| Gym TRNR HK5
+20:35:30 |userstats|total:2|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+20:44:40 |J|@∆Frontier Zachary∆
+20:44:40 |N|@∆Frontier Zachary∆|frontierzachary
+20:45:30 |userstats|total:3|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+20:51:48 |J|+Imp Zeno
+20:51:48 |N|+Imp Zeno|impzeno
+20:55:30 |userstats|total:4|guests:0| :1|+:1|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+20:56:24 |L| Imp Zeno
+21:05:30 |userstats|total:3|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+21:08:55 |J|&∆Frontier Asch∆
+21:08:55 |N|&∆Frontier Asch∆|frontierasch
+21:11:22 |L| ∆Frontier Asch∆
+21:15:30 |userstats|total:3|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+21:25:30 |userstats|total:3|guests:0| :1|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+21:30:36 |J| Benno-G
+21:31:18 |L| ∆Frontier Zachary∆
+21:35:30 |userstats|total:3|guests:0| :2|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+21:44:54 |J|%∆Gym Ldr. You∆
+21:44:54 |N|%∆Gym Ldr. You∆|gymldryou
+21:45:30 |userstats|total:4|guests:0| :2|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+21:54:40 |J| ∆Frontier Zachary∆
+21:54:40 |N|@∆Frontier Zachary∆|frontierzachary
+21:55:30 |userstats|total:5|guests:0| :2|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+21:55:32 |raw|-- <b><font color="#000000">∆Frontier Zachary∆</font></b> is now busy.  (HEART GOLD RANDOMIZER NUZLOCKE)
+21:55:32 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+21:55:32 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+21:55:32 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+22:02:59 |L| Benno-G
+22:05:30 |userstats|total:4|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+22:15:30 |userstats|total:4|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+22:19:07 |N|%∆Gym Ldr. You∆|gymldryou
+22:20:31 |J|+ABootToTheHead
+22:25:30 |userstats|total:5|guests:0| :1|+:1|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+22:27:32 |c|%∆Gym Ldr. You∆|hi tempest
+22:27:37 |c|+ABootToTheHead|hai
+22:28:17 |c|%∆Gym Ldr. You∆|how to get 23 extra bucks to pay you...
+22:35:30 |userstats|total:5|guests:0| :1|+:1|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+22:37:23 |c|+ABootToTheHead|sell your body
+22:45:30 |userstats|total:5|guests:0| :1|+:1|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+22:48:38 |J| Damarton
+22:55:30 |userstats|total:6|guests:0| :2|+:1|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+23:01:19 |J|%∆Gym Ldr. WF∆
+23:01:19 |N|%∆Gym Ldr. WF∆|gymldrwf
+23:02:08 |L| Damarton
+23:05:11 |c|%∆Gym Ldr. You∆|;)
+23:05:30 |userstats|total:6|guests:0| :1|+:1|$:0|%:3|@:1|★:0|#:0|&:0|~:0
+23:05:34 |c|+ABootToTheHead|don't actually do that
+23:07:27 |L| ∆Frontier Zachary∆- ⒷⓊⓈⓎ
+23:10:32 |J|@Neith Cass
+23:10:32 |N|@Neith Cass|neithcass
+23:10:51 |c|@Neith Cass|hey temp
+23:15:30 |userstats|total:6|guests:0| :1|+:1|$:0|%:3|@:1|★:0|#:0|&:0|~:0
+23:17:10 |J| ∆Frontier Zachary∆- ⒷⓊⓈⓎ
+23:17:10 |N|@∆Frontier Zachary∆- ⒷⓊⓈⓎ|frontierzachary
+23:17:19 |N|@∆Frontier Zachary∆|frontierzachary
+23:17:19 |N|@∆Frontier Zachary∆|frontierzachary
+23:17:19 |raw|-- <b><font color="#000000">∆Frontier Zachary∆</font></b> is back.
+23:17:19 |N|@∆Frontier Zachary∆|frontierzachary
+23:17:23 |c|@∆Frontier Zachary∆|tempest im shocked
+23:17:35 |c|@∆Frontier Zachary∆|I didn't know you're gayu
+23:17:37 |c|@∆Frontier Zachary∆|*gay
+23:17:41 |c|@∆Frontier Zachary∆|or is youmaton a girl
+23:21:47 |L| Gym TRNR HK5
+23:23:03 |L| ∆Gym Ldr. You∆
+23:23:32 |L| Neith Cass
+23:25:17 |L| ∆Gym Ldr. WF∆
+23:25:30 |userstats|total:3|guests:0| :0|+:1|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+23:25:42 |L| ABootToTheHead
+23:30:09 |J| ∆Gym Ldr. You∆
+23:30:09 |N|%∆Gym Ldr. You∆|gymldryou
+23:31:08 |c|%∆Gym Ldr. You∆|back
+23:31:28 |c|%∆Gym Ldr. You∆|what about me zachary?
+23:35:30 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:0
+23:38:04 |J|@Neith Cass
+23:38:04 |N|@Neith Cass|neithcass
+23:38:06 |c|@Neith Cass|cunts 
+23:38:12 |c|%∆Gym Ldr. You∆|hi
+23:38:33 |c|@Neith Cass|sup
+23:40:45 |c|%∆Gym Ldr. You∆|um
+23:40:49 |c|%∆Gym Ldr. You∆|something
+23:44:04 |c|@∆Frontier Zachary∆|LT SURGE COMING RIGHT UP
+23:44:39 |c|%∆Gym Ldr. You∆|yay
+23:45:20 |c|@∆Frontier Zachary∆|has miltank and skitty
+23:45:27 |c|@∆Frontier Zachary∆|gosh are you a normal type ldr smh
+23:45:30 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:2|★:0|#:0|&:0|~:0
+23:45:56 |c|@∆Frontier Zachary∆|and spheal and lileep
+23:46:28 |c|@∆Frontier Zachary∆|and cyndaquil 
+23:46:29 |c|@∆Frontier Zachary∆|ggwp
+23:46:54 |c|@Neith Cass|am i still going ? 
+23:46:57 |c|@∆Frontier Zachary∆|yeap
+23:47:01 |c|@Neith Cass|fuck yeh 
+23:50:21 |c|%∆Gym Ldr. You∆|what have you named after me zachary?
+23:50:31 |c|@∆Frontier Zachary∆|politoed
+23:50:41 |c|%∆Gym Ldr. You∆|woot
+23:50:46 |c|%∆Gym Ldr. You∆|you using it?
+23:50:50 |c|@∆Frontier Zachary∆|no ew
+23:50:54 |c|@∆Frontier Zachary∆|it's a politoed without drizzle
+23:50:57 |c|%∆Gym Ldr. You∆|xD
+23:51:03 |c|%∆Gym Ldr. You∆|rip
+23:51:05 |c|@∆Frontier Zachary∆|I would but I have suicune, swampert and empoleon lining up so
+23:51:12 |c|%∆Gym Ldr. You∆|so its as useless as me
+23:53:48 |c|@Neith Cass|if i ever die in your nuzlocke i will hunt you down 
+23:54:05 |c|@Neith Cass|> pollited with drizzle 
+23:54:10 |c|@Neith Cass|> playing a gen 4 game 
+23:54:11 |c|@Neith Cass|ok 
+23:54:32 |c|@∆Frontier Zachary∆|that's the whole point neith
+23:54:37 |c|@∆Frontier Zachary∆|it's not drizzle becoz gen 4
+23:55:30 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:2|★:0|#:0|&:0|~:0
+23:56:59 |raw|-- <b><font color="#000000">∆Frontier Zachary∆</font></b> is now away.  (lunchies)
+23:56:59 |N|@∆Frontier Zachary∆- ⒶⒻⓀ|frontierzachary
+23:56:59 |N|@∆Frontier Zachary∆- ⒶⒻⓀ|frontierzachary
+23:56:59 |N|@∆Frontier Zachary∆- ⒶⒻⓀ|frontierzachary
