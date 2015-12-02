@@ -11,7 +11,7 @@ exports.commands = {
 	ateamnote: 'an',
 	an: function (target, room, user, connection, cmd) {
 		var ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
-			'bamdee':1, 'onyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabart': 1,
+			'bamdee':1, 'onyxeagle':1, 'soraonyx':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabarts': 1,
 			'soraninjarisu':1, 'soraneith': 1
 		};
 		if (!(user.userid in ateam)) return this.errorReply("The command \'/" + cmd + "\' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
