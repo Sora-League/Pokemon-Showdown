@@ -135,6 +135,8 @@ exports.commands = {
 	declareyellow: 'declare',
 	blackdeclare: 'declare',
 	declareblack: 'declare',
+	pinkdeclare: 'declare',
+	declarepink: 'declare',
 	declare: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
@@ -153,6 +155,9 @@ exports.commands = {
 				break;
 			case 'declareblack': case 'blackdeclare':
 				this.add('|raw|<div style = "background: #191919; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
+				break;
+			case 'declarepink': case 'pinkdeclare':
+				this.add('|raw|<div style = "background: #fc55af; color: black; padding: 2px 4px;"><b>' + target + '</b></div>');
 				break;
 			default: this.add('|raw|<div class="broadcast-blue"><b>' + target + '</b></div>');
 		}
