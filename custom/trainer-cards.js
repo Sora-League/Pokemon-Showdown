@@ -321,13 +321,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	
+	hydro: 'bug',
 	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			  '<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Hydro</b>∆<br />'+
+			  '<i>"Many underestimate bugs, because they are so small. But there are so many of them that dealing with them is still a pain, especially if they work together."</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			  '<b>Ace:</b> Heracross <br />' + seen('sorahydro') + getBadges('sorahydro'));
 	},
 
 	alcor: 'dark',
