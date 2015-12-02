@@ -1,0 +1,538 @@
+00:06:36 |L| ∆Sora Youmaton∆
+00:07:36 |userstats|total:5|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:2
+00:08:45 |J|%Sora Hydro
+00:08:45 |N|%Sora Hydro|sorahydro
+00:08:45 |N|%Sora Hydro|sorahydro
+00:09:01 |N|%∆Sora Hydro∆|sorahydro
+00:09:01 |N|%∆Sora Hydro∆|sorahydro
+00:10:42 (Sora Noah changed the roomintro.)
+00:10:58 |L|~Sora Noah
+00:11:05 |J|~Sora Noah
+00:11:05 |N|~Sora Noah|soranoah
+00:17:36 |userstats|total:6|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:2
+00:18:10 |L| Neith Cass
+00:23:27 |J|@∆Fröntier∆Blade☯
+00:23:27 |N|@∆Fröntier∆Blade☯|frntierblade
+00:24:51 |N| ∆Fröntier∆Blade☯|frntierblade
+00:27:36 |userstats|total:6|guests:0| :1|+:0|$:0|%:3|@:0|★:0|#:0|&:0|~:2
+00:34:44 |J|%∆Sora Youmaton∆
+00:34:44 |N|%∆Sora Youmaton∆|sorayoumaton
+00:37:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:4|@:0|★:0|#:0|&:0|~:2
+00:38:54 |L| gymldrarjunb
+00:38:57 |L|~Sora Noah
+00:38:59 |N| ∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|frntierblade
+00:38:59 |N| ∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|frntierblade
+00:38:59 |N| ∆Fröntier∆Blade☯- ⒷⓊⓈⓎ|frntierblade
+00:42:12 |N| FrontierHead∆Risu|soraninjarisu
+00:42:29 |N|~Sora Ninjarisu|frontierheadrisu
+00:43:33 |N| ∆Fröntier∆Blade☯|frntierblade
+00:43:33 |N| ∆Fröntier∆Blade☯|frntierblade
+00:43:33 |N| ∆Fröntier∆Blade☯|frntierblade
+00:43:41 |N|@Blazing360|frntierblade
+00:43:44 |J|@Neith Cass
+00:43:44 |N|@Neith Cass|neithcass
+00:43:51 |N|@Neith Cass|neithcass
+00:45:24 |raw|<div class="broadcast-red"><b>For AVI transfer talk to RISU, for MONEY transfer /transferbuck user. TOUR ELO Will RESET</b></div>
+00:47:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+00:50:22 |J|@Coach Abadon
+00:50:22 |N|@Coach Abadon|coachabadon
+00:51:25 |L| Coach Abadon
+00:57:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+01:07:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+01:07:48 |N| Sora Blade|blazing360
+01:08:38 |N|@Blazing360|sorablade
+01:17:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+01:27:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+01:37:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+01:42:40 |J|%Gym Ldr. Dogelord
+01:42:40 |N|%Gym Ldr. Dogelord|gymldrdogelord
+01:42:56 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+01:42:56 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+01:46:06 |N| ∆Gym Ldr. Dogelord∆|gymldrdogelord
+01:47:36 |userstats|total:8|guests:1| :2|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+01:50:58 |L| Neith Cass
+01:51:18 |L| gymldrdogelord
+01:52:51 |J|%Sora Memelord
+01:52:51 |N|%Sora Memelord|soramemelord
+01:52:51 |N|%Sora Memelord|soramemelord
+01:53:12 |N|%∆Sora Memelord∆|soramemelord
+01:53:12 |N|%∆Sora Memelord∆|soramemelord
+01:55:40 |L| ∆Sora Memelord∆
+01:57:36 |userstats|total:6|guests:1| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1
+02:02:20 |raw|<div class="broadcast-red"><b>Badge Transfer either Risu or Blade</b></div>
+02:05:01 |J|@Frontier Meows
+02:05:01 |N|@Frontier Meows|frontiermeows
+02:05:49 |N|@Frontier Meows|frontiermeows
+02:06:01 |N|@∆Frontier Meows∆|frontiermeows
+02:06:01 |N|@∆Frontier Meows∆|frontiermeows
+02:07:18 |N| ∆Frontier Meows∆|frontiermeows
+02:07:36 |userstats|total:7|guests:1| :2|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1
+02:08:06 |N| Sora Meows|frontiermeows
+02:08:28 |N|@Sora Meows|sorameows
+02:09:01 |N|@∆Sora Meows∆|sorameows
+02:09:01 |N|@∆Sora Meows∆|sorameows
+02:16:23 |L| ∆Sora Meows∆
+02:17:19 |J|&E4 Edge
+02:17:19 |N|&E4 Edge|e4edge
+02:17:25 |N|&∆E4 Edge∆|e4edge
+02:17:25 |N|&∆E4 Edge∆|e4edge
+02:17:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:1|~:1
+02:17:43 |J|@Sora Zachary
+02:17:43 |N|@Sora Zachary|sorazachary
+02:17:43 |N|@Sora Zachary|sorazachary
+02:18:13 |N|@∆Sora Zachary∆|sorazachary
+02:18:13 |N|@∆Sora Zachary∆|sorazachary
+02:19:09 |N|%∆Sora Youmaton∆- ⒶⒻⓀ|sorayoumaton
+02:19:09 |N|%∆Sora Youmaton∆- ⒶⒻⓀ|sorayoumaton
+02:19:09 |N|%∆Sora Youmaton∆- ⒶⒻⓀ|sorayoumaton
+02:19:36 |N| Frontier Zachary|sorazachary
+02:20:17 |N| Sora Edge|e4edge
+02:20:37 |N| Sora Edge|soraedge
+02:20:37 |N| Sora Edge|soraedge
+02:20:58 |N|&Sora Edge|soraedge
+02:20:59 |N| Sora Zachary|frontierzachary
+02:21:05 |N|&∆Sora Edge∆|soraedge
+02:21:05 |N|&∆Sora Edge∆|soraedge
+02:21:22 |N|@Sora Zachary|sorazachary
+02:21:24 |N|&E4 Edge|soraedge
+02:21:46 |L| E4 Edge
+02:21:53 |J|&E4 Edge
+02:21:53 |N|&E4 Edge|e4edge
+02:22:04 |N|&Sora Edge|e4edge
+02:22:11 |N|@∆Sora Zachary∆|sorazachary
+02:22:11 |N|@∆Sora Zachary∆|sorazachary
+02:22:25 |J|@Neith Cass
+02:22:25 |N|@Neith Cass|neithcass
+02:22:31 |N|@Neith Cass|neithcass
+02:22:58 |L| ∆Sora Zachary∆
+02:23:00 |J|@∆Sora Zachary∆
+02:23:00 |N|@∆Sora Zachary∆|sorazachary
+02:23:09 |c|@Blazing360|Any other questions about server side info pls pm me
+02:23:58 |N|~Sora Ninjarisu- ⒶⒻⓀ|soraninjarisu
+02:23:58 |N|~Sora Ninjarisu- ⒶⒻⓀ|soraninjarisu
+02:23:58 |N|~Sora Ninjarisu- ⒶⒻⓀ|soraninjarisu
+02:27:36 |userstats|total:9|guests:1| :1|+:0|$:0|%:3|@:3|★:0|#:0|&:1|~:1
+02:30:05 |J|@∆Sora Meows∆
+02:30:05 |N|@∆Sora Meows∆|sorameows
+02:32:44 |N|~Sora Ninjarisu|soraninjarisu
+02:32:44 |N|~Sora Ninjarisu|soraninjarisu
+02:32:44 |N|~Sora Ninjarisu|soraninjarisu
+02:33:50 |L| ∆Sora Hydro∆
+02:35:06 |N|%∆Sora Leaf∆|soraleaf
+02:36:23 |N|@∆Sora Zachary∆- ⒶⒻⓀ|sorazachary
+02:36:23 |N|@∆Sora Zachary∆- ⒶⒻⓀ|sorazachary
+02:36:23 |N|@∆Sora Zachary∆- ⒶⒻⓀ|sorazachary
+02:36:38 |raw|<div style = "background: #ffe100; color: black; padding: 2px 4px;"><b>An error message seems to happen when you try to transfer bucks, just let an admin do it for you</b></div>
+02:37:36 |userstats|total:9|guests:1| :1|+:0|$:0|%:2|@:4|★:0|#:0|&:1|~:1
+02:38:13 |L|@∆Sora Zachary∆- ⒶⒻⓀ
+02:39:49 |L|@∆Sora Meows∆
+02:42:43 |N| gymldralcor|soraleaf
+02:43:00 |L| Neith Cass
+02:43:45 |N|%Sora Leaf|gymldralcor
+02:43:48 |N|%∆Sora Leaf∆|soraleaf
+02:43:48 |N|%∆Sora Leaf∆|soraleaf
+02:47:36 |userstats|total:6|guests:1| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:1|~:1
+02:50:27 (Sora Ninjarisu changed the roomintro.)
+02:52:06 |J|%∆Sora Memelord∆
+02:52:06 |N|%∆Sora Memelord∆|soramemelord
+02:52:33 |L| ∆Sora Memelord∆
+02:56:30 |J|%∆Sora Hydro∆
+02:56:30 |N|%∆Sora Hydro∆|sorahydro
+02:57:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:1|~:1
+03:02:54 |L| Sora Edge
+03:07:36 |userstats|total:6|guests:1| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1
+03:09:38 |J|&E4 Barney
+03:09:38 |N|&E4 Barney|e4barney
+03:09:56 |N| E4 Barney|e4barney
+03:10:10 |N| Sora Connor|e4barney
+03:10:19 |N|&Sora Connor|soraconnor
+03:12:27 |N|@Blazing360 - ⒹⓘⓝⒹⓘⓝⓢ|blazing360
+03:12:27 |N|@Blazing360 - ⒹⓘⓝⒹⓘⓝⓢ|blazing360
+03:12:27 |N|@Blazing360 - ⒹⓘⓝⒹⓘⓝⓢ|blazing360
+03:14:41 |L| Sora Connor
+03:14:45 |J|&Sora Connor
+03:14:45 |N|&Sora Connor|soraconnor
+03:15:21 |L| Sora Connor
+03:17:16 |J|@∆Sora Meows∆
+03:17:16 |N|@∆Sora Meows∆|sorameows
+03:17:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+03:25:00 |N|@∆Sora Meows∆|sorameows
+03:27:36 |userstats|total:7|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:0|~:1
+03:29:53 |L| Blazing360 - ⒹⓘⓝⒹⓘⓝⓢ
+03:35:34 |J|@∆Sora Zachary∆- ⒶⒻⓀ
+03:35:34 |N|@∆Sora Zachary∆- ⒶⒻⓀ|sorazachary
+03:35:36 |N|@∆Sora Zachary∆|sorazachary
+03:35:36 |N|@∆Sora Zachary∆|sorazachary
+03:35:36 |N|@∆Sora Zachary∆|sorazachary
+03:36:06 |J|&E4 Terror
+03:36:06 |N|&E4 Terror|e4terror
+03:36:22 |N| E4 Terror|e4terror
+03:36:33 |N| Sora Terror|e4terror
+03:37:24 |N|&Sora Terror|soraterror
+03:37:36 |userstats|total:8|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+03:38:35 |N|&∆Sora Terror∆|soraterror
+03:38:35 |N|&∆Sora Terror∆|soraterror
+03:39:32 |N| Sora Meme|soraterror
+03:39:44 |N|&Sora Terror|sorameme
+03:39:47 |N|&∆Sora Terror∆|soraterror
+03:39:47 |N|&∆Sora Terror∆|soraterror
+03:42:16 |c|&∆Sora Terror∆|;_;
+03:42:18 |c|&∆Sora Terror∆|Shit colour
+03:42:37 |c|~Sora Ninjarisu|cant fine fuck to give
+03:42:53 |c|~Sora Ninjarisu|cause im too fine #savedit
+03:47:36 |userstats|total:8|guests:1| :1|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+03:47:48 |L| ∆Sora Meows∆
+03:50:39 |J|@Blazing360 - ⒹⓘⓝⒹⓘⓝⓢ
+03:50:39 |N|@Blazing360 - ⒹⓘⓝⒹⓘⓝⓢ|blazing360
+03:51:21 |J| Sorarjun
+03:53:44 |N| Sora Arjunb|sorarjun
+03:54:17 |N|%Sora Arjunb|soraarjunb
+03:55:48 |N|%∆Sora Arjunb∆|soraarjunb
+03:55:48 |N|%∆Sora Arjunb∆|soraarjunb
+03:57:31 |N|%∆Sora Youmaton∆|sorayoumaton
+03:57:31 |N|%∆Sora Youmaton∆|sorayoumaton
+03:57:31 |N|%∆Sora Youmaton∆|sorayoumaton
+03:57:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:2|★:0|#:0|&:1|~:1
+03:57:36 |L| ∆Sora Youmaton∆
+03:57:38 |J|%∆Sora Youmaton∆
+03:57:38 |N|%∆Sora Youmaton∆|sorayoumaton
+03:57:43 |N|%∆Sora Youmaton∆- ⒶⒻⓀ|sorayoumaton
+03:57:43 |N|%∆Sora Youmaton∆- ⒶⒻⓀ|sorayoumaton
+03:57:43 |N|%∆Sora Youmaton∆- ⒶⒻⓀ|sorayoumaton
+03:57:45 |N|%∆Sora Youmaton∆|sorayoumaton
+03:57:45 |N|%∆Sora Youmaton∆|sorayoumaton
+03:57:45 |N|%∆Sora Youmaton∆|sorayoumaton
+04:00:14 |N|&∆Sora Terror∆- ⒶⒻⓀ|soraterror
+04:00:14 |N|&∆Sora Terror∆- ⒶⒻⓀ|soraterror
+04:00:14 |N|&∆Sora Terror∆- ⒶⒻⓀ|soraterror
+04:07:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:2|★:0|#:0|&:1|~:1
+04:17:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:2|★:0|#:0|&:1|~:1
+04:27:36 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:2|★:0|#:0|&:1|~:1
+04:32:51 |L| ∆Sora Hydro∆
+04:37:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+04:43:04 |N|&∆Sora Terror∆|soraterror
+04:43:04 |N|&∆Sora Terror∆|soraterror
+04:43:04 |N|&∆Sora Terror∆|soraterror
+04:47:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+04:57:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+05:05:34 |N|@Blazing360|blazing360
+05:05:34 |N|@Blazing360|blazing360
+05:05:34 |N|@Blazing360|blazing360
+05:07:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+05:17:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+05:23:09 (Blazing360 changed the roomintro.)
+05:24:55 |c|@Blazing360|fuq b@rt got a premiere ticket
+05:27:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:2|★:0|#:0|&:1|~:1
+05:28:42 |L| Sora Ninjarisu
+05:28:56 |J|~Sora Ninjarisu
+05:28:56 |N|~Sora Ninjarisu|soraninjarisu
+05:29:24 |J|&Sora Connor
+05:29:24 |N|&Sora Connor|soraconnor
+05:29:30 |N|&∆Sora Connor∆|soraconnor
+05:29:30 |N|&∆Sora Connor∆|soraconnor
+05:29:42 |L| ∆Sora Connor∆
+05:32:22 |L| ∆Sora Youmaton∆
+05:32:51 |L| ∆Sora Arjunb∆
+05:33:25 |J|&Sora Edge
+05:33:25 |N|&Sora Edge|soraedge
+05:35:57 |J|%Siiilver
+05:35:57 |N|%Siiilver|siiilver
+05:36:14 |N|&E4 Silvy|siiilver
+05:36:32 |N| E4 Silvy|e4silvy
+05:37:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:1|@:2|★:0|#:0|&:2|~:1
+05:38:04 |J|%∆Sora Youmaton∆
+05:38:04 |N|%∆Sora Youmaton∆|sorayoumaton
+05:39:21 |L| ∆Sora Leaf∆
+05:47:35 |L| ∆Sora Youmaton∆
+05:47:36 |userstats|total:6|guests:0| :1|+:0|$:0|%:0|@:2|★:0|#:0|&:2|~:1
+05:47:41 |J|%∆Sora Youmaton∆
+05:47:41 |N|%∆Sora Youmaton∆|sorayoumaton
+05:48:33 |L| ∆Sora Youmaton∆
+05:48:41 |J|%∆Sora Youmaton∆
+05:48:41 |N|%∆Sora Youmaton∆|sorayoumaton
+05:49:54 |L| ∆Sora Youmaton∆
+05:50:04 |J|%∆Sora Youmaton∆
+05:50:04 |N|%∆Sora Youmaton∆|sorayoumaton
+05:50:50 |c|%∆Sora Youmaton∆|Barts not the only one with premier tickets :)
+05:51:04 |c|%∆Sora Youmaton∆|Opps..., hopefully that didnt highlight
+05:51:08 |c|%∆Sora Youmaton∆|Rip me
+05:51:13 |c|@Blazing360|plural
+05:51:16 |c|@Blazing360|lets hope
+05:55:12 |N|@∆Sora Zachary∆- ⒶⒻⓀ|sorazachary
+05:55:12 |N|@∆Sora Zachary∆- ⒶⒻⓀ|sorazachary
+05:55:12 |N|@∆Sora Zachary∆- ⒶⒻⓀ|sorazachary
+05:57:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:1|@:2|★:0|#:0|&:2|~:1
+06:03:38 (Blazing360 changed the roomintro.)
+06:05:13 |L| ∆Sora Youmaton∆
+06:05:19 |J|%∆Sora Youmaton∆
+06:05:19 |N|%∆Sora Youmaton∆|sorayoumaton
+06:07:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:1|@:2|★:0|#:0|&:2|~:1
+06:08:14 |N|!E4 Silvy|e4silvy
+06:08:39 |L| ∆Sora Youmaton∆
+06:09:19 |N| E4 Silvy|e4silvy
+06:10:35 |N|!E4 Silvy|e4silvy
+06:10:49 |N| E4 Silvy|e4silvy
+06:10:52 |L| Sora Edge
+06:14:08 |N|$E4 Silvy|e4silvy
+06:14:14 |N| E4 Silvy|e4silvy
+06:16:01 |N|!E4 Silvy|e4silvy
+06:16:36 |N| E4 Silvy|e4silvy
+06:17:36 |userstats|total:5|guests:0| :1|+:0|$:0|%:0|@:2|★:0|#:0|&:1|!:0|~:1
+06:18:36 |J|%∆Sora Youmaton∆
+06:18:36 |N|%∆Sora Youmaton∆|sorayoumaton
+06:19:41 |N|@∆Sora Zachary∆|sorazachary
+06:19:41 |N|@∆Sora Zachary∆|sorazachary
+06:19:41 |N|@∆Sora Zachary∆|sorazachary
+06:20:07 |N|&Sora Silvy|e4silvy
+06:20:28 |N| E4 Silvy|sorasilvy
+06:24:35 |J|@SoraMeows
+06:24:35 |N|@SoraMeows|sorameows
+06:25:48 |N|=E4 Silvy|e4silvy
+06:26:05 |N| E4 Silvy|e4silvy
+06:26:56 |N|=E4 Silvy|e4silvy
+06:27:36 |userstats|total:7|guests:0| :0|+:0|$:0|%:1|@:3|★:0|#:0|&:1|=:1|~:1
+06:29:54 |N| E4 Silvy|e4silvy
+06:36:39 |J|%∆Sora Arjunb∆
+06:36:39 |N|%∆Sora Arjunb∆|soraarjunb
+06:36:43 |N|%∆Sora Arjunb∆|soraarjunb
+06:37:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:3|★:0|#:0|&:1|=:0|~:1
+06:38:33 |L| SoraMeows
+06:47:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:1|=:0|~:1
+06:49:44 |L| ∆Sora Youmaton∆
+06:53:48 |J|%sora leaf
+06:53:48 |N|%sora leaf|soraleaf
+06:53:56 |L| soraleaf
+06:56:19 |J|%∆Sora Youmaton∆
+06:56:19 |N|%∆Sora Youmaton∆|sorayoumaton
+06:57:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:1|=:0|~:1
+07:04:38 |L| ∆Sora Youmaton∆
+07:05:52 |L| Sora Ninjarisu
+07:07:01 |J|%∆Sora Youmaton∆
+07:07:01 |N|%∆Sora Youmaton∆|sorayoumaton
+07:07:36 |userstats|total:6|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:1|=:0|~:0
+07:09:32 |L|@Blazing360
+07:09:46 |J|~Sora Ninjarisu
+07:09:46 |N|~Sora Ninjarisu|soraninjarisu
+07:10:25 |L|@∆Sora Zachary∆
+07:16:35 |L| ∆Sora Youmaton∆
+07:16:58 |J|~Sora Noah
+07:16:58 |N|~Sora Noah|soranoah
+07:17:14 |J|%∆Sora Youmaton∆
+07:17:14 |N|%∆Sora Youmaton∆|sorayoumaton
+07:17:36 |userstats|total:6|guests:0| :1|+:0|$:0|%:2|@:0|★:0|#:0|&:1|=:0|~:2
+07:24:24 |L| ∆Sora Youmaton∆
+07:27:36 |userstats|total:5|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:1|=:0|~:2
+07:27:55 |N|&E4 Silvy|e4silvy
+07:28:00 |N| E4 Silvy|e4silvy
+07:37:36 |userstats|total:5|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:1|=:0|~:2
+07:47:36 |userstats|total:5|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:1|=:0|~:2
+07:50:35 |J|~∆Chаmpion Bart∆
+07:50:35 |N|~∆Chаmpion Bart∆|chmpionbart
+07:55:21 |N|~∆Chаmpion Bart∆|chmpionbart
+07:55:25 |N|~∆Chаmpion Bart∆|chmpionbart
+07:55:49 |N| Sora Bart|chmpionbart
+07:56:02 |N|~Chmpion Bart|sorabart
+07:56:13 |N| Sora Bart|chmpionbart
+07:56:39 |N| Sora rt|sorabart
+07:57:06 |N| Sor Bart|sorart
+07:57:18 |N| Sorа Bart|sorbart
+07:57:18 |N| Sorа Bart|sorbart
+07:57:24 |N| Sorа Bart|sorbart
+07:57:25 |L| Sorа Bart
+07:57:36 |userstats|total:5|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:1|=:0|~:2
+08:01:19 |N| Sora Fart|soraarjunb
+08:01:32 |N|%Sora Arjunb|sorafart
+08:02:16 |J|%∆Gym Ldr. WF∆
+08:02:16 |N|%∆Gym Ldr. WF∆|gymldrwf
+08:03:11 |J|%Sora Float
+08:03:11 |N|%Sora Float|sorafloat
+08:03:11 |N|%Sora Float|sorafloat
+08:03:14 |N| Sora WhiteFang|gymldrwf
+08:03:19 |N|%Sora WhiteFang|sorawhitefang
+08:03:22 |N|%∆Sora WhiteFang∆|sorawhitefang
+08:03:22 |N|%∆Sora WhiteFang∆|sorawhitefang
+08:03:32 |N|%∆Sora Float∆|sorafloat
+08:03:32 |N|%∆Sora Float∆|sorafloat
+08:04:02 |N| ∆Sora WhiteFang∆|sorawhitefang
+08:04:02 |N| ∆Sora WhiteFang∆|sorawhitefang
+08:04:18 |N| ∆Sora Float∆|sorafloat
+08:04:18 |N| ∆Sora Float∆|sorafloat
+08:04:26 |N|%∆Sora Float∆|sorafloat
+08:04:31 |N|%∆Sora WhiteFang∆|sorawhitefang
+08:06:55 |N|%∆Sora Arjunb∆|soraarjunb
+08:06:55 |N|%∆Sora Arjunb∆|soraarjunb
+08:07:32 |J|~Chmpion Bart
+08:07:32 |N|~Chmpion Bart|chmpionbart
+08:07:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:3|@:0|★:0|#:0|&:1|=:0|~:3
+08:08:00 |N| Chmpion Bart|chmpionbart
+08:08:17 |N| Sora Barght|chmpionbart
+08:09:23 |N|~Sora Barght|sorabarght
+08:09:34 |N|~∆Sora Barght∆|sorabarght
+08:09:34 |N|~∆Sora Barght∆|sorabarght
+08:10:01 |N|~Sora Barght|sorabarght
+08:10:01 |N|~Sora Barght|sorabarght
+08:10:19 |N|&Sora Terror|soraterror
+08:10:19 |N|&Sora Terror|soraterror
+08:10:36 |N| Sora Terr0r|soraterror
+08:11:03 |N|&Sora Terror|soraterr0r
+08:12:53 |N| E4 Silvy|e4silvy
+08:13:34 |N| Sora Killme|soraterror
+08:13:57 |N| Sora Help|sorakillme
+08:14:12 |N| Sora Memes|sorafloat
+08:14:17 |N|&Sora Terror|sorahelp
+08:14:43 |N| Sora Memes|soramemes
+08:14:43 |N| Sora Memes|soramemes
+08:15:03 |N|%Sora Float|soramemes
+08:17:24 |N|&Sora Terror|soraterror
+08:17:24 |N|&Sora Terror|soraterror
+08:17:27 |N| Sora Terrore|soraterror
+08:17:35 |N|&Sora Terror|soraterrore
+08:17:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:3|@:0|★:0|#:0|&:1|=:0|~:3
+08:18:36 |N| Sora Sparks|soraterror
+08:18:54 |N|&Sora Terror|sorasparks
+08:20:48 |N| Sora Pepelord|soraterror
+08:20:59 |N|&Sora Terror|sorapepelord
+08:22:05 |N| Sora Terrawr|sorabarght
+08:22:36 |N|~Sora Barght|soraterrawr
+08:24:31 |N|%∆Sora Arjunb∆|soraarjunb
+08:26:25 |L|%∆Sora WhiteFang∆
+08:27:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:2|@:0|★:0|#:0|&:1|=:0|~:3
+08:33:05 |N|%Sora Float|sorafloat
+08:33:16 |L| Sora Float
+08:33:20 |J|%Sora Float
+08:33:20 |N|%Sora Float|sorafloat
+08:33:24 |N|%Sora Float|sorafloat
+08:35:27 |J|%∆Gym Ldr. Waffles∆
+08:35:27 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+08:36:15 |N| Sora Waffles|gymldrwaffles
+08:36:32 |N|%Sora Waffles|sorawaffles
+08:37:10 |N| Sora Waffles|sorawaffles
+08:37:10 |N| Sora Waffles|sorawaffles
+08:37:29 |N|%Sora Waffles|sorawaffles
+08:37:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:3|@:0|★:0|#:0|&:1|=:0|~:3
+08:39:03 |N|%Sora Waffles|sorawaffles
+08:40:26 |L|~Sora Barght
+08:40:26 |J| Sora Bart
+08:40:38 |N| Sora Bart|sorabart
+08:40:38 |N| Sora Bart|sorabart
+08:40:50 |N|~Sora Barght|sorabart
+08:40:52 |N| gym trnr waffles|sorawaffles
+08:41:25 |N|%Sora Waffles|gymtrnrwaffles
+08:45:52 |L| Sora Float
+08:47:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:2|@:0|★:0|#:0|&:1|=:0|~:3
+08:50:24 |J|@Sora Zachary
+08:50:24 |N|@Sora Zachary|sorazachary
+08:50:36 |N|@∆Sora Zachary∆|sorazachary
+08:50:36 |N|@∆Sora Zachary∆|sorazachary
+08:53:19 |L|&Sora Terror
+08:54:17 |L| ∆Sora Arjunb∆
+08:54:42 |J|%∆Sora Arjunb∆
+08:54:42 |N|%∆Sora Arjunb∆|soraarjunb
+08:54:44 |N|%∆Sora Arjunb∆|soraarjunb
+08:57:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:3
+09:05:13 |J|@Sora Meows
+09:05:13 |N|@Sora Meows|sorameows
+09:07:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:0|=:0|~:3
+09:09:20 |N|@∆Sora Meows∆|sorameows
+09:09:20 |N|@∆Sora Meows∆|sorameows
+09:13:16 |N|%∆Sora Arjunb∆- ⒶⒻⓀ|soraarjunb
+09:13:16 |N|%∆Sora Arjunb∆- ⒶⒻⓀ|soraarjunb
+09:13:16 |N|%∆Sora Arjunb∆- ⒶⒻⓀ|soraarjunb
+09:17:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:2|@:2|★:0|#:0|&:0|=:0|~:3
+09:19:45 |L|@∆Sora Zachary∆
+09:22:38 |J|%Sora Leaf
+09:22:38 |N|%Sora Leaf|soraleaf
+09:22:40 |N|%∆Sora Leaf∆|soraleaf
+09:22:40 |N|%∆Sora Leaf∆|soraleaf
+09:27:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:0|=:0|~:3
+09:37:36 |userstats|total:8|guests:0| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:0|=:0|~:3
+09:43:04 |L| Sora Ninjarisu
+09:47:36 |userstats|total:7|guests:0| :1|+:0|$:0|%:3|@:1|★:0|#:0|&:0|=:0|~:2
+09:56:28 |L| soraleaf
+09:57:05 |N|%Sora Waffles- ⒶⒻⓀ|sorawaffles
+09:57:05 |N|%Sora Waffles- ⒶⒻⓀ|sorawaffles
+09:57:05 |N|%Sora Waffles- ⒶⒻⓀ|sorawaffles
+09:57:36 |userstats|total:6|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:2
+09:59:05 |L| Sora Noah
+10:07:36 |userstats|total:5|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:1
+10:17:36 |userstats|total:5|guests:0| :1|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:1
+10:24:58 |L| Sora Barght
+10:26:09 |L|@∆Sora Meows∆
+10:26:21 |J|@∆Sora Meows∆
+10:26:21 |N|@∆Sora Meows∆|sorameows
+10:26:23 |L| ∆Sora Meows∆
+10:27:36 |userstats|total:3|guests:0| :1|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+10:32:07 |N|%Sora Waffles|sorawaffles
+10:32:07 |N|%Sora Waffles|sorawaffles
+10:32:07 |N|%Sora Waffles|sorawaffles
+10:32:07 |L|%Sora Waffles
+10:37:36 |userstats|total:2|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+10:43:47 |J|%∆Gym Ldr Bigo∆
+10:43:47 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+10:44:54 |L| gymldrbigo
+10:47:36 |userstats|total:2|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+10:57:36 |userstats|total:2|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+11:04:21 |L| E4 Silvy
+11:07:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+11:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+11:27:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+11:37:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+11:47:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+11:57:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+12:07:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+12:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+12:27:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+12:37:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+12:47:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+12:57:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+13:07:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+13:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+13:27:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+13:37:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+13:47:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+13:57:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+14:07:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+14:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+14:27:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+14:37:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+14:47:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+14:57:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+15:07:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+15:17:36 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|=:0|~:0
+15:27:26 |J|%Sora Youmaton
+15:27:26 |N|%Sora Youmaton|sorayoumaton
+15:27:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+15:27:51 |L| Sora Youmaton
+15:30:17 |J|%Sora Youmaton
+15:30:17 |N|%Sora Youmaton|sorayoumaton
+15:37:34 |N|%∆Sora Youmaton∆|sorayoumaton
+15:37:34 |N|%∆Sora Youmaton∆|sorayoumaton
+15:37:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+15:47:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+15:57:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+16:07:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+16:17:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+16:27:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+16:37:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+16:47:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+16:57:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+17:07:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+17:09:30 |J|%Sora Memelord
+17:09:30 |N|%Sora Memelord|soramemelord
+17:09:37 |N|%∆Sora Memelord∆|soramemelord
+17:09:37 |N|%∆Sora Memelord∆|soramemelord
+17:17:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:0|=:0|~:0
+17:24:42 |L|%∆Sora Memelord∆
+17:27:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+17:37:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+17:47:36 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|=:0|~:0
+17:48:10 |J|@Blazing360
+17:48:10 |N|@Blazing360|blazing360
+17:57:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:0
+18:07:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:0
+18:17:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:0
+18:19:13 |raw|<div class="broadcast-red"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>
+18:27:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:0
+18:37:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:0
+18:47:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:0
+18:57:36 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|=:0|~:0

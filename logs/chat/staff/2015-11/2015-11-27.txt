@@ -1,0 +1,377 @@
+00:07:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:0|~:1
+00:15:19 |L| ∆Gym Ldr. You∆
+00:17:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:0|~:1
+00:21:00 |L| ∆Champiön Nöah∆
+00:24:50 |L| gymldralcor
+00:27:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+00:30:00 |L| ∆Fröntier∆Blade☯
+00:37:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+00:47:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+00:57:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+01:02:23 |J|@Frontier Jerattata
+01:02:23 |N|@Frontier Jerattata|frontierjerattata
+01:03:08 |L| Frontier Jerattata
+01:05:46 |J|%∆Gym Ldr. You∆
+01:05:46 |N|%∆Gym Ldr. You∆|gymldryou
+01:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+01:09:46 |J|&E4 Barney
+01:09:46 |N|&E4 Barney|e4barney
+01:09:53 |N|&∆E4 Barney∆|e4barney
+01:09:53 |N|&∆E4 Barney∆|e4barney
+01:10:07 |J|~FrontierHead Risu
+01:10:07 |N|~FrontierHead Risu|frontierheadrisu
+01:11:32 |N|~FrontierHead∆Risu|frontierheadrisu
+01:11:32 |N|~FrontierHead∆Risu|frontierheadrisu
+01:12:52 |J|~OnyxEagle
+01:12:52 |N|~OnyxEagle|onyxeagle
+01:13:17 |J|%Gym Ldr Mark
+01:13:17 |N|%Gym Ldr Mark|gymldrmark
+01:13:24 |N|%∆Gym Ldr Mark∆|gymldrmark
+01:13:24 |N|%∆Gym Ldr Mark∆|gymldrmark
+01:17:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:1|~:2
+01:18:26 (FrontierHead∆Risu changed the roomintro.)
+01:18:41 |L| OnyxEagle
+01:19:01 (FrontierHead∆Risu changed the roomintro.)
+01:19:59 |L|%∆Gym Ldr. You∆
+01:20:05 |J|%∆Gym Ldr. You∆
+01:20:05 |N|%∆Gym Ldr. You∆|gymldryou
+01:27:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:1|~:1
+01:31:23 |J|@Frontier Zachary
+01:31:23 |N|@Frontier Zachary|frontierzachary
+01:31:25 |N|@∆Frontier Zachary∆|frontierzachary
+01:31:25 |N|@∆Frontier Zachary∆|frontierzachary
+01:33:15 |N| Iris (Eevee)|gymldrmark
+01:33:18 |L| Iris (Eevee)
+01:37:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:1|~:1
+01:37:58 |J|%gasp
+01:37:58 |N|%gasp|gasp
+01:47:12 |N|&E4 Silvy|siiilver
+01:47:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:1
+01:48:23 |N|&∆E4 Silvy∆|e4silvy
+01:48:23 |N|&∆E4 Silvy∆|e4silvy
+01:53:27 |L| FrontierHead∆Risu
+01:57:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:0
+02:07:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:2|~:0
+02:13:28 |L|@∆Frontier Zachary∆
+02:17:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:2|~:0
+02:22:29 |J|@Frontier Jerattata
+02:22:29 |N|@Frontier Jerattata|frontierjerattata
+02:23:21 |L| Frontier Jerattata
+02:26:05 |L|&∆E4 Barney∆
+02:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:0
+02:37:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:0
+02:47:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:0
+02:57:24 |L| gasp
+02:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+03:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+03:17:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+03:27:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+03:37:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+03:47:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+03:57:01 |J|@Frontier Jerattata
+03:57:01 |N|@Frontier Jerattata|frontierjerattata
+03:57:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+03:58:08 |J|&E4 Terror
+03:58:08 |N|&E4 Terror|e4terror
+03:58:49 |L| Frontier Jerattata
+04:00:33 |J|%∆Gym Ldr. Waffles∆
+04:00:33 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+04:02:45 |J|%Gym Ldr Alcor
+04:02:45 |N|%Gym Ldr Alcor|gymldralcor
+04:02:47 |N|%∆Gym Ldr Alcor∆|gymldralcor
+04:02:47 |N|%∆Gym Ldr Alcor∆|gymldralcor
+04:04:16 |N|&∆E4 Terror∆|e4terror
+04:04:16 |N|&∆E4 Terror∆|e4terror
+04:07:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:2|~:0
+04:16:30 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+04:16:30 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+04:16:30 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+04:17:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:2|~:0
+04:25:02 |J|%Gym Ldr Arjunb
+04:25:02 |N|%Gym Ldr Arjunb|gymldrarjunb
+04:25:07 |N|%Gym Ldr Arjunb|gymldrarjunb
+04:25:20 |J|&∆Frontier Asch∆
+04:25:20 |N|&∆Frontier Asch∆|frontierasch
+04:25:38 |c|&∆Frontier Asch∆|ur all ugly
+04:27:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:3|~:0
+04:35:05 |J|~∆Chаmpion Bart∆
+04:35:05 |N|~∆Chаmpion Bart∆|chmpionbart
+04:37:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:3|~:1
+04:38:00 |c|&∆E4 Terror∆|thanks
+04:42:51 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:42:51 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+04:42:55 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:42:55 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:42:55 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+04:47:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:3|~:1
+04:50:00 |L| ∆Gym Ldr. Waffles∆- ⒶⒻⓀ
+04:56:14 |J|%∆Gym Ldr Zoro∆
+04:56:14 |N|%∆Gym Ldr Zoro∆|gymldrzoro
+04:57:34 |userstats|total:8|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:3|~:1
+05:02:49 |L| ∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+05:07:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:3|~:1
+05:13:41 |L| ∆Gym Ldr Zoro∆
+05:16:22 |J|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ
+05:16:22 |N|%∆Gym Ldr. Waffles∆- ⒶⒻⓀ|gymldrwaffles
+05:17:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:3|~:1
+05:20:19 |L| ∆Frontier Asch∆
+05:22:29 |L|&∆E4 Terror∆
+05:24:43 |J|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+05:24:43 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+05:24:49 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+05:26:09 |L| ∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+05:27:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:1|~:1
+05:37:22 |J|%∆Gym Ldr. WF∆
+05:37:22 |N|%∆Gym Ldr. WF∆|gymldrwf
+05:37:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:1|~:1
+05:44:47 |L| ∆E4 Silvy∆
+05:45:04 |J|&∆E4 Silvy∆
+05:45:04 |N|&∆E4 Silvy∆|e4silvy
+05:46:31 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+05:46:31 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+05:46:31 |N|%∆Gym Ldr. Waffles∆|gymldrwaffles
+05:47:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:1|~:1
+05:57:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:1|~:1
+06:03:49 |J|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+06:03:49 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+06:03:57 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+06:05:48 |L| ∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+06:07:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:1|~:1
+06:12:10 |J|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ
+06:12:10 |N|%∆Gym Ldr Arjunb∆- ⒶⒻⓀ|gymldrarjunb
+06:12:12 |L| gymldrarjunb
+06:17:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:4|@:0|★:0|#:0|&:1|~:1
+06:19:52 |L| gymldralcor
+06:27:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:1|~:1
+06:32:35 |J|@Bamdee
+06:32:35 |N|@Bamdee|bamdee
+06:37:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:1|~:1
+06:47:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:1|~:1
+06:50:21 |J|~?Champiön Nöah?
+06:50:21 |N|~?Champiön Nöah?|champinnah
+06:50:59 |N|~Champiön Nöah|champinnah
+06:50:59 |N|~Champiön Nöah|champinnah
+06:51:01 |N|~∆Champiön Nöah∆|champinnah
+06:51:01 |N|~∆Champiön Nöah∆|champinnah
+06:57:34 |userstats|total:7|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:1|~:2
+07:01:24 |L| ∆Champiön Nöah∆
+07:07:34 |userstats|total:6|guests:0| :0|+:0|$:0|%:3|@:1|★:0|#:0|&:1|~:1
+07:08:46 |L| Bamdee
+07:17:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:3|@:0|★:0|#:0|&:1|~:1
+07:21:30 |L| ∆Gym Ldr. WF∆
+07:25:43 |L|&∆E4 Silvy∆
+07:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:1
+07:30:22 |L| ∆Gym Ldr. Waffles∆
+07:37:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:1
+07:47:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:1
+07:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:1
+08:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:1
+08:08:37 |J|&E4 Terror
+08:08:37 |N|&E4 Terror|e4terror
+08:08:42 |N|&∆E4 Terror∆|e4terror
+08:08:42 |N|&∆E4 Terror∆|e4terror
+08:17:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:1
+08:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:1
+08:34:41 |J|%∆Gym Ldr Arjunb∆
+08:34:41 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:34:45 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+08:37:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:1
+08:47:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:1
+08:56:02 |J|&∆E4 Silvy∆
+08:56:02 |N|&∆E4 Silvy∆|e4silvy
+08:57:34 |userstats|total:5|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:2|~:1
+09:01:36 |L| ∆Chаmpion Bart∆
+09:07:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:2|~:0
+09:09:41 |L| ∆Gym Ldr. You∆
+09:10:16 |N| Li'l Patatoling|e4silvy
+09:10:59 |L| ∆Gym Ldr Arjunb∆
+09:13:16 |J|%∆Gym Ldr Bigo∆
+09:13:16 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+09:17:34 |userstats|total:3|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+09:27:34 |userstats|total:3|guests:0| :1|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+09:28:21 |L| ∆Gym Ldr Bigo∆
+09:30:05 |L| Li'l Patatoling
+09:37:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+09:47:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+09:48:31 |J|%∆Gym Ldr Arjunb∆
+09:48:31 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+09:48:40 |N|%∆Gym Ldr Arjunb∆|gymldrarjunb
+09:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+09:58:09 |J|&E4 Silvy
+09:58:09 |N|&E4 Silvy|e4silvy
+10:04:16 |N|&∆E4 Silvy∆|e4silvy
+10:04:16 |N|&∆E4 Silvy∆|e4silvy
+10:07:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:2|~:0
+10:13:20 |L|&∆E4 Terror∆
+10:17:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+10:22:44 |J|@Frontier Meows
+10:22:44 |N|@Frontier Meows|frontiermeows
+10:23:07 |N|@Frontier Meows|frontiermeows
+10:24:58 |L| Frontier Meows
+10:27:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+10:37:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+10:42:27 |J|%∆Gym Ldr Bigo∆
+10:42:27 |N|%∆Gym Ldr Bigo∆|gymldrbigo
+10:45:51 |N|&∆E4 Silvy∆|e4silvy
+10:47:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:1|~:0
+10:56:24 |L| ∆Gym Ldr Bigo∆
+10:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+11:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+11:17:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+11:27:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+11:37:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+11:47:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+11:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+12:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+12:13:33 |L|&∆E4 Silvy∆
+12:17:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+12:22:58 |L| ∆Gym Ldr Arjunb∆
+12:27:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:37:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:47:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+12:57:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:07:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:17:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:27:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:37:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:47:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+13:49:43 |J|%Gym Ldr Giratina
+13:49:43 |N|%Gym Ldr Giratina|gymldrgiratina
+13:57:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+13:58:23 |L| Gym Ldr Giratina
+14:07:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:08:23 |J|%Gym Ldr Giratina
+14:08:23 |N|%Gym Ldr Giratina|gymldrgiratina
+14:17:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:18:18 |L| Gym Ldr Giratina
+14:18:26 |J|%Gym Ldr Giratina
+14:18:26 |N|%Gym Ldr Giratina|gymldrgiratina
+14:27:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:37:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+14:44:57 |L| Gym Ldr Giratina
+14:47:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+14:57:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:04:35 |J|%Gym Ldr Giratina
+15:04:35 |N|%Gym Ldr Giratina|gymldrgiratina
+15:07:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+15:07:37 |L| Gym Ldr Giratina
+15:17:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:27:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:37:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:47:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+15:57:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:07:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:17:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:27:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+16:32:47 |J|%Gym ldr giratina
+16:32:47 |N|%Gym ldr giratina|gymldrgiratina
+16:32:48 |N|%Gym ldr giratina|gymldrgiratina
+16:33:02 |N|%∆Gym ldr giratina∆|gymldrgiratina
+16:33:02 |N|%∆Gym ldr giratina∆|gymldrgiratina
+16:37:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+16:38:22 |L|%∆Gym ldr giratina∆
+16:41:43 |J|%∆Gym ldr giratina∆
+16:41:43 |N|%∆Gym ldr giratina∆|gymldrgiratina
+16:47:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+16:51:41 |L| ∆Gym ldr giratina∆
+16:54:18 |J|%∆Gym Ldr. You∆
+16:54:18 |N|%∆Gym Ldr. You∆|gymldryou
+16:56:32 |J|%∆Gym ldr giratina∆
+16:56:32 |N|%∆Gym ldr giratina∆|gymldrgiratina
+16:57:02 |c|%∆Gym ldr giratina∆|Hello
+16:57:10 |N|%∆Gym ldr giratina∆|gymldrgiratina
+16:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:2|@:0|★:0|#:0|&:0|~:0
+16:58:54 |L| ∆Gym Ldr. You∆
+17:00:08 |L| ∆Gym ldr giratina∆
+17:07:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:11:31 |J|%∆Gym Ldr. You∆
+17:11:31 |N|%∆Gym Ldr. You∆|gymldryou
+17:17:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+17:19:00 |L| ∆Gym Ldr. You∆
+17:27:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:37:34 |userstats|total:0|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:0|~:0
+17:47:30 |J|%∆Gym Ldr. You∆
+17:47:30 |N|%∆Gym Ldr. You∆|gymldryou
+17:47:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+17:57:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:07:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:17:34 |userstats|total:1|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:0|~:0
+18:23:50 |J|@∆Fröntier∆Blade☯
+18:23:50 |N|@∆Fröntier∆Blade☯|frntierblade
+18:27:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+18:37:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+18:47:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+18:57:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+19:07:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:0|~:0
+19:12:12 |J|&E4 Terror
+19:12:12 |N|&E4 Terror|e4terror
+19:16:41 |N|&∆E4 Terror∆|e4terror
+19:16:41 |N|&∆E4 Terror∆|e4terror
+19:17:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+19:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+19:37:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+19:44:59 |L| ∆Gym Ldr. You∆
+19:47:34 |userstats|total:2|guests:0| :0|+:0|$:0|%:0|@:1|★:0|#:0|&:1|~:0
+19:54:03 |J|@Frontier Jerattata
+19:54:03 |N|@Frontier Jerattata|frontierjerattata
+19:57:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:0|@:2|★:0|#:0|&:1|~:0
+19:58:02 |J|%Gym Ldr. Dogelord
+19:58:02 |N|%Gym Ldr. Dogelord|gymldrdogelord
+19:58:10 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+19:58:10 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+20:04:16 |L| ∆Gym Ldr. Dogelord∆
+20:07:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:0|@:2|★:0|#:0|&:1|~:0
+20:10:12 |L| Frontier Jerattata
+20:16:50 |J|%gasp
+20:16:50 |N|%gasp|gasp
+20:17:01 |J|%∆Gym Ldr. WF∆
+20:17:01 |N|%∆Gym Ldr. WF∆|gymldrwf
+20:17:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:1|~:0
+20:21:55 |L| gasp
+20:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+20:37:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+20:47:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+20:56:42 |J|%gasp
+20:56:42 |N|%gasp|gasp
+20:57:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:1|~:0
+21:07:34 |userstats|total:4|guests:0| :0|+:0|$:0|%:2|@:1|★:0|#:0|&:1|~:0
+21:13:21 |L| ∆Gym Ldr. WF∆
+21:17:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+21:27:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+21:37:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+21:42:58 |J|~OnyxEagle
+21:42:58 |N|~OnyxEagle|onyxeagle
+21:44:09 |L| OnyxEagle
+21:47:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+21:57:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+22:07:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+22:17:34 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+22:24:09 |L| gasp
+22:24:48 |J|&E4 Barney
+22:24:48 |N|&E4 Barney|e4barney
+22:25:00 |N|&∆E4 Barney∆|e4barney
+22:25:00 |N|&∆E4 Barney∆|e4barney
+22:26:35 |L| ∆E4 Barney∆
+22:27:35 |userstats|total:2|guests:0| :0|+:0|$:0|%:0|@:1|★:0|#:0|&:1|~:0
+22:37:35 |userstats|total:2|guests:0| :0|+:0|$:0|%:0|@:1|★:0|#:0|&:1|~:0
+22:43:17 |J|%Gym Ldr. Arjunb
+22:43:17 |N|%Gym Ldr. Arjunb|gymldrarjunb
+22:43:24 |N|%∆Gym Ldr. Arjunb∆|gymldrarjunb
+22:43:24 |N|%∆Gym Ldr. Arjunb∆|gymldrarjunb
+22:47:35 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+22:57:35 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+23:07:35 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+23:17:35 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+23:27:35 |userstats|total:3|guests:0| :0|+:0|$:0|%:1|@:1|★:0|#:0|&:1|~:0
+23:27:41 |L| ∆Fröntier∆Blade☯
+23:37:35 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0
+23:39:38 |J|%Siiilver
+23:39:38 |N|%Siiilver|siiilver
+23:42:35 |L| Siiilver
+23:42:55 |L| ∆Gym Ldr. Arjunb∆
+23:47:35 |userstats|total:1|guests:0| :0|+:0|$:0|%:0|@:0|★:0|#:0|&:1|~:0
+23:47:38 |J|%Gym Ldr. Dogelord
+23:47:38 |N|%Gym Ldr. Dogelord|gymldrdogelord
+23:48:18 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+23:48:18 |N|%∆Gym Ldr. Dogelord∆|gymldrdogelord
+23:57:35 |userstats|total:2|guests:0| :0|+:0|$:0|%:1|@:0|★:0|#:0|&:1|~:0

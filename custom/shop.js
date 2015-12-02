@@ -131,13 +131,13 @@ exports.commands = {
 	transfermoney: 'transferbucks',
 	transferbucks: function(target, room, user, connection, cmd) {
 		if (!this.canBroadcast()) return false;
-		if (!target) return this.sendReply();
-		target = this.splitTarget(target);
+		if (!target) return this.parse('/help transferbucks');
+		target = this.splitTarget(target, true);
 		var targetUser = this.targetUsername;
 		targetUser = Users.getExact(targetUser) ? Users.getExact(targetUser).name : targetUser;
 		if (!targetUser || !targetUser.trim()) return this.parse('/help transferbucks');
 		if (!toId(targetUser)) return this.sendReply('"' + targetUser + '" is not a valid username.')
-		if (targetUser.userid === user.userid) return this.sendReply('You can\'t transfer bucks to yourself!');
+		if (toId(targetUser) === user.userid) return this.sendReply('You can\'t transfer bucks to yourself!');
 		if (!toId(target)) return this.sendReply('You need to specify the number of bucks you want to transfer to ' + targetUser);
 		if (isNaN(target)) return this.sendReply(target + " isn't a valid number.");
 		if (Core.read('money', user.userid) < target) return this.sendReply('You can\'t give ' + targetUser + ' more than what you have!');
