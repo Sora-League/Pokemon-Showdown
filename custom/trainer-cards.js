@@ -20,7 +20,7 @@ exports.commands = {
 	leaguemembers: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Champiön Nöah∆', '∆Chаmpion Bart∆', '∆FrontierHead Risu∆', 'OnyxEagle', '∆Fröntier∆Blade☯', '∆Coach Abadon∆', 'Bamdee', '∆Frontier Jerattata∆', 'Neith Cass'];
+		var list = ['∆Sora Noah∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Coach Abadon∆', 'Bamdee', '∆Sora Jerattata∆', 'Neith Cass'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆E4 Edge∆', '∆E4 Terror∆', '∆E4 Silvy∆', '∆E4 Barney∆', '∆Frontier Asch∆', '∆Frontier Srewop∆', '∆Frontier Meows∆', '∆Fröntier∆Blade☯', '∆Frontier Jerattata∆', '∆Frontier Zachary∆'];
+		var list = ['∆Sora Edge∆', '∆Sora Terrors∆', '∆Sora Silvy∆', '∆Sora Connor∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -38,9 +38,9 @@ exports.commands = {
 		}
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Gym Ldr Float∆', '∆Gym Ldr Mark∆', '∆Gym Ldr WF∆', '∆Gym Ldr Waffles∆', '∆Gym Ldr SolarWolf∆', 
-		        '∆Gym Ldr You∆', '∆Gym Ldr Mitsuka∆', '∆Gym Ldr Zoro∆', 
-		        '∆Gym Ldr Bigo∆', '∆Gym Ldr. Arjunb∆', '∆Gym Ldr Alcor∆', '∆Gym Ldr Dogelord∆'
+		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', 
+		        '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Zoro∆', 
+		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
