@@ -201,28 +201,6 @@ exports.commands = {
 			'<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif">' +getBadges('frontierasch'));
 	},
 
-	blade: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><center><img src="http://sprites.pokecheck.org/i/494.gif"><b><font color = FF0000 size= 4>∆Fröntier∆Blade☯</font></b><img src="http://sprites.pokecheck.org/i/080.gif"></center></a><br />' +
-			'<center><i>"Be Stronger Than Your Strongest Excuse"</i></center> <br />' +
-			'<b>Symbol:</b> Yin and Yang <br />' +
-			'<b>Ace:</b> Mybro (Slowbro) <br />' +
-			'<b>Battle Rules:</b> <br />' +
-			'-Ability Shift Tier<br />' +
-			'-No Johns<br />' +
-			'<a href="http://www.smogon.com/forums/threads/ability-shift.3503100/">How Ability Shift works</a> <br />' +
-			'<a href="http://www.psypokes.com/lab/abilities.php">Pokemon Ability List</a> <br />' +
-			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
-			'-NU Monotype<br />' +
-			'-R U Too Strong?</details><br />' +
-			'<details><summary><b>Badges: (Click here to open)</b></summary><br />' +
-			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#efrontier"><img src="http://i.imgur.com/2iZp7Mi.png" title="Achieved Elite Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#porygon"><img src="http://i.imgur.com/bJrRxB8.png" title="Broke the server while trying to repair and implement new features, good job mate, now go fix it"></a><a href="http://soraleague.weebly.com/badges.html#smeargle"><img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Creator of the Badge System"></a></details> <br />' +
-			'<details><summary><font color = 009900><center><b>Torkoal Shrine</b></center></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
-			'<center><b>R.I.P. War Turtle</b></center> <br />' +
-			'<center>1st Apostle of the All Mighty Lord Parasect</center></details><br />' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
-	},
-
 	meows: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Meows</b>∆<br />' +
@@ -412,7 +390,7 @@ exports.commands = {
 	},
 
     
-        
+        blade: 'ghost',
 	ghost: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
