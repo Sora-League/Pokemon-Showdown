@@ -415,11 +415,16 @@ exports.commands = {
         
 	ghost: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
+			'<i>"Be Stronger Than Your Strongest Excuse"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> ???<br />'+
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Gengar<br />'+
+			seen('sorablade') + getBadges('sorablade') +
+			'<img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
+			'<details><summary><font color = 009900><center><b>Torkoal Shrine</b></center></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
+			'<center><b>R.I.P. War Turtle</b></center> <br />' +
+			'<center>1st Apostle of the All Mighty Lord Parasect</center></details><br />' +
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
 
 
