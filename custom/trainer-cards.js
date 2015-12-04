@@ -420,11 +420,11 @@ exports.commands = {
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> Gengar<br />'+
 			seen('sorablade') + getBadges('sorablade') +
-			'<img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
-			'<details><summary><font color = 009900><center><b>Torkoal Shrine</b></center></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
-			'<center><b>R.I.P. War Turtle</b></center> <br />' +
-			'<center>1st Apostle of the All Mighty Lord Parasect</center></details><br />' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
+			'<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
+			'<b>R.I.P. War Turtle</b> <br />' +
+			'1st Apostle of the All Mighty Lord Parasect</details><br />' +
+			'<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
 
 
