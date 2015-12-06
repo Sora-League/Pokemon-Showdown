@@ -19,7 +19,7 @@ li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-user
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
 }
 
-#lobby-userlist-user-soraterrors { background: url("http://imgur.com/cK069Jn") no-repeat right
+li#lobby-userlist-user-soraterrors { background: url("http://i.imgur.com/cK069Jn.png") no-repeat right;
 }
 
 .chat-log {
