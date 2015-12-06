@@ -137,21 +137,21 @@ exports.commands = {
 
 
 	
-	terror: function (target, room, user) {
+	arjunb: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Terror</b>∆<br />' +
-			'<i>"Water you talking about? My new type shall be enough to take you down."</i> <br />' +
-			'<b>Type: <font color = A64000>Ground</font></b><br />' +
-			'<b>Ace:</b> Excadrill<br />' +
+		this.sendReplyBox('∆E4 <b>Arjunb</b>∆<br />' +
+			'<i>"How much can you possibly know about yourself if you\'ve never been in a fight?"</i> <br />' +
+			'<b>Type: <font color = A64000>Fighting</font></b><br />' +
+			'<b>Ace:</b> Mienshao<br />' +
 			'<b>Battle Rules:</b><br />' +
 			'-None<br />' + 
-			seen('e4terror') +
-			getBadges('e4terror'));
+			seen('soraarjunb') +
+			getBadges('soraarjunb'));
 	},
 	
-	barney: function (target, room, user) {
+	connor: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Barney</b>∆<br />' +
+		this.sendReplyBox('∆E4 <b>Connor</b>∆<br />' +
 			'<i>"I came to win, to fight, to conquer, to thrive. I came to win, to survive, to prosper, to rise, to fly."</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Dragonite<br />' +
@@ -356,13 +356,13 @@ exports.commands = {
 		);
 	},
 
-	arjunb: 'fighting',
+	terrors: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />'+
-			'<i>"How much can you possibly know about yourself if you\'ve never been in a fight?"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Terror</b>∆<br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Sawk<br />' + seen('gymldrarjunb') + getBadges('gymldrarjunb')
+			'<b>Ace:</b> ???<br />' + seen('soraterrors') + getBadges('soraterrors')
 		);
         },
 
