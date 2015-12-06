@@ -360,9 +360,9 @@ exports.commands = {
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Terror</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+			'<i>"The Scales have tipped!"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('soraterrors') + getBadges('soraterrors')
+			'<b>Ace:</b> Chesnaught<br />' + seen('soraterrors') + getBadges('soraterrors')
 		);
         },
 
