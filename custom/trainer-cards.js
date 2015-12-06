@@ -359,8 +359,8 @@ exports.commands = {
 	terrors: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Terror</b>∆<br />'+
-			'<i>"The Scales have tipped!"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br />'+
+			'<i>"The Tips have Scaled!"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
 			'<b>Ace:</b> Chesnaught<br />' + seen('soraterrors') + getBadges('soraterrors')
 		);
