@@ -307,15 +307,6 @@ exports.grouplist = [
 		globalonly: true
 	},
 	{
-		symbol: '=',
-		id: "elite",
-		name: "Elite",
-		inherit: '&',
-		jurisdiction: '@u',
-		promote: 'u'
-		
-	},
-	{
 		symbol: '&',
 		id: "leader",
 		name: "Leader",
@@ -328,7 +319,6 @@ exports.grouplist = [
 		forcewin: true,
 		modchatall: true,
 		rangeban: true,
-		makeroom: true,
 		editroom: true,
 		potd: true,
 		disableladder: true,
