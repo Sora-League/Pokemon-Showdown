@@ -22,6 +22,10 @@ li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-user
 /*li#lobby-userlist-user-insertname { background: url("http://i.imgur.com/cK069Jn.png") no-repeat right;
 }*/
 
+/*Ranks*/
+li#lobby-userlist-user-soraarjunb { background: url("http://i.imgur.com/dfd8yBG.png") no-repeat right;
+}
+
 .chat-log {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
 }
