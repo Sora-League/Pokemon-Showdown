@@ -19,8 +19,8 @@ li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-user
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
 }
 
-li#lobby-userlist-user-soraterrors { background: url("http://i.imgur.com/cK069Jn.png") no-repeat right;
-}
+/*li#lobby-userlist-user-insertname { background: url("http://i.imgur.com/cK069Jn.png") no-repeat right;
+}*/
 
 .chat-log {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
