@@ -345,24 +345,24 @@ exports.commands = {
 			'<b>Ace: </b>Diancie<br />' + seen('gymldryou') + getBadges('gymldryou'));
 	},
 
-	pharo: 'ground',
+	terrors: 'ground',
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Pharo</b>∆<br>' +
-			'<i>"Always hold your ground."</i> <br>' +
+		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br>' +
+			'<i>"The tips have scaled!"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>Excadrill<br>' + 
-			seen('gymldrpharo') + getBadges('gymldrpharo')
+			'<b>Ace: </b>Garchomp<br>' + 
+			seen('soraterrors') + getBadges('soraterrors')
 		);
 	},
 
-	terrors: 'fighting',
+
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br />'+
-			'<i>"The Tips have Scaled!"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Chesnaught<br />' + seen('soraterrors') + getBadges('soraterrors')
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
 		);
         },
 
