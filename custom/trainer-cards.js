@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', 
 		        '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Zoro∆', 
-		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆'
+		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -481,12 +481,13 @@ exports.commands = {
 
 	},
 
+        tempest: 'water',
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Tempest</b>∆<br />' +
+			'<i>"Wosh u SOUL"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> Qwilfish <br/>'
 		);
 	},
 
