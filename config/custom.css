@@ -23,7 +23,29 @@ li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-user
 }*/
 
 /*Ranks*/
-li#lobby-userlist-user-soraarjunb { background: url("http://i.imgur.com/dfd8yBG.png") no-repeat right;
+/*John Cena*/
+
+/*E4*/
+li#lobby-userlist-user-soraarjunb, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("http://i.imgur.com/PE7WCZk.png") no-repeat right;
+}
+/*Elite Frontier*/
+li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("") no-repeat right;
+}
+/*Frontier*/
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("") no-repeat right;
+}
+
+/*Gym Ldr*/
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("") no-repeat right;
 }
 
 .chat-log {
