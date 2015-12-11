@@ -308,13 +308,13 @@ exports.commands = {
 			  '<b>Ace:</b> Heracross <br />' + seen('sorahydro') + getBadges('sorahydro'));
 	},
 
-	alcor: 'dark',
+	leaf: 'dark',
 	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Alcor</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
 			'<i>"All journeys are one-way as the result of your decisions cannot be undone."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Bisharp <br />' + seen('gymldralcor') + getBadges('e4alcor')+
+			'<b>Ace:</b> Bisharp <br />' + seen('soraleaf') + getBadges('soraleaf')+
 			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>');
 	},
 
@@ -612,7 +612,7 @@ exports.commands = {
 			'<table align = "center"><tr><td><div style = "display: inline-block; width: 120px; height: 101px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/leafeon-2.gif) no-repeat 0px -70px"></div></td>' +
 			'<td><div style = "transform: rotateY(180deg); display: inline-block; width: 120px; height: 101px; background: url(http://www.pkparaiso.com/imagenes/xy/sprites/animados/leafeon-2.gif) no-repeat 0px -70px"></div></td></tr></table>' +
 			'<center><audio controls src = "https://dl.pushbulletusercontent.com/91078HKzh36ORZdMm7EaE2suEdL7iwr1/Devil%20Survivor%202%20-%20Septentrion%20%5Bwww.songmirror.org%5D.mp3" style = "width: 100%; border-radius: 0px; background: linear-gradient(45deg, #011100, #00ad17, #011100, #00ad17, #011100, #00ad17, #011100, #00ad17);"></audio><br>' +
-			getBadges('AlcorSeptentrion') + '</div>'
+			getBadges('soraleaf') + '</div>'
 		);
 	},
 	meowsofsora: function(target, room, user) {
