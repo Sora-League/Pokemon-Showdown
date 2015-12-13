@@ -327,9 +327,10 @@ exports.commands = {
 			'<b>Ace:</b> Dragonite<br />' + seen('gymldrdogelord') + getBadges('gymldrdogelord'));
 	},
 
+	bikuu: 'electric', 
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Bikuu</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> ??<br />');
