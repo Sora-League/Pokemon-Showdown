@@ -451,19 +451,19 @@ exports.commands = {
 			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
 	},
 	
-	giratina: 'psychic',
+	
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Giratina</b>∆<br />' +
-			'<i>"If you faint in the game you faint in real life."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Gallade <br />' + seen('gymldrgiratina') + getBadges ('gymldrgiratina'));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
 	},
 
-	rock: 'wf',
-	wf: function (target, room, user) {
+	rock: 'whitefang',
+	whitefang: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>WF</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>WhiteFang</b>∆<br />' +
 			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Archeops<br />' + seen('gymldrwf') + getBadges('gymldrwf'));
