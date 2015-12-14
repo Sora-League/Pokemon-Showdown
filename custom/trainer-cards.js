@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', 
 		        '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Zoro∆', 
-		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆', '∆Sora Hydro∆'
+		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆', '∆Sora CL∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
