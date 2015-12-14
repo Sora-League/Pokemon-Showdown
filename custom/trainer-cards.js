@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', 
 		        '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Zoro∆', 
-		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆'
+		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆', '∆Sora Hydro∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -299,23 +299,22 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	hydro: 'bug',
+	cl: 'bug',
 	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Hydro</b>∆<br />'+
-			  '<i>"Many underestimate bugs, because they are so small. But there are so many of them that dealing with them is still a pain, especially if they work together."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>CL</b>∆<br />'+
+			  '<i>"Thanks again for your help. My bug Pokémon are scurrying with excitement about getting to battle you. Let\'s get straight to it~"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Heracross <br />' + seen('sorahydro') + getBadges('sorahydro'));
+			  '<b>Ace:</b> Mega Pinsir <br />' + seen('soracl') + getBadges('soracl'));
 	},
 
-	leaf: 'dark',
+	
 	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
-			'<i>"All journeys are one-way as the result of your decisions cannot be undone."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Bisharp <br />' + seen('soraleaf') + getBadges('soraleaf')+
-			'<audio src="https://dl.pushbulletusercontent.com/nfP9iY95TAbBnLzJf1cAbLG7qegceAan/Last%20Decision%20%28%20Remastered%20And%20Extended%20%29.mp3" controls="" style="width: 100% ; border: 2px solid #700000 ; background-color: #000000" target="_blank"></audio>');
+			'<b>Ace:</b>???<br />' + seen('soraleaf') + getBadges('soraleaf'));
 	},
 
 	dogelord: 'dragon',
