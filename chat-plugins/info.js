@@ -153,32 +153,33 @@ exports.commands = {
 		if (/[a-z]/.test(target)) {
 			// host
 			this.sendReply("Users with host " + target + ":");
-			for (let userid in Users.users) {
-				let curUser = Users.users[userid];
-				if (!curUser.latestHost || !curUser.latestHost.endsWith(target)) continue;
-				if (results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name) > 100 && !isAll) {
-					return this.sendReply("More than 100 users match the specified IP range. Use /ipsearchall to retrieve the full list.");
-				}
+			Users.users.forEach(function (curUser) {
+				if (results.length > 100 && !isAll) return;
+				if (!curUser.latestHost || !curUser.latestHost.endsWith(target)) return;
+				results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name);
+			});
+			if (results.length > 100 && !isAll) {
+				return this.sendReply("More than 100 users match the specified IP range. Use /ipsearchall to retrieve the full list.");
 			}
 		} else if (target.slice(-1) === '*') {
 			// IP range
 			this.sendReply("Users in IP range " + target + ":");
 			target = target.slice(0, -1);
-			for (let userid in Users.users) {
-				let curUser = Users.users[userid];
-				if (!curUser.latestIp.startsWith(target)) continue;
-				if (results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name) > 100 && !isAll) {
-					return this.sendReply("More than 100 users match the specified IP range. Use /ipsearchall to retrieve the full list.");
-				}
+			Users.users.forEach(function (curUser) {
+				if (results.length > 100 && !isAll) return;
+				if (!curUser.latestIp.startsWith(target)) return;
+				results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name);
+			});
+			if (results.length > 100 && !isAll) {
+				return this.sendReply("More than 100 users match the specified IP range. Use /ipsearchall to retrieve the full list.");
 			}
 		} else {
 			this.sendReply("Users with IP " + target + ":");
-			for (let userid in Users.users) {
-				let curUser = Users.users[userid];
+			Users.users.forEach(function (curUser) {
 				if (curUser.latestIp === target) {
 					results.push((curUser.connected ? " \u25C9 " : " \u25CC ") + " " + curUser.name);
 				}
-			}
+			});
 		}
 		if (!results.length) return this.errorReply("No results found.");
 		return this.sendReply(results.join('; '));
@@ -724,7 +725,7 @@ exports.commands = {
 		"Valid colors are: green, red, blue, white, brown, yellow, purple, pink, gray and black.",
 		"Valid tiers are: Uber/OU/BL/UU/BL2/RU/BL3/NU/BL4/PU/NFE/LC/CAP.",
 		"Types must be followed by ' type', e.g., 'dragon type'.",
-		"Inequality ranges use the characters '>=' for '≥' and '<=' for '≤', e.g., 'hp <= 95' searches all Pok\u00e9mon with HP equal to or greater than 95.",
+		"Inequality ranges use the characters '>=' for '≥' and '<=' for '≤', e.g., 'hp <= 95' searches all Pok\u00e9mon with HP less than or equal to 95.",
 		"Parameters can be excluded through the use of '!', e.g., '!water type' excludes all water types.",
 		"The parameter 'mega' can be added to search for Mega Evolutions only, and the parameter 'NFE' can be added to search not-fully evolved Pok\u00e9mon only.",
 		"Parameters separated with '|' will be searched as alternatives for each other, e.g., 'trick | switcheroo' searches for all Pok\u00e9mon that learn either Trick or Switcheroo.",
@@ -2383,8 +2384,9 @@ exports.commands = {
 				formatName = formatId = '';
 			}
 			let speciesid = pokemon.speciesid;
-			// Special case for Meowstic-M
+			// Special case for Meowstic-M and Hoopa-Unbound
 			if (speciesid === 'meowstic') speciesid = 'meowsticm';
+			if (speciesid === 'hoopaunbound') speciesid = 'hoopa-alt';
 			if (pokemon.tier === 'CAP') {
 				this.sendReplyBox("<a href=\"https://www.smogon.com/cap/pokemon/strategies/" + speciesid + "\">" + generation.toUpperCase() + " " + Tools.escapeHTML(formatName) + " " + pokemon.name + " analysis preview</a>, brought to you by <a href=\"https://www.smogon.com\">Smogon University</a> <a href=\"https://smogon.com/cap/\">CAP Project</a>");
 			} else {
@@ -2648,7 +2650,9 @@ exports.commands = {
 
 		let image = targets[0].trim();
 		if (!image) return this.errorReply('No image URL was provided!');
-		if (!/^https?:\/\//.test(image)) image = '//' + image;
+		image = this.canEmbedURI(image);
+
+		if (!image) return false;
 
 		let width = targets[1].trim();
 		if (!width) return this.errorReply('No width for the image was provided!');
@@ -2674,7 +2678,8 @@ exports.commands = {
 
 	htmlbox: function (target, room, user, connection, cmd, message) {
 		if (!target) return this.parse('/help htmlbox');
-		if (!this.canHTML(target)) return;
+		target = this.canHTML(target);
+		if (!target) return;
 
 		if (user.userid === 'github') {
 			if (!this.can('announce', null, room)) return;
