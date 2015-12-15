@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Edge∆', '∆Sora Terrors∆', '∆Sora Silvy∆', '∆Sora Connor∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆'];
+		var list = ['∆Sora Edge∆', '∆Sora Arjunb∆', '∆Sora Silvy∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -40,7 +40,7 @@ exports.commands = {
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', 
 		        '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Zoro∆', 
-		        '∆Sora Bigo∆', '∆Sora Arjunb∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆', '∆Sora CL∆'
+		        '∆Sora Bigo∆', '∆Sora Terrors∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Bikuu∆', '∆Sora Tempest∆', '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -149,17 +149,7 @@ exports.commands = {
 			getBadges('soraarjunb'));
 	},
 	
-	connor: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Connor</b>∆<br />' +
-			'<i>"I came to win, to fight, to conquer, to thrive. I came to win, to survive, to prosper, to rise, to fly."</i> <br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Dragonite<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-No hazards<br />' + 
-			seen('e4barney') +
-			getBadges('e4barney'));
-	},
+	
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
@@ -451,13 +441,13 @@ exports.commands = {
 			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
 	},
 	
-	
+connor: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Connor</b>∆<br />' +
+			'<i>"Psychic power isn\'t something that only a few people have. Everyone has psychic power. People just don\'t realize it.<br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
+			'<b>Ace:</b> Victini <br />' + seen('soraconnor') + getBadges ('soraconnor'));
 	},
 
 	rock: 'whitefang',
