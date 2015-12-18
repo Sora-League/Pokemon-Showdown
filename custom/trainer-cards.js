@@ -81,8 +81,7 @@ exports.commands = {
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
 
-	onyx: 'onyxeagle',
-	onyxeagle: function (target, room, user) {
+	onyx: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font face = forte><font color =  b27300><font size= 5><center>∆OnyxEagle∆</center></font></a><br />' +
 			'<center><i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i></center> <br />' +
@@ -274,6 +273,20 @@ exports.commands = {
 			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
 			'-Pikachu Tournamentchu <br />' +
 			'-No CAP Pokemon</details> <br />' + seen('frontierzachary') + getBadges('frontierzachary'));
+	},
+	
+	onyxeagle: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>OnyxEagle</b>∆<br />' +
+			'<i>"... ..."</i> <br />' +
+			'<b>Symbol:</b> Mystery <br />' +
+			'<b>Ace:</b> ???<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-Random Battle Format <br />' +
+			'-Best of 3 <br />'+
+			'-Challenger chooses Pokemon of the Day<br />'+
+			'<center><img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-interrogation.gif"></center><br>' +
+			'<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + seen('frontieronyxeagle'));
 	},
 
 	/*subfrontier: function(target, room, user) {
