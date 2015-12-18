@@ -286,7 +286,7 @@ exports.commands = {
 			'-Best of 3 <br />'+
 			'-Challenger chooses Pokemon of the Day<br />'+
 			'<center><img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-interrogation.gif"></center><br>' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + seen('frontieronyxeagle'));
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + seen('soraonyxeagle'));
 	},
 
 	/*subfrontier: function(target, room, user) {
