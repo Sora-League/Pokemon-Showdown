@@ -148,6 +148,17 @@ exports.commands = {
 			getBadges('soraarjunb'));
 	},
 	
+	terrors: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
+			'<i>"The tips have been scaled!"</i> <br />' +
+			'<b>Type: <font color = A64000>Ground</font></b><br />' +
+			'<b>Ace:</b> Garchomp<br />' +
+			'<b>Battle Rules:</b><br />' +
+			'-None<br />' + 
+			seen('soraterrors') +
+			getBadges('soraterrors'));
+	},
 	
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -348,14 +359,14 @@ exports.commands = {
 			'<b>Ace: </b>Diancie<br />' + seen('gymldryou') + getBadges('gymldryou'));
 	},
 
-	terrors: 'ground',
+	
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br>' +
-			'<i>"The tips have scaled!"</i> <br>' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br>' +
+			'<i>"???"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>Garchomp<br>' + 
-			seen('soraterrors') + getBadges('soraterrors')
+			'<b>Ace: </b>???<br>' + 
+			seen('???') + getBadges('???')
 		);
 	},
 
