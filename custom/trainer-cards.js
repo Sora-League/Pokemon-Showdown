@@ -322,13 +322,13 @@ exports.commands = {
 			  '<b>Ace:</b> Mega Pinsir <br />' + seen('soracl') + getBadges('soracl'));
 	},
 
-	
+	nypt: 'dark',
 	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Nypt</b>∆<br />' +
+			'<i>"Darkness comsumes me."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b>???<br />' + seen('soraleaf') + getBadges('soraleaf'));
+			'<b>Ace:</b>Umbreon<br />' + seen('soranypt') + getBadges('soranypt'));
 	},
 
 	dogelord: 'dragon',
