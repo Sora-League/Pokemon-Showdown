@@ -328,7 +328,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Nypt</b>∆<br />' +
 			'<i>"Darkness comsumes me."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b>Umbreon<br />' + seen('soranypt') + getBadges('soranypt'));
+			'<b>Ace:</b> Umbreon<br />' + seen('soranypt') + getBadges('soranypt'));
 	},
 
 	dogelord: 'dragon',
