@@ -356,7 +356,7 @@ exports.commands = {
 		        'Leader Ranking: <font color = 00FF00><b>3rd</font></b> <br />' +
 			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Diancie<br />' + seen('gymldryou') + getBadges('gymldryou'));
+			'<b>Ace: </b>Diancie<br />' + seen('sorayoumaton') + getBadges('sorayoumaton'));
 	},
 
 	
