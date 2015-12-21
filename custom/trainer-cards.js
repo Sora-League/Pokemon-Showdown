@@ -456,14 +456,13 @@ exports.commands = {
 		'<b>Ace:</b> Lopunny<br />' + seen('gymldrbigo') + getBadges('gymldrbigo'));
     },
 
-	zoro: 'poison',     
+	   
 	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Zoro</b>∆<br />' +
-		        'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
-			'<i>"I don\'t have a quote."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
+			'<b>Ace:</b> None<br />' + seen('') + getBadges(''));
 	},
 	
 connor: 'psychic',
