@@ -19,7 +19,7 @@ function giveGift (user) {
 	if (user.userid in file || users.indexOf(user.userid) === -1) return;
 	file[user.userid] = 1;
 	fs.writeFileSync("storage-files/given.json", JSON.stringify(file, null, 1));
-	Users(target).popupReply('|html|<b>Merry Christmas! Here\'s 5 bucks!'); //Oi Blade, edit the UI here too lol
+	Users(target).popup('|html|<b>Merry Christmas! Here\'s 5 bucks!'); //Oi Blade, edit the UI here too lol
 	Core.write('money', user.userid, 5, '+');
 }
 Users.User.prototype.onDisconnect = function (connection) {
