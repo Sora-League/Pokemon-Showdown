@@ -8,6 +8,14 @@ function display (message, self) {
 }
 
 exports.commands = {
+	givegift: function (target, room, user) {
+		if (!this.can('hotpatch')) return this.errorReply("The command '/givegift' was unrecognized. To send a message starting with '/givegift', type '//givegift'.");
+		if (!target) return this.sendReply("/givegift [user] - Gives a user a Christmas gift of 5 bucks.");
+		if (!Users(target)) return this.sendReply('User ' + target + ' not found.');
+		Users(target).popupReply('|html|<b>Merry Christmas! Here\'s 5 bucks!'); //Oi Blade, edit the UI here lol
+		Core.write('money', Users(target).userid, 5, '+');
+		this.sendReply('You have given ' + Users(target).name + ' a present.');
+	}
 	ateamnote: 'an',
 	an: function (target, room, user, connection, cmd) {
 		var ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
