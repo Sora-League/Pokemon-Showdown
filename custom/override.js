@@ -11,7 +11,7 @@ function giveGift (user) {
 	var file;
 	try {
 		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
-	} catch {
+	} catch (err) {
 		fs.writeFileSync('storage-files/given.json', '{}');
 		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
 	}
