@@ -29,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Edge∆', '∆Sora Arjunb∆', '∆Sora Silvy∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆'];
+		var list = ['∆Sora Edge∆', '∆Sora Arjunb∆', '∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -38,9 +38,9 @@ exports.commands = {
 		}
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', 
-		        '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Zoro∆', 
-		        '∆Sora Bigo∆', '∆Sora Terrors∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Bikuu∆', '∆Sora Tempest∆', '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆'
+		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', '∆Sora Youmaton∆',
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Mikuu∆', '∆Sora Tempest∆', 
+		        '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆', '∆Sora Nypt∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
