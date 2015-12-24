@@ -19,7 +19,7 @@ exports.commands = {
                                 '<font color=#C5A436>GlitchxCity - Pokémon Christmas Medley 2015 (Feat: Trickywi)</font></center>'); //DONEEEEE!!!!
 		Core.write('money', Users(target).userid, 5, '+');
 		this.sendReply('You have given ' + Users(target).name + ' a present.');
-	}
+	},
 	ateamnote: 'an',
 	an: function (target, room, user, connection, cmd) {
 		var ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
