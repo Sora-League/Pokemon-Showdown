@@ -328,23 +328,22 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Nypt</b>∆<br />' +
 			'<i>"Darkness comsumes me."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Umbreon<br />' + seen('soranypt') + getBadges('soranypt')+
-			'<img src="http://i.imgur.com/WmfgOXf.png" title="Meowth: Server Donator">'); 
+			'<b>Ace:</b> Umbreon<br />' + seen('soranypt') + getBadges('soranypt')); 
 	},
 
-	dogelord: 'dragon',
+	Memelord: 'dragon',
 	dragon: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Dogelord</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Memelord</b>∆<br />' +
 			'<i>"So comes snow after fire, and even dragons have their endings."</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> Dragonite<br />' + seen('gymldrdogelord') + getBadges('gymldrdogelord'));
+			'<b>Ace:</b> Dragonite<br />' + seen('soramemelord') + getBadges('soramemelord'));
 	},
 
 	mikuu: 'electric', 
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Bikuu</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Mikuu</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> ??<br />');
@@ -371,13 +370,13 @@ exports.commands = {
 		);
 	},
 
-
+        nighttanglet: 'fighting'
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Nighttanglet</b>∆<br />'+
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> ???<br />' + seen('soranighttanglet') + getBadges('soranighttanglet')
 		);
         },
 
