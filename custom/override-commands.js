@@ -19,7 +19,11 @@ function giveGift (user) {
 	if (user.userid in file || users.indexOf(user.userid) === -1) return;
 	file[user.userid] = 1;
 	fs.writeFileSync("storage-files/given.json", JSON.stringify(file, null, 1));
-	user.popup('|html|<b>Merry Christmas! Here\'s 5 bucks!'); //Oi Blade, edit the UI here too lol
+	user.popup('|html|<center><h3><font color=#992114>Merry Christmas</font> <font color=#1A3112>and have a</font> <font color=#992114>Happy New Year</font> <font color=#1A3112>from the Sora League!</font></h3><br>' +
+		'<center><img src="http://rs522.pbsrc.com/albums/w348/sunilmsn/present.gif~c200"><br>' +
+               	'<b>You have received 5 Bucks! Stay tuned throughout the day for special events for more chances of picking up presents!</b>' +
+		'<audio controls autoplay src = "https://dl2.pushbulletusercontent.com/EYtKI65FLYuGfJRI1Me8QnVRzgSG89eM/Pok%C3%A9mon%20Christmas%20Medley%202015%20%28Feat-%20Trickywi%29.mp3"><br>' +
+                '<font color=#C5A436>GlitchxCity - Pokémon Christmas Medley 2015 (Feat: Trickywi)</font></center>');
 	Core.write('money', user.userid, 5, '+');
 }
 Users.User.prototype.onDisconnect = function (connection) {
