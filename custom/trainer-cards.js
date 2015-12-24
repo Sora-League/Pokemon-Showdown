@@ -370,7 +370,7 @@ exports.commands = {
 		);
 	},
 
-        nighttanglet: 'fighting'
+        nighttanglet: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Nighttanglet</b>∆<br />'+
