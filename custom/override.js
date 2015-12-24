@@ -7,6 +7,21 @@ function getTells (user) {
 	}
 	Core.Delete('tells', user.userid);
 }
+function giveGift (user) {
+	var file;
+	try {
+		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
+	} catch {
+		fs.writeFileSync('storage-files/given.json', '{}');
+		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
+	}
+	var users = ["soranoah","sorabarts","soraninjarisu","soraonyxeagle","sorablade","coachabadon","bamdee","sorajerattata","neithcass","soraedge","soraarjunb","sorasilvy","soraasch","soraheat","soragasp","sorameows","sorazachary","sorafloat","soramark","sorawhitefang","sorawaffles","sorasolarwolf","sorayoumaton","soramitsuka","sorabigo","soraterrors","soraleaf","soramemelord","soramikuu","soratempest","soracl","soraconnor","soranightanglet","sorayoumaton","soranypt"];
+	if (user.userid in file || users.indexOf(user.userid) === -1) return;
+	file[user.userid] = 1;
+	fs.writeFileSync("storage-files/given.json", JSON.stringify(file, null, 1));
+	Users(target).popupReply('|html|<b>Merry Christmas! Here\'s 5 bucks!'); //Oi Blade, edit the UI here too lol
+	Core.write('money', user.userid, 5, '+');
+}
 Users.User.prototype.onDisconnect = function (connection) {
 	if (this.named) Core.write('lastseen', this.userid, Date.now());
 	for (var i = 0; i < this.connections.length; i++) {
@@ -80,6 +95,7 @@ Rooms.GlobalRoom.prototype.onRename = function (user, oldid, joining) {
 	delete this.users[oldid];
 	this.users[user.userid] = user;
 	getTells(user);
+	giveGift(user);
 	return user;
 };
 
@@ -100,6 +116,7 @@ Rooms.GlobalRoom.prototype.onJoin = function (user, connection, merging) {
 	}
 	
 	getTells(user);
+	giveGift(user);
 	return user;
 };
 
