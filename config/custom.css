@@ -81,3 +81,10 @@ a.button i, a.button span {
 li#lobby-userlist-user-gymldrwaffles strong, li#gamecorner-userlist-user-gymldrwaffles strong, li#staff-userlist-user-gymldrwaffles strong {
     color: #09aa3e !important;
 }
+/*Float's chat color*/
+.chat.chatmessage-sorafloat strong {
+    color: #0b1f82 !important;
+}
+li#lobby-userlist-user-sorafloat strong, li#gamecorner-userlist-user-sorafloat strong, li#staff-userlist-user-sorafloat strong {
+    color: #0b1f82 !important;
+}
