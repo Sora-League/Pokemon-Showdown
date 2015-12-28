@@ -134,17 +134,6 @@ exports.commands = {
 			getBadges('siiilver'));
 	},
 
-	edge: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Edge</b>∆<br />' +
-			'<i>"How can you face your problem when your problem is your face?"</i> <br />' +
-			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Victini<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-No Hazards<br />' + 
-			seen('e4edge') +
-			getBadges('e4edge'));
-	},
 
 
 	
