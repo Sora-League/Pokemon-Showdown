@@ -1238,7 +1238,7 @@ exports.BattleAbilities = {
 			for (var i = 0; i < foeactive.length; i++) {
 				if (!foeactive[i] || !this.isAdjacent(foeactive[i], pokemon)) continue;
 				if (!activated) {
-					this.add('-ability', pokemon, 'Intimidate');
+					this.add('-ability', pokemon, 'Intimidate', 'boost');
 					activated = true;
 				}
 				if (foeactive[i].volatiles['substitute']) {
@@ -1663,7 +1663,7 @@ exports.BattleAbilities = {
 			if (source && source !== target && move && move.flags['contact']) {
 				var oldAbility = source.setAbility('mummy', source, 'mummy', true);
 				if (oldAbility) {
-					this.add('-activate', target, 'ability: Mummy', oldAbility, '[of] ' + source);
+					this.add('-activate', target, 'ability: Mummy', this.getAbility(oldAbility).name, '[of] ' + source);
 				}
 			}
 		},
@@ -2278,7 +2278,7 @@ exports.BattleAbilities = {
 		shortDesc: "This Pokemon's moves have their secondary effect chance doubled.",
 		onModifyMovePriority: -2,
 		onModifyMove: function (move) {
-			if (move.secondaries && move.id !== 'secretpower') {
+			if (move.secondaries) {
 				this.debug('doubling secondary chance');
 				for (var i = 0; i < move.secondaries.length; i++) {
 					move.secondaries[i].chance *= 2;
@@ -2543,7 +2543,7 @@ exports.BattleAbilities = {
 			if (move.category === 'Status' && move.id !== 'kingsshield') return;
 			var targetSpecies = (move.id === 'kingsshield' ? 'Aegislash' : 'Aegislash-Blade');
 			if (attacker.template.species !== targetSpecies && attacker.formeChange(targetSpecies)) {
-				this.add('-formechange', attacker, targetSpecies);
+				this.add('-formechange', attacker, targetSpecies, '[from] ability: Stance Change');
 			}
 		},
 		id: "stancechange",

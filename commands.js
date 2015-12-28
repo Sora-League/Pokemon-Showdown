@@ -78,7 +78,7 @@ exports.commands = {
 		if (!target) return this.parse('/avatars');
 		let parts = target.split(',');
 		let avatar = parseInt(parts[0], 10);
-		if (parts[0] === '#bw2elesa') {
+		if (parts[0] === '#bw2elesa' || parts[0] === '#teamrocket' || parts[0] === '#yellow') {
 			avatar = parts[0];
 		}
 		if (typeof avatar === 'number' && (!avatar || avatar > 294 || avatar < 1)) {
@@ -224,7 +224,7 @@ exports.commands = {
 	blockpms: 'ignorepms',
 	ignorepm: 'ignorepms',
 	ignorepms: function (target, room, user) {
-		if (user.ignorePMs === (target || true)) return this.sendReply("You are already blocking private messages! To unblock, use /unblockpms");
+		if (user.ignorePMs === (target || true)) return this.errorReply("You are already blocking private messages! To unblock, use /unblockpms");
 		if (user.can('lock') && !user.can('bypassall')) return this.errorReply("You are not allowed to block private messages.");
 		user.ignorePMs = true;
 		if (target in Config.groups) {
@@ -239,7 +239,7 @@ exports.commands = {
 	unblockpms: 'unignorepms',
 	unignorepm: 'unignorepms',
 	unignorepms: function (target, room, user) {
-		if (!user.ignorePMs) return this.sendReply("You are not blocking private messages! To block, use /blockpms");
+		if (!user.ignorePMs) return this.errorReply("You are not blocking private messages! To block, use /blockpms");
 		user.ignorePMs = false;
 		return this.sendReply("You are no longer blocking private messages.");
 	},
@@ -556,9 +556,9 @@ exports.commands = {
 			}
 			return;
 		}
-		target = target.trim();
 		if (!this.can('declare', null, room)) return false;
-		if (!this.canHTML(target)) return;
+		target = this.canHTML(target);
+		if (!target) return;
 		if (!/</.test(target)) {
 			// not HTML, do some simple URL linking
 			let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
@@ -571,6 +571,7 @@ exports.commands = {
 		this.sendReply('|raw|<div class="infobox infobox-limited">' + target + '</div>');
 
 		this.privateModCommand("(" + user.name + " changed the roomintro.)");
+		this.logEntry(target);
 
 		if (room.chatRoomData) {
 			room.chatRoomData.introMessage = room.introMessage;
@@ -591,8 +592,8 @@ exports.commands = {
 			return;
 		}
 		if (!this.can('ban', null, room)) return false;
-		target = target.trim();
-		if (!this.canHTML(target)) return;
+		target = this.canHTML(target);
+		if (!target) return;
 		if (!/</.test(target)) {
 			// not HTML, do some simple URL linking
 			let re = /(https?:\/\/(([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?))/g;
@@ -605,6 +606,7 @@ exports.commands = {
 		this.sendReply('|raw|<div class="infobox">' + target + '</div>');
 
 		this.privateModCommand("(" + user.name + " changed the staffintro.)");
+		this.logEntry(target);
 
 		if (room.chatRoomData) {
 			room.chatRoomData.staffMessage = room.staffMessage;
@@ -795,7 +797,11 @@ exports.commands = {
 		Object.keys(rankLists).sort(function (a, b) {
 			return (Config.groups[b] || {rank:0}).rank - (Config.groups[a] || {rank:0}).rank;
 		}).forEach(function (r) {
-			buffer.push((Config.groups[r] ? Config.groups[r] .name + "s (" + r + ")" : r) + ":\n" + rankLists[r].sort().join(", "));
+			let roomRankList = [];
+			rankLists[r].sort().forEach(function (s) {
+				roomRankList.push(s in targetRoom.users ? "**" + s + "**" : s);
+			});
+			buffer.push((Config.groups[r] ? Config.groups[r].name + "s (" + r + ")" : r) + ":\n" + roomRankList.join(", "));
 		});
 
 		if (!buffer.length) {
@@ -882,7 +888,7 @@ exports.commands = {
 			return this.errorReply("Room bans are not meant to be used in room " + room.id + ".");
 		}
 		if (room.bannedUsers[userid] && room.bannedIps[targetUser.latestIp]) return this.sendReply("User " + targetUser.name + " is already banned from room " + room.id + ".");
-		if (targetUser in room.users) {
+		if (targetUser in room.users || user.can('lock')) {
 			targetUser.popup(
 				"|html|<p>" + Tools.escapeHTML(user.name) + " has banned you from the room " + room.id + ".</p>" + (target ? "<p>Reason: " + Tools.escapeHTML(target) + "</p>" : "") +
 				"<p>To appeal the ban, PM the staff member that banned you" + (room.auth ? " or a room owner. </p><p><button name=\"send\" value=\"/roomauth " + room.id + "\">List Room Staff</button></p>" : ".</p>")
@@ -1474,19 +1480,21 @@ exports.commands = {
 		case 'player':
 			target = '\u2605';
 			/* falls through */
-		default:
+		default: {
 			if (!Config.groups[target]) {
 				return this.parse('/help modchat');
 			}
 			if (Config.groupsranking.indexOf(target) > 1 && !user.can('modchatall', null, room)) {
 				return this.errorReply("/modchat - Access denied for setting higher than " + Config.groupsranking[1] + ".");
 			}
-			if (Config.groupsranking.indexOf(target) > Math.max(1, Config.groupsranking.indexOf(room.auth[user.userid])) && !user.can('makeroom')) {
+			let roomGroup = (room.auth && room.isPrivate === true ? ' ' : user.group);
+			if (room.auth && user.userid in room.auth) roomGroup = room.auth[user.userid];
+			if (Config.groupsranking.indexOf(target) > Math.max(1, Config.groupsranking.indexOf(roomGroup)) && !user.can('makeroom')) {
 				return this.errorReply("/modchat - Access denied for setting higher than " + Config.groupsranking[1] + ".");
 			}
 			room.modchat = target;
 			break;
-		}
+		}}
 		if (currentModchat === room.modchat) {
 			return this.errorReply("Modchat is already set to " + currentModchat + ".");
 		}
@@ -1509,7 +1517,6 @@ exports.commands = {
 	declare: function (target, room, user) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
-
 		if (!this.canTalk()) return;
 
 		this.add('|raw|<div class="broadcast-blue"><b>' + Tools.escapeHTML(target) + '</b></div>');
@@ -1520,8 +1527,9 @@ exports.commands = {
 	htmldeclare: function (target, room, user) {
 		if (!target) return this.parse('/help htmldeclare');
 		if (!this.can('gdeclare', null, room)) return false;
-
 		if (!this.canTalk()) return;
+		target = this.canHTML(target);
+		if (!target) return;
 
 		this.add('|raw|<div class="broadcast-blue"><b>' + target + '</b></div>');
 		this.logModCommand(user.name + " declared " + target);
@@ -1532,6 +1540,8 @@ exports.commands = {
 	globaldeclare: function (target, room, user) {
 		if (!target) return this.parse('/help globaldeclare');
 		if (!this.can('gdeclare')) return false;
+		target = this.canHTML(target);
+		if (!target) return;
 
 		for (let id in Rooms.rooms) {
 			if (id !== 'global') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b>' + target + '</b></div>');
@@ -1544,6 +1554,8 @@ exports.commands = {
 	chatdeclare: function (target, room, user) {
 		if (!target) return this.parse('/help chatdeclare');
 		if (!this.can('gdeclare')) return false;
+		target = this.canHTML(target);
+		if (!target) return;
 
 		for (let id in Rooms.rooms) {
 			if (id !== 'global') if (Rooms.rooms[id].type !== 'battle') Rooms.rooms[id].addRaw('<div class="broadcast-blue"><b>' + target + '</b></div>');
@@ -1730,6 +1742,7 @@ exports.commands = {
 		this.logEntry(user.name + " used /hotpatch " + target);
 
 		if (target === 'chat' || target === 'commands') {
+			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
 			try {
 				CommandParser.uncacheTree('./command-parser.js');
 				delete require.cache[require.resolve('./commands.js')];
@@ -1746,6 +1759,7 @@ exports.commands = {
 				return this.errorReply("Something failed while trying to hotpatch chat: \n" + e.stack);
 			}
 		} else if (target === 'tournaments') {
+			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
 			try {
 				let runningTournaments = Tournaments.tournaments;
 				CommandParser.uncacheTree('./tournaments');
@@ -1756,9 +1770,11 @@ exports.commands = {
 				return this.errorReply("Something failed while trying to hotpatch tournaments: \n" + e.stack);
 			}
 		} else if (target === 'battles') {
+			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
 			Simulator.SimulatorProcess.respawn();
 			return this.sendReply("Battles have been hotpatched. Any battles started after now will use the new code; however, in-progress battles will continue to use the old code.");
 		} else if (target === 'formats') {
+			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
 			try {
 				let toolsLoaded = !!Tools.isLoaded;
 				// uncache the tools.js dependency tree
@@ -1778,18 +1794,14 @@ exports.commands = {
 			} catch (e) {
 				return this.errorReply("Something failed while trying to hotpatch formats: \n" + e.stack);
 			}
-		} else if (target === 'learnsets') {
-			try {
-				let toolsLoaded = !!Tools.isLoaded;
-				// uncache the tools.js dependency tree
-				CommandParser.uncacheTree('./tools.js');
-				// reload tools.js
-				global.Tools = require('./tools.js')[toolsLoaded ? 'includeData' : 'includeFormats'](); // note: this will lock up the server for a few seconds
-
-				return this.sendReply("Learnsets have been hotpatched.");
-			} catch (e) {
-				return this.errorReply("Something failed while trying to hotpatch learnsets: \n" + e.stack);
-			}
+		} else if (target === 'learnsets' || target === 'validator') {
+			TeamValidator.ValidatorProcess.respawn();
+		} else if (target.startsWith('disable')) {
+			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch is already disabled.");
+			let reason = target.split(', ')[1];
+			if (!reason) return this.errorReply("Usage: /hotpatch disable, [reason]");
+			Monitor.hotpatchLock = reason;
+			return this.sendReply("You have disabled hotpatch until the next server restart.");
 		}
 		this.errorReply("Your hot-patch command was unrecognized.");
 	},
@@ -1797,7 +1809,8 @@ exports.commands = {
 		"Hot-patching has greater memory requirements than restarting.",
 		"/hotpatch chat - reload commands.js and the chat-plugins",
 		"/hotpatch battles - spawn new simulator processes",
-		"/hotpatch formats - reload the tools.js tree, rebuild and rebroad the formats list, and also spawn new simulator processes"],
+		"/hotpatch formats - reload the tools.js tree, rebuild and rebroad the formats list, and also spawn new simulator processes",
+		"/hotpatch disable, [reason] - disables the use of hotpatch until the next server restart"],
 
 	savelearnsets: function (target, room, user) {
 		if (!this.can('hotpatch')) return false;
@@ -2059,6 +2072,7 @@ exports.commands = {
 			return this.errorReply("/bash - Access denied.");
 		}
 
+		connection.sendTo(room, "$ " + target);
 		let exec = require('child_process').exec;
 		exec(target, function (error, stdout, stderr) {
 			connection.sendTo(room, ("" + stdout + stderr));
@@ -2117,8 +2131,8 @@ exports.commands = {
 		if (cmd.charAt(cmd.length - 1) === ',') cmd = cmd.slice(0, -1);
 		let targets = target.split(',');
 		function getPlayer(input) {
-			if (room.battle.playerids[0] === toId(input)) return 'p1';
-			if (room.battle.playerids[1] === toId(input)) return 'p2';
+			let player = room.battle.players[toId(input)];
+			if (player) return player.slot;
 			if (input.includes('1')) return 'p1';
 			if (input.includes('2')) return 'p2';
 			return 'p3';
@@ -2205,12 +2219,12 @@ exports.commands = {
 		}
 		let data = room.getLog(logidx).join("\n");
 		let datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
-		let players = room.battle.lastPlayers.map(Users.getExact);
+		let players = room.battle.playerNames;
 		LoginServer.request('prepreplay', {
 			id: room.id.substr(7),
 			loghash: datahash,
-			p1: players[0] ? players[0].name : room.battle.lastPlayers[0],
-			p2: players[1] ? players[1].name : room.battle.lastPlayers[1],
+			p1: players[0],
+			p2: players[1],
 			format: room.format
 		}, function (success) {
 			if (success && success.errorip) {
@@ -2293,6 +2307,7 @@ exports.commands = {
 
 	kickbattle: function (target, room, user) {
 		if (!room.leaveBattle) return this.errorReply("You can only do this in battle rooms.");
+		if (room.battle.tour || room.battle.rated) return this.errorReply("You can only do this in unrated non-tour battles.");
 
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
@@ -2522,12 +2537,12 @@ exports.commands = {
 				if (i === 'global') continue;
 				let targetRoom = Rooms.get(i);
 				if (!targetRoom) continue; // shouldn't happen
-				if (targetRoom.isPrivate && (!targetRoom.battle || targetRoom.battle.lastPlayers.indexOf(user.userid) < 0)) continue;
+				if (targetRoom.isPrivate && !(i in user.games)) continue;
 				let roomData = {};
 				if (targetRoom.battle) {
 					let battle = targetRoom.battle;
-					roomData.p1 = battle.p1 ? ' ' + battle.p1 : '';
-					roomData.p2 = battle.p2 ? ' ' + battle.p2 : '';
+					roomData.p1 = battle.p1 ? ' ' + battle.p1.name : '';
+					roomData.p2 = battle.p2 ? ' ' + battle.p2.name : '';
 				}
 				roomList[i] = roomData;
 			}
@@ -2550,7 +2565,7 @@ exports.commands = {
 			));
 		} else if (cmd === 'laddertop') {
 			if (!trustable) return false;
-			Ladders.get(target).getTop().then(function (result) {
+			Ladders(target).getTop().then(function (result) {
 				connection.send('|queryresponse|laddertop|' + JSON.stringify(result));
 			});
 		} else {

@@ -107,7 +107,7 @@ exports.BattleFormats = {
 					if (move.gen > this.gen) {
 						problems.push(move.name + ' does not exist in gen ' + this.gen + '.');
 					} else if (!allowCAP && move.isNonstandard) {
-						problems.push(move.name + ' is not a real move.');
+						problems.push(move.name + ' does not exist.');
 					}
 				}
 			}
@@ -123,13 +123,17 @@ exports.BattleFormats = {
 
 			if (!allowCAP || template.tier !== 'CAP') {
 				if (template.isNonstandard) {
-					problems.push(set.species + ' is not a real Pokemon.');
+					problems.push(set.species + ' does not exist.');
 				}
 				if (ability.isNonstandard) {
-					problems.push(ability.name + ' is not a real ability.');
+					problems.push(ability.name + ' does not exist.');
 				}
 				if (item.isNonstandard) {
-					problems.push(item.name + ' is not a real item.');
+					if (item.isNonstandard === 'gen2') {
+						problems.push(item.name + ' does not exist outside of gen 2.');
+					} else {
+						problems.push(item.name + ' does not exist.');
+					}
 				}
 			}
 			for (let k in set.evs) {
@@ -152,9 +156,10 @@ exports.BattleFormats = {
 				problems.push((set.name || set.species) + " has more than 510 total EVs.");
 			}
 
-			// "Undiscovered" egg group Pokemon caught in the wild in gen 6 must have at least 3 perfect IVs
-			if (set.ivs && this.gen >= 6 && ((template.species in {Xerneas:1, Yveltal:1, Zygarde:1}) ||
-				(format.requirePentagon && template.eggGroups.indexOf('Undiscovered') >= 0 && !template.evos.length))) {
+			// Legendary Pokemon must have at least 3 perfect IVs in gen 6
+			if (set.ivs && this.gen >= 6 && (template.gen >= 6 || format.requirePentagon) && (template.eggGroups[0] === 'Undiscovered' || template.species === 'Manaphy') && !template.prevo && !template.nfe &&
+				// exceptions
+				template.species !== 'Unown' && template.baseSpecies !== 'Pikachu' && (template.baseSpecies !== 'Diancie' || !set.shiny)) {
 				let perfectIVs = 0;
 				for (let i in set.ivs) {
 					if (set.ivs[i] >= 31) perfectIVs++;

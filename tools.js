@@ -13,6 +13,7 @@
 
 'use strict';
 
+require('sugar');
 const fs = require('fs');
 const path = require('path');
 
@@ -174,6 +175,7 @@ module.exports = (function () {
 	 * - must not start or end with a space character
 	 * - must not contain any of: | , [ ]
 	 * - must not be the empty string
+	 * - must not contain Unicode RTL control characters
 	 *
 	 * If no such string can be found, returns the empty string. Calling
 	 * functions are expected to check for that condition and deal with it
@@ -185,10 +187,29 @@ module.exports = (function () {
 
 	Tools.prototype.getName = function (name) {
 		if (typeof name !== 'string' && typeof name !== 'number') return '';
-		name = ('' + name).replace(/[\|\s\[\]\,]+/g, ' ').trim();
+		name = ('' + name).replace(/[\|\s\[\]\,\u202e]+/g, ' ').trim();
 		if (name.length > 18) name = name.substr(0, 18).trim();
 		return name;
 	};
+
+	/**
+	 * Converts anything to an ID. An ID must have only lowercase alphanumeric
+	 * characters.
+	 * If a string is passed, it will be converted to lowercase and
+	 * non-alphanumeric characters will be stripped.
+	 * If an object with an ID is passed, its ID will be returned.
+	 * Otherwise, an empty string will be returned.
+	 */
+	Tools.prototype.getId = function (text) {
+		if (text && text.id) {
+			text = text.id;
+		} else if (text && text.userid) {
+			text = text.userid;
+		}
+		if (typeof text !== 'string' && typeof text !== 'number') return '';
+		return ('' + text).toLowerCase().replace(/[^a-z0-9]+/g, '');
+	};
+	let toId = Tools.prototype.getId;
 
 	Tools.prototype.getTemplate = function (template) {
 		if (!template || typeof template === 'string') {

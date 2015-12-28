@@ -22,7 +22,11 @@
  *
  * Tools - from tools.js
  *
- *   Handles getting data about Pokemon, items, etc. *
+ *   Handles getting data about Pokemon, items, etc.
+ *
+ * Ladders - from ladders.js and ladders-remote.js
+ *
+ *   Handles Elo rating tracking for players.
  *
  * Simulator - from simulator.js
  *
@@ -71,15 +75,16 @@ try {
  *********************************************************/
 
 try {
-	global.Config = require('./config/config.js');
+	require.resolve('./config/config.js');
 } catch (err) {
-	if (err.code !== 'MODULE_NOT_FOUND') throw err;
+	if (err.code !== 'MODULE_NOT_FOUND') throw err; // should never happen
 
 	// Copy it over synchronously from config-example.js since it's needed before we can start the server
 	console.log("config.js doesn't exist - creating one with default settings...");
 	fs.writeFileSync(path.resolve(__dirname, 'config/config.js'),
 		fs.readFileSync(path.resolve(__dirname, 'config/config-example.js'))
 	);
+} finally {
 	global.Config = require('./config/config.js');
 }
 
@@ -114,27 +119,10 @@ if (require.main === module && process.argv[2]) {
  * Set up most of our globals
  *********************************************************/
 
-/**
- * Converts anything to an ID. An ID must have only lowercase alphanumeric
- * characters.
- * If a string is passed, it will be converted to lowercase and
- * non-alphanumeric characters will be stripped.
- * If an object with an ID is passed, its ID will be returned.
- * Otherwise, an empty string will be returned.
- */
-global.toId = function (text) {
-	if (text && text.id) {
-		text = text.id;
-	} else if (text && text.userid) {
-		text = text.userid;
-	}
-	if (typeof text !== 'string' && typeof text !== 'number') return '';
-	return ('' + text).toLowerCase().replace(/[^a-z0-9]+/g, '');
-};
-
 global.Monitor = require('./monitor.js');
 
 global.Tools = require('./tools.js').includeFormats();
+global.toId = Tools.getId;
 
 global.LoginServer = require('./loginserver.js');
 
