@@ -256,7 +256,7 @@ exports.commands = {
 		);
 	},
 
-	srewop: function (target, room, user) {
+	heat: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Elite Frontier <b>Srewop</b>∆<br />' +
 			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
