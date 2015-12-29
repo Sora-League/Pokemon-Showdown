@@ -15,6 +15,18 @@ function getBadges (user) {
 }
 
 exports.commands = {
+	givepresent: function (target, room, user) {
+		if (!this.can('hotpatch')) return false;
+		if (!target) return this.sendReply("/givegift [user] - Gives a user a Christmas gift of 5 bucks.");
+		if (!Users(target)) return this.sendReply('User ' + target + ' not found.');
+		Users(target).popup('|html|<center><h2><font color=#992114>Merry Christmas</font> <font color=#1A3112>and have a</font> <font color=#992114>Happy New Year</font> <font color=#1A3112>from the Sora League!</font></h2><br>' +
+	        	'<img src="http://rs522.pbsrc.com/albums/w348/sunilmsn/present.gif~c200"><br>' +
+                  	'<b>You have received 5 Bucks! Stay tuned throughout the day for special events for more chances of picking up presents!</b><br>' +
+	        	'<audio controls autoplay src = "https://dl2.pushbulletusercontent.com/EYtKI65FLYuGfJRI1Me8QnVRzgSG89eM/Pok%C3%A9mon%20Christmas%20Medley%202015%20%28Feat-%20Trickywi%29.mp3"></audio><br>' +
+                        '<font color=#C5A436>GlitchxCity - Pokémon Christmas Medley 2015 (Feat: Trickywi)</font></center>'); //DONEEEEE!!!!
+		Core.write('money', Users(target).userid, 5, '+');
+		this.sendReply('You have given ' + Users(target).name + ' a present.');
+	},
 	staff: 'leaguemembers',
 	attendance: 'leaguemembers',
 	leaguemembers: function (target, room, user) {
@@ -29,7 +41,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Edge∆', '∆Sora Arjunb∆', '∆Sora Silvy∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆'];
+		var list = ['∆Sora Edge∆', '∆Sora Arjunb∆', '∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -38,9 +50,9 @@ exports.commands = {
 		}
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', 
-		        '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Zoro∆', 
-		        '∆Sora Bigo∆', '∆Sora Terrors∆', '∆Sora Leaf∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Bikuu∆', '∆Sora Tempest∆', '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆'
+		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', '∆Sora Youmaton∆',
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Mikuu∆', '∆Sora Tempest∆', 
+		        '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆', '∆Sora Nypt∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -81,8 +93,7 @@ exports.commands = {
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
 
-	onyx: 'onyxeagle',
-	onyxeagle: function (target, room, user) {
+	onyx: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font face = forte><font color =  b27300><font size= 5><center>∆OnyxEagle∆</center></font></a><br />' +
 			'<center><i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i></center> <br />' +
@@ -123,17 +134,6 @@ exports.commands = {
 			getBadges('siiilver'));
 	},
 
-	edge: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Edge</b>∆<br />' +
-			'<i>"How can you face your problem when your problem is your face?"</i> <br />' +
-			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Victini<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-No Hazards<br />' + 
-			seen('e4edge') +
-			getBadges('e4edge'));
-	},
 
 
 	
@@ -149,6 +149,17 @@ exports.commands = {
 			getBadges('soraarjunb'));
 	},
 	
+	terrors: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
+			'<i>"The tips have been scaled!"</i> <br />' +
+			'<b>Type: <font color = A64000>Ground</font></b><br />' +
+			'<b>Ace:</b> Garchomp<br />' +
+			'<b>Battle Rules:</b><br />' +
+			'-None<br />' + 
+			seen('soraterrors') +
+			getBadges('soraterrors'));
+	},
 	
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -234,9 +245,9 @@ exports.commands = {
 		);
 	},
 
-	srewop: function (target, room, user) {
+	heat: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Elite Frontier <b>Srewop</b>∆<br />' +
+		this.sendReplyBox('∆Elite Frontier <b>Heat</b>∆<br />' +
 			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
 			'<b>Symbol:</b> SumTingWong<br />' +
 			'<b>Ace:</b> Golbat <br />' +
@@ -275,6 +286,20 @@ exports.commands = {
 			'-Pikachu Tournamentchu <br />' +
 			'-No CAP Pokemon</details> <br />' + seen('frontierzachary') + getBadges('frontierzachary'));
 	},
+	
+	onyxeagle: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>OnyxEagle</b>∆<br />' +
+			'<i>"... ..."</i> <br />' +
+			'<b>Symbol:</b> Mystery <br />' +
+			'<b>Ace:</b> ???<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-Random Battle Format <br />' +
+			'-Best of 3 <br />'+
+			'-Challenger chooses Pokemon of the Day<br />'+
+			'<center><img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-interrogation.gif"></center><br>' +
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + seen('soraonyxeagle'));
+	},
 
 	/*subfrontier: function(target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -298,28 +323,28 @@ exports.commands = {
 			  '<b>Ace:</b> Mega Pinsir <br />' + seen('soracl') + getBadges('soracl'));
 	},
 
-	
+	nypt: 'dark',
 	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Nypt</b>∆<br />' +
+			'<i>"Darkness comsumes me."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b>???<br />' + seen('soraleaf') + getBadges('soraleaf'));
+			'<b>Ace:</b> Umbreon<br />' + seen('soranypt') + getBadges('soranypt')); 
 	},
 
-	dogelord: 'dragon',
+	Memelord: 'dragon',
 	dragon: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Dogelord</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Memelord</b>∆<br />' +
 			'<i>"So comes snow after fire, and even dragons have their endings."</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> Dragonite<br />' + seen('gymldrdogelord') + getBadges('gymldrdogelord'));
+			'<b>Ace:</b> Dragonite<br />' + seen('soramemelord') + getBadges('soramemelord'));
 	},
 
-	bikuu: 'electric', 
+	mikuu: 'electric', 
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Bikuu</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Mikuu</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> ??<br />');
@@ -332,27 +357,27 @@ exports.commands = {
 		        'Leader Ranking: <font color = 00FF00><b>3rd</font></b> <br />' +
 			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Diancie<br />' + seen('gymldryou') + getBadges('gymldryou'));
+			'<b>Ace: </b>Diancie<br />' + seen('sorayoumaton') + getBadges('sorayoumaton'));
 	},
 
-	terrors: 'ground',
+	
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br>' +
-			'<i>"The tips have scaled!"</i> <br>' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br>' +
+			'<i>"???"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>Garchomp<br>' + 
-			seen('soraterrors') + getBadges('soraterrors')
+			'<b>Ace: </b>???<br>' + 
+			seen('???') + getBadges('???')
 		);
 	},
 
-
+        nighttanglet: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Nighttanglet</b>∆<br />'+
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> ???<br />' + seen('soranighttanglet') + getBadges('soranighttanglet')
 		);
         },
 
@@ -428,17 +453,16 @@ exports.commands = {
 	        'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
 		'<i>"Don\'t underestimate the normal, cause being \'normal\'  doesn\'t mean to be weak"</i> <br />'+
 	    '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
-		'<b>Ace:</b> Lopunny<br />' + seen('gymldrbigo') + getBadges('gymldrbigo'));
+		'<b>Ace:</b> Lopunny<br />' + seen('sorabigo') + getBadges('sorabigo'));
     },
 
-	zoro: 'poison',     
+	   
 	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Zoro</b>∆<br />' +
-		        'Leader Ranking: <font color = FFFF00><b>2nd</font></b> <br />' +
-			'<i>"I don\'t have a quote."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> None<br />' + seen('gymldrzoro') + getBadges('gymldrzoro'));
+			'<b>Ace:</b> None<br />' + seen('') + getBadges(''));
 	},
 	
 connor: 'psychic',

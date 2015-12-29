@@ -7,6 +7,25 @@ function getTells (user) {
 	}
 	Core.Delete('tells', user.userid);
 }
+function giveGift (user) {
+	var file;
+	try {
+		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
+	} catch (err) {
+		fs.writeFileSync('storage-files/given.json', '{}');
+		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
+	}
+	var users = ["soranoah","sorabarts","soraninjarisu","soraonyxeagle","sorablade","coachabadon","bamdee","sorajerattata","neithcass","soraedge","soraarjunb","sorasilvy","soraasch","soraheat","soragasp","sorameows","sorazachary","sorafloat","soramark","sorawhitefang","sorawaffles","sorasolarwolf","sorayoumaton","soramitsuka","sorabigo","soraterrors","soraleaf","soramemelord","soramikuu","soratempest","soracl","soraconnor","soranightanglet","sorayoumaton","soranypt"];
+	if (user.userid in file || users.indexOf(user.userid) === -1) return;
+	file[user.userid] = 1;
+	fs.writeFileSync("storage-files/given.json", JSON.stringify(file, null, 1));
+	user.popup('|html|<center><h2><font color=#992114>Merry Christmas</font> <font color=#1A3112>and have a</font> <font color=#992114>Happy New Year</font> <font color=#1A3112>from the Sora League!</font></h2><br>' +
+		'<img src="http://rs522.pbsrc.com/albums/w348/sunilmsn/present.gif~c200"><br>' +
+               	'<b>You have received 5 Bucks! Stay tuned throughout the day for special events for more chances of picking up presents!</b><br>' +
+		'<audio controls autoplay src = "https://dl2.pushbulletusercontent.com/EYtKI65FLYuGfJRI1Me8QnVRzgSG89eM/Pok%C3%A9mon%20Christmas%20Medley%202015%20%28Feat-%20Trickywi%29.mp3"></audio><br>' +
+                '<font color=#C5A436>GlitchxCity - Pokémon Christmas Medley 2015 (Feat: Trickywi)</font></center>');
+	Core.write('money', user.userid, 5, '+');
+}
 Users.User.prototype.onDisconnect = function (connection) {
 	if (this.named) Core.write('lastseen', this.userid, Date.now());
 	for (var i = 0; i < this.connections.length; i++) {
@@ -80,6 +99,7 @@ Rooms.GlobalRoom.prototype.onRename = function (user, oldid, joining) {
 	delete this.users[oldid];
 	this.users[user.userid] = user;
 	getTells(user);
+	giveGift(user);
 	return user;
 };
 
@@ -100,6 +120,7 @@ Rooms.GlobalRoom.prototype.onJoin = function (user, connection, merging) {
 	}
 	
 	getTells(user);
+	giveGift(user);
 	return user;
 };
 
