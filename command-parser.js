@@ -140,6 +140,10 @@ function canTalk(user, room, connection, message, targetUser) {
 
 		// remove zalgo
 		message = message.replace(/[\u0300-\u036f\u0483-\u0489\u064b-\u065f\u0670\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]{3,}/g, '');
+		if (/[\u239b-\u23b9]/.test(message)) {
+			this.errorReply("Your message contains banned characters.");
+			return false;
+		}
 
 		if (room && room.id === 'lobby') {
 			let normalized = message.trim();
@@ -399,7 +403,8 @@ let Context = exports.Context = (function () {
 			}
 		}
 		if ((this.room.isPersonal || this.room.isPrivate === true) && !this.user.can('lock') && html.match(/<button /)) {
-			this.errorReply('You do not have permission to use buttons in HTML.');
+			this.errorReply('You do not have permission to use scripted buttons in HTML.');
+			this.errorReply('If you just want to link to a room, you can do this: <a href="/roomid"><button>button contents</button></a>');
 			return false;
 		}
 		if (/>here.?</i.test(html) || /click here/i.test(html)) {

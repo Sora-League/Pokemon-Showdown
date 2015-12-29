@@ -174,7 +174,7 @@ exports.BattleStatuses = {
 	},
 	trapped: {
 		noCopy: true,
-		onModifyPokemon: function (pokemon) {
+		onTrapPokemon: function (pokemon) {
 			pokemon.tryTrap();
 		},
 		onStart: function (target) {
@@ -208,7 +208,7 @@ exports.BattleStatuses = {
 		onEnd: function (pokemon) {
 			this.add('-end', pokemon, this.effectData.sourceEffect, '[partiallytrapped]');
 		},
-		onModifyPokemon: function (pokemon) {
+		onTrapPokemon: function (pokemon) {
 			pokemon.tryTrap();
 		}
 	},
@@ -328,13 +328,17 @@ exports.BattleStatuses = {
 				target.removeVolatile('Protect');
 				target.removeVolatile('Endure');
 
-				if (target.hasAbility('wonderguard') && this.gen > 5) {
+				if (target.hasAbility('wonderguard') && this.gen >= 5) {
 					this.debug('Wonder Guard immunity: ' + move.id);
 					if (target.runEffectiveness(move) <= 0) {
 						this.add('-activate', target, 'ability: Wonder Guard');
 						this.effectData.positions[i] = null;
 						return null;
 					}
+				}
+
+				if (posData.source.hasAbility('infiltrator') && this.gen >= 6) {
+					posData.moveData.infiltrates = true;
 				}
 
 				this.tryMoveHit(target, posData.source, posData.moveData);

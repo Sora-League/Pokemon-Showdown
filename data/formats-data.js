@@ -277,11 +277,6 @@ exports.BattleFormatsData = {
 		],
 		tier: "NFE"
 	},
-	pikachucosplay: {
-		gen: 6,
-		unobtainableShiny: true,
-		tier: "PU"
-	},
 	pikachurockstar: {
 		randomBattleMoves: ["meteormash","wildcharge","knockoff","brickbreak"],
 		randomDoubleBattleMoves: ["meteormash","discharge","hiddenpowerice","protect"],
@@ -2906,6 +2901,9 @@ exports.BattleFormatsData = {
 	},
 	castformrainy: {
 		randomBattleMoves: ["raindance","weatherball","thunder","hurricane"],
+		battleOnly: true
+	},
+	castformsnowy: {
 		battleOnly: true
 	},
 	kecleon: {
