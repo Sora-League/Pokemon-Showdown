@@ -137,17 +137,6 @@ exports.commands = {
 
 
 	
-	arjunb: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Arjunb</b>∆<br />' +
-			'<i>"How much can you possibly know about yourself if you\'ve never been in a fight?"</i> <br />' +
-			'<b>Type: <font color = A64000>Fighting</font></b><br />' +
-			'<b>Ace:</b> Mienshao<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + 
-			seen('soraarjunb') +
-			getBadges('soraarjunb'));
-	},
 	
 	terrors: function (target, room, user) {
 		if (!this.canBroadcast()) return;
