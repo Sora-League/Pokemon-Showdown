@@ -41,7 +41,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Edge∆', '∆Sora Arjunb∆', '∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
+		var list = ['∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -51,8 +51,8 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Mikuu∆', '∆Sora Tempest∆', 
-		        '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆', '∆Sora Nypt∆'
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆', 
+		        '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆', '∆Sora Nypt∆', '∆Sora Psycho∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -136,8 +136,6 @@ exports.commands = {
 
 
 
-	
-	
 	terrors: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
@@ -380,9 +378,9 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
 	              '<i>"Don\'t waffle out of the situation."</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace: Infernape</b> <br />'  + seen('gymldrwaffles') + '<br>' +
+	              '<b>Ace: Infernape</b> <br />'  + seen('sorawaffles') + '<br>' +
 	              '<img src = "http://sprites.pokecheck.org/t/010.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/heatran.gif"><br>' + 
-	              getBadges('gymldrwaffles'));
+	              getBadges('sorawaffles'));
 	},
 
 	flying: 'float',
@@ -394,7 +392,7 @@ exports.commands = {
 			'<b>Ace:</b> Hawlucha (John Cena)<br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><br />' +
 			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
-			seen('gymldrfloat') + getBadges('gymldrfloat'));
+			seen('sorafloat') + getBadges('sorafloat'));
 	},
 
     
@@ -420,7 +418,7 @@ exports.commands = {
 	this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />'+
 			'<i>"Storm of leaf and Draining root!"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
-			'<b>Ace:</b> Victreebel <br />' + seen('gymldrmitsuka') + getBadges('gymldrmitsuka'));
+			'<b>Ace:</b> Victreebel <br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 	},
 
 
@@ -470,7 +468,7 @@ connor: 'psychic',
 		this.sendReplyBox('∆Gym Ldr <b>WhiteFang</b>∆<br />' +
 			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Archeops<br />' + seen('gymldrwf') + getBadges('gymldrwf'));
+			'<b>Ace:</b> Archeops<br />' + seen('sorarwhitefang') + getBadges('sorawhitefang'));
 	},
 
 	
@@ -481,7 +479,7 @@ connor: 'psychic',
 			'<i>"The best steel doesn\'t always shine the brightest, but it will smash your face in."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> Bisharp <br />' +
-			seen('gymldrsolarwolf') + getBadges('gymldrsolarwolf'));
+			seen('sorasolarwolf') + getBadges('sorasolarwolf'));
 
 	},
 
