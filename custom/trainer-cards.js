@@ -352,7 +352,7 @@ exports.commands = {
 	mark: 'ground',
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br>' +
+		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br>' +
 			'<i>"???"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
 			'<b>Ace: </b>???<br>' + 
