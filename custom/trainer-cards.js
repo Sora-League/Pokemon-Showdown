@@ -330,10 +330,10 @@ exports.commands = {
 			'<b>Ace:</b> Dragonite<br />' + seen('soramemelord') + getBadges('soramemelord'));
 	},
 
-	mikuu: 'electric', 
+	
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Mikuu</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> ??<br />');
@@ -349,14 +349,18 @@ exports.commands = {
 			'<b>Ace: </b>Diancie<br />' + seen('sorayoumaton') + getBadges('sorayoumaton'));
 	},
 
-	
+	mark: 'ground',
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br>' +
 			'<i>"???"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
 			'<b>Ace: </b>???<br>' + 
-			seen('???') + getBadges('???')
+			seen('soramark') + '<br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
+			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio>' +
+			getBadges('soramark')
 		);
 	},
 
@@ -420,18 +424,15 @@ exports.commands = {
 	},
 
 
-	ice: 'mark',
-	mark: function (target, room, user) {
+	despair: 'ice', 
+	ice: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br />' +
-			'<i>"Hard work pays off in the end."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Despair</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> Don\'t Do Drugs (Mega Glalie)<br />' +
-			seen('gymldrmark') + '<br>' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
-			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio>' +
-			getBadges('gymldrmark')
+			'<b>Ace:</b> ???<br />' +
+			seen('soradespair') + '<br>' +
+			getBadges('soradespair')
 		);
 	},
 
