@@ -244,7 +244,7 @@ let Room = (function () {
 					userid: userid,
 					time: time,
 					guestNum: user.guestNum,
-					autoconfirmed: user.autoconfirmed
+					autoconfirmed: user.autoconfirmed,
 				};
 				this.muteQueue.splice(i, 0, entry);
 				// The timer needs to be switched to the new entry if it is to be unmuted
@@ -268,7 +268,7 @@ let Room = (function () {
 			// If the user is not found, construct a dummy user object for them.
 			user = {
 				userid: userid,
-				autoconfirmed: userid
+				autoconfirmed: userid,
 			};
 		}
 
@@ -323,12 +323,12 @@ let GlobalRoom = (function () {
 			this.chatRoomData = [{
 				title: 'Lobby',
 				isOfficial: true,
-				autojoin: true
+				autojoin: true,
 			}, {
 				title: 'Staff',
 				isPrivate: true,
 				staffRoom: true,
-				staffAutojoin: true
+				staffAutojoin: true,
 			}];
 		}
 
@@ -442,13 +442,13 @@ let GlobalRoom = (function () {
 		if (this.maxUsersDate) {
 			LoginServer.request('updateuserstats', {
 				date: this.maxUsersDate,
-				users: this.maxUsers
+				users: this.maxUsers,
 			}, function () {});
 			this.maxUsersDate = 0;
 		}
 		LoginServer.request('updateuserstats', {
 			date: Date.now(),
-			users: this.userCount
+			users: this.userCount,
 		}, function () {});
 	};
 
@@ -511,7 +511,7 @@ let GlobalRoom = (function () {
 			(room.isOfficial ? roomsData.official : roomsData.chat).push({
 				title: room.title,
 				desc: room.desc,
-				userCount: room.userCount
+				userCount: room.userCount,
 			});
 		}
 		return roomsData;
@@ -554,7 +554,7 @@ let GlobalRoom = (function () {
 			userid: '',
 			team: user.team,
 			rating: 1000,
-			time: new Date().getTime()
+			time: new Date().getTime(),
 		};
 		let self = this;
 
@@ -674,7 +674,7 @@ let GlobalRoom = (function () {
 		if (rooms[id]) return false;
 
 		let chatRoomData = {
-			title: title
+			title: title,
 		};
 		let room = Rooms.createChatRoom(id, title, chatRoomData);
 		this.chatRoomData.push(chatRoomData);
@@ -757,7 +757,7 @@ let GlobalRoom = (function () {
 		connection.send(initdata + this.formatListText);
 		if (this.chatRooms.length > 2) connection.send('|queryresponse|rooms|null'); // should display room list
 	};
-	GlobalRoom.prototype.onJoin = function (user, connection, merging) {
+	GlobalRoom.prototype.onJoin = function (user, connection) {
 		if (!user) return false; // ???
 		if (this.users[user.userid]) return user;
 
@@ -826,6 +826,10 @@ let GlobalRoom = (function () {
 		if (Config.reportbattles && rooms.lobby) {
 			rooms.lobby.add('|b|' + newRoom.id + '|' + p1.getIdentity() + '|' + p2.getIdentity());
 		}
+		if (format === 'leaguebattle' && rooms.lobby) {
+			rooms.lobby.add('|html|<a href="/' + newRoom.id + '" class="ilink">League battle between ' + p1.getIdentity() + ' and ' + p2.getIdentity() + ' started.</a>');
+			rooms.lobby.update();
+		}
 		if (Config.logladderip && options.rated) {
 			if (!this.ladderIpLog) {
 				this.ladderIpLog = fs.createWriteStream('logs/ladderip/ladderip.txt', {flags: 'a'});
@@ -873,7 +877,7 @@ let BattleRoom = (function () {
 			rated = {
 				p1: p1.userid,
 				p2: p2.userid,
-				format: format
+				format: format,
 			};
 		} else {
 			rated = false;
@@ -884,7 +888,7 @@ let BattleRoom = (function () {
 				p1: p1.userid,
 				p2: p2.userid,
 				format: format,
-				tour: options.tour
+				tour: options.tour,
 			};
 		} else {
 			this.tour = false;
@@ -1627,7 +1631,31 @@ let ChatRoom = (function () {
 		this.users[user.userid] = user;
 		this.userCount++;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+		if (!merging) {
+			let userList = this.userList ? this.userList : this.getUserList();
+			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
+			if (this.poll) this.poll.display(user, false);
+			if (global.Tournaments && Tournaments.get(this.id)) {
+				Tournaments.get(this.id).updateFor(user, connection);
+			}
+		}
+		if (user.named && Config.reportjoins) {
+			this.add('|j|' + user.getIdentity(this.id));
+			this.update();
+		} else if (user.named) {
+			let entry = '|J|' + user.getIdentity(this.id);
+			this.reportJoin(entry);
+		}
+		user.updateIdentity();
+
+=======
 		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
+>>>>>>> refs/remotes/Zarel/master
+=======
+		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
+>>>>>>> origin/master
 		return user;
 	};
 	ChatRoom.prototype.onRename = function (user, oldid, joining) {
