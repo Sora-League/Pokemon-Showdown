@@ -1631,8 +1631,7 @@ let ChatRoom = (function () {
 		this.users[user.userid] = user;
 		this.userCount++;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 		if (!merging) {
 			let userList = this.userList ? this.userList : this.getUserList();
 			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
@@ -1650,12 +1649,9 @@ let ChatRoom = (function () {
 		}
 		user.updateIdentity();
 
-=======
+
 		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
->>>>>>> refs/remotes/Zarel/master
-=======
 		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
->>>>>>> origin/master
 		return user;
 	};
 	ChatRoom.prototype.onRename = function (user, oldid, joining) {
