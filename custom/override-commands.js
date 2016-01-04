@@ -15,7 +15,7 @@ function giveGift (user) {
 		fs.writeFileSync('storage-files/given.json', '{}');
 		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
 	}
-	var users = ["soranoah","sorabarts","soraninjarisu","soraonyxeagle","sorablade","coachabadon","bamdee","sorajerattata","neithcass","soraedge","soraarjunb","sorasilvy","soraasch","soraheat","soragasp","sorameows","sorazachary","sorafloat","soramark","sorawhitefang","sorawaffles","sorasolarwolf","sorayoumaton","soramitsuka","sorabigo","soraterrors","soraleaf","soramemelord","soramikuu","soratempest","soracl","soraconnor","soranightanglet","sorayoumaton","soranypt"];
+	var users = [];
 	if (user.userid in file || users.indexOf(user.userid) === -1) return;
 	file[user.userid] = 1;
 	fs.writeFileSync("storage-files/given.json", JSON.stringify(file, null, 1));
