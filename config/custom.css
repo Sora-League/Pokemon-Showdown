@@ -4,7 +4,7 @@
 	background-repeat:no-repeat
 }
 body {
-	background-image:url("http://i.imgur.com/schmOtn.png");
+	background-image:url("http://i.imgur.com/0CPvA7O.png");
 	background-repeat:no-repeat;
 	background-position:center
 }
@@ -15,12 +15,42 @@ body {
     background: rgb(252,183,63);
 }*/
 
-li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-userlist-user-sorabart, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-jeratt, li#lobby-userlist-user-sorajerattata, li#lobby-userlist-user-coachabadon, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-bamdee, li#lobby-userlist-user-soraninjarisu, li#lobby-userlist-user-soraneith, li#lobby-userlist-user-blazing360 {
+li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-userlist-user-sorabarts, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-soraonyxeagle, li#lobby-userlist-user-jeratt, li#lobby-userlist-user-sorajerattata, li#lobby-userlist-user-coachabadon, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-bamdee, li#lobby-userlist-user-soraninjarisu, li#lobby-userlist-user-soraneith, li#lobby-userlist-user-blazing360 {
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
 }
 
-/*li#lobby-userlist-user-user{ background: url("http://imgur.com/cK069Jn") no-repeat right;
+li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
+	background: rgba(255 , 26 , 26 , 0.5);
+}
+
+/*li#lobby-userlist-user-insertname { background: url("http://i.imgur.com/cK069Jn.png") no-repeat right;
 }*/
+
+/*Ranks*/
+/*John Cena*/
+
+/*E4*/
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("http://i.imgur.com/PE7WCZk.png") no-repeat right;
+}
+/*Elite Frontier*/
+li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("") no-repeat right;
+}
+/*Frontier*/
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("") no-repeat right;
+}
+
+/*Gym Ldr*/
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
+li#lobby-userlist-user-, li#lobby-userlist-user- { 
+	background: url("") no-repeat right;
+}
 
 .chat-log {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
@@ -50,4 +80,11 @@ a.button i, a.button span {
 }
 li#lobby-userlist-user-gymldrwaffles strong, li#gamecorner-userlist-user-gymldrwaffles strong, li#staff-userlist-user-gymldrwaffles strong {
     color: #09aa3e !important;
+}
+/*Float's chat color*/
+.chat.chatmessage-sorafloat strong {
+    color: #0b1f82 !important;
+}
+li#lobby-userlist-user-sorafloat strong, li#gamecorner-userlist-user-sorafloat strong, li#staff-userlist-user-sorafloat strong {
+    color: #0b1f82 !important;
 }

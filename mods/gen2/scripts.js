@@ -57,7 +57,7 @@ exports.BattleScripts = {
 			}
 
 			return stat;
-		}
+		},
 	},
 	// Battle scripts.
 	runMove: function (move, pokemon, target, sourceEffect) {
@@ -290,7 +290,7 @@ exports.BattleScripts = {
 				basePower: move,
 				type: '???',
 				category: 'Physical',
-				flags: {}
+				flags: {},
 			};
 		}
 
@@ -631,15 +631,15 @@ exports.BattleScripts = {
 		let counter = {};
 		let setupType = '';
 		let item = 'leftovers';
-		let dvs = {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30};
+		let ivs = {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30};
 
 		// Moves that boost Attack:
 		let PhysicalSetup = {
-			swordsdance:1, sharpen:1
+			swordsdance:1, sharpen:1,
 		};
 		// Moves which boost Special Attack:
 		let SpecialSetup = {
-			amnesia:1, growth:1
+			amnesia:1, growth:1,
 		};
 
 		do {
@@ -694,7 +694,7 @@ exports.BattleScripts = {
 					// Check for hidden power DVs
 					let HPdvs = this.getType(move.type).HPdvs;
 					for (let dv in HPdvs) {
-						dvs[dv] = HPdvs[dv] * 2;
+						ivs[dv] = HPdvs[dv] * 2;
 					}
 					moveid = 'hiddenpower';
 				}
@@ -803,7 +803,7 @@ exports.BattleScripts = {
 		case 'Cubone':
 		case 'Marowak':
 			item = 'thickclub';
-			dvs.atk = 26;
+			ivs.atk = 26;
 			break;
 		case 'Pikachu':
 			item = 'lightball';
@@ -819,13 +819,13 @@ exports.BattleScripts = {
 			UU: 85,
 			BL: 83,
 			OU: 79,
-			Uber: 74
+			Uber: 74,
 		};
 		// Hollistic judgment.
 		let customScale = {
 			Caterpie: 99, Kakuna: 99, Magikarp: 99, Metapod: 99, Weedle: 99, Pichu: 99, Smoochum: 99,
 			Clefairy: 95, "Farfetch'd": 99, Igglybuff: 99, Jigglypuff: 99, Ditto: 99, Mewtwo: 70,
-			Dragonite: 85, Cloyster: 83, Staryu: 90
+			Dragonite: 85, Cloyster: 83, Staryu: 90,
 		};
 		let level = levelScale[template.tier] || 90;
 		if (customScale[template.name]) level = customScale[template.name];
@@ -835,11 +835,11 @@ exports.BattleScripts = {
 			moves: moves,
 			ability: 'None',
 			evs: {hp: 255, atk: 255, def: 255, spa: 255, spd: 255, spe: 255},
-			ivs: dvs,
+			ivs: ivs,
 			item: item,
 			level: level,
 			shiny: false,
-			gender: 'M'
+			gender: 'M',
 		};
-	}
+	},
 };

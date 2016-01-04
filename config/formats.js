@@ -120,7 +120,6 @@ exports.Formats = [
 	/*{
 		name: "Pokemon Sandbox",
 		section: "Sora Exclusive",
-
 		mod: 'tiershift',
 		ruleset: ['HP Percentage Mod', 'Team Preview'],
 		banlist: ['Illegal', 'Unreleased', 'Soul Dew', 'Mewtwo', 'Lugia', 'Ho-Oh', 'Kyogre', 'Groudon', 'Rayquaza', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Palkia', 
@@ -130,7 +129,6 @@ exports.Formats = [
 			var template = this.getTemplate(set.species);
 			var item = this.getItem(set.item);
 			var problems = [];
-
 			if (set.species === set.name) delete set.name;
 			if (template.isNonstandard) {
 				problems.push(set.species + ' is not a real Pokemon.');
@@ -164,7 +162,6 @@ exports.Formats = [
 			if (!statusProblems.length) return;
 			var attackProblems = this.validateSet(set, teamHas, {ignorestabmoves: {'Physical':1, 'Special':1}});
 			if (!attackProblems.length) return;
-
 			var problems = [];
 			for (var i = 0; i < statusProblems.length; i++) {
 				problems.push('(Status) ' + statusProblems[i]);
@@ -549,26 +546,7 @@ exports.Formats = [
 	// Other Metagames
 	///////////////////////////////////////////////////////////////////
 
-	{
-		name: "350 Cup",
-		desc: [
-			"Pok&eacute;mon with a base stat total of 350 or lower get their stats doubled.",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3512945/\">350 Cup</a>"
-		],
-		section: "OM of the Month",
-		column: 3,
-
-		mod: '350cup',
-		ruleset: ['Ubers', 'Evasion Moves Clause'],
-		banlist: ['Abra', 'Cranidos', 'Darumaka', 'Gastly', 'Pawniard', 'Rufflet', 'Smeargle', 'Spritzee', 'DeepSeaScale', 'DeepSeaTooth', 'Light Ball', 'Thick Club'],
-		onValidateSet: function (set) {
-			const template = Tools.getTemplate(set.species);
-			const item = this.getItem(set.item);
-			if (item.name === 'Eviolite' && Object.values(template.baseStats).sum() <= 350) {
-				return ['Eviolite is banned on Pok\u00E9mon with 350 or lower BST.'];
-			}
-		}
-	},
+	
 	{
 		name: "LC Extended",
 		desc: [

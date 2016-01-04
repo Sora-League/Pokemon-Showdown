@@ -11,7 +11,7 @@ exports.commands = {
 	ateamnote: 'an',
 	an: function (target, room, user, connection, cmd) {
 		var ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
-			'bamdee':1, 'onyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabart': 1,
+			'bamdee':1, 'onyxeagle':1, 'soraonyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabarts': 1,
 			'soraninjarisu':1, 'soraneith': 1
 		};
 		if (!(user.userid in ateam)) return this.errorReply("The command \'/" + cmd + "\' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
@@ -19,6 +19,19 @@ exports.commands = {
 		for (var i in room.users) {
 			if (room.users[i].userid in ateam) room.users[i].sendTo(this.room, '|html|<div class = "message-error">(' + user.name + ' notes: ' + Tools.escapeHTML(target) + ')</div>');
 		}
+	},
+	
+	givepresent: function (target, room, user) {
+		if (!this.can('hotpatch')) return false;
+		if (!target) return this.sendReply("/givegift [user] - Gives a user a Christmas gift of 5 bucks.");
+		if (!Users(target)) return this.sendReply('User ' + target + ' not found.');
+		Users(target).popupReply('|html|<center><h3><font color=#992114>Merry Christmas</font> <font color=#1A3112>and have a</font> <font color=#992114>Happy New Year</font> <font color=#1A3112>from the Sora League!</font></h3><br>' +
+				'<center><img src="http://rs522.pbsrc.com/albums/w348/sunilmsn/present.gif~c200"><br>' +
+                                '<b>You have received 5 Bucks! Stay tuned throughout the day for special events for more chances of picking up presents!</b>' +
+				'<audio controls autoplay src = "https://dl2.pushbulletusercontent.com/EYtKI65FLYuGfJRI1Me8QnVRzgSG89eM/Pok%C3%A9mon%20Christmas%20Medley%202015%20%28Feat-%20Trickywi%29.mp3"><br>' +
+                                '<font color=#C5A436>GlitchxCity - Pokémon Christmas Medley 2015 (Feat: Trickywi)</font></center>'); //DONEEEEE!!!!
+		Core.write('money', Users(target).userid, 5, '+');
+		this.sendReply('You have given ' + Users(target).name + ' a present.');
 	},
 
 	tourelo: 'tourladder',
@@ -135,6 +148,8 @@ exports.commands = {
 	declareyellow: 'declare',
 	blackdeclare: 'declare',
 	declareblack: 'declare',
+	pinkdeclare: 'declare',
+	declarepink: 'declare',
 	declare: function (target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help declare');
 		if (!this.can('declare', null, room)) return false;
@@ -153,6 +168,9 @@ exports.commands = {
 				break;
 			case 'declareblack': case 'blackdeclare':
 				this.add('|raw|<div style = "background: #191919; color: white; padding: 2px 4px;"><b>' + target + '</b></div>');
+				break;
+			case 'declarepink': case 'pinkdeclare':
+				this.add('|raw|<div style = "background: #fc55af; color: black; padding: 2px 4px;"><b>' + target + '</b></div>');
 				break;
 			default: this.add('|raw|<div class="broadcast-blue"><b>' + target + '</b></div>');
 		}
