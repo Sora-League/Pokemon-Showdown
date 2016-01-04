@@ -757,7 +757,7 @@ let GlobalRoom = (function () {
 		connection.send(initdata + this.formatListText);
 		if (this.chatRooms.length > 2) connection.send('|queryresponse|rooms|null'); // should display room list
 	};
-	GlobalRoom.prototype.onJoin = function (user, connection) {
+	GlobalRoom.prototype.onJoin = function (user, connection, merging) {
 		if (!user) return false; // ???
 		if (this.users[user.userid]) return user;
 
@@ -825,10 +825,6 @@ let GlobalRoom = (function () {
 		this.cancelSearch(p2);
 		if (Config.reportbattles && rooms.lobby) {
 			rooms.lobby.add('|b|' + newRoom.id + '|' + p1.getIdentity() + '|' + p2.getIdentity());
-		}
-		if (format === 'leaguebattle' && rooms.lobby) {
-			rooms.lobby.add('|html|<a href="/' + newRoom.id + '" class="ilink">League battle between ' + p1.getIdentity() + ' and ' + p2.getIdentity() + ' started.</a>');
-			rooms.lobby.update();
 		}
 		if (Config.logladderip && options.rated) {
 			if (!this.ladderIpLog) {
@@ -1631,31 +1627,7 @@ let ChatRoom = (function () {
 		this.users[user.userid] = user;
 		this.userCount++;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		if (!merging) {
-			let userList = this.userList ? this.userList : this.getUserList();
-			this.sendUser(connection, '|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.getLogSlice(-100).join('\n') + this.getIntroMessage(user));
-			if (this.poll) this.poll.display(user, false);
-			if (global.Tournaments && Tournaments.get(this.id)) {
-				Tournaments.get(this.id).updateFor(user, connection);
-			}
-		}
-		if (user.named && Config.reportjoins) {
-			this.add('|j|' + user.getIdentity(this.id));
-			this.update();
-		} else if (user.named) {
-			let entry = '|J|' + user.getIdentity(this.id);
-			this.reportJoin(entry);
-		}
-		user.updateIdentity();
-
-=======
 		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
->>>>>>> refs/remotes/Zarel/master
-=======
-		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
->>>>>>> origin/master
 		return user;
 	};
 	ChatRoom.prototype.onRename = function (user, oldid, joining) {
