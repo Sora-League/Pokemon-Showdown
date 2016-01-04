@@ -481,7 +481,7 @@ Users.cacheGroupData = cacheGroupData;
 /*********************************************************
  * User and Connection classes
  *********************************************************/
-
+ 
 // User
 User = (function () {
 	function User(connection) {
@@ -684,6 +684,7 @@ User = (function () {
 		return this.can('promote', {group:sourceGroup}) && this.can('promote', {group:targetGroup});
 	};
 	User.prototype.resetName = function () {
+		Core.write('lastseen', this.userid, Date.now());
 		let name = 'Guest ' + this.guestNum;
 		let userid = toId(name);
 		if (this.userid === userid) return;
@@ -1201,6 +1202,7 @@ User = (function () {
 		}
 	};
 	User.prototype.onDisconnect = function (connection) {
+		if (this.named) Core.write('lastseen', this.userid, Date.now());
 		for (let i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {
 				// console.log('DISCONNECT: ' + this.userid);
@@ -1235,6 +1237,7 @@ User = (function () {
 	};
 	User.prototype.disconnectAll = function () {
 		// Disconnects a user from the server
+		if (this.named) Core.write('lastseen', this.userid, Date.now());
 		this.clearChatQueue();
 		let connection = null;
 		this.markInactive();

@@ -24,6 +24,15 @@ let rooms = Rooms.rooms = Object.create(null);
 
 let aliases = Object.create(null);
 
+function getTells (user) {
+	var tells = Core.read('tells', user.userid);
+	if (!tells || !tells.length) return;
+	for (var i = 0; i < tells.length; i++) {
+		user.send('|pm| Tells|' + user.getIdentity() + '|/html ' + tells[i]);
+	}
+	Core.Delete('tells', user.userid);
+}
+
 let Room = (function () {
 	function Room(roomid, title) {
 		this.id = roomid;
@@ -103,6 +112,12 @@ let Room = (function () {
 		message = CommandParser.parse(message, this, user, connection);
 
 		if (message && message !== true) {
+			if (user.isSpamroomed()) {
+				connection.sendTo(this, '|c|' + user.getIdentity() + '|' + message);
+				Rooms('spamroom').add('|c|' + user.getIdentity() + '| __(to room ' + this.title + ')__ ' + message);
+				Rooms('spamroom').update();
+				return false;
+			}
 			this.add('|c|' + user.getIdentity(this.id) + '|' + message);
 		}
 		this.update();
@@ -767,11 +782,18 @@ let GlobalRoom = (function () {
 			this.maxUsersDate = Date.now();
 		}
 
+		getTells(user);
 		return user;
 	};
 	GlobalRoom.prototype.onRename = function (user, oldid, joining) {
+		if (user.named && toId(oldid) != toId(user)) {
+			Core.write('lastseen', user.userid, Date.now());
+			Core.write('lastseen', toId(oldid), Date.now());
+		}
 		delete this.users[oldid];
 		this.users[user.userid] = user;
+
+		getTells(user);
 		return user;
 	};
 	GlobalRoom.prototype.onUpdateIdentity = function () {};
