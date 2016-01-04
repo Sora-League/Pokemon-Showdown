@@ -698,7 +698,7 @@ exports.Formats = [
 			'Altarianite', 'Charizardite X', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Metagrossite', 'Salamencite', 'Slowbronite', 'Smooth Rock', 'Soul Dew',
 		],
 	},
-	{
+	/*{
 		name: "Ability Shift",
 		section: "Other Metagames",
 		mod: 'abilityshift',
@@ -707,7 +707,7 @@ exports.Formats = [
 		banlist: ['Illegal', 'Unreleased', 'Illegal', 'Soul Dew', 'Mewtwo', 'Lugia', 'Ho-Oh', 'Kyogre', 'Groudon', 'Rayquaza', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Palkia', 
 			'Giratina', 'Giratina-Origin', 'Darkrai', 'Arceus', 'Reshiram', 'Zekrom', 'Kyurem-White', 'Xerneas', 'Yveltal', 'Greninja', 'Regigigas', 'Slaking', 'Torkoal'
 		]
-	},
+	},*/
 	{
 		name: "Tier Shift",
 		desc: [
