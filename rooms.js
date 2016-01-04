@@ -1648,12 +1648,9 @@ let ChatRoom = (function () {
 		}
 		user.updateIdentity();
 
-=======
+
 		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
->>>>>>> refs/remotes/Zarel/master
-=======
 		if (this.game && this.game.onJoin) this.game.onJoin(user, connection);
->>>>>>> origin/master
 		return user;
 	};
 	ChatRoom.prototype.onRename = function (user, oldid, joining) {
