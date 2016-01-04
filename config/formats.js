@@ -1107,12 +1107,9 @@ exports.Formats = [
 		section: "Other Metagames",
 
 		team: 'randomMonotype',
-<<<<<<< HEAD
 		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-=======
 		searchShow: false,
 		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
->>>>>>> Zarel/master
 	},
 
 	// BW2 Singles
