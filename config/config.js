@@ -304,7 +304,7 @@ exports.grouplist = [
 		id: "admin",
 		name: "Administrator",
 		root: true,
-		globalonly: true
+		globalonly: true,
 	},
 	{
 		symbol: '&',
@@ -323,7 +323,7 @@ exports.grouplist = [
 		potd: true,
 		disableladder: true,
 		globalonly: true,
-		tournamentsmanagement: true
+		tournamentsmanagement: true,
 	},
 	{
 		symbol: '#',
@@ -337,7 +337,7 @@ exports.grouplist = [
 		declare: true,
 		modchatall: true,
 		roomonly: true,
-		tournamentsmanagement: true
+		tournamentsmanagement: true,
 	},
 	{
 		symbol: '\u2605',
@@ -348,7 +348,7 @@ exports.grouplist = [
 		modchat: true,
 		roomonly: true,
 		editroom: true,
-		joinbattle: true
+		joinbattle: true,
 	},
 	{
 		symbol: '@',
@@ -362,6 +362,10 @@ exports.grouplist = [
 		redirect: true,
 		ip: true,
 		alts: '@u',
+<<<<<<< HEAD:config/config.js
+=======
+		tournaments: true,
+>>>>>>> Zarel/master:config/config-example.js
 	},
 	{
 		symbol: '%',
@@ -383,7 +387,7 @@ exports.grouplist = [
 		tournaments: true,
 		tournamentsmoderation: true,
 		jeopardy: true,
-		joinbattle: true
+		joinbattle: true,
 	},
 	{
 		symbol: '$',
@@ -399,11 +403,15 @@ exports.grouplist = [
 		inherit: ' ',
 		tournaments: true,
 		alts: 's',
+<<<<<<< HEAD:config/config.js
 		makegroupchat: true,
 		broadcast: true
+=======
+		broadcast: true,
+>>>>>>> Zarel/master:config/config-example.js
 	},
 	{
 		symbol: ' ',
-		ip: 's'
-	}
+		ip: 's',
+	},
 ];
