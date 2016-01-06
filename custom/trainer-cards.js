@@ -351,9 +351,9 @@ exports.commands = {
 	ground: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br>' +
-			'<i>"???"</i> <br>' +
+			'<i>"When I said don\'t use drugs....I MEANT IT. Keep it up and have fun."</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>???<br>' + 
+			'<b>Ace: </b>Crash Man (Excadrill)<br>' + 
 			seen('soramark') + '<br>' +
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
