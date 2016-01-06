@@ -78,8 +78,7 @@ exports.commands = {
 			'- If a challenger loses to an Elite Frontier or the Frontier Head, they will randomly lose one Elite symbol and one normal symbol.<br />' +
 			'<blink><b>Notes:</b></blink><br />' +
 			'- The same frontier may be challenged once every 24 hours.<br />' +
-			'- <a href="http://soraleague.weebly.com/rules.html">Challenging Rules</a><br />' +
-			'- <a href="http://soraleague.weebly.com/frontier.html">Battle Frontier Members</a><br />' +
+			'- <a href="http://sora.cu.cc/challenge.html">Challenging Rules</a><br />' +
 			'<b>Here is a list of Sora League Frontier Brains:</b><br>' +
 			'- <a href="http://sora.cu.cc/frontier.html">Sora League Frontier Brains</a>'
 		);
