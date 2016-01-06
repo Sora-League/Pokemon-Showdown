@@ -41,7 +41,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Asch∆', '∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Meows∆', '∆Sora Jerattata∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
+		var list = ['∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Asch∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
