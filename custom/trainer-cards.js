@@ -148,6 +148,30 @@ exports.commands = {
 			getBadges('soraterrors'));
 	},
 	
+	tempest: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Tempest</b>∆<br />' +
+			'<i>"Evidence dot zip can\'t contain the ass whooping."</i> <br />' +
+			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+			'<b>Ace:</b> Togekiss (LOL M2K)<br />' +
+			'<b>Battle Rules:</b><br />' +
+			'-No hazards<br />' + 
+			seen('soratempest') +
+			getBadges('soratempest'));
+	},
+	
+	nightanglet: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Nightanglet</b>∆<br />' +
+			'<i>"What\'s a quote?"</i> <br />' +
+			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
+			'<b>Ace:</b> Gallade<br />' +
+			'<b>Battle Rules:</b><br />' +
+			'-None<br />' + 
+			seen('soranightanglet') +
+			getBadges('soranightanglet'));
+	},
+	
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
@@ -350,13 +374,13 @@ exports.commands = {
 		);
 	},
 
-        nighttanglet: 'fighting',
+       
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Nighttanglet</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('soranighttanglet') + getBadges('soranighttanglet')
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
 		);
         },
 
@@ -471,13 +495,13 @@ connor: 'psychic',
 
 	},
 
-        tempest: 'water',
+        arjunb: 'water',
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Tempest</b>∆<br />' +
-			'<i>"Wosh u SOUL"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />' +
+			'<i>"If you like Water, you already like 72% of me."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Qwilfish <br/>'
+			'<b>Ace:</b> Crawdaunt <br/>'
 		);
 	},
 
@@ -644,7 +668,7 @@ connor: 'psychic',
 		);
 	},
 
-	nightanglet: function (target, room, user) {
+	night: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><i><font color="blue"><h1>Nightanglet</h1></font></center><br>' +
 			'<font color = "blue"><b>Ace: Infernape(CR Ace:Rhydon)<br />' +
