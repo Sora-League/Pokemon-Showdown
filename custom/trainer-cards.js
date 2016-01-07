@@ -185,7 +185,7 @@ exports.commands = {
 			'<b>Battle Rules:</b> <br/>' +
 			'-Only BL, BL2, BL3 and BL4 Pokemon may be used.<br/>' +
 			'-No Mega Evolution<br />' +
-			seen('frontierasch') + '<br/>' +
+			seen('soraasch') + '<br/>' +
 			'<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif">' +getBadges('frontierasch'));
 	},
 
@@ -197,7 +197,7 @@ exports.commands = {
 			'<b>Ace:</b> Quagsire<br />' +
 			'<b>Battle rules:</b> <br />' +
 			'-OU<br />' +
-			'-No Trick/Switcheroo <br />' + seen('frontiermeows') + getBadges('frontiermeows'));
+			'-No Trick/Switcheroo <br />' + seen('sorameows') + getBadges('sorameows'));
 	},
 
 	silver: "siiilver",
@@ -243,22 +243,10 @@ exports.commands = {
 			'-No Hazards <br/>' +
 			'-No Knock off<br />' +
 			'-No Megas<br />' +
-			seen('frontiersrewop') + '<br/>' +
+			seen('soraheat') + '<br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
 
-	jerattata: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Jerattata</b>∆<br />' +
-			'<i>"Decide which of the two options is harder, and do the other. You might enjoy the battle."</i> <br />' +
-			'<b>Symbol:</b> Ultimatum <br />' +
-			'<b>Ace:</b> All<br />' +
-			'<b>Battle rules:</b> <br />' +
-			'-Challenger picks either a Tier/Meta <b>or</b> Battle Rule (within reason) <br />' +
-			'-Jeratt picks either a Tier/Meta or Battle Rule depending on which the challenger picks. <br />'+
-			'-Both the Tier/Meta and Battle rule that are decided upon are combined and are used for the battle.<br />'+
-			'-All forms of Monotype battles, Random Battles and Champion\'s Challenge battles are banned. <br />' + seen('frontierjerattata'));
-	},
 
 	zachary: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -271,7 +259,7 @@ exports.commands = {
 			'-No hazards<br />' +
 			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
 			'-Pikachu Tournamentchu <br />' +
-			'-No CAP Pokemon</details> <br />' + seen('frontierzachary') + getBadges('frontierzachary'));
+			'-No CAP Pokemon</details> <br />' + seen('sorazachary') + getBadges('sorazachary'));
 	},
 	
 	onyxeagle: function (target, room, user) {
