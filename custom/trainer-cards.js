@@ -322,13 +322,13 @@ exports.commands = {
 			  '<b>Ace:</b> Mega Pinsir <br />' + seen('soracl') + getBadges('soracl'));
 	},
 
-	
+	noel: 'dark',
 	dark: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Noel</b>∆<br />' +
+			'<i>"Caught in the wind of ill intentions, the nighthawk soars."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')); 
+			'<b>Ace:</b> Umbreon<br />' + seen('soranoel') + getBadges('soranoel')); 
 	},
 
 	Memelord: 'dragon',
@@ -495,13 +495,13 @@ connor: 'psychic',
 
 	},
 
-        arjunb: 'water',
+        
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />' +
-			'<i>"If you like Water, you already like 72% of me."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???/b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Crawdaunt <br/>'
+			'<b>Ace:</b> ??? <br/>'
 		);
 	},
 
