@@ -402,7 +402,7 @@ exports.commands = {
 			'<i>"flap... flap... flap... bird type...?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Hawlucha (John Cena)<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/metagross-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aron.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/beldum.gif"><br />' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/swablu.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/starly.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/charizard-mega-y.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/starly.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/swablu.gif"><br />' +
 			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
 			seen('sorafloat') + getBadges('sorafloat'));
 	},
