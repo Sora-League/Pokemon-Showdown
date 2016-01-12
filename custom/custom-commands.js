@@ -213,7 +213,7 @@ exports.commands = {
 
 	leaguepmall: 'leaguepm',
 	leaguepm: function (target, room, user) {
-		if (!this.can('hotpatch', null, room)) return false;
+		if (!this.can('hotpatch')) return false;
 		if (!target) return this.sendReply('/' + cmd + ' [message] - Sends a message to all league members.');
 
 		let pmName = '∆League PM [Do not reply]';
