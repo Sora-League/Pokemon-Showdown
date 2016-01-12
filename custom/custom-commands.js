@@ -9,13 +9,14 @@ function display (message, self) {
 	return self.popupReply('|html|' + message);
 }
 
+let ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
+	'bamdee':1, 'onyxeagle':1, 'soraonyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabarts': 1,
+	'soraninjarisu':1, 'soraneith': 1
+};
+
 exports.commands = {
 	ateamnote: 'an',
 	an: function (target, room, user, connection, cmd) {
-		let ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
-			'bamdee':1, 'onyxeagle':1, 'soraonyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabarts': 1,
-			'soraninjarisu':1, 'soraneith': 1
-		};
 		if (!(user.userid in ateam)) return this.errorReply("The command \'/" + cmd + "\' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!target) return this.errorReply('/help ateamnote');
 		for (let i in room.users) {
@@ -182,28 +183,59 @@ exports.commands = {
 	},
 
 	masspm: 'pmall',
-	pmall: function (target, room, user) {
-		if (!this.can('declare')) return false;
-		if (!target) return this.sendReply('/pmall [message] - Sends a message to all users in the server.');
+	pmall: function (target, room, user, connection, cmd) {
+		if (!this.can('hotpatch')) return false;
+		if (!target) return this.sendReply('/' + cmd + ' [message] - Sends a message to all users in the server.');
 
-		let pmName = '~Server-Kun [Do not reply]';
+		let pmName = '∆Server-Kun [Do not reply]';
 
 		Users.users.forEach((u) => {
 			let message = '|pm|' + pmName + '|' + u.getIdentity() + '|' + target;
 			u.send(message);
 		});
+		this.logModCommand(user.name + " sent a mass-pm.");
 	},
 
-	rmall: function (target, room, user) {
-		if (!this.can('roomdeclare', null, room)) return false;
-		if (!target) return this.sendReply('/rmall [message] - Sends a message to all users in the room');
+	roompm: 'rmall',
+	roompmall: 'rmall',
+	rmall: function (target, room, user, connection, cmd) {
+		if (!this.can('declare', null, room)) return false;
+		if (!target) return this.sendReply('/' + cmd + ' [message] - Sends a message to all users in the room.');
 
-		let pmName = ' Room-PM [Do not reply]';
+		let pmName = ' Room PM [Do not reply]';
 
 		for (let i in room.users) {
 			let message = '|pm|' + pmName + '|' + room.users[i].getIdentity() + '|' + target;
 			room.users[i].send(message);
 		}
+		this.logModCommand(user.name + " sent a mass-pm within the room.");
+	},
+
+	leaguepmall: 'leaguepm',
+	leaguepm: function (target, room, user) {
+		if (!this.can('hotpatch', null, room)) return false;
+		if (!target) return this.sendReply('/' + cmd + ' [message] - Sends a message to all league members.');
+
+		let pmName = '∆League PM [Do not reply]';
+
+		Users.users.forEach((u) => {
+			let message = '|pm|' + pmName + '|' + u.getIdentity() + '|' + target;
+			if (u.can('warn')) u.send(message);
+		});
+		this.logModCommand(user.name + " mass-pm'd all league members.");
+	},
+
+	ateampmall: 'ateampm',
+	ateampm: function (target, room, user, connection, cmd) {
+		if (!(user.userid in ateam)) return false;
+		if (!target) return this.sendReply('/' + cmd + ' [message] - Sends a message to admin team members.');
+
+		let pmName = '∆Admin-Team PM [Do not reply]';
+
+		Users.users.forEach((u) => {
+			let message = '|pm|' + pmName + '|' + u.getIdentity() + '|' + target;
+			if (u.userid in ateam) u.send(message);
+		});
 	},
 
 	roomlist: function (target, room, user) {
