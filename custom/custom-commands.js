@@ -212,7 +212,7 @@ exports.commands = {
 	},
 
 	leaguepmall: 'leaguepm',
-	leaguepm: function (target, room, user) {
+	leaguepm: function (target, room, user, connection, cmd) {
 		if (!this.can('hotpatch')) return false;
 		if (!target) return this.sendReply('/' + cmd + ' [message] - Sends a message to all league members.');
 
