@@ -117,7 +117,7 @@ exports.Formats = [
 		}
 
 	},
-	{
+	/*{
 		name: "Pokemon Sandbox",
 		section: "Sora Exclusive",
 		mod: 'tiershift',
@@ -125,7 +125,7 @@ exports.Formats = [
 		banlist: ['Illegal', 'Unreleased', 'Soul Dew', 'Mewtwo', 'Lugia', 'Ho-Oh', 'Kyogre', 'Groudon', 'Rayquaza', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Defense', 'Deoxys-Speed', 'Dialga', 'Palkia', 
 			'Giratina', 'Giratina-Origin', 'Darkrai', 'Arceus', 'Reshiram', 'Zekrom', 'Kyurem-White', 'Xerneas', 'Yveltal', 'Greninja', 'Regigigas', 'Slaking', 'Torkoal'
 		],
-		validateSet: function(set) {
+		/*validateSet: function(set) {
 			var template = this.getTemplate(set.species);
 			var item = this.getItem(set.item);
 			var problems = [];
@@ -171,7 +171,7 @@ exports.Formats = [
 			}
 			return problems;
 		}
-	},
+	},*/
 
 	// XY Singles
 	///////////////////////////////////////////////////////////////////
