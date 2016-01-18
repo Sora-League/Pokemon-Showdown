@@ -313,13 +313,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	cl: 'bug',
+	
 	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>CL</b>∆<br />'+
-			  '<i>"Thanks again for your help. My bug Pokémon are scurrying with excitement about getting to battle you. Let\'s get straight to it~"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Mega Pinsir <br />' + seen('soracl') + getBadges('soracl'));
+			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
 	noel: 'dark',
@@ -498,7 +498,7 @@ connor: 'psychic',
         
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???/b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
 			'<b>Ace:</b> ??? <br/>'
