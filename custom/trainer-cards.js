@@ -331,7 +331,7 @@ exports.commands = {
 			'<b>Ace:</b> Umbreon<br />' + seen('soranoel') + getBadges('soranoel')); 
 	},
 
-	Memelord: 'dragon',
+	memelord: 'dragon',
 	dragon: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Memelord</b>∆<br />' +
@@ -349,10 +349,10 @@ exports.commands = {
 			'<b>Ace:</b> ??<br />');
 	},
 
-        you: 'fairy',
+        youmaton: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>You</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Youmaton</b>∆<br />'+
 		        'Leader Ranking: <font color = 00FF00><b>3rd</font></b> <br />' +
 			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
