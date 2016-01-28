@@ -142,10 +142,10 @@ exports.commands = {
 			return this.sendReply("Wait for /updateserver to finish before using /kill.");
 		}
 
-		for (let i in Users.users) {
-			let shutdownTime = Date.now();
-			Core.write('lastseen', Users.users[i].userid, shutdownTime);
-		}
+		let shutdownTime = Date.now();
+		Users.users.forEach((u) => {
+			Core.write('lastseen', u.userid, shutdownTime);
+		});
 		
 		if (!fs.existsSync('storage-files/maxuptime.txt')) fs.writeFileSync('storage-files/maxuptime.txt', process.uptime());
 		else if (parseFloat(fs.readFileSync('storage-files/maxuptime.txt')) < process.uptime()) {
