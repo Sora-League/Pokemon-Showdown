@@ -465,13 +465,13 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('sorapsycho') + getBadges('sorapsycho'));
 	},
 	
-connor: 'psychic',
+
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Connor</b>∆<br />' +
-			'<i>"Psychic power isn\'t something that only a few people have. Everyone has psychic power. People just don\'t realize it.<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"<br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Victini <br />' + seen('soraconnor') + getBadges ('soraconnor'));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
 	},
 
 	rock: 'whitefang',
