@@ -465,7 +465,7 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('sorapsycho') + getBadges('sorapsycho'));
 	},
 	
-        psychic: 'ruee'
+        psychic: 'ruee',
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Ruee</b>∆<br />' +
