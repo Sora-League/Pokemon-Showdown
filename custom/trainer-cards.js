@@ -41,7 +41,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Asch∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
+		var list = ['∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆' '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Asch∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -51,8 +51,8 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Tempest∆', 
-		        '∆Sora CL∆', '∆Sora Connor∆', '∆Sora Nightanglet∆', '∆Sora Psycho∆'
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆',  
+		        '∆Sora CL∆', '∆Sora Psycho∆', '∆Sora Ruee∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -465,13 +465,13 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('sorapsycho') + getBadges('sorapsycho'));
 	},
 	
-
+        psychic: 'ruee'
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Ruee</b>∆<br />' +
 			'<i>"???"<br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
+			'<b>Ace:</b> ??? <br />' + seen('soraruee') + getBadges ('soraruee'));
 	},
 
 	rock: 'whitefang',
