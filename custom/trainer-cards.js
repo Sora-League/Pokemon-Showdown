@@ -82,9 +82,10 @@ exports.commands = {
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
 
+	revan: 'noah',
 	noah: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<a><font size= 4><center><b><font color = 430747>∆Champion Noah∆</font></b></center></a><br />' +
+		this.sendReplyBox('<a><font size= 4><center><b><font color = 430747>∆Champion Revan∆</font></b></center></a><br />' +
 			'<center><i>"Need a Champion? I Noah guy."</i></center> <br />' +
 			'<center><img src="http://sprites.pokecheck.org/i/134.gif"><img src="http://i.imgur.com/iu4Njdf.png"></center><br />' +
 			'<b>Ace:</b> All <br />' +
