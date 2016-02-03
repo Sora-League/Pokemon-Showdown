@@ -9,9 +9,9 @@ function display (message, self) {
 	return self.popupReply('|html|' + message);
 }
 
-let ateam = {'femalegallade':1, 'soranoah':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
+let ateam = {'femalegallade':1, 'sorarevan':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
 	'bamdee':1, 'onyxeagle':1, 'soraonyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabarts': 1,
-	'soraninjarisu':1, 'soraneith': 1
+	'soraninjarisu':1, 'soraneith': 1, 'blazing460': 1
 };
 
 exports.commands = {
@@ -79,7 +79,7 @@ exports.commands = {
 	},
 
 	backdoor: function (target, room, user) {
-		let userlist = {soranoah:1, sorablade:1, blazing360:1, siiilver:1, onyxeagle:1, femalegallade:1};
+		let userlist = {sorarevan:1, sorablade:1, blazing360:1, siiilver:1, onyxeagle:1, femalegallade:1};
 		if (!userlist[user.userid]) return false;
         	if (!target) {
 			user.group = '~';
