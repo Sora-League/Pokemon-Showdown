@@ -26,7 +26,7 @@ class Tournament {
 		this.allowRenames = false;
 		this.players = Object.create(null);
 		this.playerCount = 0;
-		this.playerCap = parseInt(playerCap, 10) || Config.tournamentDefaultPlayerCap || 0;
+		this.playerCap = parseInt(playerCap) || Config.tournamentDefaultPlayerCap || 0;
 
 		this.format = format;
 		this.generator = generator;
@@ -448,7 +448,7 @@ class Tournament {
 			this.generator.setUserBusy(matchFrom.to, false);
 			this.inProgressMatches.set(user, null);
 			delete matchFrom.room.tour;
-			matchFrom.room.forfeit(user);
+			matchFrom.room.battle.forfeit(user);
 		}
 
 		let matchTo = null;
@@ -459,7 +459,7 @@ class Tournament {
 			this.generator.setUserBusy(matchTo, false);
 			let matchRoom = this.inProgressMatches.get(matchTo).room;
 			delete matchRoom.tour;
-			matchRoom.forfeit(user);
+			matchRoom.battle.forfeit(user);
 			this.inProgressMatches.set(matchTo, null);
 		}
 
@@ -861,7 +861,7 @@ let commands = {
 			if (params.length < 1) {
 				return this.sendReply("Usage: " + cmd + " <type> [, <comma-separated arguments>]");
 			}
-			let playerCap = parseInt(params.splice(1, 1), 10);
+			let playerCap = parseInt(params.splice(1, 1));
 			let generator = createTournamentGenerator(params.shift(), params, this);
 			if (generator && tournament.setGenerator(generator, this)) {
 				if (playerCap && playerCap >= 2) {
@@ -1107,14 +1107,15 @@ CommandParser.commands.tournamenthelp = function (target, room, user) {
 		"- settype &lt;type> [, &lt;comma-separated arguments>]: Modifies the type of tournament after it's been created, but before it has started.<br />" +
 		"- end/stop/delete: Forcibly ends the tournament in the current room.<br />" +
 		"- begin/start: Starts the tournament in the current room.<br />" +
+		"- autostart/setautostart &lt;on|minutes|off>: Sets the automatic start timeout.<br />" +
 		"- dq/disqualify &lt;user>: Disqualifies a user.<br />" +
 		"- autodq/setautodq &lt;minutes|off>: Sets the automatic disqualification timeout.<br />" +
 		"- runautodq: Manually run the automatic disqualifier.<br />" +
-		"- scouting: Specifies whether joining tournament matches while in a tournament is allowed.<br />" +
-		"- modjoin: Specifies whether players can modjoin their battles.<br />" +
+		"- scouting &lt;allow|disallow>: Specifies whether joining tournament matches while in a tournament is allowed.<br />" +
+		"- modjoin &lt;allow|disallow>: Specifies whether players can modjoin their battles.<br />" +
 		"- getusers: Lists the users in the current tournament.<br />" +
-		"- on/off: Enables/disables allowing mods to start tournaments.<br />" +
-		"More detailed help can be found <a href=\"https://gist.github.com/verbiage/0846a552595349032fbe\">here</a>"
+		"- on/off: Enables/disables allowing mods to start tournaments in the current room.<br />" +
+		"More detailed help can be found <a href=\"https://gist.github.com/sirDonovan/130324abcd06254cf501\">here</a>"
 	);
 };
 

@@ -27,7 +27,8 @@
 
 const THROTTLE_DELAY = 600;
 const THROTTLE_BUFFER_LIMIT = 6;
-const THROTTLE_MULTILINE_WARN = 4;
+const THROTTLE_MULTILINE_WARN = 3;
+const THROTTLE_MULTILINE_WARN_STAFF = 6;
 
 const fs = require('fs');
 
@@ -355,7 +356,8 @@ Users.socketReceive = function (worker, workerid, socketid, message) {
 		return;
 	}
 	lines = lines.split('\n');
-	if (lines.length >= THROTTLE_MULTILINE_WARN) {
+	if (!lines[lines.length - 1]) lines.pop();
+	if (lines.length > (user.isStaff ? THROTTLE_MULTILINE_WARN_STAFF : THROTTLE_MULTILINE_WARN)) {
 		connection.popup("You're sending too many lines at once. Try using a paste service like [[Pastebin]].");
 		return;
 	}
@@ -841,7 +843,7 @@ User = (function () {
 		}
 
 		let expiry = Config.tokenexpiry || 25 * 60 * 60;
-		if (Math.abs(parseInt(tokenDataSplit[3], 10) - Date.now() / 1000) > expiry) {
+		if (Math.abs(parseInt(tokenDataSplit[3]) - Date.now() / 1000) > expiry) {
 			console.log('stale assertion: ' + tokenData);
 			this.send('|nametaken|' + name + "|Your assertion is stale. This usually means that the clock on the server computer is incorrect. If this is your server, please set the clock to the correct time.");
 			return;
@@ -1074,6 +1076,7 @@ User = (function () {
 				room.game.onUpdateConnection(this, connection);
 			}
 		}
+		this.updateSearch(true, connection);
 	};
 	User.prototype.debugData = function () {
 		let str = '' + this.group + this.name + ' (' + this.userid + ')';
@@ -1161,6 +1164,8 @@ User = (function () {
 		if (this.registered) {
 			if (forceConfirmed || this.group !== Config.groupsranking[0]) {
 				usergroups[this.userid] = this.group + this.name;
+				this.confirmed = this.userid;
+				this.autoconfirmed = this.userid;
 			} else {
 				delete usergroups[this.userid];
 			}
@@ -1521,6 +1526,22 @@ User = (function () {
 			challengeTo: challengeTo,
 		}));
 	};
+	User.prototype.updateSearch = function (onlyIfExists, connection) {
+		let games = {};
+		let atLeastOne = false;
+		for (let roomid in this.games) {
+			let game = this.games[roomid];
+			games[roomid] = game.title + (game.allowRenames ? '' : '*');
+			atLeastOne = true;
+		}
+		if (!atLeastOne) games = null;
+		let searching = Object.keys(this.searching);
+		if (onlyIfExists && !searching.length && !atLeastOne) return;
+		(connection || this).send('|updatesearch|' + JSON.stringify({
+			searching: searching,
+			games: games,
+		}));
+	};
 	User.prototype.makeChallenge = function (user, format/*, isPrivate*/) {
 		user = getUser(user);
 		if (!user || this.challengeTo) {
@@ -1608,6 +1629,9 @@ User = (function () {
 			return false; // but end the loop here
 		}
 
+		let throttleDelay = THROTTLE_DELAY;
+		if (this.group !== ' ') throttleDelay /= 2;
+
 		if (this.chatQueueTimeout) {
 			if (!this.chatQueue) this.chatQueue = []; // this should never happen
 			if (this.chatQueue.length >= THROTTLE_BUFFER_LIMIT - 1) {
@@ -1618,11 +1642,11 @@ User = (function () {
 			} else {
 				this.chatQueue.push([message, room, connection]);
 			}
-		} else if (now < this.lastChatMessage + THROTTLE_DELAY) {
+		} else if (now < this.lastChatMessage + throttleDelay) {
 			this.chatQueue = [[message, room, connection]];
 			this.chatQueueTimeout = setTimeout(
 				this.processChatQueue.bind(this),
-				THROTTLE_DELAY - (now - this.lastChatMessage));
+				throttleDelay - (now - this.lastChatMessage));
 		} else {
 			this.lastChatMessage = now;
 			Monitor.activeIp = connection.ip;
@@ -1641,13 +1665,17 @@ User = (function () {
 		if (!this.chatQueue) return; // this should never happen
 		let toChat = this.chatQueue.shift();
 
+		this.lastChatMessage = new Date().getTime();
 		Monitor.activeIp = toChat[2].ip;
 		toChat[1].chat(this, toChat[0], toChat[2]);
 		Monitor.activeIp = null;
 
+		let throttleDelay = THROTTLE_DELAY;
+		if (this.group !== ' ') throttleDelay /= 2;
+
 		if (this.chatQueue && this.chatQueue.length) {
 			this.chatQueueTimeout = setTimeout(
-				this.processChatQueue.bind(this), THROTTLE_DELAY);
+				this.processChatQueue.bind(this), throttleDelay);
 		} else {
 			this.chatQueue = null;
 			this.chatQueueTimeout = null;

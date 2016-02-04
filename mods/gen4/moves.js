@@ -402,11 +402,11 @@ exports.BattleMovedex = {
 	},
 	endeavor: {
 		inherit: true,
-		damageCallback: function (pokemon, target) {
-			if (target.hp > pokemon.hp) {
-				return target.hp - pokemon.hp;
+		onTry: function (pokemon, target) {
+			if (pokemon.hp >= target.hp) {
+				this.add('-fail', pokemon);
+				return null;
 			}
-			return false;
 		},
 	},
 	explosion: {
@@ -464,10 +464,7 @@ exports.BattleMovedex = {
 		inherit: true,
 		beforeMoveCallback: function () { },
 		onTry: function (pokemon) {
-			if (!pokemon.removeVolatile('focuspunch')) {
-				return;
-			}
-			if (pokemon.lastAttackedBy && pokemon.lastAttackedBy.damage && pokemon.lastAttackedBy.thisTurn) {
+			if (pokemon.volatiles['focuspunch'] && pokemon.volatiles['focuspunch'].lostFocus) {
 				this.attrLastMove('[still]');
 				this.add('cant', pokemon, 'Focus Punch', 'Focus Punch');
 				return false;

@@ -320,6 +320,13 @@ exports.BattleMovedex = {
 	healbell: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
+		onHit: function (pokemon, source) {
+			let side = pokemon.side;
+			for (let i = 0; i < side.pokemon.length; i++) {
+				side.pokemon[i].status = '';
+			}
+			this.add('-cureteam', source, '[from] move: Heal Bell');
+		},
 	},
 	healblock: {
 		inherit: true,
@@ -932,10 +939,6 @@ exports.BattleMovedex = {
 	uproar: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
-	},
-	toxic: {
-		inherit: true,
-		onModifyMove: function () {},
 	},
 	vinewhip: {
 		inherit: true,

@@ -103,15 +103,18 @@ exports.BattleScripts = {
 		}
 
 		let targets = pokemon.getMoveTargets(move, target);
-		let extraPP = 0;
-		for (let i = 0; i < targets.length; i++) {
-			let ppDrop = this.singleEvent('DeductPP', targets[i].getAbility(), targets[i].abilityData, targets[i], pokemon, move);
-			if (ppDrop !== true) {
-				extraPP += ppDrop || 0;
+
+		if (!sourceEffect) {
+			let extraPP = 0;
+			for (let i = 0; i < targets.length; i++) {
+				let ppDrop = this.singleEvent('DeductPP', targets[i].getAbility(), targets[i].abilityData, targets[i], pokemon, move);
+				if (ppDrop !== true) {
+					extraPP += ppDrop || 0;
+				}
 			}
-		}
-		if (extraPP > 0) {
-			pokemon.deductPP(move, extraPP);
+			if (extraPP > 0) {
+				pokemon.deductPP(move, extraPP);
+			}
 		}
 
 		if (!this.runEvent('TryMove', pokemon, target, move)) {
@@ -263,7 +266,7 @@ exports.BattleScripts = {
 		} else {
 			accuracy = this.runEvent('ModifyAccuracy', target, pokemon, move, accuracy);
 		}
-		if (move.alwaysHit) {
+		if (move.alwaysHit || (move.id === 'toxic' && this.gen >= 6 && pokemon.hasType('Poison'))) {
 			accuracy = true; // bypasses ohko accuracy modifiers
 		} else {
 			accuracy = this.runEvent('Accuracy', target, pokemon, move, accuracy);
@@ -636,12 +639,15 @@ exports.BattleScripts = {
 		return isValid;
 	},
 	sampleNoReplace: function (list) {
+		// The cute code to sample no replace is:
+		//   return list.splice(this.random(length), 1)[0];
+		// However manually removing the element is twice as fast.
+		// In fact, we don't even need to keep the array in order, so
+		// we just replace the removed element with the last element.
 		let length = list.length;
 		let index = this.random(length);
 		let element = list[index];
-		for (let nextIndex = index + 1; nextIndex < length; index += 1, nextIndex += 1) {
-			list[index] = list[nextIndex];
-		}
+		list[index] = list[length - 1];
 		list.pop();
 		return element;
 	},
@@ -715,8 +721,8 @@ exports.BattleScripts = {
 			}
 
 			// Make sure forme/item combo is correct
-			while ((poke === 'Arceus' && item.substr(-5) === 'plate') ||
-					(poke === 'Giratina' && item === 'griseousorb') ||
+			while ((poke === 'Giratina' && item === 'griseousorb') ||
+					(poke === 'Arceus' && item.substr(-5) === 'plate') ||
 					(poke === 'Genesect' && item.substr(-5) === 'drive')) {
 				item = items[this.random(items.length)];
 			}
@@ -738,6 +744,9 @@ exports.BattleScripts = {
 				pool = Object.keys(this.data.Movedex).exclude('chatter', 'struggle', 'magikarpsrevenge');
 			} else if (template.learnset) {
 				pool = Object.keys(template.learnset);
+				if (template.species.substr(0, 6) === 'Rotom-' || template.species.substr(0, 10) === 'Pumpkaboo-') {
+					pool = pool.union(Object.keys(this.getTemplate(template.baseSpecies).learnset));
+				}
 			} else {
 				pool = Object.keys(this.getTemplate(template.baseSpecies).learnset);
 			}
@@ -801,6 +810,7 @@ exports.BattleScripts = {
 
 			team.push({
 				name: template.baseSpecies,
+				species: template.species,
 				item: item,
 				ability: ability,
 				moves: moves,
@@ -921,6 +931,7 @@ exports.BattleScripts = {
 
 			team.push({
 				name: template.baseSpecies,
+				species: template.species,
 				item: item,
 				ability: ability,
 				moves: m,
@@ -1081,22 +1092,21 @@ exports.BattleScripts = {
 	randomSet: function (template, slot, teamDetails) {
 		if (slot === undefined) slot = 1;
 		let baseTemplate = (template = this.getTemplate(template));
-		let name = template.baseSpecies;
+		let species = template.species;
 
 		if (!template.exists || (!template.randomBattleMoves && !template.learnset)) {
 			// GET IT? UNOWN? BECAUSE WE CAN'T TELL WHAT THE POKEMON IS
 			template = this.getTemplate('unown');
 
-			let stack = 'Template incompatible with random battles: ' + name;
-			let fakeErr = {stack: stack};
-			require('../crashlogger.js')(fakeErr, 'The randbat set generator');
+			let err = new Error('Template incompatible with random battles: ' + species);
+			require('../crashlogger.js')(err, 'The randbat set generator');
 		}
 
 		if (typeof teamDetails !== 'object') teamDetails = {megaCount: teamDetails};
 
 		if (template.battleOnly) {
 			// Only change the species. The template has custom moves, and may have different typing and requirements.
-			name = template.baseSpecies;
+			species = template.baseSpecies;
 		}
 		let battleForme = this.checkBattleForme(template);
 		if (battleForme && battleForme.tier !== 'AG' && (battleForme.isMega ? !teamDetails.megaCount : this.random(2))) {
@@ -1282,7 +1292,7 @@ exports.BattleScripts = {
 					break;
 				case 'switcheroo': case 'trick':
 					if (counter.Physical + counter.Special < 3) rejected = true;
-					if (hasMove['acrobatics'] || hasMove['lightscreen'] || hasMove['reflect'] || hasMove['trickroom']) rejected = true;
+					if (hasMove['acrobatics'] || hasMove['lightscreen'] || hasMove['reflect'] || hasMove['suckerpunch'] || hasMove['trickroom']) rejected = true;
 					break;
 				case 'toxicspikes':
 					if (counter.setupType || teamDetails.toxicSpikes) rejected = true;
@@ -1697,6 +1707,8 @@ exports.BattleScripts = {
 				rejectAbility = !counter['Bug'];
 			} else if (ability === 'Technician') {
 				rejectAbility = !counter['technician'] || (abilities.indexOf('Skill Link') >= 0 && counter['skilllink'] >= counter['technician']);
+			} else if (ability === 'Tinted Lens') {
+				rejectAbility = counter['damage'] >= counter.damagingMoves.length;
 			} else if (ability === 'Torrent') {
 				rejectAbility = !counter['Water'];
 			} else if (ability === 'Unburden') {
@@ -1997,7 +2009,8 @@ exports.BattleScripts = {
 		}
 
 		return {
-			name: name,
+			name: template.baseSpecies,
+			species: species,
 			moves: moves,
 			ability: ability,
 			evs: evs,
@@ -2327,21 +2340,20 @@ exports.BattleScripts = {
 	},
 	randomDoublesSet: function (template, slot, teamDetails) {
 		let baseTemplate = (template = this.getTemplate(template));
-		let name = template.baseSpecies;
+		let species = template.species;
 
 		if (!template.exists || (!template.randomDoubleBattleMoves && !template.randomBattleMoves && !template.learnset)) {
 			template = this.getTemplate('unown');
 
-			let stack = 'Template incompatible with random battles: ' + name;
-			let fakeErr = {stack: stack};
-			require('../crashlogger.js')(fakeErr, 'The doubles randbat set generator');
+			let err = new Error('Template incompatible with random battles: ' + species);
+			require('../crashlogger.js')(err, 'The doubles randbat set generator');
 		}
 
 		if (typeof teamDetails !== 'object') teamDetails = {megaCount: teamDetails};
 
 		if (template.battleOnly) {
 			// Only change the species. The template has custom moves, and may have different typing and requirements.
-			name = template.baseSpecies;
+			species = template.baseSpecies;
 		}
 		let battleForme = this.checkBattleForme(template);
 		if (battleForme && (battleForme.isMega ? !teamDetails.megaCount : this.random(2))) {
@@ -2892,6 +2904,8 @@ exports.BattleScripts = {
 				rejectAbility = !counter['Bug'];
 			} else if (ability === 'Technician') {
 				rejectAbility = !counter['technician'] || (abilities.indexOf('Skill Link') >= 0 && counter['skilllink'] >= counter['technician']);
+			} else if (ability === 'Tinted Lens') {
+				rejectAbility = counter['damage'] >= counter.damagingMoves.length;
 			} else if (ability === 'Torrent') {
 				rejectAbility = !counter['Water'];
 			} else if (ability === 'Unburden') {
@@ -3168,7 +3182,8 @@ exports.BattleScripts = {
 		let level = 70 + Math.floor(((600 - this.clampIntRange(bst, 300, 600)) / 10.34));
 
 		return {
-			name: name,
+			name: template.baseSpecies,
+			species: species,
 			moves: moves,
 			ability: ability,
 			evs: evs,
@@ -3177,6 +3192,87 @@ exports.BattleScripts = {
 			level: level,
 			shiny: !this.random(template.id === 'missingno' ? 4 : 1024),
 		};
+	},
+	randomSeasonalPolarTeam: function () {
+		let pokemonLeft = 0;
+		let pokemon = [];
+
+		let pokemonPool = [];
+		for (let id in this.data.FormatsData) {
+			let template = this.getTemplate(id);
+			if (!template.evos.length && !template.isMega && !template.isNonstandard && template.randomBattleMoves && template.types.indexOf("Ice") >= 0) {
+				pokemonPool.push(id);
+			}
+		}
+
+		let baseFormes = {};
+		let uberCount = 0;
+		let puCount = 0;
+		let weakCount = 0;
+		let teamDetails = {};
+
+		while (pokemonPool.length && pokemonLeft < 6) {
+			let template = this.getTemplate(this.sampleNoReplace(pokemonPool));
+			if (!template.exists) continue;
+			let types = template.types.sort().join('/');
+
+			// Limit to one of each species (Species Clause)
+			if (baseFormes[template.baseSpecies]) continue;
+
+			// Limit to 2 Water/Ice Pokemon (double weakness to Ice in an Ice-dominant format)
+			if (weakCount > 2 && types === 'Ice/Water' && this.random(5) >= 1) continue;
+
+			let tier = template.tier;
+			switch (tier) {
+			case 'Uber':
+				// Ubers are limited to 1 but have a 20% chance of being added anyway.
+				if (uberCount && this.random(5) >= 1) continue;
+				break;
+			case 'PU':
+				// PUs are limited to 2 but have a 20% chance of being added anyway.
+				if (puCount > 1 && this.random(5) >= 1) continue;
+				break;
+			case 'Unreleased':
+				// Unreleased Pokémon have 20% the normal rate
+				if (this.random(5) >= 1) continue;
+				break;
+			case 'CAP':
+				// CAPs have 20% the normal rate
+				if (this.random(5) >= 1) continue;
+			}
+
+			let set = this.randomSet(template, pokemon.length, teamDetails);
+
+			// Freeze-Dry is pointless because of Inverse Battle rules
+			let freezedry = set.moves.indexOf('freezedry');
+			if (freezedry >= 0 && set.moves.indexOf('icebeam') < 0) {
+				set.moves[freezedry] = 'icebeam';
+			}
+
+			pokemon.push(set);
+
+			// Now that our Pokemon has passed all checks, we can increment our counters
+			baseFormes[template.baseSpecies] = 1;
+			if (types === 'Ice/Water') weakCount++;
+			pokemonLeft++;
+
+			// Increment Uber/NU counters
+			if (tier === 'Uber') {
+				uberCount++;
+			} else if (tier === 'PU') {
+				puCount++;
+			}
+
+			// Team has Mega/weather/hazards
+			if (this.getItem(set.item).megaStone) teamDetails['megaCount'] = 1;
+			if (set.ability === 'Snow Warning') teamDetails['hail'] = 1;
+			if (set.ability === 'Drizzle' || set.moves.indexOf('raindance') >= 0) teamDetails['rain'] = 1;
+			if (set.ability === 'Sand Stream') teamDetails['sand'] = 1;
+			if (set.moves.indexOf('stealthrock') >= 0) teamDetails['stealthRock'] = 1;
+			if (set.moves.indexOf('toxicspikes') >= 0) teamDetails['toxicSpikes'] = 1;
+			if (set.moves.indexOf('defog') >= 0 || set.moves.indexOf('rapidspin') >= 0) teamDetails['hazardClear'] = 1;
+		}
+		return pokemon;
 	},
 	randomFactorySets: require('./factory-sets.json'),
 	randomFactorySet: function (template, slot, teamData, tier) {
