@@ -11,7 +11,7 @@ function display (message, self) {
 
 let ateam = {'femalegallade':1, 'sorarevan':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
 	'bamdee':1, 'onyxeagle':1, 'soraonyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabarts': 1,
-	'soraninjarisu':1, 'soraneith': 1, 'blazing460': 1
+	'soraninjarisu':1, 'soraneith': 1, 'blazing360': 1
 };
 
 exports.commands = {
