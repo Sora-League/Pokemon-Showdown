@@ -317,13 +317,13 @@ exports.commands = {
 			'<b>Ace:</b> Dragonite<br />' + seen('soramemelord') + getBadges('soramemelord'));
 	},
 
-	
+	kiopam: 'electric', 
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Kiopam</b>∆<br />' +
+			'<i>"Electricty runs throughout my body and prepares me for any challenge."</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> ??<br />');
+			'<b>Ace:</b> Zapdos<br />');
 	},
 
         youmaton: 'fairy',
