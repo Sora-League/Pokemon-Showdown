@@ -41,7 +41,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Asch∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
+		var list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -51,8 +51,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆',  
-		        '∆Sora CL∆', '∆Sora Psycho∆', '∆Sora Ruee∆'
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Psycho∆', '∆Sora Ruee∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -123,17 +122,6 @@ exports.commands = {
 	//Elite Four
 	//////////////
 
-	silvy: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Silvy</b>∆<br />' +
-			'<i>"Silvy-Chan at your service, here to steel the kill. My body is regi. So come at me, if you will~ ;)"</i> <br />' +
-			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
-			'<b>Ace:</b> None <br />' +
-			'<b>Battle Rules:</b> <br/>' +
-			'- None<br />' +
-			seen('e4silvy') + 
-			getBadges('siiilver'));
-	},
 
 
 
@@ -201,18 +189,6 @@ exports.commands = {
 			+ getBadges('coachabadon') +'<br><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center>');
 	},
 
-	asch: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Elite Frontier <b>Asch</b>∆<br />' +
-			'<i>"Chief Akkie, head of the meme police, serving for 38 years; no meme slips through her cracks."</i> <br />' +
-			'<b>Symbol:</b> White Knight Symbol<br />' +
-			'<b>Ace:</b> Crawdaunt <br />' +
-			'<b>Battle Rules:</b> <br/>' +
-			'-Only BL, BL2, BL3 and BL4 Pokemon may be used.<br/>' +
-			'-No Mega Evolution<br />' +
-			seen('soraasch') + '<br/>' +
-			'<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif">' +getBadges('frontierasch'));
-	},
 
 	meows: function (target, room, user) {
 		if (!this.canBroadcast()) return;
