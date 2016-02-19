@@ -472,13 +472,13 @@ exports.commands = {
 
 	},
 
-        
+        aros: 'water',
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />' +
+			'<i>"Calm and collected like the waves, harsh and brutal like a Tsunami, that is what I am."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> Cloyster <br/>'
 		);
 	},
 
