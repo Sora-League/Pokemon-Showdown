@@ -243,7 +243,6 @@ exports.commands = {
 			'-RU Monotype <br/>' +
 			'-No Hazards <br/>' +
 			'-No Knock off<br />' +
-			'-No Megas<br />' +
 			seen('soraheat') + '<br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
@@ -256,7 +255,7 @@ exports.commands = {
 			'<b>Symbol:</b> Multitasking<br/>' +
 			'<b>Ace:</b> All<br/>' +
 			'<b>Battle Rules:</b><br/>' +
-			'-Smogon Doubles<br />' +
+			'-Doubles OU<br />' +
 			'-No hazards<br />' +
 			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
 			'-Pikachu Tournamentchu <br />' +
