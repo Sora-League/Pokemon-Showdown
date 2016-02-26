@@ -289,13 +289,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	
+	akash: 'bug',
 	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Akash</b>∆<br />'+
 			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			  '<b>Ace:</b> ??? <br />' + seen('soraakash') + getBadges('soraakash'));
 	},
 
 	noel: 'dark',
