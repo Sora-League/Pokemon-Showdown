@@ -350,13 +350,13 @@ exports.commands = {
 		);
 	},
 
-       blaze: 'fighting',
+       
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Blaze</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('sorablaze') + getBadges('sorablaze')
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
 		);
         },
 
