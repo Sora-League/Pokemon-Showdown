@@ -161,6 +161,16 @@ exports.commands = {
 			getBadges('soranightanglet'));
 	},
 	
+	whitefang: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>WhiteFang</b>∆<br />' +
+			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
+			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
+			'<b>Ace:</b> Archeops<br />' + 
+			'<b>Battle Rules:</b><br />'+ 
+			'-No priority<br />' + seen('sorarwhitefang') + getBadges('sorawhitefang'));
+			
+	},
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
@@ -314,13 +324,13 @@ exports.commands = {
 			'<b>Ace:</b> Dragonite<br />' + seen('soramemelord') + getBadges('soramemelord'));
 	},
 
-	kiopam: 'electric', 
+	
 	electric: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Kiopam</b>∆<br />' +
-			'<i>"Electricity runs throughout my body and prepares me for any challenge."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> Zapdos<br />');
+			'<b>Ace:</b> ???<br />');
 	},
 
         youmaton: 'fairy',
@@ -458,14 +468,14 @@ exports.commands = {
 	},
 
 	
-	solarwolf: 'steel',
+	
 	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>SolarWolf</b>∆<br />' +
-			'<i>"The best steel doesn\'t always shine the brightest, but it will smash your face in."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Bisharp <br />' +
-			seen('sorasolarwolf') + getBadges('sorasolarwolf'));
+			'<b>Ace:</b> ??? <br />' +
+			seen('???') + getBadges('???'));
 
 	},
 
