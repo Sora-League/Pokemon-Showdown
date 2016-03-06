@@ -168,7 +168,7 @@ exports.commands = {
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Archeops<br />' + 
 			'<b>Battle Rules:</b><br />'+ 
-			'-No priority<br />' + seen('sorarwhitefang') + getBadges('sorawhitefang'));
+			'-No priority<br />' + seen('sorawhitefang') + getBadges('sorawhitefang'));
 			
 	},
 	/*sube4: function(target, room, user) {
@@ -458,13 +458,13 @@ exports.commands = {
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges (''));
 	},
 
-	rock: 'whitefang',
-	whitefang: function (target, room, user) {
+	
+	rock: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>WhiteFang</b>∆<br />' +
-			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Archeops<br />' + seen('sorarwhitefang') + getBadges('sorawhitefang'));
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 
 	
