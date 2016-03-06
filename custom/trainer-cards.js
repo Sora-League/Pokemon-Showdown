@@ -453,7 +453,7 @@ exports.commands = {
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
-			'<i>"Let\'s play mind games."<br />' +
+			'<i>"Let\'s play mind games."</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
 			'<b>Ace:</b> B8ed (Slowbro) <br />' + seen('soraleaf') + getBadges ('soraleaf'));
 	},
