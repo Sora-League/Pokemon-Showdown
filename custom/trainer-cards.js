@@ -240,9 +240,7 @@ exports.commands = {
 			'<b>Symbol:</b> SumTingWong<br />' +
 			'<b>Ace:</b> Golbat <br />' +
 			'<b>Battle Rules:</b> <br/>' +
-			'-RU Monotype <br/>' +
-			'-No Hazards <br/>' +
-			'-No Knock off<br />' +
+			'-PU <br/>' +
 			seen('soraheat') + '<br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
