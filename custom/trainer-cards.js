@@ -238,7 +238,7 @@ exports.commands = {
 		this.sendReplyBox('∆Elite Frontier <b>Heat</b>∆<br />' +
 			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
 			'<b>Symbol:</b> SumTingWong<br />' +
-			'<b>Ace:</b> Golbat <br />' +
+			'<b>Ace:</b> Lapras <br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'-PU <br/>' +
 			seen('soraheat') + '<br/>' +
