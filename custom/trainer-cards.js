@@ -449,7 +449,7 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('sorapsycho') + getBadges('sorapsycho'));
 	},
 	
-        psychic: 'leaf',   
+        leaf: 'psychic',   
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
