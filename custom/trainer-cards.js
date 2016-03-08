@@ -140,7 +140,7 @@ exports.commands = {
 	tempest: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Tempest</b>∆<br />' +
-			'<i>"Evidence dot zip can\'t contain the ass whooping."</i> <br />' +
+			'<i>"oh"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Togekiss (LOL M2K)<br />' +
 			'<b>Battle Rules:</b><br />' +
