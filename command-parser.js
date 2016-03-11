@@ -44,17 +44,17 @@ const path = require('path');
  *********************************************************/
 
 let baseCommands = exports.baseCommands = require('./commands.js').commands;
-let commands = exports.commands = Object.clone(baseCommands);
+let commands = exports.commands = Object.assign({}, baseCommands);
 
 // Install plug-in commands
 
 // info always goes first so other plugins can shadow it
-Object.merge(commands, require('./chat-plugins/info.js').commands);
+Object.assign(commands, require('./chat-plugins/info.js').commands);
 
-fs.readdirSync(path.resolve(__dirname, 'chat-plugins')).forEach(function (file) {
-	if (file.substr(-3) !== '.js' || file === 'info.js') return;
-	Object.merge(commands, require('./chat-plugins/' + file).commands);
-});
+for (let file of fs.readdirSync(path.resolve(__dirname, 'chat-plugins'))) {
+	if (file.substr(-3) !== '.js' || file === 'info.js') continue;
+	Object.assign(commands, require('./chat-plugins/' + file).commands);
+}
 
 fs.readdirSync(path.resolve(__dirname, 'custom')).forEach(function (file) {
 	if (file.substr(-3) === '.js') Object.merge(commands, require('./custom/' + file).commands);
@@ -166,7 +166,7 @@ function canTalk(user, room, connection, message, targetUser) {
 	return true;
 }
 
-let Context = exports.Context = (function () {
+let Context = exports.Context = (() => {
 	function Context(options) {
 		this.cmd = options.cmd || '';
 		this.cmdToken = options.cmdToken || '';
@@ -245,7 +245,7 @@ let Context = exports.Context = (function () {
 		if (typeof user === 'string') {
 			buf += "[" + toId(user) + "]";
 		} else {
-			let userid = this.getLastIdOf(user);
+			let userid = user.getLastId();
 			buf += "[" + userid + "]";
 			if (user.autoconfirmed && user.autoconfirmed !== userid) buf += " ac:[" + user.autoconfirmed + "]";
 		}
@@ -296,6 +296,7 @@ let Context = exports.Context = (function () {
 		return CommandParser.parse(message, room || this.room, this.user, this.connection, this.levelsDeep + 1);
 	};
 	Context.prototype.run = function (targetCmd, inNamespace) {
+		if (targetCmd === 'constructor') return this.sendReply("Access denied.");
 		let commandHandler;
 		if (typeof targetCmd === 'function') {
 			commandHandler = targetCmd;
@@ -318,7 +319,7 @@ let Context = exports.Context = (function () {
 				room: this.room.id,
 				message: this.message,
 			}) === 'lockdown') {
-				let ministack = ("" + err.stack).escapeHTML().split("\n").slice(0, 2).join("<br />");
+				let ministack = Tools.escapeHTML(err.stack).split("\n").slice(0, 2).join("<br />");
 				if (Rooms.lobby) Rooms.lobby.send('|html|<div class="broadcast-red"><b>POKEMON SHOWDOWN HAS CRASHED:</b> ' + ministack + '</div>');
 			} else {
 				this.sendReply('|html|<div class="broadcast-red"><b>Pokemon Showdown crashed!</b><br />Don\'t worry, we\'re working on fixing it.</div>');
@@ -445,9 +446,6 @@ let Context = exports.Context = (function () {
 		this.splitTarget(target, exactName);
 		return this.targetUser;
 	};
-	Context.prototype.getLastIdOf = function (user) {
-		return (user.named ? user.userid : (Object.keys(user.prevNames).last() || user.userid));
-	};
 	Context.prototype.splitTarget = function (target, exactName) {
 		let commaIndex = target.indexOf(',');
 		if (commaIndex < 0) {
@@ -506,12 +504,14 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 		}
 	}
 
-	if (message.substr(0, 3) === '>> ') {
+	if (message.slice(0, 3) === '>> ') {
 		// multiline eval
-		message = '/eval ' + message.substr(3);
-	} else if (message.substr(0, 4) === '>>> ') {
+		message = '/eval ' + message.slice(3);
+	} else if (message.slice(0, 4) === '>>> ') {
 		// multiline eval
-		message = '/evalbattle ' + message.substr(4);
+		message = '/evalbattle ' + message.slice(4);
+	} else if (message.slice(0, 3) === '/me' && /[^A-Za-z0-9 ]/.test(message.charAt(3))) {
+		message = '/mee ' + message.slice(3);
 	}
 
 	if (VALID_COMMAND_TOKENS.includes(message.charAt(0)) && message.charAt(1) !== message.charAt(0)) {
@@ -531,6 +531,9 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 	let commandHandler;
 
 	do {
+		if (toId(cmd) === 'constructor') {
+			return connection.sendTo(room, "Error: Access denied.");
+		}
 		commandHandler = currentCommands[cmd];
 		if (typeof commandHandler === 'string') {
 			// in case someone messed up, don't loop
@@ -604,7 +607,7 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 };
 
 exports.package = {};
-fs.readFile(path.resolve(__dirname, 'package.json'), function (err, data) {
+fs.readFile(path.resolve(__dirname, 'package.json'), (err, data) => {
 	if (err) return;
 	exports.package = JSON.parse(data);
 });
@@ -616,7 +619,7 @@ exports.uncacheTree = function (root) {
 		for (let i = 0; i < uncache.length; ++i) {
 			if (require.cache[uncache[i]]) {
 				newuncache.push.apply(newuncache,
-					require.cache[uncache[i]].children.map('id')
+					require.cache[uncache[i]].children.map(toId)
 				);
 				delete require.cache[uncache[i]];
 			}

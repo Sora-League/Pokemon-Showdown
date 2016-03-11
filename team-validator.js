@@ -9,169 +9,19 @@
 
 'use strict';
 
-let Validator;
-
-if (!process.send) {
-	let validationCount = 0;
-	let pendingValidations = {};
-
-	let ValidatorProcess = (function () {
-		function ValidatorProcess() {
-			this.process = require('child_process').fork('team-validator.js', {cwd: __dirname});
-			let self = this;
-			this.process.on('message', function (message) {
-				// Protocol:
-				// success: "[id]|1[details]"
-				// failure: "[id]|0[details]"
-				let pipeIndex = message.indexOf('|');
-				let id = message.substr(0, pipeIndex);
-				let success = (message.charAt(pipeIndex + 1) === '1');
-
-				if (pendingValidations[id]) {
-					ValidatorProcess.release(self);
-					pendingValidations[id](success, message.substr(pipeIndex + 2));
-					delete pendingValidations[id];
-				}
-			});
-		}
-		ValidatorProcess.prototype.load = 0;
-		ValidatorProcess.prototype.active = true;
-		ValidatorProcess.processes = [];
-		ValidatorProcess.spawn = function () {
-			let num = Config.validatorprocesses || 1;
-			for (let i = 0; i < num; ++i) {
-				this.processes.push(new ValidatorProcess());
-			}
-		};
-		ValidatorProcess.respawn = function () {
-			this.processes.splice(0).forEach(function (process) {
-				process.active = false;
-				if (!process.load) process.process.disconnect();
-			});
-			this.spawn();
-		};
-		ValidatorProcess.acquire = function () {
-			let process = this.processes[0];
-			for (let i = 1; i < this.processes.length; ++i) {
-				if (this.processes[i].load < process.load) {
-					process = this.processes[i];
-				}
-			}
-			++process.load;
-			return process;
-		};
-		ValidatorProcess.release = function (process) {
-			--process.load;
-			if (!process.load && !process.active) {
-				process.process.disconnect();
-			}
-		};
-		ValidatorProcess.send = function (format, team, callback) {
-			let process = this.acquire();
-			pendingValidations[validationCount] = callback;
-			try {
-				process.process.send('' + validationCount + '|' + format + '|' + team);
-			} catch (e) {}
-			++validationCount;
-		};
-		return ValidatorProcess;
-	})();
-
-	// Create the initial set of validator processes.
-	ValidatorProcess.spawn();
-
-	exports.ValidatorProcess = ValidatorProcess;
-	exports.pendingValidations = pendingValidations;
-
-	exports.validateTeam = function (format, team, callback) {
-		ValidatorProcess.send(format, team, callback);
-	};
-
-	let synchronousValidators = {};
-	exports.validateTeamSync = function (format, team) {
-		if (!synchronousValidators[format]) synchronousValidators[format] = new Validator(format);
-		return synchronousValidators[format].validateTeam(team);
-	};
-	exports.validateSetSync = function (format, set, teamHas) {
-		if (!synchronousValidators[format]) synchronousValidators[format] = new Validator(format);
-		return synchronousValidators[format].validateSet(set, teamHas);
-	};
-	exports.checkLearnsetSync = function (format, move, template, lsetData) {
-		if (!synchronousValidators[format]) synchronousValidators[format] = new Validator(format);
-		return synchronousValidators[format].checkLearnset(move, template, lsetData);
-	};
-} else {
-	require('sugar');
-	global.Config = require('./config/config.js');
-
-	if (Config.crashguard) {
-		process.on('uncaughtException', function (err) {
-			require('./crashlogger.js')(err, 'A team validator process', true);
-		});
-	}
-
-	global.Tools = require('./tools.js').includeMods();
-	global.toId = Tools.getId;
-
-	require('./repl.js').start('team-validator-', process.pid, function (cmd) { return eval(cmd); });
-
-	let validators = {};
-
-	let respond = function respond(id, success, details) {
-		process.send(id + (success ? '|1' : '|0') + details);
-	};
-
-	process.on('message', function (message) {
-		// protocol:
-		// "[id]|[format]|[team]"
-		let pipeIndex = message.indexOf('|');
-		let pipeIndex2 = message.indexOf('|', pipeIndex + 1);
-		let id = message.substr(0, pipeIndex);
-		let format = message.substr(pipeIndex + 1, pipeIndex2 - pipeIndex - 1);
-
-		if (!validators[format]) validators[format] = new Validator(format);
-		let parsedTeam = [];
-		parsedTeam = Tools.fastUnpackTeam(message.substr(pipeIndex2 + 1));
-
-		let problems;
-		try {
-			problems = validators[format].validateTeam(parsedTeam);
-		} catch (err) {
-			require('./crashlogger.js')(err, 'A team validation', {
-				format: format,
-				team: message.substr(pipeIndex2 + 1),
-			});
-			problems = ["Your team crashed the team validator. We've been automatically notified and will fix this crash, but you should use a different team for now."];
-		}
-
-		if (problems && problems.length) {
-			respond(id, false, problems.join('\n'));
-		} else {
-			let packedTeam = Tools.packTeam(parsedTeam);
-			// console.log('FROM: ' + message.substr(pipeIndex2 + 1));
-			// console.log('TO: ' + packedTeam);
-			respond(id, true, packedTeam);
-		}
-	});
-
-	process.on('disconnect', function () {
-		process.exit();
-	});
-}
-
-Validator = (function () {
-	function Validator(format) {
+class Validator {
+	constructor(format) {
 		this.format = Tools.getFormat(format);
 		this.tools = Tools.mod(this.format);
 	}
 
-	Validator.prototype.validateTeam = function (team) {
+	validateTeam(team) {
 		let format = Tools.getFormat(this.format);
 		if (format.validateTeam) return format.validateTeam.call(this, team);
 		return this.baseValidateTeam(team);
-	};
+	}
 
-	Validator.prototype.baseValidateTeam = function (team) {
+	baseValidateTeam(team) {
 		let format = this.format;
 		let tools = this.tools;
 
@@ -233,9 +83,9 @@ Validator = (function () {
 
 		if (!problems.length) return false;
 		return problems;
-	};
+	}
 
-	Validator.prototype.validateSet = function (set, teamHas, flags) {
+	validateSet(set, teamHas, flags) {
 		let format = this.format;
 		let tools = this.tools;
 
@@ -281,7 +131,7 @@ Validator = (function () {
 		if (set.species !== set.name && set.baseSpecies !== set.name) name = set.name + " (" + set.species + ")";
 		let isHidden = false;
 		let lsetData = {set:set, format:format};
-		if (flags) Object.merge(lsetData, flags);
+		if (flags) Object.assign(lsetData, flags);
 
 		let setHas = {};
 
@@ -369,7 +219,7 @@ Validator = (function () {
 				if (ability.name === template.abilities['H']) {
 					isHidden = true;
 
-					if (template.unreleasedHidden && banlistTable['illegal']) {
+					if (template.unreleasedHidden && banlistTable['Unreleased']) {
 						problems.push(name + "'s hidden ability is unreleased.");
 					} else if (tools.gen === 5 && set.level < 10 && (template.maleOnlyHidden || template.gender === 'N')) {
 						problems.push(name + " must be at least level 10 with its hidden ability.");
@@ -382,7 +232,7 @@ Validator = (function () {
 			}
 		}
 		if (set.moves && Array.isArray(set.moves)) {
-			set.moves = set.moves.filter(function (val) { return val; });
+			set.moves = set.moves.filter(val => val);
 		}
 		if (!set.moves || !set.moves.length) {
 			problems.push(name + " has no moves.");
@@ -438,8 +288,10 @@ Validator = (function () {
 				// This code hasn't been closely audited for multi-gen interaction, but
 				// since egg moves don't get removed between gens, it's unlikely to have
 				// any serious problems.
-				let limitedEgg = lsetData.limitedEgg.unique();
-				if (limitedEgg.length > 1 && limitedEgg.indexOf('self') >= 0) {
+				let limitedEgg = Array.from(new Set(lsetData.limitedEgg));
+				if (limitedEgg.length <= 1) {
+					// Only one source, can't conflict with anything else
+				} else if (limitedEgg.indexOf('self') >= 0) {
 					// Self-moves are always incompatible with anything else
 					problems.push(name + "'s egg moves are incompatible.");
 				} else {
@@ -449,7 +301,7 @@ Validator = (function () {
 					// one limitedEgg move from another egg.
 					let validFatherExists = false;
 					for (let i = 0; i < lsetData.sources.length; i++) {
-						if (lsetData.sources[i].charAt(1) === 'S') continue;
+						if (lsetData.sources[i].charAt(1) === 'S' || lsetData.sources[i].charAt(1) === 'D') continue;
 						let eggGen = parseInt(lsetData.sources[i].charAt(0));
 						if (lsetData.sources[i].charAt(1) !== 'E' || eggGen === 6) {
 							// (There is a way to obtain this pokemon without past-gen breeding.)
@@ -499,7 +351,7 @@ Validator = (function () {
 							}
 						}
 						lsetData.sources = newSources;
-						if (!newSources.length) problems.push(name + "'s past gen egg moves " + limitedEgg.map(function (id) { return tools.getMove(id).name; }).join(', ') + " do not have a valid father. (Is this incorrect? If so, post the chainbreeding instructions in Bug Reports)");
+						if (!newSources.length) problems.push(name + "'s past gen egg moves " + limitedEgg.map(id => tools.getMove(id).name).join(', ') + " do not have a valid father. (Is this incorrect? If so, post the chainbreeding instructions in Bug Reports)");
 					}
 				}
 			}
@@ -671,9 +523,9 @@ Validator = (function () {
 		}
 
 		return problems;
-	};
+	}
 
-	Validator.prototype.checkLearnset = function (move, template, lsetData) {
+	checkLearnset(move, template, lsetData) {
 		let tools = this.tools;
 
 		let moveid = toId(move);
@@ -717,7 +569,7 @@ Validator = (function () {
 		if (lsetData.sourcesBefore === undefined) lsetData.sourcesBefore = 6;
 		let noPastGen = !!format.requirePentagon;
 		// Pokemon cannot be traded to past generations except in Gen 1 Tradeback
-		let noFutureGen = !(format.banlistTable && format.banlistTable['tradeback']);
+		let noFutureGen = !(format.banlistTable && format.banlistTable['allowtradeback']);
 		// if a move can only be learned from a gen 2-5 egg, we have to check chainbreeding validity
 		// limitedEgg is false if there are any legal non-egg sources for the move, and true otherwise
 		let limitedEgg = null;
@@ -727,7 +579,7 @@ Validator = (function () {
 			alreadyChecked[template.speciesid] = true;
 			if (tools.gen === 2 && template.gen === 1) tradebackEligible = true;
 			// STABmons hack to avoid copying all of validateSet to formats
-			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(moveid in {'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'shellsmash':1})) {
+			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(moveid in {'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'lovelykiss':1, 'shellsmash':1, 'shiftgear':1})) {
 				let types = template.types;
 				if (template.species === 'Shaymin') types = ['Grass', 'Flying'];
 				if (template.baseSpecies === 'Hoopa') types = ['Psychic', 'Ghost', 'Dark'];
@@ -819,6 +671,7 @@ Validator = (function () {
 						if (eggGroups[0] === 'Undiscovered') eggGroups = tools.getTemplate(template.evos[0]).eggGroups;
 						let atLeastOne = false;
 						let fromSelf = (learned.substr(1) === 'Eany');
+						let eggGroupsSet = new Set(eggGroups);
 						learned = learned.substr(0, 2);
 						// loop through pokemon for possible fathers to inherit the egg move from
 						for (let templateid in tools.data.Pokedex) {
@@ -838,7 +691,7 @@ Validator = (function () {
 							if (!fromSelf && !dexEntry.learnset[moveid] && !dexEntry.learnset['sketch']) continue;
 
 							// must be able to breed with father
-							if (!dexEntry.eggGroups.intersect(eggGroups).length) continue;
+							if (!dexEntry.eggGroups.some(eggGroup => eggGroupsSet.has(eggGroup))) continue;
 
 							// we can breed with it
 							atLeastOne = true;
@@ -955,13 +808,14 @@ Validator = (function () {
 		}
 		if (sources) {
 			if (lsetData.sources) {
-				let intersectSources = lsetData.sources.intersect(sources);
+				let sourcesSet = new Set(sources);
+				let intersectSources = lsetData.sources.filter(source => sourcesSet.has(source));
 				if (!intersectSources.length && !(sourcesBefore && lsetData.sourcesBefore)) {
 					return {type:'incompatible'};
 				}
 				lsetData.sources = intersectSources;
 			} else {
-				lsetData.sources = sources.unique();
+				lsetData.sources = Array.from(new Set(sources));
 			}
 		}
 
@@ -978,7 +832,154 @@ Validator = (function () {
 		}
 
 		return false;
+	}
+}
+
+if (!process.send) {
+	let validationCount = 0;
+	let pendingValidations = {};
+
+	let ValidatorProcess = (() => {
+		function ValidatorProcess() {
+			this.process = require('child_process').fork('team-validator.js', {cwd: __dirname});
+			this.process.on('message', message => {
+				// Protocol:
+				// success: "[id]|1[details]"
+				// failure: "[id]|0[details]"
+				let pipeIndex = message.indexOf('|');
+				let id = message.substr(0, pipeIndex);
+				let success = (message.charAt(pipeIndex + 1) === '1');
+
+				if (pendingValidations[id]) {
+					ValidatorProcess.release(this);
+					pendingValidations[id](success, message.substr(pipeIndex + 2));
+					delete pendingValidations[id];
+				}
+			});
+		}
+		ValidatorProcess.prototype.load = 0;
+		ValidatorProcess.prototype.active = true;
+		ValidatorProcess.processes = [];
+		ValidatorProcess.spawn = function () {
+			let num = Config.validatorprocesses || 1;
+			for (let i = 0; i < num; ++i) {
+				this.processes.push(new ValidatorProcess());
+			}
+		};
+		ValidatorProcess.respawn = function () {
+			for (let process of this.processes.splice(0)) {
+				process.active = false;
+				if (!process.load) process.process.disconnect();
+			}
+			this.spawn();
+		};
+		ValidatorProcess.acquire = function () {
+			let process = this.processes[0];
+			for (let i = 1; i < this.processes.length; ++i) {
+				if (this.processes[i].load < process.load) {
+					process = this.processes[i];
+				}
+			}
+			++process.load;
+			return process;
+		};
+		ValidatorProcess.release = function (process) {
+			--process.load;
+			if (!process.load && !process.active) {
+				process.process.disconnect();
+			}
+		};
+		ValidatorProcess.send = function (format, team, callback) {
+			let process = this.acquire();
+			pendingValidations[validationCount] = callback;
+			try {
+				process.process.send('' + validationCount + '|' + format + '|' + team);
+			} catch (e) {}
+			++validationCount;
+		};
+		return ValidatorProcess;
+	})();
+
+	// Create the initial set of validator processes.
+	ValidatorProcess.spawn();
+
+	exports.ValidatorProcess = ValidatorProcess;
+	exports.pendingValidations = pendingValidations;
+
+	exports.validateTeam = function (format, team, callback) {
+		ValidatorProcess.send(format, team, callback);
 	};
 
-	return Validator;
-})();
+	let synchronousValidators = {};
+	exports.validateTeamSync = function (format, team) {
+		if (!synchronousValidators[format]) synchronousValidators[format] = new Validator(format);
+		return synchronousValidators[format].validateTeam(team);
+	};
+	exports.validateSetSync = function (format, set, teamHas) {
+		if (!synchronousValidators[format]) synchronousValidators[format] = new Validator(format);
+		return synchronousValidators[format].validateSet(set, teamHas);
+	};
+	exports.checkLearnsetSync = function (format, move, template, lsetData) {
+		if (!synchronousValidators[format]) synchronousValidators[format] = new Validator(format);
+		return synchronousValidators[format].checkLearnset(move, template, lsetData);
+	};
+} else {
+	require('sugar-deprecated')(require('./crashlogger.js'));
+	Object.defineProperty(Object, 'values', {writable: true, configurable: true, value: require('object.values')});
+
+	global.Config = require('./config/config.js');
+
+	if (Config.crashguard) {
+		process.on('uncaughtException', err => {
+			require('./crashlogger.js')(err, 'A team validator process', true);
+		});
+	}
+
+	global.Tools = require('./tools.js').includeMods();
+	global.toId = Tools.getId;
+
+	require('./repl.js').start('team-validator-', process.pid, cmd => eval(cmd));
+
+	let validators = {};
+
+	let respond = (id, success, details) => {
+		process.send(id + (success ? '|1' : '|0') + details);
+	};
+
+	process.on('message', message => {
+		// protocol:
+		// "[id]|[format]|[team]"
+		let pipeIndex = message.indexOf('|');
+		let pipeIndex2 = message.indexOf('|', pipeIndex + 1);
+		let id = message.substr(0, pipeIndex);
+		let format = message.substr(pipeIndex + 1, pipeIndex2 - pipeIndex - 1);
+
+		if (!validators[format]) validators[format] = new Validator(format);
+		let parsedTeam = [];
+		parsedTeam = Tools.fastUnpackTeam(message.substr(pipeIndex2 + 1));
+
+		let problems;
+		try {
+			problems = validators[format].validateTeam(parsedTeam);
+		} catch (err) {
+			require('./crashlogger.js')(err, 'A team validation', {
+				format: format,
+				team: message.substr(pipeIndex2 + 1),
+			});
+			problems = ["Your team crashed the team validator. We've been automatically notified and will fix this crash, but you should use a different team for now."];
+		}
+
+		if (problems && problems.length) {
+			respond(id, false, problems.join('\n'));
+		} else {
+			let packedTeam = Tools.packTeam(parsedTeam);
+			// console.log('FROM: ' + message.substr(pipeIndex2 + 1));
+			// console.log('TO: ' + packedTeam);
+			respond(id, true, packedTeam);
+		}
+	});
+
+	process.on('disconnect', () => {
+		process.exit();
+	});
+}

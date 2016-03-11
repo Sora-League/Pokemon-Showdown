@@ -63,7 +63,6 @@ exports.BattleScripts = {
 					}
 				}
 			}
-			this.update();
 			return changed;
 		},
 	},
@@ -475,7 +474,6 @@ exports.BattleScripts = {
 					if (pokemon.side.foe.active[0].status === 'brn') {
 						pokemon.side.foe.active[0].modifyStat('atk', 0.5);
 					}
-					pokemon.side.foe.active[0].update();
 				}
 			}
 			if (moveData.heal && !target.fainted) {
@@ -587,7 +585,7 @@ exports.BattleScripts = {
 		}
 		if (!target || !target.hp) return 0;
 		effect = this.getEffect(effect);
-		boost = this.runEvent('Boost', target, source, effect, Object.clone(boost));
+		boost = this.runEvent('Boost', target, source, effect, Object.assign({}, boost));
 		for (let i in boost) {
 			let currentBoost = {};
 			currentBoost[i] = boost[i];
