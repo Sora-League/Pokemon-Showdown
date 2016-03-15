@@ -1,12 +1,6 @@
 'use strict';
 const fs = require('fs');
 
-Users.User.prototype.hasSysopAccess = function () {
-	let systemOperators = {femalegallade:1, sorarevan:1, onyxeagle:1, soraonyxeagle:1, sorablade:1, blazing360:1};
-	if (this.userid in systemOperators) return true;
-	return false;
-};
-
 exports.commands = {
 	pm: 'msg',
 	whisper: 'msg',
