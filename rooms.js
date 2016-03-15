@@ -114,8 +114,7 @@ let Room = (() => {
 		if (message && message !== true) {
 			if (user.isSpamroomed()) {
 				connection.sendTo(this, '|c|' + user.getIdentity() + '|' + message);
-				Rooms('spamroom').add('|c|' + user.getIdentity() + '| __(to room ' + this.title + ')__ ' + message);
-				Rooms('spamroom').update();
+				Rooms('spamroom').add('|c|' + user.getIdentity() + '| __(to room ' + this.title + ')__ ' + message).update();
 				return false;
 			}
 			this.add('|c|' + user.getIdentity(this.id) + '|' + message);

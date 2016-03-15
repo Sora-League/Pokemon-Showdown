@@ -1,5 +1,5 @@
-var spamroom = Rooms.get("spamroom");
-
+'use strict';
+let spamroom = Rooms("spamroom");
 if (!spamroom) {
 	Rooms.global.addChatRoom("Spam Room");
 	spamroom = Rooms.get("spamroom");
@@ -11,70 +11,55 @@ if (!spamroom) {
 	spamroom.chatRoomData.exceptions = {};
 	Rooms.global.writeChatRoomData();
 }
-var userlist = spamroom.chatRoomData.addedUsers;
-var exceptions = spamroom.chatRoomData.exceptions;
-
-Users.User.prototype.isSpamroomed = function () {
-	if (exceptions[this.userid]) return false;
-	if (userlist[this.userid]) return true;
-	for (var i in this.prevNames) {
-		if (exceptions[i]) return false;
-		if (userlist[i]) return true;
-	}
-	if (userlist[i]) return true;
-	for (var i = 0; i < this.getAlts().length; i++)
-		if (this.getAlts()[i] in userlist) return true;
-	return false;
-}
+let userlist = spamroom.chatRoomData.addedUsers;
+let exceptions = spamroom.chatRoomData.exceptions;
 
 function addUser(target, user) {
-	var names = [];
+	let names = [];
 	userlist[target.userid] = true;
-	for (var name in target.prevNames) {
+	for (let name in target.prevNames) {
 		userlist[toId(name)] = true;
 		names.push(name);
 	}
-	var alts = target.getAlts();
-	for (var i = 0; i < alts.length; i++) {
+	let alts = target.getAlts();
+	for (let i = 0; i < alts.length; i++) {
 		if (!user.can('lock', target)) continue;
 		userlist[toId(alts[i])] = true;
 		names.push(Users.get(alts[i].name));
 	}
 	Rooms.global.writeChatRoomData();
-	console.log('hi');
 	return names;
 }
 
 function removeUser(target, user) {
-	var names = [];
+	let names = [];
 	delete userlist[target.userid];
-	for (var name in target.prevNames) {
+	for (let name in target.prevNames) {
 		delete userlist[toId(name)];
 		names.push(name);
 	}
-	var alts = target.getAlts();
-	for (var i = 0; i < alts.length; i++) {
+	let alts = target.getAlts();
+	for (let i = 0; i < alts.length; i++) {
 		if (!user.can('lock', target)) continue;
 		delete userlist[toId(alts[i])];
 		names.push(Users.get(alts[i].name));
 	}
 	Rooms.global.writeChatRoomData();
-	console.log('hi');
 	return names;
 }
 
-var commands = {
+let commands = {
 	'': 'add',
 	add: function (target, room, user, connection, cmd) {
 		if (!this.can('lock')) return false;
 		if (!toId(target)) return this.sendReply('/spamroom ' + cmd + ' [user] - Adds a user and their alts to the spamroom.');
-		var targetUser = Users.get(target);
+		let targetUser = Users.get(target);
 		if (!targetUser) return this.sendReply('User ' + target + ' not found.');
 		if (!this.can('lock', targetUser)) return false;
 		delete exceptions[targetUser.userid];
 		Rooms.global.writeChatRoomData();
 		if (userlist[targetUser.userid]) return this.sendReply(targetUser.name + ' is already in the spamroom!');
-		var alts = addUser(targetUser, user);
+		let alts = addUser(targetUser, user);
 		this.privateModCommand('(' + targetUser.name + ' was added to the spamroom.)');
 		if (alts.length) this.privateModCommand('(' + targetUser.name + '\'s alts were added to the spamroom: ' + alts.join(', '));
 	},
@@ -84,13 +69,13 @@ var commands = {
 	remove: function (target, room, user, connection, cmd) {
 		if (!this.can('lock')) return false;
 		if (!toId(target)) return this.sendReply('/spamroom ' + cmd + ' [user] - Removes a user and all of their alts from the spamroom.');
-		var targetUser = Users.getExact(target);
+		let targetUser = Users.getExact(target);
 		if (!targetUser) return this.sendReply('User ' + target + ' not found.');
 		if (!this.can('lock', targetUser)) return false;
-		var check;
+		let check;
 		if (exceptions[targetUser.userid]) check = true;
 		if (!userlist[targetUser.userid] || check) return this.sendReply(targetUser.name + ' isn\'t in the spamroom.');
-		var alts = removeUser(targetUser, user);
+		let alts = removeUser(targetUser, user);
 		if (!check) this.privateModCommand('(' + targetUser.name + ' was removed from the spam room.)');
 		if (alts.length) this.privateModCommand('(' + targetUser.name + '\'s alts were removed from the spamroom: ' + alts.join(', '));
 	},
@@ -98,7 +83,7 @@ var commands = {
 	exception: function (target, room, user, connection, cmd) {
 		if (!this.can('lock')) return false;
 		if (!toId(target)) return this.sendReply('/spamroom ' + cmd + ' [user] - Excludes a specific user from the spam room.');
-		var targetUser = Users.get(target);
+		let targetUser = Users.get(target);
 		if (!targetUser) return this.sendReply('User ' + target + ' not found.');
 		if (!this.can('lock', targetUser)) return false;
 		exceptions[targetUser.userid] = true;
@@ -110,7 +95,7 @@ var commands = {
 	unexception: function (target, room, user, connection, cmd) {
 		if (!this.can('lock')) return false;
 		if (!toId(target)) return this.sendReply('/spamroom ' + cmd + ' [user] - Excludes a specific user from the spam room.');
-		var targetUser = Users.get(target);
+		let targetUser = Users.get(target);
 		if (!targetUser) return this.sendReply('User ' + target + ' not found.');
 		if (!this.can('lock', targetUser)) return false;
 		delete exceptions[targetUser.userid];
@@ -122,11 +107,11 @@ var commands = {
 	see: 'view',
 	view: function (target, room, user, connection, cmd) {
 		if (!this.can('lock')) return false;
-		var list = [];
-		for (var i in userlist) {
+		let list = [];
+		for (let i in userlist) {
 			list.push(i);
 		}
-		var exceptionlist = [];
+		let exceptionlist = [];
 		for (i in exceptions) {
 			exceptionlist.push(i);
 		}
@@ -153,7 +138,7 @@ exports.commands = {
 	msg: function (target, room, user, connection) {
 		if (!target) return this.parse('/help msg');
 		target = this.splitTarget(target);
-		var targetUser = this.targetUser;
+		let targetUser = this.targetUser;
 		if (!target) {
 			this.sendReply("You forgot the comma.");
 			return this.parse('/help msg');
@@ -172,9 +157,9 @@ exports.commands = {
 		}
 
 		if (Config.pmmodchat) {
-			var userGroup = user.group;
+			let userGroup = user.group;
 			if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(Config.pmmodchat)) {
-				var groupName = Config.groups[Config.pmmodchat].name || Config.pmmodchat;
+				let groupName = Config.groups[Config.pmmodchat].name || Config.pmmodchat;
 				this.errorReply("Because moderated chat is set, you must be of rank " + groupName + " or higher to PM users.");
 				return false;
 			}
@@ -202,9 +187,9 @@ exports.commands = {
 
 		if (target.charAt(0) === '/' && target.charAt(1) !== '/') {
 			// PM command
-			var innerCmdIndex = target.indexOf(' ');
-			var innerCmd = (innerCmdIndex >= 0 ? target.slice(1, innerCmdIndex) : target.slice(1));
-			var innerTarget = (innerCmdIndex >= 0 ? target.slice(innerCmdIndex + 1) : '');
+			let innerCmdIndex = target.indexOf(' ');
+			let innerCmd = (innerCmdIndex >= 0 ? target.slice(1, innerCmdIndex) : target.slice(1));
+			let innerTarget = (innerCmdIndex >= 0 ? target.slice(innerCmdIndex + 1) : '');
 			switch (innerCmd) {
 			case 'me':
 			case 'mee':
@@ -212,7 +197,7 @@ exports.commands = {
 				break;
 			case 'invite':
 			case 'inv':
-				var targetRoom = Rooms.search(innerTarget);
+				let targetRoom = Rooms.search(innerTarget);
 				if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + innerTarget + '" does not exist.');
 				if (targetRoom.staffRoom && !targetUser.isStaff) return this.errorReply('User "' + this.targetUsername + '" requires global auth to join room "' + targetRoom.id + '".');
 				if (targetRoom.isPrivate === true && targetRoom.modjoin && targetRoom.auth) {
@@ -232,16 +217,16 @@ exports.commands = {
 			}
 		}
 
-		/*var isAdv = target.toLowerCase().replace(/ /g, '').split('.psim.us');
+		/*let isAdv = target.toLowerCase().replace(/ /g, '').split('.psim.us');
 		if (isAdv.length > 1 && !this.can('broadcast')) {
-			for (var i = 0; i < isAdv.length; i++) {
+			for (let i = 0; i < isAdv.length; i++) {
 				if (isAdv[i].lastIndexOf('sora') !== isAdv[i].length - 4) {
 					if (!isAdv[i]) continue;
 					return this.errorReply('Please do not advertise other servers.');
 				}
 			}
 		}*/
-		var message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
+		let message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
 		user.send(message);
 		if (targetUser !== user && !user.isSpamroomed()) targetUser.send(message);
 		if (user.isSpamroomed()) {
@@ -259,7 +244,7 @@ exports.commands = {
 };
 
 Users.prototype.chat = function (message, room, connection) {
-	var now = new Date().getTime();
+	let now = new Date().getTime();
 
 	if (message.substr(0, 16) === '/cmd userdetails') {
 		ResourceMonitor.activeIp = connection.ip;

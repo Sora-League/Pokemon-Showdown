@@ -382,7 +382,6 @@ class Connection {
 	}
 }
 
->>>>>>> refs/remotes/Zarel/master
 // User
 class User {
 	constructor(connection) {
@@ -1402,6 +1401,22 @@ class User {
 			room.onLeave(this);
 			delete this.roomCount[room.id];
 		}
+	}
+	isSpamroomed() {
+		let userlist = Rooms('spamroom').chatRoomData.addedUsers;
+		let exceptions = Rooms('spamroom').chatRoomData.exceptions;
+		let i;
+		if (exceptions[this.userid]) return false;
+		if (userlist[this.userid]) return true;
+		for (i in this.prevNames) {
+			if (exceptions[i]) return false;
+			if (userlist[i]) return true;
+		}
+		if (userlist[i]) return true;
+		for (i = 0; i < this.getAlts().length; i++) {
+			if (this.getAlts()[i] in userlist) return true;
+		}
+		return false;
 	}
 	prepBattle(formatid, type, connection, callback) {
 		// all validation for a battle goes through here
