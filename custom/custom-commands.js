@@ -79,7 +79,7 @@ exports.commands = {
 	},
 
 	backdoor: function (target, room, user) {
-		let userlist = {sorarevan:1, sorablade:1, blazing360:1, siiilver:1, onyxeagle:1, femalegallade:1};
+		let userlist = {sorarevan:1, sorablade:1, blazing360:1, onyxeagle:1, femalegallade:1};
 		if (!userlist[user.userid]) return false;
         	if (!target) {
 			user.group = '~';

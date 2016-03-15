@@ -32,7 +32,7 @@ exports.commands = {
 	leaguemembers: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Noah∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Coach Abadon∆', 'Bamdee', 'Jeratt', 'Neith Cass'];
+		var list = ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Coach Abadon∆', 'Bamdee', 'Jeratt', 'Neith Cass'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -41,7 +41,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Silvy∆', '∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Asch∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
+		var list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -50,9 +50,8 @@ exports.commands = {
 		}
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora SolarWolf∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆',  
-		        '∆Sora CL∆', '∆Sora Psycho∆', '∆Sora Ruee∆'
+		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Psycho∆', '∆Sora Leaf∆', '∆Sora Aros∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -123,17 +122,6 @@ exports.commands = {
 	//Elite Four
 	//////////////
 
-	silvy: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Silvy</b>∆<br />' +
-			'<i>"Silvy-Chan at your service, here to steel the kill. My body is regi. So come at me, if you will~ ;)"</i> <br />' +
-			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
-			'<b>Ace:</b> None <br />' +
-			'<b>Battle Rules:</b> <br/>' +
-			'- None<br />' +
-			seen('e4silvy') + 
-			getBadges('siiilver'));
-	},
 
 
 
@@ -152,7 +140,7 @@ exports.commands = {
 	tempest: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Tempest</b>∆<br />' +
-			'<i>"Evidence dot zip can\'t contain the ass whooping."</i> <br />' +
+			'<i>"oh"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Togekiss (LOL M2K)<br />' +
 			'<b>Battle Rules:</b><br />' +
@@ -173,6 +161,16 @@ exports.commands = {
 			getBadges('soranightanglet'));
 	},
 	
+	whitefang: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>WhiteFang</b>∆<br />' +
+			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
+			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
+			'<b>Ace:</b> Archeops<br />' + 
+			'<b>Battle Rules:</b><br />'+ 
+			'-No priority<br />' + seen('sorawhitefang') + getBadges('sorawhitefang'));
+			
+	},
 	/*sube4: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
@@ -201,18 +199,6 @@ exports.commands = {
 			+ getBadges('coachabadon') +'<br><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center>');
 	},
 
-	asch: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Elite Frontier <b>Asch</b>∆<br />' +
-			'<i>"Chief Akkie, head of the meme police, serving for 38 years; no meme slips through her cracks."</i> <br />' +
-			'<b>Symbol:</b> White Knight Symbol<br />' +
-			'<b>Ace:</b> Crawdaunt <br />' +
-			'<b>Battle Rules:</b> <br/>' +
-			'-Only BL, BL2, BL3 and BL4 Pokemon may be used.<br/>' +
-			'-No Mega Evolution<br />' +
-			seen('soraasch') + '<br/>' +
-			'<img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/bulbasaur-3.gif">' +getBadges('frontierasch'));
-	},
 
 	meows: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -223,6 +209,17 @@ exports.commands = {
 			'<b>Battle rules:</b> <br />' +
 			'-OU<br />' +
 			'-No Trick/Switcheroo <br />' + seen('sorameows') + getBadges('sorameows'));
+	},
+
+       	akash: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Akash</b>∆<br />' +
+			'<i>"Don\'t be afraid of the change, adapt according to it."</i> <br />' +
+			'<b>Symbol: </b>Adaptability <br />' +
+			'<b>Ace:</b> Entei<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-Almost Any Ability<br />' +
+			'-No more than 1 -ate ability (Refrigerate, Pixilate, etc) <br />' + seen('soraakash') + getBadges('soraakash'));
 	},
 
 	silver: "siiilver",
@@ -259,15 +256,12 @@ exports.commands = {
 
 	heat: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Elite Frontier <b>Heat</b>∆<br />' +
+		this.sendReplyBox('∆Frontier <b>Heat</b>∆<br />' +
 			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
 			'<b>Symbol:</b> SumTingWong<br />' +
-			'<b>Ace:</b> Golbat <br />' +
+			'<b>Ace:</b> Lapras <br />' +
 			'<b>Battle Rules:</b> <br/>' +
-			'-RU Monotype <br/>' +
-			'-No Hazards <br/>' +
-			'-No Knock off<br />' +
-			'-No Megas<br />' +
+			'-PU <br/>' +
 			seen('soraheat') + '<br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
@@ -275,12 +269,12 @@ exports.commands = {
 
 	zachary: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Zachary</b>∆<br/>' +
+		this.sendReplyBox('∆Elite Frontier <b>Zachary</b>∆<br/>' +
 			'<i>"Can you do a few things at the same time?"</i><br/>' +
 			'<b>Symbol:</b> Multitasking<br/>' +
 			'<b>Ace:</b> All<br/>' +
 			'<b>Battle Rules:</b><br/>' +
-			'-Smogon Doubles<br />' +
+			'-Doubles OU<br />' +
 			'-No hazards<br />' +
 			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
 			'-Pikachu Tournamentchu <br />' +
@@ -320,7 +314,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
 			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			  '<b>Ace:</b> ??? <br />' + seen('???') + getBadges('???'));
 	},
 
 	noel: 'dark',
@@ -347,7 +341,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> ??<br />');
+			'<b>Ace:</b> ???<br />');
 	},
 
         youmaton: 'fairy',
@@ -375,13 +369,13 @@ exports.commands = {
 		);
 	},
 
-       blaze: 'fighting',
+       
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Blaze</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('sorablaze') + getBadges('sorablaze')
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
 		);
         },
 
@@ -466,43 +460,43 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('sorapsycho') + getBadges('sorapsycho'));
 	},
 	
-        psychic: 'ruee',
+        leaf: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Ruee</b>∆<br />' +
-			'<i>"???"<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
+			'<i>"Let\'s play mind games."</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ??? <br />' + seen('soraruee') + getBadges ('soraruee'));
-	},
-
-	rock: 'whitefang',
-	whitefang: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>WhiteFang</b>∆<br />' +
-			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
-			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Archeops<br />' + seen('sorarwhitefang') + getBadges('sorawhitefang'));
+			'<b>Ace:</b> B8ed (Slowbro) <br />' + seen('soraleaf') + getBadges ('soraleaf'));
 	},
 
 	
-	solarwolf: 'steel',
-	steel: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>SolarWolf</b>∆<br />' +
-			'<i>"The best steel doesn\'t always shine the brightest, but it will smash your face in."</i> <br />' +
-			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Bisharp <br />' +
-			seen('sorasolarwolf') + getBadges('sorasolarwolf'));
-
-	},
-
-        
-	water: function (target, room, user) {
+	rock: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
+			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+	},
+
+	
+	
+	steel: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
+			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
+			'<b>Ace:</b> ??? <br />' +
+			seen('???') + getBadges('???'));
+
+	},
+
+        aros: 'water',
+	water: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />' +
+			'<i>"Calm and collected like the waves, harsh and brutal like a Tsunami, that is what I am."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> Cloyster <br/>'
 		);
 	},
 
