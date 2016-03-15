@@ -211,6 +211,17 @@ exports.commands = {
 			'-No Trick/Switcheroo <br />' + seen('sorameows') + getBadges('sorameows'));
 	},
 
+       	akash: function (target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Akash</b>∆<br />' +
+			'<i>"Don\'t be afraid of the change, adapt according to it."</i> <br />' +
+			'<b>Symbol: </b>Adaptability <br />' +
+			'<b>Ace:</b> Entei<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-Almost Any Ability<br />' +
+			'-No more than 1 -ate ability (Refrigerate, Pixilate, etc) <br />' + seen('soraakash') + getBadges('soraakash'));
+	},
+
 	silver: "siiilver",
 	siiilver: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -297,13 +308,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	akash: 'bug',
+	
 	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Akash</b>∆<br />'+
-			  '<i>"Don\'t BUG me."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> DancingQueen (Volcarona) <br />' + seen('soraakash') + getBadges('soraakash'));
+			  '<b>Ace:</b> ??? <br />' + seen('???') + getBadges('???'));
 	},
 
 	noel: 'dark',
