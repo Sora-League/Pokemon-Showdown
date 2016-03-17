@@ -1390,7 +1390,6 @@ class User {
 			delete this.roomCount[room.id];
 		}
 	}
-<<<<<<< HEAD
 	isSpamroomed() {
 		let userlist = Rooms('spamroom').chatRoomData.addedUsers;
 		let exceptions = Rooms('spamroom').chatRoomData.exceptions;
