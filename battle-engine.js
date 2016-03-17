@@ -12,7 +12,6 @@
 
 'use strict';
 
-require('sugar-deprecated')(require('./crashlogger.js'));
 Object.defineProperty(Object, 'values', {writable: true, configurable: true, value: require('object.values')});
 
 global.Config = require('./config/config.js');
@@ -4606,6 +4605,11 @@ Battle = (() => {
 	};
 	Battle.prototype.attrLastMove = function () {
 		this.log[this.lastMoveLine] += '|' + Array.prototype.slice.call(arguments).join('|');
+	};
+	Battle.prototype.retargetLastMove = function (newTarget) {
+		let parts = this.log[this.lastMoveLine].split('|');
+		parts[4] = newTarget;
+		this.log[this.lastMoveLine] = parts.join('|');
 	};
 	Battle.prototype.debug = function (activity) {
 		if (this.getFormat().debug) {
