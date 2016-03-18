@@ -73,10 +73,7 @@ exports.commands = {
 			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\' "</i></center> <br />' +
 			'<b>Ace:</b> Weavile<br />' +
 			'<b>Battle Rules:</b> <br/>' +
-			'-Ubers Battle <br/>' +
-			'-At least 2 must be tiered lower than OU <br/>' +
-			'-No Lowering opponents stats (Unless caused by attack) <br/>' +
-			'-No Pokemon with a base stat over 130<br />' +
+			'-LC <br/>' +
 			'<center><img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Misc%20sprites/Bart_zps03ad3a7d.png"><img src="http://play.pokemonshowdown.com/sprites/xyani/torterra.gif"></center>' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
