@@ -311,7 +311,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />'+
 			  '<i>"Holy crap, why is it 5\'3"! That\'s not normal! Well, neither am I."</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Yanmega <br />' + seen('soradoku') + getBadges('soradoku'));
+			  '<b>Ace:</b> Yanmega<br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 
 	noel: 'dark',
