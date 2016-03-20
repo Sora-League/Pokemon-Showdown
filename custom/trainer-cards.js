@@ -51,7 +51,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Psycho∆', '∆Sora Leaf∆', '∆Sora Aros∆'
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Psycho∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -305,13 +305,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	
+	doku: 'bug',
 	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			  '<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />'+
+			  '<i>"Holy crap, why is it 5\'3"! That\'s not normal! Well, neither am I."</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> ??? <br />' + seen('???') + getBadges('???'));
+			  '<b>Ace:</b> Yanmega <br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 
 	noel: 'dark',
