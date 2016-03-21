@@ -70,7 +70,7 @@ exports.commands = {
 	bart: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b><font color = 07e1ed>∆Champion Bart∆</font></b></center></a><br />' +
-			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\' "</i></center> <br />' +
+			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\'"</i></center> <br />' +
 			'<b>Ace:</b> Pawniard<br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'-LC <br/>' +
