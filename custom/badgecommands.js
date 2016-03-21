@@ -26,7 +26,12 @@ var badgeList = {
 	meme: ['ℳℯღℯ', '<img src="http://i.imgur.com/XWAudeE.gif" title="I\'m a dank memer">', '<img src = "http://i.imgur.com/VG0RWYS.gif"'],
 	egg: ['Egg', '<img src="http://i.imgur.com/dLyGYK5.png" title="This user is an egg without trying">', '<img src = "http://i.imgur.com/8vrprMK.png"'],
 	porygonz: ['Porygon-Z', '<img src="http://i.imgur.com/bJrRxB8.png" title="Porygon-Z: Broke the server while trying to repair it. Good job mate">', '<img src = "http://i.imgur.com/3iPLvlj.png"'],
-	smeargle: ['Smeargle', '<img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Created a work of art for Sora">', '<img src = "http://i.imgur.com/1JYlYS0.png"']
+	smeargle: ['Smeargle', '<img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Created a work of art for Sora">', '<img src = "http://i.imgur.com/1JYlYS0.png"'],
+	//Badges Second Edition!
+	goldrisu: ['Gold Cup Pachirisu', '<img src="http://i.imgur.com/ngrC6WP.png" width=75 height=75 title="Champion of the Internation Pokemon League (Season 3)">', '<img src="http://i.imgur.com/ngrC6WP.png" width=300 height=300>'],
+	silverrisu: ['Silver Cup Pachirisu', '<img src="http://i.imgur.com/RQRENUa.png" width=75 height=75 title="Runner Up of the International Pokemon League (Season 3)">', '<img src="http://i.imgur.com/RQRENUa.png" width=300 height=300>'],
+	landorus: ['Landorus', '<img src="http://i.imgur.com/VcxTNWj.png" width=75 height=75 title="Most Valuable Pokemon in Season 3 of the IPL">', '<img src="http://i.imgur.com/VcxTNWj.png" width=300 height=300>'],
+	megaaltaria: ['Mega Altaria', '<img src="http://i.imgur.com/ueI4x5s.png" width=75 height=75 title="Top Pokèmon Killer in Season 3 of the IPL">', '<img src="http://i.imgur.com/ueI4x5s.png" width=300 height=300>']
 };
 
 var comm = {
