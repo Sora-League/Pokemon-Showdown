@@ -366,13 +366,13 @@ exports.commands = {
 		);
 	},
 
-       
+       arjunb: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />'+
+			'<i>"Everyone has a plan until they get punched in their face."</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> Mega Medicham<br />' + seen('soraarjunb') + getBadges('soraarjunb')
 		);
         },
 
