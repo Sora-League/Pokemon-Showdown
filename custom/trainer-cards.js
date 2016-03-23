@@ -215,8 +215,7 @@ exports.commands = {
 			'<b>Symbol: </b>Adaptability <br />' +
 			'<b>Ace:</b> Entei<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-Almost Any Ability<br />' +
-			'-No more than 1 -ate ability (Refrigerate, Pixilate, etc) <br />' + seen('soraakash') + getBadges('soraakash'));
+			'-Almost Any Ability<br />' + seen('soraakash') + getBadges('soraakash'));
 	},
 
 	silver: "siiilver",
