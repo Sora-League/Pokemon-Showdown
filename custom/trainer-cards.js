@@ -425,15 +425,15 @@ exports.commands = {
 	},
 
 
-	despair: 'ice', 
+	
 	ice: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Despair</b>∆<br />' +
-			'<i>"Winter is coming."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> Weavile<br />' +
-			seen('soradespair') + '<br>' +
-			getBadges('soradespair')
+			'<b>Ace:</b> ???<br />' +
+			seen('') + '<br>' +
+			getBadges('')
 		);
 	},
 
