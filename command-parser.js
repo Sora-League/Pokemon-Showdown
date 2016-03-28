@@ -52,10 +52,6 @@ for (let file of fs.readdirSync(path.resolve(__dirname, 'chat-plugins'))) {
 	if (file.substr(-3) !== '.js' || file === 'info.js') continue;
 	Object.assign(commands, require('./chat-plugins/' + file).commands);
 }
-for (let file of fs.readdirSync(path.resolve(__dirname, 'custom'))) {
-	if (file.substr(-3) !== '.js' || file === 'info.js') continue;
-	Object.assign(commands, require('./custom/' + file).commands);
-}
 
 /*********************************************************
  * Modlog

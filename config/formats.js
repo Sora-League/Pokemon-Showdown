@@ -28,7 +28,7 @@ exports.Formats = [
 				if (template.tier === 'Uber') return [template.name + ' is in Ubers, which is banned on OU teams'];
 			}
 			let isMono = true;
-        		let typeTable = template.types;
+        	let typeTable = template.types;
         		if (!typeTable) isMono = false;
             		for (let i = 1; i < team.length; i++) {
                 		template = this.getTemplate(team[i].species);
@@ -46,13 +46,13 @@ exports.Formats = [
 			let problems = [];
 			if (isMono) {
 				let monoBans = this.data.Formats.monotype.banlist.map(toId);
-				for (i = 0; i < monoBans.length; i++) {
+				for (let i = 0; i < monoBans.length; i++) {
 					if (teamHas[monoBans[i]]) problems.push(monoBans[i] + ' is banned on Monotype teams.');;
 				}
 				if (teamHas['aegislash'] && typeTable[0] === 'Steel') problems.push('Aegislash is banned on Steel Monotype teams.');
 				
 			} else {
-				for (i = 0; i < team.length; i++) {
+				for (let i = 0; i < team.length; i++) {
 					let template = this.getTemplate(team[i].species)
 					if (template.tier === 'Uber') problems.push(template.species + ' is in Uber, which is banned on OU teams.');
 				}
@@ -1002,6 +1002,8 @@ exports.Formats = [
 	},
 	{
 		name: "Voltturn Mayhem",
+		section: "Other Metagames",
+
 		ruleset: ['OU'],
 		banlist: [],
 		onValidateTeam: function (team, format) {

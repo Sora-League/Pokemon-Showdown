@@ -413,5 +413,5 @@ exports.commands = {
 	'ga': commands.guess,
 	'gh': commands.help,
 	'qg': commands.question,
-	'lg': commands.lottery,
+	'lg': commands.lottery
 };
