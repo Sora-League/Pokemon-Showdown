@@ -187,7 +187,8 @@ class CommandContext {
 				this.errorReply("You can't broadcast this because it was just broadcast.");
 				return false;
 			}
-			if (this.user.isSpamroomed()) {
+			if (!checkOnly) {
+				if (this.user.isSpamroomed()) {
 				this.sendReply('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
 				Rooms('spamroom').add('|c|' + this.user.getIdentity(this.room.id) + '| __(to room ' + this.room.title + ')__ ' + (suppressMessage || message)).update();
 			} else 
