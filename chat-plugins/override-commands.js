@@ -108,10 +108,9 @@ exports.commands = {
 
 	uptime: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		let uptime = process.uptime();
-		let uptimeText;
+		let uptime = process.uptime(), uptimeText;
 		let getUptime = function (uptime) {
-			if (uptime < 24 * 60 * 60) return uptime.seconds().duration();
+			if (uptime < 24 * 60 * 60) return Tools.toDurationString(uptime * 1000);
 			let uptimeDays = Math.floor(uptime / (24 * 60 * 60));
 			let uptimeText = uptimeDays + " " + (uptimeDays === 1 ? "day" : "days");
 			let uptimeHours = Math.floor(uptime / (60 * 60)) - uptimeDays * 24;

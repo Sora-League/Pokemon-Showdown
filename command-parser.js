@@ -185,10 +185,10 @@ class CommandContext {
 			}
 			if (!checkOnly) {
 				if (this.user.isSpamroomed()) {
-				this.sendReply('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
-				Rooms('spamroom').add('|c|' + this.user.getIdentity(this.room.id) + '| __(to room ' + this.room.title + ')__ ' + (suppressMessage || message)).update();
-			} else 
-				this.add('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
+					this.sendReply('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
+					Rooms('spamroom').add('|c|' + this.user.getIdentity(this.room.id) + '| __(to room ' + this.room.title + ')__ ' + (suppressMessage || message)).update();
+				} else this.add('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
+
 				this.room.lastBroadcast = normalized;
 				this.room.lastBroadcastTime = Date.now();
 
