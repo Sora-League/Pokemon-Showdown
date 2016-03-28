@@ -15,24 +15,12 @@ function getBadges (user) {
 }
 
 exports.commands = {
-	givepresent: function (target, room, user) {
-		if (!this.can('hotpatch')) return false;
-		if (!target) return this.sendReply("/givegift [user] - Gives a user a Christmas gift of 5 bucks.");
-		if (!Users(target)) return this.sendReply('User ' + target + ' not found.');
-		Users(target).popup('|html|<center><h2><font color=#992114>Merry Christmas</font> <font color=#1A3112>and have a</font> <font color=#992114>Happy New Year</font> <font color=#1A3112>from the Sora League!</font></h2><br>' +
-	        	'<img src="http://rs522.pbsrc.com/albums/w348/sunilmsn/present.gif~c200"><br>' +
-                  	'<b>You have received 5 Bucks! Stay tuned throughout the day for special events for more chances of picking up presents!</b><br>' +
-	        	'<audio controls autoplay src = "https://dl2.pushbulletusercontent.com/EYtKI65FLYuGfJRI1Me8QnVRzgSG89eM/Pok%C3%A9mon%20Christmas%20Medley%202015%20%28Feat-%20Trickywi%29.mp3"></audio><br>' +
-                        '<font color=#C5A436>GlitchxCity - Pokémon Christmas Medley 2015 (Feat: Trickywi)</font></center>'); //DONEEEEE!!!!
-		Core.write('money', Users(target).userid, 5, '+');
-		this.sendReply('You have given ' + Users(target).name + ' a present.');
-	},
 	staff: 'leaguemembers',
 	attendance: 'leaguemembers',
 	leaguemembers: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Coach Abadon∆', 'Bamdee', 'Jeratt', 'Neith Cass'];
+		var list = ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -41,7 +29,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆'];
+		var list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -51,7 +39,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Psycho∆', '∆Sora Leaf∆', '∆Sora Aros∆'
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Psycho∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora James357∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -70,13 +58,10 @@ exports.commands = {
 	bart: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b><font color = 07e1ed>∆Champion Bart∆</font></b></center></a><br />' +
-			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\' "</i></center> <br />' +
-			'<b>Ace:</b> Weavile<br />' +
+			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\'"</i></center> <br />' +
+			'<b>Ace:</b> Pawniard<br />' +
 			'<b>Battle Rules:</b> <br/>' +
-			'-Ubers Battle <br/>' +
-			'-At least 2 must be tiered lower than OU <br/>' +
-			'-No Lowering opponents stats (Unless caused by attack) <br/>' +
-			'-No Pokemon with a base stat over 130<br />' +
+			'-LC <br/>' +
 			'<center><img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Misc%20sprites/Bart_zps03ad3a7d.png"><img src="http://play.pokemonshowdown.com/sprites/xyani/torterra.gif"></center>' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
@@ -218,8 +203,7 @@ exports.commands = {
 			'<b>Symbol: </b>Adaptability <br />' +
 			'<b>Ace:</b> Entei<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-Almost Any Ability<br />' +
-			'-No more than 1 -ate ability (Refrigerate, Pixilate, etc) <br />' + seen('soraakash') + getBadges('soraakash'));
+			'-Almost Any Ability<br />' + seen('soraakash') + getBadges('soraakash'));
 	},
 
 	silver: "siiilver",
@@ -308,13 +292,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	
+	doku: 'bug',
 	bug: function(target, room, user) {
 	        if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			  '<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />'+
+			  '<i>"Holy crap, why is it 5\'3"! That\'s not normal! Well, neither am I."</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> ??? <br />' + seen('???') + getBadges('???'));
+			  '<b>Ace:</b> Yanmega<br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 
 	noel: 'dark',
@@ -369,13 +353,13 @@ exports.commands = {
 		);
 	},
 
-       
+       arjunb: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />'+
+			'<i>"Everyone has a plan until they get punched in their face."</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> Mega Medicham<br />' + seen('soraarjunb') + getBadges('soraarjunb')
 		);
         },
 
@@ -429,15 +413,15 @@ exports.commands = {
 	},
 
 
-	despair: 'ice', 
+	
 	ice: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Despair</b>∆<br />' +
-			'<i>"Winter is coming."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> Weavile<br />' +
-			seen('soradespair') + '<br>' +
-			getBadges('soradespair')
+			'<b>Ace:</b> ???<br />' +
+			seen('') + '<br>' +
+			getBadges('')
 		);
 	},
 
@@ -479,18 +463,18 @@ exports.commands = {
 	},
 
 	
-	
+	james357: 'steel',
 	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>James357</b>∆<br />' +
+			'<i>"Losing is a part of winning, as when you lose, you gain knowledge,and with knowledge, you\'re bound to succeed"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' +
-			seen('???') + getBadges('???'));
+			'<b>Ace:</b> Mega-Scizor <br />' +
+			seen('sorajames357') + getBadges('sorajames357'));
 
 	},
 
-    aros: 'water',
+        aros: 'water',
 	water: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />' +
@@ -908,6 +892,5 @@ exports.commands = {
 			'<center><img src="http://sora.cu.cc/img/namelist.png"><br />'+
 			'All Admin team Members can be identified by their userlist highlight and by having this symbol on their badges:</center> <br />' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
-	},
-	
+	}
 };
