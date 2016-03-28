@@ -481,7 +481,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>James357</b>∆<br />' +
 			'<i>"Losing is a part of winning, as when you lose, you gain knowledge,and with knowledge, you\'re bound to succeed"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Empoleon <br />' +
+			'<b>Ace:</b> Mega-Scizor <br />' +
 			seen('sorajames357') + getBadges('sorajames357'));
 
 	},
