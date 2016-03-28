@@ -1390,7 +1390,6 @@ class User {
 			delete this.roomCount[room.id];
 		}
 	}
-<<<<<<< HEAD
 	isSpamroomed() {
 		let userlist = Rooms('spamroom').chatRoomData.addedUsers;
 		let exceptions = Rooms('spamroom').chatRoomData.exceptions;
@@ -1407,10 +1406,7 @@ class User {
 		}
 		return false;
 	}
-	prepBattle(formatid, type, connection, callback) {
-=======
 	prepBattle(formatid, type, connection) {
->>>>>>> Zarel/master
 		// all validation for a battle goes through here
 		if (!connection) connection = this;
 		if (!type) type = 'challenge';
