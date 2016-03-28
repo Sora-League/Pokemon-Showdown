@@ -1032,7 +1032,7 @@ class User {
 			this.group = Config.groupsranking[0];
 			for (let i = 0; i < Rooms.global.chatRooms.length; i++) {
 				let room = Rooms.global.chatRooms[i];
-				if (!room.isPrivate && room.auth && this.userid in room.auth && room.auth[this.userid] !== '+') {
+				if (!room.isPrivate && !room.isPersonal && room.auth && this.userid in room.auth && room.auth[this.userid] !== '+') {
 					this.confirmed = this.userid;
 					this.autoconfirmed = this.userid;
 					break;
@@ -1390,6 +1390,7 @@ class User {
 			delete this.roomCount[room.id];
 		}
 	}
+<<<<<<< HEAD
 	isSpamroomed() {
 		let userlist = Rooms('spamroom').chatRoomData.addedUsers;
 		let exceptions = Rooms('spamroom').chatRoomData.exceptions;
@@ -1407,6 +1408,9 @@ class User {
 		return false;
 	}
 	prepBattle(formatid, type, connection, callback) {
+=======
+	prepBattle(formatid, type, connection) {
+>>>>>>> Zarel/master
 		// all validation for a battle goes through here
 		if (!connection) connection = this;
 		if (!type) type = 'challenge';
@@ -1417,41 +1421,37 @@ class User {
 				message = "The server is under attack. Battles cannot be started at this time.";
 			}
 			connection.popup(message);
-			setImmediate(() => callback(false));
-			return;
+			return Promise.resolve(false);
 		}
 		if (Monitor.countPrepBattle(connection.ip || connection.latestIp, this.name)) {
 			connection.popup("Due to high load, you are limited to 6 battles every 3 minutes.");
-			setImmediate(() => callback(false));
-			return;
+			return Promise.resolve(false);
 		}
 
 		let format = Tools.getFormat(formatid);
 		if (!format['' + type + 'Show']) {
 			connection.popup("That format is not available.");
-			setImmediate(() => callback(false));
-			return;
+			return Promise.resolve(false);
 		}
 		if (type === 'search' && this.searching[formatid]) {
 			connection.popup("You are already searching a battle in that format.");
-			setImmediate(() => callback(false));
-			return;
+			return Promise.resolve(false);
 		}
-		TeamValidator.validateTeam(formatid, this.team, (success, details) => this.finishPrepBattle(connection, callback, success, details));
+		return TeamValidator(formatid).prepTeam(this.team).then(result => this.finishPrepBattle(connection, result));
 	}
-	finishPrepBattle(connection, callback, success, details) {
-		if (!success) {
-			connection.popup("Your team was rejected for the following reasons:\n\n- " + details.replace(/\n/g, '\n- '));
-			callback(false);
-		} else {
-			if (details) {
-				this.team = details;
-				Monitor.teamValidatorChanged++;
-			} else {
-				Monitor.teamValidatorUnchanged++;
-			}
-			callback(this === users.get(this.userid));
+	finishPrepBattle(connection, result) {
+		if (result.charAt(0) !== '1') {
+			connection.popup("Your team was rejected for the following reasons:\n\n- " + result.slice(1).replace(/\n/g, '\n- '));
+			return false;
 		}
+
+		if (result.length > 1) {
+			this.team = result.slice(1);
+			Monitor.teamValidatorChanged++;
+		} else {
+			Monitor.teamValidatorUnchanged++;
+		}
+		return (this === users.get(this.userid));
 	}
 	updateChallenges() {
 		let challengeTo = this.challengeTo;
