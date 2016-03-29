@@ -164,22 +164,13 @@ exports.commands = {
 		}, 10000);
 	},
 
+	joim: 'join',
+	j: 'join',
 	join: function (target, room, user, connection) {
 		if (!target) return false;
-		let targetRoom = Rooms.get(target) || Rooms.get(toId(target));
-		if (!targetRoom) {
-			return connection.sendTo(target, "|noinit|nonexistent|The room '" + target + "' does not exist.");
+		if (user.tryJoinRoom(target, connection) === null) {
+			connection.sendTo(target, "|noinit|namerequired|The room '" + target + "' does not exist or requires a login to join.");
 		}
-		if (targetRoom.isPrivate && !user.named) {
-			return connection.sendTo(target, "|noinit|namerequired|You must have a name in order to join the room '" + target + "'.");
-		}
-		if (!user.joinRoom(targetRoom || room, connection)) {
-			return connection.sendTo(target, "|noinit|joinfailed|The room '" + target + "' could not be joined.");
-		}
-		//If you need to add another IP or host, add a comma after the last element of the array below, and enter
-		//the IP/Host in single or double quotes. Adding a portion of an IP would be acceptable too, since this
-		//filter checks if a user's IP or host contains any of the blacklisted IPs or hosts, rather than
-		//looking for an exact match
 		let blacklist = ["dhcp-077-250-225-247.chello.nl", "c-76-100-209-92.hsd1.md.comcast.net", "zenmate",
 			"74.88.1.127", "27.122.15.28", "mx-ll-223.205.20-59.dynamic.3bb.co.th", "50-108-108-125.adr01.mskg.mi.frontiernet.net",
 			"cpe-67-253-120-124.maine.res.rr.com", "62.140.132.94", "62.140.132.19", "50.84.151.157", "67.164.32.244",
@@ -193,9 +184,9 @@ exports.commands = {
 				user.ban();
 			}
 		}
-	},
+	}
 
-	chall: 'challenge',
+	/*chall: 'challenge',
 	challenge: function (target, room, user, connection) {
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
@@ -220,5 +211,5 @@ exports.commands = {
 		user.prepBattle(target, 'challenge', connection, function (result) {
 			if (result) user.makeChallenge(targetUser, target);
 		});
-	}
+	}*/
 };
