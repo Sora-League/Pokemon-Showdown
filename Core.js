@@ -69,10 +69,10 @@ let Core = {
 	write: function (fileName, key, value, options) {
 		//File SHOULD be a .JSON file
 		fileName = 'storage-files/' + fileName + '.json';
-		let file = fs.existsSync(fileName) ? JSON.parse(fs.readFileSync(fileName)) : {}
+		let file = fs.existsSync(fileName) ? JSON.parse(fs.readFileSync(fileName)) : {};
 		if (options === '+') file[key] += value;
 		else if (options === '-') file[key] -= value;
-		else file[key] -= value;
+		else file[key] = value;
 		fs.writeFileSync(fileName, JSON.stringify(file, null, 1));
 	},
 	read: function (fileName, key) {
