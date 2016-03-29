@@ -262,6 +262,22 @@
   "flannery": "<img src=\"http://i.imgur.com/0ScjBhf.png\" title=\"Flannery Badge: 10 Badge Defends\">"
  },
  "soraonyxeagle": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "staravia": "<img src=\"http://i.imgur.com/2UmjiLt.png\" title=\"Staravia Badge: Two Years on Sora\">",
   "brandon": "<img src=\"http://i.imgur.com/875rXde.png\" title=\"Brandon Badge: 5 Symbol Defends\">"
+ },
+ "sorajames357": {
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">"
+ },
+ "neithcass": {
+  "parasect": "<img src=\"http://oi61.tinypic.com/2nkoyyu.jpg\" title=\"Parasect: Founder of Sora\">",
+  "starly": "<img src=\"http://i.imgur.com/zaLhq1k.png\" title=\"Starly: One Year on Sora\">",
+  "staravia": "<img src=\"http://i.imgur.com/2UmjiLt.png\" title=\"Staravia Badge: Two Years on Sora\">",
+  "gymrank": "<img src=\"http://i.imgur.com/ELFPzW8.png\" title = \"Achieved Gym Leader Status\">",
+  "frontierrank": "<img src=\"http://i.imgur.com/7jbhEJC.png\" title=\"Achieved Frontier Status\">",
+  "e4rank": "<img src=\"http://i.imgur.com/QtECCD9.png\" title = \"Achieved Elite 4 Status\">"
  }
 }
