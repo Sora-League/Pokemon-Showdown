@@ -463,14 +463,14 @@ exports.commands = {
 	},
 
 	
-	james357: 'steel',
+	ensnare: 'steel',
 	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>James357</b>∆<br />' +
-			'<i>"Losing is a part of winning, as when you lose, you gain knowledge,and with knowledge, you\'re bound to succeed"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Ensnare</b>∆<br />' +
+			'<i>"Hard labour for more steel."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Mega-Scizor <br />' +
-			seen('sorajames357') + getBadges('sorajames357'));
+			'<b>Ace:</b> Ferrothorn <br />' +
+			seen('soraensnare') + getBadges('soraensnare'));
 
 	},
 
