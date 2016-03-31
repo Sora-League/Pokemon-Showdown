@@ -435,13 +435,13 @@ exports.commands = {
 		'<b>Ace:</b> Lopunny<br />' + seen('sorabigo') + getBadges('sorabigo'));
     },
 
-	poison: 'psycho',   
+	  
 	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Psycho</b>∆<br />' +
-			'<i>"Conventions are like illnesses. You don\'t fight them, you break them."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />' + seen('sorapsycho') + getBadges('sorapsycho'));
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 	
         leaf: 'psychic',
