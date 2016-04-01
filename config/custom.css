@@ -1,6 +1,6 @@
 /*Light blue- #b2e1ff,#97d5fc Normal blue- #007fff Dark Blue:#003972*/
 .header {
-	background-image:url("http://i59.tinypic.com/w19xfk.jpg");
+	background-image:url("http://i.imgur.com/zD7NEz0.png");
 	background-repeat:no-repeat
 }
 body {
@@ -53,7 +53,7 @@ li#lobby-userlist-user-, li#lobby-userlist-user- {
 }
 
 .chat-log {
-	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
+	background:url("http://i.imgur.com/eEVsELe.png") no-repeat scroll center;
 }
 a.button.cur, a.button.cur:hover {
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353");
