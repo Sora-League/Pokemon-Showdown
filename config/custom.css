@@ -1,3 +1,12 @@
+#flipdiv {
+    width: 100%;
+    height: 100%;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 /*Light blue- #b2e1ff,#97d5fc Normal blue- #007fff Dark Blue:#003972*/
 .header {
 	background-image:url("http://i59.tinypic.com/w19xfk.jpg");
