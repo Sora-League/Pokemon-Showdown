@@ -356,7 +356,7 @@ exports.commands = {
        arjun: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />'+
 			'<i>"Everyone has a plan until they get punched in their face."</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
 			'<b>Ace:</b> Mega Medicham<br />' + seen('soraarjunb') + getBadges('soraarjunb')
