@@ -4,7 +4,7 @@
 * Others may braodcast this at any time to remind the room of such.
 * Only works in a room with the id "thehappyplace"
 * Credits: panpawn, TalkTakesTime, Morfent, and sirDonovan
-*/
+*
 
 'use strict';
 
@@ -44,3 +44,4 @@ exports.commands = {
 		"/qotd [quote] - Set the Inspirational Quote of the Day. Requires: # & ~",
 	],
 };
+*/
