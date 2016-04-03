@@ -190,7 +190,6 @@ class CommandContext {
 				this.errorReply("You can't broadcast this because it was just broadcast.");
 				return false;
 			}
-<<<<<<< HEAD
 			if (!checkOnly) {
 				if (this.user.isSpamroomed()) {
 					this.sendReply('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
@@ -199,8 +198,6 @@ class CommandContext {
 
 				this.room.lastBroadcast = normalized;
 				this.room.lastBroadcastTime = Date.now();
-=======
->>>>>>> Zarel/master
 
 			this.message = message;
 			this.broadcastMessage = broadcastMessage;
