@@ -26,7 +26,7 @@ exports.commands = {
 
 	tourelo: 'tourladder',
 	tourladder: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let self = this;
 		let tourLadder = Ladders('tournaments');
 		if (!target || !target.trim()) {
@@ -311,7 +311,7 @@ exports.commands = {
 	
 	seen: 'lastseen',
 	lastseen: function (target, room, user, connection, cmd) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		target = Users.getExact(target) ? Users.getExact(target).name : target;
 		if (!toId(target) || toId(target) === user.userid) target = user.name;
 		let seen = Core.getLastSeen(toId(target));
@@ -324,7 +324,7 @@ exports.commands = {
 	regdate: function (target, room, user, connection, cmd) {
 		if (!toId(target)) return this.sendReply("'" + target + "' is not a valid username.");
 		if (!toId(target).length > 18) return this.sendReply('Usernames can only contain 18 characters at the max.');
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 
 		let path = "http://pokemonshowdown.com/users/" + toId(target);
 		let self = this;
@@ -345,7 +345,7 @@ exports.commands = {
 	u: 'urbandefine',
 	ud: 'urbandefine',
 	urbandefine: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (room.id === 'lobby' && this.broadcasting) return this.sendReply('You cannot broadcast this command in the lobby.')
 		if (!target) return this.parse('/help urbandefine')
 		if (target > 50) return this.sendReply('Phrase can not be longer than 50 characters.');
@@ -386,7 +386,7 @@ exports.commands = {
 
 	def: 'define',
 	define: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help define');
 		target = toId(target);
 		if (target > 50) return this.sendReply('Word can not be longer than 50 characters.');
@@ -420,7 +420,7 @@ exports.commands = {
 	},
 
 	sprite: function (target, room, user, connection, cmd) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!toId(target)) return this.sendReply('/sprite [Pokémon] - Allows you to view the sprite of a Pokémon');
 		target = target.toLowerCase().split(',');
 		let alt = '';

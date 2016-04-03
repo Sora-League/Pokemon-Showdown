@@ -17,50 +17,50 @@ exports.commands = {
 	},
 	
 	site: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is The Sora League Website:<br />' +
 			'- <a href="http://sora.cu.cc/index.html">Sora League Site</a>'
 		);
 	},
 
-	incweather: function (target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Here is a detailed explanation of the format Inclement Weather:<br />' +
-			'- <a href="http://sora.cu.cc/format.html">Inclement Weather</a>'
-		);
-	},
-
 	priomon: 'priomons',
 	priomons: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Priomons:<br />' +
 			'- <a href="http://sora.cu.cc/format.html">Priomons</a>'
 		);
 	},
 
+	incweather: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('Here is a detailed explanation of the format Inclement Weather:<br />' +
+			'- <a href="http://sora.cu.cc/format.html">Inclement Weather</a>'
+		);
+	},
+
 	pokemonsandbox: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Pokemon Sandbox:<br />' +
 			'- <a href=http://sora.cu.cc/format.html">Pokemon Sandbox</a>'
 		);
 	},
 
 	championschallenge: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Champion\'s Challenge:<br />' +
 			'- <a href="http://sora.cu.cc/format.html">Champion\'s Challenge</a>'
 		);
 	},
 
 	ipl: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a link to the International Pokemon League Tournament (IPL):<br />' +
 			'- <a href="http://sorapremierleague.weebly.com/">IPL Tournament Web Site</a><br />' +
 			'</div>');
 	},
 	
 	gymleaders: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Gym Leaders:<br />' +
 			'- <a href="http://sora.cu.cc/leaders.html">Sora League Gym Leaders</a>'
 		);
@@ -68,7 +68,7 @@ exports.commands = {
 
 	frontier: 'battlefrontier',
 	battlefrontier: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<b>Sora Battle Frontier</b><br />' +
 			'<i>"Welcome to the Sora Battle Frontier! Challenge us if you Dare."</i> <br />' +
 			'<b>Requirements:</b> 8 Badges<br />' +
@@ -86,7 +86,7 @@ exports.commands = {
 
 	elitefour: 'e4',
 	e4: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Elite Four:<br />' +
 			'- <a href="http://sora.cu.cc/elite.html">Sora League Elite Four</a>'
 		);
@@ -94,7 +94,7 @@ exports.commands = {
 
 	champions: 'champions',
 	champions: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Champions:<br />' +
 			'- <a href="http://sora.cu.cc/champion.html">Sora League Champions</a>'
 		);
@@ -102,7 +102,7 @@ exports.commands = {
 
 	quoteoftheday: 'qotd',
 	qotd: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<b>Quote of the Day:</b><br />' +
 			'This command will display genius quotes until another quote tops it!<br />' +
 			'"I\'m better as an E4." - Matt 2014<br />' +
@@ -167,7 +167,7 @@ exports.commands = {
 	},
 
 	donate: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
 			'<a href = "https://www.paypal.com/au/cgi-bin/webscr?cmd=_flow&SESSION=txF-f1lkPkrs1RLQ2TfUzeIXDI176kExf_PLDSQyoUynCjAHc5EIdQTJgPO&dispatch=5885d80a13c0db1f8e263663d3faee8d5c97cbf3d75cb63effe5661cdf3adb6d"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
 			'Remember to mention your username when you leave a note with your donation, or we won\'t know who donated. To all of those who\'ve donated or plan on donating, thank you! We really appreciate it!</center></font><br><br>' +

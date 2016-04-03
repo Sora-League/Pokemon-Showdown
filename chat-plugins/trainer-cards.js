@@ -18,7 +18,7 @@ exports.commands = {
 	staff: 'leaguemembers',
 	attendance: 'leaguemembers',
 	leaguemembers: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'];
 		for (var i = 0; i < list.length; i++) {
@@ -56,7 +56,7 @@ exports.commands = {
 
 
 	bart: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b><font color = 07e1ed>∆Champion Bart∆</font></b></center></a><br />' +
 			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\'"</i></center> <br />' +
 			'<b>Ace:</b> Pawniard<br />' +
@@ -68,7 +68,7 @@ exports.commands = {
 
 	revan: 'noah',
 	noah: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b><font color = 430747>∆Champion Revan∆</font></b></center></a><br />' +
 			'<center><i>"Need a Champion? I Noah guy."</i></center> <br />' +
 			'<center><img src="http://sprites.pokecheck.org/i/134.gif"><img src="http://i.imgur.com/iu4Njdf.png"></center><br />' +
@@ -79,7 +79,7 @@ exports.commands = {
 	},
 
 	onyx: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><font face = forte><font color =  b27300><font size= 5><center>∆OnyxEagle∆</center></font></a><br />' +
 			'<center><i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i></center> <br />' +
 			'<b>Skilled in:</b> Rock types/ Ubers, Random Battle and OU to a certain degree.<br />' +
@@ -91,7 +91,7 @@ exports.commands = {
 
 	risu: 'ninjarisu',
 	ninjarisu: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b>∆Frontierhead Ninjarisu∆</b></center></a><br />' +
 			'<i>"Respect your Elders"</i> <br />' +
 			'<b>Ace:</b> Zapdos<br />' +
@@ -111,7 +111,7 @@ exports.commands = {
 
 
 	terrors: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
 			'<i>"The tips have been scaled!"</i> <br />' +
 			'<b>Type: <font color = A64000>Ground</font></b><br />' +
@@ -123,7 +123,7 @@ exports.commands = {
 	},
 	
 	tempest: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Tempest</b>∆<br />' +
 			'<i>"oh"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
@@ -135,7 +135,7 @@ exports.commands = {
 	},
 	
 	nightanglet: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Nightanglet</b>∆<br />' +
 			'<i>"What\'s a quote?"</i> <br />' +
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
@@ -147,7 +147,7 @@ exports.commands = {
 	},
 	
 	whitefang: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>WhiteFang</b>∆<br />' +
 			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
@@ -157,7 +157,7 @@ exports.commands = {
 			
 	},
 	/*sube4: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
 		'Sub E4 <b>???</b> <br />'+
 		'<b>Type:</b> <b><font color = 006b0a>???</font></b><br />'+
@@ -171,7 +171,7 @@ exports.commands = {
 	/////////////
 	
 	abadon: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><font size = 3><b>∆Coach Abadon∆<b></font><br>' +
 			'<i>"SWIGGITY SWOOTY I\'M COMING FOR THAT BOOTY"</i><br><br>' +
 			'<b>Achievements:</b>' +
@@ -186,7 +186,7 @@ exports.commands = {
 
 
 	meows: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Meows</b>∆<br />' +
 			'<i>"Abs=Win"</i> <br />' +
 			'<b>Symbol: </b>Patience <br />' +
@@ -197,7 +197,7 @@ exports.commands = {
 	},
 
        	akash: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Akash</b>∆<br />' +
 			'<i>"Don\'t be afraid of the change, adapt according to it."</i> <br />' +
 			'<b>Symbol: </b>Adaptability <br />' +
@@ -208,7 +208,7 @@ exports.commands = {
 
 	silver: "siiilver",
 	siiilver: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		var colorify = function (text) {
 			var colors = ['red', 'orange', 'yellow', 'lime', '#007fff', 'cyan', '#9800ff', 'violet'], set = [];
 			for (var i = 0, j = 0; i < text.length; i++) {
@@ -239,7 +239,7 @@ exports.commands = {
 	},
 
 	heat: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Heat</b>∆<br />' +
 			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
 			'<b>Symbol:</b> SumTingWong<br />' +
@@ -252,7 +252,7 @@ exports.commands = {
 
 
 	zachary: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Elite Frontier <b>Zachary</b>∆<br/>' +
 			'<i>"Can you do a few things at the same time?"</i><br/>' +
 			'<b>Symbol:</b> Multitasking<br/>' +
@@ -266,7 +266,7 @@ exports.commands = {
 	},
 	
 	onyxeagle: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>OnyxEagle</b>∆<br />' +
 			'<i>"... ..."</i> <br />' +
 			'<b>Symbol:</b> Mystery <br />' +
@@ -280,7 +280,7 @@ exports.commands = {
 	},
 
 	/*subfrontier: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center>Sub Frontier Position: <b><font color = FF0000>Offline</font></b></center><br />'+
 		'Sub Frontier <b>???</b> <br />'+
 		'<b>Symbol:</b> ???<br />'+
@@ -294,7 +294,7 @@ exports.commands = {
 
 	doku: 'bug',
 	bug: function(target, room, user) {
-	        if (!this.canBroadcast()) return;
+	        if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />'+
 			  '<i>"Holy crap, why is it 5\'3"! That\'s not normal! Well, neither am I."</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
@@ -303,7 +303,7 @@ exports.commands = {
 
 	noel: 'dark',
 	dark: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Noel</b>∆<br />' +
 			'<i>"Caught in the wind of ill intentions, the nighthawk soars."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
@@ -312,7 +312,7 @@ exports.commands = {
 
 	memelord: 'dragon',
 	dragon: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Memelord</b>∆<br />' +
 			'<i>"So comes snow after fire, and even dragons have their endings."</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
@@ -321,7 +321,7 @@ exports.commands = {
 
 	
 	electric: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
@@ -330,7 +330,7 @@ exports.commands = {
 
         youmaton: 'fairy',
 	fairy: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Youmaton</b>∆<br />'+
 		        'Leader Ranking: <font color = 00FF00><b>3rd</font></b> <br />' +
 			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
@@ -340,7 +340,7 @@ exports.commands = {
 
 	mark: 'ground',
 	ground: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br>' +
 			'<i>"When I said don\'t use drugs....I MEANT IT. Keep it up and have fun."</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
@@ -355,7 +355,7 @@ exports.commands = {
 
        arjun: 'fighting',
 	fighting: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />'+
 			'<i>"Everyone has a plan until they get punched in their face."</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
@@ -365,7 +365,7 @@ exports.commands = {
 
 	fire: 'waffles',
     	waffles: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
 	              '<i>"Don\'t waffle out of the situation."</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
@@ -376,7 +376,7 @@ exports.commands = {
 
 	flying: 'float',
 	float: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
 			'<i>"flap... flap... flap... bird type...?"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
@@ -389,7 +389,7 @@ exports.commands = {
     
         blade: 'ghost',
 	ghost: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
 			'<i>"Be Stronger Than Your Strongest Excuse"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
@@ -405,7 +405,7 @@ exports.commands = {
 
     mitsuka: 'grass',	
     grass: function(target, room, user) {
-	if (!this.canBroadcast()) return;
+	if (!this.runBroadcast()) return;
 	this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />'+
 			'<i>"Storm of leaf and Draining root!"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
@@ -415,7 +415,7 @@ exports.commands = {
 
 	quizzy: 'ice',
 	ice: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Quizzy</b>∆<br />' +
 			'<i>"Don\'t mess with the Ice King unless you want to be frozen over."</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
@@ -427,7 +427,7 @@ exports.commands = {
 
 	normal: 'bigo',
         bigo: function(target, room, user) {
-	if (!this.canBroadcast()) return;
+	if (!this.runBroadcast()) return;
 	this.sendReplyBox('∆Gym Ldr <b>Bigo</b>∆<br />'+
 	        'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
 		'<i>"Don\'t underestimate the normal, cause being \'normal\'  doesn\'t mean to be weak"</i> <br />'+
@@ -437,7 +437,7 @@ exports.commands = {
 
 	  
 	poison: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
@@ -446,7 +446,7 @@ exports.commands = {
 	
         leaf: 'psychic',
 	psychic: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
 			'<i>"Let\'s play mind games."</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
@@ -455,7 +455,7 @@ exports.commands = {
 
 	
 	rock: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
@@ -465,7 +465,7 @@ exports.commands = {
 	
 	ensnare: 'steel',
 	steel: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Ensnare</b>∆<br />' +
 			'<i>"Hard labour for more steel."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
@@ -476,7 +476,7 @@ exports.commands = {
 
         aros: 'water',
 	water: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />' +
 			'<i>"Calm and collected like the waves, harsh and brutal like a Tsunami, that is what I am."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
@@ -490,7 +490,7 @@ exports.commands = {
 	
 	aboottothehead: 'abtth',
 	abtth: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><b><font size="4" color="03b206">ABootToTheHead</font></b></center><br>' +
 			'<center><i>"Art is a harlot, and I\'m her sassy urban friend."</i></center><br /><br />' +
 			'<b>Ace: </b>Scizor and Whimsicott<br />' +
@@ -507,7 +507,7 @@ exports.commands = {
 
 	sorarani: 'arani',
 	arani: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><b><font color = "#331D81" size = 3>∆Arani∆</font></b><br>' + 
 			'<i>"Rain teams are old school? Well... screw you."</i><br><br>' +
 			'<b>Skilled in:</b> Gen 5 OU - was consistently in the Top 10 on the global OU ladder.<br>' +
@@ -518,7 +518,7 @@ exports.commands = {
 	},
 	
 	arjunb: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><input type="image" src="http://i.imgur.com/bnCFCm5.png"><div align="center"><br />' +
 			'<div align="center">"<i>Fall seven times, stand up eight. That\'s what I do</i>"</div><br />' +
 			'<b>Favorite Types:</b> Fighting, Dark and Poison(with crobat)<br />' +
@@ -529,13 +529,13 @@ exports.commands = {
 	},
 
 	ascher: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><b><font size="4" color="86e755">Ascher</font></b></center><br />' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/shroomish.gif"></center> <br />' +getBadges('frontierasch'));
 	},
 
 	azh: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<div style = "padding: 8px; color: white; background: #000 url(http://www.pageresource.com/wallpapers/wallpaper/pokemon_67267.jpg) no-repeat scroll bottom; background-size: 100%;">' +
 			'<center><b><font size= 5>∆ArthurZH∆</font></b></center><br />'+
 			 '<center><i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i></center> <br />'+
@@ -549,7 +549,7 @@ exports.commands = {
 	},
 
 	bamdee: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><span style = "font-size: 15pt; color: #ff00b6;"><b>Bamdee</b></span></center><br>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/ditto.gif"></center><br>' +
 			'<audio controls src = "https://dl.pushbulletusercontent.com/xFgUAMGfNsNhld0TC7Bf9nehzEiVRkGo/sonic.mp3" style = "border: 2px solid pink; background: black; width: 100%;"></audio><br>' +
@@ -558,7 +558,7 @@ exports.commands = {
 	},
 	
 	darkus: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><span style = "font-size: 11pt; font-weight: bold; color: ' + Core.color('soradarkus') + '">∆SoraDarkus∆</span><br>' +
 		'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br><br>' +
 		'<b>Aces:</b> Bisharp and Crawdaunt<br>' +
@@ -572,7 +572,7 @@ exports.commands = {
 	},
 
 	edgy: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b><font color = 00CCFF>Edgy</font></b></center></a><br />' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/gardevoir-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/lopunny-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/charizard-mega-x.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/lopunny-mega.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gardevoir-mega.gif"></center> <br />' +
 			'<center><i>"How can you face your problem, if the problem is your face?"</i></center><br />' +
@@ -581,7 +581,7 @@ exports.commands = {
 	},
 
 	gasp: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Trainer <b>gasp</b><br />' +
 			'<i>"Lights out."</i> <br />' +
 			'<b>Ace:</b> Mega Gengar<br />' +
@@ -590,7 +590,7 @@ exports.commands = {
 			'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif"><br />' +getBadges('gasp'));
 	},
 	leafy: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply('|html|<div style = "padding: 5px; text-align: center; background-image: url(http://i1171.photobucket.com/albums/r545/Brahak/maple_zpsg5sgjduk.jpg) no-repeat scroll bottom; background-size: cover;">' +
 			'<font size = 4 color = "white"><b>∆Leaf∆</b></font><br><br>' + 
 			'<table align = "center" border = "0px" style = "color: #707c71">' + 
@@ -609,7 +609,7 @@ exports.commands = {
 		);
 	},
 	meowsofsora: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><b><font size = 4 color = "#55dbe8">MeowsofSora</font></b><br />'+
 		'<i>"I might be a bitch, but I\'m definitely not a pussy"</i><br />'+
 		'<i>"Abs=Win"</i><br /><br />'+
@@ -623,7 +623,7 @@ exports.commands = {
 	},
 
 	jeratt: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply('|html|<table style = "box-shadow: 2px 2px 10px black; text-shadow: 0px 0px 10px; padding: 7px; width: 100%; background: radial-gradient(circle, black, #000d70, black, #000d70, black, #000d70); color: #8CC6FB;">' +
 			'<tr><td colspan = 2 style = "padding-bottom: 7px"><center><b style = "font-size: 15pt">∆Jerattata∆</b><br>' +
 			'<i>"I am not a man who writes, but a man who is written about."<br> - A man of Action</i><br>' +
@@ -648,7 +648,7 @@ exports.commands = {
 	},
 
 	night: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><i><font color="blue"><h1>Nightanglet</h1></font></center><br>' +
 			'<font color = "blue"><b>Ace: Infernape(CR Ace:Rhydon)<br />' +
 			'Custom Rules:<br />' +
@@ -659,7 +659,7 @@ exports.commands = {
 	},
 	
 	swearwip: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply('|html|<table style = "color: white; width: 100%; padding: 0px 10px 10px 10px; background: linear-gradient(45deg, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654, #67108c, #3c0654);">' +
 			'<tr><td colspan = "2"><center><br><font size = 3 style = "margin-top: 10px; font-weight: bold; text-shadow: 3px 3px 10px black;">∆Srewop∆</font><br>' +
 			'<i style = "text-shadow: 3px 3px 10px black;">"I think you\'re in Gotham, \'cause the bat is coming for you..."</i><br><br></td></tr>' + 
@@ -682,7 +682,7 @@ exports.commands = {
 	},
 
 	terror2: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply('|html|<div style = "padding: 7px; border: 2px solid black; color: white; background: radial-gradient(circle, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed, #1919c1, #2143ed);"><center><b><font size="4" color="82127a">Terror</font></b></center><br>' +
 			'<center><i>"Looking for dank memes"</i> </center><br /><br />' +
 			'<b>Ace: </b>Mega Sharpedo/Garchomp<br />' +
@@ -699,7 +699,7 @@ exports.commands = {
 	
 	
 	showtier: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><img src="http://i.imgur.com/DI9T4Y6.png" width=550></center>');
 	},
 
@@ -707,21 +707,21 @@ exports.commands = {
 	//Music Cards
 	//////////////
 	feelingit: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<div class="infobox" style="cursor: url(&quot;http://i.imgur.com/c4qM0iM.gif&quot;) , auto; border: 0px ; background-image: url(&quot;http://files.gamebanana.com/img/ss/wips/4ffc9f6bed5e2.jpg&quot;) ; background-size: cover"><br \>' +
 			'<br \><center><b><font color=#FF9900 size=2>You Will Know Our Names</b></font><font color=#FF9900 size=2> \- <i>Xenoblade Chronicles</i></font><br \>' +
 			'<audio src="http://www.ssbwiki.com/images/f/f5/Victory%21_%28Shulk%29.ogg" controls="" style="width: 100% ; border: 2px solid #00CC00 ; background-color: #00000a" target="_blank"></audio></center><br \><br \>');
 	},
 
 	easymoney: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<div style="background-image: url(&quot;http://i.imgur.com/orlVvMg.jpg&quot;) ; background-size: cover" target="_blank"><br \>' +
 			'<br \><center><font size=3 color=#FF9900><b>Easy Money</b> - <i>Bizzaro Flame</i></font><br \>' +
 			'<audio src="https://dl.pushbulletusercontent.com/qrAveUFTyNQlmvq3HEtlqSmBiuQeUaaQ/Easy%20Money.mp3" controls="" loop style="width: 100% ; border: 2px solid #00CC00 ; background-color: #00000a" target="_blank"></audio></center><br \><br \><br /><br /><br /><br /><br /><br /><br /><br />');
 	},
 
 	afraud: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<div style="background-image: url(&quot;http://i.imgur.com/jBfZq5A.jpg&quot;) ; background-size: cover"><br \><br /><br /><br /><br /><br /><br /><br /><br />' +
 			'<br \><center><font size=3 color=#00FF40><b>A Fraud</b> - <i>Izzaro Flame</i></font><br \>' +
 			'<audio src="https://dl.pushbulletusercontent.com/Pl3dDtxvFMbdAn6IZQHAF6gxFluLoAhA/A%20Fraud%20-%20%20A%20Big%20Fraud.mp3" controls="" loop style="width: 100% ; border: 2px solid #58FAF4 ; background-color: #00000a" target="_blank"></audio></center><br \><br \>');
@@ -729,35 +729,35 @@ exports.commands = {
 	
 	getrekt: 'rekt',
 	rekt: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><img src = "https://lh3.googleusercontent.com/-6BDWwnjS9Cs/VajnpfmQumI/AAAAAAAAD7s/u1hZqlM09s0/w500-h200/img-3516109-1-Mc5cCal.gif">' +
 			'<audio autoplay controls style = "border: 2px solid red; background: black; width: 100%" src = "http://www.myinstants.com/media/sounds/wombo-combo_2.mp3">' +
 			'</audio></center>');
 	},
 	
 	nojohns: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<div style = "background: url(http://i.imgur.com/dTD1J7o.gif); text-align: center; height: 299px; background-size: cover;"><span style = "color: red; font-weight: bold; font-size: 13pt;">No Johns</span><br>' +
 			'<audio controls src = "http://s0.vocaroo.com/media/download_temp/Vocaroo_s0JSb5SljS5I.mp3" style = "border: 1px solid yellow; border-radius: 0px; background: black; width: 100%"></audio>'
 		);
 	},
 
 	lyin: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReply('|html|<div class = "infobox" style = "background: url(https://thoughtcatalog.files.wordpress.com/2015/09/screen-shot-2015-09-03-at-8-40-19-pm.png?w=786&h=600) no-repeat 0px -30px; background-size: 100%; height: 300px;">' +
 			'<audio controls src = "http://b.sc.egghd.com/media/b0/a2/b0a2bf0d5e10ef92fcd8726640fabdb9.mp3?id=223206908&key=eadd7f5398105057d30329e22c595d27e4ce8794" style = "float: right; margin-top: 100px; margin-right: 5px; background: black; border: 2px solid red;"></div>'
 		);
 	},
 
 	lyinfull: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><span style = "font-size: 12pt; color: red;"><i>Lyin\'</i></span><br>' +
 			'<video controls src = "https://dl.pushbulletusercontent.com/PlrszI1cm30CsAtEGVfnefB2w9HVsyh4/lyin.mp4#t=56" style = "width: 100%"></center>'
 		);
 	},
 
 	ichibannotakaramono: function (target, room, user) {
-        	if (!this.canBroadcast()) return;
+        	if (!this.runBroadcast()) return;
         	this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://img2.wikia.nocookie.net/__cb20101231031301/angelbeats/images/f/f5/EP10-Yui-and-Hinata-500x281.png&quot;) ; background-size: cover" target="_blank">'+
         	                  '<center><font size=2 color=#0066FF><b>Original Version</b> - <i>Karuta</i></font><br \><audio src="https://dl.pushbulletusercontent.com/NBtI15PWK0EQDXkB8YNqKe6YZYWpLHaO/19%20-%20Ichiban%20no%20Takaramono%20%28Original%20Version%29.mp3" controls="" target="_blank"></audio><br /><br /><br /><br /><br /><br /><br /><br />'+
         	                  '<br \></center><b><font size=2 color=#FF0000>  一番の宝物</b></font><font size=2 color=#FF0000> \- <i>Angel Beats</i></font><br /><font size=1>Ichiban no Takaramono</font><center><br \><br \><br \><br \><br \><br \><font size=2 color=#0099FF><b>Yui\'s Version</b> - <i>Girls Dead Monster, feat. LiSA.</i></font><audio src="https://dl.pushbulletusercontent.com/5CLffau3dUgPCVIPwKyIQUjblB4NgQ5G/09%20-%20Ichiban%20no%20Takaramono%20%20%28Yui%20ver.%29.mp3" controls="" target="_blank"></audio></center>');
@@ -769,7 +769,7 @@ exports.commands = {
 
 	incweather: 'incweather',
 	incweather: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a detailed explanation of the format Inclement Weather:<br />' +
 			'- <a href="http://soraleague.weebly.com/inclement-weather.html">Inclement Weather</a><br />' +
 			'</div>');
@@ -777,77 +777,77 @@ exports.commands = {
 
 	nervepulse: 'priomonsnervepulse',
 	priomonsnervepulse: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi58.tinypic.com/ayw0aq.jpg"> <br />');
 
 	},
 
 	tremorshock: 'priomonstremorshock',
 	priomonstremorshock: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi58.tinypic.com/14u8e2s.jpg"> <br />');
 
 	},
 
 	fairywind: 'priomonsfairywind',
 	priomonsfairywind: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi60.tinypic.com/33z7ndf.jpg"> <br />');
 
 	},
 
 	twineedle: 'priomonstwineedle',
 	priomonstwineedle: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi58.tinypic.com/9h6i5z.jpg"> <br />');
 
 	},
 
 	dracocrash: 'priomonsdracocrash',
 	priomonsdracocrash: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi59.tinypic.com/dyvvw2.jpg"> <br />');
 
 	},
 
 	flameshot: 'priomonsflameshot',
 	priomonsflameshot: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi62.tinypic.com/29m6j5e.jpg"> <br />');
 
 	},
 
 	venomstrike: 'priomonsvenomstrike',
 	priomonsvenomstrike: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi60.tinypic.com/2wf761w.jpg"> <br />');
 
 	},
 
 	divingcharge: 'priomonsdivingcharge',
 	priomonsdivingcharge: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi58.tinypic.com/ezj4pl.jpg"> <br />');
 
 	},
 
 	stonespine: 'priomonsstonespine',
 	priomonsstonespine: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi62.tinypic.com/2moy06e.jpg"> <br />');
 
 	},
 
 	sapblast: 'priomonssapblast',
 	priomonssapblast: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi62.tinypic.com/23rk9oz.jpg"> <br />');
 
 	},
 
 	kineticforce: 'priomonskineticforce',
 	priomonskineticforce: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="http://oi60.tinypic.com/1ptn36.jpg"> <br />');
 	},
 
@@ -857,7 +857,7 @@ exports.commands = {
 
 	leaderranks: 'ranks',
 	ranks: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Listed here are the Top 3 Leaders in The Sora League based on performance in our Monthly Promotional Tournament! Please keep in mind, the number of ranked Leaders may change month to month and the ranking methodology may be changed in the future.<br />' +
 			'-<b>1st <font color= ffa5d5>Bigo</font></b> (Normal)<br />' +
 			'-<b>2nd <font color= aa00ff>Zoro</font></b></b> (Poison)<br />' +
@@ -866,7 +866,7 @@ exports.commands = {
 	},
 
 	donate: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
 			'<a href = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q3B5Z6STF3EA4&lc=AU&item_name=Sora&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
 			'Remember to mention your username when you leave a note with your donation, or we won\'t know who donated. To all of those who\'ve donated or plan on donating, thank you! We really appreciate it!</center></font><br><br>' +
@@ -881,7 +881,7 @@ exports.commands = {
 
 	ateam: 'adminteam',
 	adminteam: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><center><b><font color = 075ff7 size=3>The Admin Team</font></b></center></a><br />' +
 			'FAQ <br />' +
 			'<b>Who are we?</b> The Admin team are a group of senior members who make most of the major league decisions and organize most major league events. <br />' +

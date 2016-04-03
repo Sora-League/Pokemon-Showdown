@@ -151,7 +151,7 @@ var cmds = {
 		var help = 'Click on a tile to select it. After selecting a tile, clicking on another tile will exchange that tile with the selected tile. ' +
 			'Selected tiles will have a red border. You can deselect the selected tile by clicking on it again. Rearrange the tiles to form the correct image!';
 		if (TilePuzzles.has(user)) return TilePuzzles.get(user).update(help);
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><b>Tile Puzzle</b><br><br>' + help + '<br><button name = "send" value = "/tilepuzzle"><b>Play Now!</b></button>');
 	},
 

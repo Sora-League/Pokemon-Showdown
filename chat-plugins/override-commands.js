@@ -107,9 +107,9 @@ exports.commands = {
 	},
 
 	uptime: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let uptime = process.uptime(), uptimeText;
-		let getUptime = function (uptime) {
+		let getUptime = (uptime) => {
 			if (uptime < 24 * 60 * 60) return Tools.toDurationString(uptime * 1000);
 			let uptimeDays = Math.floor(uptime / (24 * 60 * 60));
 			let uptimeText = uptimeDays + " " + (uptimeDays === 1 ? "day" : "days");
@@ -184,9 +184,9 @@ exports.commands = {
 				user.ban();
 			}
 		}
-	}
+	},
 
-	/*chall: 'challenge',
+	chall: 'challenge',
 	challenge: function (target, room, user, connection) {
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
@@ -195,6 +195,9 @@ exports.commands = {
 		}
 		if (targetUser.blockChallenges && !user.can('bypassblocks', targetUser)) {
 			return this.popupReply("The user '" + this.targetUsername + "' is not accepting challenges right now.");
+		}
+		if (user.challengeTo) {
+			return this.popupReply("You're already challenging '" + user.challengeTo.to + "'. Cancel that challenge before challenging someone else.");
 		}
 		if (Config.pmmodchat) {
 			let userGroup = user.group;
@@ -208,8 +211,8 @@ exports.commands = {
 			if (!user.can('warn') && !targetUser.can('lock')) return this.popupReply('Only Gym Leaders or higher can be challenged in this format.');
 			else if (user.can('warn') && targetUser.can('lock')) return this.popupReply('Only challengers can be challenged in this format.');
 		}
-		user.prepBattle(target, 'challenge', connection, function (result) {
+		user.prepBattle(Tools.getFormat(target).id, 'challenge', connection).then(result => {
 			if (result) user.makeChallenge(targetUser, target);
 		});
-	}*/
+	}
 };

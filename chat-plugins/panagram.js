@@ -91,7 +91,7 @@ var Panagram = (function () {
 var cmds = {
 	rules: 'help',
 	help: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<b>Panagram Commands</b><br>' +
 			'<li>/panagram <em>Category</em> - Starts a game of panagram that follows the specified category. Valid categories include <i>Pokemon, Items, Abilities</i> and <i>moves</i>. Not specifying a category starts a pokemon panagram by default. Requires + or higher to use.' +
 			'<li>/panagram end <small>or</small> /endp - Ends a game of panagram. Requires + or higher to use.<br>' +
@@ -208,7 +208,7 @@ exports.commands = {
 	panagramrules: 'panagramhelp',
 	phelp: 'panagramhelp',
 	panagramhelp: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><b>Panagram Help</b><br>' +
 			'<i style = "color:gray">By SilverTactic (Siiilver) and panpawn</i></center><br>' +
 			'<code>/panagram [session number]</code> - Starts a game of Panagram in the room for [session number] games (Panagrams are just anagrams with Pokemon). Alternate forms and CAP Pokemon won\'t be selected. Requires + or higher.<br>' +
@@ -233,7 +233,7 @@ exports.commands = {
 	ph: 'panagramhint',
 	panagramhint: function(target, room, user) {
 		if (!pGames[room.id]) return this.errorReply("There is no game of panagram going on in this room.");
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 
 		this.sendReplyBox('Panagram Hint:<br>' + pGames[room.id].hint);
 	},

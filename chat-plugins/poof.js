@@ -12,7 +12,7 @@ function randomColor () {
 
 exports.commands = {
 	poofhelp: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('-/poof - Leaves a random message in the chat and disconnects the user from the server.<br>' +
 			'-/cpoof <em>Message</em> - Leaves a custom message in the chat and disconnects the user from the server. Requires %, @, # or ~<br>' +
 			'-/addpoof <em>Message</em> - Adds a poof message into the list of possible poofs. Adding "(user)" into a poof message replaces "(user)" with that user\'s name. Requires ~<br>' +

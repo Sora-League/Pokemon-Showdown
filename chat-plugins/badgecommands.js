@@ -45,7 +45,7 @@ let badgeList = {
 let comm = {
 	'': 'info',
 	info: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><center><b><font size= 4>Badges</b></font></center></a><br />' +
 			'<b>What are Badges:</b><br />' +
 			'Badges are prestigious achievements awarded on the user\'s badge case and might come with a buck reward.<br />' +
@@ -63,7 +63,7 @@ let comm = {
 	},
 
 	help: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<strong>Badge commands (Can only be used by Frontier Blade and ~):</strong><br />' +
 		'- /badge give or /givebadge <i>User</i>, <i>Badge Name</i> - Gives the specified badge to the specified user. <br />' +
 		'- /badge remove or /takebadge <i>User</i>, <i>Badge Name</i> - Removes the specified badge from the specified user. <br />' +
@@ -155,7 +155,7 @@ let comm = {
 	display: 'show', 
 	view: 'show',
 	show: function (target, room, user, connection, cmd) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!toId(target)) target = user.userid;
 		let file = Core.read('badges', toId(target));
 		target = Users.getExact(target) ? Users.getExact(target).name : target;

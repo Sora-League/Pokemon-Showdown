@@ -118,7 +118,7 @@ var cmds = {
 	'': 'rules',
 	commands: 'rules',
 	rules: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		return this.sendReplyBox('<b><center>Roulette rules and commands</center></font></b><br />' +
 			'-/startroul or /roul start - Starts a roulette game in the room. Must be ranked + or higher to use.<br />' +
 			'-/bet or /roul bet <i>Color</i> - Bets on a roulette color. Using this multiple times increases the number of times you\'ve bet on that color by 1. You require 1 buck per bet. Clicking on a different color changes the color you\'re betting on to the new color. <br />' +

@@ -41,7 +41,7 @@ exports.commands = {
 
 			switch (toId(command)) {
 				case 'help': 
-					if (!this.canBroadcast()) return;
+					if (!this.runBroadcast()) return;
 					this.sendReplyBox('<b>Music Box Commands :3</b><br><br>' +
 						'<li>/' + cmd + ' <em>User</em> - View\'s a user\'s music box.<br>' +
 						'<li>/' + cmd + ' add <em>Youtube link</em> - Adds a song into your music box.<br>' +
@@ -100,7 +100,7 @@ exports.commands = {
 				case 'css':
 					var box = musicboxes[user.userid];
 					if (!target || !target.trim()) {
-						if (!this.canBroadcast()) return;
+						if (!this.runBroadcast()) return;
 						if (toId(box.css)) return this.sendReplyBox('Your music box css: <code>' + box.css + '</code>');
 						return this.sendReplyBox('You haven\'t set button css for your music box yet.');
 					}
@@ -134,7 +134,7 @@ exports.commands = {
 					return this.sendReply('You have successfully deleted ' + targetUser + '\'s music box.');
 			}
 		} else {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (target.length > 18) return this.sendReply('The username "' + target + '" is too long.');
 			var targetUser;
 			if (!toId(target)) targetUser = user.name;

@@ -38,7 +38,7 @@ function addLog(message) {
 exports.commands = {
 
 	getbucks: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Please check out the Shop page in the link below to see methods of earning money:<br />' +
 			'- <a href="http://soraleague.weebly.com/shop.html">Shop</a><br /></div>');
 	},
@@ -54,7 +54,7 @@ exports.commands = {
 	cash: 'wallet',
 	purse: 'wallet',
 	wallet: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!toId(target)) target = user.name;
 		else target = Users.getExact(target) ? Users.getExact(target).name : target;
 		let money = Number(Core.read('money', toId(target))) || 'no';
@@ -62,7 +62,7 @@ exports.commands = {
 	},
 
 	shop: function(target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let shop = getShop();
 		if (this.broadcasting) {
 			return this.sendReply('|uhtml|shop|<div class = "infobox"><center>Click <button name = "receive" value = "|uhtmlchange|shop|<div class = &quot;infobox&quot;>' + shop.replace(/"/g, '&quot;') + '</div>">here</button> to enter our shop!</center></div>');
@@ -129,7 +129,7 @@ exports.commands = {
 
 	transfermoney: 'transferbucks',
 	transferbucks: function(target, room, user, connection, cmd) {
-		if (!this.canBroadcast()) return false;
+		if (!this.runBroadcast()) return false;
 		if (!target) return this.parse('/help transferbucks');
 		target = this.splitTarget(target, true);
 		let targetUser = this.targetUsername;
