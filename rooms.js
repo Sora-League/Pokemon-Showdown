@@ -111,12 +111,16 @@ let Room = (() => {
 
 		message = CommandParser.parse(message, this, user, connection);
 
+<<<<<<< HEAD
 		if (message && message !== true) {
 			if (user.isSpamroomed()) {
 				connection.sendTo(this, '|c|' + user.getIdentity() + '|' + message);
 				Rooms('spamroom').add('|c|' + user.getIdentity() + '| __(to room ' + this.title + ')__ ' + message).update();
 				return false;
 			}
+=======
+		if (message && message !== true && typeof message.then !== 'function') {
+>>>>>>> Zarel/master
 			this.add('|c|' + user.getIdentity(this.id) + '|' + message);
 		}
 		this.update();

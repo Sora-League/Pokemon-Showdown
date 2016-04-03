@@ -44,6 +44,7 @@ exports.commands = {
 		let query = target.trim();
 
 		wikiaSearch(subdomain, query, (err, data) => {
+			if (!this.runBroadcast()) return;
 			if (err) {
 				if (err instanceof SyntaxError || err.message === 'Malformed data') {
 					if (!this.broadcasting) return this.sendReply("Error: Something went wrong in the request: " + err.message);
