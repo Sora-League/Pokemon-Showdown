@@ -31,8 +31,7 @@ function getShop () {
 
 function addLog(message) {
 	if (!global.moneyLog) global.moneyLog = '';
-	let d = new Date();
-	global.moneyLog += '<small>[' + d.format('{yyyy}-{MM}-{dd} {hh}:{mm}:{ss} {tt}') + ']</small> ';
+	global.moneyLog += '<small>[' + require('dateformat')(new Date(), 'yyyy-mm-dd HH:MM:ss') + ']</small> ';
 	global.moneyLog += message + '<br/>';
 }
 
@@ -53,7 +52,6 @@ exports.commands = {
 	atm: 'wallet',
 	money: 'wallet',
 	cash: 'wallet',
-	bucks: 'wallet',
 	purse: 'wallet',
 	wallet: function(target, room, user) {
 		if (!this.canBroadcast()) return;
