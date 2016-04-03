@@ -785,7 +785,7 @@ let GlobalRoom = (() => {
 	GlobalRoom.prototype.onRename = function (user, oldid, joining) {
 		if (user.named && toId(oldid) != toId(user)) {
 			Core.write('lastseen', user.userid, Date.now());
-			if (toId(oldid).indexOf('guest') !== 0) Core.write('lastseen', toId(oldid), Date.now());
+			if (/guest[0-infinity]/.exec(toId(oldid)).index !== 0) Core.write('lastseen', toId(oldid), Date.now());
 		}
 		delete this.users[oldid];
 		this.users[user.userid] = user;
