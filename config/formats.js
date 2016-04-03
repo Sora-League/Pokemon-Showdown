@@ -664,12 +664,6 @@ exports.Formats = [
 		name: "Megamons",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3566648/\">Megamons</a>"],
 		section: "OM of the Month",
-<<<<<<< HEAD
-		mod: 'unreleased',
-		ruleset: ['Pokemon', 'Species Clause', 'Nickname Clause', 'Moody Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Swagger Clause', 'Baton Pass Clause', 'Sleep Clause Mod', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
-		banlist: ['Illegal', 'Uber', 'Shadow Tag', 'Soul Dew'],
-=======
-
 		ruleset: ['Species Clause', 'Nickname Clause', 'Moody Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Swagger Clause', 'Mega Rayquaza Clause', 'Sleep Clause Mod', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview'],
 		banlist: ['Unreleased', 'Illegal', 'Gengar-Mega', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Rayquaza-Mega'],
 		onValidateTeam: function (team) {
@@ -815,7 +809,6 @@ exports.Formats = [
 				pokemon.canMegaEvo = item.megaStone;
 			}
 		},
->>>>>>> Zarel/master
 	},
 	{
 		name: "[Seasonal] Super Staff Bros. Melee",
