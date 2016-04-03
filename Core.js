@@ -85,7 +85,8 @@ let Core = {
 		fileName = 'storage-files/' + fileName + '.json';
 		if (!fs.existsSync(fileName)) return;
 		let file = JSON.parse(fs.readFileSync(fileName));
-		delete file[key][subKey] || file[key];
+		if (subKey) delete file[key][subKey];
+		else delete file[key];
 		fs.writeFileSync(fileName, JSON.stringify(file, null, 1));
 	},
 	getLastSeen: function (user) {
