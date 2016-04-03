@@ -190,10 +190,6 @@ class CommandContext {
 				this.errorReply("You can't broadcast this because it was just broadcast.");
 				return false;
 			}
-			if (this.user.isSpamroomed()) {
-				this.sendReply('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
-				Rooms('spamroom').add('|c|' + this.user.getIdentity(this.room.id) + '| __(to room ' + this.room.title + ')__ ' + (suppressMessage || message)).update();
-			} else this.add('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || message));
 
 			this.message = message;
 			this.broadcastMessage = broadcastMessage;
@@ -212,7 +208,11 @@ class CommandContext {
 			if (!this.canBroadcast()) return false;
 		}
 
-		this.add('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || this.message));
+		if (this.user.isSpamroomed()) {
+			this.sendReply('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || this.message));
+			Rooms('spamroom').add('|c|' + this.user.getIdentity(this.room.id) + '| __(to room ' + this.room.title + ')__ ' + (suppressMessage || this.message)).update();
+		} else this.add('|c|' + this.user.getIdentity(this.room.id) + '|' + (suppressMessage || this.message));
+		
 		this.room.lastBroadcast = this.broadcastMessage;
 		this.room.lastBroadcastTime = Date.now();
 
