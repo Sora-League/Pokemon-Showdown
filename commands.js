@@ -25,7 +25,7 @@ const HOURMUTE_LENGTH = 60 * 60 * 1000;
 exports.commands = {
 
 	version: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox("Server version: <b>" + CommandParser.package.version + "</b>");
 	},
 
@@ -594,7 +594,7 @@ exports.commands = {
 
 	roomdesc: function (target, room, user) {
 		if (!target) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (!room.desc) return this.sendReply("This room does not have a description set.");
 			this.sendReplyBox("The room description is: " + Tools.escapeHTML(room.desc));
 			return;
@@ -627,7 +627,7 @@ exports.commands = {
 	topic: 'roomintro',
 	roomintro: function (target, room, user) {
 		if (!target) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
 			this.sendReply('|raw|<div class="infobox infobox-limited">' + room.introMessage + '</div>');
 			if (!this.broadcasting && user.can('declare', null, room)) {
@@ -696,7 +696,7 @@ exports.commands = {
 
 	roomalias: function (target, room, user) {
 		if (!target) {
-			if (!this.canBroadcast()) return;
+			if (!this.runBroadcast()) return;
 			if (!room.aliases || !room.aliases.length) return this.sendReplyBox("This room does not have any aliases.");
 			return this.sendReplyBox("This room has the following aliases: " + room.aliases.join(", ") + "");
 		}
@@ -1887,14 +1887,17 @@ exports.commands = {
 		if (target === 'chat' || target === 'commands') {
 			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
 			try {
+				const ProcessManagers = require('./process-manager').cache;
+				for (let PM of ProcessManagers.keys()) {
+					if (PM.isChatBased) {
+						PM.unspawn();
+						ProcessManagers.delete(PM);
+					}
+				}
+
 				CommandParser.uncacheTree('./command-parser.js');
 				delete require.cache[require.resolve('./commands.js')];
 				delete require.cache[require.resolve('./chat-plugins/info.js')];
-				if (Tools.dexsearchProcess) {
-					Tools.dexsearchProcess.kill();
-					Tools.dexsearchProcess = null;
-				}
-				delete require.cache[require.resolve('./chat-plugins/dexsearch.js')];
 				global.CommandParser = require('./command-parser.js');
 
 				let runningTournaments = Tournaments.tournaments;
@@ -1919,7 +1922,7 @@ exports.commands = {
 			}
 		} else if (target === 'battles') {
 			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
-			Simulator.SimulatorProcess.reinit();
+			Simulator.SimulatorProcess.respawn();
 			return this.sendReply("Battles have been hotpatched. Any battles started after now will use the new code; however, in-progress battles will continue to use the old code.");
 		} else if (target === 'formats') {
 			if (Monitor.hotpatchLock) return this.errorReply("Hotpatch has been disabled. (" + Monitor.hotpatchLock + ")");
@@ -1934,7 +1937,7 @@ exports.commands = {
 				// respawn validator processes
 				TeamValidator.PM.respawn();
 				// respawn simulator processes
-				Simulator.SimulatorProcess.reinit();
+				Simulator.SimulatorProcess.respawn();
 				// broadcast the new formats list to clients
 				Rooms.global.send(Rooms.global.formatListText);
 
@@ -2238,7 +2241,7 @@ exports.commands = {
 		if (!user.hasConsoleAccess(connection)) {
 			return this.errorReply("/eval - Access denied.");
 		}
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 
 		if (!this.broadcasting) this.sendReply('||>> ' + target);
 		try {
@@ -2256,7 +2259,7 @@ exports.commands = {
 		if (!user.hasConsoleAccess(connection)) {
 			return this.errorReply("/evalbattle - Access denied.");
 		}
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!room.battle) {
 			return this.errorReply("/evalbattle - This isn't a battle room.");
 		}
