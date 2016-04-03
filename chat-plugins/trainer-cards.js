@@ -39,7 +39,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Psycho∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora James357∆'
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora Quizzy∆', '∆Sora Ensnare∆'
 		];
 		for (var i = 0; i < list.length; i++) {
 			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -93,10 +93,10 @@ exports.commands = {
 	ninjarisu: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<a><font size= 4><center><b>∆Frontierhead Ninjarisu∆</b></center></a><br />' +
-			'<i>"I will show you the power of the best of the worst"</i> <br />' +
-			'<b>Ace:</b> Pachirisu<br />' +
-			'<b>Symbol:</b> Puny Symbol<br />' +
-			'<b>Rules:</b> PU<br />' +
+			'<i>"Respect your Elders"</i> <br />' +
+			'<b>Ace:</b> Zapdos<br />' +
+			'<b>Symbol:</b> Completionist Symbol<br />' +
+			'<b>Rules:</b> Gen 1 OU<br />' +
 			'<details><summary><b>Badges: (Click here to open)</b></summary><br />' +
 			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#frontier"><img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#starly"><img src="http://i.imgur.com/zaLhq1k.png" title="Starly Badge: One  Year on Sora"></a><a href="http://soraleague.weebly.com/badges.html#staravia"><img src="http://i.imgur.com/2UmjiLt.png" title="Staravia Badge: Two Years on Sora"></a><a href="http://soraleague.weebly.com/badges.html#smeargle"><img src="http://i.imgur.com/A8h3FJN.png" title="Smeargle the Creator: Helped develop Champion\'s Challenge and Inclement Weather Metagames"></a></details><br />' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/pachirisu.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-romeo.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-india.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-sierra.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-uniform.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/pachirisu.gif">' +
@@ -353,10 +353,10 @@ exports.commands = {
 		);
 	},
 
-       arjunb: 'fighting',
+       arjun: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Arjunb</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />'+
 			'<i>"Everyone has a plan until they get punched in their face."</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
 			'<b>Ace:</b> Mega Medicham<br />' + seen('soraarjunb') + getBadges('soraarjunb')
@@ -413,15 +413,15 @@ exports.commands = {
 	},
 
 
-	
+	quizzy: 'ice',
 	ice: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Quizzy</b>∆<br />' +
+			'<i>"Don\'t mess with the Ice King unless you want to be frozen over."</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br>' +
-			getBadges('')
+			'<b>Ace:</b> Mega-Abomasnow<br />' +
+			seen('soraquizzy') + '<br>' +
+			getBadges('soraquizzy')
 		);
 	},
 
@@ -435,13 +435,13 @@ exports.commands = {
 		'<b>Ace:</b> Lopunny<br />' + seen('sorabigo') + getBadges('sorabigo'));
     },
 
-	poison: 'psycho',   
+	  
 	poison: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Psycho</b>∆<br />' +
-			'<i>"Conventions are like illnesses. You don\'t fight them, you break them."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />' + seen('sorapsycho') + getBadges('sorapsycho'));
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 	
         leaf: 'psychic',
@@ -463,14 +463,14 @@ exports.commands = {
 	},
 
 	
-	james357: 'steel',
+	ensnare: 'steel',
 	steel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>James357</b>∆<br />' +
-			'<i>"Losing is a part of winning, as when you lose, you gain knowledge,and with knowledge, you\'re bound to succeed"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Ensnare</b>∆<br />' +
+			'<i>"Hard labour for more steel."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Mega-Scizor <br />' +
-			seen('sorajames357') + getBadges('sorajames357'));
+			'<b>Ace:</b> Ferrothorn <br />' +
+			seen('soraensnare') + getBadges('soraensnare'));
 
 	},
 
@@ -517,7 +517,7 @@ exports.commands = {
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/keldeo-resolute.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/thundurus-therian.gif">');
 	},
 	
-	arjun: function (target, room, user) {
+	arjunb: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center><input type="image" src="http://i.imgur.com/bnCFCm5.png"><div align="center"><br />' +
 			'<div align="center">"<i>Fall seven times, stand up eight. That\'s what I do</i>"</div><br />' +
