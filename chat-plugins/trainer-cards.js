@@ -328,7 +328,7 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />');
 	},
 
-        youmaton: 'fairy',
+    youmaton: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Youmaton</b>∆<br />'+
@@ -336,6 +336,24 @@ exports.commands = {
 			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>Diancie<br />' + seen('sorayoumaton') + getBadges('sorayoumaton'));
+	},
+	
+	you: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReply('|html|<div style = "cursor: url(http://cur.cursors-4u.net/games/gam-8/gam703.cur), default; border: 2px solid #7f00c9; border-radius: 10px; padding: 5px; color: #87d7ff; text-shadow: 0px 0px 5px; background-image: url(http://images.designtrends.com/wp-content/uploads/2015/11/26092829/Purple-Backgrounds8.jpg); background-size: cover;">' +
+			'<center><b><span style = "color: #ff87e9; font-size: 16pt; text-shadow: 2px 2px 10px black">Youmaton</span></b><br>' +
+			'<i style = "font-size: 9pt; color: #ff87e9; text-shadow: 1px 1px 3px black">"A little sparkle will fix that right up... Wait no that\'s a diamond storm"</i><br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/infernape.gif">' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/diancie-mega.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/togekiss.gif">' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/clefable.gif"><br><br>' +
+			'<b style = "font-size: 9pt;">Best With:</b> Fairy Monotype, Hackmons Cup, UU<br><br>' +
+			'<b style = "font-size: 9pt;">Bragging Rights:</b><br>' +
+			'<li>Greatest Fairy Leader<br>' +
+			'<li>"Haxlord Youmaton, making Sora salty since 2015"<br><br>' +
+			'<b style = "font-size: 9pt;">People Youmaton\'s made salty:</b><br>' +
+			'<b>**Tempest**<br>**SolarWolf**<br>**Terror**</b><br><br><br>' + 
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/gxrmXAXogKMLTn4qJDXbFynuhX3oTzuv/Bravely%20second.mp3" style = "width: 90%; border-radius: 5px; border: 1px solid violet; background: linear-gradient(45deg, #ebadff, #9600c4, #ebadff, #9600c4, #011100, #ebadff);"></center></div>'
+		);
 	},
 
 	mark: 'ground',
