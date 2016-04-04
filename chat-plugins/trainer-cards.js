@@ -1,14 +1,15 @@
+'use strict';
 function seen (user) {
 	user = toId(user);
 	if (Users.get(user) && Users.get(user).connected) return '';
 	return '<b>Last Seen:</b> ' + Core.getLastSeen(user).split(', ')[0] + ' ago';
 }
 function getBadges (user) {
-	var badgeList = JSON.parse(require('fs').readFileSync('storage-files/badges.json'));
+	let badgeList = JSON.parse(require('fs').readFileSync('storage-files/badges.json'));
 	user = toId(user);
 	if (!badgeList[user] || Object.keys(badgeList[user]).length < 3) return '';
-	var total = '<details><summary><b>Badges:</b> (Click here to open)</summary>';
-	for (var i in badgeList[user]) {
+	let total = '<details><summary><b>Badges:</b> (Click here to open)</summary>';
+	for (let i in badgeList[user]) {
 		total += badgeList[user][i];
 	};
 	return total + '</details>';
@@ -19,30 +20,30 @@ exports.commands = {
 	attendance: 'leaguemembers',
 	leaguemembers: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'];
-		for (var i = 0; i < list.length; i++) {
-			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
+		let total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
+		let list = ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'];
+		for (let i = 0; i < list.length; i++) {
+			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
 
 			total += '<tr><td>' + list[i] + '</td><td><center>' + Seen + '</center></td>';
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
-		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
-		for (var i = 0; i < list.length; i++) {
-			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
+		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
+		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
+		for (let i = 0; i < list.length; i++) {
+			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
 
 			total += '<tr><td>' + list[i] + '</td><td><center>' + Seen + '</center></td>';
 		}
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
-		var total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		var list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
+		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
+		list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
 		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora Quizzy∆', '∆Sora Ensnare∆'
 		];
-		for (var i = 0; i < list.length; i++) {
-			var Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
+		for (let i = 0; i < list.length; i++) {
+			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
 
 			total += '<tr><td>' + list[i] + '</td><td><center>' + Seen + '</center></td>';
@@ -209,9 +210,9 @@ exports.commands = {
 	silver: "siiilver",
 	siiilver: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		var colorify = function (text) {
-			var colors = ['red', 'orange', 'yellow', 'lime', '#007fff', 'cyan', '#9800ff', 'violet'], set = [];
-			for (var i = 0, j = 0; i < text.length; i++) {
+		let colorify = function (text) {
+			let colors = ['red', 'orange', 'yellow', 'lime', '#007fff', 'cyan', '#9800ff', 'violet'], set = [];
+			for (let i = 0, j = 0; i < text.length; i++) {
 				set.push(text[i].trim() ? '<span style = "color: ' + colors[j] + '; text-shadow: 0px 0px 10px;">' + text[i] + '</span>' : text[i]);
 				if (!text[i].trim()) continue;
 				if (j === colors.length - 1) j = 0;
@@ -219,7 +220,7 @@ exports.commands = {
 			}
 			return set.join('');
 		}
-		var msg;
+		let msg;
 		if (Users.get('siiilver') && Users.get('siiilver').connected) {
 			msg = '<button name = "send" value = "/me flips cash at Silvy-chan :D" style = "margin: 3px; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('$$$ Click 2 flip cash at me! $$$') + '</b></span></button><br>' +
 				'<button name = "send" value = "/me pets Silvy-chan :3" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Pet me') + ' :3</b></span></button>' +
@@ -336,24 +337,6 @@ exports.commands = {
 			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>Diancie<br />' + seen('sorayoumaton') + getBadges('sorayoumaton'));
-	},
-	
-	you: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReply('|html|<div style = "cursor: url(http://cur.cursors-4u.net/games/gam-8/gam703.cur), default; border: 2px solid #7f00c9; border-radius: 10px; padding: 5px; color: #87d7ff; text-shadow: 0px 0px 5px; background-image: url(http://images.designtrends.com/wp-content/uploads/2015/11/26092829/Purple-Backgrounds8.jpg); background-size: cover;">' +
-			'<center><b><span style = "color: #ff87e9; font-size: 16pt; text-shadow: 2px 2px 10px black">Youmaton</span></b><br>' +
-			'<i style = "font-size: 9pt; color: #ff87e9; text-shadow: 1px 1px 3px black">"A little sparkle will fix that right up... Wait no that\'s a diamond storm"</i><br>' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/infernape.gif">' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/diancie-mega.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/togekiss.gif">' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/clefable.gif"><br><br>' +
-			'<b style = "font-size: 9pt;">Best With:</b> Fairy Monotype, Hackmons Cup, UU<br><br>' +
-			'<b style = "font-size: 9pt;">Bragging Rights:</b><br>' +
-			'<li>Greatest Fairy Leader<br>' +
-			'<li>"Haxlord Youmaton, making Sora salty since 2015"<br><br>' +
-			'<b style = "font-size: 9pt;">People Youmaton\'s made salty:</b><br>' +
-			'<b>**Tempest**<br>**SolarWolf**<br>**Terror**</b><br><br><br>' + 
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/gxrmXAXogKMLTn4qJDXbFynuhX3oTzuv/Bravely%20second.mp3" style = "width: 90%; border-radius: 5px; border: 1px solid violet; background: linear-gradient(45deg, #ebadff, #9600c4, #ebadff, #9600c4, #011100, #ebadff);"></center></div>'
-		);
 	},
 
 	mark: 'ground',
@@ -607,6 +590,19 @@ exports.commands = {
 			'<b>Prefered Tier:</b> Balanced Hackmons' +
 			'<img src="http://pldh.net/media/pokemon/gen5/blackwhite_animated_front/302.gif"> <img src="http://media.tumblr.com/tumblr_m6ci5tQsEv1qf6fp2.gif"><br />' +getBadges('gasp'));
 	},
+	heatah: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		let img = (num) => { 
+			let str = '';
+			for (let i = 0; i < num; i++) str += '<img src = "http://play.pokemonshowdown.com/sprites/xyani/magneton.gif">';
+			return str;
+		}
+		this.sendReply('|html|<center><div style = "background: radial-gradient(circle, #ffe500, #000f30, #00091e, #000f30, #ffe500, #000f30, #00091e);">' +
+			img(5) + '<br>' + img(1) + 
+			'<i><b><span style = "font-size: 20px;"><a href = "http://replay.pokemonshowdown.com/monotype-268612935">Zap Cannon Sweep</a></span></b></i>' + img(1) + '<br>' +
+			img(5) + '</div>'
+		);
+	},
 	leafy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReply('|html|<div style = "padding: 5px; text-align: center; background-image: url(http://i1171.photobucket.com/albums/r545/Brahak/maple_zpsg5sgjduk.jpg) no-repeat scroll bottom; background-size: cover;">' +
@@ -714,8 +710,25 @@ exports.commands = {
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/greninja.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/ferrothorn.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/sharpedo.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/garchomp.gif">'+
 			getBadges('e4terror'));
 	},
-	
-	
+
+	you: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReply('|html|<div style = "cursor: url(http://cur.cursors-4u.net/games/gam-8/gam703.cur), default; border: 2px solid #7f00c9; border-radius: 10px; padding: 5px; color: #87d7ff; text-shadow: 0px 0px 5px; background-image: url(http://images.designtrends.com/wp-content/uploads/2015/11/26092829/Purple-Backgrounds8.jpg); background-size: cover;">' +
+			'<center><b><span style = "color: #ff87e9; font-size: 16pt; text-shadow: 2px 2px 10px black">Youmaton</span></b><br>' +
+			'<i style = "font-size: 9pt; color: #ff87e9; text-shadow: 1px 1px 3px black">"A little sparkle will fix that right up... Wait no that\'s a diamond storm"</i><br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/infernape.gif">' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/diancie-mega.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/togekiss.gif">' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/clefable.gif"><br><br>' +
+			'<b style = "font-size: 9pt;">Best With:</b> Fairy Monotype, Hackmons Cup, UU<br><br>' +
+			'<b style = "font-size: 9pt;">Bragging Rights:</b><br>' +
+			'<li>Greatest Fairy Leader<br>' +
+			'<li>"Haxlord Youmaton, making Sora salty since 2015"<br><br>' +
+			'<b style = "font-size: 9pt;">People Youmaton\'s made salty:</b><br>' +
+			'<b>**Tempest**<br>**SolarWolf**<br>**Terror**</b><br><br><br>' + 
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/gxrmXAXogKMLTn4qJDXbFynuhX3oTzuv/Bravely%20second.mp3" style = "width: 90%; border-radius: 5px; border: 1px solid violet; background: linear-gradient(45deg, #ebadff, #9600c4, #ebadff, #9600c4, #011100, #ebadff);"></center></div>'
+		);
+	},
+
 	showtier: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><img src="http://i.imgur.com/DI9T4Y6.png" width=550></center>');
