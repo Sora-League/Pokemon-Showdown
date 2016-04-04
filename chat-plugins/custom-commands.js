@@ -1,7 +1,7 @@
 'use strict';
 
 const fs = require('fs');
-let request = require('request');
+const request = require('request');
 let deleteLadderConfirm = false;
 
 function display (message, self) {
@@ -322,25 +322,30 @@ exports.commands = {
 
 	registered: 'regdate',
 	regdate: function (target, room, user, connection, cmd) {
-		if (!toId(target)) return this.sendReply("'" + target + "' is not a valid username.");
-		if (!toId(target).length > 18) return this.sendReply('Usernames can only contain 18 characters at the max.');
+		if (!target) return this.parse('/help regdate');
+		if (!toId(target)) if (!toId(target)) return this.sendReply("'" + target + "' is not a valid username.");
+		if (!toId(target).length > 18) return this.sendReply('Usernames cannot exceed 18 characters.');
 		if (!this.runBroadcast()) return;
 
-		let path = "http://pokemonshowdown.com/users/" + toId(target);
-		let self = this;
+		let path = "http://pokemonshowdown.com/users/" + toId(target) + '.json';
 
-		request(path, function (error, response, body) {
+		request(path, (error, response, body) => {
 			if (error || response.statusCode === 404) {
-				self.sendReplyBox(target + ' is not registered.');
-				room.update();
+				this.sendReplyBox(target + ' is not registered.');
 				return;
 			}
-			let date = body.split('<small>')[1].split('</small>')[0].substr(17);
-			if (!date) self.sendReplyBox(target + ' is not registered.');
-			else self.sendReplyBox(target + ' was registered on ' + date);
-			room.update();
+			let info = JSON.parse(body);
+			let name = (Users(target) ? Users(target).name : info.username);
+			if (!info.registertime) return this.sendReplyBox(name + ' is not registered.');
+
+			let regTime = info.registertime;
+			while (('' + regTime).length < 13) regTime = Number(('' + regTime) + '0');
+			regTime = require('dateformat')(regTime, 'dddd, mmmm dS, yyyy, HH:MM:ss');
+			this.sendReplyBox(name + ' was registered on ' + regTime);
 		});
+		if (this.broadcasting) room.update();
 	},
+	regdatehelp: ['/regdate [user] - Displays the date on which the user was registered.'],
 
 	u: 'urbandefine',
 	ud: 'urbandefine',
