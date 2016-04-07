@@ -47,8 +47,14 @@ background: function(target, room, user) {
                 '<td><a href="https://www.dropbox.com/s/fbhsz5vlfwmamuf/Grey%20Shield.jpg?dl=1"><img src="http://i.imgur.com/MP37DTZ.jpg" width=170></a></td>'+
                 '<td><a href="https://www.dropbox.com/s/lcsx1bqprw8bjmp/Old%20Moonlight.png?dl=1"><img src="http://i.imgur.com/sAzIMJk.png" width=170></a></td></tr>'+
                 
-                '<tr><td><a href="https://www.dropbox.com/s/do1kfdyrkpm7lfl/New%20Moonlight.png?dl=1"><img src="http://i.imgur.com/97FLTsX.png" width=170></a></td></tr></table><br>'+
-                '<font size=0.5>These images belong to <b>ABootToTheHead</b>, citing is required before reusage. Where possible cite twitter account @MetatyphT and/or website of origin http://havearandom.cu.cc/</font></details>'
+                '<tr><td><a href="https://www.dropbox.com/s/do1kfdyrkpm7lfl/New%20Moonlight.png?dl=1"><img src="http://i.imgur.com/97FLTsX.png" width=170></a></td>'+
+                '<td><a href="https://www.dropbox.com/s/l64b1vqby7knb8x/Christmas2015.png?dl=1"><img src="http://i.imgur.com/JE2lfer.png" width=170></a></td></tr></table><br>'+
+                '<font size=0.5>These images belong to <b>ABootToTheHead</b>, citing is required before reusage. Please always cite Twitter account <a href="https://twitter.com/MetatyphT">@MetatyphT</a> and/or Tumblr <a href="http://metatyphtempest.tumblr.com/">Typh\'s Art Stash</a></font></details><br><br>'+
+                
+                '<details><summary>ABootToTheHead\'s 2016 Collection (Click me to expand)</summary><table style="width:100%"><tr>'+
+                '<td><a href="https://www.dropbox.com/s/33oszwqq8gczylo/Gardevoir.png?dl=1"><img src="http://i.imgur.com/0CPvA7O.png" width=170></a></td>'+
+                '<td><a href="https://www.dropbox.com/s/t8p9q63w5bwd9m1/Smeargle%2BChansey.png?dl=1"><img src="http://i.imgur.com/YIm3pLh.png" width=170></a></td></tr></table><br>'+
+                '<font size=0.5>These images belong to <b>ABootToTheHead</b>, citing is required before reusage. Please always cite Twitter account <a href="https://twitter.com/MetatyphT">@MetatyphT</a> and/or Tumblr <a href="http://metatyphtempest.tumblr.com/">Typh\'s Art Stash</a></font></details>'
                 );
 	}
 		         
