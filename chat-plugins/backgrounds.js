@@ -2,7 +2,7 @@ exports.commands = {
 
 backgrounds: 'background',
 background: function(target, room, user) {
-        if (!this.canBroadcast()) return;
+        if (!this.runBroadcast()) return;
         this.sendReplyBox('<center><font size=3><b>Sora Backgrounds</b></font><br>This is a list of past and current server backgrounds made available for you to download and use as desktop backgrounds.<br><br>Simply browse through the images and click on the ones you would like to download, accept the external website link and the download will start automatically.<br><br><br>'+
         	
         	'<details><summary>Jeratt\'s 2013 Collection (Click me to expand)</summary><br><table style="width:100%"><tr>'+
