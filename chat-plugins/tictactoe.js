@@ -396,7 +396,7 @@ var TicTacToe = (function () {
 var cmds = {
 	'': 'help',
 	help: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<b>Tic-Tac-Toe commands</b><br>' +
 			'<li>/ttt c <em>User</em> - Sends a user a request to play Tic-Tac-Toe. This can also be used in PMs. (Requests automatically expire if they\'re not accepted or declined within 1.5 minutes.)<br>' +
 			'<li>/ttt accept <em>User</em>  - Accepts a Tic-Tac-Toe request from a user.<br>' +
