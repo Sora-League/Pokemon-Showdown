@@ -68,7 +68,7 @@ exports.commands = {
 	ds: 'dexsearch',
 	dsearch: 'dexsearch',
 	dexsearch: function (target, room, user, connection, cmd, message) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help dexsearch');
 
 		return runSearch({
@@ -101,7 +101,7 @@ exports.commands = {
 	rollpokemon: 'randompokemon',
 	randpoke: 'randompokemon',
 	randompokemon: function (target, room, user, connection, cmd, message) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		let targets = target.split(",");
 		let targetsBuffer = [];
 		let qty;
@@ -141,7 +141,7 @@ exports.commands = {
 	ms: 'movesearch',
 	msearch: 'movesearch',
 	movesearch: function (target, room, user, connection, cmd, message) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help movesearch');
 
 		return runSearch({
@@ -171,7 +171,7 @@ exports.commands = {
 
 	isearch: 'itemsearch',
 	itemsearch: function (target, room, user, connection, cmd, message) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help itemsearch');
 
 		return runSearch({
@@ -204,7 +204,7 @@ exports.commands = {
 	dpplearn: 'learn',
 	bw2learn: 'learn',
 	learn: function (target, room, user, connection, cmd, message) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		if (!target) return this.parse('/help learn');
 
 		return runSearch({
