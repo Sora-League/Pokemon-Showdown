@@ -4,7 +4,7 @@ var tourLadder = Ladders('tournaments');
 exports.commands = {
 	tourelo: 'tourladder',
 	tourladder: function (target, room, user) {
-		if (!this.canBroadcast()) return;
+		if (!this.runBroadcast()) return;
 		var self = this;
 		if (!target || !target.trim()) {
 			tourLadder.load().then(function (users) {
