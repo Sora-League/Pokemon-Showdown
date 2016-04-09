@@ -414,15 +414,15 @@ exports.commands = {
 	},
 
 
-	quizzy: 'ice',
+	
 	ice: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Quizzy</b>∆<br />' +
-			'<i>"Don\'t mess with the Ice King unless you want to be frozen over."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> Mega-Abomasnow<br />' +
-			seen('soraquizzy') + '<br>' +
-			getBadges('soraquizzy')
+			'<b>Ace:</b> ???<br />' +
+			seen('') + '<br>' +
+			getBadges('')
 		);
 	},
 
