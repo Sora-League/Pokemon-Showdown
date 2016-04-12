@@ -40,7 +40,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora Quizzy∆', '∆Sora Ensnare∆'
+		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆'
 		];
 		for (let i = 0; i < list.length; i++) {
 			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -464,14 +464,14 @@ exports.commands = {
 	},
 
 	
-	ensnare: 'steel',
+	
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Ensnare</b>∆<br />' +
-			'<i>"Hard labour for more steel."</i> <br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Ferrothorn <br />' +
-			seen('soraensnare') + getBadges('soraensnare'));
+			'<b>Ace:</b> ??? <br />' +
+			seen('') + getBadges(''));
 
 	},
 
