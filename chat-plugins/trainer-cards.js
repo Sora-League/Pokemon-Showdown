@@ -421,7 +421,7 @@ exports.commands = {
 	this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
 			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
-			'<b>Ace:</b> Victreebel <br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
 
