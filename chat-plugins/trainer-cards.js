@@ -30,7 +30,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
+		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
 		for (let i = 0; i < list.length; i++) {
 			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -40,7 +40,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Mitsuka∆', '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆'
+		        '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆'
 		];
 		for (let i = 0; i < list.length; i++) {
 			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -155,6 +155,17 @@ exports.commands = {
 			'<b>Ace:</b> Archeops<br />' + 
 			'<b>Battle Rules:</b><br />'+ 
 			'-No priority<br />' + seen('sorawhitefang') + getBadges('sorawhitefang'));
+			
+	},
+	
+	mitsuka: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Mitsuka</b>∆<br />' +
+			'<i>"Storm of leaf and draining root!"</i> <br />' +
+			'<b>Type: <font color = 006b0a>Grass</font></b><br />' +
+			'<b>Ace:</b> All<br />' + 
+			'<b>Battle Rules:</b><br />'+ 
+			'-None<br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 			
 	},
 	/*sube4: function(target, room, user) {
@@ -404,13 +415,13 @@ exports.commands = {
 	},
 
 
-    mitsuka: 'grass',	
+   	
     grass: function(target, room, user) {
 	if (!this.runBroadcast()) return;
 	this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />'+
-			'<i>"Storm of leaf and Draining root!"</i> <br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />'+ 
-			'<b>Ace:</b> Victreebel <br />' + seen('soramitsuka') + getBadges('soramitsuka'));
+			'<b>Ace:</b> Victreebel <br />' + seen('') + getBadges(''));
 	},
 
 
