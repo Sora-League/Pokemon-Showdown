@@ -40,7 +40,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆'
+		        '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora Nightanglet'
 		];
 		for (let i = 0; i < list.length; i++) {
 			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -465,13 +465,13 @@ exports.commands = {
 			'<b>Ace:</b> B8ed (Slowbro) <br />' + seen('soraleaf') + getBadges ('soraleaf'));
 	},
 
-	
+	nightanglet: 'rock',
 	rock: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Nightanglet</b>∆<br />' +
+			'<i>"What\'s a quote?"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+			'<b>Ace:</b> Archeops<br />' + seen('soranightanglet') + getBadges('soranightanglet'));
 	},
 
 	
