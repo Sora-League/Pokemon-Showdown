@@ -735,9 +735,15 @@ class Tournament {
 		}
 	}
 	onBattleWin(room, winner) {
+<<<<<<< HEAD
+		let from = Users.get(room.p1);
+		let to = Users.get(room.p2);
+		let tourSize = this.generator.getUsers().length;
+=======
 		let from = this.players[room.p1.userid];
 		let to = this.players[room.p2.userid];
 		if (winner) winner = this.players[winner.userid];
+>>>>>>> Zarel/master
 
 		let result = 'draw';
 		if (from === winner) {
