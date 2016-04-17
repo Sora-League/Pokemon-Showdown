@@ -1,8 +1,6 @@
 ﻿Super Staff Bros. MELEE
 ========================================================================
 
-(WIP)
-
 Roster
 ------------------------------------------------------------------------
 
@@ -16,7 +14,7 @@ EVs: 248 HP, 8 Def, 252 SpD, Nature: Careful
 - Will-O-Wisp
 - Recover
 - Seed Bomb
-- Needs More Screens - 5 (no boosts) PP, uses Magic Coat, Lucky Chant, Safeguard, Reflect and Light Screen.
+- Needs More Screens - 5 (no boosts) PP, uses Magic Coat, Safeguard, Reflect and Light Screen.
 
 ### Ace
 Salamence @ Salamencite
@@ -271,7 +269,7 @@ Ability: Fur Coat
 
 EVs: 4 HP, 252 Atk, 252 SpD, Nature: Adamant
 
-- Food Rush - 10 PP Normal\Physical 100\90% prio -6. Forces switch. Makes contact.
+- Food Rush - 5 PP Normal\Physical 90\90% prio -6. Forces switch. Makes contact.
 
 Other Possible Moves:
 
@@ -321,21 +319,21 @@ EVs: 4 Atk, 252 SpA, 252 Spe, Nature: Naive
 - Spiky Shield \ Toxic
 - Infestation \ Magma Storm \ Sand Tomb \ Whirlpool
 - U-turn \ Conversion2
-- Splatter - 40 PP, Bug\Physical, 200\100% prio +1. The user faints. The target is trapped during the following turn and its speed is lowered.
+- Splatter - 40 PP, Bug\Special, 200\100% prio +1. The user faints. The target is trapped during the following turn and its speed is lowered.
 
-### bondie
+### Bondie
 Krabby @ Eviolite
 
 Ability: Shell Armor
 
 Innate Ability: Crab Stance - Raises defenses when hit. Raises offenses with each attack.
 
-EVs: 4 HP, 252 Atk, 252 Spe, Nature: Adamant
+EVs: 4 HP, 252 Atk, 252 Spe, Nature: Jolly
 
 - Crabhammer
 - Ice Punch
 - Autotomize
-- Claw Guard - 5 (no boost) PP, Protect-based move. The user gains a Coil boost and the Rage status.
+- Claw Guard - 5 (no boost) PP, Protect-based move, does not protect against status. Boosts attack and defense, the user gets Rage until switched out.
 
 ### boTTT
 Regigigas @ Leftovers \ Chesto Berry
@@ -470,14 +468,14 @@ EVs: 4 HP, 252 Atk, 252 Spe, Nature: Adamant
 - Dragon Ascent
 - Wild Charge
 - U-turn
-- Mono Flying - 20 PP. For 5 turns, change all Pokemon to pure Flying-type.
+- Mono Flying - 20 PP. For 5 turns, change all Pokemon to pure Flying-type.  Clears side conditions like Defog.
 
 ### Dirpz
 Azumarill @ Sitrus Berry
 
 Ability: Pure Power
 
-EVs: 64 HP, 4 Def, 252 Atk, 188 Spe, Nature: Adamant
+EVs: 68 HP, 252 Atk, 188 Spe, Nature: Adamant
 
 - Aqua Jet
 - Knock Off
@@ -599,7 +597,7 @@ EVs: 252 Atk, 4 SpD, 252 Spe, Nature: Jolly
 - Water Shuriken
 - Bullet Seed \ Rock Blast
 - Icicle Spear
-- Frozen Kebab Skewers - 5 (no boosts) PP, Ice\Physical 20\100%, 2 hits, +1 prio, + Rock type. Each hit boosts own Atk and Spe (cannot boost Atk past +2). Ignores Protect, Sub or defensive boosts. 10% freeze.
+- Frozen Kebab Skewers - 5 (no boosts) PP, Ice\Physical 25\100%, 2 hits, +1 prio, + Rock type. Boosts own Atk and Spe 1 stage each (cannot boost Atk past +2). Ignores Protect, Sub or defensive boosts. 10% freeze.
 
 ### Former Hope
 Froslass @ Focus Sash
@@ -627,7 +625,7 @@ Ability: Justified
 EVs: 252 Atk, 4 SpD, 252 Spe, Nature: Jolly
 
 - Crunch
-- Jump Kick
+- Sacred Sword
 - Extreme Speed
 - Screw This Matchup - 5 PP. Boosts Atk by 2. If applicable, swaps user's secondary type with the opponent's primary type. If these are the same, only suppresses the user's secondary type.
 
@@ -680,20 +678,6 @@ EVs: 252 Atk, 4 Def, 252 Spe, Nature: Adamant
 - Sucker Punch
 - Knock Off
 - Dragon Slayer - 10 PP Steel\Physical 110\100%. Super effective against Dragon-type. Makes contact.
-
-### Gangnam Style
-Munchlax @ Eviolite
-
-Ability: Fur Coat
-
-Innate Ability: Gonna Make You Sweat - Recovers 33% HP each turn.
-
-EVs: 252 HP, 252 Atk, 4 Def, Nature: Adamant
-
-- Swords Dance
-- Drain Punch
-- Body Slam
-- Mother, Father, Gentleman - 15 PP Dark\Physical 70\100%. Hits 3 times. Makes contact.
 
 ### GeoffBruedly
 Whiscash @ Leftovers
@@ -760,7 +744,7 @@ EVs: 252 Atk, 4 Def, 252 Spe, Nature: Jolly
 ### Halite
 Glaceon @ Leftovers
 
-Ability: Lightly Salted - This Pokemon's physical moves turn into special moves. Contact moves may freeze (10%). Status moves gain +1 priority.
+Ability: Lightly Salted - This Pokemon's physical moves turn into special moves. Contact moves may freeze (18%). Status moves gain +1 priority.
 
 EVs: 252 HP, 216 Def, 200 SpA, Nature: Modest
 
@@ -817,7 +801,7 @@ EVs: 252 HP, 4 Def, 252 SpA, IVs: 0 Atk, Nature: Modest
 - Quiver Dance
 - Heal Order
 - Seed Flare
-- Boober's Oblivion - 10 PP Fire\Special 80\100%. Heals user by 75% of damage dealt. User faints if used 3 times in a row.
+- Boober's Oblivion - 10 PP Fire\Special 80\100%. Heals user by 2/3 of damage dealt. User faints if used 3 times in a row.
 
 ### HiMyNamesL
 Darmanitan-Zen @ Lum Berry
@@ -829,7 +813,7 @@ EVs: 252 SpA, 4 SpD, 252 Spe, IVs: 0 Atk, Nature: Timid
 - Volt Switch
 - Solar Beam
 - Psychic
-- Solar Storm - 10 PP Fire\Special 120\100%. Sets Sunny Day before the move. The user goes on a rampage for 2-3 turns.
+- Solar Storm - 10 PP Fire\Special 120\100%. Sets Sunny Day before the move. The user goes on a rampage for 2-3 turns. 15% burn.
 
 ### Hippopotas
 Hippopotas @ Eviolite
@@ -911,7 +895,7 @@ EVs: 252 Atk, 4 Def, 252 Spe, Nature: Adamant
 - Brave Bird
 - Sucker Punch
 - Knock Off
-- Cathy - Recover, in addition uses Accupressure.
+- Cathy - 10 PP, moves first in same priority bracket. Raises random stat by 2 stages and heals 65% of the user's maximum HP.
 
 ### Iyarito
 Gastly @ Life Orb
@@ -925,10 +909,12 @@ EVs: 200 SpA, 80 SpD, 228 Spe, Nature: Timid
 - Dazzling Gleam
 - Tomala wey - 5 (no boosts) PP, Protect-based move. User gains Quiver Dance boost.
 
-### Innovamania
+### innovamania
 Arceus @ Black Glasses
 
 Ability: Pick Up
+
+Innate Ability: Automatically sets Healing Wish on fainting, among other things.
 
 EVs: 4 HP, 252 Atk, 252 Spe, Nature: Jolly
 
@@ -1004,12 +990,14 @@ Heatran @ Charcoal
 
 Ability: Levitate
 
+Innate Ability: This Pokemon is immune to Fire-type attacks.
+
 EVs: 252 HP, 4 Def, 252 SpA, IVs: 0 Atk, Nature: Modest
 
 - Eruption
 - Steam Eruption
 - Quiver Dance
-- Gaster Blaster - 5 PP Fire\Special 110 pwr. Always hits. Lowers own speed. 66% Burn. Torments and confuses opponent. Bypasses Protect and Subs.
+- Exception - 5 PP Fire\Special 110 pwr. Always hits. Lowers own speed. 66% Burn. Torments and confuses opponent. Bypasses Protect and Subs.
 
 ### Kalalokki
 Wingull @ Life Orb
@@ -1047,7 +1035,7 @@ EVs: 4 Def, 252 Atk, 252 Spe, Nature: Adamant
 - Ice Shard
 - Icicle Spear
 - Mach Punch \ Pursuit \ Knock Off
-- Pixel Protection - 10 PP. Protect-based move. Only works on first turn out. Boosts Def by 4 and SpD by 2.
+- Pixel Protection - 10 PP. Protect-based move. Only works once per outing. Boosts Def by 4 and SpD by 2.
 
 ### LegitimateUsername
 Shuckle @ Leftovers
@@ -1080,12 +1068,12 @@ Togekiss @ Leftovers
 
 Ability: Parental Bond
 
-EVs: 252 HP, 196 SpD, 60 Spe, Nature: Calm
+EVs: 248 HP, 184 SpD, 76 Spe, Nature: Jolly
 
 - Super Fang
 - Cotton Guard \ Roost
 - Seismic Toss \ Night Shade
-- Next Level Strats - 5 (no boosts) PP, boosts user speed and advances 10 levels. Stats and damage formula calculations are not affected by level increase.
+- Next Level Strats - 25 PP, boosts user speed and advances 40 levels (Level 300 max). Stats and damage formula calculations are not affected by level increase.
 
 ### LJ
 Giratina-Origin @ Griseous Orb
@@ -1116,18 +1104,6 @@ Other Possible Moves:
 - Recover
 - Tail Glow
 
-### m00ns
-Wobbuffet @ Leftovers
-
-Ability: Shadow Tag
-
-EVs: 52 HP, 232 Def, 224 SpD, IVs: 0 Atk, Nature: Bold
-
-- Counter
-- Mirror Coat
-- Encore
-- oh - 30 PP, 100% acc. Lowers opponent offenses, boosts user speed.
-
 ### macle
 Greninja @ Life Orb
 
@@ -1157,16 +1133,16 @@ EVs: 4 Def, 252 SpA, 252 Spe, Nature: Timid
 ### Marshmallon
 Marshtomp @ Eviolite
 
-Ability: Shadow Tag
+Ability: Arena Trap
 
-Innate Ability: Boosts defense by 2 on switch in.
+Innate Ability: Boosts defense on switch in.
 
 EVs: 252 HP, 24 Def, 232 SpD, Nature: Impish
 
-- Earthquake
-- Softboiled
-- Spiky Shield
-- Excuse - 10 PP, prio +2. Confuses and Taunts opponent.
+- Thousand Arrows
+- Morning Sun
+- King's Shield
+- Excuse - 5 (no boosts) PP, 90% acc, prio +2. Confuses and Taunts opponent.
 
 ### MattL
 Swampert @ Swampertite
@@ -1216,7 +1192,7 @@ EVs: 4 HP, 252 SpA, 252 Spe, Nature: Timid
 - Spacial Rend
 - Thunder
 - Sheer Cold
-- Double Laser - 40 PP Water\Special 75\95%. Hits twice.
+- Double Laser - 40 PP Water\Special 75\90%. Hits twice with two accuracy checks.
 
 ### nv
 Larvitar @ Eviolite
@@ -1294,8 +1270,8 @@ EVs: 4 Def, 252 SpA, 252 Spe, Nature: Modest
 - Ice Beam
 - Pure Skill - 5 PP, ???-type\Special. Always hits.
  - (10%) User faints.
- - (45%) Attempts to half target health, but at least does 25% damage.
- - (45%) Deals damage with 255 base power. Lowers own SpA and accuracy afterwards.
+ - (50%) Attempts to half target health, but at least does 25% damage.
+ - (40%) Deals damage with 255 base power. Lowers own SpA and accuracy afterwards.
 
 ### pluviometer
 Mismagius @ Life Orb
@@ -1315,7 +1291,7 @@ Unown @ Keyboard - Item is the equivalent of a mega stone and therefore inviolab
 - Mega evolves into Missingno. 
  - Type: Normal\Bird
  - Base Stats: HP 48, Atk 136, Def 0, SpA 6, SpD 255, Spe 29
- - Ability: No Ability
+ - Ability: Oblivious
 
 Ability: Sturdy
 
@@ -1337,7 +1313,7 @@ EVs: 4 Def, 252 SpA, 252 Spe, Nature: Timid
 - Stealth Rock
 - Perish Song
 - Nuzzle
-- Retreat - Volt Switch, with 60 power. Always 2x effective.
+- Retreat - Volt Switch, with 55 power. Always 2x effective.
 
 ### Raseri
 Musharna @ Leftovers
@@ -1351,7 +1327,7 @@ EVs: 248 HP, 252 Def, 8 SpD, Nature: Bold
 - Barrier
 - Stored Power
 - Moonblast
-- Purify Soul - Recover, in addition uses Calm Mind.
+- Purify Soul - 10 PP, boosts SpA and SpD, heals 1/3 of max HP.
 
 ### Raven
 Yveltal @ Sharp Beak
@@ -1377,6 +1353,20 @@ EVs: 252 HP, 252 Atk, 4 Def, Nature: Adamant
 - Outrage
 - Land Before Time - 15 PP Rock\Physical 125\90%. Makes contact. 35% flinch.
 
+### RODAN
+Munchlax @ Eviolite
+
+Ability: Fur Coat
+
+Innate Ability: Gonna Make You Sweat - Recovers 25% HP each turn.
+
+EVs: 252 HP, 252 Atk, 4 Def, Nature: Adamant
+
+- Swords Dance
+- Drain Punch
+- Body Slam
+- Mother, Father, Gentleman - 15 PP Dark\Physical 70\100%. Hits 3 times. Makes contact.
+
 ### RosieTheVenusaur
 Venusaur @ Leftovers
 
@@ -1384,7 +1374,7 @@ Ability: Moxie
 
 EVs: 252 HP, 252 Atk, 4 Def, Nature: Adamant
 
-- Swag Plant - Frenzy Plant. Boosts user's attack and defense. 100% confusion.
+- Swag Plant - Physical variant of Frenzy Plant. Boosts user's attack and defense. 100% confusion.
 
 Other Possible Moves:
 
@@ -1481,7 +1471,7 @@ EVs: 252 SpA, 4 SpD, 252 Spe, IVs: 0 Atk, Nature: Timid
 - Aeroblast
 - Blue Flare
 - Night Daze
-- Gamma Ray Burst - 5 PP Psychic\Special 350\90%. User faints.
+- Gamma Ray Burst - 5 PP Psychic\Special 350\90%. User faints. Clears side conditions like Defog.
 
 ### sirDonovan
 Togetic @ Eviolite
@@ -1512,7 +1502,7 @@ Voodoom @ Life Orb
 
 Ability: Mountaineer
 
-Innate Ability: White Magic - Grants Fairy immunity. Boosts speed when hit by Fairy-type move.
+Innate Ability: Amity Absorb - Heals 25% when hit by Fairy-type attack.
 
 EVs: 4 Def, 252 SpA, 252 Spe, Nature: Timid
 
@@ -1554,7 +1544,7 @@ Innate Ability: Weak Skin - Boosts Atk and Spe, lowers defenses on switch-in.
 
 EVs: 4 Def, 252 Atk, 252 Spe, Nature: Jolly
 
-- Stone Edge
+- Rock Slide
 - Megahorn
 - Knock Off
 - God Turn - U-turn followed by Baton Pass.
@@ -1572,7 +1562,7 @@ EVs: 252 HP, 128 Def, 128 SpD, Nature: Sassy
  - Baton Pass can pass almost all Innate Abilities.
 - Ingrain
 - Substitute
-- Army of Mushrooms - 10 PP, boosts defenses at beginning of turn. Uses Sleep Powder, Powder and Leech Seed when the actual move is used. Ignores Prankster.
+- Army of Mushrooms - 5 PP, boosts defenses at beginning of turn. Uses Sleep Powder, Powder and Leech Seed when the actual move is used. Ignores Prankster.
 
 ### sparktrain
 Seel @ Life Orb
@@ -1586,14 +1576,14 @@ EVs: 232 HP, 252 Atk, 24 SpD, Nature: Adamant
 - Fake Out
 - Extreme Speed
 - Precipice Blades
-- Pill Frenzy - 30 PP Water\Physical 50\100%. Hits 2 - 5 times. Bullet-based. Boosts self speed and lowers self evasion with each hit.
+- Pill Frenzy - 30 PP Water\Physical 50\100%. Hits 3 - 5 times. Bullet-based. Boosts self speed and lowers self evasion with each hit.
 
 ### SpecsMegaBeedrill
 Weedle @ Focus Sash
 
 Ability: Shield Dust
 
-Innate Ability: Weed - Grants 3x offenses and 2x speed.
+Innate Ability: Weed - Grants 2.5x offenses and 1.75x speed.
 
 EVs: 4 Def, 252 SpA, 252 Spe, Nature: Timid
 
@@ -1632,6 +1622,19 @@ EVs: 248 HP, 4 Def, 252 Spe, Nature: Timid
 - Recover
 - Nuzzle
 - RKO Outta Nowhere - 35 PP, Water-type equivalent of Psywave.
+
+### starry
+Wobbuffet @ Leftovers
+
+Ability: Shadow Tag
+
+EVs: 52 HP, 232 Def, 224 SpD, IVs: 0 Atk, Nature: Bold
+
+- Counter
+- Mirror Coat
+- Encore
+- oh - 30 PP, 100% acc. Lowers opponent offenses, boosts user speed.
+
 
 ### Steamroll
 Growlithe @ Life Orb
@@ -1744,7 +1747,7 @@ Innate Ability: Swaps stat changes with opponent on switch in.
 
 EVs: 252 HP, 4 Def, 252 Spe, Nature: Timid
 
-- Substitute
+- Substitute \ Defog
 - Sing
 - Giga Drain
 - Sacred Spear Explosion - 10 PP, Fairy\Special 100\100%. + Steel type. 30% burn.
@@ -1756,12 +1759,12 @@ Ability: Water Absorb
 
 Innate Ability: Iron Barbs
 
-EVs: 252 Atk, 4 Def, 252 SpD, Nature: Adamant \ Jolly
+EVs: 252 HP, 252 Atk \ SpA, 4 SpD, Nature: Adamant \ Modest
 
 - Spikes
-- Seed Bomb \ Bullet Seed
-- Swords Dance \ Destiny Bond
-- SPIKEY RAIN - 10 PP. Field move lasting 5 turns, boosting defenses of Grass-types by 50%, power of Grass-type moves by 50% and +2 priority to Grass-type moves.
+- Power Whip \ Seed Flare
+- Spiky Shield
+- SPIKEY RAIN - 10 PP. +1 priority. Field move lasting 5 turns, boosting defenses of Grass-types by 50%, power of Grass-type moves by 50% and +2 priority to Grass-type moves.
 
 ### urkerab
 Skuntank @ Razor Claw
@@ -1789,7 +1792,7 @@ EVs: 252 Atk, 252 SpA, 4 Spe, Nature: Serious
 - Sticky Web
 - String Shot
 - Tackle
-- Of Curse - 40 PP, bypasses Subs, lowers target offenses by 2 stages. The user faints, and the incoming teammate traps the opponent.
+- Of Curse - 40 PP, always hits, bypasses Sub. Lowers target offenses by 2 stages. The user faints, but it passes down Mean Look and Lunar Dance to the next Pokemon.
 
 ### Vapo
 Vaporeon @ Splash Plate
@@ -1865,7 +1868,7 @@ EVs: 248 HP, 252 Atk, 8 Spe, Nature: Adamant
 - Dragon Ascent
 - Sacred Fire
 - Roost
-- Go Inda Like Linda - 30 PP. Boosts Atk and Speed by 3 stages.
+- Go Inda Like Linda - 30 PP. Boosts Atk and Speed by 2 stages.
 
 ### Zarel
 Meloetta <s>@ Your Mom</s>

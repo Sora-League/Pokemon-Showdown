@@ -88,10 +88,11 @@ exports.commands = {
 	},
 
 	dexsearchhelp: ["/dexsearch [parameter], [parameter], [parameter], ... - Searches for Pok\u00e9mon that fulfill the selected criteria",
-		"Search categories are: type, tier, color, moves, ability, gen, recovery, priority, stat.",
+		"Search categories are: type, tier, color, moves, ability, gen, resists, recovery, priority, stat.",
 		"Valid colors are: green, red, blue, white, brown, yellow, purple, pink, gray and black.",
 		"Valid tiers are: Uber/OU/BL/UU/BL2/RU/BL3/NU/BL4/PU/NFE/LC/CAP.",
 		"Types must be followed by ' type', e.g., 'dragon type'.",
+		"'resists' followed by a type will show Pok\u00e9mon that resist that typing, e.g., 'resists normal'.",
 		"Inequality ranges use the characters '>=' for '≥' and '<=' for '≤', e.g., 'hp <= 95' searches all Pok\u00e9mon with HP less than or equal to 95.",
 		"Parameters can be excluded through the use of '!', e.g., '!water type' excludes all water types.",
 		"The parameter 'mega' can be added to search for Mega Evolutions only, and the parameter 'NFE' can be added to search not-fully evolved Pok\u00e9mon only.",
@@ -160,7 +161,7 @@ exports.commands = {
 		});
 	},
 	movesearchhelp: ["/movesearch [parameter], [parameter], [parameter], ... - Searches for moves that fulfill the selected criteria.",
-		"Search categories are: type, category, flag, status inflicted, type boosted, and numeric range for base power, pp, and accuracy.",
+		"Search categories are: type, category, contest condition, flag, status inflicted, type boosted, and numeric range for base power, pp, and accuracy.",
 		"Types must be followed by ' type', e.g., 'dragon type'.",
 		"Stat boosts must be preceded with 'boosts ', e.g., 'boosts attack' searches for moves that boost the attack stat.",
 		"Inequality ranges use the characters '>' and '<' though they behave as '≥' and '≤', e.g., 'bp > 100' searches for all moves equal to and greater than 100 base power.",
@@ -252,7 +253,7 @@ if (process.send && module === process.mainModule) {
 
 function runDexsearch(target, cmd, canAll, message) {
 	let searches = [];
-	let allTiers = {'uber':1, 'ou':1, 'bl':1, 'uu':1, 'bl2':1, 'ru':1, 'bl3':1, 'nu':1, 'bl4':1, 'pu':1, 'nfe':1, 'lc uber':1, 'lc':1, 'cap':1};
+	let allTiers = {'uber':'Uber', 'ou':'OU', 'bl':"BL", 'uu':'UU', 'bl2':"BL2", 'ru':'RU', 'bl3':"BL3", 'nu':'NU', 'bl4':"BL4", 'pu':'PU', 'nfe':'NFE', 'lc uber':"LC Uber", 'lc':'LC', 'cap':"CAP"};
 	let allColours = {'green':1, 'red':1, 'blue':1, 'white':1, 'brown':1, 'yellow':1, 'purple':1, 'pink':1, 'gray':1, 'black':1};
 	let allStats = {'hp':1, 'atk':1, 'def':1, 'spa':1, 'spd':1, 'spe':1, 'bst':1};
 	let showAll = false;
@@ -260,15 +261,23 @@ function runDexsearch(target, cmd, canAll, message) {
 	let capSearch = null;
 	let randomOutput = 0;
 
-	let validParameter = (cat, param, isNotSearch) => {
+	let validParameter = (cat, param, isNotSearch, input) => {
+		let uniqueTraits = {'colors':1, 'gens':1};
 		for (let h = 0; h < searches.length; h++) {
 			let group = searches[h];
 			if (group[cat] === undefined) continue;
-			if (group[cat][param] === undefined) continue;
+			if (group[cat][param] === undefined) {
+				if (cat in uniqueTraits) {
+					for (let currentParam in group[cat]) {
+						if (group[cat][currentParam] !== isNotSearch) return "A pokemon cannot have multiple " + cat + ".";
+					}
+				}
+				continue;
+			}
 			if (group[cat][param] === isNotSearch) {
-				return "A search cannot both include and exclude '" + param + "'.";
+				return "A search cannot both include and exclude '" + input + "'.";
 			} else {
-				return "The search included '" + (isNotSearch ? "!" : "") + param + "' more than once.";
+				return "The search included '" + (isNotSearch ? "!" : "") + input + "' more than once.";
 			}
 		}
 		return false;
@@ -276,7 +285,7 @@ function runDexsearch(target, cmd, canAll, message) {
 
 	let andGroups = target.split(',');
 	for (let i = 0; i < andGroups.length; i++) {
-		let orGroup = {abilities: {}, tiers: {}, colors: {}, gens: {}, moves: {}, types: {}, stats: {}, skip: false};
+		let orGroup = {abilities: {}, tiers: {}, colors: {}, gens: {}, moves: {}, types: {}, resists: {}, stats: {}, skip: false};
 		let parameters = andGroups[i].split("|");
 		if (parameters.length > 3) return {reply: "No more than 3 alternatives for each parameter may be used."};
 		for (let j = 0; j < parameters.length; j++) {
@@ -289,18 +298,20 @@ function runDexsearch(target, cmd, canAll, message) {
 
 			let targetAbility = Tools.getAbility(target);
 			if (targetAbility.exists) {
-				let invalid = validParameter("abilities", targetAbility, isNotSearch);
+				let invalid = validParameter("abilities", targetAbility, isNotSearch, targetAbility);
 				if (invalid) return {reply: invalid};
 				orGroup.abilities[targetAbility] = !isNotSearch;
 				continue;
 			}
 
 			if (target in allTiers) {
-				if (target === "cap") {
-					if (parameters.length > 1) return {reply: "The parameter 'cap' cannot have alternative parameters"};
+				target = allTiers[target];
+				if (target === "CAP") {
+					if (parameters.length > 1) return {reply: "The parameter 'CAP' cannot have alternative parameters"};
+					if (capSearch === isNotSearch) return {reply: "A search cannot both include and exclude 'CAP'."};
 					capSearch = !isNotSearch;
 				}
-				let invalid = validParameter("tiers", target, isNotSearch);
+				let invalid = validParameter("tiers", target, isNotSearch, target);
 				if (invalid) return {reply: invalid};
 				orGroup.tiers[target] = !isNotSearch;
 				continue;
@@ -308,18 +319,18 @@ function runDexsearch(target, cmd, canAll, message) {
 
 			if (target in allColours) {
 				target = target.charAt(0).toUpperCase() + target.slice(1);
-				let invalid = validParameter("colors", target, isNotSearch);
+				let invalid = validParameter("colors", target, isNotSearch, target);
 				if (invalid) return {reply: invalid};
 				orGroup.colors[target] = !isNotSearch;
 				continue;
 			}
 
-			if (target.substr(0, 3) === 'gen' && Number.isInteger(parseFloat(target.substr(3)))) target = target.substr(3).trim();
-			let targetInt = parseInt(target);
+			let targetInt = 0;
+			if (target.substr(0, 3) === 'gen' && Number.isInteger(parseFloat(target.substr(3)))) targetInt = parseInt(target.substr(3).trim());
 			if (0 < targetInt && targetInt < 7) {
-				let invalid = validParameter("gens", target, isNotSearch);
+				let invalid = validParameter("gens", targetInt, isNotSearch, target);
 				if (invalid) return {reply: invalid};
-				orGroup.gens[target] = !isNotSearch;
+				orGroup.gens[targetInt] = !isNotSearch;
 				continue;
 			}
 
@@ -339,6 +350,7 @@ function runDexsearch(target, cmd, canAll, message) {
 			}
 
 			if (target === 'megas' || target === 'mega') {
+				if (megaSearch === isNotSearch) return {reply: "A search cannot include and exclude 'mega'."};
 				if (parameters.length > 1) return {reply: "The parameter 'mega' cannot have alternative parameters"};
 				megaSearch = !isNotSearch;
 				orGroup.skip = true;
@@ -349,7 +361,7 @@ function runDexsearch(target, cmd, canAll, message) {
 				if (parameters.length > 1) return {reply: "The parameter 'recovery' cannot have alternative parameters"};
 				let recoveryMoves = ["recover", "roost", "moonlight", "morningsun", "synthesis", "milkdrink", "slackoff", "softboiled", "wish", "healorder"];
 				for (let k = 0; k < recoveryMoves.length; k++) {
-					let invalid = validParameter("moves", recoveryMoves[k], isNotSearch);
+					let invalid = validParameter("moves", recoveryMoves[k], isNotSearch, target);
 					if (invalid) return {reply: invalid};
 					if (isNotSearch) {
 						let bufferObj = {moves: {}};
@@ -369,7 +381,7 @@ function runDexsearch(target, cmd, canAll, message) {
 					let moveData = Tools.getMove(move);
 					if (moveData.category === "Status" || moveData.id === "bide") continue;
 					if (moveData.priority > 0) {
-						let invalid = validParameter("moves", move, isNotSearch);
+						let invalid = validParameter("moves", move, isNotSearch, target);
 						if (invalid) return {reply: invalid};
 						if (isNotSearch) {
 							let bufferObj = {moves: {}};
@@ -384,9 +396,21 @@ function runDexsearch(target, cmd, canAll, message) {
 				break;
 			}
 
+			if (target.substr(0, 8) === 'resists ') {
+				let targetResist = target.substr(8, 1).toUpperCase() + target.substr(9);
+				if (targetResist in Tools.data.TypeChart) {
+					let invalid = validParameter("resists", targetResist, isNotSearch, target);
+					if (invalid) return {reply: invalid};
+					orGroup.resists[targetResist] = !isNotSearch;
+					continue;
+				} else {
+					return {reply: "'" + targetResist + "' is not a recognized type."};
+				}
+			}
+
 			let targetMove = Tools.getMove(target);
 			if (targetMove.exists) {
-				let invalid = validParameter("moves", targetMove.id, isNotSearch);
+				let invalid = validParameter("moves", targetMove.id, isNotSearch, target);
 				if (invalid) return {reply: invalid};
 				orGroup.moves[targetMove.id] = !isNotSearch;
 				continue;
@@ -396,10 +420,12 @@ function runDexsearch(target, cmd, canAll, message) {
 			if (typeIndex >= 0) {
 				target = target.charAt(0).toUpperCase() + target.substring(1, typeIndex);
 				if (target in Tools.data.TypeChart) {
-					let invalid = validParameter("types", target, isNotSearch);
+					let invalid = validParameter("types", target, isNotSearch, target + ' type');
 					if (invalid) return {reply: invalid};
 					orGroup.types[target] = !isNotSearch;
 					continue;
+				} else {
+					return {reply: "'" + target + "' is not a recognized type."};
 				}
 			}
 
@@ -489,14 +515,28 @@ function runDexsearch(target, cmd, canAll, message) {
 			}
 
 			if (alts.tiers && Object.keys(alts.tiers).length) {
-				if (alts.tiers[dex[mon].tier.toLowerCase()]) continue;
-				if (Object.values(alts.tiers).indexOf(false) >= 0 && alts.tiers[dex[mon].tier.toLowerCase()] !== false) continue;
+				if (alts.tiers[dex[mon].tier]) continue;
+				if (Object.values(alts.tiers).indexOf(false) >= 0 && alts.tiers[dex[mon].tier] !== false) continue;
+				// some LC Pokemon are also in other tiers and need to be handled separately
+				if (alts.tiers.LC && !dex[mon].prevo && dex[mon].nfe && dex[mon].tier !== 'LC Uber' && Tools.data.Formats.lc.banlist.indexOf(dex[mon].species) < 0) continue;
 			}
 
 			for (let type in alts.types) {
 				if (dex[mon].types.indexOf(type) >= 0 === alts.types[type]) {
 					matched = true;
 					break;
+				}
+			}
+			if (matched) continue;
+
+			for (let type in alts.resists) {
+				let effectiveness = 0;
+				let notImmune = Tools.getImmunity(type, dex[mon]);
+				if (notImmune) effectiveness = Tools.getEffectiveness(type, dex[mon]);
+				if (!alts.resists[type]) {
+					if (notImmune && effectiveness >= 0) matched = true;
+				} else {
+					if (!notImmune || effectiveness < 0) matched = true;
 				}
 			}
 			if (matched) continue;
@@ -616,6 +656,7 @@ function runMovesearch(target, cmd, canAll, message) {
 	let targets = target.split(',');
 	let searches = {};
 	let allCategories = {'physical':1, 'special':1, 'status':1};
+	let allContestTypes = {'beautiful':1, 'clever':1, 'cool':1, 'cute':1, 'tough':1};
 	let allProperties = {'basePower':1, 'accuracy':1, 'priority':1, 'pp':1};
 	let allFlags = {'authentic':1, 'bite':1, 'bullet':1, 'contact':1, 'defrost':1, 'powder':1, 'pulse':1, 'punch':1, 'secondary':1, 'snatch':1, 'sound':1};
 	let allStatus = {'psn':1, 'tox':1, 'brn':1, 'par':1, 'frz':1, 'slp':1};
@@ -648,6 +689,14 @@ function runMovesearch(target, cmd, canAll, message) {
 			if (!searches['category']) searches['category'] = {};
 			if ((searches['category'][target] && isNotSearch) || (searches['category'][target] === false && !isNotSearch)) return {reply: 'A search cannot both exclude and include a category.'};
 			searches['category'][target] = !isNotSearch;
+			continue;
+		}
+
+		if (target in allContestTypes) {
+			target = target.charAt(0).toUpperCase() + target.substr(1);
+			if (!searches['contestType']) searches['contestType'] = {};
+			if ((searches['contestType'][target] && isNotSearch) || (searches['contestType'][target] === false && !isNotSearch)) return {reply: 'A search cannot both exclude and include a contest condition.'};
+			searches['contestType'][target] = !isNotSearch;
 			continue;
 		}
 
@@ -829,6 +878,7 @@ function runMovesearch(target, cmd, canAll, message) {
 		switch (search) {
 		case 'type':
 		case 'category':
+		case 'contestType':
 			for (let move in dex) {
 				if (searches[search][String(dex[move][search])] === false ||
 					Object.values(searches[search]).indexOf(true) >= 0 && !searches[search][String(dex[move][search])]) {

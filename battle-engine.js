@@ -18,12 +18,6 @@ if (Config.crashguard) {
 	// graceful crash - allow current battles to finish before restarting
 	process.on('uncaughtException', err => {
 		require('./crashlogger.js')(err, 'A simulator process');
-		/* let stack = Tools.escapeHTML(err.stack).split("\n").slice(0, 2).join("<br />");
-		if (Rooms.lobby) {
-			Rooms.lobby.addRaw('<div><b>THE SERVER HAS CRASHED:</b> ' + stack + '<br />Please restart the server.</div>');
-			Rooms.lobby.addRaw('<div>You will not be able to talk in the lobby or start new battles until the server restarts.</div>');
-		}
-		Rooms.global.lockdown = true; */
 	});
 }
 
@@ -1013,10 +1007,11 @@ BattlePokemon = (() => {
 		if (!sourceEffect && this.battle.effect) sourceEffect = this.battle.effect;
 		if (!source && this.battle.event && this.battle.event.target) source = this.battle.event.target;
 		item = this.getItem();
-		if (this.battle.runEvent('UseItem', this, null, null, item) && this.battle.runEvent('EatItem', this, null, null, item)) {
+		if (this.battle.runEvent('UseItem', this, null, null, item) && this.battle.runEvent('TryEatItem', this, null, null, item)) {
 			this.battle.add('-enditem', this, item, '[eat]');
 
 			this.battle.singleEvent('Eat', item, this.itemData, this, source, sourceEffect);
+			this.battle.runEvent('EatItem', this, null, null, item);
 
 			this.lastItem = this.item;
 			this.item = '';
@@ -3447,18 +3442,19 @@ Battle = (() => {
 		basePower = this.clampIntRange(basePower, 1);
 
 		let critMult;
+		let critRatio = this.runEvent('ModifyCritRatio', pokemon, target, move, move.critRatio || 0);
 		if (this.gen <= 5) {
-			move.critRatio = this.clampIntRange(move.critRatio, 0, 5);
+			critRatio = this.clampIntRange(critRatio, 0, 5);
 			critMult = [0, 16, 8, 4, 3, 2];
 		} else {
-			move.critRatio = this.clampIntRange(move.critRatio, 0, 4);
+			critRatio = this.clampIntRange(critRatio, 0, 4);
 			critMult = [0, 16, 8, 2, 1];
 		}
 
 		move.crit = move.willCrit || false;
 		if (move.willCrit === undefined) {
-			if (move.critRatio) {
-				move.crit = (this.random(critMult[move.critRatio]) === 0);
+			if (critRatio) {
+				move.crit = (this.random(critMult[critRatio]) === 0);
 			}
 		}
 

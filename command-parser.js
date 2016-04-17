@@ -167,14 +167,14 @@ class CommandContext {
 		}
 		return true;
 	}
-	canBroadcast() {
+	canBroadcast(suppressMessage) {
 		if (!this.broadcasting && this.cmdToken === BROADCAST_TOKEN) {
 			if (this.user.broadcasting) {
 				this.errorReply("You can't broadcast another command too soon.");
 				return false;
 			}
 
-			let message = this.canTalk(this.message);
+			let message = this.canTalk(suppressMessage || this.message);
 			if (!message) return false;
 			if (!this.user.can('broadcast', null, this.room)) {
 				this.errorReply("You need to be voiced to broadcast this command's information.");
@@ -205,7 +205,7 @@ class CommandContext {
 
 		if (!this.broadcastMessage) {
 			// Permission hasn't been checked yet. Do it now.
-			if (!this.canBroadcast()) return false;
+			if (!this.canBroadcast(suppressMessage)) return false;
 		}
 
 		if (this.user.isSpamroomed()) {
@@ -467,7 +467,7 @@ class CommandContext {
 		let targetUser = Users.get(this.inputUsername, exactName);
 		if (targetUser) {
 			this.targetUser = targetUser;
-			this.targetUsername = this.inputUsername = targetUser.name;
+			this.targetUsername = targetUser.name;
 		} else {
 			this.targetUser = null;
 			this.targetUsername = this.inputUsername;
@@ -580,8 +580,10 @@ let parse = exports.parse = function (message, room, user, connection, levelsDee
 		// Check for mod/demod/admin/deadmin/etc depending on the group ids
 		for (let g in Config.groups) {
 			let groupid = Config.groups[g].id;
-			if (cmd === groupid || cmd === 'global' + groupid) {
+			if (cmd === groupid) {
 				return parse('/promote ' + toId(target) + ', ' + g, room, user, connection, levelsDeep + 1);
+			} else if (cmd === 'global' + groupid) {
+				return parse('/globalpromote ' + toId(target) + ', ' + g, room, user, connection, levelsDeep + 1);
 			} else if (cmd === 'de' + groupid || cmd === 'un' + groupid || cmd === 'globalde' + groupid || cmd === 'deglobal' + groupid) {
 				return parse('/demote ' + toId(target), room, user, connection, levelsDeep + 1);
 			} else if (cmd === 'room' + groupid) {

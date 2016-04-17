@@ -33,8 +33,13 @@ exports.commands = {
 		}
 
 		let buf = '<strong class="username"><small style="display:none">' + targetUser.group + '</small>' + Tools.escapeHTML(targetUser.name) + '</strong> ' + (!targetUser.connected ? ' <em style="color:gray">(offline)</em>' : '');
+		let roomauth = '';
+		if (room.auth && targetUser.userid in room.auth) roomauth = room.auth[targetUser.userid];
+		if (Config.groups[roomauth] && Config.groups[roomauth].name) {
+			buf += "<br />" + Config.groups[roomauth].name + " (" + roomauth + ")";
+		}
 		if (Config.groups[targetUser.group] && Config.groups[targetUser.group].name) {
-			buf += "<br />" + Config.groups[targetUser.group].name + " (" + targetUser.group + ")";
+			buf += "<br />Global " + Config.groups[targetUser.group].name + " (" + targetUser.group + ")";
 		}
 		if (targetUser.isSysop) {
 			buf += "<br />(Pok&eacute;mon Showdown System Operator)";
@@ -352,7 +357,7 @@ exports.commands = {
 			}
 
 			buffer += '|raw|<font size="1">' + Object.keys(details).map(detail => {
-				if (!details[detail]) return detail;
+				if (details[detail] === '') return detail;
 				return '<font color="#686868">' + detail + ':</font> ' + details[detail];
 			}).join("&nbsp;|&ThickSpace;") + '</font>';
 
@@ -1354,6 +1359,8 @@ exports.commands = {
 			let formatId = extraFormat.id;
 			if (formatId === 'doublesou') {
 				formatId = 'doubles';
+			} else if (formatId === 'battlespotsingles') {
+				formatId = 'battle_spot_singles';
 			} else if (formatId.includes('vgc')) {
 				formatId = 'vgc' + formatId.slice(-2);
 				formatName = 'VGC20' + formatId.slice(-2);
@@ -1410,8 +1417,8 @@ exports.commands = {
 			return this.sendReplyBox("Pok&eacute;mon, item, move, ability, or format not found for generation " + generation.toUpperCase() + ".");
 		}
 	},
-	smogdexhelp: ["/analysis [pokemon], [generation] - Links to the Smogon University analysis for this Pok\u00e9mon in the given generation.",
-		"!analysis [pokemon], [generation] - Shows everyone this link. Requires: + % @ # & ~"],
+	smogdexhelp: ["/analysis [pokemon], [generation], [format] - Links to the Smogon University analysis for this Pok\u00e9mon in the given generation.",
+		"!analysis [pokemon], [generation], [format] - Shows everyone this link. Requires: + % @ # & ~"],
 
 	veekun: function (target, broadcast, user) {
 		if (!this.runBroadcast()) return;
