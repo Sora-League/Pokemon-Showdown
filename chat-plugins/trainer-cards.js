@@ -30,7 +30,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
+		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
 		for (let i = 0; i < list.length; i++) {
 			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -196,17 +196,6 @@ exports.commands = {
 			+ getBadges('coachabadon') +'<br><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center>');
 	},
 
-
-	meows: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Meows</b>∆<br />' +
-			'<i>"Abs=Win"</i> <br />' +
-			'<b>Symbol: </b>Patience <br />' +
-			'<b>Ace:</b> Quagsire<br />' +
-			'<b>Battle rules:</b> <br />' +
-			'-OU<br />' +
-			'-No Trick/Switcheroo <br />' + seen('sorameows') + getBadges('sorameows'));
-	},
 
        	akash: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -425,15 +414,15 @@ exports.commands = {
 	},
 
 
-	
-	ice: function (target, room, user) {
+       meows: 'ice',	
+       ice: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Meows</b>∆<br />' +
+			'<i>"i i5 ver1 c00l thanker1n0s f0r batt1e"</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br>' +
-			getBadges('')
+			'<b>Ace:</b> Froslass<br />' +
+			seen('sorameows') + '<br>' +
+			getBadges('sorameows')
 		);
 	},
 
