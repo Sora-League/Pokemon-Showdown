@@ -354,13 +354,13 @@ exports.commands = {
 		);
 	},
 
-       arjun: 'fighting',
+       
 	fighting: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />'+
-			'<i>"Everyone has a plan until they get punched in their face."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			'<i>"???"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Mega Medicham<br />' + seen('soraarjunb') + getBadges('soraarjunb')
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???')
 		);
         },
 
@@ -464,14 +464,14 @@ exports.commands = {
 	},
 
 	
-	
+	arjun: 'steel',
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />' +
+			'<i>"Everyone has a plan until they get punched in their face."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' +
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Heatran <br />' +
+			seen('soraarjun') + getBadges('soraarjun'));
 
 	},
 
