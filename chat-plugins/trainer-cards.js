@@ -135,17 +135,7 @@ exports.commands = {
 			getBadges('soratempest'));
 	},
 	
-	nightanglet: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Nightanglet</b>∆<br />' +
-			'<i>"What\'s a quote?"</i> <br />' +
-			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
-			'<b>Ace:</b> Gallade<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + 
-			seen('soranightanglet') +
-			getBadges('soranightanglet'));
-	},
+
 	
 	whitefang: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -354,13 +344,13 @@ exports.commands = {
 		);
 	},
 
-       
+       nightanglet: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Nightanglet</b>∆<br />'+
+			'<i>"What\'s a quote?"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???')
+			'<b>Ace:</b> Mega-Gallade<br />' + seen('soranightanglet') + getBadges('soranightanglet')
 		);
         },
 
@@ -454,13 +444,13 @@ exports.commands = {
 			'<b>Ace:</b> B8ed (Slowbro) <br />' + seen('soraleaf') + getBadges ('soraleaf'));
 	},
 
-	nightanglet: 'rock',
+	
 	rock: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Nightanglet</b>∆<br />' +
-			'<i>"What\'s a quote?"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Archeops<br />' + seen('soranightanglet') + getBadges('soranightanglet'));
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 
 	
