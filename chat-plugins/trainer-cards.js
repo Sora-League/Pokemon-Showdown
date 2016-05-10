@@ -360,7 +360,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Natalie</b>∆<br />'+
 	              '<i>"We wage a war that can\'t be won."</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace: Mega Charizard Y</b> <br />'  + seen('soranatalie') + '<br>' +
+	              '<b>Ace:</b> Mega Charizard-Y <br />'  + seen('soranatalie') + '<br>' +
 	              getBadges('soranatalie'));
 	},
 
