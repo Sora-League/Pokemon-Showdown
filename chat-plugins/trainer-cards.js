@@ -354,15 +354,14 @@ exports.commands = {
 		);
         },
 
-	fire: 'waffles',
-    	waffles: function(target, room, user) {
+	natalie: 'fire',
+    	fire: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
-	              '<i>"Don\'t waffle out of the situation."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Natalie</b>∆<br />'+
+	              '<i>"We wage a war that can\'t be won."</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace: Infernape</b> <br />'  + seen('sorawaffles') + '<br>' +
-	              '<img src = "http://sprites.pokecheck.org/t/010.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/heatran.gif"><br>' + 
-	              getBadges('sorawaffles'));
+	              '<b>Ace: Mega Charizard Y</b> <br />'  + seen('soranatalie') + '<br>' +
+	              getBadges('soranatalie'));
 	},
 
 	flying: 'float',
