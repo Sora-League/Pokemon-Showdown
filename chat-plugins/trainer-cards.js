@@ -301,13 +301,13 @@ exports.commands = {
 			'<b>Ace:</b> Umbreon<br />' + seen('soranoel') + getBadges('soranoel')); 
 	},
 
-	memelord: 'dragon',
+	waffles: 'dragon',
 	dragon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Memelord</b>∆<br />' +
-			'<i>"So comes snow after fire, and even dragons have their endings."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> Dragonite<br />' + seen('soramemelord') + getBadges('soramemelord'));
+			'<b>Ace:</b> ???<br />' + seen('sorawaffles') + getBadges('sorawaffles'));
 	},
 
 	
