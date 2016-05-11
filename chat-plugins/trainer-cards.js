@@ -431,7 +431,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />' +
 			'<i>"I\'m not a toxic player! I may make you one though."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />' + seen('sorabigo') + getBadges('sorabigo'));
+			'<b>Ace:</b> Gengar<br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 	
         leaf: 'psychic',
