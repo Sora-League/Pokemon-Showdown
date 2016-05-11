@@ -283,13 +283,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	doku: 'bug',
+	
 	bug: function(target, room, user) {
 	        if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />'+
-			  '<i>"Holy crap, why is it 5\'3"! That\'s not normal! Well, neither am I."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+			  '<i>"???"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Yanmega<br />' + seen('soradoku') + getBadges('soradoku'));
+			  '<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 
 	noel: 'dark',
@@ -425,13 +425,13 @@ exports.commands = {
 		'<b>Ace:</b> Lopunny<br />' + seen('sorabigo') + getBadges('sorabigo'));
     },
 
-	  
+	bigo: 'poison',  
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Bigo</b>∆<br />' +
+			'<i>"I\'m not a toxic player! I may make you one though."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+			'<b>Ace:</b> Gengar<br />' + seen('sorabigo') + getBadges('sorabigo'));
 	},
 	
         leaf: 'psychic',
