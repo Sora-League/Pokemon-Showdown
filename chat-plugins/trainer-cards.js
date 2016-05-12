@@ -283,13 +283,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	
+	aros: 'bug',
 	bug: function(target, room, user) {
 	        if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-			  '<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />'+
+			  '<i>"My bug Pokémon are scurrying with excitement about getting to battle you. Let\'s get straight to it!"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+			  '<b>Ace:</b> Volcarona<br />' + seen('soraaros') + getBadges('soraaros'));
 	},
 
 	noel: 'dark',
@@ -464,13 +464,13 @@ exports.commands = {
 
 	},
 
-        aros: 'water',
+        
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />' +
-			'<i>"Calm and collected like the waves, harsh and brutal like a Tsunami, that is what I am."</i> <br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Cloyster <br/>'
+			'<b>Ace:</b> ??? <br/>'
 		);
 	},
 
