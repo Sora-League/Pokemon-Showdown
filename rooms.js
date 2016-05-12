@@ -787,7 +787,7 @@ let GlobalRoom = (() => {
 		this.users[user.userid] = user;
 		if (user.named && toId(oldid) != toId(user)) {
 			Core.write('lastseen', user.userid, Date.now());
-			if (toId(oldid).match(/^guest[0-9]/)) Core.write('lastseen', toId(oldid), Date.now());
+			if (!toId(oldid).match(/^guest[0-9]/)) Core.write('lastseen', toId(oldid), Date.now());
 		}
 		getTells(user);
 		return user;
