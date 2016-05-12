@@ -354,14 +354,14 @@ exports.commands = {
 		);
         },
 
-	natalie: 'fire',
+	
     	fire: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Natalie</b>∆<br />'+
-	              '<i>"We wage a war that can\'t be won."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+	              '<i>"???"</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace:</b> Mega Charizard-Y <br />'  + seen('soranatalie') + '<br>' +
-	              getBadges('soranatalie'));
+	              '<b>Ace:</b> ??? <br />'  + seen('???') + '<br>' +
+	              getBadges('???'));
 	},
 
 	flying: 'float',
@@ -467,7 +467,7 @@ exports.commands = {
         
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
 			'<b>Ace:</b> ??? <br/>'
