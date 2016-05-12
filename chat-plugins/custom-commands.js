@@ -332,20 +332,21 @@ exports.commands = {
 		request(path, (error, response, body) => {
 			if (error || response.statusCode === 404) {
 				this.sendReplyBox(target + ' is not registered.');
-				return;
+			} else {
+				let info = JSON.parse(body);
+				let name = (Users(target) ? Users(target).name : info.username);
+				if (!info.registertime) return this.sendReplyBox(name + ' is not registered.');
+				else {
+					let regTime = info.registertime;
+					while (('' + regTime).length < 13) regTime = Number(('' + regTime) + '0');
+					regTime = require('dateformat')(regTime, 'dddd, mmmm dS yyyy, HH:MM:ss');
+					this.sendReplyBox(name + ' was registered on ' + regTime);
+				}
 			}
-			let info = JSON.parse(body);
-			let name = (Users(target) ? Users(target).name : info.username);
-			if (!info.registertime) return this.sendReplyBox(name + ' is not registered.');
-
-			let regTime = info.registertime;
-			while (('' + regTime).length < 13) regTime = Number(('' + regTime) + '0');
-			regTime = require('dateformat')(regTime, 'dddd, mmmm dS, yyyy, HH:MM:ss');
-			this.sendReplyBox(name + ' was registered on ' + regTime);
+			if (this.broadcasting) room.update();
 		});
-		if (this.broadcasting) room.update();
 	},
-	regdatehelp: ['/regdate [user] - Displays the date on which the user was registered.'],
+	regdatehelp: ['/regdate [user] - Displays the day, date, and time a user was registered.'],
 
 	u: 'urbandefine',
 	ud: 'urbandefine',

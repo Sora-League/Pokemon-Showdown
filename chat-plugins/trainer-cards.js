@@ -135,17 +135,7 @@ exports.commands = {
 			getBadges('soratempest'));
 	},
 	
-	nightanglet: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Nightanglet</b>∆<br />' +
-			'<i>"What\'s a quote?"</i> <br />' +
-			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
-			'<b>Ace:</b> Gallade<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + 
-			seen('soranightanglet') +
-			getBadges('soranightanglet'));
-	},
+
 	
 	whitefang: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -293,13 +283,13 @@ exports.commands = {
 	//Gym Leaders
 	//////////////
 
-	doku: 'bug',
+	aros: 'bug',
 	bug: function(target, room, user) {
 	        if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />'+
-			  '<i>"Holy crap, why is it 5\'3"! That\'s not normal! Well, neither am I."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />'+
+			  '<i>"My bug Pokémon are scurrying with excitement about getting to battle you. Let\'s get straight to it!"</i> <br />'+
 			  '<b>Type: <font color = 65b510>Bug</font></b><br />'+
-			  '<b>Ace:</b> Yanmega<br />' + seen('soradoku') + getBadges('soradoku'));
+			  '<b>Ace:</b> Volcarona<br />' + seen('soraaros') + getBadges('soraaros'));
 	},
 
 	noel: 'dark',
@@ -311,13 +301,13 @@ exports.commands = {
 			'<b>Ace:</b> Umbreon<br />' + seen('soranoel') + getBadges('soranoel')); 
 	},
 
-	memelord: 'dragon',
+	waffles: 'dragon',
 	dragon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Memelord</b>∆<br />' +
-			'<i>"So comes snow after fire, and even dragons have their endings."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> Dragonite<br />' + seen('soramemelord') + getBadges('soramemelord'));
+			'<b>Ace:</b> ???<br />' + seen('sorawaffles') + getBadges('sorawaffles'));
 	},
 
 	
@@ -354,35 +344,34 @@ exports.commands = {
 		);
 	},
 
-       arjun: 'fighting',
+       nightanglet: 'fighting',
 	fighting: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />'+
-			'<i>"Everyone has a plan until they get punched in their face."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Nightanglet</b>∆<br />'+
+			'<i>"What\'s a quote?"</i> <br />'+
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />'+
-			'<b>Ace:</b> Mega Medicham<br />' + seen('soraarjunb') + getBadges('soraarjunb')
+			'<b>Ace:</b> Mega-Gallade<br />' + seen('soranightanglet') + getBadges('soranightanglet')
 		);
         },
 
-	fire: 'waffles',
-    	waffles: function(target, room, user) {
+	
+    	fire: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />'+
-	              '<i>"Don\'t waffle out of the situation."</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+	              '<i>"???"</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace: Infernape</b> <br />'  + seen('sorawaffles') + '<br>' +
-	              '<img src = "http://sprites.pokecheck.org/t/010.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/heatran.gif"><br>' + 
-	              getBadges('sorawaffles'));
+	              '<b>Ace:</b> ??? <br />'  + seen('???') + '<br>' +
+	              getBadges('???'));
 	},
 
 	flying: 'float',
 	float: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"flap... flap... flap... bird type...?"</i> <br />' +
+			'<i>"You\'re not one of the gods, you\'re one of the god awfuls" -chillindude</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Hawlucha (John Cena)<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/swablu.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/starly.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/charizard-mega-y.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/starly.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/swablu.gif"><br />' +
+			'<b>Ace:</b> Landorus-Therian<br />' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/moltres.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zapdos.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/articuno.gif"><br />' +
 			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
 			seen('sorafloat') + getBadges('sorafloat'));
 	},
@@ -436,13 +425,13 @@ exports.commands = {
 		'<b>Ace:</b> Lopunny<br />' + seen('sorabigo') + getBadges('sorabigo'));
     },
 
-	  
+	doku: 'poison',  
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />' +
+			'<i>"I\'m not a toxic player! I may make you one though."</i> <br />'+
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+			'<b>Ace:</b> Gengar<br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 	
         leaf: 'psychic',
@@ -454,34 +443,34 @@ exports.commands = {
 			'<b>Ace:</b> B8ed (Slowbro) <br />' + seen('soraleaf') + getBadges ('soraleaf'));
 	},
 
-	nightanglet: 'rock',
+	
 	rock: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Nightanglet</b>∆<br />' +
-			'<i>"What\'s a quote?"</i> <br />' +
-			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Archeops<br />' + seen('soranightanglet') + getBadges('soranightanglet'));
-	},
-
-	
-	
-	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
+			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+	},
+
+	
+	arjun: 'steel',
+	steel: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />' +
+			'<i>"Everyone has a plan until they get punched in their face."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' +
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Heatran <br />' +
+			seen('soraarjun') + getBadges('soraarjun'));
 
 	},
 
-        aros: 'water',
+        
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Aros</b>∆<br />' +
-			'<i>"Calm and collected like the waves, harsh and brutal like a Tsunami, that is what I am."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Cloyster <br/>'
+			'<b>Ace:</b> ??? <br/>'
 		);
 	},
 
@@ -722,9 +711,6 @@ exports.commands = {
 			'<b style = "font-size: 9pt;">Best With:</b> Fairy Monotype, Hackmons Cup, UU<br><br>' +
 			'<b style = "font-size: 9pt;">Bragging Rights:</b><br>' +
 			'<li>Greatest Fairy Leader<br>' +
-			'<li>"Haxlord Youmaton, making Sora salty since 2015"<br><br>' +
-			'<b style = "font-size: 9pt;">People Youmaton\'s made salty:</b><br>' +
-			'<b>**Tempest**<br>**SolarWolf**<br>**Terror**</b><br><br><br>' + 
 			'<audio controls src = "https://dl2.pushbulletusercontent.com/gxrmXAXogKMLTn4qJDXbFynuhX3oTzuv/Bravely%20second.mp3" style = "width: 90%; border-radius: 5px; border: 1px solid violet; background: linear-gradient(45deg, #ebadff, #9600c4, #ebadff, #9600c4, #011100, #ebadff);"></center></div>'
 		);
 	},
