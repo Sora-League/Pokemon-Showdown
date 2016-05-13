@@ -570,7 +570,7 @@ exports.commands = {
 			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#aegislash"><img src="http://i.imgur.com/aJY3eKg.png" title="Winner of Sora\'s first major Monotype Round Robin Tour"></a></details> <br />');
 	},
 
-	gasp: function (target, room, user) {
+	trainergasp: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Trainer <b>gasp</b><br />' +
 			'<i>"Lights out."</i> <br />' +
