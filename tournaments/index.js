@@ -739,6 +739,7 @@ class Tournament {
 		}
 	}
 	onBattleWin(room, winnerid) {
+		let tourSize = this.generator.getUsers().length;
 		let from = this.players[room.p1.userid];
 		let to = this.players[room.p2.userid];
 		let winner = this.players[winnerid];
