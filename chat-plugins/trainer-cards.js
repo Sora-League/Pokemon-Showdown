@@ -434,13 +434,13 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 	
-        leaf: 'psychic',
+        
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
-			'<i>"Let\'s play mind games."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> B8ed (Slowbro) <br />' + seen('soraleaf') + getBadges ('soraleaf'));
+			'<b>Ace:</b> ??? <br />' + seen('???') + getBadges ('???'));
 	},
 
 	
@@ -464,13 +464,13 @@ exports.commands = {
 
 	},
 
-        
+        leaf: 'water',
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
+			'<i>"Beached, but still in it."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> Slowking <br/>'
 		);
 	},
 
