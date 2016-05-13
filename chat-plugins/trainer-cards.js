@@ -292,13 +292,13 @@ exports.commands = {
 			  '<b>Ace:</b> Volcarona<br />' + seen('soraaros') + getBadges('soraaros'));
 	},
 
-	noel: 'dark',
+	gasp: 'dark',
 	dark: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Noel</b>∆<br />' +
-			'<i>"Caught in the wind of ill intentions, the nighthawk soars."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Gasp</b>∆<br />' +
+			'<i>"Light is arbitrary, Darkness is absolute."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Umbreon<br />' + seen('soranoel') + getBadges('soranoel')); 
+			'<b>Ace:</b> Sableye<br />' + seen('soragasp') + getBadges('gasp')); 
 	},
 
 	waffles: 'dragon',
