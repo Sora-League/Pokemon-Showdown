@@ -204,7 +204,7 @@ exports.commands = {
 			'<b>Symbol: </b>Nuclear <br />' +
 			'<b>Ace:</b> Sableye<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-STABmons<br />' + seen('soraakash') + getBadges('soraakash'));
+			'-STABmons<br />' + seen('sorabigo') + getBadges('sorabigo'));
 	},
 
 
