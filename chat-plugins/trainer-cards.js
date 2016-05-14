@@ -197,6 +197,18 @@ exports.commands = {
 			'-Almost Any Ability<br />' + seen('soraakash') + getBadges('soraakash'));
 	},
 
+       bigo: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Bigo</b>∆<br />' +
+			'<i>"Being unpredictable is what will make this fight to be on my side."</i> <br />' +
+			'<b>Symbol: </b>Nuclear <br />' +
+			'<b>Ace:</b> Sableye<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-STABmons<br />' + seen('soraakash') + getBadges('soraakash'));
+	},
+
+
+
 	silver: "siiilver",
 	siiilver: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -415,14 +427,13 @@ exports.commands = {
 		);
 	},
 
-	normal: 'bigo',
-        bigo: function(target, room, user) {
+	
+        normal: function(target, room, user) {
 	if (!this.runBroadcast()) return;
-	this.sendReplyBox('∆Gym Ldr <b>Bigo</b>∆<br />'+
-	        'Leader Ranking: <font color = FF0000><b>1st</font></b> <br />' +
-		'<i>"Don\'t underestimate the normal, cause being \'normal\'  doesn\'t mean to be weak"</i> <br />'+
-	    '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
-		'<b>Ace:</b> Lopunny<br />' + seen('sorabigo') + getBadges('sorabigo'));
+	this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+		'<i>"???"</i> <br />'+
+	        '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
+		'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
     },
 
 	doku: 'poison',  
