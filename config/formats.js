@@ -2145,11 +2145,7 @@ exports.Formats = [
 
 		mod: 'tiershift',
 		ruleset: ['OU'],
-<<<<<<< HEAD
-		banlist: ['Swift Swim']
-=======
 		banlist: [],
->>>>>>> Zarel/master
 	},
 	{
 		name: "OU (no Mega)",
