@@ -30,7 +30,7 @@ exports.commands = {
 		}
 		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
 		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Akash∆'];
+		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Arjun∆', '∆Sora Akash∆'];
 		for (let i = 0; i < list.length; i++) {
 			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
 			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
@@ -40,7 +40,7 @@ exports.commands = {
 		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
 		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
 		list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Bigo∆', '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora Nightanglet'
+		        '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora Nightanglet∆'
 		];
 		for (let i = 0; i < list.length; i++) {
 			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
@@ -206,6 +206,17 @@ exports.commands = {
 			'<b>Battle rules:</b> <br />' +
 			'-STABmons<br />' + seen('sorabigo') + getBadges('sorabigo'));
 	},
+
+        arjun: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Arjun</b>∆<br />' +
+			'<i>"Everyone has a plan until they get punched in their face."</i> <br />' +
+			'<b>Symbol: </b>Fist <br />' +
+			'<b>Ace:</b> Charizard<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-NU<br />' + seen('soraarjun') + getBadges('soraarjun'));
+	},
+
 
 
 
@@ -464,14 +475,14 @@ exports.commands = {
 	},
 
 	
-	arjun: 'steel',
+
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />' +
-			'<i>"Everyone has a plan until they get punched in their face."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Heatran <br />' +
-			seen('soraarjun') + getBadges('soraarjun'));
+			'<b>Ace:</b> ???<br />' +
+			seen('') + getBadges(''));
 
 	},
 
