@@ -2273,25 +2273,6 @@ exports.Formats = [
 		banlist: ['Ignore STAB Moves', 'Diggersby', 'Aerodactylite', 'Altarianite', "King's Rock", 'Metagrossite', 'Razor Fang'],
 	},
 	{
-		name: "LC UU",
-		desc: [
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3562639/\">LC UU</a>",
-			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3562640/\">LC UU Viability Ranking</a>",
-		],
-		section: "Other Metagames",
-
-		maxLevel: 5,
-		ruleset: ['LC'],
-		banlist: ['Abra', 'Aipom', 'Anorith', 'Archen', 'Bunnelby', 'Carvanha', 'Chinchou', 'Corphish', 'Cottonee',
-			'Croagunk', 'Diglett', 'Drifloon', 'Drilbur', 'Dwebble', 'Elekid', 'Ferroseed', 'Fletchling', 'Foongus',
-<<<<<<< HEAD
-			'Gastly', 'Honedge', 'Houndour', 'Larvesta', 'Magnemite', 'Mienfoo', 'Munchlax', 'Omanyte', 'Onix',
-			'Pancham', 'Pawniard', 'Ponyta', 'Porygon', 'Scraggy', 'Shellder', 'Skrelp', 'Snivy', 'Snubbull',
-			'Spritzee', 'Staryu', 'Stunky', 'Surskit', 'Timburr', 'Tirtouga', 'Vullaby', 'Vulpix', 'Zigzagoon',
-			'Shell Smash', 'Sticky Web'
-		]
-	},
-	{
 		name: "Mix and Mega",
 		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3540979/\">Mix and Mega</a>"],
 
@@ -2476,13 +2457,6 @@ exports.Formats = [
 				this.add('-start', source, 'typechange', type, '[from] Protean');
 			}
 		}
-=======
-			'Gastly', 'Gothita', 'Hippopotas', 'Honedge', 'Larvesta', 'Magnemite', 'Mienfoo', 'Munchlax', 'Omanyte',
-			'Onix', 'Pawniard', 'Ponyta', 'Porygon', 'Scraggy', 'Shellder', 'Snivy', 'Snubbull', 'Spritzee',
-			'Staryu', 'Stunky', 'Surskit', 'Timburr', 'Tirtouga', 'Torchic', 'Vullaby', 'Vulpix', 'Zigzagoon',
-			'Shell Smash', 'Sticky Web',
-		],
->>>>>>> Zarel/master
 	},
 	{
 		name: "Hackmons Cup",
@@ -2536,15 +2510,6 @@ exports.Formats = [
 		ruleset: ['OU']
 	},
 	{
-		name: "OU Theorymon",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3559611/\">OU Theorymon</a>"],
-		section: "Other Metagames",
-
-		mod: 'theorymon',
-		searchShow: false,
-		ruleset: ['OU']
-	},
-	{
 		name: "Gen-NEXT OU",
 		section: "Other Metagames",
 
@@ -2595,14 +2560,8 @@ exports.Formats = [
 		name: "Monotype Random Battle",
 		section: "Other Metagames",
 
-<<<<<<< HEAD
-		team: 'randomMonotype',
-		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod']
-=======
 		team: 'random',
-		searchShow: false,
 		ruleset: ['Pokemon', 'Same Type Clause', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
->>>>>>> Zarel/master
 	},
 
 	// BW2 Singles
