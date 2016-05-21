@@ -380,15 +380,18 @@ exports.commands = {
 	blade: 'fire',
     	fire: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />'+
 	              '<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
 	              '<b>Ace:</b> Victini<br />'+
 	              '<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
 		      '<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
 		      '<b>R.I.P. War Turtle</b> <br />' +
-		      '1st Apostle of the All Mighty Lord Parasect</details><br />' +
-		      '<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />'+
+		      '1st Apostle of the All Mighty Lord Parasect</details>' +
+		      '<details><summary><font color = 009900><b>Aegislash Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aegislash.gif"></center>' +
+		      '<b>R.I.P. Shadow Snek</b> <br />' +
+		      '2nd Apostle of the All Mighty Lord Parasect</details><br />' +
+		      '<img src="http://oi62.tinypic.com/14cfyh0.jpg"><img src="http://66.media.tumblr.com/6d1996ce9d10db40fa5f088f7887c71e/tumblr_o15namAV1o1v5aa3xo1_1280.png" width=150 height=150></center> <br />'+
 	              seen('SoraBlade') + '<br>' +
 	              getBadges('SoraBlade'));
 	},
