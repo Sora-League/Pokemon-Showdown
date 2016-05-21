@@ -377,7 +377,7 @@ exports.commands = {
 		);
         },
 
-	blade: 'fire'
+	blade: 'fire',
     	fire: function(target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
@@ -409,7 +409,7 @@ exports.commands = {
         
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> ???<br />'+
