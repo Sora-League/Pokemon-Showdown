@@ -176,7 +176,8 @@ exports.commands = {
 			"cpe-67-253-120-124.maine.res.rr.com", "62.140.132.94", "62.140.132.19", "50.84.151.157", "67.164.32.244",
 			"117.216.41.194", "CPE-155-143-4-109.vic.bigpond.net.au", "94.254.0.55", "108.61.179.200.vultr.com",
 			"ool-4573a317.dyn.optonline.net", "69.115.163.23", "173.30.53.93", "71.41.165.94",
-			"bb116-15-8-217.singnet.com.sg", "62.140.132.13", "103-10-199-146.pacswitch.com", "116.14.185.162", "62.209.10.6", "62-209-10-6.wimax.bb.zain.com"
+			"bb116-15-8-217.singnet.com.sg", "62.140.132.13", "103-10-199-146.pacswitch.com", "116.14.185.162", "62.209.10.6", "62-209-10-6.wimax.bb.zain.com",
+			"122.162.78.223", "abts-north-dynamic-223.78.162.122.airtelbroadband.in"
 		];
 		for (let i = 0; i < blacklist.length; i++) {
 			if (user.latestHost.indexOf(blacklist[i]) > -1 || user.latestIp.indexOf(blacklist[i]) > -1) {
