@@ -377,14 +377,20 @@ exports.commands = {
 		);
         },
 
-	
+	blade: 'fire'
     	fire: function(target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-	              '<i>"???"</i> <br />'+
+	              '<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace:</b> ??? <br />'  + seen('???') + '<br>' +
-	              getBadges('???'));
+	              '<b>Ace:</b> Victini<br />'+
+	              '<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
+		      '<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
+		      '<b>R.I.P. War Turtle</b> <br />' +
+		      '1st Apostle of the All Mighty Lord Parasect</details><br />' +
+		      '<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />'+
+	              seen('SoraBlade') + '<br>' +
+	              getBadges('SoraBlade'));
 	},
 
 	flying: 'float',
@@ -400,19 +406,14 @@ exports.commands = {
 	},
 
     
-        blade: 'ghost',
+        
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
-			'<i>"Be Stronger Than Your Strongest Excuse"</i> <br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />'+
-			seen('sorablade') + getBadges('sorablade') +
-			'<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
-			'<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
-			'<b>R.I.P. War Turtle</b> <br />' +
-			'1st Apostle of the All Mighty Lord Parasect</details><br />' +
-			'<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<b>Ace:</b> ???<br />'+
+			seen('') + getBadges('');
 	},
 
 
