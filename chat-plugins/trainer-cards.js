@@ -413,7 +413,7 @@ exports.commands = {
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> ???<br />'+
-			seen('') + getBadges('');
+			seen('') + getBadges(''));
 	},
 
 
