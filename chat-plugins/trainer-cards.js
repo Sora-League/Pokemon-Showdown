@@ -463,6 +463,7 @@ exports.commands = {
 			'<i>"I WILL ROCK YOUR WORLD!!"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Tyranitar<br />' + 
+                        '<img src = "http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"><br />'+
 			'<center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center><br />' +seen('soraonyxeagle') + getBadges('soraonyxeagle'));
 	},
 
