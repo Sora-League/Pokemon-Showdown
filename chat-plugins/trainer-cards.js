@@ -279,19 +279,6 @@ exports.commands = {
 			'-No CAP Pokemon</details> <br />' + seen('sorazachary') + getBadges('sorazachary'));
 	},
 	
-	onyxeagle: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>OnyxEagle</b>∆<br />' +
-			'<i>"... ..."</i> <br />' +
-			'<b>Symbol:</b> Mystery <br />' +
-			'<b>Ace:</b> ???<br />' +
-			'<b>Battle rules:</b> <br />' +
-			'-Random Battle Format <br />' +
-			'-Best of 3 <br />'+
-			'-Challenger chooses Pokemon of the Day<br />'+
-			'<center><img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-interrogation.gif"></center><br>' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + seen('soraonyxeagle'));
-	},
 
 	/*subfrontier: function(target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -469,13 +456,14 @@ exports.commands = {
 			'<b>Ace:</b> ??? <br />' + seen('???') + getBadges ('???'));
 	},
 
-	
+	onyxeagle: 'rock',
 	rock: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>OnyxEagle</b>∆<br />' +
+			'<i>"I WILL ROCK YOUR WORLD!!"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+			'<b>Ace:</b> Tyranitar<br />' + 
+			'<center><img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-interrogation.gif"></center><br />' +seen('soraonyxeagle') + getBadges('soraonyxeagle'));
 	},
 
 	
