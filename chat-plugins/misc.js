@@ -1,5 +1,6 @@
 'use strict';
 const fs = require('fs');
+const request = require('request');
 
 let tells = JSON.parse(fs.readFileSync('storage-files/tells.json'));
 let regdateCache = {};
