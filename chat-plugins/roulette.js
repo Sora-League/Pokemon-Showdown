@@ -1,29 +1,31 @@
-const EXPIRATION_TIME = 1000 * 60;
-var roulettes = exports.roulettes = {};
-var colors = {'red': 3, 'blue': 3, 'yellow': 4, 'green': 4, 'black': 7};
+'use strict';
 
-var Roulette = (function () {
+const EXPIRATION_TIME = 1000 * 60; //1 minute
+let roulettes = exports.roulettes = {};
+let colors = {'red': 3, 'blue': 3, 'yellow': 4, 'green': 4, 'black': 7};
+
+let Roulette = (function () {
 	function Roulette(room) {
 		this.room = room;
 		this.players = {};
-		this.timer = setTimeout(function () {
+		this.timer = setTimeout(() => {
 			if (Object.keys(this.players).length < 1) {
 				this.room.add('|raw|<b>The roulette has been ended due to the lack of players');
 				delete roulettes[this.room.id];
 				return;
 			}
-			that.spin();
-			that.room.update();
-		}.bind(this), EXPIRATION_TIME);
+			this.spin();
+			this.room.update();
+		}, EXPIRATION_TIME);
 	}
 	Roulette.prototype.placeBet = function (user, color, self) {
-		for (var i = 0; i < user.getAlts().length; i++) {
+		for (let i = 0; i < user.getAlts().length; i++) {
 			if (this.players[user.getAlts()[i]]) return self.sendReply('Your alt \'' + user.getAlts()[i] + '\' has already joined the roulette. Continue playing under that alt.');
 		}
-		for (i in this.players) {
+		for (let i in this.players) {
 			if (Users.get(i).getAlts().indexOf(user.userid) > -1) return self.sendReply('Your alt \'' + Users.get(i).name + '\' has already joined the roulette. Continue playing under that alt.');
 		}
-		for (i in user.prevNames) {
+		for (let i in user.prevNames) {
 			if (this.players[i] && i !== user.userid) return self.sendReply('Your alt \'' + user.prevNames[i] + '\' has already joined the roulette. Continue playing under that alt.');
 		}
 		if (!this.players[user.userid]) {
@@ -31,38 +33,38 @@ var Roulette = (function () {
 			this.players[user.userid].color = color;
 			this.players[user.userid].bets = 1;
 			self.sendReply('You have placed 1 bet on ' + color);
-			Core.write('money', user.userid, 1, '-');
+			Economy.write(user.userid, -1);
 		} else {
 			if (this.players[user.userid].color !== color) {
-				var bets = (this.players[user.userid].bets === 1 ? 'bet' : 'bets');
+				let bets = (this.players[user.userid].bets === 1 ? 'bet' : 'bets');
 				self.sendReply('You are now betting on ' + color + ' instead of ' + this.players[user.userid].color + '. You are currently placing ' + this.players[user.userid].bets + ' ' + bets + ' on ' + color + '.');
 				this.players[user.userid].color = color;
 			} else {
 				this.players[user.userid].bets++;
-				var bets = (this.players[user.userid].bets === 1 ? 'bet' : 'bets');
+				let bets = (this.players[user.userid].bets === 1 ? 'bet' : 'bets');
 				self.sendReply('You have placed ' + this.players[user.userid].bets + ' ' + bets + ' on ' + color);
-				Core.write('money', user.userid, 1, '-');
+				Economy.write(user.userid, -1);
 			}
 		}
 	};
 	Roulette.prototype.deleteBets = function (user, self) {
 		if (!this.players[user.userid] || !this.players[user.userid].bets) return self.sendReply('You haven\'t made any bets in this game yet.');
-		Core.write('money', user.userid, this.players[user.userid].bets, '+');
+		Economy.write(user.userid, this.players[user.userid].bets);
 		delete this.players[user.userid];
 		return self.sendReply('All your bets in the current roulette have been removed. Your money has been refunded.');
 	};
 	Roulette.prototype.end = function (user) {
-		for (var i in this.players)
-			Core.write('money', i, this.players[i].bets, '+');
+		for (let i in this.players)
+			Economy.write(i, this.players[i].bets);
 		clearTimeout(this.timer);
 		this.room.add('|html|<b>' + user.name + ' has ended the current roulette.');
 		delete roulettes[this.room.id];
 	};
 	Roulette.prototype.spin = function () {
-		var random = Math.floor((Math.random() * 11) + 1);
-		var payout;
-		var color;
-		var winners = [];
+		let random = Math.floor((Math.random() * 11) + 1);
+		let payout;
+		let color;
+		let winners = [];
 		if (random <= 3) color = 'red';
 		else if (random <= 6) color = 'yellow';
 		else if (random <= 8) color = 'blue';
@@ -70,7 +72,7 @@ var Roulette = (function () {
 		else color = 'black';
 		payout = colors[color];
 
-		for (var i in this.players) {
+		for (let i in this.players) {
 			if (this.players[i].color === color) winners.push(i);
 		}
 
@@ -79,12 +81,12 @@ var Roulette = (function () {
 				'<center>The roulette landed on <font color = "' + color + '"><b>' + color + '<b>!</font><br />' +
 				'<center>But nobody won this time...');
 		} else {
-			var winlist = '';
-			for (var i = 0; i < winners.length; i++) {
+			let winlist = '';
+			for (let i = 0; i < winners.length; i++) {
 				if (i > 0) winlist += ', ';
-				var winamount = this.players[winners[i]].bets * payout;
-				var name = (Users.getExact(winners[i])) ? Users.getExact(winners[i]).name : winners[i];
-				winlist += '<b>' + name + '</b> who won <b>' + winamount + '</b> points';
+				let winamount = this.players[winners[i]].bets * payout;
+				let name = (Users.getExact(winners[i])) ? Users.getExact(winners[i]).name : winners[i];
+				winlist += '<b>' + name + '</b> who won <b>' + winamount + '</b> bucks';
 			}
 			if (winners.length == 1) {
 				this.room.add('|html|<div class = "infobox"><font size = 2, color = "green"><center><b>The roulette has been spun!</font><br />' +
@@ -96,9 +98,9 @@ var Roulette = (function () {
 					'<center>The winners are:<br/>' +
 					'<center>' + winlist);
 			}
-			winners.forEach(function (user) {
+			winners.forEach(user => {
 				user = Users.get(user);
-				Core.write('money', user.userid, payout + 1, '+');
+				Economy.write(user.userid, payout + 1);
 			});
 		}
 		clearTimeout(this.timer);
@@ -107,7 +109,7 @@ var Roulette = (function () {
 	return Roulette;
 })();
 
-var cmds = {
+let cmds = {
 	players: 'participants',
 	participants: function (target, room, user) {
 		if (!roulettes[room.id]) return this.sendReply('There is no roulette going on in this room right now.');
@@ -142,7 +144,7 @@ var cmds = {
 
 	bet: function (target, room, user) {
 		if (!roulettes[room.id]) return this.sendReply('There is no roulette going on in this room right now.');
-		if (Core.read('money', user.userid) < 1) return this.sendReply("You don't have enough money to place bets.");
+		if (Economy.read(user.userid) < 1) return this.sendReply("You don't have enough money to place bets.");
 		target = toId(target);
 		if (!colors[target]) return this.sendReply(target + ' is not a valid color');
 
@@ -184,5 +186,5 @@ exports.commands = {
 	endroul: cmds.stop,
 	deletebets: cmds['delete'],
 	bet: cmds.bet,
-	spin: cmds.spin
+	spin: cmds.spin,
 };

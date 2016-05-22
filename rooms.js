@@ -24,13 +24,15 @@ let rooms = Rooms.rooms = Object.create(null);
 
 let aliases = Object.create(null);
 
-function getTells (user) {
-	let tells = Core.read('tells', user.userid);
-	if (!tells || !tells.length) return;
-	for (let i = 0; i < tells.length; i++) {
-		user.send('|pm| Tells|' + user.getIdentity() + '|/html ' + tells[i]);
+function getTells(user) {
+	let tells = JSON.parse(fs.readFileSync('storage-files/tells.json'));
+	let tell = tells[user.userid];
+	if (!tell || !tell.length) return;
+	for (let i = 0; i < tell.length; i++) {
+		user.send('|pm| Tells|' + user.getIdentity() + '|/html ' + tell[i]);
 	}
-	Core.Delete('tells', user.userid);
+	delete tells[user.userid];
+	fs.writeFileSync('storage-files/tells.json', JSON.stringify(tells));
 }
 
 let Room = (() => {
@@ -786,8 +788,8 @@ let GlobalRoom = (() => {
 		delete this.users[oldid];
 		this.users[user.userid] = user;
 		if (user.named && toId(oldid) != toId(user)) {
-			Core.write('lastseen', user.userid, Date.now());
-			if (!toId(oldid).match(/^guest[0-9]/)) Core.write('lastseen', toId(oldid), Date.now());
+			lastSeen.write(user.userid);
+			if (!toId(oldid).match(/^guest[0-9]/)) lastSeen.write(oldid);
 		}
 		getTells(user);
 		return user;

@@ -1,10 +1,11 @@
 'use strict';
-function seen (user) {
+function seen(user) {
 	user = toId(user);
-	if (Users.get(user) && Users.get(user).connected) return '';
-	return '<b>Last Seen:</b> ' + Core.getLastSeen(user).split(', ')[0] + ' ago';
+	let time = lastSeen.get(user);
+	if ((Users.getExact(user) && Users.getExact(user).connected) || time === 'never') return '';
+	return '<b>Last Seen:</b> ' + time.split(', ')[0] + ' ago';
 }
-function getBadges (user) {
+function getBadges(user) {
 	let badgeList = JSON.parse(require('fs').readFileSync('storage-files/badges.json'));
 	user = toId(user);
 	if (!badgeList[user] || Object.keys(badgeList[user]).length < 3) return '';
@@ -18,37 +19,34 @@ function getBadges (user) {
 exports.commands = {
 	staff: 'leaguemembers',
 	attendance: 'leaguemembers',
-	leaguemembers: function (target, room, user) {
+	/*ateamlist: 'leaguemembers',
+	gls: 'leaguemembers',
+	gymleaders: 'leaguemembers',
+	e4s: 'leaguemembers',
+	elite4s: 'leaguemembers',
+	elitefours: 'leaguemembers',
+	gls: 'leaguemembers',
+	gymleaders: 'leaguemembers',*/
+	leaguemembers: function (target, room, user, connection, cmd) {
 		if (!this.runBroadcast()) return;
-		let total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		let list = ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'];
-		for (let i = 0; i < list.length; i++) {
-			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
-			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
-
-			total += '<tr><td>' + list[i] + '</td><td><center>' + Seen + '</center></td>';
+		let total = '';
+		let members = {
+			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
+			'Elite Four': ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆'],
+			'Frontiers': ['∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Arjun∆', '∆Sora Bigo∆'],
+			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Arjun∆', '∆Sora Akash∆'],
 		}
-		this.sendReplyBox('<center><b>Admin Team</b><br />' + total + '</table></center>');
-		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		list = ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆', '∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Arjun∆', '∆Sora Akash∆'];
-		for (let i = 0; i < list.length; i++) {
-			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
-			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
-
-			total += '<tr><td>' + list[i] + '</td><td><center>' + Seen + '</center></td>';
+		for (let i in members) {
+			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
+			let list = members[i];
+			for (let j in list) {
+				let Seen = Users.getExact(list[j]) && Users.getExact(list[i]).connected ? '<span style = "color:green">Online</span>' : seen(list[j]).split('</b> ')[1];
+				if (Seen === 'never') Seen = '<span style = "color:red">Never</span>';
+				total += '<tr><td>' + list[j] + '</td><td><center>' + Seen + '</center></td>';
+			}
+			total += '</table><br>';
 		}
-		this.sendReplyBox('<details><summary><b>Elite 4\'s and Frontiers</b></summary><center>' + total + '</table></details></center>');
-		total = '<table><tr><th>User</th><th>Last Seen</th></tr>';
-		list = ['∆Sora Float∆', '∆Sora Mark∆', '∆Sora Whitefang∆', '∆Sora Waffles∆', '∆Sora Youmaton∆',
-		        '∆Sora Memelord∆', '∆Sora Blade∆', '∆Sora Leaf∆', '∆Sora Aros∆', '∆Sora Doku∆', '∆Sora Nightanglet∆'
-		];
-		for (let i = 0; i < list.length; i++) {
-			let Seen = Users.get(list[i]) && Users.get(list[i]).connected ? '<font color = "green">Online</font>' : seen(list[i]).substr(18);
-			if (Seen === 'never') Seen = '<font color = "red">Never</font>';
-
-			total += '<tr><td>' + list[i] + '</td><td><center>' + Seen + '</center></td>';
-		}
-		this.sendReplyBox('<details><summary><b>Gym Leaders</b></summary><center>' + total + '</table></details></center>');
+		this.sendReplyBox('<div class = "infobox-limited"><center>' + total + '</center></div>');
 	},
 
 	/////////////////////
@@ -186,25 +184,26 @@ exports.commands = {
 			+ getBadges('coachabadon') +'<br><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center>');
 	},
 
-
-       	akash: function (target, room, user) {
+   	akash: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Akash</b>∆<br />' +
 			'<i>"Don\'t be afraid of the change, adapt according to it."</i> <br />' +
 			'<b>Symbol: </b>Adaptability <br />' +
 			'<b>Ace:</b> Entei<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-Almost Any Ability<br />' + seen('soraakash') + getBadges('soraakash'));
+			'-Almost Any Ability<br />' + seen('soraakash') + getBadges('soraakash')
+		);
 	},
 
-       bigo: function (target, room, user) {
+	bigo: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Bigo</b>∆<br />' +
 			'<i>"Being unpredictable is what will make this fight to be on my side."</i> <br />' +
 			'<b>Symbol: </b>Nuclear <br />' +
 			'<b>Ace:</b> Sableye<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-STABmons<br />' + seen('sorabigo') + getBadges('sorabigo'));
+			'-STABmons<br />' + seen('sorabigo') + getBadges('sorabigo')
+		);
 	},
 
         arjun: function (target, room, user) {
@@ -220,10 +219,14 @@ exports.commands = {
 
 
 
-	silver: "siiilver",
-	siiilver: function (target, room, user) {
+	silver: 'silveee',
+	silvy: 'silveee',
+	siiilver: 'silveee',
+	silvertactic: 'silveee',
+	silveeee: 'silveee',
+	silveee: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		let colorify = function (text) {
+		function colorify(text) {
 			let colors = ['red', 'orange', 'yellow', 'lime', '#007fff', 'cyan', '#9800ff', 'violet'], set = [];
 			for (let i = 0, j = 0; i < text.length; i++) {
 				set.push(text[i].trim() ? '<span style = "color: ' + colors[j] + '; text-shadow: 0px 0px 10px;">' + text[i] + '</span>' : text[i]);
@@ -234,21 +237,22 @@ exports.commands = {
 			return set.join('');
 		}
 		let msg;
-		if (Users.get('siiilver') && Users.get('siiilver').connected) {
+		if (Users('silveee') && Users('silveee').connected) {
 			msg = '<button name = "send" value = "/me flips cash at Silvy-chan :D" style = "margin: 3px; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('$$$ Click 2 flip cash at me! $$$') + '</b></span></button><br>' +
 				'<button name = "send" value = "/me pets Silvy-chan :3" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Pet me') + ' :3</b></span></button>' +
-				' <button name = "send" value = "/kick ' + Users.get('siiilver').name + ', 2sexy4us" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Kick me') + ' :D</b></span></button>';
-		} else msg = '<span style = "color: gold; text-shadow: 0px 0px 5px">Last seen in da hood <b>' + colorify(Core.getLastSeen('siiilver') + ' ago') + '</b></span><br>';
+				' <button name = "send" value = "/kick ' + Users('silveee').name + ', 2sexy4us" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Kick me') + ' :D</b></span></button>';
+		} else msg = '<span style = "color: gold; text-shadow: 0px 0px 5px">Last seen in da hood <b>' + colorify(lastSeen.get('silveee') + ' ago') + '</b></span><br>';
 		this.sendReply('|html|<center><div style = "border-radius: 7px; padding: 5px; box-shadow: 2px 2px 5px black; background: radial-gradient(circle, #1c1c1c, #333232, #1c1c1c, #333232, #1c1c1c, #333232);">' +
-			'<b style = "font-size: 17pt;">' + colorify('☆☆☆☆☆☆☆☆ S I I I L V E R ☆☆☆☆☆☆☆☆') + '</b><br>' +
-			'<i><span style = "color: silver; text-shadow: 0px 0px 5px;">"Not all heroes wear capes... Some like me wear just underwear :D"</span></i><br>' +
+			'<b style = "font-size: 17pt;">' + colorify('☆☆☆☆☆☆☆☆ S I L V E E E E ☆☆☆☆☆☆☆☆') + '</b><br>' +
+			'<i><span style = "color: silver; text-shadow: 0px 0px 5px;">"i liek fucking goats"</span></i><br>' +
 			'<br><div style = "display: inline-block; width: 49%"><img style = "max-height: 100%; max-width: 100%;" src = "http://data.whicdn.com/images/56986059/large.gif"></div> ' +
 			'<div style = "display: inline-block; width: 49%"><img style = "max-height: 100%; max-width: 100%;" src = "http://i.skyrock.net/1358/86461358/pics/3227855009_1_10_BQlwaOHj.gif"></div><br>' +
 			msg + '<br><span style = "text-shadow: 0px 0px 5px"><b>' + colorify('Known 4:') + '</b>' +
-			'<span style = "color: silver; text-shadow: 0px 0px 5px"><li>Being a verr verr gud chat presence and being an inspiration to eberywun around~' +
-			'<li>Breaking the server. Cuz Server-Kun\'s dense af</span><br>' +
-			(user.userid in {'siiilver':1, 'e4silvy':1, 'theh':1} ? '' : '<br><span style = "text-shadow: 0px 0px 5px"><b><span style = "color: lime;">P</span><span style = "color: blue;">.</span><span style = "color: cyan;">S</span><span style = "color: violet;">.</span></b>- <span style = "color: silver">' + user.name + '\'s a n00b</span></span><br>') +
-			'<br><span style = "color: gold">' + getBadges('siiilver').replace('<b>Badges:</b> (Click here to open)', '<b> ' + colorify('Badges:') + '</b> ' + colorify('(Click here to open)'))
+			'<span style = "color: silver; text-shadow: 0px 0px 5px"><li>Being a verr verr gud chat presence' +
+			'<li>Breaking the server. Cuz Server-Kun\'s dense af<br>' +
+			'<li><a style = "color:#00d4ff;" href = "https://www.youtube.com/watch?v=0CirgVj8Baw">THE POWER OF WEEB</a></span><br>' +
+			(user.userid in {silvertactic:1,siiilver:1,silveee:1} ? '' : '<br><span style = "text-shadow: 0px 0px 5px"><b><span style = "color: lime;">P</span><span style = "color: blue;">.</span><span style = "color: cyan;">S</span><span style = "color: violet;">.</span></b>- <span style = "color: silver">' + user.name + '\'s a n00b</span></span><br>') +
+			'<br><span style = "color: gold">' + getBadges('silveee').replace('<b>Badges:</b> (Click here to open)', '<b> ' + colorify('Badges:') + '</b> ' + colorify('(Click here to open)'))
 		);
 	},
 
@@ -571,7 +575,7 @@ exports.commands = {
 	
 	darkus: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('<center><span style = "font-size: 11pt; font-weight: bold; color: ' + Core.color('soradarkus') + '">∆SoraDarkus∆</span><br>' +
+		this.sendReplyBox('<center><span style = "font-size: 11pt; font-weight: bold; color: ' + hashColor('soradarkus') + '">∆SoraDarkus∆</span><br>' +
 		'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br><br>' +
 		'<b>Aces:</b> Bisharp and Crawdaunt<br>' +
 		'<b>Skilled in:</b> Monotype<br>' +

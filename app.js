@@ -184,7 +184,10 @@ Rooms.global.formatListText = Rooms.global.getFormatListText();
 global.TeamValidator = require('./team-validator.js');
 TeamValidator.PM.spawn();
 
-global.Core = require('./Core.js').Core;
+let Core = require('./Core.js');
+global.Economy = Core.Economy;
+global.hashColor = Core.hashColor;
+global.lastSeen = Core.lastSeen;
 
 /*********************************************************
  * Start up the REPL server

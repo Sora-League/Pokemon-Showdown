@@ -14,6 +14,13 @@ for (let type in generatorFiles) {
 	TournamentGenerators[type] = require('./' + generatorFiles[type]);
 }
 
+const fs = require('fs');
+let tourWins = JSON.parse(fs.readFileSync('storage-files/tourwins.json'));
+function writeWin(user) {
+	tourWins[user] ? tourWins[user]++ : tourWins[user] = 1;
+	fs.writeFileSync('storage-files/tourwins.json', JSON.stringify(tourWins));
+}
+
 exports.tournaments = {};
 
 function usersToNames(users) {
@@ -801,7 +808,6 @@ class Tournament {
 		var tourSize = this.generator.getUsers().length;
 		if (this.room.isOfficial && tourSize >= 4) {
 			var results = this.generator.getResults().map(usersToNames).toString();
-			console.log(this.generator.getResults().map(usersToNames));
 			var winner, runnerUp;
 			if (results.indexOf(',') > -1) {
 				results = results.split(',');
@@ -813,11 +819,11 @@ class Tournament {
 			var runnerMoney = Math.floor(winMoney/2);
 			var bucks2 = (runnerMoney === 1 ? 'buck' : 'bucks');
 			this.room.add('|raw|<strong>' + Tools.escapeHTML(winner) + ' has also won ' + winMoney + ' ' + bucks1 + ' for winning the tournament!</strong>');
-			Core.write('money', toId(winner), winMoney, '+');
-			Core.write('tourwins', toId(winner), 1, '+');
+			Economy.write(winner, winMoney);
+			writeWin(toId(winner));
 			if (runnerUp && runnerMoney) {
 				this.room.add('|raw|<strong>' + Tools.escapeHTML(runnerUp) + ' has won ' + runnerMoney + ' ' + bucks2 + ' as a runner-up prize!</strong>');
-				Core.write('money', toId(runnerUp), runnerMoney, '+');
+				Economy.write(runnerUp, runnerMoney);
 			}
 		}
 		this.isEnded = true;

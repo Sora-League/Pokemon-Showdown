@@ -137,7 +137,7 @@ exports.commands = {
 
 		let shutdownTime = Date.now();
 		Users.users.forEach((u) => {
-			Core.write('lastseen', u.userid, shutdownTime);
+			lastSeen.write(u.userid);
 		});
 		
 		if (!fs.existsSync('storage-files/maxuptime.txt')) fs.writeFileSync('storage-files/maxuptime.txt', process.uptime());
