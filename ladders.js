@@ -286,7 +286,7 @@ class Ladder {
 				room.update();
 			}
 
-			if (!Tools.getFormat(formatid).noLog) {
+			if (!Tools.getFormat(formatid).noLog && formatid !== 'tournaments') {
 				room.logBattle(p1score, p1newElo, p2newElo);
 			}
 		});
