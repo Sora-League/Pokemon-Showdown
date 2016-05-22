@@ -797,7 +797,7 @@ exports.commands = {
 	
 	feelthebern: function (target, room, user) {
         	if (!this.runBroadcast()) return;
-        	this.sendReplyBox('<div class="infobox" style="border: 0px ; image: url(https://timedotcom.files.wordpress.com/2016/02/bernie-sanders13.jpg) ; image: cover" >');
+        	this.sendReplyBox('<img src="https://timedotcom.files.wordpress.com/2016/02/bernie-sanders13.jpg?quality=75&strip=color&w=1100"> <br />');
 	},
 	
 	//////////
