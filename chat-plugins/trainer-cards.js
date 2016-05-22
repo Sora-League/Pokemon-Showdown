@@ -283,19 +283,6 @@ exports.commands = {
 			'-No CAP Pokemon</details> <br />' + seen('sorazachary') + getBadges('sorazachary'));
 	},
 	
-	onyxeagle: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>OnyxEagle</b>∆<br />' +
-			'<i>"... ..."</i> <br />' +
-			'<b>Symbol:</b> Mystery <br />' +
-			'<b>Ace:</b> ???<br />' +
-			'<b>Battle rules:</b> <br />' +
-			'-Random Battle Format <br />' +
-			'-Best of 3 <br />'+
-			'-Challenger chooses Pokemon of the Day<br />'+
-			'<center><img src = "http://www.pkparaiso.com/imagenes/xy/sprites/animados/unown-interrogation.gif"></center><br>' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' + seen('soraonyxeagle'));
-	},
 
 	/*subfrontier: function(target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -381,14 +368,23 @@ exports.commands = {
 		);
         },
 
-	
+	blade: 'fire',
     	fire: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
-	              '<i>"???"</i> <br />'+
+		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />'+
+	              '<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />'+
 	              '<b>Type: <font color = FF0000>Fire</font></b><br />'+
-	              '<b>Ace:</b> ??? <br />'  + seen('???') + '<br>' +
-	              getBadges('???'));
+	              '<b>Ace:</b> Victini<br />'+
+	              '<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
+		      '<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
+		      '<b>R.I.P. War Turtle</b> <br />' +
+		      '1st Apostle of the All Mighty Lord Parasect</details>' +
+		      '<details><summary><font color = 009900><b>Aegislash Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aegislash.gif"></center>' +
+		      '<b>R.I.P. Shadow Snek</b> <br />' +
+		      '2nd Apostle of the All Mighty Lord Parasect</details><br />' +
+		      '<img src="http://oi62.tinypic.com/14cfyh0.jpg"><img src="http://66.media.tumblr.com/6d1996ce9d10db40fa5f088f7887c71e/tumblr_o15namAV1o1v5aa3xo1_1280.png" width=150 height=150></center> <br />'+
+	              seen('SoraBlade') + '<br>' +
+	              getBadges('SoraBlade'));
 	},
 
 	flying: 'float',
@@ -404,19 +400,14 @@ exports.commands = {
 	},
 
     
-        blade: 'ghost',
+        
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
-			'<i>"Be Stronger Than Your Strongest Excuse"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />'+
-			seen('sorablade') + getBadges('sorablade') +
-			'<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">'+
-			'<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
-			'<b>R.I.P. War Turtle</b> <br />' +
-			'1st Apostle of the All Mighty Lord Parasect</details><br />' +
-			'<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<b>Ace:</b> ???<br />'+
+			seen('') + getBadges(''));
 	},
 
 
@@ -469,13 +460,15 @@ exports.commands = {
 			'<b>Ace:</b> ??? <br />' + seen('???') + getBadges ('???'));
 	},
 
-	
+	onyxeagle: 'rock',
 	rock: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>OnyxEagle</b>∆<br />' +
+			'<i>"I WILL ROCK YOUR WORLD!!"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+			'<b>Ace:</b> Tyranitar<br />' + 
+                        '<center><img src = "http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"></center><br />'+
+			'<center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center><br />' +seen('soraonyxeagle') + getBadges('soraonyxeagle'));
 	},
 
 	
@@ -804,6 +797,11 @@ exports.commands = {
         	this.sendReplyBox('<div class="infobox" style="border: 0px ; background-image: url(&quot;http://img2.wikia.nocookie.net/__cb20101231031301/angelbeats/images/f/f5/EP10-Yui-and-Hinata-500x281.png&quot;) ; background-size: cover" target="_blank">'+
         	                  '<center><font size=2 color=#0066FF><b>Original Version</b> - <i>Karuta</i></font><br \><audio src="https://dl.pushbulletusercontent.com/NBtI15PWK0EQDXkB8YNqKe6YZYWpLHaO/19%20-%20Ichiban%20no%20Takaramono%20%28Original%20Version%29.mp3" controls="" target="_blank"></audio><br /><br /><br /><br /><br /><br /><br /><br />'+
         	                  '<br \></center><b><font size=2 color=#FF0000>  一番の宝物</b></font><font size=2 color=#FF0000> \- <i>Angel Beats</i></font><br /><font size=1>Ichiban no Takaramono</font><center><br \><br \><br \><br \><br \><br \><font size=2 color=#0099FF><b>Yui\'s Version</b> - <i>Girls Dead Monster, feat. LiSA.</i></font><audio src="https://dl.pushbulletusercontent.com/5CLffau3dUgPCVIPwKyIQUjblB4NgQ5G/09%20-%20Ichiban%20no%20Takaramono%20%20%28Yui%20ver.%29.mp3" controls="" target="_blank"></audio></center>');
+	},
+	
+	feelthebern: function (target, room, user) {
+        	if (!this.runBroadcast()) return;
+        	this.sendReplyBox('<img src="https://timedotcom.files.wordpress.com/2016/02/bernie-sanders13.jpg?quality=75&strip=color&w=1100" height=350 width=450> <br />');
 	},
 	
 	//////////
