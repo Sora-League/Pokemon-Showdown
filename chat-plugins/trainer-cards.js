@@ -40,7 +40,7 @@ exports.commands = {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
 			let list = members[i];
 			for (let j in list) {
-				let Seen = Users.getExact(list[j]) && Users.getExact(list[i]).connected ? '<span style = "color:green">Online</span>' : seen(list[j]).split('</b> ')[1];
+				let Seen = Users.getExact(list[j]) && Users.getExact(list[j]).connected ? '<span style = "color:green">Online</span>' : seen(list[j]).split('</b> ')[1];
 				if (Seen === 'never') Seen = '<span style = "color:red">Never</span>';
 				total += '<tr><td>' + list[j] + '</td><td><center>' + Seen + '</center></td>';
 			}
