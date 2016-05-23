@@ -23,6 +23,22 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 	background: rgba(255 , 26 , 26 , 0.5);
 }
 
+.dark body {
+	background-image: url(http://i.imgur.com/0CPvA7O.png) !important;
+}
+.dark .chat strong small {
+	color: white !important;
+}
+.dark .chat strong {
+	text-shadow: 0px 0px 10px, 0px 0px 10px;
+}
+.dark .battle-log .chat strong {
+	text-shadow: 0px 0px 10px;
+}
+.dark .backdrop {
+	background-image: url(http://orig13.deviantart.net/570b/f/2014/357/3/9/or_as_city_battle_background__night__by_phoenixoflight92-d8b0izs.png) !important;
+}
+
 /*li#lobby-userlist-user-insertname { background: url("http://i.imgur.com/cK069Jn.png") no-repeat right;
 }*/
 
