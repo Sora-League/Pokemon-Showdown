@@ -455,8 +455,8 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
 			'<i>"You\'re not one of the gods, you\'re one of the god awfuls." -chillindude</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Hoopa-U <br />' + 
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/moltres.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zapdos.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/articuno.gif"><br />' +
+			'<b>Ace:</b> Jirachi <br />' + 
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/hoopa-unbound.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><br />' +
 			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
 			seen('sorafloat') + '<br>' +
 			getBadges('sorafloat')
