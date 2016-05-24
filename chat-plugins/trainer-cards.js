@@ -460,6 +460,7 @@ exports.commands = {
 			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
 			seen('sorafloat') + '<br>' +
 			getBadges('sorafloat')
+		);
 	},
 
 	onyxeagle: 'rock',
