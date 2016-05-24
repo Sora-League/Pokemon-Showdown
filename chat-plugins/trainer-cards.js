@@ -449,7 +449,7 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 	
-        float: 'psychic'
+        float: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
