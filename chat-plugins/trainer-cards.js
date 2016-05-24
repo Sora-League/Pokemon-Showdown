@@ -33,8 +33,8 @@ exports.commands = {
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆'],
-			'Frontiers': ['∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Arjun∆', '∆Sora Bigo∆'],
-			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Onyxeagle∆', '∆Sora Arjun∆', '∆Sora Akash∆'],
+			'Frontiers': ['∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Arjun∆', '∆Sora Bigo∆'],
+			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Nightanglet∆', '∆Sora Float∆', '∆Sora Doku∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Meows∆', '∆Sora Waffles∆', '∆Sora Youmaton∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -387,16 +387,14 @@ exports.commands = {
 	              getBadges('SoraBlade'));
 	},
 
-	flying: 'float',
-	float: function (target, room, user) {
+	
+	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"You\'re not one of the gods, you\'re one of the god awfuls" -chillindude</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Landorus-Therian<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/moltres.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zapdos.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/articuno.gif"><br />' +
-			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
-			seen('sorafloat') + getBadges('sorafloat'));
+			'<b>Ace:</b> ???<br />' +
+			seen('???') + getBadges('???'));
 	},
 
     
@@ -451,13 +449,16 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('soradoku') + getBadges('soradoku'));
 	},
 	
-        
+        float: 'psychic'
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
+			'<i>"You\'re not one of the gods, you\'re one of the god awfuls." -chillindude</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ??? <br />' + seen('???') + getBadges ('???'));
+			'<b>Ace:</b> Hoopa-U <br />' + 
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/moltres.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zapdos.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/articuno.gif"><br />' +
+			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
+			seen('sorafloat') + getBadges ('sorafloat'));
 	},
 
 	onyxeagle: 'rock',
