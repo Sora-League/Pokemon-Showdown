@@ -431,13 +431,13 @@ exports.commands = {
 		);
 	},
 
-	
+	cynical: 'normal',
         normal: function(target, room, user) {
 	if (!this.runBroadcast()) return;
-	this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />'+
+	this.sendReplyBox('∆Gym Ldr <b>Cynical</b>∆<br />'+
 		'<i>"???"</i> <br />'+
 	        '<b>Type: <font color = ffa5d5>Normal</font></b><br />'+
-		'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+		'<b>Ace:</b> ???<br />' + seen('soracynical') + getBadges('soracynical'));
     },
 
 	doku: 'poison',  
