@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const request = require('request');
-let deleteLadderConfirm = false;
 
 let ateam = {'femalegallade':1, 'sorarevan':1, 'coachabadon': 1, 'bamdee': 1, 'blazing360': 1, 'sorablade': 1,
 	'bamdee':1, 'onyxeagle':1, 'soraonyxeagle':1, 'jeratt':1, 'sorajerattata':1, 'neithcass':1, 'sorabarts': 1,
@@ -173,18 +172,16 @@ exports.commands = {
 
 	flogout: 'forcelogout',
 	forcelogout: function (target, room, user, connection, cmd) {
-		if(!user.can('hotpatch')) return;
-		if (!this.canTalk()) return this.errorReply('You cannot use this command while unable to speak.');
-		if (!target) return this.sendReply('/forcelogout [username], [reason (optional)] - Forcibly logs out a user.');
+		if (!this.can('hotpatch')) return false;
+		if (!target) return this.sendReply('/' + cmd + ' [username], [reason (optional)] - Forcibly logs out a user.');
 
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
 
 		if (!targetUser) return this.sendReply('User ' + this.targetUsername + ' not found.');
-		if (Config.groups.indexOf(targetUser.group) > Config.groups.indexOf(user.group)) return this.errorReply("/" + cmd + " - Access denied.")
+		if (Config.groupsranking.indexOf(targetUser.group) > Config.groupsranking.indexOf(user.group)) return this.errorReply("/" + cmd + " - Access denied.")
 
 		this.addModCommand(targetUser.name + ' was forcibly logged out by ' + user.name + '.' + (target ? " (" + target + ")" : ""));
-		this.logModCommand(user.name + ' forcibly logged out ' + targetUser.name);
 		targetUser.resetName();
 	},
 
