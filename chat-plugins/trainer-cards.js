@@ -475,14 +475,14 @@ exports.commands = {
 	},
 
 	
-        alain: 'steel',
+        
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Alain</b>∆<br />' +
-			'<i>"Sparkle once, shine forever."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Magnezone<br />' +
-			seen('soraalain') + getBadges('soraalain'));
+			'<b>Ace:</b> ???<br />' +
+			seen('???') + getBadges('???'));
 
 	},
 
