@@ -479,7 +479,7 @@ exports.commands = {
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Alain</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"Sparkle once, shine forever."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> Magnezone<br />' +
 			seen('soraalain') + getBadges('soraalain'));
