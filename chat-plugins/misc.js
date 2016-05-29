@@ -2,7 +2,8 @@
 const fs = require('fs');
 const request = require('request');
 
-let tells = JSON.parse(fs.readFileSync('storage-files/tells.json'));
+let deleteLadderConfirm = false;
+
 let regdateCache = {};
 
 exports.commands = {
@@ -42,23 +43,35 @@ exports.commands = {
 	},
 
 	tell: function (target, room, user, connection, cmd) {
-		if (!target) return this.sendReply('/tell [User], [Message] - Leaves a message for a user who is offline.');
+		if (!target) return this.parse('/help tell')
 		target = this.splitTarget(target);
 		let targetUser = this.targetUsername;
-		if (toId(targetUser) === user.userid) return this.sendReply('You can\'t send a message to yourself!');
-		if (Users.get(targetUser) && Users.get(targetUser).connected) return this.sendReply('You don\'t need to leave a message for an online user. PM them instead.');
-		if (!toId(targetUser) || !target) return this.sendReply('|raw|/tell <i>User</i>, <i>Message</i> - Leaves a message for a user who is offline.');
-		if (lastSeen.get(targetUser) === 'never') return this.sendReply('User ' + targetUser + ' has never been seen online before. You can\'t leave a message for someone who\'s never visited the server.');
+		let id = toId(targetUser);
+		if (!user.autoconfirmed && !user.isStaff) return this.errorReply("You must be autoconfirmed to use this command.")
+		if (id === user.userid || (Users(id) && Users(id).userid === user.userid)) return this.sendReply('You can\'t send a message to yourself!');
+		if (Users(id) && Users(id).connected) return this.sendReply('User ' + Users(id).name + ' is currently online. PM them instead.');
+		if (!id || !target) return this.parse('/help tell');
 
-		let tell = tells[toId(targetUser)];
-		if (tell && tell.length >= 3) return this.sendReply('You may only leave 3 messages for a user at a time. Please wait until ' + targetUser + ' comes online and views them before sending more.');
+		let tells = JSON.parse(fs.readFileSync('storage-files/tells.json')) || {};
+		if (tells[id]) {
+			if (!user.can('hotpatch')) {
+				let names = Object.keys(user.prevNames).concat(user.userid);
+				for (let i in names) {
+					let name = names[i];
+					if (tells[id][name] && tells[id][name].length > 3) return this.sendReply('You may only leave 3 messages for a user at a time. Please wait until ' + targetUser + ' comes online and views them before sending more.');
+				}
+			}
+		} else tells[id] = {};
 
-		let date = '<font color = "gray"><i>(Sent by ' + user.name + ' on ' + (new Date()).toUTCString() + ')</i></font><br>';
-		if (tell) tells[toId(targetUser)].push(date + '<b><font color = "' + hashColor(user.userid) + '">' + user.name + ':</color></b> ' + Tools.escapeHTML(target));
-		else tells[toId(targetUser)] = [date + '<b><font color = "' + hashColor(user.userid) + '">' + user.name + ':</color></b> ' + Tools.escapeHTML(target)];
+		let tell = tells[id][user.userid];
+		let msg = '<font color = "gray"><i>(Sent by ' + user.name + ' on ' + (new Date()).toUTCString() + ')</i></font><br><b><font color = "' + hashColor(user.userid) + '">' + user.name + ':</color></b> ' + Tools.escapeHTML(target);
+		if (tell) tells[id][user.userid].push(msg);
+		else tells[id][user.userid] = [msg];
+
 		fs.writeFileSync('storage-files/tells.json', JSON.stringify(tells));
 		this.sendReply('Your message "' + target + '" has successfully been sent to ' + this.targetUsername + '.');
 	},
+	tellhelp: ['/tell [user], [message] - Leaves a message for an offline user for them to see when they log on next.'],
 	
 	seen: 'lastseen',
 	lastseen: function (target, room, user, connection, cmd) {

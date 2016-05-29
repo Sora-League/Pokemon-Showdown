@@ -27,9 +27,9 @@ let aliases = Object.create(null);
 function getTells(user) {
 	let tells = JSON.parse(fs.readFileSync('storage-files/tells.json'));
 	let tell = tells[user.userid];
-	if (!tell || !tell.length) return;
-	for (let i = 0; i < tell.length; i++) {
-		user.send('|pm| Tells|' + user.getIdentity() + '|/html ' + tell[i]);
+	if (!tell) return;
+	for (let i in tell) {
+		tell[i].forEach(msg => user.send('|pm| Tells|' + user.getIdentity() + '|/html ' + msg));
 	}
 	delete tells[user.userid];
 	fs.writeFileSync('storage-files/tells.json', JSON.stringify(tells));
