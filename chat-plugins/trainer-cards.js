@@ -170,7 +170,7 @@ exports.commands = {
 	//Frontiers
 	/////////////
 	
-	abadon: function (target, room, user) {
+	coachabadon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><font size = 3><b>∆Coach Abadon∆<b></font><br>' +
 			'<i>"SWIGGITY SWOOTY I\'M COMING FOR THAT BOOTY"</i><br><br>' +
@@ -404,7 +404,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Abadon</b>∆<br />' +
 			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Sableyes<br />'+
+			'<b>Ace:</b> Sableye<br />'+
 			seen('soraabadon') + getBadges('soraabadon'));
 	},
 
