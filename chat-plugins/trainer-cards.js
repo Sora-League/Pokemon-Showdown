@@ -398,14 +398,14 @@ exports.commands = {
 	},
 
     
-        
+        abadon: 'ghost',
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Abadon</b>∆<br />' +
+			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> ???<br />'+
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Sableyes<br />'+
+			seen('soraabadon') + getBadges('soraabadon'));
 	},
 
 
