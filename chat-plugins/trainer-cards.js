@@ -333,13 +333,14 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
+	lez: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Lez</b>∆<br />' +
+			'<i>"When in doubt, Outrage."</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('???') + getBadges('???'));
+			'<b>Ace:</b> Braindead (Salamence)<br />' +
+			seen('soralez') + getBadges('soralez'));
 	},
 
 	abadon: 'ghost',
