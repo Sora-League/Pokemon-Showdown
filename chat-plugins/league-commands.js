@@ -1,18 +1,12 @@
 exports.commands = {
 	addsymbols: 'symbols',
 	symbols: function (target, room, user) {
-		if (!this.can('warn')) {
-			this.sendReply('You need to be a league member to be able to use this command.');
-			return false;
-		}
-		if (user.name.indexOf('∆') === 0 && user.name.lastIndexOf('∆') === (user.name.length - 1)) return this.sendReply("You already have your league symbols on.");
-		if (user.name.indexOf('∆') == 0) {
-			user.forceRename(user.name + '∆', undefined, true);
-		} else if (user.name.lastIndexOf('∆') == (user.name.length - 1)) {
-			user.forceRename('∆' + user.name, undefined, true);
-		} else {
-			user.forceRename('∆' + user.name + '∆', undefined, true);
-		}
+		if (!user.can('warn')) this.errorReply('You need to be a league member to be able to use this command.');
+
+		let front = user.name.match(/^∆/) ? '' : '∆'; 
+		let back =  user.name.match(/∆$/) ? '' : '∆';
+		if (!front && !back) return;
+		user.forceRename(front + user.name + back, undefined, true);
 		return this.sendReply('Your league symbols have been added.');
 	},
 	
