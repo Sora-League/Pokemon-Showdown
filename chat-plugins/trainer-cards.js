@@ -395,11 +395,11 @@ exports.commands = {
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"You\'re not one of the gods, you\'re one of the god awfuls." -chillindude</i><br />' +
+			'<i>"Float like a Butterfly, Sting like a Meme"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
 			'<b>Ace:</b> Jirachi <br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/hoopa-unbound.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><br />' +
-			'<audio controls src = "http://picosong.com/cdn/f47cf8120a89402a77ed76e2494d20fb.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br>' +
 			seen('sorafloat') + '<br>' +
 			getBadges('sorafloat')
 		);
