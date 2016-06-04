@@ -72,16 +72,18 @@ exports.commands = {
 		this.sendReply('Your message "' + target + '" has successfully been sent to ' + this.targetUsername + '.');
 	},
 	tellhelp: ['/tell [user], [message] - Leaves a message for an offline user for them to see when they log on next.'],
-	
+
 	seen: 'lastseen',
 	lastseen: function (target, room, user, connection, cmd) {
 		if (!this.runBroadcast()) return;
 		target = Users.getExact(target) ? Users.getExact(target).name : target;
 		if (!toId(target) || toId(target) === user.userid) target = user.name;
-		let seen = lastSeen.get(target);
-		if (seen === 'never') return this.sendReplyBox(target + ' has <font color = "red">never</font> been seen online.');
-		if (Users.getExact(target) && Users.getExact(target).connected) return this.sendReplyBox(target + ' is currently <font color = "green">online</font>. This user has stayed online for ' + seen + '.');
-		return this.sendReplyBox(target + ' was last seen ' + seen + ' ago.');
+		Seen.get(target, seen => {
+			if (seen === 'never') return this.sendReplyBox(target + ' has <font color = "red">never</font> been seen online.');
+			seen = seen.join(', ');
+			if (Users.getExact(target) && Users.getExact(target).connected) return this.sendReplyBox(target + ' is currently <font color = "green">online</font>. This user has stayed online for ' + seen + '.');
+			return this.sendReplyBox(target + ' was last seen ' + seen + ' ago.');
+		});
 	},
 
 	registered: 'regdate',
