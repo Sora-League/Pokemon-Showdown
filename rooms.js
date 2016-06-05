@@ -787,11 +787,9 @@ let GlobalRoom = (() => {
 	GlobalRoom.prototype.onRename = function (user, oldid, joining) {
 		delete this.users[oldid];
 		this.users[user.userid] = user;
-		if (user.named && oldid != toId(user)) {
-			Seen.set(user.userid, () => {
-				if (!oldid.match(/^guest[0-9]/)) Seen.set(oldid);
-			});
-		}
+		if (user.named && oldid != toId(user)) lastSeen.write(user.userid);
+		if (!oldid.match(/^guest[0-9]/)) lastSeen.write(oldid);
+
 		getTells(user);
 		return user;
 	};
