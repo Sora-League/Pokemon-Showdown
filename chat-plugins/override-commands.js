@@ -109,7 +109,7 @@ exports.commands = {
 	uptime: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		let uptime = process.uptime(), uptimeText;
-		let getUptime = (uptime) => {
+		function getUptime(uptime) {
 			if (uptime < 24 * 60 * 60) return Tools.toDurationString(uptime * 1000);
 			let uptimeDays = Math.floor(uptime / (24 * 60 * 60));
 			let uptimeText = uptimeDays + " " + (uptimeDays === 1 ? "day" : "days");
@@ -135,11 +135,10 @@ exports.commands = {
 			return this.sendReply("Wait for /updateserver to finish before using /kill.");
 		}
 
-		let shutdownTime = Date.now();
-		Users.users.forEach((u) => {
+		Users.users.forEach(u => {
 			lastSeen.write(u.userid);
 		});
-		
+
 		if (!fs.existsSync('storage-files/maxuptime.txt')) fs.writeFileSync('storage-files/maxuptime.txt', process.uptime());
 		else if (parseFloat(fs.readFileSync('storage-files/maxuptime.txt')) < process.uptime()) {
 			fs.writeFileSync('storage-files/maxuptime.txt', process.uptime());
