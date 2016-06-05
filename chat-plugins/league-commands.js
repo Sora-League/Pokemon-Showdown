@@ -158,6 +158,7 @@ exports.commands = {
 			'71.41.165.94 -yDante <br />' +
 			'62.140.132.13 -Aidan <br />' +
 			'165.255.119.159 -James357 <br />' +
+			'62.209.10.78 -Tails <br />' +
 			'Shame on them!');
 	},
 
