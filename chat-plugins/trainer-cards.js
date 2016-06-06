@@ -382,13 +382,13 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('soracynical') + getBadges('soracynical'));
 	},
 
-	doku: 'poison',
+	
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Doku</b>∆<br />' +
-			'<i>"I\'m not a toxic player! I may make you one though."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />' + seen('soradoku') + getBadges('soradoku'));
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 
 	float: 'psychic',
