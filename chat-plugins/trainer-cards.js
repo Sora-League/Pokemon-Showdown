@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Arjun∆', '∆Sora Akash∆'],
-			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Nightanglet∆', '∆Sora Float∆', '∆Sora Doku∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Meows∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Silvy∆'],
+			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Nightanglet∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Meows∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Silvy∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -120,7 +120,6 @@ exports.commands = {
 			getBadges('soraterrors'));
 	},
 
-
 	whitefang: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>WhiteFang</b>∆<br />' +
@@ -128,7 +127,8 @@ exports.commands = {
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Archeops<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-No priority<br>' + seen('sorawhitefang') + getBadges('sorawhitefang'));
+			'-No priority<br>' + seen('sorawhitefang') + getBadges('sorawhitefang')
+		);
 	},
 
 	mitsuka: function (target, room, user) {
@@ -141,7 +141,6 @@ exports.commands = {
 			'-None<br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 
 	},
-	
 	/*sube4: function(target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
