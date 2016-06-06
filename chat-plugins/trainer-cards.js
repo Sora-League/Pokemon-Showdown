@@ -120,17 +120,6 @@ exports.commands = {
 			getBadges('soraterrors'));
 	},
 
-	tempest: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Tempest</b>∆<br />' +
-			'<i>"oh"</i> <br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Togekiss (LOL M2K)<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-No hazards<br />' +
-			seen('soratempest') +
-			getBadges('soratempest'));
-	},
 
 	whitefang: function (target, room, user) {
 		if (!this.runBroadcast()) return;
