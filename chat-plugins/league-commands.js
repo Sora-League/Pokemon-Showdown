@@ -1,3 +1,5 @@
+'use strict';
+
 exports.commands = {
 	addsymbols: 'symbols',
 	symbols: function (target, room, user) {
