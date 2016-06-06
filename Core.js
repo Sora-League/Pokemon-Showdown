@@ -1,7 +1,6 @@
 'use strict';
 
 const fs = require('fs');
-const moneyFile = 'storage-files/money.json';
 
 function format(target, word) {
 	if (Math.floor(target) === 0) return '';
@@ -10,9 +9,9 @@ function format(target, word) {
 }
 
 let seen = JSON.parse(fs.readFileSync('storage-files/lastseen.json'));
-let money = JSON.parse(fs.readFileSync(moneyFile));
+let money = JSON.parse(fs.readFileSync('storage-files/money.json'));
 
-exports.lastSeen = {
+exports.Seen = {
 	get: function (user) {
 		user = toId(user);
 		if (!seen[user]) return 'never';
@@ -28,9 +27,9 @@ exports.lastSeen = {
 		if (format(hours % 24, 'hour')) total.push(format(hours % 24, 'hour'));
 		if (format(mins % 60, 'minute')) total.push(format(mins % 60, 'minute'));
 		if (!format(days, 'day')) total.push(format(seconds % 60, 'second'));
-		return total.join(', ');
+		return total;
 	},
-	write: function (user) {
+	set: function (user) {
 		seen[toId(user)] = Date.now();
 		fs.writeFileSync('storage-files/lastseen.json', JSON.stringify(seen, null, 1));
 	},

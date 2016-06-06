@@ -463,7 +463,7 @@ class User {
 		lastSeen.write(this.userid);
 		let name = 'Guest ' + this.guestNum;
 		let userid = toId(name);
-		if (this.userid === userid) return;
+		if (this.userid === userid && !(this.named && !this.namelocked)) return;
 
 		let i = 0;
 		while (users.has(userid) && users.get(userid) !== this) {
@@ -491,12 +491,12 @@ class User {
 		this.isStaff = false;
 		this.isSysop = false;
 
+		this.named = !!this.namelocked;
 		for (let i = 0; i < this.connections.length; i++) {
 			// console.log('' + name + ' renaming: connection ' + i + ' of ' + this.connections.length);
-			let initdata = '|updateuser|' + this.name + '|' + ('0' /* not named */) + '|' + this.avatar;
+			let initdata = '|updateuser|' + this.name + '|' + (this.named ? '1' : '0') + '|' + this.avatar;
 			this.connections[i].send(initdata);
 		}
-		this.named = !!this.namelocked;
 		for (let i in this.games) {
 			this.games[i].onRename(this, oldid, false);
 		}
@@ -551,12 +551,6 @@ class User {
 	 * @param connection       The connection asking for the rename
 	 */
 	rename(name, token, newlyRegistered, connection) {
-		if (this.namelocked) {
-			this.popup("You can't change your name because you're namelocked.");
-			this.forceRename('Guest ' + this.guestNum, false);
-			this.named = true;
-			return false;
-		}
 		for (let i in this.roomCount) {
 			let room = Rooms(i);
 			if (room && room.rated && (this.userid in room.game.players)) {
@@ -689,9 +683,9 @@ class User {
 			} else if (userType === '4') {
 				this.autoconfirmed = userid;
 			} else if (userType === '5') {
-				Punishments.lock(this, Date.now() + PERMALOCK_CACHE_TIME, "Permalock");
+				Punishments.lock(this, Date.now() + PERMALOCK_CACHE_TIME, "Permalock", userid);
 			} else if (userType === '6') {
-				Punishments.ban(this, Date.now() + PERMALOCK_CACHE_TIME, "Permaban");
+				Punishments.ban(this, Date.now() + PERMALOCK_CACHE_TIME, "Permaban", userid);
 			}
 		}
 		let user = users.get(userid);
@@ -1550,7 +1544,8 @@ Users.socketReceive = function (worker, workerid, socketid, message) {
 	if (!room) room = Rooms.lobby || Rooms.global;
 	let user = connection.user;
 	if (!user) return;
-	if (lines.substr(0, 3) === '>> ' || lines.substr(0, 4) === '>>> ') {
+
+	if (CommandParser.multiLinePattern.test(lines)) {
 		user.chat(lines, room, connection);
 		return;
 	}

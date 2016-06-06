@@ -974,7 +974,7 @@ exports.BattleMovedex = {
 				return false;
 			}
 			if (!target.setItem(yourItem)) {
-				source.item = yourItem;
+				source.item = yourItem.id;
 				return false;
 			}
 			this.add('-item', target, yourItem.name, '[from] move: Bestow', '[of] ' + source);
@@ -2573,7 +2573,10 @@ exports.BattleMovedex = {
 		boosts: {
 			def: 1,
 		},
-		volatileStatus: 'DefenseCurl',
+		volatileStatus: 'defensecurl',
+		effect: {
+			noCopy: true,
+		},
 		secondary: false,
 		target: "self",
 		type: "Normal",
@@ -4907,6 +4910,7 @@ exports.BattleMovedex = {
 			if (target.volatiles['miracleeye']) return false;
 		},
 		effect: {
+			noCopy: true,
 			onStart: function (pokemon) {
 				this.add('-start', pokemon, 'Foresight');
 			},
@@ -8973,6 +8977,7 @@ exports.BattleMovedex = {
 			if (target.volatiles['foresight']) return false;
 		},
 		effect: {
+			noCopy: true,
 			onStart: function (pokemon) {
 				this.add('-start', pokemon, 'Miracle Eye');
 			},
@@ -9603,6 +9608,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, mirror: 1},
 		volatileStatus: 'nightmare',
 		effect: {
+			noCopy: true,
 			onStart: function (pokemon) {
 				if (pokemon.status !== 'slp') {
 					return false;
@@ -13080,6 +13086,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, mirror: 1, nonsky: 1},
 		volatileStatus: 'smackdown',
 		effect: {
+			noCopy: true,
 			onStart: function (pokemon) {
 				let applies = false;
 				if (pokemon.hasType('Flying') || pokemon.hasAbility('levitate')) applies = true;
@@ -13734,6 +13741,7 @@ exports.BattleMovedex = {
 		},
 		volatileStatus: 'stockpile',
 		effect: {
+			noCopy: true,
 			onStart: function (target) {
 				this.effectData.layers = 1;
 				this.add('-start', target, 'stockpile' + this.effectData.layers);
@@ -14309,8 +14317,8 @@ exports.BattleMovedex = {
 			let myItem = source.takeItem();
 			if (target.item || source.item || (!yourItem && !myItem) ||
 					(myItem.onTakeItem && myItem.onTakeItem(myItem, target) === false)) {
-				if (yourItem) target.item = yourItem;
-				if (myItem) source.item = myItem;
+				if (yourItem) target.item = yourItem.id;
+				if (myItem) source.item = myItem.id;
 				return false;
 			}
 			this.add('-activate', source, 'move: Trick', '[of] ' + target);
@@ -14975,6 +14983,7 @@ exports.BattleMovedex = {
 		flags: {protect: 1, reflectable: 1, mirror: 1, authentic: 1},
 		volatileStatus: 'torment',
 		effect: {
+			noCopy: true,
 			onStart: function (pokemon) {
 				this.add('-start', pokemon, 'Torment');
 			},
@@ -15129,8 +15138,8 @@ exports.BattleMovedex = {
 			let myItem = source.takeItem();
 			if (target.item || source.item || (!yourItem && !myItem) ||
 					(myItem.onTakeItem && myItem.onTakeItem(myItem, target) === false)) {
-				if (yourItem) target.item = yourItem;
-				if (myItem) source.item = myItem;
+				if (yourItem) target.item = yourItem.id;
+				if (myItem) source.item = myItem.id;
 				return false;
 			}
 			this.add('-activate', source, 'move: Trick', '[of] ' + target);

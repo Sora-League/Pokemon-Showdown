@@ -136,7 +136,7 @@ exports.commands = {
 		}
 
 		Users.users.forEach(u => {
-			lastSeen.write(u.userid);
+			Seen.set(u.userid);
 		});
 
 		if (!fs.existsSync('storage-files/maxuptime.txt')) fs.writeFileSync('storage-files/maxuptime.txt', process.uptime());

@@ -36,6 +36,23 @@ const BROADCAST_TOKEN = '!';
 const fs = require('fs');
 const path = require('path');
 
+exports.multiLinePattern = {
+	elements: [],
+	regexp: null,
+	register: function (elem) {
+		if (Array.isArray(elem)) {
+			elem.forEach(elem => this.elements.push(elem));
+		} else {
+			this.elements.push(elem);
+		}
+		this.regexp = new RegExp('^(' + this.elements.map(elem => '(?:' + elem + ')').join('|') + ')', 'i');
+	},
+	test: function (text) {
+		if (!this.regexp) return false;
+		return this.regexp.test(text);
+	},
+};
+
 /*********************************************************
  * Load command files
  *********************************************************/
@@ -208,7 +225,7 @@ class CommandContext {
 
 			this.message = message;
 			this.broadcastMessage = broadcastMessage;
-			this.user.broadcasting = true;
+			this.user.broadcasting = this.cmd;
 		}
 		return true;
 	}
@@ -303,7 +320,7 @@ class CommandContext {
 			}
 			if (room && room.modchat) {
 				let userGroup = user.group;
-				if (room.auth) {
+				if (room.auth && !user.can('makeroom')) {
 					if (room.auth[user.userid]) {
 						userGroup = room.auth[user.userid];
 					} else if (room.isPrivate === true) {
@@ -315,7 +332,7 @@ class CommandContext {
 						this.errorReply("Because moderated chat is set, your account must be at least one week old and you must have won at least one ladder game to speak in this room.");
 						return false;
 					}
-				} else if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(room.modchat) && !user.can('makeroom')) {
+				} else if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(room.modchat)) {
 					let groupName = Config.groups[room.modchat].name || room.modchat;
 					this.errorReply("Because moderated chat is set, you must be of rank " + groupName + " or higher to speak in this room.");
 					return false;
@@ -657,7 +674,9 @@ exports.uncacheTree = function (root) {
 		for (let i = 0; i < uncache.length; ++i) {
 			if (require.cache[uncache[i]]) {
 				newuncache.push.apply(newuncache,
-					require.cache[uncache[i]].children.map(cachedModule => cachedModule.id)
+					require.cache[uncache[i]].children
+						.filter(cachedModule => !cachedModule.id.endsWith('.node'))
+						.map(cachedModule => cachedModule.id)
 				);
 				delete require.cache[uncache[i]];
 			}

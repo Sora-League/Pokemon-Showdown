@@ -187,7 +187,7 @@ TeamValidator.PM.spawn();
 let Core = require('./Core.js');
 global.Economy = Core.Economy;
 global.hashColor = Core.hashColor;
-global.lastSeen = Core.lastSeen;
+global.Seen = Core.Seen;
 
 /*********************************************************
  * Start up the REPL server
