@@ -128,8 +128,7 @@ exports.commands = {
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Archeops<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-No priority<br />' + seen('sorawhitefang') + getBadges('sorawhitefang')
-		);
+			'-No priority<br />' + seen('sorawhitefang') + getBadges('sorawhitefang'));
 	},
 
 	mitsuka: function (target, room, user) {
@@ -142,6 +141,7 @@ exports.commands = {
 			'-None<br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 
 	},
+	
 	/*sube4: function(target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
