@@ -119,6 +119,20 @@ exports.commands = {
 			seen('soraterrors') +
 			getBadges('soraterrors'));
 	},
+        
+        silvy: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>Silvy</b>∆<br />' +
+			'<i>"ur bad"</i> <br />' +
+			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
+			'<b>Ace:</b> None<br />' +
+			'<b>Battle Rules:</b><br />' +
+			'-None<br />' +
+			seen('sorasilvy') +
+			getBadges('sorasilvy'));
+	},
+
+
 
 	whitefang: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -405,14 +419,14 @@ exports.commands = {
 	},
 
 
-	silvy: 'steel',
+	
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Steel</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"ur bad"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> None<br />' +
-			seen('sorasilvy') + getBadges('silveee')
+			seen('') + getBadges('')
 		);
 	},
 
