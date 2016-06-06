@@ -34,7 +34,7 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
-			'Elite Four': ['∆Sora Terrors∆', '∆Sora Tempest∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆'],
+			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Arjun∆', '∆Sora Akash∆'],
 			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Nightanglet∆', '∆Sora Float∆', '∆Sora Doku∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Meows∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Silvy∆'],
 		}
@@ -128,7 +128,7 @@ exports.commands = {
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Archeops<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-No priority<br />' + seen('sorawhitefang') + getBadges('sorawhitefang'));
+			'-No priority<br>' + seen('sorawhitefang') + getBadges('sorawhitefang'));
 	},
 
 	mitsuka: function (target, room, user) {
