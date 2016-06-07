@@ -76,10 +76,14 @@ exports.commands = {
 		if (!target) return;
 		target = this.splitTarget(target);
 		let targetUser = this.targetUser;
-		if (!targetUser || !targetUser.connected) {
-			return this.sendReply("User " + this.targetUsername + " not found.");
+		if (!targetUser || !targetUser.connected) return this.errorReply("User " + this.targetUsername + " not found.");
+
+		if (!this.can('warn', null, room)) return false;
+		//cuz fuck silvy
+		if (!user.can('warn', targetUser, room) && !(targetUser.userid in {'silveee':1,'sorasilvy':1})) {
+			return this.errorReply("/" + cmd + " - Access denied");
 		}
-		if (!this.can('kick', targetUser, room)) return false;
+
 		let msg = "kicked by " + user.name + (target ? " (" + target + ")" : "") + ".";
 		targetUser.popup("You have been " + msg);
 		if (cmd === 'spank') msg = msg.replace('kicked', 'spanked out of the room');
