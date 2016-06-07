@@ -145,14 +145,14 @@ exports.commands = {
 		);
 	},
 
-	mitsuka: function (target, room, user) {
+	abadon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Mitsuka</b>∆<br />' +
-			'<i>"Storm of leaf and draining root!"</i> <br />' +
-			'<b>Type: <font color = 006b0a>Grass</font></b><br />' +
-			'<b>Ace:</b> All<br />' +
+		this.sendReplyBox('∆E4 <b>Abadon</b>∆<br />' +
+			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
+			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
+			'<b>Ace:</b> Sableye<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + seen('soramitsuka') + getBadges('soramitsuka'));
+			'-None<br />' + seen('soraabadon') + getBadges('soraabadon'));
 
 	},
 	/*sube4: function(target, room, user) {
@@ -345,22 +345,23 @@ exports.commands = {
 			seen('soralez') + getBadges('soralez'));
 	},
 
-	abadon: 'ghost',
+	
 	ghost: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Abadon</b>∆<br />' +
-			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
-			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Sableye<br />' +
-			seen('soraabadon') + getBadges('soraabadon'));
-	},
-
-	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
+			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
+			'<b>Ace:</b> ???<br />' +
+			seen('???') + getBadges('???'));
+	},
+
+	mitsuka: 'grass',
+	grass: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
+			'<i>"Storm of leaf and draining root!"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Bellosom <br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 	},
 
 	meows: 'ice',
