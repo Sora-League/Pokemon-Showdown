@@ -494,7 +494,7 @@ exports.commands = {
 
 	azh: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('<div style = "padding: 8px; color: #206E55; background: #000 url(https://67.media.tumblr.com/1c8df8b90843d1f29c2daec235f20c3a/tumblr_o8chi3z52U1v5aa3xo1_1280.png) no-repeat scroll bottom; background-size: 100%;">' +
+		this.sendReplyBox('<div style = "padding: 8px; color: #1B2A59; background: #000 url(https://67.media.tumblr.com/1c8df8b90843d1f29c2daec235f20c3a/tumblr_o8chi3z52U1v5aa3xo1_1280.png) no-repeat scroll bottom; background-size: 100%;">' +
 			'<center><b><font size= 5>∆ArthurZH∆</font></b></center><br />' +
 			'<center><i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i></center> <br />' +
 			'<center><b>Favoured Type:</b> Water<br />' +
