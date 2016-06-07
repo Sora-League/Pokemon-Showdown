@@ -501,10 +501,10 @@ exports.commands = {
 			'<b>Favoured Metagame:</b> Smogon Doubles <br />' +
 			'<b>Favourite Pokemon:</b> Gyarados<br />' +
 			'<b>Achievements:</b> Ex Water Leader of Sora, Ex Roulette/Champion\'s Challenge/Monotype Frontier of Sora<br />' +
-			'<b>Current Position:</b> Doubles OU Frontier</center><br />' +
+			'<b>Current Position:</b> Doubles OU Frontier</center><br />' + getBadges('sorazachary') + '<br><br><br>' +
 			'<center><details><summary>Sprites!</summary><center><img src="http://fc00.deviantart.net/fs71/f/2014/082/f/8/manaphy_gif_by_gloomymyth-d7bakkc.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/keldeo-resolute.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/tentacruel.gif"><img src="http://www.pokemonreborn.com/custom/44203.png?530"> <img src="http://play.pokemonshowdown.com/sprites/xyani/volcanion.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/swampert.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gyarados.gif"></center></details></center>' +
 			'<center><font size=2><b>Battle Theme</b> - <i>Hoenn Oceanic Museum Remix [Credits: GlitchXCity]</i></font><br \><audio src="https://dl.pushbulletusercontent.com/rd0Qhn6drs85cyLNk7XIxGmwLQHQl4q1/Atmosphere-%20Bright.mp3" controls="" border: 2px solid #76BCBE ; background-color: #76BCBE" target="_blank"></audio></center><br \>' +
-			'<font size=1>P.S. All credits for artwork goes to Tempest (ABootToTheHead), sprite imaging to Showdown!, and avatar imaging to Reborn Sprite Gallery and corresponding artists!</font><br>' + getBadges('sorazachary') + '<br><br><br>');
+			'<font size=1>P.S. All credits for artwork goes to Tempest (ABootToTheHead), sprite imaging to Showdown!, and avatar imaging to Reborn Sprite Gallery and corresponding artists!</font><br>');
 	},
 
 	bamdee: function (target, room, user) {
