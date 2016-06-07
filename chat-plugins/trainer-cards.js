@@ -2,9 +2,9 @@
 
 function seen(user) {
 	user = toId(user);
-	let time = Seen.get(user);
+	let time = lastSeen.get(user);
 	if ((Users.getExact(user) && Users.getExact(user).connected) || time === 'never') return '';
-	return '<b>Last Seen:</b> ' + time[0] + ' ago';
+	return '<b>Last Seen:</b> ' + time.split(', ')[0] + ' ago';
 }
 
 function getBadges(user) {
@@ -644,7 +644,7 @@ exports.commands = {
 			msg = '<button name = "send" value = "/me flips cash at Silvy-chan :D" style = "margin: 3px; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('$$$ Click 2 flip cash at me! $$$') + '</b></span></button><br>' +
 				'<button name = "send" value = "/me pets Silvy-chan :3" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Pet me') + ' :3</b></span></button>' +
 				' <button name = "send" value = "/kick ' + Users('silveee').name + ', 2sexy4us" style = "margin: 3px; color: silver; transform: skewX(-30deg); text-shadow: 0px 0px 5px; border: 1px solid gold; background: black;"><div style = "transform: skewX(30deg)"><b>' + colorify('Kick me') + ' :D</b></span></button>';
-		} else msg = '<span style = "color: gold; text-shadow: 0px 0px 5px">Last seen in da hood <b>' + colorify(Seen.get('silveee').join(', ') + ' ago') + '</b></span><br>';
+		} else msg = '<span style = "color: gold; text-shadow: 0px 0px 5px">Last seen in da hood <b>' + colorify(lastSeen.get('silveee') + ' ago') + '</b></span><br>';
 		this.sendReply('|html|<center><div style = "border-radius: 7px; padding: 5px; box-shadow: 2px 2px 5px black; background: radial-gradient(circle, #1c1c1c, #333232, #1c1c1c, #333232, #1c1c1c, #333232);">' +
 			'<b style = "font-size: 17pt;">' + colorify('☆☆☆☆☆☆☆☆ S I L V E E E E ☆☆☆☆☆☆☆☆') + '</b><br>' +
 			'<i><span style = "color: silver; text-shadow: 0px 0px 5px;">"i liek fucking goats"</span></i><br>' +
