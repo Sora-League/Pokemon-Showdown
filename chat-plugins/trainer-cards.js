@@ -201,7 +201,8 @@ exports.commands = {
 			'<b>Symbol: </b>Fist <br />' +
 			'<b>Ace:</b> Charizard<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-NU<br />' + seen('soraarjun') + getBadges('soraarjun'));
+			'-NU<br />' +
+			'-No Priority Moves<br>' + seen('soraarjun') + getBadges('soraarjun'));
 	},
 
 	heat: function (target, room, user) {
