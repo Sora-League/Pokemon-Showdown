@@ -460,7 +460,7 @@ class User {
 		return this.can('promote', {group:sourceGroup}) && this.can('promote', {group:targetGroup});
 	}
 	resetName() {
-		lastSeen.write(this.userid);
+		Seen.set(this.userid);
 		let name = 'Guest ' + this.guestNum;
 		let userid = toId(name);
 		if (this.userid === userid && !(this.named && !this.namelocked)) return;
@@ -974,7 +974,7 @@ class User {
 		}
 	}
 	onDisconnect(connection) {
-		if (this.named) lastSeen.write(this.userid);
+		if (this.named) Seen.set(this.userid);
 		for (let i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {
 				// console.log('DISCONNECT: ' + this.userid);
@@ -1031,7 +1031,7 @@ class User {
 			}
 		}
 		this.roomCount = {};
-		if (this.named) lastSeen.write(this.userid);
+		if (this.named) Seen.set(this.userid);
 	}
 	getAlts(includeConfirmed, forPunishment) {
 		return this.getAltUsers(includeConfirmed, forPunishment).map(user => user.getLastName());

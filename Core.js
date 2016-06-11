@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const moneyFile = 'storage-files/money.json';
 
 function format(target, word) {
 	if (Math.floor(target) === 0) return '';
@@ -9,7 +10,7 @@ function format(target, word) {
 }
 
 let seen = JSON.parse(fs.readFileSync('storage-files/lastseen.json'));
-let money = JSON.parse(fs.readFileSync('storage-files/money.json'));
+let money = JSON.parse(fs.readFileSync(moneyFile));
 
 exports.Seen = {
 	get: function (user) {

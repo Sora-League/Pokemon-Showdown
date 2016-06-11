@@ -145,14 +145,14 @@ exports.commands = {
 		);
 	},
 
-	mitsuka: function (target, room, user) {
+	abadon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Mitsuka</b>∆<br />' +
-			'<i>"Storm of leaf and draining root!"</i> <br />' +
-			'<b>Type: <font color = 006b0a>Grass</font></b><br />' +
-			'<b>Ace:</b> All<br />' +
+		this.sendReplyBox('∆E4 <b>Abadon</b>∆<br />' +
+			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
+			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
+			'<b>Ace:</b> Sableye<br />' +
 			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + seen('soramitsuka') + getBadges('soramitsuka'));
+			'-None<br />' + seen('soraabadon') + getBadges('soraabadon'));
 
 	},
 	/*sube4: function(target, room, user) {
@@ -201,7 +201,8 @@ exports.commands = {
 			'<b>Symbol: </b>Fist <br />' +
 			'<b>Ace:</b> Charizard<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-NU<br />' + seen('soraarjun') + getBadges('soraarjun'));
+			'-NU<br />' +
+			'-No Priority Moves<br>' + seen('soraarjun') + getBadges('soraarjun'));
 	},
 
 	heat: function (target, room, user) {
@@ -345,22 +346,23 @@ exports.commands = {
 			seen('soralez') + getBadges('soralez'));
 	},
 
-	abadon: 'ghost',
+	
 	ghost: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Abadon</b>∆<br />' +
-			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
-			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Sableye<br />' +
-			seen('soraabadon') + getBadges('soraabadon'));
-	},
-
-	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
+			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
+			'<b>Ace:</b> ???<br />' +
+			seen('???') + getBadges('???'));
+	},
+
+	mitsuka: 'grass',
+	grass: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
+			'<i>"Storm of leaf and draining root!"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Bellosom <br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 	},
 
 	meows: 'ice',
@@ -493,16 +495,17 @@ exports.commands = {
 
 	azh: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('<div style = "padding: 8px; color: white; background: #000 url(http://www.pageresource.com/wallpapers/wallpaper/pokemon_67267.jpg) no-repeat scroll bottom; background-size: 100%;">' +
+		this.sendReplyBox('<div style = "padding: 8px; color: #1B2A59; background: #000 url(https://67.media.tumblr.com/1c8df8b90843d1f29c2daec235f20c3a/tumblr_o8chi3z52U1v5aa3xo1_1280.png) no-repeat scroll bottom; background-size: 100%;">' +
 			'<center><b><font size= 5>∆ArthurZH∆</font></b></center><br />' +
 			'<center><i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i></center> <br />' +
 			'<center><b>Favoured Type:</b> Water<br />' +
 			'<b>Favoured Metagame:</b> Smogon Doubles <br />' +
-			'<b>Favourite Pokemon:</b> Gyarados</center><br />' +
+			'<b>Favourite Pokemon:</b> Gyarados<br />' +
 			'<b>Achievements:</b> Ex Water Leader of Sora, Ex Roulette/Champion\'s Challenge/Monotype Frontier of Sora<br />' +
-			'<b>Current Position:</b> Smogon Doubles OU Frontier<br />' +
-			'<center><img src="http://fc00.deviantart.net/fs71/f/2014/082/f/8/manaphy_gif_by_gloomymyth-d7bakkc.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/keldeo-resolute.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/tentacruel.gif"><img src="http://www.pokemonreborn.com/custom/44203.png?530"> <img src="http://play.pokemonshowdown.com/sprites/xyani/kabutops.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/swampert.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gyarados.gif"></center>' +
-			'<center><font size=2 color=#0000FF><b>Battle Theme</b> - <i>Hoenn Oceanic Museum Remix [Credits: GlitchXCity]</i></font><br \><audio src="https://dl.pushbulletusercontent.com/rd0Qhn6drs85cyLNk7XIxGmwLQHQl4q1/Atmosphere-%20Bright.mp3" controls="" style="width: 100% ; border: 2px solid #0000FF ; background-color: #3399FF" target="_blank"></audio></center><br \>' + getBadges('frontierzachary'));
+			'<b>Current Position:</b> Doubles OU Frontier</center><br />' + getBadges('sorazachary') + '<br><br><br>' +
+			'<center><details><summary>Sprites!</summary><center><img src="http://fc00.deviantart.net/fs71/f/2014/082/f/8/manaphy_gif_by_gloomymyth-d7bakkc.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/keldeo-resolute.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/tentacruel.gif"><img src="http://www.pokemonreborn.com/custom/44203.png?530"> <img src="http://play.pokemonshowdown.com/sprites/xyani/volcanion.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/swampert.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gyarados.gif"></center></details></center>' +
+			'<center><font size=2><b>Battle Theme</b> - <i>Hoenn Oceanic Museum Remix [Credits: GlitchXCity]</i></font><br \><audio src="https://dl.pushbulletusercontent.com/rd0Qhn6drs85cyLNk7XIxGmwLQHQl4q1/Atmosphere-%20Bright.mp3" controls="" border: 2px solid #76BCBE ; background-color: #76BCBE" target="_blank"></audio></center><br \>' +
+			'<font size=1>P.S. All credits for artwork goes to Tempest (ABootToTheHead), sprite imaging to Showdown!, and avatar imaging to Reborn Sprite Gallery and corresponding artists!</font><br>');
 	},
 
 	bamdee: function (target, room, user) {
