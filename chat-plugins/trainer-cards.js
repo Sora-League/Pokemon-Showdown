@@ -80,7 +80,7 @@ exports.commands = {
 
 	onyx: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('|html| border: 2px solid #7f5200; border-radius: 10px; padding: 5px; color: #7f5200; text-shadow: 0px 0px 5px; background-image: url(http://farm4.static.flickr.com/3358/3503936537_d9b46321cd.jpg); background-size: cover;">' +
+		this.sendReplyBox('<div style = "padding: 8px; color: #7f5200; background: #000 url(http://farm4.static.flickr.com/3358/3503936537_d9b46321cd.jpg); background-size: cover;">' +
 			'<a><font face = forte><font color =  b27300><font size= 5><center>∆OnyxEagle∆</center></font></a><br />' +
 			'<center><i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i></center> <br />' +
 			'<b>Skilled in:</b> Rock types/ Ubers, Random Battle and OU to a certain degree.<br />' +
