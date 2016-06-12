@@ -81,13 +81,16 @@ exports.commands = {
 	onyx: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<div style = "padding: 8px; color: #7f5200; background: #000 url(http://farm4.static.flickr.com/3358/3503936537_d9b46321cd.jpg); background-size: cover;">' +
-			'<a><font face = forte><font color =  b27300><font size= 5><center>∆OnyxEagle∆</center></font></a><br />' +
-			'<center><i>"Heads or Tails? Heads, I Win; Tails, you Lose"</i></center> <br />' +
-			'<b>Skilled in:</b> Rock types/ Ubers, Random Battle and OU to a certain degree.<br />' +
-			'<b>History:</b> 2nd Champion of New Sora. One of the 2 people who resurrected Sora from the rubbles. <br/>' +
-			'<b>Notes:</b> Resident coder of Sora, still conducts tests and registrations, offers advice. <br/>' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/kabutops.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/landorus.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/heracross-mega.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/tyranitar.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif">' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'<a><font face = algerian><font color =  b27300><font size= 5><center>∆OnyxEagle∆</center></font></a><br />' +
+			'<center><i>"I WILL ROCK YOUR WORLD!"</i></center> <br />' +
+			'<b>Skilled in:</b> Monotype Rock<br />' +
+			'<b>Achievements:</b> 1st Co-Champion of New Sora. Resurrected Sora from the rubbles with Arani. One of the best Rock-type users. <br/>' +
+			'<b>History:</b> Champion, Random Battles Frontier of Sora. <br/>' +
+			'<b>Current Position:</b> Rock-type Gym Leader <br/>' +
+			'<b>Notes:</b> Conducts tests, registrations and coding. <br/>' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/kabutops.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/tyranitar.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/terrakion.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/omastar.gif">' +
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />'+
+			getBadges('soraonyxeagle'));
 	},
 
 	risu: 'ninjarisu',
