@@ -85,7 +85,7 @@ exports.commands = {
 			'<center><i>"I WILL ROCK YOUR WORLD!"</i></center> <br />' +
 			'<b>Skilled in:</b> Monotype Rock<br />' +
 			'<b>Achievements:</b> 1st Co-Champion of New Sora. Resurrected Sora from the rubbles with Arani. One of the best Rock-type users. <br/>' +
-			'<b>History:</b> Champion, Random Battles Frontier of Sora. <br/>' +
+			'<b>History:</b> First host of Sora\'s server. Champion, Random Battles Frontier of Sora. <br/>' +
 			'<b>Current Position:</b> Rock-type Gym Leader <br/>' +
 			'<b>Notes:</b> Conducts tests, registrations and coding. <br/>' +
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/kabutops.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/tyranitar.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/terrakion.gif"> <img src="http://play.pokemonshowdown.com/sprites/xyani/omastar.gif">' +
