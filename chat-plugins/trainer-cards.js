@@ -391,7 +391,7 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('soracynical') + getBadges('soracynical'));
 	},
 
-	nova: 'nova',
+	nova: 'poison',
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Nova</b>∆<br />' +
