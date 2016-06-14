@@ -424,24 +424,24 @@ exports.commands = {
 	},
 
 
-	
+	leaf: 'steel',
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"ur bad"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
+			'<i>"Those who fight for the Iron Throne either win, or die."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> None<br />' +
-			seen('') + getBadges('')
+			'<b>Ace:</b> Ferrothorn<br />' +
+			seen('soraleaf') + getBadges('soraleaf')
 		);
 	},
 
-	leaf: 'water',
+	
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
-			'<i>"Beached, but still in it."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Slowking <br/>'
+			'<b>Ace:</b> ??? <br/>'
 		);
 	},
 
