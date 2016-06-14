@@ -47,7 +47,7 @@ let badgeList = {
 	landorus: ['Landorus', '<img src="http://i.imgur.com/VcxTNWj.png" width=75 height=75 title="Most Valuable Pokemon in Season 3 of the IPL">', "http://i.imgur.com/VcxTNWj.png"],
 	megaaltaria: ['Mega Altaria', '<img src="http://i.imgur.com/ueI4x5s.png" width=75 height=75 title="Top Pokèmon Killer in Season 3 of the IPL">', "http://i.imgur.com/ueI4x5s.png"],
 	megadiancie: ['Mega Diancie', '<img src="http://i.imgur.com/fnZMUzD.png" width=75 height=75 title="Top Pokèmon Killer in Season 4 of the IPL">', "http://i.imgur.com/fnZMUzD.png"],
-	bronzeclefable: ['Clefable the MVP', '<img src="http://i.imgur.com/W9Cdmt2.png" width=75 height=75 title="Most Valuable Pokemon in Season 4 of the IPL">', "http://i.imgur.com/W9Cdmt2.png"],
+	clefable: ['Clefable the MVP', '<img src="http://i.imgur.com/W9Cdmt2.png" width=75 height=75 title="Most Valuable Pokemon in Season 4 of the IPL">', "http://i.imgur.com/W9Cdmt2.png"],
 	silvergolbat: ['Silver Cup Golbat', '<img src="http://i.imgur.com/D1y8PPn.png" width=75 height=75 title="Runner Up of the International Pokemon League (Season 4)">', "http://i.imgur.com/D1y8PPn.png"],
 	goldgolbat: ['Gold Cup Golbat', '<img src="http://i.imgur.com/ArrKoXE.png" width=75 height=75 title="Champion of the Internation Pokemon League (Season 4)">', "http://i.imgur.com/ArrKoXE.png"]
 	
