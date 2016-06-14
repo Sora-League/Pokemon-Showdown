@@ -374,7 +374,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Meows</b>∆<br />' +
 			'<i>"i i5 ver1 c00l thanker1n0s f0r batt1e"</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> Froslass<br />' +
+			'<b>Ace:</b> Walrein<br />' +
 			seen('sorameows') + '<br>' +
 			getBadges('sorameows')
 		);
