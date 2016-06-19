@@ -435,13 +435,13 @@ exports.commands = {
 		);
 	},
 
-	
+	kezyru1: 'water',
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Kezyru1</b>∆<br />' +
+			'<i>"Water you doing"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> Swampert <br/>'
 		);
 	},
 
