@@ -353,7 +353,7 @@ exports.commands = {
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Melody</b>∆<br />' +
-			'<i>"Let the Ghastly tune envelop you."</i> <br />' +
+			'<i>"Let the ghastly tune envelop you."</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> Gourgeist<br />' +
 			seen('soramelody') + getBadges('soramelody'));
