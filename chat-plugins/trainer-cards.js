@@ -198,6 +198,18 @@ exports.commands = {
 		);
 	},
 
+       nightanglet: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Nightanglet</b>∆<br />' +
+			'<i>"What\'s a quote?"</i> <br />' +
+			'<b>Symbol: </b>Night <br />' +
+			'<b>Ace:</b> Ursaring<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-STABmons<br />' + seen('soranightanglet') + getBadges('soranightanglet')
+		);
+	},
+
+
 	arjun: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Arjun</b>∆<br />' +
@@ -222,19 +234,7 @@ exports.commands = {
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
 
-	zachary: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Elite Frontier <b>Zachary</b>∆<br/>' +
-			'<i>"Can you do a few things at the same time?"</i><br/>' +
-			'<b>Symbol:</b> Multitasking<br/>' +
-			'<b>Ace:</b> All<br/>' +
-			'<b>Battle Rules:</b><br/>' +
-			'-Doubles OU<br />' +
-			'-No hazards<br />' +
-			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
-			'-Pikachu Tournamentchu <br />' +
-			'-No CAP Pokemon</details> <br />' + seen('sorazachary') + getBadges('sorazachary'));
-	},
+
 
 
 	/*subfrontier: function(target, room, user) {
@@ -310,13 +310,13 @@ exports.commands = {
 			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio><br />' + seen('soramark') + getBadges('soramark'));
 	},
 
-	nightanglet: 'fighting',
+	
 	fighting: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Nightanglet</b>∆<br />' +
-			'<i>"What\'s a quote?"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
-			'<b>Ace:</b> Mega-Gallade<br />' + seen('soranightanglet') + getBadges('soranightanglet')
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
 		);
 	},
 
