@@ -181,7 +181,7 @@ exports.commands = {
 		for (let i = 0; i < blacklist.length; i++) {
 			if (user.latestHost.indexOf(blacklist[i]) > -1 || user.latestIp.indexOf(blacklist[i]) > -1) {
 				user.popup('You are on the Sora League banlist or are using a Proxy. GET REKT SON.');
-				user.ban();
+				user.disconnectAll();
 			}
 		}
 	},
