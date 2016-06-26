@@ -210,17 +210,6 @@ exports.commands = {
 	},
 
 
-	arjun: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Arjun</b>∆<br />' +
-			'<i>"Everyone has a plan until they get punched in their face."</i> <br />' +
-			'<b>Symbol: </b>Fist <br />' +
-			'<b>Ace:</b> Charizard<br />' +
-			'<b>Battle rules:</b> <br />' +
-			'-NU<br />' +
-			'-No Priority Moves<br>'+ 
-			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/lilligant.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/sawk.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/vivillon-garden.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/archeops.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/charizard.gif">' + seen('soraarjun') + getBadges('soraarjun'));
-	},
 
 	heat: function (target, room, user) {
 		if (!this.runBroadcast()) return;
