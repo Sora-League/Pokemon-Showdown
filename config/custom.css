@@ -85,16 +85,15 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
 }
 a.button.cur, a.button.cur:hover {
-    background: url("http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353");
+	background: url("http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353");
 }
 .maintabbarbottom, a.button {
-    background: #dde7ff;
+	background: #dde7ff;
+	color: black;
 }
 a.button:hover {
-    background: #c7d7fc;
-}
-a.button i, a.button span {
-    color: black;
+	background: #c7d7fc;
+	color: black;
 }
 .chat-log .chat {
 	font-size: 8pt !important;
@@ -105,15 +104,15 @@ a.button i, a.button span {
 
 /*Waffles's chat color*/
 .chat.chatmessage-gymldrwaffles strong {
-    color: #09aa3e !important;
+	color: #09aa3e !important;
 }
 li#lobby-userlist-user-gymldrwaffles strong, li#gamecorner-userlist-user-gymldrwaffles strong, li#staff-userlist-user-gymldrwaffles strong {
-    color: #09aa3e !important;
+	color: #09aa3e !important;
 }
 /*Float's chat color*/
 .chat.chatmessage-sorafloat strong {
-    color: #0b1f82 !important;
+	color: #0b1f82 !important;
 }
 li#lobby-userlist-user-sorafloat strong, li#gamecorner-userlist-user-sorafloat strong, li#staff-userlist-user-sorafloat strong {
-    color: #0b1f82 !important;
+	color: #0b1f82 !important;
 }
