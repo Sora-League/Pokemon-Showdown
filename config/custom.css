@@ -1,24 +1,32 @@
 /*Light blue- #b2e1ff,#97d5fc Normal blue- #007fff Dark Blue:#003972*/
+.header .logo {
+	opacity: 0;
+}
 .header {
 	background-image:url("http://i59.tinypic.com/w19xfk.jpg");
-	background-repeat:no-repeat
+	background-repeat:no-repeat;
+	background-color: rgba(220,255,255,0.6);
+}
+.dark .header {
+	background: rgba(0, 0, 0, 0.4) url(http://i59.tinypic.com/w19xfk.jpg) no-repeat !important;
 }
 body {
 	background-image:url("http://i.imgur.com/cPtSqmh.png");
 	background-repeat:no-repeat;
 	background-position:center
 }
-.header .logo {
-	opacity: 0;
-}
+
+
 /*li[id *= "champinnah"] button.userbutton.username:hover, li[id *= "frntierblade"] button.userbutton.username:hover, li[id *= "chmpionbart"] button.userbutton.username:hover, li[id *= "femalegallade"] button.userbutton.username:hover, li[id *= "onyxeagle"] button.userbutton.username:hover, li[id *= "artistejeratt"] button.userbutton.username:hover, li[id *= "coachabadon"] button.userbutton.username:hover, li[id *= "coachbloodfist"] button.userbutton.username:hover, li[id *= "neithcass"] button.userbutton.username:hover, li[id *= "bamdee"] button.userbutton.username:hover {
     background: rgb(252,183,63);
 }*/
 
+/*Ateam userlist highlights*/
 li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-userlist-user-sorabarts, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-sorarevan, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-soraonyxeagle, li#lobby-userlist-user-jeratt, li#lobby-userlist-user-sorajerattata, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-soraninjarisu, li#lobby-userlist-user-soraneith, li#lobby-userlist-user-blazing360 {
     background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
 }
 
+/*Donators*/
 li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 	background: rgba(255 , 26 , 26 , 0.5);
 }
@@ -39,35 +47,40 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 	background-image: url(http://orig13.deviantart.net/570b/f/2014/357/3/9/or_as_city_battle_background__night__by_phoenixoflight92-d8b0izs.png) !important;
 }
 
+/*DARK MENU BUTTONS*/
+.dark .header {
+	background: rgba(0, 0, 0, 0.4) url(http://i59.tinypic.com/w19xfk.jpg) no-repeat !important;
+}
+.dark .maintabbarbottom {
+	border: 1px solid #111;
+	background-color: #3a3a3a;
+}
+.dark .button.cur span {
+	overflow: visible !important;
+}
+.dark .roomtab.button {
+	background: #232323;
+	border: 1px solid #111;
+	color: #4488EE;
+	text-shadow: 0px 0px 3px #6b9eea;
+}
+.dark a.button.subtle-notifying {
+	color: #6b9eea;
+	text-shadow: 0px 0px 3px #6b9eea;
+}
+.dark .button.cur, .dark .button.cur:hover {
+	background: #3a3a3a;
+	border: 1px solid #111;
+	color: #4488EE;
+	text-shadow: 0px 0px 5px #0065ff;
+}
+
+
 /*li#lobby-userlist-user-insertname { background: url("http://i.imgur.com/cK069Jn.png") no-repeat right;
 }*/
 
 /*Ranks*/
 /*John Cena*/
-
-/*E4*/
-li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user- { 
-	background: url("http://i.imgur.com/PE7WCZk.png") no-repeat right;
-}
-/*Elite Frontier*/
-li#lobby-userlist-user-, li#lobby-userlist-user- { 
-	background: url("") no-repeat right;
-}
-/*Frontier*/
-li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
-li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user- { 
-	background: url("") no-repeat right;
-}
-
-/*Gym Ldr*/
-li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
-li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
-li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
-li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-, li#lobby-userlist-user-,
-li#lobby-userlist-user-, li#lobby-userlist-user- { 
-	background: url("") no-repeat right;
-}
-
 .chat-log {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
 }
