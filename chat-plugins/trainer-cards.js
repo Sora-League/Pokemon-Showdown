@@ -369,13 +369,13 @@ exports.commands = {
 		);
 	},
 
-	
+	kezyru1: 'normal',
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Kezyru1</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Ambipom<br />' + seen('sorakezyru1') + getBadges('sorakezyru1'));
 	},
 
 	nova: 'poison',
@@ -424,13 +424,13 @@ exports.commands = {
 		);
 	},
 
-	kezyru1: 'water',
+	
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Kezyru1</b>∆<br />' +
-			'<i>"Water you doing"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Swampert <br/>'
+			'<b>Ace:</b> ??? <br/>'
 		);
 	},
 
