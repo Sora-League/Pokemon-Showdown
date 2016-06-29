@@ -369,10 +369,10 @@ exports.commands = {
 		);
 	},
 
-	kezyru1: 'normal',
+	key 'normal',
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Kezyru1</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Key</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
 			'<b>Ace:</b> Ambipom<br />' + seen('sorakezyru1') + getBadges('sorakezyru1'));
