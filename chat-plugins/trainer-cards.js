@@ -369,7 +369,7 @@ exports.commands = {
 		);
 	},
 
-	key 'normal',
+	key: 'normal',
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Key</b>∆<br />' +
