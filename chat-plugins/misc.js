@@ -15,18 +15,17 @@ exports.commands = {
 		if (user.isAway) return this.parse('/back');
 		let Names = {dindins: ' - ⒹⓘⓝⒹⓘⓝⓢ', dinner: ' - ⒹⓘⓝⒹⓘⓝⓢ', busy: '- ⒷⓊⓈⓎ'};
 		let Messages = {dindins: 'is now having dindins', dinner: 'is now having dinner', busy: 'is now busy'};
-		
+
 		user.awayName = Names[cmd] || '- ⒶⒻⓀ';
 		let awayMessage = Messages[cmd] || 'is now away';
 		target = Tools.escapeHTML(target);
 		let name = user.name;
-		
-		if (user.isStaff && this.canTalk()) this.add('|raw|-- <b><font color="#000000">' + name + '</font></b> ' + awayMessage + '. ' + (target ? " (" + target + ")" : ""));
+
+		if (user.isStaff && this.canTalk()) this.add('|raw|-- <b>' + name + '</b> ' + awayMessage + '. ' + (target ? " (" + target + ")" : ""));
 		else this.sendReply('You are now away.');
 		for (let i in Names) name = name.replace(RegExp(Names[i], 'g'), '');
 		user.forceRename(name + user.awayName, undefined, true);
 		user.isAway = true;
-		user.blockChallenges = true;
 		user.updateIdentity();
 	},
 
@@ -35,10 +34,9 @@ exports.commands = {
 		if (!user.isAway) return this.sendReply('You are not set as away.');
 		let name = user.name.replace(RegExp(user.awayName, 'g'), '');
 		user.forceRename(name, undefined, true);
-		if (user.isStaff && this.canTalk()) this.add('|raw|-- <b><font color="#000000">' + user.name + '</font></b> is back.');
+		if (user.isStaff && this.canTalk()) this.add('|raw|-- <b>' + user.name + '</b> is back.');
 		user.isAway = false;
 		delete user.awayName;
-		user.blockChallenges = false;
 		user.updateIdentity();
 	},
 

@@ -198,17 +198,18 @@ exports.commands = {
 		);
 	},
 
-	arjun: function (target, room, user) {
+       nightanglet: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Arjun</b>∆<br />' +
-			'<i>"Everyone has a plan until they get punched in their face."</i> <br />' +
-			'<b>Symbol: </b>Fist <br />' +
-			'<b>Ace:</b> Charizard<br />' +
+		this.sendReplyBox('∆Frontier <b>Nightanglet</b>∆<br />' +
+			'<i>"What\'s a quote?"</i> <br />' +
+			'<b>Symbol: </b>Night <br />' +
+			'<b>Ace:</b> Ursaring<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-NU<br />' +
-			'-No Priority Moves<br>'+ 
-			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/lilligant.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/sawk.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/vivillon-garden.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/archeops.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/charizard.gif">' + seen('soraarjun') + getBadges('soraarjun'));
+			'-STABmons<br />' + seen('soranightanglet') + getBadges('soranightanglet')
+		);
 	},
+
+
 
 	heat: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -222,19 +223,7 @@ exports.commands = {
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
 	},
 
-	zachary: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Elite Frontier <b>Zachary</b>∆<br/>' +
-			'<i>"Can you do a few things at the same time?"</i><br/>' +
-			'<b>Symbol:</b> Multitasking<br/>' +
-			'<b>Ace:</b> All<br/>' +
-			'<b>Battle Rules:</b><br/>' +
-			'-Doubles OU<br />' +
-			'-No hazards<br />' +
-			'<details><summary><b>Champion\'s Challenge Rules:</b></summary> <br />' +
-			'-Pikachu Tournamentchu <br />' +
-			'-No CAP Pokemon</details> <br />' + seen('sorazachary') + getBadges('sorazachary'));
-	},
+
 
 
 	/*subfrontier: function(target, room, user) {
@@ -307,18 +296,16 @@ exports.commands = {
 			seen('soramark') + '<br>' +
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
-			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio>' +
-			getBadges('soramark')
-		);
+			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio><br />' + seen('soramark') + getBadges('soramark'));
 	},
 
-	nightanglet: 'fighting',
+	
 	fighting: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Nightanglet</b>∆<br />' +
-			'<i>"What\'s a quote?"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
-			'<b>Ace:</b> Mega-Gallade<br />' + seen('soranightanglet') + getBadges('soranightanglet')
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
 		);
 	},
 
@@ -341,24 +328,24 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
-	lez: 'flying',
-	flying: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Lez</b>∆<br />' +
-			'<i>"When in doubt, Outrage."</i> <br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Braindead (Salamence)<br />' +
-			seen('soralez') + getBadges('soralez'));
-	},
-
 	
-	ghost: function (target, room, user) {
+	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
-			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
+			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> ???<br />' +
-			seen('???') + getBadges('???'));
+			seen('') + getBadges(''));
+	},
+
+	melody: 'ghost',
+	ghost: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Melody</b>∆<br />' +
+			'<i>"Let the ghastly tune envelop you."</i> <br />' +
+			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
+			'<b>Ace:</b> Gourgeist<br />' +
+			seen('soramelody') + getBadges('soramelody'));
 	},
 
 	mitsuka: 'grass',
@@ -370,28 +357,28 @@ exports.commands = {
 			'<b>Ace:</b> Bellosom <br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 	},
 
-	meows: 'ice',
+	
 	ice: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Meows</b>∆<br />' +
-			'<i>"i i5 ver1 c00l thanker1n0s f0r batt1e"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> Froslass<br />' +
-			seen('sorameows') + '<br>' +
-			getBadges('sorameows')
+			'<b>Ace:</b> ???<br />' +
+			seen('') + '<br>' +
+			getBadges('')
 		);
 	},
 
-	cynical: 'normal',
+	key: 'normal',
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Cynical</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Key</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('soracynical') + getBadges('soracynical'));
+			'<b>Ace:</b> Ambipom<br />' + seen('sorakezyru1') + getBadges('sorakezyru1'));
 	},
 
-	nova: 'nova',
+	nova: 'poison',
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Nova</b>∆<br />' +
@@ -426,24 +413,24 @@ exports.commands = {
 	},
 
 
-	
+	leaf: 'steel',
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"ur bad"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
+			'<i>"Those who fight for the Iron Throne either win, or die."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> None<br />' +
-			seen('') + getBadges('')
+			'<b>Ace:</b> Ferrothorn<br />' +
+			seen('soraleaf') + getBadges('soraleaf')
 		);
 	},
 
-	leaf: 'water',
+	
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
-			'<i>"Beached, but still in it."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Slowking <br/>'
+			'<b>Ace:</b> ??? <br/>'
 		);
 	},
 
