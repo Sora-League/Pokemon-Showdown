@@ -159,15 +159,16 @@ exports.commands = {
 			'-None<br />' + seen('soraabadon') + getBadges('soraabadon'));
 
 	},
-	/*sube4: function(target, room, user) {
+	
+	mitsuka: 'sube4',
+	sube4: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
-		'Sub E4 <b>???</b> <br />'+
-		'<b>Type:</b> <b><font color = 006b0a>???</font></b><br />'+
+		this.sendReplyBox('<center>Sub E4 Position: <b><font color = 1AFF00>Online</font></b></center><br />'+
+		'Sub E4 <b>Mitsuka</b> <br />'+
+		'<b>Type:</b> <b><font color = 006b0a>Grass</font></b><br />'+
 		'<b>Battle Rules:</b> <br />'+
-		'-??? <br />'+
-		'-??? <br />');
-        },*/
+		'-None <br />');
+        },
 
 	/*********************************************************
 	 * Frontiers
@@ -348,7 +349,7 @@ exports.commands = {
 			seen('soramelody') + getBadges('soramelody'));
 	},
 
-	mitsuka: 'grass',
+	
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
