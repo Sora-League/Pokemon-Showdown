@@ -34,9 +34,9 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
-			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆'],
-			'Frontiers': ['∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Arjun∆', '∆Sora Akash∆'],
-			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Nightanglet∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Meows∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Silvy∆'],
+			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Silvy∆', '∆Sora Abadon∆'],
+			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆'],
+			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Key∆', '∆Sora Nova∆', '∆Sora Melody∆', ],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
