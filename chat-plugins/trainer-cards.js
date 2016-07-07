@@ -903,12 +903,11 @@ exports.commands = {
 		this.sendReplyBox('<a><center><b><font color = 075ff7 size=3>The Admin Team</font></b></center></a><br />' +
 			'FAQ <br />' +
 			'<b>Who are we?</b><br><li>The Admin team are a group of senior members who make most of the major league decisions and organize most major league events. <br />' +
-			'<b>Who\'s in the Admin Team?</b><br><li><a href="http://sora.cu.cc/ateam.html"><button>Current active members</button></a><br />' +
+			'<b>Who\'s in the Admin Team?</b><br><li><a href="http://sora.cu.cc/ateam.html">Current active members</a><br />' +
 			'<b>What exactly do you guys do?</b><br><li>The Admin Team handle or oversee all matters from disputes in the League, to League Challenge Registration <br />' +
 			'<b>How does one join the Admin team?</b><br><li>The Admin Team usually invites a select few senior members who\'ve shown to be mature and capable of handling responsibility. <br />' +
-			' <br />' +
 			'<center><img src="http://sora.cu.cc/img/namelist.png"><br />' +
-			'All Admin team Members can be identified by their userlist highlight and by having this badge on their trainer card:</center> <br />' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'All current Admin Team Members can be identified by their userlist highlight and by having the left badge on their trainer card.<br>Past and Present Ateam members will also have the right badge featured in their badge cases.</center> <br />' +
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"><img src="http://66.media.tumblr.com/6d1996ce9d10db40fa5f088f7887c71e/tumblr_o15namAV1o1v5aa3xo1_1280.png" width=150 height=150></center> <br />');
 	},
 };
