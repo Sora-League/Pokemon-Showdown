@@ -902,11 +902,11 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><center><b><font color = 075ff7 size=3>The Admin Team</font></b></center></a><br />' +
 			'FAQ <br />' +
-			'<b>Who are we?</b><br>The Admin team are a group of senior members who make most of the major league decisions and organize most major league events. <br />' +
-			'<b>Who\'s in the Admin Team?</b><br><a href="http://sora.cu.cc/ateam.html"><button style="background: #FF4747">Current active members</button></a><br />' +
-			'<b>What exactly do you guys do?</b><br>The Admin Team handle or oversee all matters from disputes in the League, to League Challenge Registration <br />' +
-			'<b>How does one join the Admin team?</b><br>The Admin Team usually invites a select few senior members who\'ve shown to be mature and capable of handling responsibility. <br />' +
-			' <br /><br />' +
+			'<b>Who are we?</b><br><li>The Admin team are a group of senior members who make most of the major league decisions and organize most major league events. <br />' +
+			'<b>Who\'s in the Admin Team?</b><br><li><a href="http://sora.cu.cc/ateam.html"><button>Current active members</button></a><br />' +
+			'<b>What exactly do you guys do?</b><br><li>The Admin Team handle or oversee all matters from disputes in the League, to League Challenge Registration <br />' +
+			'<b>How does one join the Admin team?</b><br><li>The Admin Team usually invites a select few senior members who\'ve shown to be mature and capable of handling responsibility. <br />' +
+			' <br />' +
 			'<center><img src="http://sora.cu.cc/img/namelist.png"><br />' +
 			'All Admin team Members can be identified by their userlist highlight and by having this badge on their trainer card:</center> <br />' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
