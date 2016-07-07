@@ -893,13 +893,8 @@ exports.commands = {
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
 			'<a href = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q3B5Z6STF3EA4&lc=AU&item_name=Sora&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
 			'Remember to mention your username when you leave a note with your donation, or we won\'t know who donated. To all of those who\'ve donated or plan on donating, thank you! We really appreciate it!</center></font><br><br>' +
-			'<b>Donation benefits:</b><br>' +
-			'<strong>$1 or more:</strong>' +
-			'<li>Earns you the Server Donator badge, which will be displayed on your trainer card.' +
-			'<li>Allows you to set a custom username colour visible in chats, but not the userlist.<br><br>' +
-			'<strong>$5 or more:</strong>' +
-			'<li>All of the above^' +
-			'<li>A red <span style = "background: rgba(255, 26, 26, 0.5);">userlist highlight color</span>, visible on the Lobby\'s userlist');
+			'<b>All donators will have their name displayed on a donators list as a way of saying Thank You!</b><br>' +
+			'<font size=0.5>Note: Due to a change in the EULA we cannot provide ANY perks to donators. Users who have donated before this change was implemented will keep their badge, name colour change and userlist highlight.</font>');
 	},
 
 	ateam: 'adminteam',
