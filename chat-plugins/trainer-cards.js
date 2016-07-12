@@ -329,14 +329,14 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
-	
+	valga: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Valga</b>∆<br />' +
+			'<i>"The sky is the limit."</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Dragonite<br />' +
+			seen('soravalga') + getBadges('soravalga'));
 	},
 
 	melody: 'ghost',
