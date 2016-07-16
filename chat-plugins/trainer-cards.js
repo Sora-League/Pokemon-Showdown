@@ -160,12 +160,12 @@ exports.commands = {
 
 	},
 	
-	mitsuka: 'sube4',
+	
 	sube4: function(target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center>Sub E4 Position: <b><font color = 1AFF00>Online</font></b></center><br />'+
-		'Sub E4 <b>Mitsuka</b> <br />'+
-		'<b>Type:</b> <b><font color = 006b0a>Grass</font></b><br />'+
+		'Sub E4 <b>???</b> <br />'+
+		'<b>Type:</b> <b><font color = 006b0a>???</font></b><br />'+
 		'<b>Battle Rules:</b> <br />'+
 		'-None <br />');
         },
@@ -349,7 +349,7 @@ exports.commands = {
 			seen('soramelody') + getBadges('soramelody'));
 	},
 
-	
+	mitsuka: 'grass',
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
