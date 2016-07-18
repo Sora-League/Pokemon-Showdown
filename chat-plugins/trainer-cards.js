@@ -376,7 +376,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Key</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> Ambipom<br />' + seen('sorakezyru1') + getBadges('sorakezyru1'));
+			'<b>Ace:</b> Ambipom<br />' + seen('sorakey') + getBadges('sorakey'));
 	},
 
 	nova: 'poison',
