@@ -540,9 +540,9 @@ exports.commands = {
 			
                         '<table align = "center" border = "0px" style = "color: "black">' +
 			'<tr><td style = "background: rgba(250, 250, 250, 0.3); width: 200px; height: 120px">' +
-			'<li style = "padding: 3px">One of Sora's oldest staff' +
+			'<li style = "padding: 3px">One of Sora\'s oldest staff' +
 			'<li style = "padding: 3px">Resident leader of over 6 types' +
-                        '<li style = "padding: 3px">Past Frontier and first challenger to reach Elite Four in Champion's Challenge</td>' +
+                        '<li style = "padding: 3px">Past Frontier and first challenger to reach Elite Four in Champion\'s Challenge</td>' +
 
 			'<td style = "padding: 0px 8px 0px 8px;"><img width=50 src = "https://66.media.tumblr.com/9697ebbc4887dc57620c50a12f24c61d/tumblr_nc1rokF7r31s1rd1xo1_500.gif"></td>' +
 
