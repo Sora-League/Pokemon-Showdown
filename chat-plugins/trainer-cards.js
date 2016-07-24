@@ -532,6 +532,26 @@ exports.commands = {
 			'<details><summary><font size= 1><b>Badges: (Click here to open)</b></font></summary><br />' +
 			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#aegislash"><img src="http://i.imgur.com/aJY3eKg.png" title="Winner of Sora\'s first major Monotype Round Robin Tour"></a></details> <br />');
 	},
+	
+	floatmeme: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReply('|html|<div style = "padding: 7px; text-align: center; border: 2px solid black; background: radial-gradient(circle, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a);">' +
+			'<font size = 4 color = "white"><b><a title="dat me">Float</a></b></font><br><br>' +
+			
+                        '<table align = "center" border = "0px" style = "color: "black">' +
+			'<tr><td style = "background: rgba(250, 250, 250, 0.3); width: 200px; height: 120px">' +
+			'<li style = "padding: 3px">One of Sora's oldest staff' +
+			'<li style = "padding: 3px">Resident leader of over 6 types' +
+                        '<li style = "padding: 3px">Past Frontier and first challenger to reach Elite Four in Champion's Challenge</td>' +
+
+			'<td style = "padding: 0px 8px 0px 8px;"><img width=50 src = "https://66.media.tumblr.com/9697ebbc4887dc57620c50a12f24c61d/tumblr_nc1rokF7r31s1rd1xo1_500.gif"></td>' +
+
+			'<td style = "background: rgba(250, 250, 250, 0.3); width: 200px;">' +
+			'<li style = "padding: 3px">Resident shitposter and edgelord' +
+			'<li style = "padding: 3px">Competitively uses sirskuit</td></tr></table><br>' +
+			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/rotom.gif">&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://play.pokemonshowdown.com/sprites/xyani/jirachi.gif"></center><br>'
+			getBadges('sorafloat') + '</div>')
+	},
 
 	heatah: function (target, room, user) {
 		if (!this.runBroadcast()) return;
