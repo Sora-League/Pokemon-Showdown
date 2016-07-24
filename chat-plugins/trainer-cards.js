@@ -391,7 +391,7 @@ exports.commands = {
 	
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
 			'<b>Ace:</b> ???<br />' +
