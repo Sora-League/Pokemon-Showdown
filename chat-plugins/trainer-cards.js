@@ -549,7 +549,7 @@ exports.commands = {
 			'<td style = "background: rgba(250, 250, 250, 0.3); width: 200px;">' +
 			'<li style = "padding: 3px">Resident shitposter and edgelord' +
 			'<li style = "padding: 3px">Competitively uses sirskuit</td></tr></table><br>' +
-			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/rotom.gif">&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://play.pokemonshowdown.com/sprites/xyani/jirachi.gif"></center><br>'
+			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/rotom.gif">&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://play.pokemonshowdown.com/sprites/xyani/jirachi.gif"></center><br>' +
 			getBadges('sorafloat') + '</div>');
 	},
 
