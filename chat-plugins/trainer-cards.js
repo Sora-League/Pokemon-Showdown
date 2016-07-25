@@ -388,15 +388,15 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('soranova') + getBadges('soranova'));
 	},
 
-	
+	psyespeon: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>PsyEspeon</b>∆<br />' +
+			'<i>"If I can do it, anybody can do it."</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br>' +
-			getBadges('')
+			'<b>Ace:</b> Mega Gardevoir<br />' +
+			seen('sorapsyespeon') + '<br>' +
+			getBadges('sorapsyespeon')
 		);
 	},
 
