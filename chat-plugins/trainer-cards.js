@@ -616,10 +616,10 @@ exports.commands = {
 		this.sendReply('|html|<div style = "padding: 2px;border-radius:7px; border: 3px solid #0075ce; background:url(http://img09.deviantart.net/bac5/i/2014/141/f/2/_wallpaper__arctic_christmas_by_arkeis_pokemon-d35nvwt.jpg);' +
         	    'background-size: cover; background-repeat: no-repeat;">' +
         	    '<center><b style = "color: #00e5ff; text-shadow: 0px 0px 6px #00bbff, 0px 0px 8px, 0px 0px 10px; font-size: 16pt">MeowsOfSora</b><br>' +
-        	    '<i style = "color: #00e5ff; text-shadow: 1px 1px 2px #444, 0px 0px 6px #00bbff, 0px 0px 8px, 0px 0px 10px; ">"I might be a bitch, but I\'m definitely not a pussy"</i><br>' +
+        	    '<i style = "color: #00e5ff; text-shadow: 1px 1px 2px #444, 0px 0px 6px #00bbff, 0px 0px 8px, 0px 0px 10px; ">"I might be a bitch, but I\'m definitely not a pussy"</i><br><br>' +
         	    '<img src = "http://play.pokemonshowdown.com/sprites/xyani/froslass.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/latios.gif">' +
         	    '<img src = "http://play.pokemonshowdown.com/sprites/xyani/walrein.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/jirachi.gif">' +
-        	    '<img src = "http://play.pokemonshowdown.com/sprites/xyani/weavile.gif">' +
+        	    '<img src = "http://play.pokemonshowdown.com/sprites/xyani/weavile.gif"><br><br>' +
         	    '<div style = "margin: 4px; display: inline-block; padding: 4px;background: rgba(168,223,243,0.7); width: 40%; border-radius: 5px; color: #116CA0; text-shadow: 0px 0px 4px #008BEE, 0px 0px 8px #008BEE; box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.8)"><u><b>Achievements</u></b><br>' +
         	    '<li>Top 20 OU/OU No Mega' +
         	    '<li>Top 300 Monotype' +
@@ -629,8 +629,8 @@ exports.commands = {
         	    '<li>Kpop thrash' +
         	    '<li>abs worshipper' +
         	    '<li>ice ice baby' +
-        	    '</div><br>' +
-        	    '<center><font size=2 color=#0000FF><i><b>현아</b> - Because I\'m the Best (Feat. 정일훈)</i></font><br><audio controls src="https://dl.pushbulletusercontent.com/jff9FOcg7fLsplNbywP27oPEry1D7xZg/HYUNA%20-%20%EC%9E%98%EB%82%98%EA%B0%80%EC%84%9C%20%EA%B7%B8%EB%9E%98.mp3" style="width: 100%"></center><br \><br \>' + getBadges('ignatiuspyx'));
+        	    '</div><br><br><br>' +
+        	    '<center><font size=2 color=#0000FF><i><b>현아</b> - Because I\'m the Best (Feat. 정일훈)</i></font><br><audio controls src="https://dl.pushbulletusercontent.com/jff9FOcg7fLsplNbywP27oPEry1D7xZg/HYUNA%20-%20%EC%9E%98%EB%82%98%EA%B0%80%EC%84%9C%20%EA%B7%B8%EB%9E%98.mp3" style="width: 100%"></center><br>' + getBadges('ignatiuspyx'));
     },
 
 	night: function (target, room, user) {
