@@ -34,9 +34,9 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
-			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Mitsuka∆'],
-			'Frontiers': ['∆Sora Heat∆', '∆Sora Zachary∆', '∆Sora Arjun∆', '∆Sora Akash∆'],
-			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Nightanglet∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Meows∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Silvy∆'],
+			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Silvy∆', '∆Sora Abadon∆'],
+			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆'],
+			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Key∆', '∆Sora Nova∆', '∆Sora Melody∆', ],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -159,15 +159,16 @@ exports.commands = {
 			'-None<br />' + seen('soraabadon') + getBadges('soraabadon'));
 
 	},
-	/*sube4: function(target, room, user) {
+	
+	
+	sube4: function(target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('<center>Sub E4 Position: <b><font color = FF0000>Offline</font></b></center><br />'+
+		this.sendReplyBox('<center>Sub E4 Position: <b><font color = 1AFF00>Online</font></b></center><br />'+
 		'Sub E4 <b>???</b> <br />'+
 		'<b>Type:</b> <b><font color = 006b0a>???</font></b><br />'+
 		'<b>Battle Rules:</b> <br />'+
-		'-??? <br />'+
-		'-??? <br />');
-        },*/
+		'-None <br />');
+        },
 
 	/*********************************************************
 	 * Frontiers
@@ -328,14 +329,14 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
-	
+	valga: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Valga</b>∆<br />' +
+			'<i>"The sky is the limit."</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Dragonite<br />' +
+			seen('soravalga') + getBadges('soravalga'));
 	},
 
 	melody: 'ghost',
@@ -375,7 +376,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Key</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> Ambipom<br />' + seen('sorakezyru1') + getBadges('sorakezyru1'));
+			'<b>Ace:</b> Staraptor<br />' + seen('sorakey') + getBadges('sorakey'));
 	},
 
 	nova: 'poison',
@@ -387,17 +388,15 @@ exports.commands = {
 			'<b>Ace:</b> Gengar<br />' + seen('soranova') + getBadges('soranova'));
 	},
 
-	float: 'psychic',
+	psyespeon: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"Float like a Butterfly, Sting like a Meme"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>PsyEspeon</b>∆<br />' +
+			'<i>"If I can do it, anybody can do it."</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Jirachi <br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><br />' +
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +
-			seen('sorafloat') + '<br>' +
-			getBadges('sorafloat')
+			'<b>Ace:</b> Mega Gardevoir<br />' +
+			seen('sorapsyespeon') + '<br>' +
+			getBadges('sorapsyespeon')
 		);
 	},
 
@@ -424,13 +423,15 @@ exports.commands = {
 		);
 	},
 
-	
+	float: 'water',
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
+			'<i>"Float like a butterfly, sting like a meme"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> Volcanion <br/>'+
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/surskit.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/surskit.gif"><br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>'
 		);
 	},
 
@@ -530,6 +531,26 @@ exports.commands = {
 			'<center><i>"How can you face your problem, if the problem is your face?"</i></center><br />' +
 			'<details><summary><font size= 1><b>Badges: (Click here to open)</b></font></summary><br />' +
 			'<a href="http://soraleague.weebly.com/badges.html#ldr"><img src="http://i.imgur.com/ELFPzW8.png" title="Achieved Gym Leader Status"></a><a href="http://soraleague.weebly.com/badges.html#e4"><img src="http://i.imgur.com/QtECCD9.png" title="Achieved Elite 4 Status"></a><a href="http://soraleague.weebly.com/badges.html#aegislash"><img src="http://i.imgur.com/aJY3eKg.png" title="Winner of Sora\'s first major Monotype Round Robin Tour"></a></details> <br />');
+	},
+	
+	floatmeme: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReply('|html|<div style = "padding: 7px; text-align: center; border: 2px solid black; background: radial-gradient(circle, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a);">' +
+			'<font size = 4 color = "white"><b><a title="dat me">Float</a></b></font><br><br>' +
+			
+                        '<table align = "center" border = "0px" style = "color: "black">' +
+			'<tr><td style = "background: rgba(250, 250, 250, 0.3); width: 200px; height: 120px">' +
+			'<li style = "padding: 3px">One of Sora\'s oldest staff' +
+			'<li style = "padding: 3px">Resident leader of over 6 types' +
+                        '<li style = "padding: 3px">Past Frontier and first challenger to reach Elite Four in Champion\'s Challenge</td>' +
+
+			'<td style = "padding: 0px 8px 0px 8px;"><img width=50 src = "https://66.media.tumblr.com/9697ebbc4887dc57620c50a12f24c61d/tumblr_nc1rokF7r31s1rd1xo1_500.gif"></td>' +
+
+			'<td style = "background: rgba(250, 250, 250, 0.3); width: 200px;">' +
+			'<li style = "padding: 3px">Resident shitposter and edgelord' +
+			'<li style = "padding: 3px">Competitively uses sirskuit</td></tr></table><br>' +
+			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/rotom.gif">&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://play.pokemonshowdown.com/sprites/xyani/jirachi.gif"></center><br>' +
+			getBadges('sorafloat') + '</div>');
 	},
 
 	heatah: function (target, room, user) {
@@ -892,13 +913,8 @@ exports.commands = {
 		this.sendReplyBox('<center><font size = 2>If you wish to donate to the server, please click on the button below.<br>' +
 			'<a href = "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Q3B5Z6STF3EA4&lc=AU&item_name=Sora&currency_code=AUD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"><img src = "https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif"></a><br>' +
 			'Remember to mention your username when you leave a note with your donation, or we won\'t know who donated. To all of those who\'ve donated or plan on donating, thank you! We really appreciate it!</center></font><br><br>' +
-			'<b>Donation benefits:</b><br>' +
-			'<strong>$1 or more:</strong>' +
-			'<li>Earns you the Server Donator badge, which will be displayed on your trainer card.' +
-			'<li>Allows you to set a custom username colour visible in chats, but not the userlist.<br><br>' +
-			'<strong>$5 or more:</strong>' +
-			'<li>All of the above^' +
-			'<li>A red <span style = "background: rgba(255, 26, 26, 0.5);">userlist highlight color</span>, visible on the Lobby\'s userlist');
+			'<b>All donators will have their name displayed on a donators list as a way of saying Thank You!</b><br>' +
+			'<font size=0.5>Note: Due to a change in the EULA we cannot provide ANY perks to donators. Users who have donated before this change was implemented will keep their badge, name colour change and userlist highlight.</font>');
 	},
 
 	ateam: 'adminteam',
@@ -906,13 +922,12 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<a><center><b><font color = 075ff7 size=3>The Admin Team</font></b></center></a><br />' +
 			'FAQ <br />' +
-			'<b>Who are we?</b> The Admin team are a group of senior members who make most of the major league decisions and organize most major league events. <br />' +
-			'<b>Who\'s in the Admin Team?</b> <a href="http://sora.cu.cc/ateam.html"><button style="background: #FF4747 ; border: 1px solid #FF0000">Current active members</button></a><br />' +
-			'<b>What exactly do you guys do?</b> The Admin Team handle or oversee all matters from disputes in the League, to League Challenge Registration <br />' +
-			'<b>How does one join the Admin team?</b> The Admin Team usually invites a select few senior members who\'ve shown to be mature and capable of handling responsibility. <br />' +
-			' <br /><br />' +
+			'<b>Who are we?</b><br><li>The Admin team are a group of senior members who make most of the major league decisions and organize most major league events. <br />' +
+			'<b>Who\'s in the Admin Team?</b><br><li><a href="http://sora.cu.cc/ateam.html">Current active members</a><br />' +
+			'<b>What exactly do you guys do?</b><br><li>The Admin Team handle or oversee all matters from disputes in the League, to League Challenge Registration <br />' +
+			'<b>How does one join the Admin team?</b><br><li>The Admin Team usually invites a select few senior members who\'ve shown to be mature and capable of handling responsibility. <br />' +
 			'<center><img src="http://sora.cu.cc/img/namelist.png"><br />' +
-			'All Admin team Members can be identified by their userlist highlight and by having this symbol on their badges:</center> <br />' +
-			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
+			'All current Admin Team Members can be identified by their userlist highlight and by having the left badge on their trainer card.<br>Past and Present Ateam members will also have the right badge featured in their badge cases.</center> <br />' +
+			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"><img src="http://66.media.tumblr.com/6d1996ce9d10db40fa5f088f7887c71e/tumblr_o15namAV1o1v5aa3xo1_1280.png" width=150 height=150></center> <br />');
 	},
 };
