@@ -329,10 +329,10 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
-	valga: 'flying',
+	valgaro: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Valga</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Valgaro</b>∆<br />' +
 			'<i>"The sky is the limit."</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> Dragonite<br />' +
