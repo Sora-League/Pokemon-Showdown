@@ -1810,7 +1810,8 @@ exports.commands = {
 	nl: 'namelock',
 	namelock: function (target, room, user) {
 		if (!target) return this.parse('/help namelock');
-
+		if (!this.can('hotpatch')) return false;
+		
 		let reason = this.splitTarget(target, true);
 		let targetUser = this.targetUser;
 
