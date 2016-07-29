@@ -242,6 +242,20 @@ let Room = (() => {
 			}
 		}
 	};
+	Room.prototype.getAuth = function (user) {
+		if (this.auth) {
+			if (user.userid in this.auth) {
+				return this.auth[user.userid];
+			}
+			if (this.tour && this.tour.room) {
+				return this.tour.room.getAuth(user);
+			}
+			if (this.isPrivate === true) {
+				return ' ';
+			}
+		}
+		return user.group;
+	};
 	Room.prototype.mute = function (user, setTime) {
 		let userid = user.userid;
 
@@ -876,6 +890,7 @@ let BattleRoom = (() => {
 	function BattleRoom(roomid, format, p1, p2, options) {
 		Room.call(this, roomid, "" + p1.name + " vs. " + p2.name);
 		this.modchat = (Config.battlemodchat || false);
+		this.modjoin = false;
 		this.reportJoins = Config.reportbattlejoins;
 
 		format = '' + (format || '');
@@ -980,6 +995,7 @@ let BattleRoom = (() => {
 		}
 		if (this.tour) {
 			this.tour.onBattleWin(this, winnerid);
+			this.tour = null;
 		}
 		this.update();
 	};
@@ -1306,6 +1322,12 @@ let BattleRoom = (() => {
 	BattleRoom.prototype.destroy = function () {
 		// deallocate ourself
 
+		if (this.tour) {
+			// resolve state of the tournament;
+			this.tour.onBattleWin(this, '');
+			this.tour = null;
+		}
+
 		// remove references to ourself
 		for (let i in this.users) {
 			this.users[i].leaveRoom(this, null, true);
@@ -1355,6 +1377,7 @@ let ChatRoom = (() => {
 		this.logFilename = '';
 		this.destroyingLog = false;
 		if (!this.modchat) this.modchat = (Config.chatmodchat || false);
+		if (!this.modjoin) this.modjoin = false;
 
 		if (Config.logchat) {
 			this.rollLogFile(true);

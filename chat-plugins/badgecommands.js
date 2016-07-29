@@ -29,7 +29,7 @@ let badgeList = {
 	flannery: ['Flannery', '<img src="http://i.imgur.com/0ScjBhf.png" title="Flannery Badge: 10 Badge Defends">', "http://i.imgur.com/rfGR9uC.png"],
 	skyla: ['Skyla', '<img src="http://i.imgur.com/HMGmJ2d.png" title="Skyla Badge: 20 Badge Defends">', "http://i.imgur.com/pWm24fS.png"],
 	volkner: ['Volkner', '<img src="http://i.imgur.com/Vobc91V.png" title="Volkner Badge: 30 Badge Defends">', "http://i.imgur.com/8AQYYZ7.png"],
-	brock: ['Brock', '<img src="http://i.imgur.com/hMg0cgf.gif" title="Brock Badge: 50 Badge Defends">', "http://i.imgur.com/fsyWAdn.gif"],
+	brock: ['Brock', '<img src="http://i.imgur.com/hMg0cgf.gif" title="Brock Badge: 50 Badge Defends" width=75 height=75>', "http://i.imgur.com/fsyWAdn.gif"],
 	gymrank: ['Gym Leader Rank', '<img src="http://i.imgur.com/ELFPzW8.png" title = "Achieved Gym Leader Status">', "http://i.imgur.com/CqLjnZB.png"],
 	e4rank: ['Elite Four Rank', '<img src="http://i.imgur.com/QtECCD9.png" title = "Achieved Elite 4 Status">', "http://i.imgur.com/vBBcMc4.png"],
 	frontierrank: ['Frontier Rank', '<img src="http://i.imgur.com/7jbhEJC.png" title="Achieved Frontier Status">', "http://i.imgur.com/x9xJbkQ.png"],

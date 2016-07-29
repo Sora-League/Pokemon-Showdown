@@ -323,6 +323,7 @@ exports.grouplist = [
 		jurisdiction: '@u',
 		promote: 'u',
 		roomowner: true,
+		roombot: true,
 		roommod: true,
 		roomdriver: true,
 		forcewin: true,
@@ -341,6 +342,7 @@ exports.grouplist = [
 		name: "Room Owner",
 		inherit: '@',
 		jurisdiction: 'u',
+		roombot: true,
 		roommod: true,
 		roomdriver: true,
 		editroom: true,
@@ -360,6 +362,15 @@ exports.grouplist = [
 		roomonly: true,
 		editroom: true,
 		joinbattle: true
+	},
+	{
+		symbol: '*',
+		id: "bot",
+		name: "Bot",
+		inherit: '@',
+		jurisdiction: 'u',
+		declare: true,
+		addhtml: true,
 	},
 	{
 		symbol: '@',
