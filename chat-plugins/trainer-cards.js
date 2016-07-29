@@ -300,13 +300,13 @@ exports.commands = {
 			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio><br />' + seen('soramark') + getBadges('soramark'));
 	},
 
-	
+	valgaro: 'fighting',
 	fighting: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Valgaro</b>∆<br />' +
+			'<i>"The fist is the mightiest weapon in combat, so don\'t fool yourself."</i> <br />' +
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges('')
+			'<b>Ace:</b> Infernape<br />' + seen('soravalgaro') + getBadges('soravalgaro')
 		);
 	},
 
@@ -329,14 +329,14 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
-	valgaro: 'flying',
+	
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Valgaro</b>∆<br />' +
-			'<i>"The sky is the limit."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Dragonite<br />' +
-			seen('soravalga') + getBadges('soravalga'));
+			'<b>Ace:</b> ???<br />' +
+			seen('') + getBadges(''));
 	},
 
 	melody: 'ghost',
