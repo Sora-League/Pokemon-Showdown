@@ -80,8 +80,10 @@ exports.commands = {
 		let seen = Seen.get(target);
 		if (seen === 'never') return this.sendReplyBox(target + ' has <font color = "red">never</font> been seen online.');
 		seen = seen.join(', ');
-		if (Users.getExact(target) && Users.getExact(target).connected) return this.sendReplyBox(target + ' is currently <font color = "green">online</font>. This user has stayed online for ' + seen + '.');
-		return this.sendReplyBox(target + ' was last seen ' + seen + ' ago.');
+
+		let hash = '<b style = "color:' + hashColor(target) + ';">' + target + '</b>';
+		if (Users.getExact(target) && Users.getExact(target).connected) return this.sendReplyBox(hash + ' is currently <font color = "green">online</font>. This user has stayed online for ' + seen + '.');
+		return this.sendReplyBox(hash + ' was last seen ' + seen + ' ago.');
 	},
 
 	registered: 'regdate',

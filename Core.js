@@ -31,7 +31,9 @@ exports.Seen = {
 		return total;
 	},
 	set: function (user) {
-		seen[toId(user)] = Date.now();
+		user = toId(user);
+		if (user.match(/^guest[0-9]/)) return;
+		seen[user] = Date.now();
 		fs.writeFileSync('storage-files/lastseen.json', JSON.stringify(seen, null, 1));
 	},
 };

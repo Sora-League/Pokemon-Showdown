@@ -729,6 +729,8 @@ class User {
 	}
 	forceRename(name, registered) {
 		// skip the login server
+		Seen.set(this.userid);
+		Seen.set(name);
 		let userid = toId(name);
 
 		if (users.has(userid) && users.get(userid) !== this) {
@@ -977,7 +979,7 @@ class User {
 		}
 	}
 	onDisconnect(connection) {
-		if (this.named) Seen.set(this.userid);
+		Seen.set(this.userid);
 		for (let i = 0; i < this.connections.length; i++) {
 			if (this.connections[i] === connection) {
 				// console.log('DISCONNECT: ' + this.userid);
@@ -1034,7 +1036,6 @@ class User {
 			}
 		}
 		this.roomCount = {};
-		if (this.named) Seen.set(this.userid);
 	}
 	getAlts(includeConfirmed, forPunishment) {
 		return this.getAltUsers(includeConfirmed, forPunishment).map(user => user.getLastName());
