@@ -123,20 +123,18 @@ exports.commands = {
 			seen('soraterrors') +
 			getBadges('soraterrors'));
 	},
-        
-        silvy: function (target, room, user) {
+
+        mitsuka: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Silvy</b>∆<br />' +
-			'<i>"ur bad"</i> <br />' +
-			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
-			'<b>Ace:</b> None<br />' +
+		this.sendReplyBox('∆E4 <b>Mitsuka</b>∆<br />' +
+			'<i>"Storm of leaf and draining root!"</i> <br />' +
+			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
+			'<b>Ace:</b> Bellossom<br />' +
 			'<b>Battle Rules:</b><br />' +
 			'-None<br />' +
-			seen('sorasilvy') +
-			getBadges('sorasilvy'));
+			seen('soramitsuka') +
+			getBadges('soramitsuka'));
 	},
-
-
 
 	whitefang: function (target, room, user) {
 		if (!this.runBroadcast()) return;
