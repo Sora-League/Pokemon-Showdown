@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Silvy∆', '∆Sora Abadon∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆'],
-			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Key∆', '∆Sora Nova∆', '∆Sora Melody∆', ],
+			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Key∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', ],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -337,23 +337,23 @@ exports.commands = {
 			seen('') + getBadges(''));
 	},
 
-	melody: 'ghost',
+	
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Melody</b>∆<br />' +
-			'<i>"Let the ghastly tune envelop you."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Gourgeist<br />' +
-			seen('soramelody') + getBadges('soramelody'));
+			'<b>Ace:</b> ???<br />' +
+			seen('') + getBadges(''));
 	},
 
-	mitsuka: 'grass',
+	silvy: 'grass',
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
-			'<i>"Storm of leaf and draining root!"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Silvy</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> Bellosom <br />' + seen('soramitsuka') + getBadges('soramitsuka'));
+			'<b>Ace:</b> ??? <br />' + seen('sorasilvy') + getBadges('sorasilvy'));
 	},
 
 	
@@ -377,13 +377,13 @@ exports.commands = {
 			'<b>Ace:</b> Staraptor<br />' + seen('sorakey') + getBadges('sorakey'));
 	},
 
-	nova: 'poison',
+
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Nova</b>∆<br />' +
-			'<i>"Toxic players, welcome."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Gengar<br />' + seen('soranova') + getBadges('soranova'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
 	psyespeon: 'psychic',
