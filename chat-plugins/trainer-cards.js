@@ -34,9 +34,9 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
-			'Elite Four': ['∆Sora Terrors∆', '∆Sora Silvy∆', '∆Sora Abadon∆'],
+			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Abadon∆', '∆Sora Float∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆'],
-			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Key∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', ],
+			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Silvy∆', '∆Sora Key∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', ],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -118,8 +118,6 @@ exports.commands = {
 			'<i>"The tips have been scaled!"</i> <br />' +
 			'<b>Type: <font color = A64000>Ground</font></b><br />' +
 			'<b>Ace:</b> Garchomp<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-None<br />' +
 			seen('soraterrors') +
 			getBadges('soraterrors'));
 	},
@@ -130,8 +128,6 @@ exports.commands = {
 			'<i>"Storm of leaf and draining root!"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
 			'<b>Ace:</b> Bellossom<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-None<br />' +
 			seen('soramitsuka') +
 			getBadges('soramitsuka'));
 	},
@@ -143,9 +139,7 @@ exports.commands = {
 		this.sendReplyBox('∆E4 <b>Abadon</b>∆<br />' +
 			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Sableye<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-None<br />' + seen('soraabadon') + getBadges('soraabadon'));
+			'<b>Ace:</b> Sableye<br />' + seen('soraabadon') + getBadges('soraabadon'));
 
 	},
 	
