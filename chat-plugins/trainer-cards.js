@@ -34,7 +34,7 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', 'Jeratt', 'Neith Cass'],
-			'Elite Four': ['∆Sora Terrors∆', '∆Sora Whitefang∆', '∆Sora Silvy∆', '∆Sora Abadon∆'],
+			'Elite Four': ['∆Sora Terrors∆', '∆Sora Silvy∆', '∆Sora Abadon∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆'],
 			'Gym Leaders': ['∆Sora Gasp∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Float∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Youmaton∆', '∆Sora Mitsuka∆', '∆Sora Key∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', ],
 		}
@@ -136,16 +136,7 @@ exports.commands = {
 			getBadges('soramitsuka'));
 	},
 
-	whitefang: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>WhiteFang</b>∆<br />' +
-			'<i>"There\'s always a chance for a comeback if you leave yourself open"</i> <br />' +
-			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Archeops<br />' +
-			'<b>Battle Rules:</b><br />' +
-			'-No priority<br>' + seen('sorawhitefang') + getBadges('sorawhitefang')
-		);
-	},
+
 
 	abadon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
