@@ -343,13 +343,13 @@ exports.commands = {
 			seen('') + getBadges(''));
 	},
 
-	silvy: 'grass',
+	
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Silvy</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' + seen('sorasilvy') + getBadges('sorasilvy'));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
 	
@@ -373,13 +373,13 @@ exports.commands = {
 			'<b>Ace:</b> Staraptor<br />' + seen('sorakey') + getBadges('sorakey'));
 	},
 
-
+       silvy: 'poison',
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Silvy</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> ???<br />' + seen('sorasilvy') + getBadges('sorasilvy'));
 	},
 
 	psyespeon: 'psychic',
