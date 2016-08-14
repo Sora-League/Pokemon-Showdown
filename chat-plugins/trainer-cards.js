@@ -205,6 +205,29 @@ exports.commands = {
 	},
 
 
+       gasp: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Gasp</b>∆<br />' +
+			'<i>"Light is arbitrary, Darkness is absolute."</i> <br />' +
+			'<b>Symbol: </b>??? <br />' +
+			'<b>Ace:</b> ???<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-Hackmons<br />' + seen('soragasp') + getBadges('gasp')
+		);
+	},
+	
+	
+	youmaton: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Youmaton</b>∆<br />' +
+			'<i>"Let\'s enjoy a nicely seasoned battle with a touch of salt and the side of rolls."</i> <br />' +
+			'<b>Symbol: </b>Meta <br />' +
+			'<b>Ace:</b> Infernape<br />' +
+			'<b>Battle rules:</b> <br />' +
+			'-UU<br />' + seen('sorayoumaton') + getBadges('sorayoumaton')
+		);
+	},
+       
 
 	heat: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -244,13 +267,13 @@ exports.commands = {
 			'<b>Ace:</b> Volcarona<br />' + seen('soraaros') + getBadges('soraaros'));
 	},
 
-	gasp: 'dark',
+	
 	dark: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Gasp</b>∆<br />' +
-			'<i>"Light is arbitrary, Darkness is absolute."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Sableye<br />' + seen('soragasp') + getBadges('gasp'));
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 
 	waffles: 'dragon',
@@ -271,14 +294,13 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />');
 	},
 
-	youmaton: 'fairy',
+	
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Youmaton</b>∆<br />' +
-			'Leader Ranking: <font color = 00FF00><b>3rd</font></b> <br />' +
-			'<i>"A little sparkle should fix that right up, wait no thats a diamond storm."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Diancie<br />' + seen('sorayoumaton') + getBadges('sorayoumaton'));
+			'<b>Ace: </b>???<br />' + seen('') + getBadges(''));
 	},
 
 	mark: 'ground',
