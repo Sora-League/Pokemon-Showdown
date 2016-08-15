@@ -374,15 +374,15 @@ exports.commands = {
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
-	
+	jeratt: 'ice',
 	ice: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Jeratt</b>∆<br />' +
+			'<i>"Let\'s play rock paper scissors; Paper. You win."</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br>' +
-			getBadges('')
+			'<b>Ace:</b> Mamoswine<br />' +
+			seen('sorajeratt') + '<br>' +
+			getBadges('sorajeratt')
 		);
 	},
 
