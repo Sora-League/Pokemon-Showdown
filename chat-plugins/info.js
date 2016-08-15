@@ -74,12 +74,12 @@ exports.commands = {
 		}
 		buf += '<br />';
 		if (user.can('alts', targetUser) || user.can('alts') && user === targetUser) {
-			let alts = targetUser.getAlts(true);
+			let alts = targetUser.getAltUsers(true);
 			let output = Object.keys(targetUser.prevNames).join(", ");
 			if (output) buf += "<br />Previous names: " + Tools.escapeHTML(output);
 
 			for (let j = 0; j < alts.length; ++j) {
-				let targetAlt = Users.get(alts[j]);
+				let targetAlt = alts[j];
 				if (!targetAlt.named && !targetAlt.connected) continue;
 				if (targetAlt.group === '~' && user.group !== '~') continue;
 
@@ -155,8 +155,8 @@ exports.commands = {
 		if (!this.can('rangeban')) return;
 		target = target.trim();
 		if (!/^[0-9.]+$/.test(target)) return this.errorReply('You must pass a valid IPv4 IP to /host.');
-		Dnsbl.reverse(target, (err, hosts) => {
-			this.sendReply('IP ' + target + ': ' + (hosts ? hosts[0] : 'NULL'));
+		Dnsbl.reverse(target).then(host => {
+			this.sendReply('IP ' + target + ': ' + (host || "ERROR"));
 		});
 	},
 	hosthelp: ["/host [ip] - Gets the host for a given IP. Requires: & ~"],
@@ -1649,6 +1649,7 @@ exports.commands = {
 	},
 	addhtmlbox: function (target, room, user, connection, cmd, message) {
 		if (!target) return this.parse('/help htmlbox');
+		if (!this.canTalk()) return this.errorReply("You cannot do this while unable to talk.");
 		target = this.canHTML(target);
 		if (!target) return;
 		if (!this.can('addhtml', null, room)) return;

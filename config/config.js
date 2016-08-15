@@ -361,7 +361,8 @@ exports.grouplist = [
 		modchat: true,
 		roomonly: true,
 		editroom: true,
-		joinbattle: true
+		joinbattle: true,
+		nooverride: true,
 	},
 	{
 		symbol: '*',
