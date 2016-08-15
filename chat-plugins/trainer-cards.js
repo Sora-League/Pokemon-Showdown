@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Abadon∆', '∆Sora Float∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Leaf∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Key∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', ],
+			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Key∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', '∆Sora Edge∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -365,13 +365,13 @@ exports.commands = {
 			seen('') + getBadges(''));
 	},
 
-	
+	edge: 'grass',
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Edge</b>∆<br />' +
+			'<i>"How can you face your problem, if the problem is your face?"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Mega Venusaur <br />' + seen('soraedge') + getBadges('soraedge'));
 	},
 
 	jeratt: 'ice',
@@ -428,14 +428,14 @@ exports.commands = {
 	},
 
 
-	leaf: 'steel',
+	
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Leaf</b>∆<br />' +
-			'<i>"Those who fight for the Iron Throne either win, or die."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Ferrothorn<br />' +
-			seen('soraleaf') + getBadges('soraleaf')
+			'<b>Ace:</b> ???<br />' +
+			seen('') + getBadges('')
 		);
 	},
 
