@@ -600,7 +600,7 @@ exports.commands = {
 		);
 	},
 
-	jeratt: function (target, room, user) {
+	jerattata: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReply('|html|<table style = "box-shadow: 2px 2px 10px black; text-shadow: 0px 0px 10px; padding: 7px; width: 100%; background: radial-gradient(circle, black, #000d70, black, #000d70, black, #000d70); color: #8CC6FB;">' +
 			'<tr><td colspan = 2 style = "padding-bottom: 7px"><center><b style = "font-size: 15pt">∆Jerattata∆</b><br>' +
