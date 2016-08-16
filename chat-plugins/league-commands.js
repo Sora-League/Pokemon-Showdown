@@ -18,6 +18,14 @@ exports.commands = {
 			'- <a href="http://sora.cu.cc/index.html">Sora League Site</a>'
 		);
 	},
+	
+	discord: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('Here is a permanent link to The Sora League\'s Discord server:<br />' +
+			'- <a href="https://discord.gg/vYV5dxD">Sora Discord</a>'
+		);
+	},
+	
 
 	priomon: 'priomons',
 	priomons: function (target, room, user) {
