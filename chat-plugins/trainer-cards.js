@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Abadon∆', '∆Sora Float∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Key∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', '∆Sora Edge∆'],
+			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Key∆', '∆Sora Valgaro∆', '∆Sora Edge∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -404,15 +404,15 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('sorasilvy') + getBadges('sorasilvy'));
 	},
 
-	psyespeon: 'psychic',
+	
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>PsyEspeon</b>∆<br />' +
-			'<i>"If I can do it, anybody can do it."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> Mega Gardevoir<br />' +
-			seen('sorapsyespeon') + '<br>' +
-			getBadges('sorapsyespeon')
+			'<b>Ace:</b> ???<br />' +
+			seen('???') + '<br>' +
+			getBadges('???')
 		);
 	},
 
