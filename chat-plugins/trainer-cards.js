@@ -439,13 +439,13 @@ exports.commands = {
 		);
 	},
 
-
+       zachary: 'water',
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Zachary</b>∆<br />' +
+			'<i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> Gyarados <br/>'
 		);
 	},
 
