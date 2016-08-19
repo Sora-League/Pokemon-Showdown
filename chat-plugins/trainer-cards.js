@@ -138,8 +138,8 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Abadon</b>∆<br />' +
 			'<i>"It is Abadon, my dudes. aaaaaaaaaaaaaaaaaaa"</i> <br />' +
-			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Sableye<br />' + seen('soraabadon') + getBadges('soraabadon'));
+			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+			'<b>Ace:</b> Honchkrow<br />' + seen('soraabadon') + getBadges('soraabadon'));
 
 	},
 	
