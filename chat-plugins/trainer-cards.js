@@ -298,7 +298,7 @@ exports.commands = {
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Meows</b>∆<br />' +
-			'<i>"1et m3 b3 th3 k3y 2 ur h3art xoxo <3"</i> <br />' +
+			'<i>"1et m3 b3 th3 k3y 2 ur h3art xoxo <3" </i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
 			'<b>Ace: </b>Klefki<br />' + seen('sorameows') + getBadges('sorameows'));
 	},
