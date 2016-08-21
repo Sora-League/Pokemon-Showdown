@@ -294,13 +294,13 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />');
 	},
 
-	
+	meows: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Meows</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>???<br />' + seen('') + getBadges(''));
+			'<b>Ace: </b>???<br />' + seen('sorameows') + getBadges('sorameows'));
 	},
 
 	mark: 'ground',
