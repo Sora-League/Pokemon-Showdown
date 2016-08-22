@@ -388,13 +388,9 @@ exports.commands = {
 			return this.errorReply("User " + this.targetUsername + " is offline.");
 		}
 
-		if (Config.pmmodchat) {
-			let userGroup = user.group;
-			if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(Config.pmmodchat)) {
-				let groupName = Config.groups[Config.pmmodchat].name || Config.pmmodchat;
-				this.errorReply("Because moderated chat is set, you must be of rank " + groupName + " or higher to PM users.");
-				return false;
-			}
+		if (Config.pmmodchat && !user.matchesRank(Config.pmmodchat)) {
+			let groupName = Config.groups[Config.pmmodchat] && Config.groups[Config.pmmodchat].name || Config.pmmodchat;
+			return this.errorReply("Because moderated chat is set, you must be of rank " + groupName + " or higher to PM users.");
 		}
 
 		if (user.locked && !targetUser.can('lock')) {
@@ -1328,7 +1324,7 @@ exports.commands = {
 		Rooms.global.autojoinRooms(user, connection);
 		let targets = target.split(',');
 		let autojoins = [];
-		if (targets.length > 11 || Object.keys(connection.rooms).length > 1) return;
+		if (targets.length > 11 || connection.inRooms.size > 1) return;
 		for (let i = 0; i < targets.length; i++) {
 			if (user.tryJoinRoom(targets[i], connection) === null) {
 				autojoins.push(targets[i]);
@@ -1515,13 +1511,13 @@ exports.commands = {
 		}
 
 		// Destroy personal rooms of the locked user.
-		for (let i in targetUser.roomCount) {
-			if (i === 'global') continue;
-			let targetRoom = Rooms.get(i);
-			if (targetRoom.isPersonal && targetRoom.auth[userid] && targetRoom.auth[userid] === '#') {
+		targetUser.inRooms.forEach(roomid => {
+			if (roomid === 'global') return;
+			let targetRoom = Rooms.get(roomid);
+			if (targetRoom.isPersonal && targetRoom.auth[userid] === '#') {
 				targetRoom.destroy();
 			}
-		}
+		});
 
 		targetUser.popup("|modal|" + user.name + " has locked you from talking in chats, battles, and PMing regular users." + (target ? "\n\nReason: " + target : "") + "\n\nIf you feel that your lock was unjustified, you can still PM staff members (%, @, &, and ~) to discuss it" + (Config.appealurl ? " or you can appeal:\n" + Config.appealurl : ".") + "\n\nYour lock will expire in a few days.");
 
@@ -1574,13 +1570,13 @@ exports.commands = {
 		}
 
 		// Destroy personal rooms of the locked user.
-		for (let i in targetUser.roomCount) {
-			if (i === 'global') continue;
-			let targetRoom = Rooms.get(i);
-			if (targetRoom.isPersonal && targetRoom.auth[userid] && targetRoom.auth[userid] === '#') {
+		targetUser.inRooms.forEach(roomid => {
+			if (roomid === 'global') return;
+			let targetRoom = Rooms.get(roomid);
+			if (targetRoom.isPersonal && targetRoom.auth[userid] === '#') {
 				targetRoom.destroy();
 			}
-		}
+		});
 
 		targetUser.popup("|modal|" + user.name + " has locked you from talking in chats, battles, and PMing regular users for a week." + (target ? "\n\nReason: " + target : "") + "\n\nIf you feel that your lock was unjustified, you can still PM staff members (%, @, &, and ~) to discuss it" + (Config.appealurl ? " or you can appeal:\n" + Config.appealurl : ".") + "\n\nYour lock will expire in a few days.");
 
@@ -1606,6 +1602,9 @@ exports.commands = {
 		if (!this.can('lock')) return false;
 
 		let targetUser = Users.get(target);
+		if (targetUser && targetUser.namelocked) {
+			return this.errorReply(`User ${targetUser.name} is namelocked, not locked. Use /unnamelock to unnamelock them.`);
+		}
 		let reason = '';
 		if (targetUser && targetUser.locked && targetUser.locked.charAt(0) === '#') {
 			reason = ' (' + targetUser.locked + ')';
@@ -1657,13 +1656,13 @@ exports.commands = {
 		}
 
 		// Destroy personal rooms of the banned user.
-		for (let i in targetUser.roomCount) {
-			if (i === 'global') continue;
-			let targetRoom = Rooms.get(i);
-			if (targetRoom.isPersonal && targetRoom.auth[userid] && targetRoom.auth[userid] === '#') {
+		targetUser.inRooms.forEach(roomid => {
+			if (roomid === 'global') return;
+			let targetRoom = Rooms.get(roomid);
+			if (targetRoom.isPersonal && targetRoom.auth[userid] === '#') {
 				targetRoom.destroy();
 			}
-		}
+		});
 
 		targetUser.popup("|modal|" + user.name + " has banned you." + (target ? "\n\nReason: " + target : "") + (Config.appealurl ? "\n\nIf you feel that your ban was unjustified, you can appeal:\n" + Config.appealurl : "") + "\n\nYour ban will expire in a few days.");
 
@@ -1906,7 +1905,7 @@ exports.commands = {
 
 		if (targetUser.confirmed) return this.errorReply("User '" + name + "' is already confirmed.");
 
-		targetUser.setGroup(' ', true);
+		targetUser.setGroup(Config.groupsranking[0], true);
 		this.sendReply("User '" + name + "' is now confirmed.");
 	},
 	confirmuserhelp: ["/confirmuser [username] - Confirms the user (makes them immune to locks). Requires: & ~"],
@@ -2191,6 +2190,7 @@ exports.commands = {
 			return this.errorReply("User '" + this.targetUsername + "' not found.");
 		}
 		if (!this.can('forcerename', targetUser)) return false;
+		if (targetUser.namelocked) return this.errorReply("User '" + target + "' is already namelocked.");
 
 		this.addModCommand("" + targetUser.name + " was namelocked by " + user.name + "." + (reason ? " (" + reason + ")" : ""));
 		this.globalModlog("NAMELOCK", targetUser, " by " + user.name + (reason ? ": " + reason : ""));
@@ -2480,8 +2480,10 @@ exports.commands = {
 		if (!this.can('hotpatch')) return false;
 		if (Monitor.hotpatchLock) return this.errorReply("Hotpatch is currently been disabled. (" + Monitor.hotpatchLock + ")");
 
-		let staff = Rooms('staff');
-		if (staff) staff.add("(" + user.name + " used /hotpatch " + target + ")").update();
+		for (let roomid of ['development', 'staff', 'upperstaff']) {
+			let curRoom = Rooms(roomid);
+			if (curRoom) curRoom.add("|c|~|(" + user.name + " used /hotpatch " + target + ")").update();
+		}
 
 		try {
 			if (target === 'chat' || target === 'commands') {
@@ -2542,6 +2544,9 @@ exports.commands = {
 				delete require.cache[require.resolve('./punishments.js')];
 				global.Punishments = require('./punishments.js');
 				return this.sendReply("Punishments have been hotpatched.");
+			} else if (target === 'dnsbl') {
+				Dnsbl.loadDatacenters();
+				return this.sendReply("Dnsbl has been hotpatched.");
 			} else if (target.startsWith('disablechat')) {
 				if (Monitor.hotpatchLockChat) return this.errorReply("Hotpatch is already disabled.");
 				let reason = target.split(', ')[1];
@@ -2565,6 +2570,7 @@ exports.commands = {
 		"/hotpatch battles - spawn new simulator processes",
 		"/hotpatch validator - spawn new team validator processes",
 		"/hotpatch formats - reload the tools.js tree, rebuild and rebroad the formats list, and spawn new simulator and team validator processes",
+		"/hotpatch dnsbl - reloads Dnsbl datacenters",
 		"/hotpatch disable, [reason] - disables the use of hotpatch until the next server restart"],
 
 	savelearnsets: function (target, room, user) {
@@ -2795,7 +2801,7 @@ exports.commands = {
 	},
 	crashfixedhelp: ["/crashfixed - Ends the active lockdown caused by a crash without the need of a restart. Requires: ~"],
 
-	'memusage': 'memoryusage',
+	memusage: 'memoryusage',
 	memoryusage: function (target) {
 		if (!this.can('hotpatch')) return false;
 		let memUsage = process.memoryUsage();
@@ -3266,7 +3272,6 @@ exports.commands = {
 	query: function (target, room, user, connection) {
 		// Avoid guest users to use the cmd errors to ease the app-layer attacks in emergency mode
 		let trustable = (!Config.emergency || (user.named && user.registered));
-		if (Config.emergency && Monitor.countCmd(connection.ip, user.name)) return false;
 		let spaceIndex = target.indexOf(' ');
 		let cmd = target;
 		if (spaceIndex > 0) {
@@ -3285,13 +3290,13 @@ exports.commands = {
 				return false;
 			}
 			let roomList = {};
-			for (let i in targetUser.roomCount) {
-				if (i === 'global') continue;
-				let targetRoom = Rooms.get(i);
-				if (!targetRoom) continue; // shouldn't happen
+			targetUser.inRooms.forEach(roomid => {
+				if (roomid === 'global') return;
+				let targetRoom = Rooms.get(roomid);
+				if (!targetRoom) return; // shouldn't happen
 				let roomData = {};
 				if (targetRoom.isPrivate) {
-					if (!(i in user.roomCount) && !(i in user.games)) continue;
+					if (!user.inRooms.has(roomid) && !user.games.has(roomid)) return;
 					roomData.isPrivate = true;
 				}
 				if (targetRoom.battle) {
@@ -3299,8 +3304,8 @@ exports.commands = {
 					roomData.p1 = battle.p1 ? ' ' + battle.p1.name : '';
 					roomData.p2 = battle.p2 ? ' ' + battle.p2.name : '';
 				}
-				roomList[i] = roomData;
-			}
+				roomList[roomid] = roomData;
+			});
 			if (!targetUser.connected) roomList = false;
 			let userdetails = {
 				userid: targetUser.userid,
