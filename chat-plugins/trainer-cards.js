@@ -365,13 +365,13 @@ exports.commands = {
 			seen('') + getBadges(''));
 	},
 
-	edge: 'grass',
+	
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Edge</b>∆<br />' +
-			'<i>"How can you face your problem, if the problem is your face?"</i> <br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> Mega Venusaur <br />' + seen('soraedge') + getBadges('soraedge'));
+			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 
 	jeratt: 'ice',
@@ -404,15 +404,15 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('sorasilvy') + getBadges('sorasilvy'));
 	},
 
-	
+	edge: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Edge</b>∆<br />' +
+			'<i>"How can you face your problem, if the problem is your face?"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('???') + '<br>' +
-			getBadges('???')
+			'<b>Ace:</b> Victini<br />' +
+			seen('soraedge') + '<br>' +
+			getBadges('soraedge')
 		);
 	},
 
