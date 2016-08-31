@@ -386,13 +386,13 @@ exports.commands = {
 		);
 	},
 
-	key: 'normal',
+
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Key</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> Staraptor<br />' + seen('sorakey') + getBadges('sorakey'));
+			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
 	},
 
        silvy: 'poison',
