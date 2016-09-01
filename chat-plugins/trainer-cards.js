@@ -267,13 +267,13 @@ exports.commands = {
 			'<b>Ace:</b> Volcarona<br />' + seen('soraaros') + getBadges('soraaros'));
 	},
 
-	
+	psyespeon: 'dark',
 	dark: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>PsyEspeon</b>∆<br />' +
+			'<i>"You better get moving fowards because you\'re sitting in the shadows behind me."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('???') + getBadges('???'));
+			'<b>Ace:</b> Mega Tyranitar<br />' + seen('sorapsyespeon') + getBadges('sorapsyespeon'));
 	},
 
 	waffles: 'dragon',
