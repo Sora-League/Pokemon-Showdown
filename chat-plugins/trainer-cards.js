@@ -184,7 +184,7 @@ exports.commands = {
 
 	akash: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Akash</b>∆<br />' +
+		this.sendReplyBox('∆Elite Frontier <b>Akash</b>∆<br />' +
 			'<i>"Don\'t be afraid of the change, adapt according to it."</i> <br />' +
 			'<b>Symbol: </b>Adaptability <br />' +
 			'<b>Ace:</b> Entei<br />' +
