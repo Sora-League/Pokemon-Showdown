@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Abadon∆', '∆Sora Float∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora PsyEspeon∆', '∆Sora Valgaro∆', '∆Sora Edge∆', '∆Sora Meows∆', '∆Sora Zachary∆'],
+			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora PsyEspeon∆', '∆Sora Edge∆', '∆Sora Meows∆', '∆Sora Zachary∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -316,13 +316,13 @@ exports.commands = {
 			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio><br />' + seen('soramark') + getBadges('soramark'));
 	},
 
-	valgaro: 'fighting',
+	
 	fighting: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Valgaro</b>∆<br />' +
-			'<i>"The fist is the mightiest weapon in combat, so don\'t fool yourself."</i> <br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
-			'<b>Ace:</b> Infernape<br />' + seen('soravalgaro') + getBadges('soravalgaro')
+			'<b>Ace:</b> ???<br />'+ seen('') + getBadges('')
 		);
 	},
 
