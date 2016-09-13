@@ -280,9 +280,9 @@ exports.commands = {
 	dragon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"Don\'t waffle out of the situation."</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('sorawaffles') + getBadges('sorawaffles'));
+			'<b>Ace:</b> Dragonite<br />' + seen('sorawaffles') + getBadges('sorawaffles'));
 	},
 
 
