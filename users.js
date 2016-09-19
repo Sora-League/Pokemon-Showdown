@@ -352,7 +352,6 @@ class User {
 		this.chatQueue = null;
 		this.chatQueueTimeout = null;
 		this.lastChatMessage = 0;
-		this.broadcasting = false;
 
 		// for the anti-spamming mechanism
 		this.lastMessage = ``;
@@ -391,7 +390,7 @@ class User {
 		if (this.namelocked) {
 			return '‽' + this.name;
 		}
-		if (roomid) {
+		if (roomid && roomid !== 'global') {
 			let room = Rooms(roomid);
 			if (!room) {
 				throw new Error(`Room doesn't exist: ${roomid}`);
@@ -413,6 +412,11 @@ class User {
 	can(permission, target, room) {
 		if (this.hasSysopAccess()) return true;
 
+		let groupData = Config.groups[this.group];
+		if (groupData && groupData['root']) {
+			return true;
+		}
+
 		let group, targetGroup;
 
 		if (typeof target === 'string') {
@@ -428,10 +432,7 @@ class User {
 			if (target) targetGroup = target.group;
 		}
 
-		let groupData = Config.groups[group];
-		if (groupData && groupData['root']) {
-			return true;
-		}
+		groupData = Config.groups[group];
 
 		if (groupData && groupData[permission]) {
 			let jurisdiction = groupData[permission];
@@ -734,6 +735,10 @@ class User {
 		Seen.set(name);
 		let userid = toId(name);
 
+		this.inRooms.forEach(roomid => {
+			Punishments.checkNewNameInRoom(this, userid, roomid);
+		});
+
 		if (users.has(userid) && users.get(userid) !== this) {
 			return false;
 		}
@@ -770,7 +775,13 @@ class User {
 			this.connections[i].send(initdata);
 		}
 		this.games.forEach(roomid => {
-			Rooms(roomid).game.onRename(this, oldid, joining);
+			const room = Rooms(roomid);
+			if (!room) {
+				Monitor.warn(`while renaming, room ${roomid} expired for user ${this.userid} in rooms ${[...this.inRooms]} and games ${[...this.games]}`);
+				this.games.delete(roomid);
+				return;
+			}
+			room.game.onRename(this, oldid, joining);
 		});
 		this.inRooms.forEach(roomid => {
 			Rooms(roomid).onRename(this, oldid, joining);
@@ -831,9 +842,8 @@ class User {
 		connection.inRooms.forEach(roomid => {
 			let room = Rooms(roomid);
 			if (!this.inRooms.has(roomid)) {
-				if (room.bannedUsers && (this.userid in room.bannedUsers || this.autoconfirmed in room.bannedUsers)) {
+				if (Punishments.checkNameInRoom(this, room.id)) {
 					// the connection was in a room that this user is banned from
-					room.bannedIps[connection.ip] = room.bannedUsers[this.userid];
 					connection.sendTo(room.id, `|deinit`);
 					connection.leaveRoom(room);
 					return;
@@ -1121,7 +1131,7 @@ class User {
 		if (!this.can('bypassall')) {
 			// check if user has permission to join
 			if (room.staffRoom && !this.isStaff) return false;
-			if (room.checkBanned && !room.checkBanned(this)) {
+			if (Punishments.isRoomBanned(this, room.id)) {
 				return null;
 			}
 		}
@@ -1203,12 +1213,10 @@ class User {
 			return Promise.resolve(false);
 		}
 		let gameCount = this.games.size;
-		if (gameCount > 4) {
-			connection.popup(`Due to high load, you are limited to 4 games at the same time.`);
+		if (Monitor.countConcurrentBattle(gameCount, connection)) {
 			return Promise.resolve(false);
 		}
-		if (Monitor.countPrepBattle(connection.ip || connection.latestIp, this.name)) {
-			connection.popup(`Due to high load, you are limited to 6 battles every 3 minutes.`);
+		if (Monitor.countPrepBattle(connection.ip || connection.latestIp, connection)) {
 			return Promise.resolve(false);
 		}
 
@@ -1255,7 +1263,18 @@ class User {
 		let games = {};
 		let atLeastOne = false;
 		this.games.forEach(roomid => {
-			let game = Rooms(roomid).game;
+			const room = Rooms(roomid);
+			if (!room) {
+				Monitor.warn(`while searching, room ${roomid} expired for user ${this.userid} in rooms ${[...this.inRooms]} and games ${[...this.games]}`);
+				this.games.delete(roomid);
+				return;
+			}
+			const game = room.game;
+			if (!game) {
+				Monitor.warn(`while searching, room ${roomid} has no game for user ${this.userid} in rooms ${[...this.inRooms]} and games ${[...this.games]}`);
+				this.games.delete(roomid);
+				return;
+			}
 			games[roomid] = game.title + (game.allowRenames ? '' : '*');
 			atLeastOne = true;
 		});
@@ -1344,7 +1363,7 @@ class User {
 		if (message.substr(0, 16) === '/cmd userdetails') {
 			// certain commands are exempt from the queue
 			Monitor.activeIp = connection.ip;
-			room.chat(this, message, connection);
+			CommandParser.parse(message, room, this, connection);
 			Monitor.activeIp = null;
 			return false; // but end the loop here
 		}
@@ -1370,7 +1389,7 @@ class User {
 		} else {
 			this.lastChatMessage = now;
 			Monitor.activeIp = connection.ip;
-			room.chat(this, message, connection);
+			CommandParser.parse(message, room, this, connection);
 			Monitor.activeIp = null;
 		}
 	}
@@ -1383,14 +1402,14 @@ class User {
 	}
 	processChatQueue() {
 		if (!this.chatQueue) return; // this should never happen
-		let toChat = this.chatQueue.shift();
+		let [message, roomid, connection] = this.chatQueue.shift();
 
 		this.lastChatMessage = new Date().getTime();
 
-		let room = Rooms(toChat[1]);
+		let room = Rooms(roomid);
 		if (room) {
-			Monitor.activeIp = toChat[2].ip;
-			room.chat(this, toChat[0], toChat[2]);
+			Monitor.activeIp = connection.ip;
+			CommandParser.parse(message, room, this, connection);
 			Monitor.activeIp = null;
 		} else {
 			// room is expired, do nothing
@@ -1516,18 +1535,20 @@ Users.socketReceive = function (worker, workerid, socketid, message) {
 	let pipeIndex = message.indexOf('|');
 	if (pipeIndex < 0) return;
 
-	let roomid = message.substr(0, pipeIndex);
-	let lines = message.substr(pipeIndex + 1);
-	let room = Rooms(roomid);
-	if (!room) room = Rooms.lobby || Rooms.global;
-	let user = connection.user;
+	const user = connection.user;
 	if (!user) return;
 
-	if (CommandParser.multiLinePattern.test(lines)) {
-		user.chat(lines, room, connection);
+	// The client obviates the room id when sending messages to Lobby by default
+	const roomId = message.substr(0, pipeIndex) || (Rooms.lobby || Rooms.global).id;
+	message = message.slice(pipeIndex + 1);
+
+	const room = Rooms(roomId);
+	if (CommandParser.multiLinePattern.test(message)) {
+		user.chat(message, room, connection);
 		return;
 	}
-	lines = lines.split('\n');
+
+	const lines = message.split('\n');
 	if (!lines[lines.length - 1]) lines.pop();
 	if (lines.length > (user.isStaff ? THROTTLE_MULTILINE_WARN_STAFF : THROTTLE_MULTILINE_WARN)) {
 		connection.popup(`You're sending too many lines at once. Try using a paste service like [[Pastebin]].`);
@@ -1535,7 +1556,7 @@ Users.socketReceive = function (worker, workerid, socketid, message) {
 	}
 	// Emergency logging
 	if (Config.emergency) {
-		fs.appendFile('logs/emergency.log', `[${user} (${connection.ip})] ${message}\n`, err => {
+		fs.appendFile('logs/emergency.log', `[${user} (${connection.ip})] ${roomId}|${message}\n`, err => {
 			if (err) {
 				console.log(`!! Error in emergency log !!`);
 				throw err;
@@ -1549,6 +1570,6 @@ Users.socketReceive = function (worker, workerid, socketid, message) {
 	}
 	let deltaTime = Date.now() - startTime;
 	if (deltaTime > 1000) {
-		Monitor.warn(`[slow] ${deltaTime}ms - ${user.name} <${connection.ip}>: ${message}`);
+		Monitor.warn(`[slow] ${deltaTime}ms - ${user.name} <${connection.ip}>: ${roomId}|${message}`);
 	}
 };

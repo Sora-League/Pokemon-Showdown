@@ -6,7 +6,7 @@
 
 'use strict';
 
-let banned = Object.create(null);
+const BAN_DURATION = 7 * 24 * 60 * 60 * 1000;
 
 function checkPlural(variable, plural, singular) {
 	if (!plural) plural = 's';
@@ -26,11 +26,6 @@ class Giveaway {
 		this.room = room;
 		this.prize = prize;
 		this.phase = 'pending';
-
-		this.excluded = {};
-		this.excluded[host.latestIp] = host.userid;
-		this.excluded[giver.latestIp] = giver.userid;
-		Object.assign(this.excluded, banned);
 
 		this.joined = {};
 
@@ -62,48 +57,55 @@ class Giveaway {
 		return false;
 	}
 
-	banUser(user) {
+	kickUser(user) {
 		for (let ip in this.joined) {
 			if (user.latestIp === ip || this.joined[ip] in user.prevNames) {
-				this.excluded[ip] = this.joined[ip];
 				if (this.generateReminder) user.sendTo(this.room, `|uhtmlchange|giveaway${this.room.gaNumber}${this.phase}|<div class="broadcast-blue">${this.generateReminder()}</div>`);
 				delete this.joined[ip];
 			}
 		}
 	}
 
-	unbanUser(user) {
-		for (let ip in this.excluded) {
-			if (user.latestIp === ip || this.joined[ip] in user.prevNames) {
-				delete this.excluded[ip];
-			}
-		}
-	}
-
 	checkExcluded(user) {
-		for (let ip in this.excluded) {
-			if (user.latestIp === ip) return true;
-			if (this.excluded[ip] in user.prevNames) return true;
-		}
+		if (Giveaway.checkBanned(this.room, user)) return true;
+		if (user === this.giver || user.latestIp in this.giver.ips || toId(user) in this.giver.prevNames) return true;
+		if (user === this.host || user.latestIp in this.host.ips || toId(user) in this.host.prevNames) return true;
 		return false;
 	}
 
+	static checkBanned(room, user) {
+		return Punishments.getRoomPunishType(room, toId(user)) === 'GIVEAWAY_BAN';
+	}
+
+	static ban(room, user, reason) {
+		if (reason) reason = `(${reason})`;
+		let msg = `Giveaway banned${reason}`;
+		Punishments.roomPunish(room, user, ['GIVEAWAY_BAN', toId(user), Date.now() + BAN_DURATION, msg]);
+	}
+
+	static unban(room, user) {
+		Punishments.roomUnpunish(room, toId(user), 'GIVEAWAY_BAN');
+	}
+
 	static getSprite(text) {
-		text = toId(text);
+		text = text.toLowerCase();
 		let mons = new Map();
 		let output = '';
 		for (let i in Tools.data.Pokedex) {
-			if (text.includes(i)) {
+			let regexp = new RegExp(`\\b${i}\\b`);
+			if (regexp.test(text)) {
 				let mon = Tools.getTemplate(i);
 				mons.set(mon.baseSpecies, mon);
 			}
 		}
-		for (let i in Tools.data.Aliases) {
-			if (toId(Tools.data.Aliases[i]) in Tools.data.Pokedex && text.includes(i)) {
-				let mon = Tools.getTemplate(toId(Tools.data.Aliases[i]));
-				mons.set(mon.baseSpecies, mon);
-			}
+		// the previous regex doesn't match "nidoran-m" or "nidoran male"
+		if (/\bnidoran\W{0,1}m(ale){0,1}\b/.test(text)) {
+			mons.set('nidoranm', Tools.getTemplate('nidoranm'));
 		}
+		if (/\bnidoran\W{0,1}f(emale){0,1}\b/.test(text)) {
+			mons.set('nidoranf', Tools.getTemplate('nidoranf'));
+		}
+		text = toId(text);
 		if (mons.size) {
 			mons.forEach(function (value, key) {
 				let spriteid = value.spriteid;
@@ -112,6 +114,14 @@ class Giveaway {
 						if (text.includes(value.otherForms[i])) {
 							spriteid += '-' + value.otherForms[i].substr(key.length);
 							break; // We don't want to end up with deerling-summer-spring
+						}
+					}
+				}
+				if (value.otherFormes) {
+					for (let i = 0; i < value.otherFormes.length; i++) {
+						if (text.includes(value.otherFormes[i])) {
+							spriteid += '-' + value.otherFormes[i].substr(key.length);
+							break; // We don't want to end up with landorus-therian-therian
 						}
 					}
 				}
@@ -214,7 +224,7 @@ class QuestionGiveaway extends Giveaway {
 				this.phase = 'ended';
 				this.clearTimer();
 				this.room.modlog(`${this.winner.name} won ${this.giver.name}'s giveaway for a "${this.prize}"`);
-				this.send(this.generateWindow(`<p style="text-align:center;font-size:12pt;"><b>'${Tools.escapeHTML(this.winner.name)}</b> won the giveaway! Congratulations!</p>` +
+				this.send(this.generateWindow(`<p style="text-align:center;font-size:12pt;"><b>${Tools.escapeHTML(this.winner.name)}</b> won the giveaway! Congratulations!</p>` +
 				`<p style="text-align:center;">${this.question}<br/>Correct answer${checkPlural(this.answers)}: ${this.answers.join(', ')}</p>`));
 				if (this.winner.connected) this.winner.popup(`You have won the giveaway. PM **${Tools.escapeHTML(this.giver.name)}** to claim your prize!`);
 				if (this.giver.connected) this.giver.popup(`${Tools.escapeHTML(this.winner.name)} has won your question giveaway!`);
@@ -297,6 +307,7 @@ class LotteryGiveaway extends Giveaway {
 
 		let userlist = Object.values(this.joined);
 		if (userlist.length < this.maxwinners) {
+			this.changeUhtml('<p style="text-align:center;font-size:13pt;font-weight:bold;">The giveaway was forcibly ended.</p>');
 			delete this.room.giveaway;
 			return this.room.send("The giveaway has been forcibly ended as there are not enough participants.");
 		}
@@ -344,6 +355,7 @@ let commands = {
 		if (!targetUser || !targetUser.connected) return this.errorReply(`User '${params[0]}' is not online.`);
 		if (!this.can('warn', null, room) && !(this.can('broadcast', null, room) && user === targetUser)) return this.errorReply("Permission denied.");
 		if (!targetUser.autoconfirmed) return this.errorReply(`User '${targetUser.name}' needs to be autoconfirmed to give something away.`);
+		if (Giveaway.checkBanned(room, targetUser)) return this.errorReply(`User '${targetUser.name}' is giveaway banned.`);
 
 		room.giveaway = new QuestionGiveaway(user, targetUser, room, params[1], params[2], params.slice(3).join(','));
 
@@ -392,6 +404,7 @@ let commands = {
 		if (!targetUser || !targetUser.connected) return this.errorReply(`User '${params[0]}' is not online.`);
 		if (!this.can('warn', null, room) && !(this.can('broadcast', null, room) && user === targetUser)) return this.errorReply("Permission denied.");
 		if (!targetUser.autoconfirmed) return this.errorReply(`User '${targetUser.name}' needs to be autoconfirmed to give something away.`);
+		if (Giveaway.checkBanned(room, targetUser)) return this.errorReply(`User '${targetUser.name}' is giveaway banned.`);
 
 		let numWinners = 1;
 		if (params.length > 2) {
@@ -440,11 +453,12 @@ let commands = {
 		if (target.length > 300) {
 			return this.errorReply("The reason is too long. It cannot exceed 300 characters.");
 		}
-		if (targetUser.latestIp in banned || Object.values(banned).indexOf(toId(targetUser)) > -1) return this.errorReply(`User '${this.targetUsername}' is already banned from entering giveaways.`);
-		banned[targetUser.latestIp] = toId(targetUser);
-		if (room.giveaway) room.giveaway.banUser(targetUser);
+		if (Giveaway.checkBanned(room, targetUser)) return this.errorReply(`User '${this.targetUsername}' is already banned from entering giveaways.`);
+
+		Giveaway.ban(room, targetUser, target);
+		if (room.giveaway) room.giveaway.kickUser(targetUser);
 		if (target) target = ` (${target})`;
-		this.addModCommand(`${targetUser.name} was banned from entering giveaways by ${user.name}.${target}`);
+		this.privateModCommand(`(${targetUser.name} was banned from entering giveaways by ${user.name}.${target})`);
 	},
 	unban: function (target, room, user) {
 		if (!target) return false;
@@ -454,16 +468,10 @@ let commands = {
 		this.splitTarget(target);
 		let targetUser = this.targetUser;
 		if (!targetUser) return this.errorReply(`User '${this.targetUsername}' not found.`);
-		if (!(targetUser.latestIp in banned)) {
-			if (Object.values(banned).indexOf(toId(targetUser)) < 0) return this.errorReply(`User '${this.targetUsername}' isn't banned from entering giveaways.`);
+		if (!Giveaway.checkBanned(room, targetUser)) return this.errorReply(`User '${this.targetUsername}' isn't banned from entering giveaways.`);
 
-			for (let ip in banned) {
-				if (banned[ip] === toId(targetUser)) delete banned[ip];
-			}
-		}
-		delete banned[targetUser.latestIp];
-		if (room.giveaway) room.giveaway.unbanUser(targetUser);
-		this.addModCommand(`${targetUser.name} was unbanned from entering giveaways by ${user.name}.`);
+		Giveaway.unban(room, targetUser);
+		this.privateModCommand(`${targetUser.name} was unbanned from entering giveaways by ${user.name}.`);
 	},
 	stop: 'end',
 	end: function (target, room, user) {

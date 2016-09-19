@@ -14,7 +14,7 @@
 	"globals": {
 		"Config": false, "Monitor": false, "toId": false, "Tools": false, "LoginServer": false,
 		"Users": false, "Punishments": false, "Rooms": false, "Verifier": false, "CommandParser": false, "Simulator": false,
-		"Tournaments": false, "Dnsbl": false, "Sockets": false, "TeamValidator": false, "Ladders": false
+		"Tournaments": false, "Dnsbl": false, "Sockets": false, "TeamValidator": false, "Ladders": false, "Messages": false
 	},
 	"extends": "eslint:recommended",
 	"rules": {
@@ -164,7 +164,7 @@
 		"prefer-arrow-callback": "off",
 		"rest-spread-spacing": ["error", "never"],
 		"template-curly-spacing": ["error", "never"],
-		"no-restricted-syntax": ["error", "ObjectPattern", "ArrayPattern", "WithStatement"],
+		"no-restricted-syntax": ["error", "WithStatement"],
 
 		"validate-conditionals": "error",
 	}

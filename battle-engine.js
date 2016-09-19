@@ -2129,8 +2129,14 @@ Battle = (() => {
 		if (sourceEffect === undefined && this.effect) sourceEffect = this.effect;
 		if (source === undefined && this.event && this.event.target) source = this.event.target;
 
-		if (this.weather === status.id && (this.gen > 2 || status.id === 'sandstorm')) {
-			return false;
+		if (this.weather === status.id) {
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				if (this.gen > 5 || this.weatherData.duration === 0) {
+					return false;
+				}
+			} else if (this.gen > 2 || status.id === 'sandstorm') {
+				return false;
+			}
 		}
 		if (status.id) {
 			let result = this.runEvent('SetWeather', source, source, status);
@@ -4938,7 +4944,7 @@ Battle = (() => {
 			let side = this[slot];
 			if (!side) {
 				console.log('**** ' + slot + ' tried to leave before it was possible in ' + this.id);
-				require('./crashlogger.js')(new Error('**** ' + slot + ' tried to leave before it was possible in ' + this.id), 'A simulator process');
+				require('./crashlogger')(new Error('**** ' + slot + ' tried to leave before it was possible in ' + this.id), 'A simulator process');
 				return;
 			}
 

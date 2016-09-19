@@ -7,8 +7,8 @@ const MAX_REASON_LENGTH = 300;
 
 let TournamentGenerators = Object.create(null);
 let generatorFiles = {
-	'roundrobin': 'generator-round-robin.js',
-	'elimination': 'generator-elimination.js',
+	'roundrobin': 'generator-round-robin',
+	'elimination': 'generator-elimination',
 };
 for (let type in generatorFiles) {
 	TournamentGenerators[type] = require('./' + generatorFiles[type]);
@@ -564,7 +564,7 @@ class Tournament {
 		if (this.autoDisqualifyTimeout === Infinity) {
 			this.room.add('|tournament|autodq|off');
 			if (this.autoDisqualifyTimer) clearTimeout(this.autoDisqualifyTimer);
-			this.autoDisqualifyWarnings.clear();
+			if (this.autoDisqualifyWarnings) this.autoDisqualifyWarnings.clear();
 		} else {
 			this.room.add('|tournament|autodq|on|' + this.autoDisqualifyTimeout);
 			if (this.isTournamentStarted) this.runAutoDisqualify();
