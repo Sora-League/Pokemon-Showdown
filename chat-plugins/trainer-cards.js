@@ -35,7 +35,7 @@ exports.commands = {
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Abadon∆', '∆Sora Float∆'],
-			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Nightanglet∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
+			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
 			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora PsyEspeon∆', '∆Sora Edge∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora MXCIV∆'],
 		}
 		for (let i in members) {
@@ -193,14 +193,14 @@ exports.commands = {
 		);
 	},
 
-       nightanglet: function (target, room, user) {
+       lymm: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Nightanglet</b>∆<br />' +
+		this.sendReplyBox('∆Frontier <b>Lymm</b>∆<br />' +
 			'<i>"What\'s a quote?"</i> <br />' +
 			'<b>Symbol: </b>Night <br />' +
 			'<b>Ace:</b> Ursaring<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-STABmons<br />' + seen('soranightanglet') + getBadges('soranightanglet')
+			'-STABmons<br />' + seen('soralymm') + getBadges('soralymm')
 		);
 	},
 
