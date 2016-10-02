@@ -13,9 +13,18 @@ const defaultSettings = {anonVotes: false, allowWills: false, autoModchat: false
 class MafiaPlayer extends Rooms.RoomGamePlayer {
 	constructor(user, game) {
 		super(user, game);
+	}
 
-		this.voting = false;
-		this.targeting = false;
+	get targeting() {
+		return this.validTargets && Object.keys(this.validTargets).length > 0;
+	}
+
+	get voting() {
+		return this.validVotes && Object.keys(this.validVotes).length > 0;
+	}
+
+	get done() {
+		return (!this.voting || this.voted) && (!this.targeting || this.target);
 	}
 
 	event(event) {
@@ -25,7 +34,6 @@ class MafiaPlayer extends Rooms.RoomGamePlayer {
 				if (this.used[event]) return;
 				this.using = event;
 			}
-			this.targeting = true;
 			this.toExecute = this.class[event].callback;
 			if (this.class[event].target.count === 'single') {
 				this.singleTarget(this.class[event].target.side);
@@ -41,10 +49,10 @@ class MafiaPlayer extends Rooms.RoomGamePlayer {
 	kill(flavorText) {
 		if (this.invincible) return;
 
-		let message = flavorText + '<br/>' + Tools.escapeHTML(this.name + ', the ' + this.class.name) + ' lies dead on the ground.';
+		let message = flavorText + '<br/>' + Chat.escapeHTML(this.name + ', the ' + this.class.name) + ' lies dead on the ground.';
 
 		if (this.allowWills && this.will) {
-			message += '<br/>' + Tools.escapeHTML(this.name) + '\'s will: ' + Tools.escapeHTML(this.will);
+			message += '<br/>' + Chat.escapeHTML(this.name) + '\'s will: ' + Chat.escapeHTML(this.will);
 		}
 
 		this.game.announcementWindow(deadImage, message);
@@ -56,9 +64,9 @@ class MafiaPlayer extends Rooms.RoomGamePlayer {
 
 	eliminate() {
 		if (this.game.gamestate === 'pregame') {
-			this.game.announcementWindow('', Tools.escapeHTML(this.name) + ' was kicked from the game.');
+			this.game.announcementWindow('', Chat.escapeHTML(this.name) + ' was kicked from the game.');
 		} else {
-			this.game.announcementWindow(deadImage, Tools.escapeHTML(this.name + ', the ' + this.class.name) + ' was eliminated from the game.');
+			this.game.announcementWindow(deadImage, Chat.escapeHTML(this.name + ', the ' + this.class.name) + ' was eliminated from the game.');
 		}
 		this.game.playerCount--;
 		this.game.dead.push(this.name);
@@ -71,39 +79,45 @@ class MafiaPlayer extends Rooms.RoomGamePlayer {
 	}
 
 	getRole() {
-		this.sendRoom('|html|' + this.game.mafiaWindow(this.class.image, Tools.escapeHTML(this.class.flavorText)));
+		this.sendRoom('|html|' + this.game.mafiaWindow(this.class.image, Chat.escapeHTML(this.class.flavorText)));
 	}
 
-	targetWindow(image, content) {
+	targetWindow(image, content, update) {
 		let output = content;
 		output += '<br/><p>Who do you wish to target?</p>';
 		for (let i in this.validTargets) {
-			output += '<button value="/choose target ' + this.validTargets[i].userid + '" name="send">' + Tools.escapeHTML(this.validTargets[i].name) + '</button>';
+			output += '<button value="/choose target ' + this.validTargets[i].userid + '" name="send">' + Chat.escapeHTML(this.validTargets[i].name) + '</button>';
 		}
 		output += '<button value="/choose target none" name="send">Nobody</button>';
 
-		this.sendRoom('|uhtml|mafia' + this.game.room.gameNumber + 'target' + this.game.gamestate + this.game.day + '|' + this.game.mafiaWindow(image, output));
+		if (update) {
+			this.sendRoom('|uhtmlchange|mafia' + this.game.room.gameNumber + 'target' + this.game.gamestate + this.game.day + '|' + this.game.mafiaWindow(image, output));
+		} else {
+			this.sendRoom('|uhtml|mafia' + this.game.room.gameNumber + 'target' + this.game.gamestate + this.game.day + '|' + this.game.mafiaWindow(image, output));
+		}
 	}
 
 	updateTarget(image) {
-		let header = '|uhtmlchange|mafia' + this.game.room.gameNumber + 'target' + this.game.gamestate + this.game.day + '|';
-
 		if (this.target) {
-			this.sendRoom(header + this.game.mafiaWindow(image, 'Targeting ' + Tools.escapeHTML(this.target.name) + '!'));
+			this.targetWindow(image, 'Targeting ' + Chat.escapeHTML(this.target.name) + '!<br/>', true);
 		} else {
-			this.sendRoom(header + this.game.mafiaWindow(image, 'You chose to not target anybody.'));
+			this.targetWindow(image, 'You chose to not target anybody.<br/>', true);
 		}
 	}
 
-	voteWindow(image, content) {
+	voteWindow(image, content, update) {
 		let output = content;
 		output += '<br/><p>Who do you wish to vote for?</p>';
 		for (let i in this.validVotes) {
-			output += '<button value="/choose vote ' + this.validVotes[i].userid + '" name="send">' + Tools.escapeHTML(this.validVotes[i].name) + '</button>';
+			output += '<button value="/choose vote ' + this.validVotes[i].userid + '" name="send">' + Chat.escapeHTML(this.validVotes[i].name) + '</button>';
 		}
 		output += '<button value="/choose vote none" name="send">Abstain</button>';
 
-		this.sendRoom('|uhtml|mafia' + this.game.room.gameNumber + 'vote' + this.game.gamestate + this.game.day + '|' + this.game.mafiaWindow(image, output));
+		if (update) {
+			this.sendRoom('|uhtmlchange|mafia' + this.game.room.gameNumber + 'vote' + this.game.gamestate + this.game.day + '|' + this.game.mafiaWindow(image, output));
+		} else {
+			this.sendRoom('|uhtml|mafia' + this.game.room.gameNumber + 'vote' + this.game.gamestate + this.game.day + '|' + this.game.mafiaWindow(image, output));
+		}
 	}
 
 	// Targeting mechanics:
@@ -126,19 +140,17 @@ class MafiaPlayer extends Rooms.RoomGamePlayer {
 		}
 
 		if (target in this.validTargets || target === 'none') {
-			this.targeting = false;
 			if (target === 'none') {
 				if (this.using) delete this.using;
 				this.toExecute = null;
 			} else {
 				this.target = this.game.players[target];
 			}
-			delete this.validTargets;
 
 			this.updateTarget(this.class.image);
 
 			for (let i in this.game.players) {
-				if (this.game.players[i].voting || this.game.players[i].targeting) {
+				if (!this.game.players[i].done) {
 					return;
 				}
 			}
@@ -151,12 +163,20 @@ class MafiaPlayer extends Rooms.RoomGamePlayer {
 	// Triggers after the user has voted.
 	onReceiveVote(target) {
 		if (!this.voting) {
-			return;
+			return this.sendRoom("You don't need to vote right now.");
 		}
 
 		let numVotes = 1;
 
 		if (this.class.numVotes) numVotes = this.class.numVotes;
+
+		if (this.voted && this.game.currentVote[this.voted]) {
+			this.game.currentVote[this.voted].votes -= numVotes;
+			this.game.currentVote[this.voted].voters.splice(this.game.currentVote[this.voted].voters.indexOf(this.name), 1);
+			if (!this.game.currentVote[this.voted].voters.length) {
+				delete this.game.currentVote[this.voted];
+			}
+		}
 
 		if (target in this.validVotes || target === 'none') {
 			if (this.game.currentVote[target]) {
@@ -166,13 +186,11 @@ class MafiaPlayer extends Rooms.RoomGamePlayer {
 				this.game.currentVote[target] = {votes: numVotes, voters: [this.name]};
 			}
 
-			this.voting = false;
-			delete this.validVotes;
-
+			this.voted = target;
 			this.game.updateVotes();
 
 			for (let i in this.game.players) {
-				if (this.game.players[i].voting || this.game.players[i].targeting) {
+				if (!this.game.players[i].done) {
 					return;
 				}
 			}
@@ -337,7 +355,7 @@ class Mafia extends Rooms.RoomGame {
 		let temp = Object.values(this.players);
 		let output = '<div class="broadcast-blue"><center><h2>A game of mafia has been made!</h2><p>Participants (' + (this.playerCap - temp.length) + ' needed): </p>';
 		for (let i = 0; i < temp.length; i++) {
-			output += Tools.escapeHTML(temp[i].name);
+			output += Chat.escapeHTML(temp[i].name);
 			if (i < temp.length - 1) {
 				output += ', ';
 			}
@@ -398,11 +416,11 @@ class Mafia extends Rooms.RoomGame {
 			}
 		}
 
-		let content = '<strong>Roles:</strong> ' + this.roleString + '<br/><strong>Alive:</strong> ' + Tools.escapeHTML(alive.join(', ')) + '<br/><strong>Dead:</strong> ' + Tools.escapeHTML(this.dead.join(', '));
+		let content = '<strong>Roles:</strong> ' + this.roleString + '<br/><strong>Alive:</strong> ' + Chat.escapeHTML(alive.join(', ')) + '<br/><strong>Dead:</strong> ' + Chat.escapeHTML(this.dead.join(', '));
 
 		for (let i in this.players) {
 			if (this.players[i].class.side === 'mafia') {
-				this.players[i].sendRoom('|html|' + this.mafiaWindow(this.players[i].class.image, content + '<br/><strong>Mafia:</strong> ' + Tools.escapeHTML(mafia.joi0n(', '))));
+				this.players[i].sendRoom('|html|' + this.mafiaWindow(this.players[i].class.image, content + '<br/><strong>Mafia:</strong> ' + Chat.escapeHTML(mafia.join(', '))));
 			} else {
 				this.players[i].sendRoom('|html|' + this.mafiaWindow(this.players[i].class.image, content));
 			}
@@ -412,7 +430,7 @@ class Mafia extends Rooms.RoomGame {
 	updateVotes() {
 		let text = '';
 		for (let i in this.currentVote) {
-			text += (i === 'none' ? 'Abstain' : Tools.escapeHTML(this.players[i].name)) + ': ';
+			text += (i === 'none' ? 'Abstain' : Chat.escapeHTML(this.players[i].name)) + ': ';
 			if (this.anonVotes) {
 				text += this.currentVote[i].votes + ' votes.';
 			} else {
@@ -421,12 +439,10 @@ class Mafia extends Rooms.RoomGame {
 			text += '<br/>';
 		}
 
-		if (!text) text = 'No votes yet.';
-
 		for (let i in this.players) {
 			let player = this.players[i];
-			if (this.voters.indexOf(player) > -1 && !player.voting) {
-				player.sendRoom('|uhtmlchange|mafia' + this.room.gameNumber + 'vote' + this.gamestate + this.day + '|' + this.mafiaWindow(player.class.image, text));
+			if (this.voters.includes(player)) {
+				player.voteWindow(player.class.image, text, true);
 			}
 		}
 	}
@@ -499,7 +515,7 @@ class Mafia extends Rooms.RoomGame {
 
 	progress() {
 		for (let i in this.players) {
-			if (this.players[i].targeting || this.players[i].voting) {
+			if (!this.players[i].done) {
 				this.players[i].eliminate();
 			}
 		}
@@ -507,6 +523,7 @@ class Mafia extends Rooms.RoomGame {
 		if (this.executionOrder) {
 			for (let i = 0; i < this.executionOrder.length; i++) {
 				let player = this.executionOrder[i];
+				if (!player) continue;
 				if (player.toExecute) {
 					if (player.roleBlocked) {
 						player.roleBlocked = false;
@@ -518,9 +535,9 @@ class Mafia extends Rooms.RoomGame {
 						}
 						let output;
 						if (player.target) {
-							output = Tools.escapeHTML(player.toExecute(player.target));
+							output = Chat.escapeHTML(player.toExecute(player.target));
 						} else {
-							output = Tools.escapeHTML(player.toExecute());
+							output = Chat.escapeHTML(player.toExecute());
 						}
 
 						if (output) {
@@ -543,16 +560,25 @@ class Mafia extends Rooms.RoomGame {
 				if (this.meeting === 'town' && toKill.class.onLynch) {
 					toKill.class.onLynch();
 				}
+			} else if (this.meeting === 'town') {
+				this.announcementWindow("Nobody was lynched.");
 			}
 
 			this.meeting = null;
 		}
+
+		delete this.currentVote;
 
 		let mafiaCount = 0;
 		let townCount = 0;
 
 		for (let i in this.players) {
 			let player = this.players[i];
+
+			delete player.target;
+			delete player.voted;
+			delete player.validTargets;
+			delete player.validVotes;
 
 			if (player.invincible) {
 				player.invincible = false;
@@ -569,7 +595,7 @@ class Mafia extends Rooms.RoomGame {
 			this.end(MafiaData.MafiaClasses.mafia.image, 'The mafia is victorious, how awful!');
 			return;
 		} else if (!mafiaCount && (townCount === this.playerCount)) {
-			this.end(MafiaData.MafiaClasses.villager.image, 'The town has driven the mafia out succesfully!');
+			this.end(MafiaData.MafiaClasses.villager.image, 'The town has driven the mafia out successfully!');
 			return;
 		} else if (this.playerCount === 1) {
 			for (let i in this.players) {
@@ -587,6 +613,7 @@ class Mafia extends Rooms.RoomGame {
 
 		switch (this.gamestate) {
 		case 'night':
+			this.day++;
 			if (this.autoModchat && this.day) {
 				if (this.room.modchat === '+') {
 					this.room.modchat = this.oldModchat;
@@ -645,14 +672,13 @@ class Mafia extends Rooms.RoomGame {
 		}
 
 		for (let i = 0; i < this.voters.length; i++) {
-			this.voters[i].voting = true;
 			this.voters[i].validVotes = noMafia;
 
 			let flavorText = '';
 			if (this.voters.length === 1) {
 				flavorText += 'As the only live member of the mafia, you have to be careful. Not careful enough to stop killing, though.';
 			} else if (this.voters.length === 2) {
-				flavorText += 'You sit down with the only other member of the mafia, ' + (i === 0 ? Tools.escapeHTML(this.voters[1].name) : Tools.escapeHTML(this.voters[0].name)) + '.';
+				flavorText += 'You sit down with the only other member of the mafia, ' + (i === 0 ? Chat.escapeHTML(this.voters[1].name) : Chat.escapeHTML(this.voters[0].name)) + '.';
 			} else {
 				flavorText += 'You sit down with the other members of the mafia, ';
 				for (let j = 0; i < this.voters.length; i++) {
@@ -662,7 +688,7 @@ class Mafia extends Rooms.RoomGame {
 						} else {
 							flavorText += ', ';
 						}
-						flavorText += Tools.escapeHTML(this.voters[i].name);
+						flavorText += Chat.escapeHTML(this.voters[i].name);
 					}
 				}
 			}
@@ -680,7 +706,6 @@ class Mafia extends Rooms.RoomGame {
 			let player = this.players[i];
 			this.voters.push(player);
 
-			player.voting = true;
 			player.validVotes = this.players;
 
 			player.voteWindow(player.class.image, 'Outraged over the mafia\'s activity in town, the people decide to lynch a person they suspect of being involved with the mafia.');
@@ -731,11 +756,11 @@ exports.commands = {
 
 				for (let i in targetObj.classes) {
 					if (!MafiaData.MafiaClasses[i]) {
-						return this.errorReply(Tools.escapeHTML(i) + " is not a valid mafia class.");
+						return this.errorReply(Chat.escapeHTML(i) + " is not a valid mafia class.");
 					}
 
 					let amt = parseInt(Tools.getString(targetObj.classes[i]));
-					if (isNaN(amt) || amt < 0 || amt > 25) return this.errorReply("Invalid amount for class " + Tools.escapeHTML(i));
+					if (isNaN(amt) || amt < 0 || amt > 25) return this.errorReply("Invalid amount for class " + Chat.escapeHTML(i));
 
 					for (let j = 0; j < amt; j++) {
 						roleList.push(i);
@@ -766,7 +791,7 @@ exports.commands = {
 
 				for (let i = 0; i < params.length; i++) {
 					if (!MafiaData.MafiaClasses[params[i]]) {
-						return this.errorReply(Tools.escapeHTML(params[i]) + " is not a valid mafia class.");
+						return this.errorReply(Chat.escapeHTML(params[i]) + " is not a valid mafia class.");
 					}
 				}
 
@@ -817,14 +842,14 @@ exports.commands = {
 
 				if (!target.length) {
 					if (will) {
-						return this.sendReply("Your will is: " + Tools.escapeHTML(will));
+						return this.sendReply("Your will is: " + Chat.escapeHTML(will));
 					} else {
 						return this.sendReply("You don't have a will set.");
 					}
 				}
 
 				room.game.players[user.userid].will = target;
-				this.sendReply("Will set to: " + Tools.escapeHTML(target));
+				this.sendReply("Will set to: " + Chat.escapeHTML(target));
 			} else {
 				this.errorReply("Wills are not allowed in this game.");
 			}
