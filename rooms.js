@@ -1382,7 +1382,7 @@ class ChatRoom extends Room {
 		let date = new Date();
 		let basepath = 'logs/chat/' + this.id + '/';
 		mkdir(basepath, '0755', () => {
-			const dateString = Tools.toTimestamp(date).split(' ')[0];
+			const dateString = Chat.toTimestamp(date).split(' ')[0];
 			let path = dateString.split('-', 2).join('-');
 			mkdir(basepath + path, '0755', () => {
 				if (this.destroyingLog) return;
