@@ -12,7 +12,7 @@ function format(target, word) {
 let seen = JSON.parse(fs.readFileSync('storage-files/lastseen.json'));
 let money = JSON.parse(fs.readFileSync(moneyFile));
 
-exports.Seen = {
+global.Seen = {
 	get: function (user) {
 		user = toId(user);
 		if (!seen[user]) return 'never';
@@ -38,7 +38,7 @@ exports.Seen = {
 	},
 };
 
-exports.Economy = {
+global.Economy = {
 	write: function (user, value) {
 		user = toId(user);
 		money[user] ? money[user] += value : money[user] = value;
@@ -123,7 +123,7 @@ function toHex(N) {
 	return "0123456789ABCDEF".charAt((N - N % 16) / 16) + "0123456789ABCDEF".charAt(N % 16);
 }
 
-exports.hashColor = function (name) {
+global.hashColor = function (name) {
 	name = toId(name);
 	if (colorCache[name]) return colorCache[name];
 	let hash = MD5(name);

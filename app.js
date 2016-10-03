@@ -116,13 +116,13 @@ global.Users = require('./users');
 
 global.Punishments = require('./punishments');
 
+global.Chat = require('./chat');
+
 global.Rooms = require('./rooms');
 
 delete process.send; // in case we're a child process
 global.Verifier = require('./verifier');
 Verifier.PM.spawn();
-
-global.Chat = require('./chat');
 
 global.Simulator = require('./simulator');
 
@@ -134,23 +134,12 @@ Dnsbl.loadDatacenters();
 if (Config.crashguard) {
 	// graceful crash - allow current battles to finish before restarting
 	process.on('uncaughtException', err => {
-		let crashMessage = require('./crashlogger')(err, 'The main process');
-		if (crashMessage !== 'lockdown') return;
-		let stack = Chat.escapeHTML(err.stack).split("\n").slice(0, 2).join("<br />");
-		if (!Rooms.global.lockdown) {
-			if (Rooms.lobby) {
-				Rooms.lobby.addRaw('<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> ' + stack + '<br />Please restart the server.</div>');
-				Rooms.lobby.addRaw('<div class="broadcast-red">You will not be able to start new battles until the server restarts.</div>');
-				Rooms.lobby.update();
-			}
-			let staffRoom = Rooms('staff');
-			if (staffRoom) {
-				staffRoom.addRaw('<div class="broadcast-red"><b>THE SERVER HAS CRASHED:</b> ' + stack + '<br />Please restart the server.</div>');
-				staffRoom.addRaw('<div class="broadcast-red">You will not be able to start new battles until the server restarts.</div>');
-				staffRoom.update();
-			}
+		let crashType = require('./crashlogger')(err, 'The main process');
+		if (crashType === 'lockdown') {
+			Rooms.global.startLockdown(err);
+		} else {
+			Rooms.global.reportCrash(err);
 		}
-		Rooms.global.lockdown = true;
 	});
 	process.on('unhandledRejection', err => {
 		throw err;
@@ -186,11 +175,6 @@ Tools.includeFormats();
 
 global.TeamValidator = require('./team-validator');
 TeamValidator.PM.spawn();
-
-let Core = require('./Core.js');
-global.Economy = Core.Economy;
-global.hashColor = Core.hashColor;
-global.Seen = Core.Seen;
 
 /*********************************************************
  * Start up the REPL server

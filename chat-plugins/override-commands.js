@@ -2,115 +2,11 @@
 const fs = require('fs');
 
 exports.commands = {
-	pm: 'msg',
-	whisper: 'msg',
-	w: 'msg',
-	msg: function (target, room, user, connection) {
-		if (!target) return this.parse('/help msg');
-		target = this.splitTarget(target);
-		let targetUser = this.targetUser;
-		if (!target) {
-			this.sendReply("You forgot the comma.");
-			return this.parse('/help msg');
-		}
-		this.pmTarget = (targetUser || this.targetUsername);
-		if (!targetUser || !targetUser.connected) {
-			if (targetUser && !targetUser.connected) {
-				this.errorReply("User " + this.targetUsername + " is offline. You can send them an offline message using /tell.");
-				return;
-			} else {
-				if (toId(this.targetUsername) === 'tells') return this.errorReply("You cannot reply to these messages.");
-				this.errorReply("User " + this.targetUsername + " not found. Did you misspell their name?");
-				return this.parse('/help msg');
-			}
-			return;
-		}
-
-		if (Config.pmmodchat) {
-			let userGroup = user.group;
-			if (Config.groupsranking.indexOf(userGroup) < Config.groupsranking.indexOf(Config.pmmodchat)) {
-				let groupName = Config.groups[Config.pmmodchat].name || Config.pmmodchat;
-				this.errorReply("Because moderated chat is set, you must be of rank " + groupName + " or higher to PM users.");
-				return false;
-			}
-		}
-
-		if (user.locked && !targetUser.can('lock')) {
-			return this.errorReply("You can only private message members of the moderation team (users marked by %, @, &, or ~) when locked.");
-		}
-		if (targetUser.locked && !user.can('lock')) {
-			return this.errorReply("This user is locked and cannot PM.");
-		}
-		if (targetUser.ignorePMs && targetUser.ignorePMs !== user.group && !user.can('lock')) {
-			if (!targetUser.can('lock')) {
-				return this.errorReply("This user is blocking private messages right now.");
-			} else if (targetUser.can('bypassall')) {
-				return this.errorReply("This admin is too busy to answer private messages right now. Please contact a different staff member.");
-			}
-		}
-		if (user.ignorePMs && user.ignorePMs !== targetUser.group && !targetUser.can('lock')) {
-			return this.errorReply("You are blocking private messages right now.");
-		}
-
-		target = this.canTalk(target, null, targetUser);
-		if (!target) return false;
-
-		if (target.charAt(0) === '/' && target.charAt(1) !== '/') {
-			// PM command
-			let innerCmdIndex = target.indexOf(' ');
-			let innerCmd = (innerCmdIndex >= 0 ? target.slice(1, innerCmdIndex) : target.slice(1));
-			let innerTarget = (innerCmdIndex >= 0 ? target.slice(innerCmdIndex + 1) : '');
-			switch (innerCmd) {
-			case 'me':
-			case 'mee':
-			case 'announce':
-				break;
-			case 'invite':
-			case 'inv':
-				let targetRoom = Rooms.search(innerTarget);
-				if (!targetRoom || targetRoom === Rooms.global) return this.errorReply('The room "' + innerTarget + '" does not exist.');
-				if (targetRoom.staffRoom && !targetUser.isStaff) return this.errorReply('User "' + this.targetUsername + '" requires global auth to join room "' + targetRoom.id + '".');
-				if (targetRoom.isPrivate === true && targetRoom.modjoin && targetRoom.auth) {
-					if (Config.groupsranking.indexOf(targetRoom.auth[targetUser.userid] || ' ') < Config.groupsranking.indexOf(targetRoom.modjoin) && !targetUser.can('bypassall')) {
-						return this.errorReply('The room "' + innerTarget + '" does not exist.');
-					}
-				}
-
-				target = '/invite ' + targetRoom.id;
-				break;
-			case 'tictactoe':
-			case 'ttt':
-				return this.parse('/ttt c ' + targetUser.userid);
-				break;
-			default:
-				return this.errorReply("The command '/" + innerCmd + "' was unrecognized or unavailable in private messages. To send a message starting with '/" + innerCmd + "', type '//" + innerCmd + "'.");
-			}
-		}
-
-		/*let isAdv = target.toLowerCase().replace(/ /g, '').split('.psim.us');
-		if (isAdv.length > 1 && !this.can('broadcast')) {
-			for (let i = 0; i < isAdv.length; i++) {
-				if (isAdv[i].lastIndexOf('sora') !== isAdv[i].length - 4) {
-					if (!isAdv[i]) continue;
-					return this.errorReply('Please do not advertise other servers.');
-				}
-			}
-		}*/
-		let message = '|pm|' + user.getIdentity() + '|' + targetUser.getIdentity() + '|' + target;
-		user.send(message);
-		if (targetUser !== user && !user.isSpamroomed()) targetUser.send(message);
-		if (user.isSpamroomed()) {
-			spamroom.add('|c|' + user.getIdentity() + '| __(Private to ' + targetUser.getIdentity() + ')__ ' + target);
-			spamroom.update();
-		} else targetUser.lastPM = user.userid;
-		user.lastPM = targetUser.userid;
-	},
-
 	uptime: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		let uptime = process.uptime(), uptimeText;
 		function getUptime(uptime) {
-			if (uptime < 24 * 60 * 60) return Tools.toDurationString(uptime * 1000);
+			if (uptime < 24 * 60 * 60) return Chat.toDurationString(uptime * 1000);
 			let uptimeDays = Math.floor(uptime / (24 * 60 * 60));
 			let uptimeText = uptimeDays + " " + (uptimeDays === 1 ? "day" : "days");
 			let uptimeHours = Math.floor(uptime / (60 * 60)) - uptimeDays * 24;
@@ -131,7 +27,7 @@ exports.commands = {
 			return this.sendReply("For safety reasons, /kill can only be used during lockdown.");
 		}
 
-		if (CommandParser.updateServerLock) {
+		if (Chat.updateServerLock) {
 			return this.sendReply("Wait for /updateserver to finish before using /kill.");
 		}
 

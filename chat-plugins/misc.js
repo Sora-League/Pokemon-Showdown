@@ -18,7 +18,7 @@ exports.commands = {
 
 		user.awayName = Names[cmd] || '- ⒶⒻⓀ';
 		let awayMessage = Messages[cmd] || 'is now away';
-		target = Tools.escapeHTML(target);
+		target = Chat.escapeHTML(target);
 		let name = user.name;
 
 		if (user.isStaff && this.canTalk()) this.add('|raw|-- <b>' + name + '</b> ' + awayMessage + '. ' + (target ? " (" + target + ")" : ""));
@@ -62,7 +62,7 @@ exports.commands = {
 		} else tells[id] = {};
 
 		let tell = tells[id][user.userid];
-		let msg = '<font color = "gray"><i>(Sent by ' + user.name + ' on ' + (new Date()).toUTCString() + ')</i></font><br><b><font color = "' + hashColor(user.userid) + '">' + user.name + ':</color></b> ' + Tools.escapeHTML(target);
+		let msg = '<font color = "gray"><i>(Sent by ' + user.name + ' on ' + (new Date()).toUTCString() + ')</i></font><br><b><font color = "' + hashColor(user.userid) + '">' + user.name + ':</color></b> ' + Chat.escapeHTML(target);
 		if (tell) tells[id][user.userid].push(msg);
 		else tells[id][user.userid] = [msg];
 
@@ -145,14 +145,14 @@ exports.commands = {
 				let page = JSON.parse(body);
 				let definitions = page['list'];
 				if (page['result_type'] == 'no_results') {
-					self.sendReplyBox('No results for <b>"' + Tools.escapeHTML(target) + '"</b>.');
+					self.sendReplyBox('No results for <b>"' + Chat.escapeHTML(target) + '"</b>.');
 					return room.update();
 				} else {
 					if (!definitions[0]['word'] || !definitions[0]['definition']) {
-						self.sendReplyBox('No results for <b>"' + Tools.escapeHTML(target) + '"</b>.');
+						self.sendReplyBox('No results for <b>"' + Chat.escapeHTML(target) + '"</b>.');
 						return room.update();
 					}
-					let output = '<b>' + Tools.escapeHTML(definitions[0]['word']) + ':</b> ' + Tools.escapeHTML(definitions[0]['definition']).replace(/\r\n/g, '<br />').replace(/\n/g, ' ');
+					let output = '<b>' + Chat.escapeHTML(definitions[0]['word']) + ':</b> ' + Chat.escapeHTML(definitions[0]['definition']).replace(/\r\n/g, '<br />').replace(/\n/g, ' ');
 					if (output.length > 400) output = output.slice(0, 400) + '...';
 					self.sendReplyBox(output);
 					return room.update();

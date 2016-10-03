@@ -20,7 +20,7 @@ exports.commands = {
 	poof: function (target, room, user) {
 		if (!this.canTalk()) return this.errorReply("You cannot poof while unable to talk.");
 		if (poofoff) return this.sendReply("Poofs are currently disabled.");
-		let message = poofs[Math.floor(Math.random() * poofs.length)].replace(/\(user\)/g, Tools.escapeHTML(user.name));
+		let message = poofs[Math.floor(Math.random() * poofs.length)].replace(/\(user\)/g, Chat.escapeHTML(user.name));
 		this.add('|html|<center><span style = "color:#' + randomColor() + '"><b>~~ ' + message + ' ~~</b></span>');
 		user.disconnectAll();
 	},

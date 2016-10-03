@@ -14,7 +14,7 @@ exports.commands = {
 		if (!(user.userid in ateam)) return this.errorReply("The command \'/" + cmd + "\' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
 		if (!target) return this.sendReply('/' + cmd + ' - sends a modnote to the Admin Team.');
 		for (let i in room.users) {
-			if (room.users[i].userid in ateam) room.users[i].sendTo(this.room, '|html|<div class = "message-error">(' + user.name + ' notes: ' + Tools.escapeHTML(target) + ')</div>');
+			if (room.users[i].userid in ateam) room.users[i].sendTo(this.room, '|html|<div class = "message-error">(' + user.name + ' notes: ' + Chat.escapeHTML(target) + ')</div>');
 		}
 	},
 

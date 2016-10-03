@@ -16,6 +16,8 @@ const TIMEOUT_INACTIVE_DEALLOCATE = 40 * 60 * 1000;
 const REPORT_USER_STATS_INTERVAL = 10 * 60 * 1000;
 const PERIODIC_MATCH_INTERVAL = 60 * 1000;
 
+const CRASH_REPORT_THROTTLE = 60 * 60 * 1000;
+
 const fs = require('fs');
 const path = require('path');
 
@@ -23,7 +25,6 @@ let Rooms = module.exports = getRoom;
 
 Rooms.rooms = new Map();
 Rooms.aliases = new Map();
-
 
 function getTells(user) {
 	let tells = JSON.parse(fs.readFileSync('storage-files/tells.json'));
@@ -39,7 +40,6 @@ function getTells(user) {
 /*********************************************************
  * the Room object.
  *********************************************************/
-
 
 class Room {
 	constructor(roomid, title) {
@@ -106,7 +106,6 @@ class Room {
 		log.unshift('|:|' + (~~(Date.now() / 1000)));
 		return log;
 	}
-
 
 	toString() {
 		return this.id;
@@ -734,8 +733,6 @@ class GlobalRoom {
 	onRename(user, oldid, joining) {
 		delete this.users[oldid];
 		this.users[user.userid] = user;
-		if (oldid !== toId(user)) Seen.set(user.userid);
-		Seen.set(oldid);
 
 		getTells(user);
 		return user;
@@ -796,10 +793,6 @@ class GlobalRoom {
 				reportRoom.update();
 			}
 		}
-		if (format === 'leaguebattle' && rooms.lobby) {
-			rooms.lobby.add('|html|<a href="/' + newRoom.id + '" class="ilink">League battle between ' + p1.getIdentity() + ' and ' + p2.getIdentity() + ' started.</a>');
-			rooms.lobby.update();
-		}
 		if (Config.logladderip && options.rated) {
 			if (!this.ladderIpLog) {
 				this.ladderIpLog = fs.createWriteStream('logs/ladderip/ladderip.txt', {flags: 'a'});
@@ -811,6 +804,53 @@ class GlobalRoom {
 	}
 	modlog(text) {
 		this.modlogStream.write('[' + (new Date().toJSON()) + '] ' + text + '\n');
+	}
+	startLockdown(err, slow) {
+		if (this.lockdown) return;
+		let devRoom = Rooms('development');
+		const stack = (err ? Chat.escapeHTML(err.stack).split(`\n`).slice(0, 2).join(`<br />`) : ``);
+		Rooms.rooms.forEach((curRoom, id) => {
+			if (id === 'global') return;
+			if (err) {
+				if (id === 'staff' || id === 'development' || (!devRoom && id === 'lobby')) {
+					curRoom.addRaw(`<div class="broadcast-red"><b>The server needs to restart because of a crash:</b> ${stack}<br />Please restart the server.</div>`);
+					curRoom.addRaw(`<div class="broadcast-red">You will not be able to start new battles until the server restarts.</div>`);
+					curRoom.update();
+				} else {
+					curRoom.addRaw(`<div class="broadcast-red"><b>The server needs restart because of a crash.</b><br />No new battles can be started until the server is done restarting.</div>`).update();
+				}
+			} else {
+				curRoom.addRaw(`<div class="broadcast-red"><b>The server is restarting soon.</b><br />Please finish your battles quickly. No new battles can be started until the server resets in a few minutes.</div>`).update();
+			}
+			if (!slow && curRoom.requestKickInactive && !curRoom.battle.ended) {
+				curRoom.requestKickInactive(false, true);
+				if (curRoom.modchat !== '+') {
+					curRoom.modchat = '+';
+					curRoom.addRaw(`<div class="broadcast-red"><b>Moderated chat was set to +!</b><br />Only users of rank + and higher can talk.</div>`).update();
+				}
+			}
+		});
+
+		this.lockdown = true;
+		this.lastReportedCrash = Date.now();
+	}
+	reportCrash(err) {
+		if (this.lockdown) return;
+		const time = Date.now();
+		if (time - this.lastReportedCrash < CRASH_REPORT_THROTTLE) {
+			return;
+		}
+		this.lastReportedCrash = time;
+		const stack = (err ? Chat.escapeHTML(err.stack).split(`\n`).slice(0, 2).join(`<br />`) : ``);
+		const crashMessage = `|html|<div class="broadcast-red"><b>The server has crashed:</b> ${stack}</div>`;
+		const devRoom = Rooms('development');
+		if (devRoom) {
+			devRoom.add(crashMessage).update();
+		} else {
+			if (Rooms.lobby) Rooms.lobby.add(crashMessage).update();
+			const staffRoom = Rooms('staff');
+			if (staffRoom) staffRoom.add(crashMessage).update();
+		}
 	}
 }
 
