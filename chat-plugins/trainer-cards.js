@@ -432,7 +432,7 @@ exports.commands = {
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Ultimo</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"Metal is just a part of earth that has been purified and refined, and my team is ready to fight."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> Bisharp<br />' +
 			seen('soraultimo') + getBadges('soraultimo')
