@@ -34,9 +34,9 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
-			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Abadon∆', '∆Sora Float∆'],
+			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Onyxeagle∆', '∆Sora Float∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Edge∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Edge∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -133,6 +133,15 @@ exports.commands = {
 	},
 
 
+	   onyxeagle: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆E4 <b>OnyxEagle</b>∆<br />' +
+			'<i>"I WILL ROCK YOUR WORLD!"</i> <br />' +
+			'<b>Type: <font color = 472e10>Rock</font></b> <br />' +
+			'<b>Ace:</b> Tyranitar<br />' +
+			'<center><img src = "http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"></center><br />' +
+			'<center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center><br />' + seen('soraonyxeagle') + getBadges('soraonyxeagle'));
+	},
 
 	
 	float: function (target, room, user) {
@@ -408,15 +417,16 @@ exports.commands = {
 		);
 	},
 
-	onyxeagle: 'rock',
+	
 	rock: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>OnyxEagle</b>∆<br />' +
-			'<i>"I WILL ROCK YOUR WORLD!!"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Tyranitar<br />' +
-			'<center><img src = "http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"></center><br />' +
-			'<center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center><br />' + seen('soraonyxeagle') + getBadges('soraonyxeagle'));
+			'<b>Ace:</b> ???<br />' +
+			seen('') + getBadges('')
+		);	  
+			
 	},
 
 
