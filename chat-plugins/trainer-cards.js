@@ -272,7 +272,7 @@ exports.commands = {
 	dark: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Hawkatana</b>∆<br />' +
-			'<i>"I\'ve braved the depths of Hell, for this? What a Joke."</i> <br />' +
+			'<i>"Since when has the word \'Dark\' meant \'Evil\'?"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
 			'<b>Ace:</b> Hoopa-U <br />' + seen('sorahawkatana') + getBadges('sorahawkatana'));
 	},
