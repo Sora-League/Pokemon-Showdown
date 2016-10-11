@@ -274,7 +274,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Hawkatana</b>∆<br />' +
 			'<i>"I\'ve braved the depths of Hell, for this? What a Joke."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace: Hoopa-U</b> <br />' + seen('sorahawkatana') + getBadges('sorahawkatana'));
+			'<b>Ace:</b> Hoopa-U <br />' + seen('sorahawkatana') + getBadges('sorahawkatana'));
 	},
 
 	waffles: 'dragon',
