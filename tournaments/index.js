@@ -886,11 +886,11 @@ class Tournament {
 			var bucks1 = (winMoney === 1 ? 'buck' : 'bucks');
 			var runnerMoney = Math.floor(winMoney/2);
 			var bucks2 = (runnerMoney === 1 ? 'buck' : 'bucks');
-			this.room.add('|raw|<strong>' + Tools.escapeHTML(winner) + ' has also won ' + winMoney + ' ' + bucks1 + ' for winning the tournament!</strong>');
+			this.room.add('|raw|<strong>' + Chat.escapeHTML(winner) + ' has also won ' + winMoney + ' ' + bucks1 + ' for winning the tournament!</strong>');
 			Economy.write(winner, winMoney);
 			writeWin(toId(winner));
 			if (runnerUp && runnerMoney) {
-				this.room.add('|raw|<strong>' + Tools.escapeHTML(runnerUp) + ' has won ' + runnerMoney + ' ' + bucks2 + ' as a runner-up prize!</strong>');
+				this.room.add('|raw|<strong>' + Chat.escapeHTML(runnerUp) + ' has won ' + runnerMoney + ' ' + bucks2 + ' as a runner-up prize!</strong>');
 				Economy.write(runnerUp, runnerMoney);
 			}
 		}
