@@ -277,13 +277,13 @@ exports.commands = {
 			'<b>Ace:</b> Hoopa-U <br />' + seen('sorahawkatana') + getBadges('sorahawkatana'));
 	},
 
-	waffles: 'dragon',
+	
 	dragon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Waffles</b>∆<br />' +
-			'<i>"Don\'t waffle out of the situation."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> Dragonite<br />' + seen('sorawaffles') + getBadges('sorawaffles'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
 
