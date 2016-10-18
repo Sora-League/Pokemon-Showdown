@@ -289,10 +289,10 @@ exports.commands = {
 
 	electric: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Ninjarisu</b>∆<br />' +
+			'This member is a part of Sora\'s inactivity clause, and is a member of both the Frontier AND the Gym Leaders. This type is still open for challengers who wish to apply for it.<br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> ???<br />');
+			'<b>Ace:</b> Ampharos<br />');
 	},
 
 	meows: 'fairy',
