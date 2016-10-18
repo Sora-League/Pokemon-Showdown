@@ -280,10 +280,10 @@ exports.commands = {
 	
 	dragon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Revan</b>∆<br />' +
+			'This member is a part of Sora\'s inactivity clause, and is both a Champion AND a Gym Leader. This type is still open for challengers who wish to apply for it.' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Dragalge<br />' + seen('') + getBadges(''));
 	},
 
 
