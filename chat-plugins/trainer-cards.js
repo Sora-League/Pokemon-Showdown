@@ -369,7 +369,7 @@ exports.commands = {
 	
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Edge</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
