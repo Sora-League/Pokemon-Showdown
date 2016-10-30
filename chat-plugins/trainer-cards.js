@@ -57,11 +57,9 @@ exports.commands = {
 
 	bart: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('<a><font size= 4><center><b><font color = 07e1ed>∆Champion Bart∆</font></b></center></a><br />' +
+		this.sendReplyBox('<a><font size= 4><center><b><font color = 07e1ed>∆Sora Bart∆</font></b></center></a><br />' +
 			'<center><i>"Sometimes I look at the bright blue sky and say to myself \'I FUCKED UP, I FUCKED UP\'"</i></center> <br />' +
-			'<b>Ace:</b> Pawniard<br />' +
-			'<b>Battle Rules:</b> <br/>' +
-			'-LC <br/>' +
+			'<b>Ace:</b> Weavile<br />' +
 			'<center><img src="http://sprites.pokecheck.org/i/461.gif"> <img src="http://i1280.photobucket.com/albums/a482/Skarmory11/Misc%20sprites/Bart_zps03ad3a7d.png"><img src="http://play.pokemonshowdown.com/sprites/xyani/torterra.gif"></center>' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
