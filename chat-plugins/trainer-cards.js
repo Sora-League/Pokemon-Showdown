@@ -757,7 +757,7 @@ exports.commands = {
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/infernape.gif">' +
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/diancie-mega.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/togekiss.gif">' +
 			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/clefable.gif"><br><br>' +
-			'<b style = "font-size: 9pt;">Best With:</b> Fairy Monotype, Hackmons Cup, UU<br><br>' +
+			'<b style = "font-size: 9pt;">Best With:</b> Fairy and Flying Monotype, Hackmons Cup, UU<br><br>' +
 			'<b style = "font-size: 9pt;">Bragging Rights:</b><br>' +
 			'<li>Greatest Fairy Leader<br>' +
 			'<li>UU Frontier<br>' +
