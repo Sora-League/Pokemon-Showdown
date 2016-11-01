@@ -231,8 +231,8 @@ exports.commands = {
 	heat: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Heat</b>∆<br />' +
-			'<i>"You came to the wong place if you wanted a win."</i> <br />' +
-			'<b>Symbol:</b> SumTingWong<br />' +
+			'<i>"What does anyone have, for a well played Beartic?"</i> <br />' +
+			'<b>Symbol:</b> Well Played<br />' +
 			'<b>Ace:</b> Lapras <br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'-PU <br/>' +
