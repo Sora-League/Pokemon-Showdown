@@ -524,7 +524,7 @@ exports.commands = {
 		);
 	},
 
-	darkus: function (target, room, user) {
+	soradarkus: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<center><span style = "font-size: 11pt; font-weight: bold; color: ' + hashColor('soradarkus') + '">∆SoraDarkus∆</span><br>' +
 			'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br><br>' +
