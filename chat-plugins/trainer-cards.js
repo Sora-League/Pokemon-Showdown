@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Onyxeagle∆', '∆Sora Float∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Edge∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Kenta∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Edge∆', '∆Sora Meows∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Kenta∆', '∆Sora Xemnas∆', '∆Sora Darkus∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -287,10 +287,10 @@ exports.commands = {
 
 	electric: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Ninjarisu</b>∆<br />' +
-			'This member is a part of Sora\'s inactivity clause, and is a member of both the Frontier AND the Gym Leaders. This type is still open for challengers who wish to apply for it.<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> Ampharos<br />');
+			'<b>Ace:</b> ???<br />');
 	},
 
 	meows: 'fairy',
@@ -347,21 +347,21 @@ exports.commands = {
 	
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Youmaton</b>∆<br />' +
-			'This member is a part of Sora\'s inactivity clause, and is a member of both the Frontier AND the Gym Leaders. This type is still open for challengers who wish to apply for it. <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Togekiss<br />' +
+			'<b>Ace:</b> ???<br />' +
 			seen('') + getBadges(''));
 	},
 
-	
+	xemnas: 'ghost', 
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Xemnas</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> ???<br />' +
-			seen('') + getBadges(''));
+			seen('soraxemnas') + getBadges('soraxemnas'));
 	},
 
 	
@@ -385,13 +385,13 @@ exports.commands = {
 		);
 	},
 
-
+        darkus: 'normal',
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Gasp</b>∆<br />' +
-			'This member is a part of Sora\'s inactivity clause, and is a member of both the Frontier AND the Gym Leaders. This type is still open for challengers who wish to apply for it.<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
+			'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> Chansey<br />' + seen('???') + getBadges('???'));
+			'<b>Ace:</b> Mega Lopunny<br />' + seen('soradarkus') + getBadges('soradarkus'));
 	},
 
        silvy: 'poison',
@@ -418,8 +418,8 @@ exports.commands = {
 	
 	rock: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Lymm</b>∆<br />' +
-			'This member is a part of Sora\'s inactivity clause, and is a member of both the Frontier AND the Gym Leaders. This type is still open for challengers who wish to apply for it. <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
 			'<b>Ace:</b> Rhydon<br />' +
 			seen('') + getBadges('')
