@@ -394,13 +394,13 @@ exports.commands = {
 			'<b>Ace:</b> Mega Lopunny<br />' + seen('soradarkus') + getBadges('soradarkus'));
 	},
 
-       silvy: 'poison',
+       
 	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Silvy</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('sorasilvy') + getBadges('sorasilvy'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
 	edge: 'psychic',
