@@ -142,14 +142,12 @@ exports.commands = {
 	},
 
 	
-	float: function (target, room, user) {
+	meows: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Float</b>∆<br />' +
-			'<i>"Float like a butterfly, sting like a meme"</i> <br />' +
+		this.sendReplyBox('∆E4 <b>Meows</b>∆<br />' +
+			'<i>"1et m3 b3 th3 k3y 2 ur h3art xoxo"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Volcanion<br />' +
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/surskit.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/surskit.gif"><br />' +
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' + seen('sorafloat') + getBadges('sorafloat'));
+			'<b>Ace:</b> Volcanion<br />' + seen('sorafloat') + getBadges('sorafloat'));
 
 	},
 	
@@ -292,13 +290,15 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />');
 	},
 
-	meows: 'fairy',
+	float: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Meows</b>∆<br />' +
-			'<i>"1et m3 b3 th3 k3y 2 ur h3art xoxo <3" </i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
+			'<i>"Float like a butterfly, sting like a meme" </i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Klefki<br />' + seen('sorameows') + getBadges('sorameows'));
+			'<b>Ace: </b>Azumarill<br />' + 
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +	seen('sorafloat') + getBadges('sorafloat'));
 	},
 
 	mark: 'ground',
