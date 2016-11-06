@@ -131,7 +131,7 @@ exports.commands = {
 	},
 
 
-	   onyxeagle: function (target, room, user) {
+	 onyxeagle: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>OnyxEagle</b>∆<br />' +
 			'<i>"I WILL ROCK YOUR WORLD!"</i> <br />' +
@@ -252,7 +252,6 @@ exports.commands = {
         
         },*/
 
-
 	/*********************************************************
 	 * Gym Leaders
 	 *********************************************************/
@@ -266,13 +265,13 @@ exports.commands = {
 			'<b>Ace:</b> Volcarona<br />' + seen('soraaros') + getBadges('soraaros'));
 	},
 
-	hawkatana: 'dark',
+	darkus: 'dark',
 	dark: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Hawkatana</b>∆<br />' +
-			'<i>"Since when has the word \'Dark\' meant \'Evil\'?"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
+			'<i>"It\'s all shits and giggles until someone giggles and shits."</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Hoopa-U <br />' + seen('sorahawkatana') + getBadges('sorahawkatana'));
+			'<b>Ace:</b> Bisharp <br />' + seen('soradarkus') + getBadges('soradarkus'));
 	},
 
 	kenta: 'dragon',
@@ -318,8 +317,7 @@ exports.commands = {
 	whitefang: 'fighting',
 	fighting: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Whitefang</b>∆<br />' +
-			'<i>"Get janked by misfire on command"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Whitefang</b>∆<br />' +			'<i>"Get janked by misfire on command"</i> <br />' +
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
 			'<b>Ace:</b> Cobalion<br />'+ seen('sorawhitefang') + getBadges('sorawhitefang')
 		);
@@ -385,13 +383,13 @@ exports.commands = {
 		);
 	},
 
-        darkus: 'normal',
+        hawkatana: 'normal',
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
-			'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Hawkatana</b>∆<br />' +
+			'<i>"Sorry, you actually think You can win? What a joke."</i><br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> Mega Lopunny<br />' + seen('soradarkus') + getBadges('soradarkus'));
+			'<b>Ace:</b> Mega Lopunny<br />' + seen('sorahawkatana') + getBadges('sorahawkatana'));
 	},
 
        
