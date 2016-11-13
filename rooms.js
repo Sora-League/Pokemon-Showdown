@@ -537,7 +537,7 @@ class GlobalRoom {
 
 		// search must be within range
 		let searchRange = 100, elapsed = Date.now() - Math.min(search1.time, search2.time);
-		if (formatid === 'ou' || formatid === 'oucurrent' || formatid === 'randombattle') searchRange = 50;
+		if (formatid === 'ou' || formatid === 'oucurrent' || formatid === 'oususpecttest' || formatid === 'randombattle') searchRange = 50;
 		searchRange += elapsed / 300; // +1 every .3 seconds
 		if (searchRange > 300) searchRange = 300 + (searchRange - 300) / 10; // +1 every 3 sec after 300
 		if (searchRange > 600) searchRange = 600;
@@ -806,7 +806,7 @@ class GlobalRoom {
 		this.modlogStream.write('[' + (new Date().toJSON()) + '] ' + text + '\n');
 	}
 	startLockdown(err, slow) {
-		if (this.lockdown) return;
+		if (this.lockdown && err) return;
 		let devRoom = Rooms('development');
 		const stack = (err ? Chat.escapeHTML(err.stack).split(`\n`).slice(0, 2).join(`<br />`) : ``);
 		Rooms.rooms.forEach((curRoom, id) => {
@@ -902,7 +902,7 @@ class BattleRoom extends Room {
 		this.p2 = p2 || null;
 
 		this.rated = rated;
-		this.battle = Simulator.create(this.id, format, rated, this);
+		this.battle = new Rooms.RoomBattle(this, format, rated);
 		this.game = this.battle;
 
 		this.sideTicksLeft = [21, 21];
@@ -1650,6 +1650,12 @@ class ChatRoom extends Room {
 		}
 		this.logUserStatsInterval = null;
 
+		if (!this.isPersonal) {
+			this.modlogStream.destroySoon();
+			this.modlogStream.removeAllListeners('finish');
+		}
+		this.modlogStream = null;
+
 		// get rid of some possibly-circular references
 		Rooms.rooms.delete(this.id);
 	}
@@ -1700,6 +1706,11 @@ Rooms.ChatRoom = ChatRoom;
 
 Rooms.RoomGame = require('./room-game').RoomGame;
 Rooms.RoomGamePlayer = require('./room-game').RoomGamePlayer;
+
+Rooms.RoomBattle = require('./room-battle').RoomBattle;
+Rooms.RoomBattlePlayer = require('./room-battle').RoomBattlePlayer;
+Rooms.SimulatorManager = require('./room-battle').SimulatorManager;
+Rooms.SimulatorProcess = require('./room-battle').SimulatorProcess;
 
 // initialize
 

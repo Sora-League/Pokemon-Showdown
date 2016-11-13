@@ -27,11 +27,16 @@ class Validator {
 			} else {
 				format.banlist = [];
 			}
+			if (format.unbanlist) {
+				format.unbanlist = format.unbanlist.slice();
+			} else {
+				format.unbanlist = [];
+			}
 			for (let i = 0; i < supplementaryBanlist.length; i++) {
 				let ban = supplementaryBanlist[i];
 				if (ban.charAt(0) === '!') {
-					let index = format.banlist.indexOf(ban.substr(1));
-					if (index > -1) format.banlist.splice(index, 1);
+					ban = ban.substr(1);
+					if (!format.unbanlist.includes(ban)) format.unbanlist.push(ban);
 				} else {
 					if (!format.banlist.includes(ban)) format.banlist.push(ban);
 				}
@@ -42,7 +47,7 @@ class Validator {
 		}
 		this.format = format;
 		this.supplementaryBanlist = supplementaryBanlist;
-		this.tools = Tools.mod(this.format);
+		this.tools = Tools.format(this.format);
 	}
 
 	validateTeam(team, removeNicknames) {
@@ -143,12 +148,12 @@ class Validator {
 		}
 
 		set.species = Tools.getSpecies(set.species);
-
 		set.name = tools.getName(set.name);
 		let item = tools.getItem(Tools.getString(set.item));
 		set.item = item.name;
 		let ability = tools.getAbility(Tools.getString(set.ability));
 		set.ability = ability.name;
+		set.nature = tools.getNature(Tools.getString(set.nature)).name;
 		if (!Array.isArray(set.moves)) set.moves = [];
 
 		let maxLevel = format.maxLevel || 100;
@@ -209,6 +214,17 @@ class Validator {
 			} else {
 				return [`"${set.ability}" is an invalid ability.`];
 			}
+		}
+		if (set.nature && !tools.getNature(set.nature).exists) {
+			if (tools.gen < 3) {
+				// gen 1-2 don't have natures, just remove them
+				set.nature = '';
+			} else {
+				return [`${set.species}'s nature is invalid.`];
+			}
+		}
+		if (set.happiness !== undefined && isNaN(set.happiness)) {
+			problems.push(`${set.species} has an invalid happiness.`);
 		}
 
 		let banlistTable = tools.getBanlistTable(format);
@@ -314,7 +330,8 @@ class Validator {
 								problemString = problemString.concat(` because it's incompatible with another move.`);
 							}
 						} else if (problem.type === 'oversketched') {
-							problemString = problemString.concat(` because it can only sketch ${problem.maxSketches} move${tools.plural(problem.maxSketches)}.`);
+							let plural = (parseInt(problem.maxSketches) === 1 ? '' : 's');
+							problemString = problemString.concat(` because it can only sketch ${problem.maxSketches} move${plural}.`);
 						} else if (problem.type === 'pokebank') {
 							problemString = problemString.concat(` because it's only obtainable from a previous generation.`);
 						} else {
@@ -531,7 +548,7 @@ class Validator {
 			let tier = template.tier;
 			if (tier.charAt(0) === '(') tier = tier.slice(1, -1);
 			setHas[toId(tier)] = true;
-			if (banlistTable[tier]) {
+			if (banlistTable[tier] && banlistTable[template.id] !== false) {
 				problems.push(`${template.species} is in ${tier}, which is banned.`);
 			}
 		}
@@ -634,7 +651,7 @@ class Validator {
 			alreadyChecked[template.speciesid] = true;
 			if (tools.gen === 2 && template.gen === 1) tradebackEligible = true;
 			// STABmons hack to avoid copying all of validateSet to formats
-			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(moveid in {'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'lovelykiss':1, 'shellsmash':1, 'shiftgear':1})) {
+			if (format.banlistTable && format.banlistTable['ignorestabmoves'] && !(moveid in {'acupressure':1, 'bellydrum':1, 'chatter':1, 'darkvoid':1, 'geomancy':1, 'lovelykiss':1, 'shellsmash':1, 'shiftgear':1})) {
 				let types = template.types;
 				if (template.species === 'Shaymin') types = ['Grass', 'Flying'];
 				if (template.baseSpecies === 'Hoopa') types = ['Psychic', 'Ghost', 'Dark'];
@@ -990,7 +1007,7 @@ if (process.send && module === process.mainModule) {
 		});
 	}
 
-	global.Tools = require('./tools').includeMods();
+	global.Tools = require('./tools').includeData();
 	global.toId = Tools.getId;
 
 	require('./repl').start('team-validator-', process.pid, cmd => eval(cmd));
