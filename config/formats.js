@@ -534,15 +534,6 @@ exports.Formats = [
 		requirePentagon: true
 	},
 	{
-		name: "Triples Hackmons Cup",
-		section: "ORAS Triples",
-
-		gameType: 'triples',
-		team: 'randomHC',
-		searchShow: false,
-		ruleset: ['Pokemon', 'HP Percentage Mod', 'Cancel Mod']
-	},
-	{
 		name: "Triples Custom Game",
 		section: "ORAS Triples",
 
