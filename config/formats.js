@@ -536,7 +536,6 @@ exports.Formats = [
 	{
 		name: "Triples Hackmons Cup",
 		section: "ORAS Triples",
-		column: 2,
 
 		gameType: 'triples',
 		team: 'randomHC',
