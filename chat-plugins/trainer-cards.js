@@ -342,14 +342,13 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
-	hawk: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Hawk</b>∆<br />' +
-			'<i>"The sky\'s the limit."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Staraptor<br />' +
-			seen('sorahawk') + getBadges('sorahawk'));
+			'<b>Ace:</b> ???<br />' +
+			seen('') + getBadges(''));
 	},
 
 	xemnas: 'ghost', 
