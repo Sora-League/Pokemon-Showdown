@@ -1,12 +1,12 @@
 /**
- * Simulator abstraction layer
+ * Room Battle
  * Pokemon Showdown - http://pokemonshowdown.com/
  *
- * This file abstracts away Pokemon Showdown's multi-process simulator
- * model. You can basically include this file, use its API, and pretend
- * Pokemon Showdown is just one big happy process.
+ * This file wraps the simulator in an implementation of the RoomGame
+ * interface. It also abstracts away the multi-process nature of the
+ * simulator.
  *
- * For the actual simulation, see battle-engine.js
+ * For the actual battle simulation, see battle-engine.js
  *
  * @license MIT license
  */
@@ -16,7 +16,6 @@
 global.Config = require('./config/config');
 
 const ProcessManager = require('./process-manager');
-const BattleEngine = require('./battle-engine').Battle;
 
 class SimulatorManager extends ProcessManager {
 	onMessageUpstream(message) {
@@ -37,8 +36,6 @@ const SimulatorProcess = new SimulatorManager({
 	maxProcesses: global.Config ? Config.simulatorprocesses : 1,
 	isChatBased: false,
 });
-
-let slice = Array.prototype.slice;
 
 class BattlePlayer {
 	constructor(user, game, slot) {
@@ -93,8 +90,8 @@ class BattlePlayer {
 		let user = Users(this.userid);
 		if (user) user.sendTo(this.game.id, data);
 	}
-	simSend(action) {
-		this.game.send.apply(this.game, [action, this.slot].concat(slice.call(arguments, 1)));
+	simSend(action, ...rest) {
+		this.game.send(action, this.slot, ...rest);
 	}
 }
 
@@ -137,15 +134,15 @@ class Battle {
 		this.process.pendingTasks.set(room.id, this);
 	}
 
-	send() {
+	send(...args) {
 		this.activeIp = Monitor.activeIp;
-		this.process.send('' + this.id + '|' + slice.call(arguments).join('|'));
+		this.process.send(`${this.id}|${args.join('|')}`);
 	}
-	sendFor(user, action) {
+	sendFor(user, action, ...rest) {
 		let player = this.players[user];
 		if (!player) return;
 
-		this.send.apply(this, [action, player.slot].concat(slice.call(arguments, 2)));
+		this.send(action, player.slot, ...rest);
 	}
 	checkActive() {
 		let active = true;
@@ -444,20 +441,18 @@ class Battle {
 	}
 }
 
-exports.BattlePlayer = BattlePlayer;
-exports.Battle = Battle;
+exports.RoomBattlePlayer = BattlePlayer;
+exports.RoomBattle = Battle;
 exports.SimulatorManager = SimulatorManager;
 exports.SimulatorProcess = SimulatorProcess;
-
-exports.create = function (id, format, rated, room) {
-	return new Battle(room, format, rated);
-};
 
 if (process.send && module === process.mainModule) {
 	// This is a child process!
 
-	global.Tools = require('./tools').includeMods();
+	global.Tools = require('./tools').includeFormats();
 	global.toId = Tools.getId;
+	global.Chat = require('./chat');
+	const BattleEngine = require('./battle-engine');
 
 	if (Config.crashguard) {
 		// graceful crash - allow current battles to finish before restarting
