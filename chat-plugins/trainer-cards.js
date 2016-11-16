@@ -290,28 +290,13 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />');
 	},
 
-	float: 'fairy',
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"Float like a butterfly, sting like a meme" </i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Azumarill<br />' + 
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +	seen('sorafloat') + getBadges('sorafloat'));
-	},
-
-	mark: 'ground',
-	ground: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br>' +
-			'<i>"When I said don\'t use drugs....I MEANT IT. Keep it up and have fun."</i> <br>' +
-			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>Crash Man (Excadrill)<br>' +
-			seen('soramark') + '<br>' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
-			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio><br />' + seen('soramark') + getBadges('soramark'));
+			'<b>Ace: </b>???<br />' + 
+			seen('') + getBadges(''));
 	},
 
 	whitefang: 'fighting',
@@ -337,18 +322,20 @@ exports.commands = {
 			'<details><summary><font color = 009900><b>Aegislash Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aegislash.gif"></center>' +
 			'<b>R.I.P. Shadow Snek</b> <br />' +
 			'2nd Apostle of the All Mighty Lord Parasect</details><br />' +
-			'<img src="http://oi62.tinypic.com/14cfyh0.jpg"><img src="http://66.media.tumblr.com/6d1996ce9d10db40fa5f088f7887c71e/tumblr_o15namAV1o1v5aa3xo1_1280.png" width=150 height=150></center> <br />' +
+			'<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' +
 			seen('SoraBlade') + '<br>' +
 			getBadges('SoraBlade'));
 	},
 
+	float: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
+			'<i>"Float like a butterfly, sting like a meme"</i><br />' +
 			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + getBadges(''));
+			'<b>Ace:</b> Landorus-Therian<br />' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +	seen('sorafloat') + getBadges('sorafloat'));
 	},
 
 	xemnas: 'ghost', 
@@ -369,7 +356,20 @@ exports.commands = {
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
-
+	
+	mark: 'ground',
+	ground: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br>' +
+			'<i>"When I said don\'t use drugs....I MEANT IT. Keep it up and have fun."</i> <br>' +
+			'<b>Type: <font color = A64000>Ground</font></b><br>' +
+			'<b>Ace: </b>Crash Man (Excadrill)<br>' +
+			seen('soramark') + '<br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
+			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio><br />' + seen('soramark') + getBadges('soramark'));
+	},
+	
 	jeratt: 'ice',
 	ice: function (target, room, user) {
 		if (!this.runBroadcast()) return;
