@@ -342,9 +342,9 @@ exports.commands = {
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Xemnas</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+			'<i>"If light and darkness are eternal, then surely we nothings must be the same... Eternal! ... No more eternal than that radiance of yours."</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
+			'<b>Ace:</b> Roxas (Doublade)<br />' +
 			seen('soraxemnas') + getBadges('soraxemnas'));
 	},
 
