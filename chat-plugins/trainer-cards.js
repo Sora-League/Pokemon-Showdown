@@ -345,6 +345,7 @@ exports.commands = {
 			'<i>"If light and darkness are eternal, then surely we nothings must be the same... Eternal! ... No more eternal than that radiance of yours."</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> Roxas (Doublade)<br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/Hb0NwAPc3JJSIfjVXmszRqfVRmH32oIX/Kingdom%20Hearts%20II-%20Final%20Xemnas%20Battle%20Theme.mp3" style = "border-radius: 0px; background: black;"></audio><br>' +
 			seen('soraxemnas') + getBadges('soraxemnas'));
 	},
 
