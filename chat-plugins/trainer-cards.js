@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Edge∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Kenta∆', '∆Sora Xemnas∆', '∆Sora Darkus∆', '∆Sora Hawk∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Waffles∆', '∆Sora Silvy∆', '∆Sora Edge∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Kenta∆', '∆Sora Xemnas∆', '∆Sora Darkus∆', '∆Sora Luscinia∆],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -289,14 +289,15 @@ exports.commands = {
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
 			'<b>Ace:</b> ???<br />');
 	},
-
+        
+	Luscinia: 'fairy',	
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Luscinia</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>???<br />' + 
-			seen('') + getBadges(''));
+			'<b>Ace: </b>Mawile<br />' + 
+			seen('soraluscinia') + getBadges('soraluscinia'));
 	},
 
 	whitefang: 'fighting',
