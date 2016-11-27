@@ -161,6 +161,18 @@ exports.Formats = [
 			}
 		},
 	},
+	{
+		name: "[Gen 7] Custom Game",
+
+		mod: 'gen7',
+		searchShow: false,
+		canUseRandomTeam: true,
+		debug: true,
+		maxLevel: 9999,
+		defaultLevel: 100,
+		// no restrictions, for serious (other than team preview)
+		ruleset: ['Team Preview', 'Cancel Mod'],
+	},
 
 	// SM Doubles
 	///////////////////////////////////////////////////////////////////
@@ -203,7 +215,7 @@ exports.Formats = [
 
 		mod: 'gen7',
 		gameType: 'doubles',
-		maxForcedLevel: 50,
+		forcedLevel: 50,
 		teamLength: {
 			validate: [4, 6],
 			battle: 4,
@@ -572,7 +584,6 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3496773/\">1v1</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3536109/\">1v1 Resources</a>",
 		],
-		section: 'Other Metagames',
 
 		teamLength: {
 			validate: [1, 3],
