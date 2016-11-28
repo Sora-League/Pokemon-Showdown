@@ -1524,9 +1524,12 @@ class BattleSide {
 				this.battle.debug(`Can't use an unexpected z-move`);
 				return false;
 			}
-			targetType = this.battle.getMove(zMove).target;
 
-			if (!targetLoc && this.active.length >= 2) {
+			if (move.category !== 'Status') {
+				targetType = this.battle.getMove(zMove).target;
+			}
+
+			if (!targetLoc && this.active.length >= 2 && this.battle.targetTypeChoices(targetType)) {
 				// Compatibility fix:
 				// Clients failed to select a target for Z-Moves based on spread moves
 				// in the early stages of Gen 7 implementation.
@@ -3943,7 +3946,7 @@ class Battle extends Tools.BattleDex {
 		baseDamage = this.runEvent('ModifyDamage', pokemon, target, move, baseDamage);
 
 		// TODO: Find out where this actually goes in the damage calculation
-		if (move.isZ && (target.volatiles['banefulbunker'] || target.volatiles['kingsshield'] || target.volatiles['protect'] || target.volatiles['spikyshield'])) {
+		if (move.isZ && (target.volatiles['banefulbunker'] || target.volatiles['kingsshield'] || target.side.sideConditions['matblock'] || target.volatiles['protect'] || target.volatiles['spikyshield'])) {
 			baseDamage = this.modify(baseDamage, 0.25);
 			this.add('-message', target.name + " couldn't fully protect itself and got hurt! (placeholder)");
 		}
