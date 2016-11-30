@@ -2,7 +2,7 @@
 
 const FILE = 'storage-files/delet.json';
 const fs = require('fs');
-let deletoff = false
+let deletoff = false;
 let delets = JSON.parse(fs.readFileSync(FILE));
 
 function saveDelets() {
