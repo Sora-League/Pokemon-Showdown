@@ -13,6 +13,7 @@ exports.commands = {
 	
 deletthis: function (target, room, user) {
 			if (!this.canTalk()) return this.errorReply("You cannot use this command");
+			if (!this.can('hotpatch')) return false;
 			if (deletoff) return this.sendReply("'Delet This' are currently disabled.");
 		let message = delets[Math.floor(Math.random() * delets.length)];
 		this.sendReplyBox('<img src="' + message + '">');
