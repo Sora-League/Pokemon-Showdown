@@ -17,7 +17,7 @@ deletthis: function (target, room, user) {
 			if (!this.runBroadcast()) return;
 			if (deletoff) return this.sendReply("'Delet This' are currently disabled.");
 		let message = delets[Math.floor(Math.random() * delets.length)];
-		this.sendReplyBox('<img src="' + message + '">');
+		this.sendReplyBox('<img src="' + message + '" width="500">');
 	},
 	
 };
