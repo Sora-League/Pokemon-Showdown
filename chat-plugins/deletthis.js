@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const FILE = 'storage-files/delet.json';
 const fs = require('fs');
