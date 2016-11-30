@@ -210,6 +210,9 @@ class Room {
 		this.runMuteTimer();
 
 		user.updateIdentity(this.id);
+
+		Punishments.monitorRoomPunishments(user);
+
 		return userid;
 	}
 	unmute(userid, notifyText) {
@@ -629,7 +632,7 @@ class GlobalRoom {
 	}
 	addChatRoom(title) {
 		let id = toId(title);
-		if (id === 'battles' || id === 'rooms' || id === 'ladder' || id === 'teambuilder') return false;
+		if (id === 'battles' || id === 'rooms' || id === 'ladder' || id === 'teambuilder' || id === 'home') return false;
 		if (Rooms.rooms.has(id)) return false;
 
 		let chatRoomData = {
