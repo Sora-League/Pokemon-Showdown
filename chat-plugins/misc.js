@@ -125,8 +125,8 @@ exports.commands = {
 	urbandefine: function (target, room, user) {
 		if (!this.runBroadcast() && this.can('hotpatch')) return;
 		else (room.id === 'lobby' && this.broadcasting) return this.sendReply('You cannot broadcast this command in the lobby.');
-		if (!target) return this.parse('/help urbandefine')
-		if (target > 50) return this.sendReply('Phrase can not be longer than 50 characters.');
+		else if (!target) return this.parse('/help urbandefine')
+		else if (target > 50) return this.sendReply('Phrase can not be longer than 50 characters.');
 
 		let self = this;
 		let options = {
