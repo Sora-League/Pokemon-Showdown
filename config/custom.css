@@ -88,6 +88,7 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 }
 a.button.cur, a.button.cur:hover {
 	background: #A7BA59/*url("")*/;
+	color: white;
 }
 /*http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353, this is the url to switch back to normal*/
 .maintabbarbottom, a.button {
