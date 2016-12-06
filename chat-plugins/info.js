@@ -141,7 +141,7 @@ exports.commands = {
 		}
 
 		if (user.can('alts', targetUser) || (room.isPrivate !== true && user.can('mute', targetUser, room) && targetUser.userid in room.users)) {
-			let punishments = Punishments.getRoomPunishments(user);
+			let punishments = Punishments.getRoomPunishments(targetUser);
 
 			if (punishments.length) {
 				buf += `<br />Room punishments: `;
@@ -150,9 +150,9 @@ exports.commands = {
 					const [punishType, punishUserid, expireTime, reason] = punishment;
 					let punishDesc = Punishments.roomPunishmentTypes.get(punishType);
 					if (!punishDesc) punishDesc = `punished`;
-					if (punishUserid !== user.userid) punishDesc += ` as ${punishUserid}`;
+					if (punishUserid !== targetUser.userid) punishDesc += ` as ${punishUserid}`;
 					let expiresIn = new Date(expireTime).getTime() - Date.now();
-					let expireString = Chat.toDurationString(expiresIn, {limit: 1});
+					let expireString = Chat.toDurationString(expiresIn, {precision: 1});
 					punishDesc += ` for ${expireString}`;
 
 					if (reason) punishDesc += `: ${reason}`;
@@ -172,7 +172,10 @@ exports.commands = {
 		}
 		let userid = toId(target);
 		if (!userid) return this.errorReply("Please enter a valid username.");
-		let buf = Chat.html`<strong class="username">${target}</strong> <em style="color:gray">(offline)</em><br /><br />`;
+		let targetUser = Users(userid);
+		let buf = Chat.html`<strong class="username">${target}</strong>`;
+		if (!targetUser) buf += ` <em style="color:gray">(offline)</em>`;
+		buf += `<br /><br />`;
 		let atLeastOne = false;
 
 		let punishment = Punishments.userids.get(userid);
@@ -194,18 +197,18 @@ exports.commands = {
 			}
 		}
 
-		let punishments = Punishments.getRoomPunishments(user);
+		let punishments = Punishments.getRoomPunishments(targetUser);
 
-		if (punishments.length) {
+		if (punishments && punishments.length) {
 			buf += `<br />Room punishments: `;
 
 			buf += punishments.map(([room, punishment]) => {
 				const [punishType, punishUserid, expireTime, reason] = punishment;
 				let punishDesc = Punishments.roomPunishmentTypes.get(punishType);
 				if (!punishDesc) punishDesc = `punished`;
-				if (punishUserid !== user.userid) punishDesc += ` as ${punishUserid}`;
+				if (punishUserid !== targetUser.userid) punishDesc += ` as ${punishUserid}`;
 				let expiresIn = new Date(expireTime).getTime() - Date.now();
-				let expireString = Chat.toDurationString(expiresIn, {limit: 1});
+				let expireString = Chat.toDurationString(expiresIn, {precision: 1});
 				punishDesc += ` for ${expireString}`;
 
 				if (reason) punishDesc += `: ${reason}`;

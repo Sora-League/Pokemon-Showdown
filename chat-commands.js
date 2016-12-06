@@ -1061,6 +1061,7 @@ exports.commands = {
 			this.sendReply("/roompromote - This room isn't designed for per-room moderation");
 			return this.sendReply("Before setting room staff, you need to set a room owner with /roomowner");
 		}
+		if (!this.canTalk()) return;
 		if (!target) return this.parse('/help roompromote');
 
 		target = this.splitTarget(target, true);
@@ -2298,7 +2299,9 @@ exports.commands = {
 			target = targets[1].trim();
 			roomId = toId(targets[0]) || room.id;
 		}
-		let targetRoom = Rooms.get(roomId);
+		let targetRoom = Rooms.search(roomId);
+		// if a room alias was used, replace alias with actual id
+		if (targetRoom) roomId = targetRoom.id;
 		let addModlogLinks = Config.modloglink && (!hideIps || (targetRoom && !targetRoom.isPrivate));
 
 		// Let's check the number of lines to retrieve or if it's a word instead
@@ -2319,6 +2322,14 @@ exports.commands = {
 			let fileList = fs.readdirSync('logs/modlog');
 			for (let i = 0; i < fileList.length; ++i) {
 				filename += path.normalize(`${__dirname}/${logPath}${fileList[i]}`) + ' ';
+			}
+		} else if (roomId === 'public' && wordSearch) {
+			if (!this.can('modlog')) return;
+			roomNames = "all public rooms";
+			const isPublicRoom = (room => !(room.isPrivate || room.battle || room.isPersonal || room.id === 'global'));
+			const publicRoomIds = Array.from(Rooms.rooms.values()).filter(isPublicRoom).map(room => room.id);
+			for (let i = 0; i < publicRoomIds.length; i++) {
+				filename += path.normalize(`${__dirname}/${logPath}modlog_${publicRoomIds[i]}.txt`) + ' ';
 			}
 		} else if (roomId.startsWith('battle-') || roomId.startsWith('groupchat-')) {
 			return this.errorReply("Battles and groupchats do not have modlogs.");
@@ -2411,9 +2422,10 @@ exports.commands = {
 			}
 		});
 	},
-	modloghelp: ["/modlog [roomid|all], [n] - Roomid defaults to current room.",
+	modloghelp: ["/modlog [roomid|all|public], [n] - Roomid defaults to current room.",
 		"If n is a number or omitted, display the last n lines of the moderator log. Defaults to 20.",
-		"If n is not a number, search the moderator log for 'n' on room's log [roomid]. If you set [all] as [roomid], searches for 'n' on all rooms's logs. Requires: % @ * # & ~"],
+		"If n is not a number, search the moderator log for 'n' on room's log [roomid]. If you set [all] as [roomid], searches for 'n' on all rooms's logs.",
+		"If you set [public] as [roomid], searches for 'n' in all public room's logs, excluding battles. Requires: % @ * # & ~"],
 
 	/*********************************************************
 	 * Server management commands
