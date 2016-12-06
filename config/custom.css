@@ -88,15 +88,16 @@ a.button.cur, a.button.cur:hover {
 	background: url("http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353");
 }
 .maintabbarbottom, a.button {
-	background: #dde7ff;
+	background: #AE2F27;
 	color: black;
 }
 a.button:hover {
-	background: #c7d7fc;
+	background: #A7BA59;
 	color: black;
 }
 .chat-log .chat {
 	font-size: 8pt !important;
+	background: #F0D890
 }
 .chat-log .notice {
 	font-size: 8pt;
