@@ -52,8 +52,10 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 	background: rgba(0, 0, 0, 0.4) url(http://i59.tinypic.com/w19xfk.jpg) no-repeat !important;
 }
 .dark .maintabbarbottom {
-	border: 1px solid #111;
-	background-color: #3a3a3a;
+	background: #AE2F27;
+	color: white;
+	/*border: 1px solid #111;
+	background-color: #3a3a3a;*/
 }
 .dark .button.cur span {
 	overflow: visible !important;
@@ -85,16 +87,19 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
 }
 a.button.cur, a.button.cur:hover {
-	background: url("http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353");
+	background: #85B394/*url("")*/;
 }
+/*http://i1171.photobucket.com/albums/r545/Brahak/fade_zpsyfkbeayl.png?t=1439400353, this is the url to switch back to normal*/
 .maintabbarbottom, a.button {
 	background: #AE2F27;
-	color: black;
+	color: white;
 }
+/*#dde7ff*/
 a.button:hover {
 	background: #A7BA59;
 	color: black;
 }
+/*#c7d7fc*/
 .chat-log .chat {
 	font-size: 8pt !important;
 }
