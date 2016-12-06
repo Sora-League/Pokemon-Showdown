@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Mark∆', '∆Sora Aros∆', '∆Sora Edge∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Kenta∆', '∆Sora Xemnas∆', '∆Sora Darkus∆', '∆Sora Luscinia∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Aros∆', '∆Sora Edge∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Xemnas∆', '∆Sora Darkus∆', '∆Sora Luscinia∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -272,13 +272,13 @@ exports.commands = {
 			'<b>Ace:</b> Bisharp <br />' + seen('soradarkus') + getBadges('soradarkus'));
 	},
 
-	kenta: 'dragon',
+	
 	dragon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Kenta</b>∆<br />' +
-			'<i>"If the sky could dream, it would dream of Dragons."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> Dragonite<br />' + seen('sorakenta') + getBadges('sorakenta'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
 
@@ -290,7 +290,7 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />');
 	},
         
-	Luscinia: 'fairy',	
+	luscinia: 'fairy',	
 	fairy: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Luscinia</b>∆<br />' +
@@ -359,17 +359,13 @@ exports.commands = {
 			'<b>Ace:</b> ??? <br />' + seen('') + getBadges(''));
 	},
 	
-	mark: 'ground',
+	
 	ground: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Mark</b>∆<br>' +
-			'<i>"When I said don\'t use drugs....I MEANT IT. Keep it up and have fun."</i> <br>' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br>' +
+			'<i>"???"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>Crash Man (Excadrill)<br>' +
-			seen('soramark') + '<br>' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/froslass.gif"> ' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani-shiny/glalie-mega.gif"><br>' +
-			'<audio controls src = "http://216.227.134.162/ost/rockman-2-megaman-2-complete-works/kbrxwhzvos/2-31-flash-man-stage-smd.mp3" style = "border: 2px solid cyan; border-radius: 3px; background-color: black;"></audio><br />' + seen('soramark') + getBadges('soramark'));
+			'<b>Ace: </b>???<br>' + seen('') + getBadges(''));
 	},
 	
 	jeratt: 'ice',
