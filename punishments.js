@@ -1032,12 +1032,12 @@ Punishments.getRoomPunishments = function (user, publicOnly) {
  * @param {User} user
  */
 Punishments.monitorRoomPunishments = function (user) {
-	let num = (Config.monitorminpunishments !== undefined ? Config.monitorminpunishments : 3); // Default to 3 if the config option isn't present.
-	if (!num) return;
+	const minPunishments = (typeof Config.monitorminpunishments === 'number' ? Config.monitorminpunishments : 3); // Default to 3 if the Config option is not defined or valid
+	if (!minPunishments) return;
 
 	let punishments = Punishments.getRoomPunishments(user, true);
 
-	if (punishments.length >= num) {
+	if (punishments.length >= minPunishments) {
 		let punishmentText = punishments.map(([room, punishment]) => {
 			const [punishType, punishUserid, , reason] = punishment;
 			let punishDesc = Punishments.roomPunishmentTypes.get(punishType);
@@ -1045,7 +1045,7 @@ Punishments.monitorRoomPunishments = function (user) {
 			if (punishUserid !== user.userid) punishDesc += ` as ${punishUserid}`;
 
 			if (reason) punishDesc += `: ${reason}`;
-			return `${room} (${punishDesc})`;
+			return `<<${room}>> (${punishDesc})`;
 		}).join(', ');
 
 		Monitor.log(`[PunishmentMonitor] ${user.name} currently has punishments in ${punishments.length} rooms: ${punishmentText}`);
