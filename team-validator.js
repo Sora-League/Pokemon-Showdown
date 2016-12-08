@@ -326,7 +326,7 @@ class Validator {
 					let problem = this.checkLearnset(move, template, lsetData);
 					if (problem) {
 						// Sketchmons hack
-						if (banlistTable['allowonesketch'] && format.noSketch.indexOf(move.name) <= 0 && !set.sketchmonsMove && !move.noSketch && !move.isZ) {
+						if (banlistTable['allowonesketch'] && format.noSketch.indexOf(move.name) < 0 && !set.sketchmonsMove && !move.noSketch && !move.isZ) {
 							set.sketchmonsMove = move.id;
 							continue;
 						}
@@ -871,6 +871,7 @@ class Validator {
 								continue;
 							}
 						}
+						if (level < template.eventPokemon[learned.substr(2)].level) continue;
 						sources.push(learned + ' ' + template.id);
 					} else if (learned.charAt(1) === 'D') {
 						// DW moves:
