@@ -15,7 +15,7 @@ exports.commands = {
 	site: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is The Sora League Website:<br />' +
-			'- <a href="http://sora.cu.cc/index.html">Sora League Site</a>'
+			'<center><a href="http://soraleague.github.io/"><button style="box-shadow: 0px 0px 5px #D43F3A, 0px 0px 10px #D43F3A, 0px 0px 15px #D43F3A; width: 75px; height: 40px; margin: 5px; cursor: pointer; border-radius: 10px; border: 1px solid #d43f3a; font-weight: bold; background: linear-gradient(#ff6060, #d63633, #ff6060); color: white">Our Site</button></a></center>'
 		);
 	},
 	
