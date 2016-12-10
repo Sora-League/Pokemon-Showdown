@@ -35,7 +35,7 @@ exports.commands = {
 		let members = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
-			'Frontiers': ['∆Sora Heat∆', '∆Sora Akash∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
+			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
 			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Aros∆', '∆Sora Edge∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Xemnas∆', '∆Sora Darkus∆', '∆Sora Luscinia∆'],
 		}
 		for (let i in members) {
@@ -179,16 +179,7 @@ exports.commands = {
 			getBadges('coachabadon') + '<br><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center>');
 	},
 
-	akash: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Elite Frontier <b>Akash</b>∆<br />' +
-			'<i>"Don\'t be afraid of the change, adapt according to it."</i> <br />' +
-			'<b>Symbol: </b>Adaptability <br />' +
-			'<b>Ace:</b> Entei<br />' +
-			'<b>Battle rules:</b> <br />' +
-			'-Almost Any Ability<br />' + seen('soraakash') + getBadges('soraakash')
-		);
-	},
+
 
        lymm: function (target, room, user) {
 		if (!this.runBroadcast()) return;
