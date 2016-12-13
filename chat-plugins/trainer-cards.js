@@ -72,7 +72,7 @@ exports.commands = {
 			'<center><img src="http://sprites.pokecheck.org/i/134.gif"><img src="http://i.imgur.com/iu4Njdf.png"></center><br />' +
 			'<b>Ace:</b> All <br />' +
 			'<b>Battle Rules:</b> <br/>' +
-			'-Ubers <br/>' +
+			'-OU <br/>' +
 			'<center><img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />');
 	},
 
