@@ -227,7 +227,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "adjacentAllyOrSelf",
 		type: "Normal",
-		zMoveEffect: 'crit1',
+		zMoveEffect: 'crit2',
 		contestType: "Tough",
 	},
 	"aerialace": {
@@ -2000,6 +2000,7 @@ exports.BattleMovedex = {
 		self: {
 			onHit: function (pokemon) {
 				pokemon.setType(pokemon.getTypes(true).map(type => type === "Fire" ? "???" : type));
+				this.add('-start', pokemon, 'typechange', pokemon.types.join('/'), '[from] move: Burn Up');
 			},
 		},
 		secondary: false,
@@ -3051,12 +3052,12 @@ exports.BattleMovedex = {
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
 		status: 'slp',
-		onTry: function (pokemon) {
-			if (pokemon.template.species === 'Darkrai') {
+		onTry: function (pokemon, target, move) {
+			if (pokemon.template.species === 'Darkrai' || move.hasBounced) {
 				return;
 			}
+			this.add('-fail', pokemon, 'move: Dark Void');
 			this.add('-hint', "Only a Pokemon whose form is Darkrai can use this move.");
-			this.add('-fail', pokemon, 'move: Dark Void'); // TODO: client-side
 			return null;
 		},
 		secondary: false,
@@ -5643,8 +5644,12 @@ exports.BattleMovedex = {
 		flags: {snatch: 1},
 		volatileStatus: 'focusenergy',
 		effect: {
-			onStart: function (pokemon) {
-				this.add('-start', pokemon, 'move: Focus Energy');
+			onStart: function (target, source, effect) {
+				if (effect && effect.id === 'zpower') {
+					this.add('-start', target, 'move: Focus Energy', '[zeffect]');
+				} else {
+					this.add('-start', target, 'move: Focus Energy');
+				}
 			},
 			onModifyCritRatio: function (critRatio) {
 				return critRatio + 2;
@@ -5787,7 +5792,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Normal",
-		zMoveEffect: 'crit1',
+		zMoveEffect: 'crit2',
 		contestType: "Clever",
 	},
 	"forestscurse": {
@@ -7314,7 +7319,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "normal",
 		type: "Psychic",
-		zMoveEffect: 'crit1',
+		zMoveEffect: 'crit2',
 		contestType: "Clever",
 	},
 	"heatcrash": {
@@ -14986,7 +14991,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "self",
 		type: "Normal",
-		zMoveEffect: 'crit1',
+		zMoveEffect: 'crit2',
 		contestType: "Cute",
 	},
 	"sludge": {
@@ -16862,7 +16867,7 @@ exports.BattleMovedex = {
 		secondary: false,
 		target: "allySide",
 		type: "Flying",
-		zMoveEffect: 'crit1',
+		zMoveEffect: 'crit2',
 		contestType: "Cool",
 	},
 	"takedown": {
