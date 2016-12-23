@@ -201,32 +201,6 @@ exports.Formats = [
 		},
 	},
 	{
-		name: "[Gen 7] Battle of Alola",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3588887/\">Battle of Alola</a>"],
-
-		mod: 'gen7',
-		maxForcedLevel: 50,
-		teamLength: {
-			validate: [3, 6],
-			battle: 3,
-		},
-		ruleset: ['Pokemon', 'Species Clause', 'Nickname Clause', 'Team Preview', 'Cancel Mod', 'Alola Pokedex'],
-		banlist: ['Illegal', 'Unreleased', 'Memento', 'Doom Desire', 'Psycho Boost', 'Roar of Time', 'Spacial Rend', 'Lunar Dance', 'Crush Grip', 'Magma Storm', 'Dark Void', 'Seed Flare', 'Shadow Force', 'Searing Shot', 'Techno Blast', 'Relic Song', 'Secret Sword', 'Glaciate', 'Bolt Strike', 'Blue Flare', 'V-create', 'Fusion Flare', 'Fusion Bolt', 'Parting Shot', 'Diamond Storm', 'Steam Eruption', 'Hyperspace Hole', 'Hold Hands', 'Origin Pulse', 'Precipice Blades', 'Dragon Ascent', 'Hyperspace Fury'],
-		unbanlist: ['Greninja'],
-		requirePentagon: true,
-		onValidateTeam: function (team) {
-			let specialPokemon = {"Zygarde":1, "Cosmog":1, "Cosmoem":1, "Solgaleo":1, "Lunala":1, "Necrozma":1, "Magearna":1};
-			let hasSpecial = false;
-			for (let i = 0; i < team.length; i++) {
-				if (toId(team[i].item)) return ["Items are not permitted in Battle of Alola."];
-				let template = this.getTemplate(team[i].species);
-				if (!(template.baseSpecies in specialPokemon)) continue;
-				if (hasSpecial) return ["You are limited to one special Pokémon in Battle of Alola.", "(Special Pokémon are Zygarde, Cosmog, Cosmoem, Solgaleo, Lunala, Necrozma, and Magearna)"];
-				hasSpecial = true;
-			}
-		},
-	},
-	{
 		name: "[Gen 7] Custom Game",
 
 		mod: 'gen7',
@@ -262,7 +236,7 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard Doubles', 'Team Preview'],
 		banlist: ['Arceus', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia',
 			'Lunala', 'Magearna', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
-			'Power Construct', 'Dark Void', 'Gravity ++ Grass Whistle', 'Gravity ++ Hypnosis', 'Gravity ++ Lovely Kiss', 'Gravity ++ Sing', 'Gravity ++ Sleep Powder',
+			'Power Construct', 'Eevium Z', 'Dark Void', 'Gravity ++ Grass Whistle', 'Gravity ++ Hypnosis', 'Gravity ++ Lovely Kiss', 'Gravity ++ Sing', 'Gravity ++ Sleep Powder',
 		],
 	},
 	{
@@ -474,8 +448,8 @@ exports.Formats = [
 		mod: 'gen7',
 		ruleset: ['Pokemon', 'Standard', 'Ability Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Ignore Illegal Abilities',
-			'Aegislash', 'Arceus', 'Archeops', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia',
-			'Lunala', 'Mewtwo', 'Palkia', 'Rayquaza', 'Regigigas', 'Reshiram', 'Shaymin-Sky', 'Shedinja', 'Slaking', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
+			'Aegislash', 'Arceus', 'Archeops', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Lunala',
+			'Mewtwo', 'Palkia', 'Pheromosa', 'Rayquaza', 'Regigigas', 'Reshiram', 'Shaymin-Sky', 'Shedinja', 'Slaking', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
 			'Power Construct', 'Shadow Tag', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite',
 		],
 		onValidateSet: function (set) {
@@ -503,9 +477,9 @@ exports.Formats = [
 			'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White',
 			'Lugia', 'Lunala', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
 			'Power Construct', 'Shadow Tag', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite',
-			'Arena Trap + Dark Void', 'Arena Trap + Grass Whistle', 'Arena Trap + Hypnosis', 'Arena Trap + Lovely Kiss', 'Arena Trap + Relic Song', 'Arena Trap + Sing', 'Arena Trap + Sleep Powder',
+			'Arena Trap + Dark Void', 'Arena Trap + Grass Whistle', 'Arena Trap + Hypnosis', 'Arena Trap + Relic Song', 'Arena Trap + Sing', 'Arena Trap + Sleep Powder',
 		],
-		noSketch: ['Geomancy', 'Shell Smash', 'Spore'],
+		noSketch: ['Geomancy', 'Lovely Kiss', 'Shell Smash', 'Spore'],
 		onValidateTeam: function (team) {
 			let sketchedMoves = {};
 			for (let i = 0; i < team.length; i++) {
@@ -680,8 +654,8 @@ exports.Formats = [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3555650/\">NU Viability Ranking</a>",
 		],
 
-		ruleset: ['OU', 'Baton Pass Speed Clause'],
-		banlist: ['OU', 'BL', 'UU', 'BL2', 'RU', 'BL3', 'Drizzle', 'Drought'],
+		ruleset: ['RU'],
+		banlist: ['RU', 'BL3'],
 	},
 	{
 		name: "PU (suspect test)",
