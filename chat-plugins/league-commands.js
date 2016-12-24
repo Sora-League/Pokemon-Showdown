@@ -2,7 +2,6 @@
 
 exports.commands = {
 	christmasmessage: function (target, room, user, connection, cmd) {
-		if (!this.can('hotpatch')) return false;
 		user.popup('|html|<center><h1><font color=#c6432b>2016, What a year!</font></h1><br><br>'+
 			'It all started with a gorilla and from there it all went downhill...<br><br><br>'+
 			'<center><audio controls autoplay src = "https://dl2.pushbulletusercontent.com/PhdUwVZMKdkqgWEkC4YGP3o8j5aQfbmd/Michael%20Giacchino%20-%20Jyn%20Erso%20&%20Hope%20Suite%20%28From%20Rogue%20One-%20A%20Star%20Wars%20Story-Audio%20Only%29.mp3"></audio><br>'+
