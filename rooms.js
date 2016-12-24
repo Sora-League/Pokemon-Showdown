@@ -75,6 +75,7 @@ function giveGift (user) {
 
 	'<center><b>Merry Christmas Everyone, Thanks for sticking with us for another year. Have a lovely holiday, spend some time with your family and also some time with your online one as well. Have an absolute blast of a New Year Eve cause this year is about to be officially fucking over</b></center><br>'+
 	'- From Sora Blade and on behalf of the Sora League\'s Administration Team.');
+	Core.write('money', toId(user), 10, '+');
 
 }
 
