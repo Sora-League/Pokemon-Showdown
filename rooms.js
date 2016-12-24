@@ -45,7 +45,7 @@ function giveGift (user) {
 		fs.writeFileSync('storage-files/given.json', '{}');
 		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
 	}
-	var users = ["blazing360","sorablade"];
+	var users = ["blazing360", "sorablade"];
 	if (user.userid in file || users.indexOf(user.userid) === -1) return;
 	file[user.userid] = 1;
 	fs.writeFileSync("storage-files/given.json", JSON.stringify(file, null, 1));
