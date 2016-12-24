@@ -22,7 +22,7 @@ const PUNISHMENT_FILE = path.resolve(__dirname, 'config/punishments.tsv');
 const ROOM_PUNISHMENT_FILE = path.resolve(__dirname, 'config/room-punishments.tsv');
 
 const RANGELOCK_DURATION = 60 * 60 * 1000; // 1 hour
-const LOCK_DURATION = 37 * 60 * 60 * 1000; // 37 hours
+const LOCK_DURATION = 48 * 60 * 60 * 1000; // 48 hours
 const BAN_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week
 
 const ROOMBAN_DURATION = 48 * 60 * 60 * 1000; // 48 hours
@@ -556,6 +556,27 @@ Punishments.lock = function (user, expireTime, id, ...reason) {
 		curUser.locked = id;
 		curUser.updateIdentity();
 	}
+};
+/**
+ * @param {User} user
+ * @param {Room} room
+ * @param {string} source
+ * @param {string} reason
+ * @param {?string} message
+ * @param {?boolean} week
+ */
+Punishments.autolock = function (user, room, source, reason, message, week) {
+	if (!message) message = reason;
+
+	let punishment = `LOCKED`;
+	let expires = null;
+	if (week) {
+		expires = Date.now() + 7 * 24 * 60 * 60 * 1000;
+		punishment = `WEEKLOCKED`;
+	}
+	Punishments.lock(user, expires, user.userid, `Autolock: ${user.name}: ${reason}`);
+	Monitor.log(`[${source}] ${punishment}: ${message}`);
+	Rooms.global.modlog(`(${toId(room)}) AUTOLOCK: [${user.userid}]: ${reason}`);
 };
 /**
  * @param {string} name
@@ -1093,11 +1114,10 @@ Punishments.monitorRoomPunishments = function (user) {
 			let blacklistString = blacklists.map(str => `${str} (blacklisted)`).join(', ');
 			let sep = roombanString && blacklistString ? ', ' : '';
 			let reason = `Autolocked for being banned from ${roombans.length + blacklists.length} rooms: ${roombanString}${sep}${blacklistString}`;
+			let message = `${user.name} was locked for being banned from ${roombans.length + blacklists.length} rooms: ${punishmentText}`;
 
-			Punishments.lock(user, Date.now() + LOCK_DURATION, user.userid, reason);
-			Monitor.log(`[PunishmentMonitor] ${user.name} was locked for being banned from ${roombans.length + blacklists.length} rooms: ${punishmentText}`);
+			Punishments.autolock(user, 'staff', 'PunishmentMonitor', reason, message);
 			user.popup("|modal|You've been locked for breaking the rules in multiple chatrooms.\n\nIf you feel that your lock was unjustified, you can still PM staff members (%, @, &, and ~) to discuss it" + (Config.appealurl ? " or you can appeal:\n" + Config.appealurl : ".") + "\n\nYour lock will expire in a few days.");
-			Rooms.global.modlog(`(staff) AUTOLOCK: [${user.userid}]: ${reason}`);
 		} else {
 			Monitor.log(`[PunishmentMonitor] ${user.name} currently has punishments in ${punishments.length} rooms: ${punishmentText}`);
 		}
