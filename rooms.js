@@ -45,15 +45,36 @@ function giveGift (user) {
 		fs.writeFileSync('storage-files/given.json', '{}');
 		file = JSON.parse(fs.readFileSync("storage-files/given.json"));
 	}
-	var users = ["blazing360","sora blade"];
+	var users = ["blazing360","sorablade"];
 	if (user.userid in file || users.indexOf(user.userid) === -1) return;
 	file[user.userid] = 1;
 	fs.writeFileSync("storage-files/given.json", JSON.stringify(file, null, 1));
-	user.popup('|html|<center><h2><font color=#992114>Merry Christmas</font> <font color=#1A3112>and have a</font> <font color=#992114>Happy New Year</font> <font color=#1A3112>from the Sora League!</font></h2><br>' +
-		'<img src="http://rs522.pbsrc.com/albums/w348/sunilmsn/present.gif~c200"><br>' +
-               	'<b>You have received 5 Bucks! Stay tuned throughout the day for special events for more chances of picking up presents!</b><br>' +
-		'<audio controls autoplay src = "https://dl2.pushbulletusercontent.com/EYtKI65FLYuGfJRI1Me8QnVRzgSG89eM/Pok%C3%A9mon%20Christmas%20Medley%202015%20%28Feat-%20Trickywi%29.mp3"></audio><br>' +
-                '<font color=#C5A436>GlitchxCity - Pokémon Christmas Medley 2015 (Feat: Trickywi)</font></center>');
+	user.popup('|html|<center><h1><font color=#c6432b>2016, What a year!</font></h1><br><br>'+
+			'It all started with a gorilla and from there it all went downhill...<br><br><br>'+
+			'<center><audio controls autoplay src = "https://dl2.pushbulletusercontent.com/PhdUwVZMKdkqgWEkC4YGP3o8j5aQfbmd/Michael%20Giacchino%20-%20Jyn%20Erso%20&%20Hope%20Suite%20%28From%20Rogue%20One-%20A%20Star%20Wars%20Story-Audio%20Only%29.mp3"></audio><br>'+
+                	'<font color=green>Michael Giacchino - Jyn Erso & Hope Suite (From "Rogue One: A Star Wars Story")</font></center><br>5 Minutes Read<br><br><br>'+
+			'<img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/parasect.png"><br><h3>Year in Review</h3><br>'+
+			'Wow what a damm long year it has been and thank god it\'s about to end. Lets have a quick look back on 2016!<br>'+
+			'We moved into the whole renaming process of become Sora.psim.us a little more than a year ago and this was only scratching the surface. The entire server was redesigned from the base code upwards with the help of Silvy and also Tempy who by himself redisgned our new site not once but twice!!! <br><br>'+
+			'We have had a bunch of new members move in a lot of old ones move out but that\'s the nature of online gaming, we all have a real life to get to once we\'re done with the nightly grind.<br></center><br>'+
+			'<ul><li>I would like to firstly congratulate Bart on moving into a new part of life and also thank him for running the Frontier and Champion for 3 years now. That\'s an achievement in itself.</li><br>'+
+			'<li>Secondly Silvy! Wow I will honestly say I will have no idea where the server will be today without the help of you. Seriously I can\'t thank you enough for your help throughout this year from teaching me the basics of running the server to fixing the various issues that comes up when we merge with main as an example. Congratulations again for making it to university and without you teaching me stuff, the second you resigned would\'ve actually been the death of Sora!</li><br><br>'+
+			'<li>Thirdly, but obviously not the least, Tempy. May Parasect bless your artworks forever. Holy smokes they get better and better every single damm time. Thank You, Thank You and THANK YOU again and again for constantly updating the site of ours and making it look damm professional. (I hated weebly so much) You keep delivering man, site after site, artwork after artwork. You don\'t get much out of it so I appreciate every single piece of work you do!!! I owe you a drink when I see you</li><br><br></ul>'+
+			'Shout out to my boi Noah for keeping the server paid for, Risu for constantly fixing up that spreadsheet, Neith for just being the sickest cunt, Onyx for actually being the realserverkun and Jeratt for your constant enthusiasm!<br>'+
+			'A quick callout to Zach, Meows and Float for being OG and completing your battles monthly, every damm month!<br><br>'+
+                	'To the rest of Sora, thanks for being on this wild ride of 2016. I couldn\'t have possibly listed everyone or you\'ll be spending more than 5minutes reading this! Strap yourself in cause 2017 is gonna be a big one and it all starts with a GEN 7 E4 TOUR!!!<br><br><br><br>'+
+                
+		'<center><img src="https://img.pokemondb.net/sprites/black-white/normal/victini.png"><br><b>Personal Statement</b><br><br>'+
+		'It\'s been a long one for me, I started this year with a month and a half long hiatus from Showdown, since I was on holidays overseas. That literally feels like it happened 3 years ago. The year has been a long one but it has also been very fast as well. I started university and you know I\'m now casually 9k in debt but it was worth every cent for me.<br><br>'+
+		'I started this job as a fun thing to do on lazy Sunday nights 2.5 years ago and now it has turned into a thing I do full time to make sure the server is running. Wow I have come far but I still don\'t understand half the bullshit showdown has. I want to quickly apologise to all those people I\'ve promised to put something or consider something for the server, I still have your ideas on a list but there will be no more promises I\'ll make in 2017.<br>'+
+		'Development on the server has been slowed down since I\'m well in (33% done) my degree and against the odds I also have a job in Sydney! I\'ve been keeping the server in a stable mode for the past year and development for any new commands or games will come slowly as I find time to code for fun. I feel that the Showdown project I\'ve started on 2.5 years ago has taught me heaps of things, especially being grateful for the works that developers do. In my very own opinion, everyone should learn how to code in their life. It\'s like learning how to use a damm calculator, you don\'t have to be great at it but just understand the process a computer takes to execute the many things it processes.<br><br>'+
+		'I\'ll be around in 2017 for sure but right now I can\'t promise how long I can keep at it, this year alone has nearly killed me and it doesn\'t get any easier from here onwards. To everyone that has helped me in the past year, I would like to extend a thank you for making life that one line of code easier. It\'s been such a rush of a year for me and at the end of the day like right now (I just finished a Christmas Eve shift in retail (3 nights in a row)) and I\'ll be sitting behind my MBP at home bringing the server up to date. This is something I did for fun and I still do for fun and let me tell you, it beats talking to customers. You guys are what makes this job feel like a past time hobby. It\'s all worth it at the end of the day to find everyone having as much fun as possible with HEAT™ teams.<br><br>'+
+		'A quick reflection on other things that happened this year, we got a whole new generation of Pokemon! We took over the world with Pokemon GO!!! Finally, we got a new Star Wars!!! (GO SEE IT IF YOU HAVEN\'T)<br>'+
+		'<center><img src="http://i.imgur.com/pzs0IOZ.jpg" width="500"></center><br>'+
+		'I\'ve also attached 10 Bucks for everyone here for sitting through my mind piece. Did someone here on Sora make your year in 2016? Why are you still sitting there then? Send them a PM or a /tell to let them know, spread the love cause it\'s Christmas!!!<br><br>'+
+
+	'<center><b>Merry Christmas Everyone, Thanks for sticking with us for another year. Have a lovely holiday, spend some time with your family and also some time with your online one as well. Have an absolute blast of a New Year Eve cause this year is about to be officially fucking over</b></center><br>'+
+	'- From Sora Blade and on behalf of the Sora League\'s Administration Team.');
 	Core.write('money', user.userid, 10, '+');
 
 }
