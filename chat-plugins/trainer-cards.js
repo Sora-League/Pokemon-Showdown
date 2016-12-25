@@ -752,6 +752,17 @@ exports.commands = {
 			'<audio controls src = "https://dl2.pushbulletusercontent.com/gxrmXAXogKMLTn4qJDXbFynuhX3oTzuv/Bravely%20second.mp3" style = "width: 90%; border-radius: 5px; border: 1px solid violet; background: linear-gradient(45deg, #ebadff, #9600c4, #ebadff, #9600c4, #011100, #ebadff);"></center></div>'
 		);
 	},
+	
+	zeno: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReply('|html|<div style="background-image: url(&quot;https://media.giphy.com/media/cFU3qzhgMi0bC/giphy.gif&quot;) ; background-size: 100% 100%">'+
+			       '<center><img src="http://i.imgur.com/xyJHThm.png" width="320" height="100" alt="Imp Zeno" /></center><hr width="383" size="1">'+
+			       '<center><button class="astext" name="parseCommand" value="/user Imp Zeno" style="border-radius: 20px ; border: 1px solid ; padding: 0px ; color: maroon ; box-shadow: 0px 0px 22px 5px rgba(255 , 255 , 255 , 0.5) ; background: rgba(0 , 0 , 0 , 0)">'+
+			       '<img src="http://192.99.54.194:8080/avatars/impzeno.png" height="80" width="80"></button><span style="display:inline-block; width: 100px;"></span>'+
+			       '<button class="astext" name="parseCommand" value="/user xZeno" style="border-radius: 20px ; border: 1px solid ; padding: 0px ; color: maroon ; box-shadow: 0px 0px 22px 5px rgba(255 , 255 , 255 , 0.5) ; background: rgba(0 , 0 , 0 , 0)">'+
+			       '<img src="http://i.imgur.com/ytxNDKf.png" height="80" width="80"></button><span style="display:inline-block; width: 100px;"></span><button class="astext" name="parseCommand" value="/user Zeno Testing" style="border-radius: 20px ; border: 1px solid ; padding: 0px ; color: maroon ; box-shadow: 0px 0px 22px 5px rgba(255 , 255 , 255 , 0.5) ; background: rgba(0 , 0 , 0 , 0)">'+
+			       '<img src="http://i.imgur.com/78Wi9LT.gif" height="80" width="80"></button></center><br><hr width="383" size="1"><center><font color="white" size="2" face="verdana"><i>Imperium LC Frontier</i><br><br><i>Avis made by SeoKing</i> || <i>TC made by Wando</i></font></center><br></div>');
+	},
 
 	showtier: function (target, room, user) {
 		if (!this.runBroadcast()) return;
