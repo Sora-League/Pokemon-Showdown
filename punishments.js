@@ -1196,19 +1196,10 @@ Punishments.monitorRoomPunishments = function (user) {
 			return `<<${room}>> (${punishDesc})`;
 		}).join(', ');
 
-<<<<<<< HEAD
-		if (Config.punishmentautolock && roombans.length && (roombans.length + blacklists.length) >= 3) {
-			let roombanString = roombans.join(', ');
-			let blacklistString = blacklists.map(str => `${str} (blacklisted)`).join(', ');
-			let sep = roombanString && blacklistString ? ', ' : '';
-			let reason = `Autolocked for being banned from ${roombans.length + blacklists.length} rooms: ${roombanString}${sep}${blacklistString}`;
-			let message = `${user.name} was locked for being banned from ${roombans.length + blacklists.length} rooms: ${punishmentText}`;
-=======
 		if (Config.punishmentautolock && points >= 10) {
 			let rooms = punishments.map(([room]) => room).join(', ');
 			let reason = `Autolocked for having punishments in ${punishments.length} rooms: ${rooms}`;
 			let message = `${user.name} was locked for having punishments in ${punishments.length} rooms: ${punishmentText}`;
->>>>>>> Zarel/master
 
 			Punishments.autolock(user, 'staff', 'PunishmentMonitor', reason, message);
 			user.popup("|modal|You've been locked for breaking the rules in multiple chatrooms.\n\nIf you feel that your lock was unjustified, you can still PM staff members (%, @, &, and ~) to discuss it" + (Config.appealurl ? " or you can appeal:\n" + Config.appealurl : ".") + "\n\nYour lock will expire in a few days.");
