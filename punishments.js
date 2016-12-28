@@ -20,6 +20,7 @@ const path = require('path');
 
 const PUNISHMENT_FILE = path.resolve(__dirname, 'config/punishments.tsv');
 const ROOM_PUNISHMENT_FILE = path.resolve(__dirname, 'config/room-punishments.tsv');
+const SHAREDIPS_FILE = path.resolve(__dirname, 'config/sharedips.tsv');
 
 const RANGELOCK_DURATION = 60 * 60 * 1000; // 1 hour
 const LOCK_DURATION = 48 * 60 * 60 * 1000; // 48 hours
@@ -30,6 +31,8 @@ const BLACKLIST_DURATION = 365 * 24 * 60 * 60 * 1000; // 1 year
 
 const USERID_REGEX = /^[a-z0-9]+$/;
 const PUNISH_TRUSTED = false;
+
+const PUNISHMENT_POINT_VALUES = {MUTE: 2, BLACKLIST: 3, ROOMBAN: 4};
 
 /**
  * a punishment is an array: [punishType, userid, expireTime, reason]
@@ -111,6 +114,11 @@ Punishments.roomUserids = new NestedPunishmentMap();
  * roomIps is a roomid:ip:punishment Map
  */
 Punishments.roomIps = new NestedPunishmentMap();
+
+/**
+ * sharedIps is an ip:note Map
+ */
+Punishments.sharedIps = new Map();
 
 
 /*********************************************************
@@ -332,10 +340,47 @@ Punishments.loadBanlist = function () {
 	});
 };
 
+// sharedips.tsv is in the format:
+// IP, type (in this case always SHARED), note
+
+Punishments.loadSharedIps = function () {
+	fs.readFile(SHAREDIPS_FILE, (err, data) => {
+		if (err) return;
+		data = String(data).split("\n");
+		for (let i = 0; i < data.length; i++) {
+			if (!data[i] || data[i] === '\r') continue;
+			const [ip, type, note] = data[i].trim().split("\t");
+			if (!ip.includes('.')) continue;
+			if (type !== 'SHARED') continue;
+
+			Punishments.sharedIps.set(ip, note);
+		}
+	});
+};
+
+/**
+ * @param {string} ip
+ * @param {string} note
+ */
+Punishments.appendSharedIp = function (ip, note) {
+	let buf = `${ip}\tSHARED\t${note}\r\n`;
+	fs.appendFile(SHAREDIPS_FILE, buf, () => {});
+};
+
+Punishments.saveSharedIps = function () {
+	let buf = 'IP\tType\tNote\r\n';
+	Punishments.sharedIps.forEach((note, ip) => {
+		buf += `${ip}\tSHARED\t${note}\r\n`;
+	});
+
+	fs.writeFile(SHAREDIPS_FILE, buf, () => {});
+};
+
 setImmediate(() => {
 	Punishments.loadPunishments();
 	Punishments.loadRoomPunishments();
 	Punishments.loadBanlist();
+	Punishments.loadSharedIps();
 });
 
 /*********************************************************
@@ -783,6 +828,34 @@ Punishments.roomUnblacklistAll = function (room) {
 	return unblacklisted;
 };
 
+/**
+ * @param {string} ip
+ * @param {string} note
+ */
+Punishments.addSharedIp = function (ip, note) {
+	Punishments.sharedIps.set(ip, note);
+	Punishments.appendSharedIp(ip, note);
+
+	Users.users.forEach(user => {
+		if (user.locked && user.locked !== user.userid && ip in user.ips) {
+			if (!user.autoconfirmed) {
+				user.semilocked = `#sharedip ${user.locked}`;
+			}
+			user.locked = false;
+
+			user.updateIdentity();
+		}
+	});
+};
+
+/**
+ * @param {string} ip
+ */
+Punishments.removeSharedIp = function (ip) {
+	Punishments.sharedIps.delete(ip);
+	Punishments.saveSharedIps();
+};
+
 /*********************************************************
  * Checking
  *********************************************************/
@@ -912,9 +985,15 @@ Punishments.checkIp = function (user, connection) {
 	let punishment = Punishments.ipSearch(ip);
 
 	if (punishment) {
-		user.locked = punishment[1];
-		if (punishment[0] === 'NAMELOCK') {
-			user.namelocked = punishment[1];
+		if (Punishments.sharedIps.has(user.latestIp)) {
+			if (connection.user && !connection.user.locked && !connection.user.autoconfirmed) {
+				connection.user.semilocked = `#sharedip ${punishment[1]}`;
+			}
+		} else {
+			user.locked = punishment[1];
+			if (punishment[0] === 'NAMELOCK') {
+				user.namelocked = punishment[1];
+			}
 		}
 	}
 
@@ -953,6 +1032,8 @@ Punishments.checkIpBanned = function (connection) {
 		connection.send(`|popup||modal|PS is under heavy load and cannot accommodate your connection right now.`);
 		return '#cflood';
 	}
+
+	if (Punishments.sharedIps.has(ip)) return false;
 
 	let banned = false;
 	let punishment = Punishments.ipSearch(ip);
@@ -1041,7 +1122,15 @@ Punishments.isRoomBanned = function (user, roomid) {
 
 	for (let ip in user.ips) {
 		punishment = Punishments.roomIps.nestedGet(roomid, ip);
-		if (punishment && (punishment[0] === 'ROOMBAN' || punishment[0] === 'BLACKLIST')) return punishment;
+		if (punishment) {
+			 if (punishment[0] === 'ROOMBAN') {
+				return punishment;
+			 } else if (punishment[0] === 'BLACKLIST') {
+				if (Punishments.sharedIps.has(ip) && user.autoconfirmed) return;
+
+				return punishment;
+			 }
+		}
 	}
 };
 
@@ -1094,13 +1183,11 @@ Punishments.monitorRoomPunishments = function (user) {
 	let punishments = Punishments.getRoomPunishments(user, true);
 
 	if (punishments.length >= minPunishments) {
-		let roombans = [];
-		let blacklists = [];
+		let points = 0;
 
 		let punishmentText = punishments.map(([room, punishment]) => {
 			const [punishType, punishUserid, , reason] = punishment;
-			if (punishType === 'ROOMBAN') roombans.push(room.id);
-			if (punishType === 'BLACKLIST') blacklists.push(room.id);
+			if (punishType in PUNISHMENT_POINT_VALUES) points += PUNISHMENT_POINT_VALUES[punishType];
 			let punishDesc = Punishments.roomPunishmentTypes.get(punishType);
 			if (!punishDesc) punishDesc = `punished`;
 			if (punishUserid !== user.userid) punishDesc += ` as ${punishUserid}`;
@@ -1109,12 +1196,19 @@ Punishments.monitorRoomPunishments = function (user) {
 			return `<<${room}>> (${punishDesc})`;
 		}).join(', ');
 
+<<<<<<< HEAD
 		if (Config.punishmentautolock && roombans.length && (roombans.length + blacklists.length) >= 3) {
 			let roombanString = roombans.join(', ');
 			let blacklistString = blacklists.map(str => `${str} (blacklisted)`).join(', ');
 			let sep = roombanString && blacklistString ? ', ' : '';
 			let reason = `Autolocked for being banned from ${roombans.length + blacklists.length} rooms: ${roombanString}${sep}${blacklistString}`;
 			let message = `${user.name} was locked for being banned from ${roombans.length + blacklists.length} rooms: ${punishmentText}`;
+=======
+		if (Config.punishmentautolock && points >= 10) {
+			let rooms = punishments.map(([room]) => room).join(', ');
+			let reason = `Autolocked for having punishments in ${punishments.length} rooms: ${rooms}`;
+			let message = `${user.name} was locked for having punishments in ${punishments.length} rooms: ${punishmentText}`;
+>>>>>>> Zarel/master
 
 			Punishments.autolock(user, 'staff', 'PunishmentMonitor', reason, message);
 			user.popup("|modal|You've been locked for breaking the rules in multiple chatrooms.\n\nIf you feel that your lock was unjustified, you can still PM staff members (%, @, &, and ~) to discuss it" + (Config.appealurl ? " or you can appeal:\n" + Config.appealurl : ".") + "\n\nYour lock will expire in a few days.");

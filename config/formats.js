@@ -112,8 +112,24 @@ exports.Formats = [
 		],
 
 		mod: 'gen7',
+		searchShow: false,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Bank-Uber', 'Power Construct', 'Shadow Tag'],
+	},
+	{
+		name: "[Gen 7] Pokebank OU (suspect test)",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3590692/\">SM OU Suspect Process, Round 1</a>"],
+
+		mod: 'gen7',
+		ruleset: ['[Gen 7] Pokebank OU'],
+		banlist: ['Genesect'],
+	},
+	{
+		name: "[Gen 7] Pokebank Ubers",
+		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3587184/\">Ubers Metagame Discussion</a>"],
+
+		mod: 'gen7',
+		ruleset: ['Pokemon', 'Standard', 'Swagger Clause', 'Team Preview', 'Mega Rayquaza Clause'],
 	},
 	{
 		name: "[Gen 7] Pokebank UU (alpha)",
@@ -122,19 +138,12 @@ exports.Formats = [
 		mod: 'gen7',
 		ruleset: ['[Gen 7] Pokebank OU'],
 		banlist: [
-			'Bisharp', 'Buzzwole', 'Celesteela', 'Chansey', 'Clefable', 'Dugtrio', 'Excadrill', 'Ferrothorn', 'Garchomp', 'Genesect',
+			'Bisharp', 'Buzzwole', 'Celesteela', 'Chansey', 'Clefable', 'Dugtrio-Base', 'Excadrill', 'Ferrothorn', 'Garchomp', 'Genesect',
 			'Greninja', 'Heatran', 'Hippowdon', 'Hoopa-Unbound', 'Kartana', 'Kingdra', 'Landorus', 'Latios', 'Magearna', 'Magnezone',
 			'Manaphy', 'Mandibuzz', 'Mantine', 'Marowak-Alola', 'Mimikyu', 'Nihilego', 'Pelipper', 'Pheromosa', 'Porygon-Z', 'Rotom-Wash',
 			'Skarmory', 'Tapu Bulu', 'Tapu Fini', 'Tapu Koko', 'Tapu Lele', 'Toxapex', 'Tyranitar', 'Xurkitree', 'Zapdos', 'Zygarde-Base',
-			'Zygarde-Complete', 'Alakazite', 'Charizardite X', 'Gyaradosite', 'Metagrossite', 'Pinsirite', 'Sablenite', 'Scizorite', 'Venusaurite',
+			'Power Construct', 'Alakazite', 'Charizardite X', 'Gyaradosite', 'Metagrossite', 'Pinsirite', 'Sablenite', 'Scizorite', 'Venusaurite',
 		],
-	},
-	{
-		name: "[Gen 7] Pokebank Ubers",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3587184/\">Ubers Metagame Discussion</a>"],
-
-		mod: 'gen7',
-		ruleset: ['Pokemon', 'Standard', 'Swagger Clause', 'Team Preview', 'Mega Rayquaza Clause'],
 	},
 	{
 		name: "[Gen 7] Pokebank LC",
@@ -309,7 +318,7 @@ exports.Formats = [
 		banlist: ['Ignore STAB Moves',
 			'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White',
 			'Landorus-Base', 'Lugia', 'Lunala', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
-			'Power Construct', 'Shadow Tag', 'Gengarite', 'Kangaskhanite', "King's Rock", 'Lucarionite', 'Metagrossite', 'Razor Fang', 'Salamencite',
+			'Power Construct', 'Shadow Tag', 'Aerodactylite', 'Gengarite', 'Kangaskhanite', "King's Rock", 'Lucarionite', 'Metagrossite', 'Razor Fang', 'Salamencite',
 		],
 	},
 	{
@@ -379,7 +388,7 @@ exports.Formats = [
 		banlist: [
 			'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Genesect', 'Giratina', 'Groudon', 'Ho-Oh', 'Kartana', 'Kyogre', 'Kyurem-White',
 			'Lugia', 'Lunala', 'Mewtwo', 'Palkia', 'Pheromosa', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Solgaleo', 'Tapu Lele', 'Xerneas', 'Yveltal', 'Zekrom', 'Zygarde',
-			'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Smooth Rock', 'Terrain Extender',
+			'Battle Bond', 'Damp Rock', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Mawilite', 'Salamencite', 'Smooth Rock', 'Terrain Extender',
 		],
 	},
 	{
@@ -658,7 +667,7 @@ exports.Formats = [
 		banlist: ['RU', 'BL3'],
 	},
 	{
-		name: "PU (suspect test)",
+		name: "PU",
 		desc: [
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3586575/\">np: PU Stage 10</a>",
 			"&bullet; <a href=\"https://www.smogon.com/forums/threads/3528743/\">PU Viability Ranking</a>",

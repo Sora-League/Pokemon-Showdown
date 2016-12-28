@@ -1871,7 +1871,7 @@ exports.commands = {
 		if (!cmd.startsWith('global')) {
 			let groupid = Config.groups[nextGroup].id;
 			if (!groupid && nextGroup === Config.groupsranking[0]) groupid = 'deauth';
-			if (Config.groups[nextGroup].globalonly) return this.errorReply('Did you mean /global' + groupid + '"?');
+			if (Config.groups[nextGroup].globalonly) return this.errorReply('Did you mean "/global' + groupid + '"?');
 			return this.errorReply('Did you mean "/room' + groupid + '" or "/global' + groupid + '"?');
 		}
 		if (Config.groups[nextGroup].roomonly || Config.groups[nextGroup].battleonly) {
@@ -2318,6 +2318,32 @@ exports.commands = {
 		this.sendReplyBox(buf);
 	},
 	showblacklishelp: ["/showblacklist OR /showbl - show a list of blacklisted users in the room"],
+
+	markshared: function (target, room, user) {
+		if (!this.can('ban')) return false;
+		if (!target) return this.errorReply("No IP entered.");
+		let [ip, note] = this.splitOne(target);
+		if (!/^[0-9.*]+$/.test(ip)) return this.errorReply("Please enter a valid IP address.");
+
+		if (Punishments.sharedIps.get(ip)) return this.errorReply("This IP is already marked as shared.");
+
+		Punishments.addSharedIp(ip, note);
+		if (note) note = ` (${note})`;
+		return this.addModCommand(`The IP '${ip}' was marked as shared by ${user.name}.${note}`);
+	},
+	marksharedhelp: ["/markshared [ip] - Marks an IP address as shared. Requires @, &, ~"],
+
+	unmarkshared: function (target, room, user) {
+		if (!this.can('ban')) return false;
+		if (!target) return this.errorReply("No IP entered.");
+		if (!/^[0-9.*]+$/.test(target)) return this.errorReply("Please enter a valid IP address.");
+
+		if (!Punishments.sharedIps.get(target)) return this.errorReply("This IP isn't marked as shared.");
+
+		Punishments.removeSharedIp(target);
+		return this.addModCommand(`The IP '${target}' was unmarked as shared by ${user.name}.`);
+	},
+	unmarksharedhelp: ["/unmarkshared [ip] - Unmarks a shared IP address. Requires @, &, ~"],
 
 	modlog: function (target, room, user, connection) {
 		let lines = 0;
@@ -3301,7 +3327,8 @@ exports.commands = {
 		}
 		if (!target) return this.errorReply("Provide a valid format.");
 		let originalFormat = Tools.getFormat(target);
-		let format = originalFormat.effectType === 'Format' ? originalFormat : Tools.getFormat('Anything Goes');
+		// Note: The default here of [Gen 7] Pokebank Anything Goes isn't normally hit; since the web client will send a default format
+		let format = originalFormat.effectType === 'Format' ? originalFormat : Tools.getFormat('[Gen 7] Pokebank Anything Goes');
 		if (format.effectType !== 'Format') return this.popupReply("Please provide a valid format.");
 
 		TeamValidator(format.id).prepTeam(user.team).then(result => {
