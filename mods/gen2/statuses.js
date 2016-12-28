@@ -171,11 +171,7 @@ exports.BattleStatuses = {
 			this.effectData.counter = 128;
 		},
 		onStallMove: function () {
-<<<<<<< HEAD
-			let counter = Math.floor(this.effectData.counter) || 128;
-=======
 			let counter = Math.floor(this.effectData.counter) || 127;
->>>>>>> Zarel/master
 			this.debug("Success chance: " + Math.round(counter * 1000 / 255) / 10 + "% (" + counter + "/255)");
 			return (this.random(255) < counter);
 		},
