@@ -113,11 +113,7 @@ exports.BattleMovedex = {
 	},
 	detect: {
 		inherit: true,
-<<<<<<< HEAD
-		desc: "The user is protected from attacks made by the opponent during this turn. This move has an X/255 chance of being successful, where X starts at 256 and halves each time this move is successfully used. X resets to 256 if this move fails or if the user's last move used is not Detect, Endure, or Protect. Fails if the user moves last this turn.",
-=======
 		desc: "The user is protected from attacks made by the opponent during this turn. This move has an X/255 chance of being successful, where X starts at 255 and halves, rounded down, each time this move is successfully used. X resets to 255 if this move fails or if the user's last move used is not Detect, Endure, or Protect. Fails if the user moves last this turn.",
->>>>>>> Zarel/master
 		priority: 2,
 	},
 	dig: {
@@ -195,11 +191,7 @@ exports.BattleMovedex = {
 	},
 	endure: {
 		inherit: true,
-<<<<<<< HEAD
-		desc: "The user will survive attacks made by the opponent during this turn with at least 1 HP. This move has an X/255 chance of being successful, where X starts at 256 and halves each time this move is successfully used. X resets to 256 if this move fails or if the user's last move used is not Detect, Endure, or Protect. Fails if the user moves last this turn.",
-=======
 		desc: "The user will survive attacks made by the opponent during this turn with at least 1 HP. This move has an X/255 chance of being successful, where X starts at 255 and halves, rounded down, each time this move is successfully used. X resets to 255 if this move fails or if the user's last move used is not Detect, Endure, or Protect. Fails if the user moves last this turn.",
->>>>>>> Zarel/master
 		priority: 2,
 	},
 	explosion: {
@@ -457,11 +449,7 @@ exports.BattleMovedex = {
 	},
 	protect: {
 		inherit: true,
-<<<<<<< HEAD
-		desc: "The user is protected from attacks made by the opponent during this turn. This move has an X/255 chance of being successful, where X starts at 256 and halves each time this move is successfully used. X resets to 256 if this move fails or if the user's last move used is not Detect, Endure, or Protect. Fails if the user moves last this turn.",
-=======
 		desc: "The user is protected from attacks made by the opponent during this turn. This move has an X/255 chance of being successful, where X starts at 255 and halves, rounded down, each time this move is successfully used. X resets to 255 if this move fails or if the user's last move used is not Detect, Endure, or Protect. Fails if the user moves last this turn.",
->>>>>>> Zarel/master
 		priority: 2,
 	},
 	psywave: {
