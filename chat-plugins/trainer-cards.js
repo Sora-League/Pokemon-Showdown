@@ -294,6 +294,7 @@ exports.commands = {
 	whitefang: 'fighting',
 	fighting: function (target, room, user) {
 		if (!this.runBroadcast()) return;
+
 		this.sendReplyBox('∆Gym Ldr <b>Whitefang</b>∆<br />' +			'<i>"Get janked by misfire on command"</i> <br />' +
 			'<b>Type: <font color = d83c08>Fighting</font></b><br />' +
 			'<b>Ace:</b> Cobalion<br />'+ seen('sorawhitefang') + getBadges('sorawhitefang')
@@ -304,7 +305,8 @@ exports.commands = {
 	fire: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
-			'<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />' +
+
+				  '<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />' +
 			'<b>Type: <font color = FF0000>Fire</font></b><br />' +
 			'<b>Ace:</b> Victini<br />' +
 			'<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">' +
@@ -314,7 +316,8 @@ exports.commands = {
 			'<details><summary><font color = 009900><b>Aegislash Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aegislash.gif"></center>' +
 			'<b>R.I.P. Shadow Snek</b> <br />' +
 			'2nd Apostle of the All Mighty Lord Parasect</details><br />' +
-			'<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' +
+
+				  '<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' +
 			seen('SoraBlade') + '<br>' +
 			getBadges('SoraBlade'));
 	},
@@ -324,7 +327,8 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i><br />' +
-			'<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+
+				  '<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 			
 	},
@@ -372,13 +376,13 @@ exports.commands = {
 		);
 	},
 
-        hawkatana: 'normal',
+        jennymega: 'normal',
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Hawkatana</b>∆<br />' +
-			'<i>"Sorry, you actually think You can win? What a joke."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>JennyMega</b>∆<br />' +
+			'<i>"Reality leaves a lot to the imagination."</i><br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> Mega Lopunny<br />' + seen('sorahawkatana') + getBadges('sorahawkatana'));
+			'<b>Ace:</b> Porygon2<br />' + seen('sorajennymega') + getBadges('sorajennymega'));
 	},
 
        
