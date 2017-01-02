@@ -455,8 +455,9 @@ exports.commands = {
 			'<b>Preferred tiers: </b>VGC, Ubers, OU <br />' +
 			'<b>Known for: </b>VoltTurn and Whimsistall shenanigans<br />' +
 			'<b>Achievements: </b>Ex-Elite Frontier, ex-Elite Four<br>' +
-			'<b>Affiliation:</b> Gracidea Shaymins<br><br>' +
-			'<center><img src="http://sprites.pokecheck.org/i/157.gif"><img src="http://sprites.pokecheck.org/i/530.gif"><img src="http://sprites.pokecheck.org/i/547.gif"><img src="http://sprites.pokecheck.org/t/144.gif"><img src="http://sprites.pokecheck.org/i/205.gif"><img src="http://sprites.pokecheck.org/i/310.gif"><img src="http://sprites.pokecheck.org/i/212.gif"></center><br />' +
+			'<b>Affiliation:</b> Gracidea Shaymins<br>' +
+			'<b>Honours:</b> Sora\'s third challenger to reach the Hall of Fame<br><br>' +
+			'<center><img src="http://www.pokestadium.com/sprites/black-white/animated/typhlosion.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/excadrill.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/whimsicott.gif"><img src="http://archives.bulbagarden.net/media/upload/a/a0/Spr_B2W2_Hilbert.png"><img src="http://www.pokestadium.com/sprites/black-white/animated/scizor.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/manectric.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/forretress.gif"></center><br />' +
 			getBadges('aboottothehead') + '<br>' +
 			'<center><img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125"></center>'
 		);
