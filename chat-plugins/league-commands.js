@@ -200,6 +200,7 @@ exports.commands = {
 			'165.255.119.159 -James357 <br />' +
 			'62.209.10.78 -Tails <br />' +
 			'108.41.153.97 -heart lady <br />'+
+		        '119.74.153.20 -Dexio/NewEmpire <br/>'+
 			'Shame on them!');
 	},
 
