@@ -196,8 +196,7 @@ exports.commands = {
        gasp: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Frontier <b>Gasp</b>∆<br />' +
-			'<i>"Light is arbitrary, Darkness is absolute."</i> <br />' +
-			'<b>Symbol: </b>??? <br />' +
+			'<i>"Light is arbitrary, Darkness is absolute."</i> <br />' +			'<b>Symbol: </b>??? <br />' +
 			'<b>Ace:</b> ???<br />' +
 			'<b>Battle rules:</b> <br />' +
 			'-Hackmons<br />' + seen('soragasp') + getBadges('gasp')
@@ -207,8 +206,7 @@ exports.commands = {
 	
 	youmaton: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Youmaton</b>∆<br />' +
-			'<i>"Let\'s enjoy a nicely seasoned battle with a touch of salt and the side of rolls."</i> <br />' +
+		this.sendReplyBox('∆Frontier <b>Youmaton</b>∆<br />' +			'<i>"Let\'s enjoy a nicely seasoned battle with a touch of salt and the side of rolls."</i> <br />' +
 			'<b>Symbol: </b>Meta <br />' +
 			'<b>Ace:</b> Infernape<br />' +
 			'<b>Battle rules:</b> <br />' +
@@ -227,6 +225,17 @@ exports.commands = {
 			'-PU <br/>' +
 			seen('soraheat') + '<br/>' +
 			'<center><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/golbat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/zubat.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/gengar.gif"></center> <br />');
+	},
+	
+	
+	zachary: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('∆Frontier <b>Zachary</b>∆<br />' +
+			'<i>"Come forth, and suffer."</i> <br />' +
+			'<b>Symbol:</b> Duplicate<br />' +
+			'<b>Ace:</b> None <br />' +
+			'<b>Battle Rules:</b> <br/>' +
+			'-Doubles OU<br />' + seen('sorazachary') + getBadges('sorazachary')
 	},
 
 
@@ -430,13 +439,13 @@ exports.commands = {
 		);
 	},
 
-       zachary: 'water',
+       
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Zachary</b>∆<br />' +
-			'<i>"The power of the seas, storms and rivers are mine to hold....and here you dare to stand before me?"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> Gyarados <br/>'
+			'<b>Ace:</b> ??? <br/>'
 		);
 	},
 
