@@ -236,6 +236,7 @@ exports.commands = {
 			'<b>Ace:</b> None <br />' +
 			'<b>Battle Rules:</b> <br/>' +
 			'-Doubles OU<br />' + seen('sorazachary') + getBadges('sorazachary')
+		);
 	},
 
 
