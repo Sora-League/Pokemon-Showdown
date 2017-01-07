@@ -57,35 +57,6 @@ exports.commands = {
 	},
 	
 
-	priomon: 'priomons',
-	priomons: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('Here is a detailed explanation of the format Priomons:<br />' +
-			'- <a href="http://sora.cu.cc/format.html">Priomons</a>'
-		);
-	},
-
-	incweather: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('Here is a detailed explanation of the format Inclement Weather:<br />' +
-			'- <a href="http://sora.cu.cc/format.html">Inclement Weather</a>'
-		);
-	},
-
-	pokemonsandbox: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('Here is a detailed explanation of the format Pokemon Sandbox:<br />' +
-			'- <a href=http://sora.cu.cc/format.html">Pokemon Sandbox</a>'
-		);
-	},
-
-	championschallenge: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('Here is a detailed explanation of the format Champion\'s Challenge:<br />' +
-			'- <a href="http://sora.cu.cc/format.html">Champion\'s Challenge</a>'
-		);
-	},
-
 	ipl: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a link to the International Pokemon League Tournament (IPL):<br />' +
@@ -96,7 +67,7 @@ exports.commands = {
 	gymleaders: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Gym Leaders:<br />' +
-			'- <a href="http://sora.cu.cc/leaders.html">Sora League Gym Leaders</a>'
+			'- <a href="http://soraleague.github.io/leaders.html">Sora League Gym Leaders</a>'
 		);
 	},
 
@@ -112,9 +83,9 @@ exports.commands = {
 			'- If a challenger loses to an Elite Frontier or the Frontier Head, they will randomly lose one Elite symbol and one normal symbol.<br />' +
 			'<blink><b>Notes:</b></blink><br />' +
 			'- The same frontier may be challenged once every 24 hours.<br />' +
-			'- <a href="http://sora.cu.cc/challenge.html">Challenging Rules</a><br />' +
+			'- <a href="http://soraleague.github.io/challenge.html">Challenging Rules</a><br />' +
 			'<b>Here is a list of Sora League Frontier Brains:</b><br>' +
-			'- <a href="http://sora.cu.cc/frontier.html">Sora League Frontier Brains</a>'
+			'- <a href="http://soraleague.github.io/frontier.html">Sora League Frontier Brains</a>'
 		);
 	},
 
@@ -122,7 +93,7 @@ exports.commands = {
 	e4: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('Here is a list of Sora League Elite Four:<br />' +
-			'- <a href="http://sora.cu.cc/elite.html">Sora League Elite Four</a>'
+			'- <a href="http://soraleague.github.io/elite.html">Sora League Elite Four</a>'
 		);
 	},
 
