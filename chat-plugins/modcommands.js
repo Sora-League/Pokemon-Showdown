@@ -33,6 +33,13 @@ exports.commands = {
 		}
 	},
 	
+	ateamlinks: function (target, room, user) {
+		if (this.broadcasting) return;
+		if (!(user.userid in ateam)) return this.errorReply("The command \'/" + cmd + "\' was unrecognized. To send a message starting with '/" + cmd + "', type '//" + cmd + "'.");
+		this.sendReplyBox('<a href="https://docs.google.com/spreadsheets/d/1SYBIGWpszzgk97IAA5RueL_ABe4F5Vyeo3n8GVO_cEg/edit#gid=1887440986">Monthly E4 & Ldrs Tour Teams List</a><br>' +
+				  '<a href="https://docs.google.com/spreadsheets/d/19xAKR5JjRB30aPWOFO0agOjGIAKP6AYRLMmFEBgikno/edit?ts=56866635#gid=0">Challenge Sheet</a>'
+		);
+	},
 	reddeclare: 'declare',
 	declarered: 'declare',
 	declaregreen: 'declare',
