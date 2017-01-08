@@ -147,7 +147,7 @@ exports.commands = {
 		this.sendReplyBox('∆E4 <b>Meows</b>∆<br />' +
 			'<i>"1et m3 b3 th3 k3y 2 ur h3art xoxo"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace:</b> Klefki<br />' + seen('sorafloat') + getBadges('sorafloat'));
+			'<b>Ace:</b> Klefki<br />' + seen('sorameows') + getBadges('sorameows'));
 
 	},
 	
