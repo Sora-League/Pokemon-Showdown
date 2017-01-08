@@ -362,7 +362,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> Decidueye <br />' + 
+			'<b>Ace:</b>???<br />' + seen('') + getbadges('')); 
 			
 	},
 	
@@ -447,7 +447,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>'
+			'<b>Ace:</b> ??? <br/>' +seen('')  + getBadges('')
 		);
 	},
 
