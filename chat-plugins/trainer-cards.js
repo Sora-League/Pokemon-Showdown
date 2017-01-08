@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Aros∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Hawkatana∆', '∆Sora Xemnas∆', '∆Sora Darkus∆', '∆Sora Luscinia∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Aros∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Darkus∆', '∆Sora Luscinia∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -145,9 +145,9 @@ exports.commands = {
 	meows: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Meows</b>∆<br />' +
-			'<i>"1et m3 b3 th3 k3y 2 ur h3art xoxo"</i> <br />' +
-			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace:</b> Klefki<br />' + seen('sorameows') + getBadges('sorameows'));
+			'<i>"brb dying"</i> <br />' +
+			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
+			'<b>Ace:</b> Alolan Muk<br />' + seen('sorameows') + getBadges('sorameows'));
 
 	},
 	
@@ -345,14 +345,13 @@ exports.commands = {
 			
 	},
 
-	xemnas: 'ghost', 
+	
 	ghost: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Xemnas</b>∆<br />' +
-			'<i>"If light and darkness are eternal, then surely we nothings must be the same... Eternal! ... No more eternal than that radiance of yours."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
-			'<b>Ace:</b> Roxas (Doublade)<br />' +
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/Hb0NwAPc3JJSIfjVXmszRqfVRmH32oIX/Kingdom%20Hearts%20II-%20Final%20Xemnas%20Battle%20Theme.mp3" style = "border-radius: 0px; background: black;"></audio><br>' +
+			'<b>Ace:</b> ???<br />' +
 			seen('soraxemnas') + getBadges('soraxemnas'));
 	},
 
