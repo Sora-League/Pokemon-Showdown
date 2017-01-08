@@ -113,9 +113,9 @@ exports.commands = {
 	terrors: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
-			'<i>"The tips have been scaled!"</i> <br />' +
-			'<b>Type: <font color = A64000>Ground</font></b><br />' +
-			'<b>Ace:</b> Garchomp<br />' +
+			'<i>"ur bad"</i> <br />' +
+			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
+			'<b>Ace:</b> Muk-Alola<br />' +
 			seen('soraterrors') +
 			getBadges('soraterrors'));
 	},
@@ -186,9 +186,9 @@ exports.commands = {
 		this.sendReplyBox('∆Frontier <b>Lymm</b>∆<br />' +
 			'<i>"What\'s a quote?"</i> <br />' +
 			'<b>Symbol: </b>Night <br />' +
-			'<b>Ace:</b> Ursaring<br />' +
+			'<b>Ace:</b> Weather<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-STABmons<br />' + seen('soralymm') + getBadges('soralymm')
+			'-Gen5OU<br />' + seen('soralymm') + getBadges('soralymm')
 		);
 	},
 
@@ -199,7 +199,7 @@ exports.commands = {
 			'<i>"Light is arbitrary, Darkness is absolute."</i> <br />' +			'<b>Symbol: </b>??? <br />' +
 			'<b>Ace:</b> ???<br />' +
 			'<b>Battle rules:</b> <br />' +
-			'-Hackmons<br />' + seen('soragasp') + getBadges('gasp')
+			'-CAPs<br />' + seen('soragasp') + getBadges('gasp')
 		);
 	},
 	
@@ -282,13 +282,15 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
-
+        float: 'electric', 
 	electric: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
+			'<i>"Bitch I\'m still in the cut, Togedemaru"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:</b> ???<br />');
+			'<b>Ace:Togedemaru<br />');
+		        '<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +	seen('sorafloat') + getBadges('sorafloat'));
 	},
         
 	luscinia: 'fairy',	
@@ -354,15 +356,14 @@ exports.commands = {
 			seen('soraxemnas') + getBadges('soraxemnas'));
 	},
 
-	float: 'grass',
+	
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"Float like a butterfly, sting like a meme"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
 			'<b>Ace:</b> Decidueye <br />' + 
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +	seen('sorafloat') + getBadges('sorafloat'));	  
+			
 	},
 	
 	
