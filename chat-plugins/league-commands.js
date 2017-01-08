@@ -188,5 +188,12 @@ exports.commands = {
 			'<strong>$5 or more:</strong>' +
 			'<li>All of the above^' +
 			'<li>A red <span style = "background: rgba(255, 26, 26, 0.5);">userlist highlight color</span>, visible on the Lobby\'s userlist');
-	}
+	},
 };
+
+         e4teams: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReplyBox('Elite 4 Tour Teams, not viewable without permission:<br />' +
+			'- <a href="https://docs.google.com/spreadsheets/d/1SYBIGWpszzgk97IAA5RueL_ABe4F5Vyeo3n8GVO_cEg/edit#gid=1887440986">Sora League Gym Leaders</a>'
+		);
+	}
