@@ -386,13 +386,13 @@ exports.commands = {
 		);
 	},
 
-        jennymega: 'normal',
+        
 	normal: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>JennyMega</b>∆<br />' +
-			'<i>"Reality leaves a lot to the imagination."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = ffa5d5>Normal</font></b><br />' +
-			'<b>Ace:</b> Porygon2<br />' + seen('sorajennymega') + getBadges('sorajennymega'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
        
