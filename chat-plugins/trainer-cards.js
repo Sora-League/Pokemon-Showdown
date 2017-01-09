@@ -299,7 +299,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Luscinia</b>∆<br />' +
 			'<i>"You needn\'t be associated with the air to spread your wings"</i> <br />' +
 			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace: </b>Mawile<br />' + 
+			'<b>Ace: </b>Comfey<br />' + 
 			seen('soraluscinia') + getBadges('soraluscinia'));
 	},
 
