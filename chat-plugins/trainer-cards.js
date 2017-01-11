@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Aros∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Ultimo∆', '∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Vulpinus∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Aros∆', '∆Sora Float∆', '∆Sora Zachary∆', '∆Sora Whitefang∆', '∆Sora Rick∆', '∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Vulpinus∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -429,14 +429,14 @@ exports.commands = {
 	},
 
 
-	ultimo: 'steel',
+	rick: 'steel',
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Ultimo</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Rick</b>∆<br />' +
 			'<i>"Metal is just a part of earth that has been purified and refined, and my team is ready to fight."</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> Bisharp<br />' +
-			seen('soraultimo') + getBadges('soraultimo')
+			seen('sorarick') + getBadges('sorarick')
 		);
 	},
 
