@@ -789,7 +789,7 @@ exports.BattleFormatsData = {
 		tier: "LC",
 	},
 	slowbro: {
-		randomBattleMoves: ["scald", "toxic", "thunderwave", "psyshock", "foulplay", "fireblast", "icebeam", "slackoff"],
+		randomBattleMoves: ["scald", "toxic", "thunderwave", "psyshock", "fireblast", "icebeam", "slackoff"],
 		randomDoubleBattleMoves: ["scald", "fireblast", "icebeam", "psychic", "grassknot", "thunderwave", "slackoff", "trickroom", "protect", "psyshock"],
 		eventPokemon: [
 			{"generation": 6, "level": 100, "nature": "Quiet", "isHidden": false, "abilities":["oblivious"], "moves":["scald", "trickroom", "slackoff", "irontail"], "pokeball": "cherishball"},
@@ -797,8 +797,8 @@ exports.BattleFormatsData = {
 		tier: "New",
 	},
 	slowbromega: {
-		randomBattleMoves: ["calmmind", "scald", "psyshock", "slackoff", "fireblast", "psychic", "icebeam", "grassknot"],
-		randomDoubleBattleMoves: ["scald", "fireblast", "icebeam", "psychic", "grassknot", "thunderwave", "slackoff", "trickroom", "protect", "psyshock"],
+		randomBattleMoves: ["calmmind", "scald", "psyshock", "slackoff", "fireblast", "psychic", "icebeam"],
+		randomDoubleBattleMoves: ["scald", "fireblast", "icebeam", "psychic", "thunderwave", "slackoff", "trickroom", "protect", "psyshock"],
 		requiredItem: "Slowbronite",
 		tier: "New",
 	},
@@ -1592,7 +1592,7 @@ exports.BattleFormatsData = {
 			{"generation": 6, "level": 55, "gender": "M", "isHidden": true, "moves":["dragondance", "outrage", "hurricane", "extremespeed"], "pokeball": "cherishball"},
 			{"generation": 6, "level": 62, "gender": "M", "ivs": {"hp": 31, "def": 31, "spa": 31, "spd": 31}, "isHidden": false, "moves":["agility", "slam", "barrier", "hyperbeam"], "pokeball": "cherishball"},
 		],
-		tier: "New",
+		tier: "BL",
 	},
 	mewtwo: {
 		randomBattleMoves: ["psystrike", "aurasphere", "fireblast", "icebeam", "calmmind", "recover"],
@@ -2041,7 +2041,7 @@ exports.BattleFormatsData = {
 			{"generation": 4, "level": 30, "gender": "M", "nature": "Jolly", "moves":["fakeout", "iceshard", "nightslash", "brickbreak"], "pokeball": "cherishball"},
 			{"generation": 6, "level": 48, "gender": "M", "perfectIVs": 2, "isHidden": false, "moves":["nightslash", "icepunch", "brickbreak", "xscissor"], "pokeball": "cherishball"},
 		],
-		tier: "New",
+		tier: "BL",
 	},
 	teddiursa: {
 		randomBattleMoves: ["swordsdance", "protect", "facade", "closecombat", "firepunch", "crunch", "playrough", "gunkshot"],
@@ -3262,7 +3262,7 @@ exports.BattleFormatsData = {
 			{"generation": 4, "level": 50, "gender": "M", "nature": "Naughty", "moves":["hydropump", "stoneedge", "fireblast", "dragonclaw"], "pokeball": "cherishball"},
 			{"generation": 5, "level": 50, "shiny": 1, "isHidden": false, "moves":["dragondance", "dragonclaw", "outrage", "aerialace"], "pokeball": "cherishball"},
 		],
-		tier: "New",
+		tier: "BL",
 	},
 	salamencemega: {
 		randomBattleMoves: ["doubleedge", "return", "fireblast", "earthquake", "dracometeor", "roost", "dragondance"],
@@ -5226,7 +5226,7 @@ exports.BattleFormatsData = {
 			{"generation": 6, "level": 100, "moves":["technoblast", "magnetbomb", "solarbeam", "signalbeam"], "pokeball": "cherishball"},
 		],
 		eventOnly: true,
-		tier: "Bank-OU",
+		tier: "Bank-Uber",
 	},
 	genesectburn: {
 		randomBattleMoves: ["uturn", "bugbuzz", "icebeam", "technoblast", "thunderbolt", "ironhead", "extremespeed"],

@@ -112,17 +112,8 @@ exports.Formats = [
 		],
 
 		mod: 'gen7',
-		searchShow: false,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Baton Pass Clause'],
 		banlist: ['Uber', 'Bank-Uber', 'Power Construct', 'Shadow Tag'],
-	},
-	{
-		name: "[Gen 7] Pokebank OU (suspect test)",
-		desc: ["&bullet; <a href=\"https://www.smogon.com/forums/threads/3590692/\">SM OU Suspect Process, Round 1</a>"],
-
-		mod: 'gen7',
-		ruleset: ['[Gen 7] Pokebank OU'],
-		banlist: ['Genesect'],
 	},
 	{
 		name: "[Gen 7] Pokebank Ubers",
@@ -198,7 +189,6 @@ exports.Formats = [
 			battle: 3,
 		},
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
-		banlist: ['Memento', 'Parting Shot'],
 		requirePentagon: true,
 	},
 	{
@@ -212,7 +202,7 @@ exports.Formats = [
 			battle: 3,
 		},
 		ruleset: ['Pokemon', 'Species Clause', 'Nickname Clause', 'Team Preview', 'Cancel Mod'],
-		banlist: ['Illegal', 'Unreleased', 'Memento', 'Parting Shot'],
+		banlist: ['Illegal', 'Unreleased'],
 		requirePentagon: true,
 		onValidateSet: function (set) {
 			if (set.item) return ["Items are not permitted in Battle Spot Special."];
@@ -305,7 +295,6 @@ exports.Formats = [
 			battle: 4,
 		},
 		ruleset: ['Pokemon', 'Standard GBU', 'Team Preview'],
-		banlist: ['Memento', 'Parting Shot'],
 		requirePentagon: true,
 	},
 	{
@@ -337,9 +326,10 @@ exports.Formats = [
 		],
 
 		mod: 'pokebilities',
-		ruleset: ["[Gen 7] Pokebank OU"],
+		ruleset: ['[Gen 7] Pokebank OU', 'Evasion Abilities Clause'],
+		banlist: ['Excadrill'],
 		onBegin: function () {
-			let banlistTable = this.getBanlistTable(this.getFormat('gen7ou'));
+			let banlistTable = this.getBanlistTable(this.getFormat('gen7pokbilities'));
 			let allPokemon = this.p1.pokemon.concat(this.p2.pokemon);
 			for (let i = 0, len = allPokemon.length; i < len; i++) {
 				let pokemon = allPokemon[i];
@@ -490,8 +480,8 @@ exports.Formats = [
 		mod: 'gen7',
 		ruleset: ['Pokemon', 'Standard', 'Ability Clause', 'Baton Pass Clause', 'Swagger Clause', 'Team Preview'],
 		banlist: ['Ignore Illegal Abilities',
-			'Aegislash', 'Arceus', 'Archeops', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia', 'Lunala',
-			'Mewtwo', 'Palkia', 'Pheromosa', 'Rayquaza', 'Regigigas', 'Reshiram', 'Shaymin-Sky', 'Shedinja', 'Slaking', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
+			'Aegislash', 'Arceus', 'Archeops', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Genesect', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White', 'Lugia',
+			'Lunala', 'Mewtwo', 'Palkia', 'Pheromosa', 'Rayquaza', 'Regigigas', 'Reshiram', 'Shaymin-Sky', 'Shedinja', 'Slaking', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
 			'Power Construct', 'Shadow Tag', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite',
 		],
 		onValidateSet: function (set) {
@@ -516,7 +506,7 @@ exports.Formats = [
 		mod: 'gen7',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Baton Pass Clause'],
 		banlist: ['Allow One Sketch',
-			'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White',
+			'Aegislash', 'Arceus', 'Blaziken', 'Darkrai', 'Deoxys', 'Dialga', 'Genesect', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Kyurem-White',
 			'Lugia', 'Lunala', 'Mewtwo', 'Palkia', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Solgaleo', 'Xerneas', 'Yveltal', 'Zekrom',
 			'Power Construct', 'Shadow Tag', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Salamencite',
 			'Arena Trap + Dark Void', 'Arena Trap + Grass Whistle', 'Arena Trap + Hypnosis', 'Arena Trap + Relic Song', 'Arena Trap + Sing', 'Arena Trap + Sleep Powder',
