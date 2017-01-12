@@ -9,6 +9,7 @@ let shopList = {
 	//require an admin's assistance
 	potd: ['POTD', 'Buys the ability to set the Pokémon of the Day. Not purchasable if there is already a POTD.', 2],
 	poof: ['Poof', 'Buy a poof message to be added into the pool of possible poofs.', 10, true],
+	deletepoof: ['Delete Poof', 'Delete a current poof message from the available pool. *Final decision will be made by Revan or Blade to prevent quality poofs from being removed.', 20, true],
 	avatar: ['Avatar', 'Set your own custom avatar.', 35, true],
 	card: ['Card', 'Buys a trainer card which can show information through a command.', 50, true],
 	song: ['Song', 'Buys a song that can be played on a declarable card. (You must supply the song as a RAW MP3/OGG URL) <button name="send", value="/feelingit"><b>Example</b></button>', 25, true],
