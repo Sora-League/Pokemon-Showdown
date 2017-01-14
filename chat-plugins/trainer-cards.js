@@ -404,15 +404,15 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
-	
+	rick: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Rick</b>∆<br />' +
+			'<i>"When i am in darkness, i always find the light. Now you are the one in darkness, will you find the light?"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br>' +
-			getBadges('')
+			'<b>Ace:</b> Gallade<br />' +
+			seen('sorarick') + '<br>' +
+			getBadges('sorarick')
 		);
 	},
 
@@ -429,14 +429,14 @@ exports.commands = {
 	},
 
 
-	rick: 'steel',
+	
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Rick</b>∆<br />' +
-			'<i>"Metal is just a part of earth that has been purified and refined, and my team is ready to fight."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> Bisharp<br />' +
-			seen('sorarick') + getBadges('sorarick')
+			'<b>Ace:</b> <br />' +
+			seen('') + getBadges('')
 		);
 	},
 
