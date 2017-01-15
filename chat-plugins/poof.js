@@ -58,7 +58,7 @@ exports.commands = {
 	deletepoof: function (target, room, user) {
 		if (!target || !target.trim()) return this.parse('/help poof');
 		if (poofs.length === 1) this.popupReply('|html|You cannot delete any poof messages, because there\'s only one left in the list.');
-		let userlist = {sorarevan:1, sorablade:1, blazing360:1, soraonyxeagle:1, femalegallade:1};
+		let userlist = {sorarevan:1, sorablade:1, blazing360:1, soraonyxeagle:1, femalegallade:1, soraninjarisu:1, sorajeratt:1, neithcass:1};
 		if (!userlist[user.userid]) return false;
 		if (!target.match(/\(user\)/)) target = '(user) ' + target;
 		let pos = poofs.map(toId).indexOf(toId(target));
