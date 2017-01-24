@@ -110,6 +110,7 @@ exports.commands = {
 	 *********************************************************/
 
 
+	dark: 'terrors',
 	terrors: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
@@ -264,16 +265,16 @@ exports.commands = {
 			'<b>Ace:</b> Volcarona<br />' + seen('soraaros') + getBadges('soraaros'));
 	},
 
-	darkus: 'dark',
-	dark: function (target, room, user) {
+	
+	darkldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
-			'<i>"It\'s all shits and giggles until someone giggles and shits."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace:</b> Bisharp <br />' + seen('soradarkus') + getBadges('soradarkus'));
+			'<b>Ace:</b> <br />' + seen('') + getBadges(''));
 	},
 
-	vulpinus: 'dragon',
+	vulpinus: 'dragon', 
 	dragon: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Vulpinus</b>∆<br />' +
@@ -404,15 +405,15 @@ exports.commands = {
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
-	
+	darkus: 'psychic',
 	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
+			'<i>"It\'s all shits and giggles until someone giggles and shits"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> ???<br />' +
-			seen('') + '<br>' +
-			getBadges('')
+			'<b>Ace:</b> Victini<br />' +
+			seen('soradarkus') + '<br>' +
+			getBadges('soradarkus')
 		);
 	},
 
