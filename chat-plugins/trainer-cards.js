@@ -363,7 +363,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
 			'<i>"Storm of leaf and draining root!"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b><br>' +
-			'<b>Ace:</b>Bellossom<br />' + seen('soramitsuka') + getbadges('soramitsuka')); 
+			'<b>Ace:</b>Bellossom<br />' + seen('soramitsuka') + getBadges('soramitsuka')); 
 			
 	},
 	
