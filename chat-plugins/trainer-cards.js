@@ -121,14 +121,15 @@ exports.commands = {
 			getBadges('soraterrors'));
 	},
 
-        mitsuka: function (target, room, user) {
+        electric: 'float',
+	float: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Mitsuka</b>∆<br />' +
-			'<i>"Storm of leaf and draining root!"</i> <br />' +
-			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b> Bellossom<br />' +
-			seen('soramitsuka') +
-			getBadges('soramitsuka'));
+		this.sendReplyBox('∆E4 <b>Float</b>∆<br />' +
+			'<i>"Bitch I\'m still in the cut, Togedemaru"</i> <br />' +
+			'<b>Type: <font color = d6cc0c>Electric</font></b> <br />' +
+			'<b>Ace:</b> Togedemaru<br />' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +	seen('sorafloat') + getBadges('sorafloat'));
 	},
 
 
@@ -283,15 +284,15 @@ exports.commands = {
 			'<b>Ace:</b> Tyrantrum<br />' + seen('soravulpinus') + getBadges('soravulpinus'));
 	},
 
-        float: 'electric', 
-	electric: function (target, room, user) {
+        
+	electricldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"Bitch I\'m still in the cut, Togedemaru"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = d6cc0c>Electric</font></b><br />' +
-			'<b>Ace:Togedemaru<br />' +
-		        '<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' +	seen('sorafloat') + getBadges('sorafloat'));
+			'<b>Ace:???<br />' +
+	                seen('') + getBadges(''));
+		        
 	},
         
 	luscinia: 'fairy',	
@@ -356,13 +357,13 @@ exports.commands = {
 			seen('soraxemnas') + getBadges('soraxemnas'));
 	},
 
-	
+	mitsuka: 'grass',
 	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
+			'<i>"Storm of leaf and draining root!"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
-			'<b>Ace:</b>???<br />' + seen('') + getbadges('')); 
+			'<b>Ace:</b>Bellossom<br />' + seen('soramitsuka') + getbadges('soramitsuka')); 
 			
 	},
 	
