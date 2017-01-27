@@ -354,7 +354,7 @@ exports.commands = {
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 7814e2>Ghost</font></b><br />' +
 			'<b>Ace:</b> ???<br />' +
-			seen('soraxemnas') + getBadges('soraxemnas'));
+			seen('') + getBadges(''));
 	},
 
 	mitsuka: 'grass',
@@ -362,7 +362,7 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
 			'<i>"Storm of leaf and draining root!"</i> <br />' +
-			'<b>Type: <font color = 006b0a>Grass</font></b> <br />' +
+			'<b>Type: <font color = 006b0a>Grass</font></b><br>' +
 			'<b>Ace:</b>Bellossom<br />' + seen('soramitsuka') + getbadges('soramitsuka')); 
 			
 	},
@@ -398,7 +398,7 @@ exports.commands = {
 	},
 
        
-	poison: function (target, room, user) {
+	poisonldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
 			'<i>"???"</i> <br />' +
