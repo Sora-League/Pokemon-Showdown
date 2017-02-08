@@ -451,10 +451,10 @@ exports.commands = {
        
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Zachary</b>∆<br />' +
+			'<i>"Come forth and suffer."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> ??? <br/>' +seen('')  + getBadges('')
+			'<b>Ace:</b> None <br/>' +seen('')  + getBadges('')
 		);
 	},
 
