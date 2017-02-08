@@ -345,10 +345,9 @@ exports.commands = {
 
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
-
-				  '<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Heat</b>∆<br />' +
+			'<i>"What does anyone have for a well played Beartic?"</i><br />' +
+		        '<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
 			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 			
 	},
