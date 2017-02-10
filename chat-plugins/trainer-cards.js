@@ -439,11 +439,11 @@ exports.commands = {
 	
 	steel: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Youmaton</b>∆<br />' +
 			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
-			'<b>Ace:</b> <br />' +
-			seen('') + getBadges('')
+			'<b>Ace:</b> Let\'s enjoy a nicely seasoned battle with a touch of salt and the side of rolls.<br />' +
+			seen('sorayoumaton') + getBadges('sorayoumaton')
 		);
 	},
 
