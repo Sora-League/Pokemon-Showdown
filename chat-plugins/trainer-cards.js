@@ -535,7 +535,9 @@ exports.commands = {
 
 	soradarkus: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('<center><span style = "font-size: 11pt; font-weight: bold; color: ' + hashColor('soradarkus') + '">∆SoraDarkus∆</span><br>' +
+		this.sendReply('|html|<head><link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet"><style> body{ font-family: 'Rock Salt';} </style></head>' +
+			'<body><div style = "color: white; width: 100%; padding: 0px 10px 10px 10px; background: linear-gradient(156deg, #e60000, #990000, #330000, #990000, #e60000, #990000, #330000, #e60000);">' +
+			'<center><span style = "font-size: 11pt; font-weight: bold; color: ' + hashColor('soradarkus') + '">∆SoraDarkus∆</span><br>' +
 			'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br><br>' +
 			'<b>Aces:</b> Bisharp and Crawdaunt<br>' +
 			'<b>Skilled in:</b> Monotype<br>' +
