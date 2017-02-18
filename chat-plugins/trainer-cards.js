@@ -535,7 +535,7 @@ exports.commands = {
 
 	soradarkus: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReply('|html|<head><link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet"><style> body{font-family: Rock Salt;} </style></head>' +
+		this.sendReply('|html|<head><link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet"></head>' +
 			'<body><div style = "color: white; width: 100%; padding: 0px 10px 10px 10px; background: linear-gradient(156deg, #e60000, #990000, #330000, #990000, #e60000, #990000, #330000, #e60000);">' +
 			'<center><span style = "font-size: 11pt; font-weight: bold; color: ' + hashColor('soradarkus') + '">∆SoraDarkus∆</span><br>' +
 			'<i>"It\'s all shits and giggles until someone giggles and shits."</i><br><br>' +
@@ -545,7 +545,7 @@ exports.commands = {
 			'<b>Achievements:</b> Sora E4, Gym Leader and Side-Mission<br>' +
 			'<b>Known for:</b> Being one of the original members of Sora, and having mad Dark mono skills.<br>' +
 			seen('soradarkus') + '<br>' +
-			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/bisharp.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/crawdaunt.gif" style = "transform: rotateY(180deg)"><br>' +
+			'<img src = "http://play.pokemonshowdown.com/sprites/xyani/bisharp.gif"> <img src = "http://play.pokemonshowdown.com/sprites/xyani/crawdaunt.gif" style = "transform: rotateY(180deg)"><br></body>' +
 			getBadges('soradarkus'));
 	},
 
