@@ -261,7 +261,7 @@ class Validator {
 			problems.push(`${name}'s item ${set.item} is unreleased.`);
 		}
 		if (banlistTable['Unreleased'] && template.isUnreleased) {
-			if (!format.requirePentagon || (template.eggGroups[0] === 'Undiscovered' && !template.evos)) {
+			if (template.eggGroups[0] === 'Undiscovered' && !template.evos) {
 				problems.push(`${name} (${template.species}) is unreleased.`);
 			}
 		}
@@ -338,10 +338,8 @@ class Validator {
 						} else if (problem.type === 'oversketched') {
 							let plural = (parseInt(problem.maxSketches) === 1 ? '' : 's');
 							problemString = problemString.concat(` because it can only sketch ${problem.maxSketches} move${plural}.`);
-						} else if (problem.type === 'pentagon') {
-							problemString = problemString.concat(` because it's only obtainable before gen 6.`);
-						} else if (problem.type === 'pastGen') {
-							problemString = problemString.concat(` because it's only obtainable from a previous generation.`);
+						} else if (problem.type === 'pastgen') {
+							problemString = problemString.concat(` because it needs to be from generation ${problem.gen} or later.`);
 						} else {
 							problemString = problemString.concat(`.`);
 						}
@@ -455,7 +453,8 @@ class Validator {
 				events:
 				for (let i = 0; i < eventPokemon.length; i++) {
 					let eventData = eventPokemon[i];
-					if ((format.requirePentagon && eventData.generation < 6) || (format.requirePlus && eventData.generation < 7)) continue;
+					if (format.requirePentagon && eventData.generation < 6) continue;
+					if (format.requirePlus && eventData.generation < 7) continue;
 					if (eventData.level && set.level < eventData.level) continue;
 					if ((eventData.shiny === true && !set.shiny) || (!eventData.shiny && set.shiny)) continue;
 					if (eventData.nature && set.nature !== eventData.nature) continue;
@@ -687,11 +686,25 @@ class Validator {
 		// the equivalent of adding "every source at or before this gen" to sources
 		let sourcesBefore = 0;
 		if (lsetData.sourcesBefore === undefined) lsetData.sourcesBefore = tools.gen;
-		let noPastGen = !!format.requirePlus;
-		// Pokemon cannot be traded to past generations except in Gen 1 Tradeback
-		let noFutureGen = !(format.banlistTable && format.banlistTable['allowtradeback']);
-		// if a move can only be learned from a gen 2-5 egg, we have to check chainbreeding validity
-		// limitedEgg is false if there are any legal non-egg sources for the move, and true otherwise
+
+		/**
+		 * The minimum past gen the format allows
+		 */
+		const minPastGen = (format.requirePlus ? 7 : format.requirePentagon ? 6 : 1);
+		/**
+		 * The format doesn't allow Pokemon who've bred with past gen Pokemon
+		 * (e.g. Gen 6-7 before Pokebank was released)
+		 */
+		const noPastGenBreeding = false;
+		/**
+		 * The format doesn't allow Pokemon traded from the future
+		 * (This is everything except in Gen 1 Tradeback)
+		 */
+		const noFutureGen = !(format.banlistTable && format.banlistTable['allowtradeback']);
+		/**
+		 * If a move can only be learned from a gen 2-5 egg, we have to check chainbreeding validity
+		 * limitedEgg is false if there are any legal non-egg sources for the move, and true otherwise
+		 */
 		let limitedEgg = null;
 
 		let tradebackEligible = false;
@@ -723,7 +736,7 @@ class Validator {
 				for (let i = 0, len = lset.length; i < len; i++) {
 					let learned = lset[i];
 					let learnedGen = parseInt(learned.charAt(0));
-					if ((format.requirePentagon && learnedGen < 6) || (noPastGen && learnedGen < tools.gen)) continue;
+					if (learnedGen < minPastGen) continue;
 					if (noFutureGen && learnedGen > tools.gen) continue;
 
 					// redundant
@@ -770,7 +783,6 @@ class Validator {
 					} else if (learned.charAt(1) === 'E') {
 						// egg moves:
 						//   only if that was the source
-						const noPastGenBreeding = noPastGen && tools.gen === 7;
 						if ((learnedGen >= 6 && !noPastGenBreeding) || lsetData.fastCheck) {
 							// gen 6 doesn't have egg move incompatibilities except for certain cases with baby Pokemon
 							learned = learnedGen + 'E' + (template.prevo ? template.id : '');
@@ -811,18 +823,11 @@ class Validator {
 							if (!father.eggGroups.some(eggGroup => eggGroupsSet.has(eggGroup))) continue;
 
 							// detect unavailable egg moves
-							if (fatherSources) {
-								const fatherLatestMoveGen = parseInt(fatherSources[0].charAt(0));
-								if (format.requirePentagon) {
-									if (parseInt(fatherLatestMoveGen) < 6) continue;
-									atLeastOne = true;
-									break;
-								}
-								if (noPastGenBreeding) {
-									if (parseInt(fatherLatestMoveGen) < tools.gen) continue;
-									atLeastOne = true;
-									break;
-								}
+							if (noPastGenBreeding) {
+								const fatherLatestMoveGen = fatherSources[0].charAt(0);
+								if (father.tier.startsWith('Bank') || fatherLatestMoveGen !== '7') continue;
+								atLeastOne = true;
+								break;
 							}
 
 							// we can breed with it
@@ -926,8 +931,7 @@ class Validator {
 
 		// Now that we have our list of possible sources, intersect it with the current list
 		if (!sourcesBefore && !sources.length) {
-			if (format.requirePentagon && sometimesPossible) return {type:'pentagon'};
-			if (noPastGen && sometimesPossible) return {type:'pastGen'};
+			if (minPastGen > 1 && sometimesPossible) return {type:'pastgen', gen: minPastGen};
 			if (incompatibleAbility) return {type:'incompatibleAbility'};
 			return true;
 		}
