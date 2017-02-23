@@ -52,10 +52,8 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 	background: rgba(0, 0, 0, 0.4) url(http://i59.tinypic.com/w19xfk.jpg) no-repeat !important;
 }
 .dark .maintabbarbottom {
-	background: #AE2F27;
-	color: white;
-	/*border: 1px solid #111;
-	background-color: #3a3a3a;*/
+	border: 1px solid #111;
+	background-color: #3a3a3a;
 }
 .dark .button.cur span {
 	overflow: visible !important;
