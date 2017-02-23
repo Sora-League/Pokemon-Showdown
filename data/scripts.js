@@ -1,5 +1,6 @@
 'use strict';
 
+const {PRNG} = require('./../prng');
 const CHOOSABLE_TARGETS = new Set(['normal', 'any', 'adjacentAlly', 'adjacentAllyOrSelf', 'adjacentFoe']);
 
 exports.BattleScripts = {
@@ -114,7 +115,7 @@ exports.BattleScripts = {
 		let movename = move.name;
 		if (move.id === 'hiddenpower') movename = 'Hidden Power';
 		if (sourceEffect) attrs += '|[from]' + this.getEffect(sourceEffect);
-		if (zMove && (move.category === 'Status')) {
+		if (move.isZ === true) {
 			attrs = '|[anim]' + movename + attrs;
 			movename = 'Z-' + movename;
 		}
@@ -902,11 +903,11 @@ exports.BattleScripts = {
 		const teamGenerator = typeof format.team === 'string' && format.team.startsWith('random') ? format.team + 'Team' : '';
 		if (!teamGenerator && team) return team;
 		// Reinitialize the RNG seed to create random teams.
-		this.seed = this.generateSeed();
-		this.startingSeed = this.startingSeed.concat(this.seed);
+		const originalPrng = this.prng.clone();
+		this.prng = new PRNG();
 		team = this[teamGenerator || 'randomTeam'](side);
 		// Restore the default seed
-		this.seed = this.startingSeed.slice(0, 4);
+		this.seed = originalPrng;
 		return team;
 	},
 	randomCCTeam: function (side) {
@@ -989,6 +990,8 @@ exports.BattleScripts = {
 			let mbstmin = 1307; // Sunkern has the lowest modified base stat total, and that total is 807
 
 			let stats = template.baseStats;
+			// If Wishiwashi, use the school-forme's much higher stats
+			if (template.baseSpecies === 'Wishiwashi') stats = Tools.getTemplate('wishiwashischool').baseStats;
 
 			// Modified base stat total assumes 31 IVs, 85 EVs in every stat
 			let mbst = (stats["hp"] * 2 + 31 + 21 + 100) + 10;
@@ -1390,7 +1393,7 @@ exports.BattleScripts = {
 			dracometeor:1, leafstorm:1, overheat:1,
 		};
 		let counterAbilities = {
-			'Adaptability':1, 'Contrary':1, 'Hustle':1, 'Iron Fist':1, 'Sheer Force':1, 'Skill Link':1,
+			'Adaptability':1, 'Contrary':1, 'Hustle':1, 'Iron Fist':1, 'Skill Link':1,
 		};
 		let ateAbilities = {
 			'Aerilate':1, 'Pixilate':1, 'Refrigerate':1,
@@ -1943,7 +1946,7 @@ exports.BattleScripts = {
 
 			let rejectAbility = false;
 			if (ability in counterAbilities) {
-				// Adaptability, Contrary, Hustle, Iron Fist, Sheer Force, Skill Link
+				// Adaptability, Contrary, Hustle, Iron Fist, Skill Link
 				rejectAbility = !counter[toId(ability)];
 			} else if (ability in ateAbilities) {
 				rejectAbility = !counter['Normal'];
@@ -1977,6 +1980,8 @@ exports.BattleScripts = {
 				rejectAbility = !teamDetails['sand'];
 			} else if (ability === 'Serene Grace') {
 				rejectAbility = !counter['serenegrace'] || template.id === 'chansey' || template.id === 'blissey';
+			} else if (ability === 'Sheer Force') {
+				rejectAbility = !counter['sheerforce'] || (abilities.includes('Iron Fist') && counter['sheerforce'] < 2 && counter['ironfist'] > counter['sheerforce']);
 			} else if (ability === 'Simple') {
 				rejectAbility = !counter.setupType && !hasMove['cosmicpower'] && !hasMove['flamecharge'];
 			} else if (ability === 'Snow Cloak') {
@@ -3016,7 +3021,7 @@ exports.BattleScripts = {
 			} else if (ability === 'Serene Grace') {
 				rejectAbility = !counter['serenegrace'] || template.id === 'chansey' || template.id === 'blissey';
 			} else if (ability === 'Sheer Force') {
-				rejectAbility = !counter['sheerforce'] || hasMove['fakeout'];
+				rejectAbility = !counter['sheerforce'] || hasMove['fakeout'] || (abilities.includes('Iron Fist') && counter['sheerforce'] < 2 && counter['ironfist'] > counter['sheerforce']);
 			} else if (ability === 'Simple') {
 				rejectAbility = !counter.setupType && !hasMove['cosmicpower'] && !hasMove['flamecharge'];
 			} else if (ability === 'Snow Cloak') {
@@ -3255,22 +3260,26 @@ exports.BattleScripts = {
 
 		// We choose level based on BST. Min level is 70, max level is 99. 600+ BST is 70, less than 300 is 99. Calculate with those values.
 		// Every 10.34 BST adds a level from 70 up to 99. Results are floored. Uses the Mega's stats if holding a Mega Stone
-		let bst = template.baseStats.hp + template.baseStats.atk + template.baseStats.def + template.baseStats.spa + template.baseStats.spd + template.baseStats.spe;
+		let baseStats = template.baseStats;
+		// If Wishiwashi, use the school-forme's much higher stats
+		if (template.baseSpecies === 'Wishiwashi') baseStats = Tools.getTemplate('wishiwashischool').baseStats;
+
+		let bst = baseStats.hp + baseStats.atk + baseStats.def + baseStats.spa + baseStats.spd + baseStats.spe;
 		// Adjust levels of mons based on abilities (Pure Power, Sheer Force, etc.) and also Eviolite
 		// For the stat boosted, treat the Pokemon's base stat as if it were multiplied by the boost. (Actual effective base stats are higher.)
 		let templateAbility = (baseTemplate === template ? ability : template.abilities[0]);
 		if (templateAbility === 'Huge Power' || templateAbility === 'Pure Power') {
-			bst += template.baseStats.atk;
+			bst += baseStats.atk;
 		} else if (templateAbility === 'Parental Bond') {
-			bst += 0.5 * (counter.Physical > counter.Special ? template.baseStats.atk : template.baseStats.spa);
+			bst += 0.5 * (counter.Physical > counter.Special ? baseStats.atk : baseStats.spa);
 		} else if (templateAbility === 'Protean') {
 			// Holistic judgment. Don't boost Protean as much as Parental Bond
-			bst += 0.3 * (counter.Physical > counter.Special ? template.baseStats.atk : template.baseStats.spa);
+			bst += 0.3 * (counter.Physical > counter.Special ? baseStats.atk : baseStats.spa);
 		} else if (templateAbility === 'Fur Coat') {
-			bst += template.baseStats.def;
+			bst += baseStats.def;
 		}
 		if (item === 'Eviolite') {
-			bst += 0.5 * (template.baseStats.def + template.baseStats.spd);
+			bst += 0.5 * (baseStats.def + baseStats.spd);
 		}
 		let level = 70 + Math.floor(((600 - this.clampIntRange(bst, 300, 600)) / 10.34));
 
@@ -3373,10 +3382,10 @@ exports.BattleScripts = {
 		let forceResult = (depth >= 4);
 
 		let availableTiers = ['Uber', 'OU', 'UU', 'RU', 'NU', 'PU'];
-		const prevSeed = this.seed;
-		this.seed = this.startingSeed.slice(0, 4);
+		const originalPrng = this.prng.clone();
+		this.prng = originalPrng.clone();
 		const chosenTier = availableTiers[this.random(availableTiers.length)];
-		this.seed = prevSeed;
+		this.prng = originalPrng;
 
 		let pokemon = [];
 
