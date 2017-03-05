@@ -450,8 +450,8 @@ exports.grouplist = [
 	},
 	{
 		symbol: '-',
-		id: "@dm!n",
-		name: "fakemin",
+		id: "fakemin",
+		name: "@dm!n",
 		inherit: ' ',
 	},
 	{
