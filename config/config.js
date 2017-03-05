@@ -401,6 +401,7 @@ exports.grouplist = [
 		ban: true,
 		modchat: true,
 		roomvoice: true,
+		roomfakemin: false,
 		redirect: true,
 		ip: true,
 		alts: '@u',
@@ -450,7 +451,7 @@ exports.grouplist = [
 	{
 		symbol: '-',
 		id: "@dm!n",
-		name: "@dm!n",
+		name: "fakemin",
 		inherit: ' ',
 	},
 	{
