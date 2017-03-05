@@ -345,6 +345,7 @@ exports.grouplist = [
 		roombot: true,
 		roommod: true,
 		roomdriver: true,
+		roomfakemin: false,
 		forcewin: true,
 		modchatall: true,
 		rangeban: true,
