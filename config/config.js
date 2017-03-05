@@ -448,6 +448,16 @@ exports.grouplist = [
 		broadcast: true
 	},
 	{
+		symbol: '*',
+		id: "@dm!n",
+		name: "@dm!n",
+		inherit: ' ',
+		tournaments: true,
+		alts: 's',
+		makegroupchat: true,
+		broadcast: true
+	},
+	{
 		symbol: ' ',
 		ip: 's',
 	},
