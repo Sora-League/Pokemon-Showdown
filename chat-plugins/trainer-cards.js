@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Luscinia∆', '∆Sora Vulpinus∆', '∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Jeratt∆', '∆Sora Akkie∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Luscinia∆', '∆Sora Vulpinus∆', '∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Jeratt∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -260,13 +260,13 @@ exports.commands = {
 	 * Gym Leaders
 	 *********************************************************/
 
-	
+	arjun: 'bug', 
 	bug: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Arjun</b>∆<br />' +
+			'<i>"You\'re like a pool. I can see ten feet through you, and you\'re barely three feet deep."</i> <br />' +
 			'<b>Type: <font color = 65b510>Bug</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Golisopod<br />' + seen('soraarjun') + getBadges('soraarjun'));
 	},
 
 	
