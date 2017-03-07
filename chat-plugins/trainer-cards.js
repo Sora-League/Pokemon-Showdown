@@ -33,10 +33,10 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		let total = '';
 		let members = {
-			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
+			'Admin Team': ['∆Sora Revan∆',  '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Megatronus∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Jeratt∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -134,16 +134,16 @@ exports.commands = {
 			
 
 
-	 rock: 'onyxeagle',
-	 onyxeagle: function (target, room, user) {
+	 dark: 'terrors',
+	 terrors: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>OnyxEagle</b>∆<br />' +
-			'<i>"I WILL ROCK YOUR WORLD!"</i> <br />' +
-			'<b>Type: <font color = 472e10>Rock</font></b> <br />' +
-			'<b>Ace:</b> Tyranitar<br />' +
-			'<center><img src = "http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"></center><br />' +
-			'<center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center><br />' + seen('soraonyxeagle') + getBadges('soraonyxeagle'));
-	},
+		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
+			'<i>"ur bad"</i> <br />' +
+			'<b>Type: <font color = 15012b>Dark</font></b> <br />' +
+			'<b>Ace: Muk-Alola</b> <br />' + seen('soraterrors') + getBadges('soraterrors'));
+		 
+	 },
+			
 
 	
 	poison: 'meows',
@@ -270,13 +270,13 @@ exports.commands = {
 	},
 
 	
-	terrors: 'dark',
-	dark: function (target, room, user) {
+	
+	darkldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br />' +
-			'<i>"ur bad"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace: Muk-Alola</b> <br />' + seen('soraterrors') + getBadges('soraterrors'));
+			'<b>Ace: ???</b> <br />' + seen('') + getBadges(''));
 	},
 
 	vulpinus: 'dragon', 
@@ -424,15 +424,15 @@ exports.commands = {
 	},
 
 	
-	rockldr: function (target, room, user) {
+	onyxeagle: 'rock',
+	rock: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Onyxeagle</b>∆<br />' +
+			'<i>"I WILL ROCK YOUR WORLD!"</i><br />' +
 			'<b>Type: <font color = 472e10>Rock</font></b><br />' +
-			'<b>Ace:</b> Rhydon<br />' +
-			seen('') + getBadges('')
-		);	  
-			
+			'<b>Ace:</b> Tyranitar<br />' +
+			'<center><img src = "http://play.pokemonshowdown.com/sprites/xyani/solrock.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/tyrantrum.gif"><img src = "http://play.pokemonshowdown.com/sprites/xyani/lunatone.gif"></center><br />' +
+			'<center><img src = "http://oi62.tinypic.com/14cfyh0.jpg"></center><br />' + seen('soraonyxeagle') + getBadges('soraonyxeagle'));
 	},
 
 
