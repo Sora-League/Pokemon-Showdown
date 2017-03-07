@@ -17,13 +17,13 @@ body {
 }
 
 
-li[id *= "champinnah"] button.userbutton.username:hover, li[id *= "sorablade"] button.userbutton.username:hover, li[id *= "chmpionbart"] button.userbutton.username:hover, li[id *= "femalegallade"] button.userbutton.username:hover, li[id *= "onyxeagle"] button.userbutton.username:hover, li[id *= "artistejeratt"] button.userbutton.username:hover, li[id *= "neithcass"] button.userbutton.username:hover {
+li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-userlist-user-sorabarts, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-sorarevan, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-soraonyxeagle, li#lobby-userlist-user-jeratt, li#lobby-userlist-user-soramegatronus, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-soraninjarisu, li#lobby-userlist-user-soraneith, li#lobby-userlist-user-blazing360 button.userbutton.username:hover {
     background: rgb(252,183,63);
 }
 
 /*Ateam userlist highlights*/
 li#lobby-userlist-user-soranoah, li#lobby-userlist-user-sorablade, li#lobby-userlist-user-sorabarts, li#lobby-userlist-user-femalegallade, li#lobby-userlist-user-sorarevan, li#lobby-userlist-user-onyxeagle, li#lobby-userlist-user-soraonyxeagle, li#lobby-userlist-user-jeratt, li#lobby-userlist-user-soramegatronus, li#lobby-userlist-user-neithcass, li#lobby-userlist-user-soraninjarisu, li#lobby-userlist-user-soraneith, li#lobby-userlist-user-blazing360 {
-    background: url("http://i1171.photobucket.com/albums/r545/Brahak/adminteamthing_zpspbese1su.png");
+    background: url("http://i.imgur.com/fTTNQvI.png");
 }
 
 /*Donators*/
