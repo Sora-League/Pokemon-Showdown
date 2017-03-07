@@ -381,10 +381,10 @@ exports.commands = {
 			'<b>Ace: </b>???<br>' + seen('') + getBadges(''));
 	},
 	
-	jeratt: 'ice',
+	megatronus: 'ice',
 	ice: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Jeratt</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Megatronus</b>∆<br />' +
 			'<i>"Let\'s play rock paper scissors; Paper. You win."</i> <br />' +
 			'<b>Type: <font color = 00e0ac>Ice</font></b><br />' +
 			'<b>Ace:</b> Mamoswine<br />' +
