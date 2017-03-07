@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆', '∆Sora Barts∆', '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Jeratt∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Luscinia∆', '∆Sora Vulpinus∆', '∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Jeratt∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Jeratt∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
