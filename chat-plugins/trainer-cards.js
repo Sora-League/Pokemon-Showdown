@@ -34,9 +34,9 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆',  '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Megatronus∆', 'Neith Cass'],
-			'Elite Four': ['∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Onyxeagle∆', '∆Sora Meows'],
+			'Elite Four': ['∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Terrors∆', '∆Sora Mitsuka'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Terrors∆', '∆Sora Mitsuka∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Onyxeagle∆', '∆Sora Meows∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -146,13 +146,13 @@ exports.commands = {
 			
 
 	
-	poison: 'meows',
-	meows: function (target, room, user) {
+	grass: 'mitsuka',
+	mitsuka: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Meows</b>∆<br />' +
-			'<i>"brb dying"</i> <br />' +
-			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> Alolan Muk<br />' + seen('sorameows') + getBadges('sorameows'));
+		this.sendReplyBox('∆E4 <b>Mitsuka</b>∆<br />' +
+			'<i>"Storm of leaf and draining root!"</i> <br />' +
+			'<b>Type: <font color = 006b0a>Grass</font></b><br />' +
+			'<b>Ace:</b> Bellossom<br />' + seen('soramitsuka') + getBadges('soramitsuka'));
 
 	},
 	
@@ -362,13 +362,13 @@ exports.commands = {
 			seen('') + getBadges(''));
 	},
 
-	mitsuka: 'grass',
-	grass: function (target, room, user) {
+	
+	grassldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
-			'<i>"Storm of leaf and draining root!"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b><br>' +
-			'<b>Ace:</b>Bellossom<br />' + seen('soramitsuka') + getBadges('soramitsuka')); 
+			'<b>Ace:</b>???<br />' + seen('') + getBadges('')); 
 			
 	},
 	
@@ -402,13 +402,13 @@ exports.commands = {
 			'<b>Ace:</b> Dodrio<br />' + seen('soraakkie') + getBadges('soraakkie'));
 	},
 
-       
-	poisonldr: function (target, room, user) {
+        meows: 'poison',
+	poison: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Meows</b>∆<br />' +
+			'<i>"brb dying"</i> <br />' +
 			'<b>Type: <font color = aa00ff>Poison</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Muk-Alola<br />' + seen('sorameows') + getBadges('sorameows'));
 	},
 
 	
