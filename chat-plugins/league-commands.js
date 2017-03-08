@@ -174,6 +174,7 @@ exports.commands = {
 		        '119.74.153.20 -Dexio/NewEmpire <br/>'+
 		        '93.44.60.158 - No woman can beat me guy <br/>'+
 			'83.35.148.252 - JennyMega<br/>'+
+	                '35.164.25.76 - Total Mayhem<br/>'+
 			'Shame on them!');
 	},
 
