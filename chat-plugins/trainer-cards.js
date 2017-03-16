@@ -860,7 +860,7 @@ exports.commands = {
 	
 	testcard: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReply('|html| <table border="3"><thead><tr>Heading 1</tr><tr>Heading 2</tr></thead><tbody><tr><td contenteditable='true'>Test</td><td contenteditable='true'>Test</td></tr><tr><td contenteditable='true'>Test</td><td contenteditable='true'>Test</td></tr></tbody></table>');
+		this.sendReply('|html| <table border="3"><thead><tr>Heading 1</tr><tr>Heading 2</tr></thead><tbody><tr><td contenteditable=true>Test</td><td contenteditable=true>Test</td></tr><tr><td contenteditable=true>Test</td><td contenteditable=true>Test</td></tr></tbody></table>' );
 	},
 
 
