@@ -857,6 +857,11 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('<img src="https://timedotcom.files.wordpress.com/2016/02/bernie-sanders13.jpg?quality=75&strip=color&w=1100" height=350 width=450> <br />');
 	},
+	
+	testcard: function (target, room, user) {
+		if (!this.runBroadcast()) return;
+		this.sendReply('|html| <table><tr><td><div contenteditable>I\'m editable</div></td><td><div contenteditable>I\'m also editable</div></td></tr><tr><td>I\'m not editable</td></tr></table>');
+	},
 
 
 	/*********************************************************
