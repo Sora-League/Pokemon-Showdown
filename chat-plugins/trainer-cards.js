@@ -35,8 +35,8 @@ exports.commands = {
 		let members = {
 			'Admin Team': ['∆Sora Revan∆',  '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Megatronus∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Terrors∆', '∆Sora Mitsuka'],
-			'Frontiers': ['∆Sora Heat∆', '∆Sora Lymm∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Onyxeagle∆', '∆Sora Meows∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Arjun∆'],
+			'Frontiers': ['∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
+			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Onyxeagle∆', '∆Sora Meows∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Lymm∆', '∆Sora Tempest∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -342,13 +342,14 @@ exports.commands = {
 			getBadges('SoraBlade'));
 	},
 
-
+        
+	tempest: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Heat</b>∆<br />' +
-			'<i>"What does anyone have for a well played Beartic?"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Tempest</b>∆<br />' +
+			'<i>"Art is a harlot, and I\'m her sassy urban friend."</i><br />' +
 		        '<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Staraptor<br />' + seen('soratempest') + getBadges('soratempest'));
 			
 	},
 
@@ -372,13 +373,13 @@ exports.commands = {
 			
 	},
 	
-	
+	lymm: 'ground',
 	ground: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br>' +
+		this.sendReplyBox('∆Gym Ldr <b>Lymm</b>∆<br>' +
 			'<i>"???"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>???<br>' + seen('') + getBadges(''));
+			'<b>Ace: </b>???<br>' + seen('soralymm') + getBadges('soralymm'));
 	},
 	
 	megatronus: 'ice',
