@@ -266,7 +266,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
 			'<i>"Bitch I\'m still in the cut, Togedemaru."</i> <br />' +
 			'<b>Type: <font color = 65b510>Bug</font></b><br />' +
-			'<b>Ace:</b> Beedrill<br />' 
+			'<b>Ace:</b> Beedrill<br />'+ 
 			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
 			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' + seen('sorafloat') + getBadges('sorafloat'));
 	},
