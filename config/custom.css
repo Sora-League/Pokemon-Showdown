@@ -3,15 +3,15 @@
 	opacity: 0;
 }
 .header {
-	background-image:url("http://i59.tinypic.com/w19xfk.jpg");
+	background-image:url("http://i.imgur.com/Hq3g3sW.png");
 	background-repeat:no-repeat;
 	background-color: rgba(220,255,255,0.6);
 }
 .dark .header {
-	background: rgba(0, 0, 0, 0.4) url(http://i59.tinypic.com/w19xfk.jpg) no-repeat !important;
+	background: rgba(0, 0, 0, 0.4) url(http://i.imgur.com/Hq3g3sW.png) no-repeat !important;
 }
 body {
-	background-image:url("http://i.imgur.com/ujLdbiq.png");
+	background-image:url("https://i.imgur.com/aG34TfE.png");
 	background-repeat:no-repeat;
 	background-position:center
 }
@@ -27,7 +27,7 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 }
 
 .dark body {
-	background-image: url(http://i.imgur.com/cPtSqmh.png) !important;
+	background-image: url(https://i.imgur.com/aG34TfE.png) !important;
 }
 .dark .chat strong small {
 	color: white !important;
@@ -44,7 +44,7 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 
 /*DARK MENU BUTTONS*/
 .dark .header {
-	background: rgba(0, 0, 0, 0.4) url(http://i59.tinypic.com/w19xfk.jpg) no-repeat !important;
+	background: rgba(0, 0, 0, 0.4) url(http://i.imgur.com/Hq3g3sW.png) no-repeat !important;
 }
 .dark .maintabbarbottom {
 	border: 1px solid #111;
@@ -76,7 +76,7 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 /*Ranks*/
 /*John Cena*/
 .chat-log {
-	background:url("http://i.imgur.com/06PTig2.png") no-repeat scroll center;
+	background:url("http://i.imgur.com/BSvRres.png") no-repeat scroll center;
 }
 a.button.cur, a.button.cur:hover {
 	background: #1f9a3c/*url("")*/;
