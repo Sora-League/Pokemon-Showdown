@@ -11,7 +11,7 @@
 	background: rgba(0, 0, 0, 0.4) url(http://i.imgur.com/Hq3g3sW.png) no-repeat !important;
 }
 body {
-	background-image:url("https://i.imgur.com/aG34TfE.png");
+	background-image:url("http://i.imgur.com/QvQxYEz.png");
 	background-repeat:no-repeat;
 	background-position:center
 }
@@ -27,7 +27,7 @@ li#lobby-userlist-user-sorafloat, li#lobby-userlist-user-soranypt {
 }
 
 .dark body {
-	background-image: url(https://i.imgur.com/aG34TfE.png) !important;
+	background-image: url(http://i.imgur.com/QvQxYEz.png) !important;
 }
 .dark .chat strong small {
 	color: white !important;
