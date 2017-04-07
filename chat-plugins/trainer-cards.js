@@ -34,9 +34,9 @@ exports.commands = {
 		let total = '';
 		let members = {
 			'Admin Team': ['∆Sora Revan∆',  '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Megatronus∆', 'Neith Cass'],
-			'Elite Four': ['∆Sora Darkus∆', '∆Sora Luscinia∆', '∆Sora Terrors∆', '∆Sora Mitsuka'],
+			'Elite Four': ['∆Sora Blade∆', '∆Sora Neith∆', '∆Sora Lymm∆', '∆Sora Vulpinus∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Blade∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Vulpinus∆', '∆Sora Onyxeagle∆', '∆Sora Meows∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Lymm∆', '∆Sora Tempest∆'],
+			'Gym Leaders': ['∆Sora Terrors∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Luscinia∆', '∆Sora Onyxeagle∆', '∆Sora Meows∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Mitsuka∆', '∆Sora Darkus∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -110,49 +110,59 @@ exports.commands = {
 	 *********************************************************/
 
 
-	fairy: 'luscinia',
-	luscinia: function (target, room, user) {
+	steel: 'neith',
+	neith: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Luscinia</b>∆<br />' +
-			'<i>"You needn\'t be associated with the air to spread your wings"</i> <br />' +
-			'<b>Type: <font color = ff42a0>Fairy</font></b><br />' +
-			'<b>Ace:</b> Comfey<br />' +
-			seen('soraluscinia') +
-			getBadges('soraluscinia'));
+		this.sendReplyBox('∆E4 <b>Neith</b>∆<br />' +
+			'<i>"???"</i> <br />' +
+			'<b>Type: <font color = 5e6664>Steel</font></b><br />' +
+			'<b>Ace:</b> Excadrill<br />' +
+			seen('soraneith') +
+			getBadges('soraneith'));
 	},
 
-        psychic: 'darkus',
-	darkus: function (target, room, user) {
+        ground: 'lymm',
+	lymm: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Darkus</b>∆<br />' +
-			'<i>"It\'s all shits and giggles until someone giggles and shits"</i> <br />' +
-			'<b>Type: <font color = ff00b6>Psychic</font></b> <br />' +
-			'<b>Ace:</b> Victini<br />' +
-		        seen('soradarkus') +
-			getBadges('soradarkus'));
+		this.sendReplyBox('∆E4 <b>Lymm</b>∆<br />' +
+			'<i>"???"</i> <br />' +
+			'<b>Type: <font color = A64000>Ground</font></b> <br />' +
+			'<b>Ace:</b> Landorus-T<br />' +
+		        seen('soralymm') +
+			getBadges('soralymm'));
 	},
 			
 
 
-	 dark: 'terrors',
-	 terrors: function (target, room, user) {
+	 fire: 'blade',
+	 blade: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Terrors</b>∆<br />' +
-			'<i>"ur bad"</i> <br />' +
-			'<b>Type: <font color = 15012b>Dark</font></b> <br />' +
-			'<b>Ace: Muk-Alola</b> <br />' + seen('soraterrors') + getBadges('soraterrors'));
+		this.sendReplyBox('∆E4 <b>Blade</b>∆<br />' +
+			'<i>"Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe."</i> <br />' +
+			'<b>Type: <font color = 15012b>Fire</font></b> <br />' +
+			'<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">' +
+			'<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
+			'<b>R.I.P. War Turtle</b> <br />' +
+			'1st Apostle of the All Mighty Lord Parasect</details>' +
+			'<details><summary><font color = 009900><b>Aegislash Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aegislash.gif"></center>' +
+			'<b>R.I.P. Shadow Snek</b> <br />' +
+			'2nd Apostle of the All Mighty Lord Parasect</details><br />' +
+
+				  '<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' +
+			seen('SoraBlade') + '<br>' +
+			getBadges('SoraBlade'));
 		 
 	 },
 			
 
 	
-	grass: 'mitsuka',
-	mitsuka: function (target, room, user) {
+	dragon: 'vulpinus',
+	vulpinus: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆E4 <b>Mitsuka</b>∆<br />' +
-			'<i>"Storm of leaf and draining root!"</i> <br />' +
-			'<b>Type: <font color = 006b0a>Grass</font></b><br />' +
-			'<b>Ace:</b> Bellossom<br />' + seen('soramitsuka') + getBadges('soramitsuka'));
+		this.sendReplyBox('∆E4 <b>Vulpinus</b>∆<br />' +
+			'<i>"Strength through tactics."</i> <br />' +
+			'<b>Type: <font color = 230077>Dragon</font></b><br />' +
+			'<b>Ace:</b> Tyrantrum<br />' + seen('soravulpinus') + getBadges('soravulpinus'));
 
 	},
 	
@@ -186,17 +196,7 @@ exports.commands = {
 
 
 
-       lymm: function (target, room, user) {
-		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Frontier <b>Lymm</b>∆<br />' +
-			'<i>"What\'s a quote?"</i> <br />' +
-			'<b>Symbol: </b>Night <br />' +
-			'<b>Ace:</b> Weather<br />' +
-			'<b>Battle rules:</b> <br />' +
-			'-Gen5OU<br />' + seen('soralymm') + getBadges('soralymm')
-		);
-	},
-
+     
 
        gasp: function (target, room, user) {
 		if (!this.runBroadcast()) return;
@@ -272,22 +272,22 @@ exports.commands = {
 	},
 
 	
-	
-	darkldr: function (target, room, user) {
+	terrors: 'dark', 
+	dark: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br />' +
+			'<i>"ur bad"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace: ???</b> <br />' + seen('') + getBadges(''));
+			'<b>Ace: Muk-Alola</b> <br />' + seen('soraterrors') + getBadges('soraterrors'));
 	},
 
-	vulpinus: 'dragon', 
-	dragon: function (target, room, user) {
+	
+	dragonldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Vulpinus</b>∆<br />' +
-			'<i>"Strength through tactics."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 			'<b>Type: <font color = 230077>Dragon</font> </b><br />' +
-			'<b>Ace:</b> Tyrantrum<br />' + seen('soravulpinus') + getBadges('soravulpinus'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 	},
 
         
@@ -321,35 +321,25 @@ exports.commands = {
 		);
 	},
 
-	blade: 'fire',
-	fire: function (target, room, user) {
+	
+	fireldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
-
-				  '<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />' +
+			'<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />' +
 			'<b>Type: <font color = FF0000>Fire</font></b><br />' +
-			'<b>Ace:</b> Victini<br />' +
-			'<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">' +
-			'<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
-			'<b>R.I.P. War Turtle</b> <br />' +
-			'1st Apostle of the All Mighty Lord Parasect</details>' +
-			'<details><summary><font color = 009900><b>Aegislash Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/aegislash.gif"></center>' +
-			'<b>R.I.P. Shadow Snek</b> <br />' +
-			'2nd Apostle of the All Mighty Lord Parasect</details><br />' +
-
-				  '<img src="http://oi62.tinypic.com/14cfyh0.jpg"></center> <br />' +
-			seen('SoraBlade') + '<br>' +
-			getBadges('SoraBlade'));
+			'<b>Ace:</b> Victini<br />' + seen('') + getBadges(''));
+		        
 	},
+			
 
         
-	tempest: 'flying',
+	
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Tempest</b>∆<br />' +
-			'<i>"Art is a harlot, and I\'m her sassy urban friend."</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i><br />' +
 		        '<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> Staraptor<br />' + seen('soratempest') + getBadges('soratempest'));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 			
 	},
 
@@ -363,23 +353,23 @@ exports.commands = {
 			seen('') + getBadges(''));
 	},
 
-	
-	grassldr: function (target, room, user) {
+	mitsuka: 'grass', 
+	grass: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Mitsuka</b>∆<br />' +
+			'<i>"Storm of leaf and draining root!"</i> <br />' +
 			'<b>Type: <font color = 006b0a>Grass</font></b><br>' +
-			'<b>Ace:</b>???<br />' + seen('') + getBadges('')); 
+			'<b>Ace:</b>Bellossom<br />' + seen('soramitsuka') + getBadges('soramitsuka')); 
 			
 	},
 	
-	lymm: 'ground',
-	ground: function (target, room, user) {
+	
+	groundldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Lymm</b>∆<br>' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br>' +
 			'<i>"???"</i> <br>' +
 			'<b>Type: <font color = A64000>Ground</font></b><br>' +
-			'<b>Ace: </b>???<br>' + seen('soralymm') + getBadges('soralymm'));
+			'<b>Ace: </b>???<br>' + seen('') + getBadges(''));
 	},
 	
 	megatronus: 'ice',
@@ -412,15 +402,15 @@ exports.commands = {
 			'<b>Ace:</b> Muk-Alola<br />' + seen('sorameows') + getBadges('sorameows'));
 	},
 
-	
-	psychicldr: function (target, room, user) {
+	darkus: 'psychic', 
+	psychic: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
-			'<i>"???"</i><br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Darkus</b>∆<br />' +
+			'<i>"It\'s all shits and giggles until someone giggles and shits"</i><br />' +
 			'<b>Type: <font color = ff00b6>Psychic</font></b><br />' +
-			'<b>Ace:</b> <br />' +
-			seen('') + '<br>' +
-			getBadges('')
+			'<b>Ace:</b> Victini <br />' +
+			seen('soradarkus') + '<br>' +
+			getBadges('soradarkus')
 		);
 	},
 
@@ -438,13 +428,13 @@ exports.commands = {
 
 
 	
-	steel: function (target, room, user) {
+	steelldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Youmaton</b>∆<br />' +
-			'<i>"Let\'s enjoy a nicely seasoned battle with a touch of salt and the side of rolls."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 5e6664>Steel</font></b> <br />' +
 			'<b>Ace:</b> ???<br />' +
-			seen('sorayoumaton') + getBadges('sorayoumaton')
+			seen('') + getBadges('')
 		);
 	},
 
@@ -477,7 +467,7 @@ exports.commands = {
 			'<b>Honours:</b> Sora\'s third challenger to reach the Hall of Fame<br><br>' +
 			'<center><img src="http://www.pokestadium.com/sprites/black-white/animated/typhlosion.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/excadrill.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/whimsicott.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/scizor.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/manectric.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/forretress.gif"></center><br />' +
 			getBadges('aboottothehead') + '<br>' +
-			'<center><img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125"><img src="http://oi62.tinypic.com/14cfyh0.jpg" height="125"></center>'
+			'<center><img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125"></center>'
 		);
 	},
 
