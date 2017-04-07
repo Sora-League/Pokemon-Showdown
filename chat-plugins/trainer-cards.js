@@ -477,7 +477,7 @@ exports.commands = {
 			'<b>Honours:</b> Sora\'s third challenger to reach the Hall of Fame<br><br>' +
 			'<center><img src="http://www.pokestadium.com/sprites/black-white/animated/typhlosion.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/excadrill.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/whimsicott.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/scizor.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/manectric.gif"><img src="http://www.pokestadium.com/sprites/black-white/animated/forretress.gif"></center><br />' +
 			getBadges('aboottothehead') + '<br>' +
-			'<center><img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125"></center>'
+			'<center><img src = "http://i.imgur.com/UBIZE34.png" width = "188" height = "125"><img src="http://oi62.tinypic.com/14cfyh0.jpg" height="125"></center>'
 		);
 	},
 
