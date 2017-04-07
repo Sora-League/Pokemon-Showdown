@@ -139,7 +139,7 @@ exports.commands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox('∆E4 <b>Blade</b>∆<br />' +
 			'<i>"Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe."</i> <br />' +
-			'<b>Type: <font color = 15012b>Fire</font></b> <br />' +
+			'<b>Type: <font color = FF0000>Fire</font></b><br />' +
 			'<center><img src="http://sprites.pokecheck.org/i/494.gif">☯<img src="http://sprites.pokecheck.org/i/080.gif">' +
 			'<details><summary><font color = 009900><b>Torkoal Shrine</b></font></summary><center><img src="http://play.pokemonshowdown.com/sprites/xyani-shiny/torkoal.gif"></center>' +
 			'<b>R.I.P. War Turtle</b> <br />' +
@@ -260,15 +260,14 @@ exports.commands = {
 	 * Gym Leaders
 	 *********************************************************/
 
-	float: 'bug', 
+	
 	bug: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
-			'<i>"Bitch I\'m still in the cut, Togedemaru."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>"???"</i> <br />' +
 			'<b>Type: <font color = 65b510>Bug</font></b><br />' +
-			'<b>Ace:</b> Beedrill<br />'+ 
-			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
-			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' + seen('sorafloat') + getBadges('sorafloat'));
+			'<b>Ace:</b> ????<br />'+ seen('') + getBadges(''));
+			
 	},
 
 	
@@ -278,7 +277,7 @@ exports.commands = {
 		this.sendReplyBox('∆Gym Ldr <b>Terrors</b>∆<br />' +
 			'<i>"ur bad"</i> <br />' +
 			'<b>Type: <font color = 15012b>Dark</font></b><br />' +
-			'<b>Ace: Muk-Alola</b> <br />' + seen('soraterrors') + getBadges('soraterrors'));
+			'<b>Ace:</b> Muk-Alola <br />' + seen('soraterrors') + getBadges('soraterrors'));
 	},
 
 	
@@ -324,10 +323,10 @@ exports.commands = {
 	
 	fireldr: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Blade</b>∆<br />' +
-			'<i>“Two things are infinite: the universe and the sign up queue at VGC; and I\'m not sure about the universe”</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+			'<i>“???”</i> <br />' +
 			'<b>Type: <font color = FF0000>Fire</font></b><br />' +
-			'<b>Ace:</b> Victini<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
 		        
 	},
 			
@@ -438,13 +437,15 @@ exports.commands = {
 		);
 	},
 
-       
+        float: 'water',
 	water: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>Zachary</b>∆<br />' +
-			'<i>"Come forth and suffer."</i> <br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Float</b>∆<br />' +
+			'<i>"Bitch I\'m still in the cut, Togedemaru."</i> <br />' +
 			'<b>Type: <font color = 0745ff>Water</font></b><br />' +
-			'<b>Ace:</b> None <br/>' +seen('')  + getBadges('')
+			'<b>Ace:</b> None <br/>' +
+			'<img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-f.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-l.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-o.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/unown-t.gif"><img src="http://play.pokemonshowdown.com/sprites/xyani/mimejr.gif"><br />' +
+			'<audio controls src = "https://dl2.pushbulletusercontent.com/FA0FFRp4fgXjGR3yxnW7eBjJ5uHAKXSi/BITCHES%20AIN%27T%20SHIT%20%28UKULELE%20COVER%29.mp3" style = "border-radius: 0px; background: black;"></audio></br></br><br>' + seen('sorafloat') + getBadges('sorafloat'));	  
 		);
 	},
 
