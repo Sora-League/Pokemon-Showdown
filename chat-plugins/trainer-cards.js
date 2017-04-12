@@ -36,7 +36,7 @@ exports.commands = {
 			'Admin Team': ['∆Sora Revan∆',  '∆Sora Ninjarisu∆', '∆Sora Onyxeagle∆', '∆Sora Blade∆', '∆Sora Megatronus∆', 'Neith Cass'],
 			'Elite Four': ['∆Sora Blade∆', '∆Sora Neith∆', '∆Sora Lymm∆', '∆Sora Vulpinus∆'],
 			'Frontiers': ['∆Sora Heat∆', '∆Sora Gasp∆', '∆Sora Youmaton'],
-			'Gym Leaders': ['∆Sora Terrors∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Luscinia∆', '∆Sora Onyxeagle∆', '∆Sora Meows∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Mitsuka∆', '∆Sora Darkus∆'],
+			'Gym Leaders': ['∆Sora Terrors∆', '∆Sora Float∆', '∆Sora Whitefang∆', '∆Sora Luscinia∆', '∆Sora Onyxeagle∆', '∆Sora Meows∆', '∆Sora Megatronus∆', '∆Sora Akkie∆', '∆Sora Mitsuka∆', '∆Sora Darkus∆', '∆Sora Daca∆'],
 		}
 		for (let i in members) {
 			total += '<b>' + i + '</b><table><tr><th>User</th><th>Last Seen</th></tr>';
@@ -332,13 +332,13 @@ exports.commands = {
 			
 
         
-	
+	daca: 'flying',
 	flying: function (target, room, user) {
 		if (!this.runBroadcast()) return;
-		this.sendReplyBox('∆Gym Ldr <b>???</b>∆<br />' +
+		this.sendReplyBox('∆Gym Ldr <b>Daca</b>∆<br />' +
 			'<i>"???"</i><br />' +
 		        '<b>Type: <font color = 7ab6ff>Flying</font></b><br />' +
-			'<b>Ace:</b> ???<br />' + seen('') + getBadges(''));
+			'<b>Ace:</b> Celesteela<br />' + seen('soradaca') + getBadges('soradaca'));
 			
 	},
 
