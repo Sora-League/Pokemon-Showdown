@@ -41,9 +41,46 @@ const linkRegex = new RegExp(
 			')?' +
 		')?' +
 		'|[a-z0-9.]+\\b@' + domainRegex + '[.][a-z]{2,3}' +
-	')',
+	')' +
+	'(?![^(?:&lt;)]*&gt;)',
 	'ig'
 );
+const hyperlinkRegex = new RegExp(`(.+)&lt;(.+)&gt;`, 'i');
+
+const formattingResolvers = [
+	{token: "**", resolver: str => `<b>${str}</b>`},
+	{token: "__", resolver: str => `<i>${str}</i>`},
+	{token: "``", resolver: str => `<code>${str}</code>`},
+	{token: "~~", resolver: str => `<s>${str}</s>`},
+	{token: "^^", resolver: str => `<sup>${str}</sup>`},
+	{token: "\\", resolver: str => `<sub>${str}</sub>`},
+	{token: "&lt;&lt;", endToken: "&gt;&gt;", resolver: str => str.replace(/[a-z0-9-]/g, '').length ? false : `&laquo;<a href="${str}" target="_blank">${str}</a>&raquo;`},
+	{token: "[[", endToken: "]]", resolver: str => {
+		console.log(str);
+		let hl = hyperlinkRegex.exec(str);
+		if (hl) return `<a href="${encodeURIComponent(hl[2].trim().replace(/^([a-z]*[^a-z:])/g, 'http://$1'))}">${hl[1].trim()}</a>`;
+
+		let query = str;
+		let querystr = str;
+		let split = str.split(':');
+		if (split.length > 1) {
+			let opt = toId(split[0]);
+			query = split.slice(1).join(':').trim();
+
+			switch (opt) {
+			case 'wiki':
+			case 'wikipedia':
+				return `<a href="http://en.wikipedia.org/w/index.php?title=Special:Search&search=${encodeURIComponent(query)}" target="_blank">${querystr}</a>`;
+			case 'yt':
+			case 'youtube':
+				query += " site:youtube.com";
+				querystr = `yt: ${query}`;
+			}
+		}
+
+		return `<a href="http://www.google.com/search?ie=UTF-8&btnI&q=${encodeURIComponent(query)}" target="_blank">${querystr}</a>`;
+	}},
+];
 
 function toPokemonId(str) {
 	return str.toLowerCase().replace(/é/g, 'e').replace(/[^a-z0-9 /]/g, '');
@@ -186,16 +223,77 @@ class Giveaway {
 		return output;
 	}
 
-	static parseText(text) {
+	static parseText(str) {
 		// Manually unescape '/' since this is needed for links.
-		return Chat.escapeHTML(text).replace(/&#x2f;/g, '/').replace(linkRegex, uri => `<a href=${uri}>${uri}</a>`);
+		str = Chat.escapeHTML(str).replace(/&#x2f;/g, '/').replace(linkRegex, uri => `<a href=${uri.replace(/^([a-z]*[^a-z:])/g, 'http://$1')}>${uri}</a>`);
+
+		// Primarily a test for a new way of parsing chat formatting. Will be moved to Chat once it's sufficiently finished and polished.
+		let output = [''];
+		let stack = [];
+
+		let parse = true;
+
+		let i = 0;
+		mainLoop: while (i < str.length) {
+			let token = str[i];
+
+			// Hardcoded parsing
+			if (parse && token === '`' && str.substr(i, 2) === '``') {
+				stack.push('``');
+				output.push('');
+				parse = false;
+				i += 2;
+				continue;
+			}
+
+			for (let f = 0; f < formattingResolvers.length; f++) {
+				let start = formattingResolvers[f].token;
+				let end = formattingResolvers[f].endToken || start;
+
+				if (stack.length && end.startsWith(token) && str.substr(i, end.length) === end && output[stack.length].replace(token, '').length) {
+					for (let j = stack.length - 1; j >= 0; j--) {
+						if (stack[j] === start) {
+							parse = true;
+
+							while (stack.length > j + 1) {
+								output[stack.length - 1] += stack.pop() + output.pop();
+							}
+
+							let str = output.pop();
+							let outstr = formattingResolvers[f].resolver(str.trim());
+							if (!outstr) outstr = `${start}${str}${end}`;
+							output[stack.length - 1] += outstr;
+							i += end.length;
+							stack.pop();
+							continue mainLoop;
+						}
+					}
+				}
+
+				if (parse && start.startsWith(token) && str.substr(i, start.length) === start) {
+					stack.push(start);
+					output.push('');
+					i += start.length;
+					continue mainLoop;
+				}
+			}
+
+			output[stack.length] += token;
+			i++;
+		}
+
+		while (stack.length) {
+			output[stack.length - 1] += stack.pop() + output.pop();
+		}
+
+		return output[0];
 	}
 
 	generateWindow(rightSide) {
 		return `<p style="text-align:center;font-size:14pt;font-weight:bold;margin-bottom:2px;">It's giveaway time!</p>` +
 			`<p style="text-align:center;font-size:7pt;">Giveaway started by ${Chat.escapeHTML(this.host.name)}</p>` +
 			`<table style="margin-left:auto;margin-right:auto;"><tr><td style="text-align:center;width:45%">${this.sprite}<p style="font-weight:bold;">Giver: ${this.giver}</p>${Giveaway.parseText(this.prize)}<br />OT: ${Chat.escapeHTML(this.ot)}, TID: ${this.tid}</td>` +
-			`<td style="text-align:center;width:45%">${rightSide}</td></tr></table><p style="text-align:center;font-size:7pt;font-weight:bold;"><u>Note:</u> Please do not join if you don't have a 3DS and a copy of Pokémon Sun/Moon.</p>`;
+			`<td style="text-align:center;width:45%">${rightSide}</td></tr></table><p style="text-align:center;font-size:7pt;font-weight:bold;"><u>Note:</u> Please do not join if you don't have a 3DS, a copy of Pokémon Sun/Moon, or are currently unable to receive the prize.</p>`;
 	}
 }
 
@@ -407,7 +505,7 @@ class GtsGiveaway {
 		this.giver = giver;
 		this.left = amount;
 		this.summary = summary;
-		this.deposit = deposit;
+		this.deposit = GtsGiveaway.linkify(Chat.escapeHTML(deposit));
 		this.lookfor = lookfor;
 
 		this.sprite = Giveaway.getSprite(this.summary);
@@ -437,7 +535,7 @@ class GtsGiveaway {
 		return `<p style="text-align:center;font-size:14pt;font-weight:bold;margin-bottom:2px;">There is a GTS giveaway going on!</p>` +
 			`<p style="text-align:center;font-size:10pt;margin-top:0px;">Hosted by: ${Chat.escapeHTML(this.giver.name)} | Left: <b>${this.left}</b></p>` +
 			`<table style="margin-left:auto;margin-right:auto;"><tr><td style="text-align:center;width:15%">${this.sprite}</td><td style="text-align:center;width:40%">${Giveaway.parseText(this.summary)}</td>` +
-			Chat.html `<td style="text-align:center;width:35%">To participate, deposit <strong>${this.deposit}</strong> into the GTS and look for <strong>${this.lookfor}</strong></td></tr></table>`;
+			`<td style="text-align:center;width:35%">To participate, deposit <strong>${this.deposit}</strong> into the GTS and look for <strong>${Chat.escapeHTML(this.lookfor)}</strong></td></tr></table>`;
 	}
 
 	updateLeft(number) {
@@ -455,10 +553,29 @@ class GtsGiveaway {
 		} else {
 			this.clearTimer();
 			this.changeUhtml(`<p style="text-align:center;font-size:13pt;font-weight:bold;">The GTS giveaway has finished.</p>`);
-			this.room.modlog(`${this.giver.name} has finished his GTS giveaway for "${this.summary}"`);
+			this.room.modlog(`${this.giver.name} has finished their GTS giveaway for "${this.summary}"`);
 			this.send(`<p style="text-align:center;font-size:13pt;font-weight:bold;">The GTS giveaway for a "${this.summary}" has finished.</p>`);
 		}
 		delete this.room.gtsga;
+	}
+
+	// This currently doesn't match some of the edge cases the other pokemon matching function does account for (such as Type: Null). However, this should never be used as a fodder mon anyway, so I don't see a huge need to implement it.
+	static linkify(text) {
+		let parsed = text.toLowerCase().replace(/é/g, 'e');
+
+		for (let i in Tools.data.Pokedex) {
+			let id = i;
+			if (!Tools.data.Pokedex[i].baseSpecies && (Tools.data.Pokedex[i].species.includes(' '))) {
+				id = toPokemonId(Tools.data.Pokedex[i].species);
+			}
+			let regexp = new RegExp(`\\b${id}\\b`, 'ig');
+			let res = regexp.exec(parsed);
+			if (res) {
+				let num = Tools.data.Pokedex[i].num < 100 ? (Tools.data.Pokedex[i].num < 10 ? `00${Tools.data.Pokedex[i].num}` : `0${Tools.data.Pokedex[i].num}`) : Tools.data.Pokedex[i].num;
+				return `${text.slice(0, res.index)}<a href="http://www.serebii.net/pokedex-sm/location/${num}.shtml">${text.slice(res.index, res.index + res[0].length)}</a>${text.slice(res.index + res[0].length)}`;
+			}
+		}
+		return text;
 	}
 }
 
