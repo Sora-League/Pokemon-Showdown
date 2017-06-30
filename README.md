@@ -1,19 +1,20 @@
-THE SORA LEAGUE
+THE SORA LEAGUE<br>
 DECOMMISSIONED ON FRIDAY 30TH OF JUNE AT 01:00 AEST
 =========================================================================
 We would like to thank every trainer that has visited Sora over the last 4 years, it has been an amazing ride and would have never been possible without you guys. These codes are now saved as legacy for preserving a small slice of our lives, the Sora legacy has come to an end and so we would like to ask you not to replicate Sora in any manners as a sign of respect for the work achieved here. These codes are available for you to view as you please to gain an insight into the various custom built features for the server and if you wanted to reference your scores. Please visit our website for further information on our closure: [soraleague.github.io][1]
 
 I would like to thank everyone over the years, especially the Admin Team who made this all possible and Silvy the mastermind behind most of our custom features. It has been an incredible journey for me, I will be taking a break from creative design but I will be back with a new project in the future. You can follow me on [Twitter@Blazing360TSL][2] to get updates on what I'll be working on and here is my [extended memo][3] on what the past 4 years have meant for me.
 
-It's been an honour
-Newton Q [ΔSora BladeΔ]
-Lead Development and Sysadmin on The Sora League
+[1]: http://soraleague.github.io/
+  [2]: https://twitter.com/Blazing360TSL
+  [3]: http://soraleague.github.io/memos/blade.html
+
+It's been an honour<br>
+Newton Q [ΔSora BladeΔ]<br>
+Lead Development and Sysadmin on The Sora League<br>
 
 Signed: Friday 30th of June at 16:19 AEST
 
-  [1]: http://soraleague.github.io/
-  [2]: https://twitter.com/Blazing360TSL
-  [3]: http://soraleague.github.io/memos/blade.html
 ------------------------------------------------------------------------
 Pokémon Showdown
 ========================================================================
